@@ -1,0 +1,176 @@
+<!DOCTYPE html> <!-- You need to add this line so that IE renders fun CSS style stuff like unchosen:hover -->
+<html>
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Shape Game</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- What does this js script do? -->
+    <script src="js/jquery.min.js"></script>
+
+    <!--mmturkey manages submitting data to Mechanical Turk. This defines a global object, turk, and attaches five properties to it, hitId, assignmentId, workerId, previewMode, and turkSubmitTo. It also provides a single method, submit(data), which you use to submit data to Turk. If no submission URL has been provided (because, e.g. you're testing your code outside of the Turk environment), submit displays what would have been submitted (without, obviously, any Turk-specific variables like workerId and assignmentId). -->
+    <script src="js/mmturkey.js"></script>
+
+    <!-- What does this js script do? -->
+    <script src="js/underscore-min.js"></script>
+
+    <!-- The CSS stylesheet. Very conventional.  -->
+    <link rel="stylesheet" href="css/style.css"/>
+
+    <!-- What does this meta do? -->
+    <meta name="viewport" content="initial-scale=1.0" />
+
+    <script src="//uniqueturker.myleott.com/lib.js" type="text/javascript"></script>
+    
+    <script type="text/javascript">
+    (function(){
+        var ut_id = "2aa764911b61cbaba8c89d49881a45c8";
+        if (UTWorkerLimitReached(ut_id)) {
+            document.getElementById('mturk_form').style.display = 'none';
+            document.getElementsByTagName('body')[0].innerHTML = "You have already completed the maximum number of HITs allowed by this requester. Please click 'Return HIT' to avoid any impact on your approval rating.";
+        }
+    })();
+    </script>
+
+
+  </head>
+
+  <body>
+
+
+    <!-- This is the introduction slide with the Start button, the introduction and the legal text. I.e. the "instructions" slide. -->
+    <div class="slide" id="instructions">
+      <img src="css/images/stanford.png" alt="Stanford University">
+      <p id='logo-text'>Stanford Language and Cognition Lab</p>
+      <p class="block-text">In this game, we're interested in your judgments about different kinds of shapes. First you will answer some questions, then you will be shown a series of examples to help you learn about the shapes, and then you will be asked to answer some more questions. The task should take about 5 minutes or less. </p>
+
+      <!-- If there is a familiarization stage then the next line should be active, otherwise the one after that should be active-->
+      
+       <button type="button" id="start_button" onClick="this.blur(); exp.relational_slide('pretest')">Start</button>
+
+
+      <p class="block-text"> <b> (Note: you won't be able to preview this HIT before accepting it because it's so short.)
+
+      </b></p>
+
+      <p class="block-text" id="legal">
+      By answering the following questions, you are participating in a study being performed by cognitive scientists in the Stanford Department of Psychology. If you have questions about this research, please contact us at langcoglab@stanford.edu. You must be at least 18 years old to participate. Your participation in this research is voluntary. You may decline to answer any or all of the following questions. You may decline further participation, at any time, without adverse consequences. Your anonymity is assured; the researchers who have requested your participation will not receive any personal information about you. <br> <br>
+
+      We have recently been made aware that your public Amazon.com profile can be accessed via your worker ID if you do not choose to opt out. If you would like to opt out of this feature, you may follow instructions available <a href ="http://www.amazon.com/gp/help/customer/display.html?nodeId=16465241"> here. </a>
+
+      </p>
+    </div>
+
+    <!-- Relational Pretest -->
+    <div class = "slide" id = "relational_pretest">
+      <table align="center"><tr><td align="center">
+      <div id ="relational_pretest_questions"> </div> <!-- questions dynamically built in javascript-->
+      <button type="button" id="pretest_to_pretest2" onClick="exp.first_test_check('pretest')">Next</button>
+      <div id="pre_test_check"> </div>
+      </td></tr>
+      </table>
+    </div>
+
+    <!-- Entity Pretest-->
+    <div class = "slide" id = "entity_pretest">
+      <table align="center" id="pretest_entity_table"><tr><td align="center">
+      <div id ="entity_pretest_questions"> </div> <!-- questions dynamically built in javascript-->
+      <button type="button" id="entity_to_training" onClick="exp.entity_close('pretest'); exp.training_slide()">Next</button>
+      <div id="pre_test_check"> </div>
+      </td></tr>
+      </table>
+    </div>
+
+    <!-- training slide -->
+    <div class = "slide" id ="training">
+      <div id = "training_examples"> </div>
+      <table align="center"><tr><td align="center">
+        <button type="button" id="training_to_posttest" onClick="exp.training_test_check()">Next</button>
+        <div id="training_check"> </div><!--dynamically built in javascript-->
+        </td></tr></table>
+    </div>
+
+    <!-- Between training blocks slide -->
+    <div class = "slide" id ="between_training">
+      <div id = "between_training_html"> </div>
+      <table align="center"><tr><td align="center">
+        <button type="button" id="between_training" onClick="exp.training_slide()">Next</button>
+        <div id="training_check"> </div><!--dynamically built in javascript-->
+        </td></tr></table>
+    </div>
+
+    <!-- Relational Post test -->
+    <div class = "slide" id = "post_test">
+      <table align="center"><tr><td align="center">
+      <div id ="post_test_questions"> </div> <!-- questions dynamically built in javascript-->
+      <button type="button" id="posttest_to_posttest2" onClick="exp.second_test_check('posttest')">Next</button>
+      <div id="post_test_check"> </div>
+      </td></tr>
+      </table>
+    </div>
+
+    <!-- Entity Posttest-->
+    <div class = "slide" id = "entity_posttest">
+      <table align="center" id="posttest_entity_table"><tr><td align="center">
+      <div id ="entity_posttest_questions"> </div> <!-- questions dynamically built in javascript-->
+      <button type="button" id="posttest_to_postest2" onClick="exp.entity_close('posttest'); exp.final_slide()">Next</button>
+      <div id="post_test_check"> </div>
+      </td></tr>
+      </table>
+    </div>
+
+
+    <div class = "slide" id = "final_questions">
+    <center> Please answer the top question. The remaining questions are optional. <br> <br>
+      <p class="block-text">
+        What was this survey about? <br>
+        <input type="text" id="about" name="about" size="70">
+      </p>
+      <p class="block-text" name="comments" >
+        Any other comments for us? <br>
+        <input type="text" id="comments" name="comments" size="70">
+      </p>
+      <p class="block-text" name="age" >
+        How old are you? <br>
+        <input type="text" id="age" name="age" size="70">
+      </p>
+      <p class="block-text" name="gender" >
+        What is your gender? (m = male, f = female, o = other) <br>
+        <input type="text" id="gender" name="gender" size="70">
+      </p>
+      <table align="center"><tr><td align="center">
+        <button type="button" id="checkFinishedButton" onClick="exp.check_finished()">Finished</button>
+        <div id="checkMessage"> </div><!--dynamically built in javascript-->
+        </td></tr></table>
+    </div>
+
+    <div class="slide" id="finished">
+      <p class="block-text">
+        You're finished - thanks for participating! Submitting to Mechanical Turk...
+      </p>
+    </div>
+
+
+
+    <!-- The js scripts delaration section. To improve functionality there are a few js scripts so that parameters can be more easily set and functions be edited. The first one is pragmods_helper_functions_c1.js which contains simple functions. Note that these .js need to be declared in a proper order. -->
+    <script src="js/quadmods_helper_functions.js"></script>
+
+    <!-- This .js file will set the variable random parameters of the experiment. When it comes to vectorize the parameters of the experiment using this -->
+    <script src="js/quadmods_parameter_setter.js"></script>
+
+    <!-- This .js file is in charge of controlling the dynamic glow of the activities including constructing the text that is used in the familiarization task and -->
+    <script src="js/quadmods_control_flow.js"></script>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+  </body>
+</html>

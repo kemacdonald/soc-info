@@ -3,10 +3,8 @@
 
 // Defining the parameters for the study:
 
-// Time variables
-var times = [];
-var exp_times = [];
-
+// Number of actions on the critical trial
+var num_actions = 3
 
 /* Call Maker getter to get cond variables
  * Takes number and counts for each condition

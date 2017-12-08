@@ -47,16 +47,17 @@
     <!-- This is the introduction slide with the Start button, the introduction and the legal text. I.e. the "instructions" slide. -->
     <div class="slide" id="instructions">
       <img src="css/images/stanford.png" alt="Stanford University">
+      <br><br>
       <p id='logo-text'>Stanford Language and Cognition Lab</p>
 
       <p class="block-text">In this game, we're interested in your decisions when you encounter a new device. The task should take about 5 minutes or less. Thank you for participating!</p>
 
       <!-- If there is a familiarization stage then the next line should be active, otherwise the one after that should be active-->
       
-       <button type="button" id="start_button" onClick="this.blur(); exp.goal_manipulation()">Start</button>
+       <button type="button" id="start_button" onClick="this.blur(); exp.goals_slide()">Start</button>
 
 
-      <p class="block-text"> <b> (Note: you won't be able to preview this HIT before accepting it because it's so short.)
+      <p class="block-text"> <b> Note: you won't be able to preview this HIT before accepting it because it's so short.
 
       </b></p>
 
@@ -72,63 +73,113 @@
     <div class = "slide" id = "goal_manipulation">
       <table align="center">
         <tr>
-          <td align='center'><img src="imgs/music_box.jpeg" height="300" width="400"></td>
+          <td align="center">
+            <p>Toy developers have designed a device that plays music.</p>
+          </td>
+        </tr>
+        <tr>
+          <td align='center'>
+            <img src="imgs/music_box.jpeg" height="300" width="400"> 
+
+            <audio id="sound_player">
+              <source src="imgs/music_trimmed.m4a" type="audio/mp3">
+            </audio>  
+
+            <button type="button" id="play_music" onClick="exp.play_music()">Hear the music</button>
+
+          </td>
         </tr>
         <tr>
           <td align="center">
-          <div id ="goal_text"> </div> <!-- questions dynamically built in javascript-->
-          <button type="button" id="pretest_to_pretest2" onClick="exp.first_test_check('pretest')">Next</button>
+          <div id ="goal_text"> </div> 
+          <button type="button" id="goals_to_action" onClick="exp.actions_slide()">Advance the task</button>
           </td>
         </tr>
       </table>
     </div>
 
-    <!-- Entity Pretest-->
-    <div class = "slide" id = "entity_pretest">
-      <table align="center" id="pretest_entity_table"><tr><td align="center">
-      <div id ="entity_pretest_questions"> </div> <!-- questions dynamically built in javascript-->
-      <button type="button" id="entity_to_training" onClick="exp.entity_close('pretest'); exp.training_slide()">Next</button>
-      <div id="pre_test_check"> </div>
-      </td></tr>
+    <!-- Actions Slide-->
+    <div class = "slide" id = "actions">
+      <div align="center"><img src="imgs/music_box.jpeg" height="300" width="400"> </div>
+      <table align="center" id="actions_table">
+        <tr>
+            <td align="center">
+              What action do you want to try?
+            </td>
+        </tr>
+        <tr>
+            <td align = "center"> 
+                <label class="btn btn-default"><input type="radio" name="intervention" value="red"/>Red Button</label> 
+                <label class="btn btn-default"><input type="radio" name="intervention" value="green"/>Green Button</label>
+                <label class="btn btn-default"><input type="radio" name="intervention" value="red_and_green"/>Red and Green Button</label>  
+            </td> 
+        </tr>
       </table>
+
+      <br><br><br>
+
+      <div align='center'>
+        <button type="button" id="actions_to_hyp" onClick="exp.actions_check()">Advance the task</button>
+      </div>
+
+      <div align="center" id="actions_test_check">
+      </div>
+
     </div>
 
-    <!-- training slide -->
-    <div class = "slide" id ="training">
-      <div id = "training_examples"> </div>
-      <table align="center"><tr><td align="center">
-        <button type="button" id="training_to_posttest" onClick="exp.training_test_check()">Next</button>
-        <div id="training_check"> </div><!--dynamically built in javascript-->
-        </td></tr></table>
-    </div>
+    <!-- Hypotheses Slide-->
+    <div class = "slide" id = "hypotheses">
 
-    <!-- Between training blocks slide -->
-    <div class = "slide" id ="between_training">
-      <div id = "between_training_html"> </div>
-      <table align="center"><tr><td align="center">
-        <button type="button" id="between_training" onClick="exp.training_slide()">Next</button>
-        <div id="training_check"> </div><!--dynamically built in javascript-->
-        </td></tr></table>
-    </div>
+      <div align="center">
+        <p class="block-text">After performing your action and seeing the outcome, how likely is it that each of the following actions would cause the toy to play music?
+        </p>
+      </div>
 
-    <!-- Relational Post test -->
-    <div class = "slide" id = "post_test">
-      <table align="center"><tr><td align="center">
-      <div id ="post_test_questions"> </div> <!-- questions dynamically built in javascript-->
-      <button type="button" id="posttest_to_posttest2" onClick="exp.second_test_check('posttest')">Next</button>
-      <div id="post_test_check"> </div>
-      </td></tr>
+      <table id="slider_table", align="center">
+        
+        <tr>
+          <td></td>
+          <td class="slider_labels">
+            <div class="left_label">very unlikely</div>
+            <div class="right_label">very likely</div>
+          </td>
+      </tr>
+
+        <tr>
+          <td><b>Button A</b></td>
+          <td>
+             <div id="slidecontainer">
+                <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><b>Button B</b></td>
+          <td>
+             <div id="slidecontainer">
+                <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><b>Both buttons A and B</b></td>
+          <td>
+             <div id="slidecontainer">
+                <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+            </div>
+          </td>
+        </tr>
+
       </table>
-    </div>
 
-    <!-- Entity Posttest-->
-    <div class = "slide" id = "entity_posttest">
-      <table align="center" id="posttest_entity_table"><tr><td align="center">
-      <div id ="entity_posttest_questions"> </div> <!-- questions dynamically built in javascript-->
-      <button type="button" id="posttest_to_postest2" onClick="exp.entity_close('posttest'); exp.final_slide()">Next</button>
-      <div id="post_test_check"> </div>
-      </td></tr>
-      </table>
+     
+
+      <div align='center'>
+        <button type="button" id="hyps_to_end" onClick="exp.hypotheses_check()">Advance the task</button>
+      </div>
+
     </div>
 
 

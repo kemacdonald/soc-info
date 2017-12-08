@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Shape Game</title>
+    <title>Music Box Game</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -48,11 +48,12 @@
     <div class="slide" id="instructions">
       <img src="css/images/stanford.png" alt="Stanford University">
       <p id='logo-text'>Stanford Language and Cognition Lab</p>
-      <p class="block-text">In this game, we're interested in your judgments about different kinds of shapes. First you will answer some questions, then you will be shown a series of examples to help you learn about the shapes, and then you will be asked to answer some more questions. The task should take about 5 minutes or less. </p>
+
+      <p class="block-text">In this game, we're interested in your decisions when you encounter a new device. The task should take about 5 minutes or less. Thank you for participating!</p>
 
       <!-- If there is a familiarization stage then the next line should be active, otherwise the one after that should be active-->
       
-       <button type="button" id="start_button" onClick="this.blur(); exp.relational_slide('pretest')">Start</button>
+       <button type="button" id="start_button" onClick="this.blur(); exp.goal_manipulation()">Start</button>
 
 
       <p class="block-text"> <b> (Note: you won't be able to preview this HIT before accepting it because it's so short.)
@@ -67,13 +68,18 @@
       </p>
     </div>
 
-    <!-- Relational Pretest -->
-    <div class = "slide" id = "relational_pretest">
-      <table align="center"><tr><td align="center">
-      <div id ="relational_pretest_questions"> </div> <!-- questions dynamically built in javascript-->
-      <button type="button" id="pretest_to_pretest2" onClick="exp.first_test_check('pretest')">Next</button>
-      <div id="pre_test_check"> </div>
-      </td></tr>
+    <!-- Goal Manipulation Slide -->
+    <div class = "slide" id = "goal_manipulation">
+      <table align="center">
+        <tr>
+          <td align='center'><img src="imgs/music_box.jpeg" height="300" width="400"></td>
+        </tr>
+        <tr>
+          <td align="center">
+          <div id ="goal_text"> </div> <!-- questions dynamically built in javascript-->
+          <button type="button" id="pretest_to_pretest2" onClick="exp.first_test_check('pretest')">Next</button>
+          </td>
+        </tr>
       </table>
     </div>
 
@@ -159,13 +165,13 @@
 
 
     <!-- The js scripts delaration section. To improve functionality there are a few js scripts so that parameters can be more easily set and functions be edited. The first one is pragmods_helper_functions_c1.js which contains simple functions. Note that these .js need to be declared in a proper order. -->
-    <script src="js/quadmods_helper_functions.js"></script>
+    <script src="js/soc_info_helper_functions.js"></script>
 
     <!-- This .js file will set the variable random parameters of the experiment. When it comes to vectorize the parameters of the experiment using this -->
-    <script src="js/quadmods_parameter_setter.js"></script>
+    <script src="js/soc_info_parameter_setter.js"></script>
 
     <!-- This .js file is in charge of controlling the dynamic glow of the activities including constructing the text that is used in the familiarization task and -->
-    <script src="js/quadmods_control_flow.js"></script>
+    <script src="js/soc_info_control_flow.js"></script>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>

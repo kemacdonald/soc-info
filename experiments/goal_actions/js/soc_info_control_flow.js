@@ -26,47 +26,19 @@ if (turk.previewMode) {
 //		1) It collects the variables that will be delivered to Turk at the end of the experiment
 //		2) It has all the functions that change the visual aspect of the experiment such as showing images, etc.
 
-shape_pairs = []
-for (shape1 of shapes) {
-  for (shape2 of shapes) {
-    if (shape1 != shape2){
-      shape_pairs.push([shape1, shape2])
-    }
-  }
-}
-
 exp = {
   // These variables are the ones that will be sent to Turk at the end.
   // The first batch, however, is set determined by the experiment conditions
   // and therefore should not be affected by the decisions made by the experimental subject.
 
-	// Order of questions
-	permutations_used: permutations,
-
 	// Store all data
 	data: [],
 
-	// Pre-test answers
-	r_pretest_answers,
-	e_pretest_responses,
+	// store participant's intervention choice
+		// intervention_response,
 
-	// Post-test answers
-	r_posttest_answers,
-	e_posttest_responses,
+	// store slider responses for beliefs over hypotheses
 
-	// Presentation order for relational tests
-	r_pretest_order_as_presented: [],
-	r_posttest_order_as_presented: [],
-
-	// Presentation order for entity tests
-	e_pretest_q_order_as_presented: [],
-	e_posttest_q_order_as_presented: [],
-	e_pretest_shape_order_as_presented: [],
-	e_posttest_shape_order_as_presented: [],
-
-
-	// Shapes guessed
-	guesses: [],
 
 	// Participant demo info
 	about: "",
@@ -81,43 +53,21 @@ exp = {
 	training_time: "",
 
 
-	// To keep the parameters in the csv file
-	all_answers_provided: all_answers_provided,
-	questions_permuted: questions_permuted,
-	skip_check: skip_check,
-	training_condition: training_condition,
-	examples_to_show: examples_to_show,
-	shape_of_focus: shape_of_focus,
+	//build goal manipulation slide 
+	goal_manipulation: function() {
+		// store the start time of the experiment
+		exp_times.push(new Date());
 
+	    if(goal_condition == "learning") {
+	    	goal_text_html = "<p>They want to know how well you will learn how the toy works. <br> You will receive a bonus at the end of the task if you learn how the toy works.</p>"
+	    } else {
+	    	goal_text_html = "<p>performance text</p>"
+	    }
 
-	//build relational slide for both pretest and posttest
-	relational_slide: function(test_id) {
-
-		if (test_id == "pretest") {
-			exp_times.push(new Date());
-		}
-
-		r_pretest_shuffled = _.shuffle(shape_pairs); // shuffle shape pairs to randmoize presentation order	
-	    question_html = ""
-	    for (pair of r_pretest_shuffled) {
-	      shape1 = pair[0]; shape2 = pair[1]
-	      if (shape1 != shape2) {
-	        q_id = `r_${test_id}_${shape1}_${shape2}`
-	        exp.r_pretest_order_as_presented.push(q_id); // store presentation order 
-	        question_html += 
-		        `<tr> 
-		        	<td>Are all ${shape1} also ${shape2}?</td> 
-		        	<td> 
-		        		<label class="btn btn-default"><input type="radio" name="${q_id}" value="yes"/>Yes</label> 
-		        		<label class="btn btn-default"><input type="radio" name="${q_id}" value="no"/>No</label>  
-		        	</td> 
-		        </tr>`
-	      }
-    }
-    var relational_html = `Here are some questions testing your knowledge of quadrilaterals. <br> Please answer yes or no to each of the questions: <br> <br> <table align="center"> ${question_html} </table>`;
+    	var instructions_html = `Toy developers have designed a device that plays music. <br> <br> <table align="center"> ${goal_text_html} </table>`;
     
-    $(`#relational_${test_id}_questions`).html(relational_html)
-    showSlide(`relational_${test_id}`)
+    	$(`#goal_text`).html(instructions_html)
+    	showSlide(`goal_manipulation`)
   },
 
   relational_answers: function (test_id) {

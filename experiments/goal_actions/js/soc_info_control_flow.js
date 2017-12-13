@@ -40,29 +40,49 @@ exp = {
 	action_trial_start_time: "",
 	action_trial_end_time: "",
 
+	hyp_type: "prior", // this is hacky solution: basically, we start with the hyp_type as prior and later switch to the posterior for displaying the correct slider bars
+
+	toy_slide: function() {
+		showSlide('toy_intro')
+	},
+
 	//build goal manipulation slide 
 	goals_slide: function() {
 		// store the start time of the experiment
 		exp.exp_start_time = new Date();
 
+		// disable advance button to ensure that participants read goal manipulation
+		$('#goals_to_action').prop("disabled", true); 
+
 	    if(goal_condition == "learning") {
-	    	goal_text_html = "<p>They want to know how well you will learn how the toy works. <br> You will receive a bonus at the end of the task if you learn how the toy works.</p>"
+	    	goal_text_html = "<p>The toy developer wants to know how quickly children could <b>learn</b> how to make the toy play music. <br><br> You will receive a bonus at the end of the task for learning which action makes the toy work.</p>"
 	    } else {
 	    	goal_text_html = "<p>performance text</p>"
 	    }
 
     	var instructions_html = `<table align="center"> ${goal_text_html} </table>`;
-    
+    	
     	$(`#goal_text`).html(instructions_html)
     	showSlide(`goal_manipulation`)
+
+    	setTimeout(function() {
+    		$('#goals_to_action').prop("disabled", false);
+    	}, 2500);
+
   },
 
   play_music: function(){
-  	  setTimeout(function(){
-  	  	$("#sound_player")[0].play();
+  	myAudio = $('#sound_player')[0];
+  	$("#play_music").prop('disabled', true); // disable the music button so participant can only play once
+  	 setTimeout(function(){
+  	  	myAudio.play(); // play sound
   	  }, 500);
 
-  	  $("#play_music").prop('disabled', true);
+  	// this function checks that the music has ended and then advances to the goal manipulation slide
+  	myAudio.addEventListener("ended", function() {
+     myAudio.currentTime = 0;
+     exp.goals_slide()
+ 	});	 
  },
 
  actions_slide: function() {
@@ -72,16 +92,33 @@ exp = {
  },
 
 hypotheses_slide: function() {
+	if(exp.hyp_type == "posterior") {
+ 		hyp_text_html = "After performing your action, how likely is it that each of the following actions are how the toy plays music?";
+ 	} else if (exp.hyp_type == "prior") {
+ 		hyp_text_html = "Before performing any action, how likely is it that each of the following actions are how the toy plays music?";
+ 	}
+
+ 	var hypotheses_html = `<table align="center"> ${hyp_text_html} </table>`;
+    	
+    $(`#hypotheses_text`).html(hypotheses_html);
  	showSlide('hypotheses')
  },
 
  hypotheses_check: function() {
+ 	// todo: some code to make sure participants adjusted the sliders
+ 	
  	// move on in the experiment
  	exp.hypotheses_close();
  },
 
- hypotheses_close: function() {
- 	exp.final_slide();
+ hypotheses_close: function(hyp_type) {
+ 	if(exp.hyp_type == "prior") {
+ 		// todo store the data from the slider bars
+ 		showSlide('actions')
+ 	} else if (exp.hyp_type == "posterior") {
+ 		// todo store the data from the slider bars
+ 		exp.final_slide();	
+ 	}
  },
 
  actions_close: function(response){
@@ -89,8 +126,11 @@ hypotheses_slide: function() {
  	exp.action_trial_end_time = new Date();
  	// store the action choice
  	exp.response = response;
+
+ 	// switch the hypothesis type to posterior
+ 	exp.hyp_type = "posterior";
  	// move to the final slide
- 	exp.hypotheses_slide()
+ 	exp.hypotheses_slide();
  },
 
  final_slide: function() {

@@ -27,16 +27,15 @@
     <meta name="viewport" content="initial-scale=1.0" />
 
     <script src="//uniqueturker.myleott.com/lib.js" type="text/javascript"></script>
-    
-    <script type="text/javascript">
-    (function(){
-        var ut_id = "2aa764911b61cbaba8c89d49881a45c8";
-        if (UTWorkerLimitReached(ut_id)) {
-            document.getElementById('mturk_form').style.display = 'none';
-            document.getElementsByTagName('body')[0].innerHTML = "You have already completed the maximum number of HITs allowed by this requester. Please click 'Return HIT' to avoid any impact on your approval rating.";
-        }
-    })();
-    </script>
+        <script type="text/javascript">
+        (function(){
+            var ut_id = "8cc22a5a5bd1db46065a20f55c0dc147";
+            if (UTWorkerLimitReached(ut_id)) {
+                document.getElementById('mturk_form').style.display = 'none';
+                document.getElementsByTagName('body')[0].innerHTML = "You have already completed the maximum number of HITs allowed by this requester. Please click 'Return HIT' to avoid any impact on your approval rating.";
+            }
+        })();
+      </script>
 
 
   </head>
@@ -54,7 +53,7 @@
 
       <!-- If there is a familiarization stage then the next line should be active, otherwise the one after that should be active-->
       
-       <button type="button" id="start_button" onClick="this.blur(); exp.goals_slide()">Start</button>
+       <button type="button" id="start_button" onClick="this.blur(); exp.toy_slide()">Start</button>
 
 
       <p class="block-text"> <b> Note: you won't be able to preview this HIT before accepting it because it's so short.
@@ -69,12 +68,14 @@
       </p>
     </div>
 
-    <!-- Goal Manipulation Slide -->
-    <div class = "slide" id = "goal_manipulation">
+    <!-- Toy Intro Slide -->    
+    <div class = "slide" id = "toy_intro">
       <table align="center">
         <tr>
-          <td align="center">
-            <p>Toy developers have designed a device that plays music.</p>
+          <td align="center" width="10">
+            <p>A children's toy developer has designed a simple device with <b>two buttons</b> that if pressed in the correct way will play music.</p>
+            <br>
+            <p> Click on the Next button to hear and example of the kind of music it can play.</p>
           </td>
         </tr>
         <tr>
@@ -85,14 +86,30 @@
               <source src="imgs/music_trimmed.m4a" type="audio/mp3">
             </audio>  
 
-            <button type="button" id="play_music" onClick="exp.play_music()">Hear the music</button>
+            <button type="button" id="play_music" onClick="exp.play_music()">Next (hear the music)
+            </button>
+          </td>
+        </tr>
+      </table>
 
+    </div>
+
+    <!-- Goal Manipulation Slide -->
+    <div class = "slide" id = "goal_manipulation">
+      <table align="center">
+        <tr>
+          <td align="center">
+            <div id ="goal_text"> </div> 
+          </td>
+        </tr>
+        <tr>
+          <td align='center'>
+            <img src="imgs/music_box.jpeg" height="200" width="300"> 
           </td>
         </tr>
         <tr>
           <td align="center">
-          <div id ="goal_text"> </div> 
-          <button type="button" id="goals_to_action" onClick="exp.actions_slide()">Advance the task</button>
+          <button type="button" id="goals_to_action" onClick="exp.hypotheses_slide()">Advance the task</button>
           </td>
         </tr>
       </table>
@@ -109,9 +126,9 @@
         </tr>
         <tr>
             <td align = "center"> 
-                <label class="btn btn-default"><input type="radio" name="intervention" value="red"/>Red Button</label> 
-                <label class="btn btn-default"><input type="radio" name="intervention" value="green"/>Green Button</label>
-                <label class="btn btn-default"><input type="radio" name="intervention" value="red_and_green"/>Red and Green Button</label>  
+                <label class="btn btn-default"><input type="radio" name="intervention" value="red"/>Press Orange Button</label> 
+                <label class="btn btn-default"><input type="radio" name="intervention" value="green"/>Press Purple Button</label>
+                <label class="btn btn-default"><input type="radio" name="intervention" value="red_and_green"/>Press Orange and Purple Button at the same time</label>  
             </td> 
         </tr>
       </table>
@@ -119,7 +136,7 @@
       <br><br><br>
 
       <div align='center'>
-        <button type="button" id="actions_to_hyp" onClick="exp.actions_check()">Advance the task</button>
+        <button type="button" id="actions_to_hyp" onClick="exp.actions_check()">Submit Action</button>
       </div>
 
       <div align="center" id="actions_test_check">
@@ -127,15 +144,20 @@
 
     </div>
 
-    <!-- Hypotheses Slide-->
+    <!--  Hypotheses Slide-->
     <div class = "slide" id = "hypotheses">
 
       <div align="center">
-        <p class="block-text">After performing your action and seeing the outcome, how likely is it that each of the following actions would cause the toy to play music?
-        </p>
+        <p class="block-text" id="hypotheses_text"></p>
       </div>
 
       <table id="slider_table", align="center">
+
+        <tr>
+          <td align='center'>
+            <img src="imgs/music_box.jpeg" height="200" width="300"> 
+          </td>
+        </tr>
         
         <tr>
           <td></td>
@@ -146,7 +168,7 @@
       </tr>
 
         <tr>
-          <td><b>Button A</b></td>
+          <td><b>Press just the Purple Button</b></td>
           <td>
              <div id="slidecontainer">
                 <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
@@ -155,7 +177,7 @@
         </tr>
 
         <tr>
-          <td><b>Button B</b></td>
+          <td><b>Press just the Orange Button</b></td>
           <td>
              <div id="slidecontainer">
                 <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
@@ -164,7 +186,7 @@
         </tr>
 
         <tr>
-          <td><b>Both buttons A and B</b></td>
+          <td><b>Press both the Purple and Orange Buttons</b></td>
           <td>
              <div id="slidecontainer">
                 <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
@@ -173,8 +195,6 @@
         </tr>
 
       </table>
-
-     
 
       <div align='center'>
         <button type="button" id="hyps_to_end" onClick="exp.hypotheses_check()">Advance the task</button>

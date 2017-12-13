@@ -21,6 +21,11 @@ td.slider_labels{
  font-size: 18px;
 }
 
+#goal_text {
+  width: 600px;
+  font-size: 22px;
+}
+
 #slider_table {
   width: 80%;
 }

@@ -1,8 +1,5 @@
-
 // ---------------- 3. CONTROL FLOW ------------------
 // This .js file determines the flow of the variable elements in the experiment as dictated
-// by the various calls from pragmods html.
-
 
 showSlide("instructions");
 
@@ -22,7 +19,15 @@ exp = {
   // and therefore should not be affected by the decisions made by the experimental subject.
 
 	// store participant's intervention choice
-	response: "",
+	action_response: "",
+
+	// store participant's browser info
+	browser: BrowserDetect.browser,
+	browser_height: $(window).height(),
+	browser_width: $(window).width(),
+	screen_width: screen.width,
+	screen_height: screen.height,
+	mobile_device: /Mobi/.test(navigator.userAgent),
 
 	// store slider responses for beliefs over hypotheses
 	beliefs_hypotheses: [],
@@ -40,7 +45,7 @@ exp = {
 	action_trial_start_time: "",
 	action_trial_end_time: "",
 
-	hyp_type: "prior", // this is hacky solution: basically, we start with the hyp_type as prior and later switch to the posterior for displaying the correct slider bars
+	hyp_type: "prior", // this is hacky solution to make the hypotheses slides show up in the correct order: basically, we start with the hyp_type as prior and later switch to the posterior for displaying the correct slider bars
 
 	toy_slide: function() {
 		showSlide('toy_intro')
@@ -67,7 +72,7 @@ exp = {
 
     	setTimeout(function() {
     		$('#goals_to_action').prop("disabled", false);
-    	}, 2500);
+    	}, 0); // should be 2500
 
   },
 
@@ -79,10 +84,12 @@ exp = {
   	  }, 500);
 
   	// this function checks that the music has ended and then advances to the goal manipulation slide
-  	myAudio.addEventListener("ended", function() {
+  	/*myAudio.addEventListener("ended", function() {
      myAudio.currentTime = 0;
      exp.goals_slide()
- 	});	 
+ 	});	 */
+
+ 	exp.goals_slide();
  },
 
  actions_slide: function() {
@@ -99,17 +106,34 @@ hypotheses_slide: function() {
  	}
 
  	var hypotheses_html = `<table align="center"> ${hyp_text_html} </table>`;
-    	
     $(`#hypotheses_text`).html(hypotheses_html);
+
+    //loop to create sliders
+    hypotheses = ['Press just the Orange Button', 'Press just the Purple Button', 'Press both the Purple and Orange Buttons'];
+    randomized_hyps = shuffle(hypotheses);
+
+    for (var i = 0; i<hypotheses.length; i++) {
+        // display prompt
+        $("#ref" + i).html(randomized_hyps[i]);
+        //var responses["target" + i] = randomized_hyps[i];
+        $('#hyp_slider' + i).slider({
+            animate: true,
+            orientation: "horizontal",
+            max: 1 , min: 0, step: 0.01, value: 0.5,
+        });
+    }
+
+
  	showSlide('hypotheses')
  },
 
  hypotheses_check: function() {
  	// todo: some code to make sure participants adjusted the sliders
- 	
+
  	// move on in the experiment
  	exp.hypotheses_close();
  },
+
 
  hypotheses_close: function(hyp_type) {
  	if(exp.hyp_type == "prior") {
@@ -125,7 +149,7 @@ hypotheses_slide: function() {
  	// store the end time of actions trial
  	exp.action_trial_end_time = new Date();
  	// store the action choice
- 	exp.response = response;
+ 	exp.action_response = response;
 
  	// switch the hypothesis type to posterior
  	exp.hyp_type = "posterior";

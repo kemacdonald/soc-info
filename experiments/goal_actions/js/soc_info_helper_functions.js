@@ -329,3 +329,48 @@ if (!('some' in Array.prototype)) {
         return false;
     };
 }
+
+//slider stuff used throughout
+
+var slider_response = null;
+
+function resetSlider() {
+    $('.slider').each(function(){
+
+        var options = $(this).slider( 'option' );
+
+        $(this).slider( 'values', [ options.min, options.max ] );
+
+    });
+}
+
+function changeCreator(label) {
+    return function(value) {
+        $('#' + label).css({"background":"#99D6EB"});
+        $('#' + label + ' .ui-slider-handle').css({
+            "background":"#667D94",
+            "border-color": "#001F29" });
+        var slider_val = $("#" + label).slider("value");
+        slider_response = slider_val;
+    };
+}
+
+//creator functions for theories expt
+function slideCreator(label) {
+    return function() {
+        $('#' + label + ' .ui-slider-handle').css({
+            "background":"#E0F5FF",
+            "border-color": "#001F29"
+        });
+    };
+}
+function create_slider(label) {
+    slider_response = null; //delete slider response from previous trial
+    $("#" + label).slider({
+        animate: true,
+        orientation: "horizontal",
+        max: 1 , min: 0, step: 0.01, value: 0.5,
+        slide: slideCreator(label),
+        change: changeCreator(label)
+    });
+}

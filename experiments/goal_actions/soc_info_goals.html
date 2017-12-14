@@ -13,6 +13,8 @@
 
     <!-- What does this js script do? -->
     <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/browserCheck.js"></script>
 
     <!--mmturkey manages submitting data to Mechanical Turk. This defines a global object, turk, and attaches five properties to it, hitId, assignmentId, workerId, previewMode, and turkSubmitTo. It also provides a single method, submit(data), which you use to submit data to Turk. If no submission URL has been provided (because, e.g. you're testing your code outside of the Turk environment), submit displays what would have been submitted (without, obviously, any Turk-specific variables like workerId and assignmentId). -->
     <script src="js/mmturkey.js"></script>
@@ -126,9 +128,9 @@
         </tr>
         <tr>
             <td align = "center"> 
-                <label class="btn btn-default"><input type="radio" name="intervention" value="red"/>Press Orange Button</label> 
-                <label class="btn btn-default"><input type="radio" name="intervention" value="green"/>Press Purple Button</label>
-                <label class="btn btn-default"><input type="radio" name="intervention" value="red_and_green"/>Press Orange and Purple Button at the same time</label>  
+                <label class="btn btn-default"><input type="radio" name="intervention" value="orange"/>Press Orange Button</label> 
+                <label class="btn btn-default"><input type="radio" name="intervention" value="purple"/>Press Purple Button</label>
+                <label class="btn btn-default"><input type="radio" name="intervention" value="orange_and_purple"/>Press Orange and Purple Button at the same time</label>  
             </td> 
         </tr>
       </table>
@@ -151,7 +153,7 @@
         <p class="block-text" id="hypotheses_text"></p>
       </div>
 
-      <table id="slider_table", align="center">
+       <table id="slider_table", align="center">
 
         <tr>
           <td align='center'>
@@ -168,19 +170,15 @@
       </tr>
 
         <tr>
-          <td><b>Press just the Purple Button</b></td>
-          <td>
-             <div id="slidecontainer">
-                <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-            </div>
-          </td>
+            <td class="slider_referent" id="ref0"></td>
+            <td class="slider_container"><div id="hyp_slider0" class="slider"></div></td>
         </tr>
 
         <tr>
           <td><b>Press just the Orange Button</b></td>
           <td>
              <div id="slidecontainer">
-                <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                <input type="range" min="1" max="100" value="50" class="slider" id="myRange2">
             </div>
           </td>
         </tr>
@@ -189,12 +187,14 @@
           <td><b>Press both the Purple and Orange Buttons</b></td>
           <td>
              <div id="slidecontainer">
-                <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                <input type="range" min="1" max="100" value="50" class="slider" id="myRange3">
             </div>
           </td>
         </tr>
 
       </table>
+
+     
 
       <div align='center'>
         <button type="button" id="hyps_to_end" onClick="exp.hypotheses_check()">Advance the task</button>
@@ -203,7 +203,7 @@
     </div>
 
 
-    <div class = "slide" id = "final_questions">
+  <div class = "slide" id = "final_questions">
     <center> Please answer the top question. The remaining questions are optional. <br> <br>
       <p class="block-text">
         What was this survey about? <br>
@@ -243,11 +243,13 @@
 
     <!-- This .js file is in charge of controlling the dynamic glow of the activities including constructing the text that is used in the familiarization task and -->
     <script src="js/soc_info_control_flow.js"></script>
+    
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+
 
   </body>
 </html>

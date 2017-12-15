@@ -38,6 +38,7 @@ exp = {
 	comment: "",
 	age: "",
 	gender: "",
+	language: "",
 
 	// Time variables
 	exp_start_time: "",
@@ -49,13 +50,13 @@ exp = {
 	hyp_type: "prior", // this is hacky solution to make the hypotheses slides show up in the correct order: basically, we start with the hyp_type as prior and later switch to the posterior for displaying the correct slider bars
 
 	toy_slide: function() {
+		// store the start time of the experiment
+		exp.exp_start_time = new Date();
 		showSlide('toy_intro')
 	},
 
 	//build goal manipulation slide 
 	goals_slide: function() {
-		// store the start time of the experiment
-		exp.exp_start_time = new Date();
 
 		// disable advance button to ensure that participants read goal manipulation
 		$('#goals_to_action').prop("disabled", true); 
@@ -73,7 +74,7 @@ exp = {
 
     	setTimeout(function() {
     		$('#goals_to_action').prop("disabled", false);
-    	}, 0); // should be 2500
+    	}, 2500); // should be 2500
 
   },
 
@@ -85,12 +86,10 @@ exp = {
   	  }, 500);
 
   	// this function checks that the music has ended and then advances to the goal manipulation slide
-  	/*myAudio.addEventListener("ended", function() {
+  	myAudio.addEventListener("ended", function() {
      myAudio.currentTime = 0;
      exp.goals_slide()
- 	});	 */
-
- 	exp.goals_slide();
+ 	});	 
  },
 
  actions_slide: function() {
@@ -102,14 +101,10 @@ exp = {
 hypotheses_slide: function() {
 	// display the correct text
 	if(exp.hyp_type == "posterior") {
- 		hyp_text_html = "After performing your action, how likely is it that each of the following actions are how the toy plays music?";
+ 		hyp_text_html = "After performing your action, how likely is it that each of the following actions are how the toy was designed to play music?";
  	} else if (exp.hyp_type == "prior") {
  		hyp_text_html = "Before performing any action, how likely is it that each of the following actions are how the toy plays music?";
  	}
-
- 	$('.slider').onchange = function() {
-    	console.log('test');
-	}
 
  	var hypotheses_html = `<table align="center"> ${hyp_text_html} </table>`;
     $(`#hypotheses_text`).html(hypotheses_html);
@@ -215,6 +210,7 @@ actions_check: function() {
 		    exp.comment = document.getElementById("comments").value;
 		    exp.age = document.getElementById("age").value;
 		    exp.gender = document.getElementById("gender").value;
+		    exp.language = document.getElementById("language").value;
 		    showSlide("finished");
 		    exp.end();
 		}

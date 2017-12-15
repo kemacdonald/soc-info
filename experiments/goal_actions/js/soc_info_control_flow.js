@@ -30,7 +30,8 @@ exp = {
 	mobile_device: /Mobi/.test(navigator.userAgent),
 
 	// store slider responses for beliefs over hypotheses
-	beliefs_hypotheses: [],
+	prior_beliefs: [],
+	posterior_beliefs: [],
 
 	// Participant demo info
 	about: "",
@@ -99,50 +100,79 @@ exp = {
  },
 
 hypotheses_slide: function() {
+	// display the correct text
 	if(exp.hyp_type == "posterior") {
  		hyp_text_html = "After performing your action, how likely is it that each of the following actions are how the toy plays music?";
  	} else if (exp.hyp_type == "prior") {
  		hyp_text_html = "Before performing any action, how likely is it that each of the following actions are how the toy plays music?";
  	}
 
+ 	$('.slider').onchange = function() {
+    	console.log('test');
+	}
+
  	var hypotheses_html = `<table align="center"> ${hyp_text_html} </table>`;
     $(`#hypotheses_text`).html(hypotheses_html);
 
-    //loop to create sliders
-    hypotheses = ['Press just the Orange Button', 'Press just the Purple Button', 'Press both the Purple and Orange Buttons'];
-    randomized_hyps = shuffle(hypotheses);
-
-    for (var i = 0; i<hypotheses.length; i++) {
-        // display prompt
-        $("#ref" + i).html(randomized_hyps[i]);
-        //var responses["target" + i] = randomized_hyps[i];
-        $('#hyp_slider' + i).slider({
-            animate: true,
-            orientation: "horizontal",
-            max: 1 , min: 0, step: 0.01, value: 0.5,
-        });
-    }
-
+    // todo: loop to create sliders programatically and randomize order of hypotheses
 
  	showSlide('hypotheses')
  },
 
  hypotheses_check: function() {
- 	// todo: some code to make sure participants adjusted the sliders
+ 	// get number of sliders
+ 	n_sliders = $('.slider').length
+ 	var temp_beliefs = [];
+ 	var slider_check = "not_changed";
 
- 	// move on in the experiment
- 	exp.hypotheses_close();
+ 	// extract all slider values
+ 	for(i = 0; i < n_sliders; i++) {
+ 		temp_beliefs.push($('.slider')[i].value == slider_start_val);
+ 	}
+
+ 	// check the slider beliefs array to see if all the values are true, which means
+ 	if(temp_beliefs.every(checkTrue) == false) {
+ 		slider_check = "at_least_one_slider_changed"
+ 	}
+
+ 	if(slider_check == "not_changed") {
+ 		var adjust_sliders_message = '<font color="red">Please adjust at least one of the sliders.</font>';
+ 		$("#sliders_test_check").show();
+ 		$("#sliders_test_check").html(adjust_sliders_message);
+ 	} else if (slider_check == "at_least_one_slider_changed") {
+ 		// move on in the experiment
+ 		exp.hypotheses_close();
+ 	}
  },
 
 
  hypotheses_close: function(hyp_type) {
+ 	// get number of sliders
+ 	n_sliders = $('.slider').length;
+
+ 	// remove slider error message
+ 	$("#sliders_test_check").hide();
+
+ 	// store data
  	if(exp.hyp_type == "prior") {
- 		// todo store the data from the slider bars
+ 		// store the data from the slider bars in the prior beliefs object
+		for(i = 0; i < n_sliders; i++) {
+ 			exp.prior_beliefs.push($('.slider')[i].value);
+ 		}
+ 		// reset slider values
+ 		resetSliders(n_sliders);
+
+ 		// show actions slide
  		showSlide('actions')
  	} else if (exp.hyp_type == "posterior") {
- 		// todo store the data from the slider bars
+ 		// store the data from the slider bars
+ 		for(i = 0; i < n_sliders; i++) {
+ 			exp.posterior_beliefs.push($('.slider')[i].value);
+ 		}
+ 		// move on to final slide
  		exp.final_slide();	
  	}
+
  },
 
  actions_close: function(response){

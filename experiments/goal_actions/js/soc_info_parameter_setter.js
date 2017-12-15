@@ -12,6 +12,7 @@ var num_actions = 3
  */
 
 var numConditions = 2
+var slider_start_val = "50"
 
 /*try { 
     var filename = "soc_info_goals_pilot";

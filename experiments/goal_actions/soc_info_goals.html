@@ -16,6 +16,9 @@
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/browserCheck.js"></script>
 
+    <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
     <!--mmturkey manages submitting data to Mechanical Turk. This defines a global object, turk, and attaches five properties to it, hitId, assignmentId, workerId, previewMode, and turkSubmitTo. It also provides a single method, submit(data), which you use to submit data to Turk. If no submission URL has been provided (because, e.g. you're testing your code outside of the Turk environment), submit displays what would have been submitted (without, obviously, any Turk-specific variables like workerId and assignmentId). -->
     <script src="js/mmturkey.js"></script>
 
@@ -37,7 +40,7 @@
                 document.getElementsByTagName('body')[0].innerHTML = "You have already completed the maximum number of HITs allowed by this requester. Please click 'Return HIT' to avoid any impact on your approval rating.";
             }
         })();
-      </script>
+    </script>
 
 
   </head>
@@ -56,7 +59,6 @@
       <!-- If there is a familiarization stage then the next line should be active, otherwise the one after that should be active-->
       
        <button type="button" id="start_button" onClick="this.blur(); exp.toy_slide()">Start</button>
-
 
       <p class="block-text"> <b> Note: you won't be able to preview this HIT before accepting it because it's so short.
 
@@ -93,6 +95,8 @@
           </td>
         </tr>
       </table>
+
+      <div id="slider1"></div>
 
     </div>
 
@@ -141,8 +145,7 @@
         <button type="button" id="actions_to_hyp" onClick="exp.actions_check()">Submit Action</button>
       </div>
 
-      <div align="center" id="actions_test_check">
-      </div>
+      <div align="center" id="actions_test_check"></div>
 
     </div>
 
@@ -170,8 +173,11 @@
       </tr>
 
         <tr>
-            <td class="slider_referent" id="ref0"></td>
-            <td class="slider_container"><div id="hyp_slider0" class="slider"></div></td>
+          <td><b>Press just the Purple Button</b></td>
+          <td>
+            <div id="slidecontainer">
+                <input type="range" min="1" max="100" value="50" class="slider" id="myRange1">
+            </div>
         </tr>
 
         <tr>
@@ -194,11 +200,11 @@
 
       </table>
 
-     
-
       <div align='center'>
         <button type="button" id="hyps_to_end" onClick="exp.hypotheses_check()">Advance the task</button>
       </div>
+
+      <div align="center" id="sliders_test_check"></div>
 
     </div>
 

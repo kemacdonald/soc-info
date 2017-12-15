@@ -1,5 +1,5 @@
 // ---------------- 1. HELPER FUNCTIONS ------------------
-// This .js file has al the alphanumeric functions
+// This .js file has all the alphanumeric functions
 // necessary to generate random instances of the experiment.
 
 // random function
@@ -12,51 +12,6 @@ function random(a,b) {
     }
 }
 
-// a hacky/complicated function to check that quadmods examples are unique
-// loop over array of examples, skipping the first example
-// at the second example, check if this example equals the first. 
-// if it does, then randomly generate a new example until they do not match
-// do the same for the third example, but check it against both the first and the second examples
-
-function checkExamples(array) {
-
-    var cleanArray = array;
-    var new_example = [];
-
-    for (var i = 0; i < cleanArray.length; i++) {
-        if (i == 1) {
-
-            do {
-                new_example = [random(0,3), random(0,2)];
-                cleanArray[i] = new_example;
-            } 
-            while (arraysEqual(cleanArray[i], cleanArray[i-1]))
-
-        } else if (i == 2) {
-            // check if the third example is the same as the second example
-            if (arraysEqual(cleanArray[i], cleanArray[i-1])) {
-
-                do {
-                new_example = [random(0,3), random(0,2)];
-                cleanArray[i] = new_example;
-                } 
-                while (arraysEqual(cleanArray[i], cleanArray[i-1]))
-
-            } else if (arraysEqual(cleanArray[i], cleanArray[i-2])) {
-
-                do {
-                new_example = [random(0,3), random(0,2)];
-                cleanArray[i] = new_example;
-                } 
-                while (arraysEqual(cleanArray[i], cleanArray[i-2]))
-
-            }
-        };
-    };
-
-    return cleanArray;
-
-}
 
 // function to only keep unique values in array while preserving order
 
@@ -107,7 +62,7 @@ function unique(arrayName)
     return newArray;
 }
 
-// shuffle function    -- What the hell is the comna for???!!!??!?!?!?! om() * i), 
+// shuffle function    -- What the hell is the comma for???!!!??!?!?!?! om() * i), 
 function shuffle (a) 
 { 
     var o = [];
@@ -121,78 +76,6 @@ function shuffle (a)
 function showSlide(id) {
     $(".slide").hide(); //jquery - all elements with class of slide - hide
     $("#"+id).show(); //jquery - element with given id - show
-}
-
-
-// create HTML for property matrix and base image
-// base = the kind of stimuli
-function stimHTML(base, n, prop_mat, props, id, file_number) {
-    var html = "";
-
-    html += '<img src="images' + file_number +  '/' + base + '-base' + String(n+1) +
-    '.png" width=200px height=200px alt="' + base + '" id="' + id + 'Image"/>';
-
-    var c = 0;
-    for (var p = 0; p < prop_mat.length; p++) {
-	   if (prop_mat[p] == 1) {
-    	    html += '<img  src="images' + file_number +  '/' + base + '-' + props[p] + 
-    		'.png" width=200px height=200px alt="' + props[p] + '" ' +
-    		'id="' + id + 'Property' + String(c+1) + '"/>';
-    	    c = c + 1; // keep count of how many properties we've stacked
-	   }
-    }
-
-    return html;
-}
-
-
-
-// Determine if the shape belongs to the shape of focus:
-//function isShapeOfFocus()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// the patch of color by color? 
-
-// Select color at first!
-// Patch of cloth referent matcher. file_number = the image folder 
-// disposition: where in the experiment the image will be put on
-function colorPatchHTML(base, n, prop_mat, props, id, position, file_number, color_ordering) {
-    var html = "";
-    //html += '<img src="images3/square' + '-'  + base + '-' + stims_single_words  +'.png" width=200px height=200px id="objImage" />';
-    html += '' //'<img src="images3/square-face-' + props[] +  '.png" width=200px height=200px id="objImage" />';
-
-
-    html += '<img src="images3/square-' + base + '-' + props[n] +  
-        '.png" width=80px height=80px id="objPatch" />';
-
-    var c = 0;
-    return html;
-}
-
-
-
-function hand_HTML(base, n, prop_mat, props, id, position) {
-    var html = "";
-
-    html += '<img  src="images3/hand.png" width=50px height=50px'  + 
-     'alt="it is the hand!" id="objHandProperty"/>';
-    //'alt="' + props[n] + '" ' + 'id="' + id + 'Property' + String(c+10) + '"/>';
-    return html;
 }
 
 
@@ -332,45 +215,12 @@ if (!('some' in Array.prototype)) {
 
 //slider stuff used throughout
 
-var slider_response = null;
-
-function resetSlider() {
-    $('.slider').each(function(){
-
-        var options = $(this).slider( 'option' );
-
-        $(this).slider( 'values', [ options.min, options.max ] );
-
-    });
+function resetSliders(n_sliders) {
+    for(i = 0; i < n_sliders; i++) {
+            $('.slider')[i].value = "50";
+    }
 }
 
-function changeCreator(label) {
-    return function(value) {
-        $('#' + label).css({"background":"#99D6EB"});
-        $('#' + label + ' .ui-slider-handle').css({
-            "background":"#667D94",
-            "border-color": "#001F29" });
-        var slider_val = $("#" + label).slider("value");
-        slider_response = slider_val;
-    };
-}
-
-//creator functions for theories expt
-function slideCreator(label) {
-    return function() {
-        $('#' + label + ' .ui-slider-handle').css({
-            "background":"#E0F5FF",
-            "border-color": "#001F29"
-        });
-    };
-}
-function create_slider(label) {
-    slider_response = null; //delete slider response from previous trial
-    $("#" + label).slider({
-        animate: true,
-        orientation: "horizontal",
-        max: 1 , min: 0, step: 0.01, value: 0.5,
-        slide: slideCreator(label),
-        change: changeCreator(label)
-    });
+function checkTrue(value) {
+        return value == true;
 }

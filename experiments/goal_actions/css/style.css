@@ -18,7 +18,7 @@ td {
 
 td.slider_labels{
  padding-bottom: 5px; 
- font-size: 18px;
+ font-size: 14px;
 }
 
 #goal_text {
@@ -39,21 +39,24 @@ td.slider_labels{
 
 .slider_labels {
   width: 400;
+  font-size: 14px;
 }
 
 .left_label {
   display: inline;
   float: left;
+  font-size: 14px;
 }
 
 .right_label {
   display: inline;
   float: right;
+  font-size: 14px;
 }
 
 #slider_table td {
   text-align: center;
-  font-size: 20px
+  font-size: 16px
 }
 
 .slider {

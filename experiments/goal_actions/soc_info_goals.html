@@ -54,7 +54,7 @@
       <br><br>
       <p id='logo-text'>Stanford Language and Cognition Lab</p>
 
-      <p class="block-text">In this game, we're interested in your decisions when you encounter a new device. The task should take about 5 minutes or less. Thank you for participating!</p>
+      <p class="block-text">In this game, we're interested in your decision making when you come across a new device. The task should only take about 5 minutes or less. Thank you for participating!</p>
 
       <!-- If there is a familiarization stage then the next line should be active, otherwise the one after that should be active-->
       
@@ -88,7 +88,7 @@
             <img src="imgs/music_box_left.jpeg" height="300" width="400"> 
 
             <audio id="sound_player">
-              <source src="imgs/music_trimmed.m4a" type="audio/mp3">
+              <source src="imgs/music_trimmed.m4a" type="audio/mp4">
             </audio>  
 
             <button type="button" id="play_music" onClick="exp.play_music('toy_slide')">Next (hear the music)
@@ -128,13 +128,11 @@
       <table align="center" id="actions_table">
         <tr>
             <td align="center">
-              <p> What action do you want to try?</p>
+              <p> Imagine you only had one attempt to play with the toy.</p>
+              <p>Which action would you want to try?</p>
+              <br>
+              <div id ="goal_text_action"> </div> 
             </td>
-        </tr>
-        <tr>
-          <td align="center">
-            <div id ="goal_text_action"> </div> 
-          </td>
         </tr>
         <tr>
             <td align = "center"> 
@@ -143,15 +141,18 @@
                 <label class="btn btn-default"><input type="radio" name="intervention" value="orange_and_purple"/>Press Orange and Purple Button at the same time</label>  
             </td> 
         </tr>
+
+        <tr>
+          <td align="center">
+            <p> If your action makes the toy work, you will hear music.</p>
+            <div align='center'>
+              <button type="button" id="actions_to_hyp" onClick="exp.actions_check()">Submit Action</button>
+            </div>
+            <div align="center" id="actions_test_check"></div>
+          </td>
+        </tr>
       </table>
 
-      <br><br><br>
-
-      <div align='center'>
-        <button type="button" id="actions_to_hyp" onClick="exp.actions_check()">Submit Action</button>
-      </div>
-
-      <div align="center" id="actions_test_check"></div>
 
     </div>
 
@@ -216,17 +217,17 @@
 
 
   <div class = "slide" id = "final_questions">
-    <center> Please answer the top question. The remaining questions are optional. <br> <br>
+    <center> Please answer the following questions to help us improve our task. Thank you!<br> <br>
       <p class="block-text">
-        What was this survey about? <br>
+        What do you think this task was about? <br>
         <input type="text" id="about" name="about" size="70">
       </p>
       <p class="block-text" name="comments" >
-        Any other comments for us? <br>
+        Do you have any other comments for us? Was there anything broken or that could be improved? <br>
         <input type="text" id="comments" name="comments" size="70">
       </p>
       <p class="block-text" name="age" >
-        How old are you? <br>
+        What is your age in years? <br>
         <input type="text" id="age" name="age" size="70">
       </p>
       <p class="block-text" name="gender" >
@@ -238,7 +239,7 @@
         <input type="text" id="language" name="language" size="70">
       </p>
       <table align="center"><tr><td align="center">
-        <button type="button" id="checkFinishedButton" onClick="exp.check_finished()">Finished</button>
+        <button type="button" id="checkFinishedButton" onClick="exp.check_finished()">Finished: Submit to MTurk</button>
         <div id="checkMessage"> </div><!--dynamically built in javascript-->
         </td></tr></table>
     </div>

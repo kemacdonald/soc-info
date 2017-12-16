@@ -57,7 +57,7 @@ exp = {
 
 	//build goal manipulation slide 
 	goals_slide: function() {
-		var time_interval = 2500 // in ms
+		var time_interval = 2500 // in ms should be 2500
 
 		// disable advance button to ensure that participants read goal manipulation
 		$('#goals_to_action').prop("disabled", true); 
@@ -79,7 +79,7 @@ exp = {
   	$("#play_music").prop('disabled', true); // disable the music button so participant can only play once
   	 
   	if (slide_id == "action_slide") {
-  		var audio_delay = 1000 // ms
+  		var audio_delay = 1500 // ms
   	} else {
   		var audio_delay = 500 // ms
   	}
@@ -87,18 +87,18 @@ exp = {
   	  	myAudio.play(); // play sound
   	 }, audio_delay);
 
-  	 // this function checks that the music has ended and then advances to the goal manipulation slide
+  	 // this function checks that the music has ended 
+  	 // and then advances to either goal manipulation or posterior hypotheses slide depending on location in experiment
   	myAudio.addEventListener("ended", function() {
      myAudio.currentTime = 0;
 
      if(slide_id == "toy_slide") {
-     	console.log(slide_id);
      	exp.goals_slide();
      } else if (slide_id == "action_slide") {
-     	console.log(slide_id);
      	exp.hypotheses_slide();
      }
  	});	 
+
  },
 
  actions_slide: function() { 
@@ -113,9 +113,9 @@ exp = {
 hypotheses_slide: function() {
 	// display the correct text
 	if(exp.hyp_type == "posterior") {
- 		hyp_text_html = "After hearing the toy play music, how likely is it that each of the following actions are necessary for the toy to play music?";
+ 		hyp_text_html = "After hearing the toy play music, how likely is it that each of the following are <b>necessary</b> to make the toy play music?";
  	} else if (exp.hyp_type == "prior") {
- 		hyp_text_html = "Before performing any action, how likely is it that each of the following actions are necessary for the toy to play music?";
+ 		hyp_text_html = "Before performing any action, how likely is it that each of the following are <b>necessary</b> to make the toy play music?";
  	}
 
  	var hypotheses_html = `<table align="center"> ${hyp_text_html} </table>`;
@@ -217,7 +217,7 @@ hypotheses_slide: function() {
     check_finished: function() {
 		if (document.getElementById('about').value.length < 1) {
 		    $("#checkMessage").html('<font color="red">' +
-				       'Please make sure you have answered all the questions!' +
+				       'Please make sure you have answered all the questions. Thank you!' +
 				       '</font>');
 		} else {
 		    exp.about = document.getElementById("about").value;

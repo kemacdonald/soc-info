@@ -79,18 +79,19 @@
           <td align="center" width="10">
             <p>A children's toy developer has designed a simple device with <b>two buttons</b> that if pressed in the correct way will play music.</p>
             <br>
-            <p> Click on the Next button to hear the kind of music it can play.</p>
+            <p> Click on the <b>Next</b> button to hear the kind of music it can play.</p>
+            <p> Make sure your volume is turned on to hear the music.</p>
           </td>
         </tr>
         <tr>
           <td align='center'>
-            <img src="imgs/music_box.jpeg" height="300" width="400"> 
+            <img src="imgs/music_box_left.jpeg" height="300" width="400"> 
 
             <audio id="sound_player">
               <source src="imgs/music_trimmed.m4a" type="audio/mp3">
             </audio>  
 
-            <button type="button" id="play_music" onClick="exp.play_music()">Next (hear the music)
+            <button type="button" id="play_music" onClick="exp.play_music('toy_slide')">Next (hear the music)
             </button>
           </td>
         </tr>
@@ -110,7 +111,7 @@
         </tr>
         <tr>
           <td align='center'>
-            <img src="imgs/music_box.jpeg" height="200" width="300"> 
+            <img src="imgs/music_box_left.jpeg" height="200" width="300"> 
           </td>
         </tr>
         <tr>
@@ -123,12 +124,17 @@
 
     <!-- Actions Slide-->
     <div class = "slide" id = "actions">
-      <div align="center"><img src="imgs/music_box.jpeg" height="300" width="400"> </div>
+      <div align="center"><img src="imgs/music_box_left.jpeg" height="300" width="400"> </div>
       <table align="center" id="actions_table">
         <tr>
             <td align="center">
-              What action do you want to try?
+              <p> What action do you want to try?</p>
             </td>
+        </tr>
+        <tr>
+          <td align="center">
+            <div id ="goal_text_action"> </div> 
+          </td>
         </tr>
         <tr>
             <td align = "center"> 
@@ -160,7 +166,7 @@
 
         <tr>
           <td align='center'>
-            <img src="imgs/music_box.jpeg" height="200" width="300"> 
+            <img src="imgs/music_box_left.jpeg" height="200" width="300"> 
           </td>
         </tr>
         

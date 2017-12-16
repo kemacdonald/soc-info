@@ -41,3 +41,11 @@ switch (cond) {
         goal_condition = "performance";
         break
 }
+
+if(goal_condition == "learning") {
+    goal_text_html = "<p>The toy developer wants to know how quickly children could <b>learn how to make the toy play music.</b> <br><br> You will receive a <b>bonus at the end of the task for learning</b> which action makes the toy work.</p>"
+    goal_html_action_slide = "<p>Remember, you will receive a <b>bonus</b> at the end of the task for <b>learning</b> which action makes the toy work.</p>"
+} else {
+    goal_text_html = "<p>The toy developer wants to know how quickly children could <b>make the toy play music.</b> <br><br> You will receive a <b>bonus</b> at the end of the task for selection an action that makes the toy work.</p>"
+    goal_html_action_slide = "<p>Remember, you will receive a <b>bonus</b> at the end of the task for <b>selecting an action</b> that makes the work</b>.</p>"
+}

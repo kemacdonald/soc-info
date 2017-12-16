@@ -57,15 +57,10 @@ exp = {
 
 	//build goal manipulation slide 
 	goals_slide: function() {
+		var time_interval = 2500 // in ms
 
 		// disable advance button to ensure that participants read goal manipulation
 		$('#goals_to_action').prop("disabled", true); 
-
-	    if(goal_condition == "learning") {
-	    	goal_text_html = "<p>The toy developer wants to know how quickly children could <b>learn</b> how to make the toy play music. <br><br> You will receive a bonus at the end of the task for learning which action makes the toy work.</p>"
-	    } else {
-	    	goal_text_html = "<p>performance text</p>"
-	    }
 
     	var instructions_html = `<table align="center"> ${goal_text_html} </table>`;
     	
@@ -74,25 +69,42 @@ exp = {
 
     	setTimeout(function() {
     		$('#goals_to_action').prop("disabled", false);
-    	}, 2500); // should be 2500
+    	}, time_interval); 
 
   },
 
-  play_music: function(){
+  play_music: function(slide_id){
+
   	myAudio = $('#sound_player')[0];
   	$("#play_music").prop('disabled', true); // disable the music button so participant can only play once
-  	 setTimeout(function(){
+  	 
+  	if (slide_id == "action_slide") {
+  		var audio_delay = 1000 // ms
+  	} else {
+  		var audio_delay = 500 // ms
+  	}
+  	setTimeout(function(){
   	  	myAudio.play(); // play sound
-  	  }, 500);
+  	 }, audio_delay);
 
-  	// this function checks that the music has ended and then advances to the goal manipulation slide
+  	 // this function checks that the music has ended and then advances to the goal manipulation slide
   	myAudio.addEventListener("ended", function() {
      myAudio.currentTime = 0;
-     exp.goals_slide()
+
+     if(slide_id == "toy_slide") {
+     	console.log(slide_id);
+     	exp.goals_slide();
+     } else if (slide_id == "action_slide") {
+     	console.log(slide_id);
+     	exp.hypotheses_slide();
+     }
  	});	 
  },
 
- actions_slide: function() {
+ actions_slide: function() { 
+ 	//var actions_instructions_html = `<table align="center"> ${goal_html_action_slide} </table>`;
+ 	$("#goal_text_action").html(goal_html_action_slide)
+
  	// store the start time of the actions slide
 	exp.action_trial_start_time = new Date();
 	showSlide(`actions`)
@@ -101,9 +113,9 @@ exp = {
 hypotheses_slide: function() {
 	// display the correct text
 	if(exp.hyp_type == "posterior") {
- 		hyp_text_html = "After performing your action, how likely is it that each of the following actions are how the toy was designed to play music?";
+ 		hyp_text_html = "After hearing the toy play music, how likely is it that each of the following actions are necessary for the toy to play music?";
  	} else if (exp.hyp_type == "prior") {
- 		hyp_text_html = "Before performing any action, how likely is it that each of the following actions are how the toy plays music?";
+ 		hyp_text_html = "Before performing any action, how likely is it that each of the following actions are necessary for the toy to play music?";
  	}
 
  	var hypotheses_html = `<table align="center"> ${hyp_text_html} </table>`;
@@ -158,7 +170,7 @@ hypotheses_slide: function() {
  		resetSliders(n_sliders);
 
  		// show actions slide
- 		showSlide('actions')
+ 		exp.actions_slide();
  	} else if (exp.hyp_type == "posterior") {
  		// store the data from the slider bars
  		for(i = 0; i < n_sliders; i++) {
@@ -177,19 +189,21 @@ hypotheses_slide: function() {
  	exp.action_response = response;
 
  	// switch the hypothesis type to posterior
- 	exp.hyp_type = "posterior";
- 	// move to the final slide
- 	exp.hypotheses_slide();
+ 	exp.hyp_type = "posterior";	
+
+ 	// play sound which also advances slide (a little hacky)
+ 	exp.play_music('action_slide');
  },
 
  final_slide: function() {
  	showSlide('final_questions')
  },
 
-// Tests if the participant responded to action question
-actions_check: function() {
+  // Tests if the participant responded to action question
+  actions_check: function() {
 	// store response 
 	response = $(`input:radio[name=intervention]:checked`).val();
+
 	// if response field is empty, then throw an error message
 		if (typeof response == 'undefined') {
     		var answer_all_message = '<font color="red">Please select an action.</font>';

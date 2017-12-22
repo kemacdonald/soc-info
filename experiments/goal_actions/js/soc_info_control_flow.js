@@ -3,6 +3,7 @@
 
 showSlide("instructions");
 
+
 // hide start button if we are in turk preview mode
 if (turk.previewMode) {
 	$('#start_button').hide()
@@ -50,6 +51,8 @@ exp = {
 	hyp_type: "prior", // this is hacky solution to make the hypotheses slides show up in the correct order: basically, we start with the hyp_type as prior and later switch to the posterior for displaying the correct slider bars
 
 	toy_slide: function() {
+		// show music box
+		$(`#music_box_intro`).html(music_box_html)
 		// store the start time of the experiment
 		exp.exp_start_time = new Date();
 		showSlide('toy_intro')
@@ -57,14 +60,18 @@ exp = {
 
 	//build goal manipulation slide 
 	goals_slide: function() {
+		$(`#music_box_goals`).html(music_box_html)
+
 		var time_interval = 2500 // in ms should be 2500
 
 		// disable advance button to ensure that participants read goal manipulation
 		$('#goals_to_action').prop("disabled", true); 
 
+		// set up goal instructions based on condition
     	var instructions_html = `<table align="center"> ${goal_text_html} </table>`;
-    	
     	$(`#goal_text`).html(instructions_html)
+
+
     	showSlide(`goal_manipulation`)
 
     	setTimeout(function() {
@@ -102,7 +109,10 @@ exp = {
  },
 
  actions_slide: function() { 
- 	//var actions_instructions_html = `<table align="center"> ${goal_html_action_slide} </table>`;
+ 	// show music box
+ 	$(`#music_box_actions`).html(music_box_html)
+
+ 	// show action text based on condition assignment
  	$("#goal_text_action").html(goal_html_action_slide)
 
  	// store the start time of the actions slide
@@ -111,6 +121,9 @@ exp = {
  },
 
 hypotheses_slide: function() {
+	// show music box
+	$(`#music_box_hyps`).html(music_box_html)
+
 	// display the correct text
 	if(exp.hyp_type == "posterior") {
  		hyp_text_html = "After hearing the toy play music, how likely is it that each of the following are <b>necessary</b> to make the toy play music?";

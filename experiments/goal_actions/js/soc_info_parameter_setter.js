@@ -48,3 +48,9 @@ if(goal_condition == "learning") {
     goal_text_html = "<p>The toy developer wants to know how quickly children could <b>make the toy play music.</b> <br><br> You will receive a <b>bonus</b> at the end of the task for selection an action that makes the toy work.</p>"
     goal_html_action_slide = "<p>Remember, you will receive a <b>bonus</b> at the end of the task for <b>selecting an action</b> that makes the work</b>.</p>"
 }
+
+// set up variables for later randomization
+music_box_imgs =  ["music_box_left.jpeg", "music_box_right.jpeg"]
+music_box = music_box_imgs[random(0,1)]
+music_box_html = `<img src="imgs/${music_box}" height="300" width="400">`
+

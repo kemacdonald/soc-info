@@ -24,7 +24,8 @@ exp = {
 
 	// store randomization stuff
 	music_box: music_box,
-	hypotheses_slider_order: "",
+	hypotheses_slider_order_prior: "",
+  hypotheses_slider_order_posterior: "",
 	actions_buttons_order: "",
 
 	// store participant's browser info
@@ -117,20 +118,24 @@ hypotheses_slide: function() {
 	// show music box
 	$(`#music_box_hyps`).html(music_box_html)
 
+  // randomize slider labels
+  rand_slider_labels = shuffle(hypotheses_slider_labels)
+
+
 	// display the correct text
 	if(exp.hyp_type == "posterior") {
+    exp.hypotheses_slider_order_posterior = rand_slider_labels; 
  		hyp_text_html = "After hearing the toy play music, how likely is it that each of the following are <b>necessary</b> to make the toy play music?";
  	} else if (exp.hyp_type == "prior") {
  		hyp_text_html = "Before performing any action, how likely is it that each of the following are <b>necessary</b> to make the toy play music?";
+    // store slider label order to link responses to hypothesis later on
+    exp.hypotheses_slider_order_prior = rand_slider_labels; 
  	}
 
- 	var hypotheses_html = `<table align="center"> ${hyp_text_html} </table>`;
-    $(`#hypotheses_text`).html(hypotheses_html);
+ 	hypotheses_html = `<table align="center"> ${hyp_text_html} </table>`;
+  $(`#hypotheses_text`).html(hypotheses_html);
 
-    // for loop to create sliders programatically and randomize order of hypotheses
-    var rand_slider_labels = shuffle(hypotheses_slider_labels)
-    exp.hypotheses_slider_order = rand_slider_labels; // store order in the experiment object
-
+  // for loop to create sliders programatically and randomize order of hypotheses
     for(i = 0; i < rand_slider_labels.length; i++) {
     	label_color = rand_slider_labels[i];
 

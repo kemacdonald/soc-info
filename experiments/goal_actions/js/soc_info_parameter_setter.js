@@ -54,3 +54,6 @@ music_box_imgs =  ["music_box_left.jpeg", "music_box_right.jpeg"]
 music_box = music_box_imgs[random(0,1)]
 music_box_html = `<img src="imgs/${music_box}" height="300" width="400">`
 
+hypotheses_slider_labels = ["Purple" , "Orange", "Purple and Orange"]
+action_labels = ["Purple" , "Orange", "Purple and Orange"]
+

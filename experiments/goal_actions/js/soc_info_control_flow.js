@@ -22,6 +22,11 @@ exp = {
 	// store participant's intervention choice
 	action_response: "",
 
+	// store randomization stuff
+	music_box: music_box,
+	hypotheses_slider_order: "",
+	actions_buttons_order: "",
+
 	// store participant's browser info
 	browser: BrowserDetect.browser,
 	browser_height: $(window).height(),
@@ -108,18 +113,6 @@ exp = {
 
  },
 
- actions_slide: function() { 
- 	// show music box
- 	$(`#music_box_actions`).html(music_box_html)
-
- 	// show action text based on condition assignment
- 	$("#goal_text_action").html(goal_html_action_slide)
-
- 	// store the start time of the actions slide
-	exp.action_trial_start_time = new Date();
-	showSlide(`actions`)
- },
-
 hypotheses_slide: function() {
 	// show music box
 	$(`#music_box_hyps`).html(music_box_html)
@@ -134,7 +127,31 @@ hypotheses_slide: function() {
  	var hypotheses_html = `<table align="center"> ${hyp_text_html} </table>`;
     $(`#hypotheses_text`).html(hypotheses_html);
 
-    // todo: loop to create sliders programatically and randomize order of hypotheses
+    // for loop to create sliders programatically and randomize order of hypotheses
+    var rand_slider_labels = shuffle(hypotheses_slider_labels)
+    exp.hypotheses_slider_order = rand_slider_labels; // store order in the experiment object
+
+    for(i = 0; i < rand_slider_labels.length; i++) {
+    	label_color = rand_slider_labels[i];
+
+    	// check if there is whitespace handles the case of  "both purple and orange buttons"
+    	if(hasWhiteSpace(label_color)) {
+    		slider_html = `<td><b>Press both the <font color="purple">Purple </font> and <font color="orange">Orange</font> Buttons</b></td>
+          <td>
+             <div id="slidecontainer">
+                <input type="range" min="1" max="100" value="50" class="slider" id="myRange3">
+            </div>
+          </td>`
+    	} else {
+    		slider_html = `<td><b>Press just the <font color="${label_color}"> ${label_color} </font> Button</b></td>
+    		<td>
+    			<div id="slidecontainer">
+    				<input type="range" min="1" max="100" value="50" class="slider" id="myRange1">
+    			</div>
+    		</td>`
+    	}
+    	$(`#hyp_row_` + i.toString()).html(slider_html);
+    }
 
  	showSlide('hypotheses')
  },
@@ -195,6 +212,43 @@ hypotheses_slide: function() {
 
  },
 
+  actions_slide: function() { 
+ 	// show music box
+ 	$(`#music_box_actions`).html(music_box_html)
+
+ 	// show action text based on condition assignment
+ 	$("#goal_text_action").html(goal_html_action_slide)
+
+ 	// create the randomized radio buttons
+ 	var button_html_final = "";
+ 	var rand_hyp_labels = shuffle(action_labels);
+    exp.actions_buttons_order = rand_hyp_labels; // store order in the experiment object
+
+    // build up button html using a for loop
+    for(i = 0; i < rand_hyp_labels.length; i++) {
+    	button_label = rand_hyp_labels[i];
+    	button_html_curr = "";
+
+    	// check if there is whitespace handles the case of  "both purple and orange buttons"
+    	if(hasWhiteSpace(button_label)) {
+    		button_html_curr = '<label class="btn btn-default"><input type="radio" name="intervention" value="orange_and_purple"/>Press Orange and Purple Button at the same time</label>'
+    		button_html_final += button_html_curr;
+    	} else {
+    		button_html_curr = `<label class="btn btn-default"><input type="radio" name="intervention" value=${button_label}/>Press ${button_label} Button</label>`
+    		button_html_final += button_html_curr;
+    	}
+
+    	console.log(button_html_final);
+    }
+
+    // display the buttons on the screen
+    $(`#action_buttons`).html(button_html_final);
+
+ 	// store the start time of the actions slide
+	exp.action_trial_start_time = new Date();
+	showSlide(`actions`)
+ },
+
  actions_close: function(response){
  	// store the end time of actions trial
  	exp.action_trial_end_time = new Date();
@@ -215,7 +269,9 @@ hypotheses_slide: function() {
   // Tests if the participant responded to action question
   actions_check: function() {
 	// store response 
-	response = $(`input:radio[name=intervention]:checked`).val();
+	response = $(`input:radio[name=intervention]:checked`).val().toLowerCase().replace("/","");
+
+	console.log(response);
 
 	// if response field is empty, then throw an error message
 		if (typeof response == 'undefined') {

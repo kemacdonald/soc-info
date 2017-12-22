@@ -27,6 +27,10 @@ getUnique = function(array){
    return a;
 }
 
+function hasWhiteSpace(s) {
+        return /\s/g.test(s);
+}
+
 
 
 function choose_from(arrayName) {

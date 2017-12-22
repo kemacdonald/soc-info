@@ -199,6 +199,13 @@ This stuff will vary by experiment.
   text-align: center;
 }
 
+.action-text{
+  width: 500px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 1em;
+
+}
 
 .block-text {
   width: 500px;

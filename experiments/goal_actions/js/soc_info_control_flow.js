@@ -237,8 +237,6 @@ hypotheses_slide: function() {
     		button_html_curr = `<label class="btn btn-default"><input type="radio" name="intervention" value=${button_label}/>Press ${button_label} Button</label>`
     		button_html_final += button_html_curr;
     	}
-
-    	console.log(button_html_final);
     }
 
     // display the buttons on the screen
@@ -258,7 +256,12 @@ hypotheses_slide: function() {
  	// switch the hypothesis type to posterior
  	exp.hyp_type = "posterior";	
 
- 	// play sound which also advances slide (a little hacky)
+  // wait 500 ms and then display the sucess message
+  setTimeout(function(){
+        $("#actions_test_check").html(answer_success_message);
+     }, 1000);
+
+ 	// then play sound which also advances slide (a little hacky)
  	exp.play_music('action_slide');
  },
 
@@ -269,16 +272,18 @@ hypotheses_slide: function() {
   // Tests if the participant responded to action question
   actions_check: function() {
 	// store response 
-	response = $(`input:radio[name=intervention]:checked`).val().toLowerCase().replace("/","");
-
-	console.log(response);
+	response = $(`input:radio[name=intervention]:checked`).val()
 
 	// if response field is empty, then throw an error message
 		if (typeof response == 'undefined') {
-    		var answer_all_message = '<font color="red">Please select an action.</font>';
-    		$("#actions_test_check").html(answer_all_message);
+    		answer_error_message = '<font color="red"><b>Please select an action.</b></font>';
+    		$("#actions_test_check").html(answer_error_message);
     	} else {
-    		exp.actions_close(response); // move on in the experiment
+        answer_success_message = `<font color="green"><b>Congratulations! You made the toy play music.</b></font>`
+
+        // clean up the response string and move on in the experiment
+        response_clean = response.toLowerCase().replace("/","");
+    		exp.actions_close(response_clean); 
     	};
 	},
 

@@ -1,9 +1,0 @@
-.RData
-.Rhistory
-*.results
-.png
-.mov
-*cache/
-.Rproj.user
-packrat/lib*/
-.mp4

@@ -42,7 +42,6 @@
         })();
     </script>
 
-
   </head>
 
   <body>
@@ -50,7 +49,7 @@
 
     <!-- This is the introduction slide with the Start button, the introduction and the legal text. I.e. the "instructions" slide. -->
     <div class="slide" id="instructions">
-      <img src="css/images/stanford.png" alt="Stanford University">
+      <img src="imgs/stanford.png" alt="Stanford University">
       <br><br>
       <p id='logo-text'>Stanford Language and Cognition Lab</p>
 
@@ -78,9 +77,10 @@
         <tr>
           <td align="center" width="10">
             <p class="block-text">A children’s toy developer has designed a simple device with two buttons, orange and purple. The toy will play music if the correct button(s) is/are pressed.</p>
-            <br>
-            <p> Click on the <b>Next</b> button to hear the kind of music it can play.</p>
-            <p> Make sure your volume is turned on to hear the music.</p>
+            
+            <p class="block-text"> Click on the <b>Next</b> button to hear the kind of music it can play.</p>
+
+            <p class="block-text"> Make sure your volume is turned on to hear the music.</p>
           </td>
         </tr>
         <tr>
@@ -127,18 +127,25 @@
       
       <div align="center" id ="music_box_actions"></div> 
 
-      <table align="center" id="actions_table">
-        <tr>
-            <td align="center">
-              <p class="action-text"> Imagine you only had one attempt to play with the toy. Which action would you want to try?</p>
-              <br>
-              <p class="action-text" id ="goal_text_action">
-            </td>
-        </tr>
-        <tr>
-            <td id="action_buttons" align = "center"> </td> 
-        </tr>
+      <p class="action-text"> Imagine you only had one attempt to play with the toy. Which action would you want to try?</p>
+            
+      <p class="action-text" id ="goal_text_action"></p>
 
+      <br>
+
+      <div id="action_buttons" align="center">
+        <fieldset>
+          <form>
+            <div id="action_button_0" align="left"></div>
+            <div id="action_button_1" align="left"></div>
+            <div id="action_button_2" align="left"></div>
+          </form>
+        </fieldset>
+      </div>
+
+      <br>
+
+      <table align="center">
         <tr>
           <td align="center">
             <p> If your action makes the toy work, you will hear music.</p>

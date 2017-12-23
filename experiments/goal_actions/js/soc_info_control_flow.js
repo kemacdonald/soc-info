@@ -50,9 +50,10 @@ exp = {
 	// Time variables
 	exp_start_time: "",
 	exp_end_time: "",
-
 	action_trial_start_time: "",
 	action_trial_end_time: "",
+  experiment_completion_time: "",
+  action_trial_time: "",
 
 	hyp_type: "prior", // this is hacky solution to make the hypotheses slides show up in the correct order: basically, we start with the hyp_type as prior and later switch to the posterior for displaying the correct slider bars
 
@@ -68,13 +69,13 @@ exp = {
 	goals_slide: function() {
 		$(`#music_box_goals`).html(music_box_html)
 
-		var time_interval = 2500 // in ms should be 2500
+		time_interval = 2500 // in ms should be 2500
 
 		// disable advance button to ensure that participants read goal manipulation
 		$('#goals_to_action').prop("disabled", true); 
 
 		// set up goal instructions based on condition
-    	var instructions_html = `<table align="center"> ${goal_text_html} </table>`;
+    	instructions_html = `<table align="center"> ${goal_text_html} </table>`;
     	$(`#goal_text`).html(instructions_html)
 
 
@@ -102,15 +103,17 @@ exp = {
 
   	 // this function checks that the music has ended 
   	 // and then advances to either goal manipulation or posterior hypotheses slide depending on location in experiment
-  	myAudio.addEventListener("ended", function() {
-     myAudio.currentTime = 0;
 
-     if(slide_id == "toy_slide") {
-     	exp.goals_slide();
-     } else if (slide_id == "action_slide") {
-     	exp.hypotheses_slide();
-     }
- 	});	 
+     
+  	myAudio.addEventListener("ended", function() {
+       myAudio.currentTime = 0;
+
+       if(slide_id == "toy_slide") {
+       	exp.goals_slide();
+       } else if (slide_id == "action_slide") {
+       	exp.hypotheses_slide();
+       }
+ 	  });	 
 
  },
 
@@ -125,9 +128,9 @@ hypotheses_slide: function() {
 	// display the correct text
 	if(exp.hyp_type == "posterior") {
     exp.hypotheses_slider_order_posterior = rand_slider_labels; 
- 		hyp_text_html = "After hearing the toy play music, how likely is it that each of the following are <b>necessary</b> to make the toy play music?";
+ 		hyp_text_html = "After hearing the toy play music, how likely is it that each of the following are <b>necessary</b> to make the toy work?";
  	} else if (exp.hyp_type == "prior") {
- 		hyp_text_html = "Before performing any action, how likely is it that each of the following are <b>necessary</b> to make the toy play music?";
+ 		hyp_text_html = "Before performing any action, how likely is it that each of the following are <b>necessary</b> to make the toy work?";
     // store slider label order to link responses to hypothesis later on
     exp.hypotheses_slider_order_prior = rand_slider_labels; 
  	}
@@ -178,7 +181,7 @@ hypotheses_slide: function() {
  	}
 
  	if(slider_check == "not_changed") {
- 		var adjust_sliders_message = '<font color="red">Please adjust at least one of the sliders.</font>';
+ 		var adjust_sliders_message = '<font color="red"><b>Please adjust at least one of the sliders.</b></font>';
  		$("#sliders_test_check").show();
  		$("#sliders_test_check").html(adjust_sliders_message);
  	} else if (slider_check == "at_least_one_slider_changed") {
@@ -225,27 +228,22 @@ hypotheses_slide: function() {
  	$("#goal_text_action").html(goal_html_action_slide)
 
  	// create the randomized radio buttons
- 	var button_html_final = "";
- 	var rand_hyp_labels = shuffle(action_labels);
+ 	  rand_hyp_labels = shuffle(action_labels);
     exp.actions_buttons_order = rand_hyp_labels; // store order in the experiment object
 
     // build up button html using a for loop
     for(i = 0; i < rand_hyp_labels.length; i++) {
     	button_label = rand_hyp_labels[i];
-    	button_html_curr = "";
 
     	// check if there is whitespace handles the case of  "both purple and orange buttons"
     	if(hasWhiteSpace(button_label)) {
-    		button_html_curr = '<label class="btn btn-default"><input type="radio" name="intervention" value="orange_and_purple"/>Press Orange and Purple Button at the same time</label>'
-    		button_html_final += button_html_curr;
+    		button_html = '<span><label class="btn btn-default"><input type="radio" name="intervention" value="orange_and_purple"/>Press Orange and Purple Button at the same time</label></span>'
     	} else {
-    		button_html_curr = `<label class="btn btn-default"><input type="radio" name="intervention" value=${button_label}/>Press ${button_label} Button</label>`
-    		button_html_final += button_html_curr;
+    		button_html = `<span><label class="btn btn-default"><input type="radio" name="intervention" value=${button_label}/>Press ${button_label} Button</label></span>`
     	}
-    }
 
-    // display the buttons on the screen
-    $(`#action_buttons`).html(button_html_final);
+      $(`#action_button_`+i.toString()).html(button_html);
+    }
 
  	// store the start time of the actions slide
 	exp.action_trial_start_time = new Date();
@@ -311,6 +309,14 @@ hypotheses_slide: function() {
 
     // END FUNCTION
     end: function () {
+
+      // store experiment end time
+      exp.exp_end_time = new Date();
+
+      // compute experiment time variables (all in ms)
+      exp.experiment_completion_time = exp.exp_end_time.getTime() - exp.exp_start_time.getTime();
+
+      exp.action_trial_time = exp.action_trial_end_time.getTime() - exp.action_trial_start_time.getTime();
     	
     	// decrement maker-getter if this is a turker 
 	    if (turk.workerId.length > 0) {
@@ -319,9 +325,6 @@ hypotheses_slide: function() {
 	        xmlHttp.open("GET", "https://langcog.stanford.edu/cgi-bin/KM/subject_equalizer_km/decrementer.php?filename=" + filename + "&to_decrement=" + cond, false);
 	        xmlHttp.send(null)
 	    }
-    	
-    	// store experiment end time
-    	exp.exp_end_time = new Date();
 
     	showSlide("finished");
 

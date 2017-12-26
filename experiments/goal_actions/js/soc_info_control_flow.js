@@ -58,6 +58,8 @@ exp = {
 	hyp_type: "prior", // this is hacky solution to make the hypotheses slides show up in the correct order: basically, we start with the hyp_type as prior and later switch to the posterior for displaying the correct slider bars
 
 	toy_slide: function() {
+    // hide music gif
+    $(`#notes_gif`).css('visibility','hidden')
 		// show music box
 		$(`#music_box_intro`).html(music_box_html)
 		// store the start time of the experiment
@@ -94,11 +96,12 @@ exp = {
   	 
   	if (slide_id == "action_slide") {
   		var audio_delay = 1500 // ms
-  	} else {
+  	} else if (slide_id == "toy_slide") {
   		var audio_delay = 500 // ms
   	}
   	setTimeout(function(){
   	  	myAudio.play(); // play sound
+        $(`#notes_gif`).css('visibility','visible')
   	 }, audio_delay);
 
   	 // this function checks that the music has ended 
@@ -282,8 +285,10 @@ hypotheses_slide: function() {
     		answer_error_message = '<font color="red"><b>Please select an action.</b></font>';
     		$("#actions_test_check").html(answer_error_message);
     	} else {
+        //disable the radio buttons so user can't change answer while music is playing
+        $(`input:radio[name=intervention]`).attr('disabled',true)
+        // create answer message 
         answer_success_message = `<font color="green"><b>Congratulations! You made the toy play music.</b></font>`
-
         // clean up the response string and move on in the experiment
         response_clean = response.toLowerCase().replace("/","");
     		exp.actions_close(response_clean); 

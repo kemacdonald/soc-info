@@ -3,7 +3,6 @@
 
 showSlide("instructions");
 
-
 // hide start button if we are in turk preview mode
 if (turk.previewMode) {
 	$('#start_button').hide()

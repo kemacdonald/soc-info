@@ -23,7 +23,7 @@ echo "Finished copying experiment!"
 ## deploy to github
 
 # change to experiment library directory
-cd DIRECTORY
+cd $DIRECTORY
 
 # add, commit, and push to github
 git add .  

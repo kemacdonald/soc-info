@@ -14,7 +14,7 @@ var num_actions = 3
 var numConditions = 2
 var slider_start_val = "50"
 
-/*try { 
+try { 
     var filename = "soc_info_goals_pilot";
     var condCounts = "1,10;2,10";
     var xmlHttp = null;
@@ -24,9 +24,8 @@ var slider_start_val = "50"
     var cond = xmlHttp.responseText; // For actual experimental runs
 } catch (e) {
     var cond = random(1,numConditions); // if maker-getter fails, generate condition number randomly
-}*/
+}
 
-cond = 1
 
 cond = cond.toString();
 

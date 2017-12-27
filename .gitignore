@@ -7,3 +7,5 @@
 .Rproj.user
 packrat/lib*/
 .mp4
+auth.json
+/data/01_raw_data/

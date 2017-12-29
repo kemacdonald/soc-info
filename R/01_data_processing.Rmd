@@ -18,6 +18,8 @@ d_path <- "data/01_raw_data/goal_actions/sandbox-results/"
 
 ## Load raw json data
 
+Write a function that reads the raw json, extacts the information we care about, and builds a tidy data frame
+
 ```{r}
 # takes a list and extracts the information we care about
 json_to_df <- function(data_path, file) {
@@ -27,13 +29,48 @@ json_to_df <- function(data_path, file) {
     workerid = d$WorkerId, 
     action_response = d$answers$action_response,
     hyp_q_order_prior = d$answers$hypotheses_slider_order_prior %>% unlist(),
-    prior_beliefs = d$answers$prior_beliefs,
-    hyp_q_order_post = d$answers$hypotheses_slider_order_posterior %>% unlist()
-    posterior_beliefs = d$answers$posterior_beliefs
-    )
+    prior_beliefs = d$answers$prior_beliefs %>% unlist(),
+    hyp_q_order_post = d$answers$hypotheses_slider_order_posterior %>% unlist(),
+    posterior_beliefs = d$answers$posterior_beliefs %>% unlist(),
+    browser = d$answers$browser,
+    browser_width = d$answers$browser_width,
+    browser_height = d$answers$browser_height,
+    screen_width = d$answers$screen_width,
+    screen_height = d$answers$screen_height,
+    mobile_device = d$answers$mobile_device,
+    about = d$answers$about,
+    comment = d$answers$comment,
+    age = d$answers$age,
+    gender = d$answers$gender,
+    first_language = d$answers$language,
+    experiment_time = d$answers$experiment_completion_time / 1000,
+    action_trial_time = d$answers$action_trial_time / 1000
+  )
 }
 ```
 
+Use purrr to map our read json function over all files in the raw data directory
+
 ```{r}
-tmp <- json_to_df(data_path = d_path, file = "3XLBSAQ9Z4CRQGGXIU3KGGBZLZ8Z7C.json")
+files <- dir(here(d_path))
+df <- files %>% purrr::map_df(~ json_to_df(data_path = d_path, .)) 
 ```
+
+## Anonymize Turker ids. 
+
+```{r}
+df_anonymized <- df %>% 
+  select(workerid) %>% 
+  distinct() %>% 
+  mutate(id = 1:nrow(.)) 
+
+df_final <- left_join(df, df_anonymized, by = "workerid") %>% 
+  select(id, everything(), -workerid)
+```
+
+## Write to disk. 
+
+```{r}
+write_csv(df_final, path = here("/data/02_tidy_data", "goal_actions_tidy.csv"))
+```
+

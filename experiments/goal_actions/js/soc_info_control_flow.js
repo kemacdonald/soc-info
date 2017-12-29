@@ -309,7 +309,7 @@ hypotheses_slide: function() {
 		} else {
 		    exp.about = document.getElementById("about").value;
 		    exp.comment = document.getElementById("comments").value;
-		    exp.age = document.getElementById(·9"age").value;
+		    exp.age = document.getElementById("age").value;
 		    exp.gender = document.getElementById("gender").value;
 		    exp.language = document.getElementById("language").value;
 		    showSlide("finished");

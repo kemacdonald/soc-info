@@ -4,7 +4,7 @@
 .png
 .mov
 *cache/
-.Rproj.user
+.Rproj.user/
 packrat/lib*/
 .mp4
 auth.json

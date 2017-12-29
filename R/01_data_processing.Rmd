@@ -1,0 +1,39 @@
+---
+title: "SOC-INFO data processing"
+author: "Kyle MacDonald, Erica Yoon, Mika Asaba"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(lubridate); library(jsonlite); library(tidyverse); library(here) 
+```
+
+```{r}
+d_path <- "data/01_raw_data/goal_actions/sandbox-results/"
+```
+
+## Load raw json data
+
+```{r}
+# takes a list and extracts the information we care about
+json_to_df <- function(data_path, file) {
+  d <- read_json(path = here(data_path, file))
+  
+  data.frame(
+    workerid = d$WorkerId, 
+    action_response = d$answers$action_response,
+    hyp_q_order_prior = d$answers$hypotheses_slider_order_prior %>% unlist(),
+    prior_beliefs = d$answers$prior_beliefs,
+    hyp_q_order_post = d$answers$hypotheses_slider_order_posterior %>% unlist()
+    posterior_beliefs = d$answers$posterior_beliefs
+    )
+}
+```
+
+```{r}
+tmp <- json_to_df(data_path = d_path, file = "3XLBSAQ9Z4CRQGGXIU3KGGBZLZ8Z7C.json")
+```

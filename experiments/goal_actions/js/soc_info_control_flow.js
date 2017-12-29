@@ -66,14 +66,14 @@ exp = {
 		showSlide('toy_intro')
 	},
 
-	//build goal manipulation slide 
+	//build goal manipulation slide
 	goals_slide: function() {
 		$(`#music_box_goals`).html(music_box_html)
 
 		time_interval = 2500 // in ms should be 2500
 
 		// disable advance button to ensure that participants read goal manipulation
-		$('#goals_to_action').prop("disabled", true); 
+		$('#goals_to_action').prop("disabled", true);
 
 		// set up goal instructions based on condition
     	instructions_html = `<table align="center"> ${goal_text_html} </table>`;
@@ -84,7 +84,7 @@ exp = {
 
     	setTimeout(function() {
     		$('#goals_to_action').prop("disabled", false);
-    	}, time_interval); 
+    	}, time_interval);
 
   },
 
@@ -92,7 +92,7 @@ exp = {
 
   	myAudio = $('#sound_player')[0];
   	$("#play_music").prop('disabled', true); // disable the music button so participant can only play once
-  	 
+
   	if (slide_id == "action_slide") {
   		var audio_delay = 1500 // ms
   	} else if (slide_id == "toy_slide") {
@@ -100,13 +100,17 @@ exp = {
   	}
   	setTimeout(function(){
   	  	myAudio.play(); // play sound
-        $(`#notes_gif`).css('visibility','visible')
+				if (slide_id == "action_slide") {
+					$(`#notes_gif_actions`).css('visibility','visible')
+				} else {
+					$(`#notes_gif`).css('visibility','visible')
+				}
   	 }, audio_delay);
 
-  	 // this function checks that the music has ended 
+  	 // this function checks that the music has ended
   	 // and then advances to either goal manipulation or posterior hypotheses slide depending on location in experiment
 
-     
+
   	myAudio.addEventListener("ended", function() {
        myAudio.currentTime = 0;
 
@@ -115,7 +119,7 @@ exp = {
        } else if (slide_id == "action_slide") {
        	exp.hypotheses_slide();
        }
- 	  });	 
+ 	  });
 
  },
 
@@ -129,12 +133,12 @@ hypotheses_slide: function() {
 
 	// display the correct text
 	if(exp.hyp_type == "posterior") {
-    exp.hypotheses_slider_order_posterior = rand_slider_labels; 
- 		hyp_text_html = "After hearing the toy play music, how likely is it that each of the following are <b>necessary</b> to make the toy work?";
+    exp.hypotheses_slider_order_posterior = rand_slider_labels;
+ 		hyp_text_html = "After hearing the toy play music, how likely is it that each of the following actions are <b>necessary</b> to make the toy work?";
  	} else if (exp.hyp_type == "prior") {
- 		hyp_text_html = "Before performing any action, how likely is it that each of the following are <b>necessary</b> to make the toy work?";
+ 		hyp_text_html = "Before performing any action, how likely is it that each of the following actions are <b>necessary</b> to make the toy work?";
     // store slider label order to link responses to hypothesis later on
-    exp.hypotheses_slider_order_prior = rand_slider_labels; 
+    exp.hypotheses_slider_order_prior = rand_slider_labels;
  	}
 
  	hypotheses_html = `<table align="center"> ${hyp_text_html} </table>`;
@@ -217,19 +221,21 @@ hypotheses_slide: function() {
  			exp.posterior_beliefs.push($('.slider')[i].value);
  		}
  		// move on to final slide
- 		exp.final_slide();	
+ 		exp.final_slide();
  	}
 
  },
 
-  actions_slide: function() { 
- 	// show music box
- 	$(`#music_box_actions`).html(music_box_html)
+  actions_slide: function() {
+		// hide music gif
+  	$(`#notes_gif_actions`).css('visibility','hidden')
+ 		// show music box
+ 		$(`#music_box_actions`).html(music_box_html)
 
- 	// show action text based on condition assignment
- 	$("#goal_text_action").html(goal_html_action_slide)
+ 		// show action text based on condition assignment
+ 		$("#goal_text_action").html(goal_html_action_slide)
 
- 	// create the randomized radio buttons
+ 		// create the randomized radio buttons
  	  rand_hyp_labels = shuffle(action_labels);
     exp.actions_buttons_order = rand_hyp_labels; // store order in the experiment object
 
@@ -259,7 +265,7 @@ hypotheses_slide: function() {
  	exp.action_response = response;
 
  	// switch the hypothesis type to posterior
- 	exp.hyp_type = "posterior";	
+ 	exp.hyp_type = "posterior";
 
   // wait 500 ms and then display the sucess message
   setTimeout(function(){
@@ -276,7 +282,7 @@ hypotheses_slide: function() {
 
   // Tests if the participant responded to action question
   actions_check: function() {
-	// store response 
+	// store response
 	response = $(`input:radio[name=intervention]:checked`).val()
 
 	// if response field is empty, then throw an error message
@@ -286,11 +292,11 @@ hypotheses_slide: function() {
     	} else {
         //disable the radio buttons so user can't change answer while music is playing
         $(`input:radio[name=intervention]`).attr('disabled',true)
-        // create answer message 
+        // create answer message
         answer_success_message = `<font color="green"><b>Congratulations! You made the toy play music.</b></font>`
         // clean up the response string and move on in the experiment
         response_clean = response.toLowerCase().replace("/","");
-    		exp.actions_close(response_clean); 
+    		exp.actions_close(response_clean);
     	};
 	},
 
@@ -298,7 +304,7 @@ hypotheses_slide: function() {
     check_finished: function() {
 		if (document.getElementById('about').value.length < 1) {
 		    $("#checkMessage").html('<font color="red">' +
-				       'Please make sure you have answered all the questions. Thank you!' +
+				       '<b>Please make sure you have answered all the questions. Thank you!</b>' +
 				       '</font>');
 		} else {
 		    exp.about = document.getElementById("about").value;
@@ -321,8 +327,8 @@ hypotheses_slide: function() {
       exp.experiment_completion_time = exp.exp_end_time.getTime() - exp.exp_start_time.getTime();
 
       exp.action_trial_time = exp.action_trial_end_time.getTime() - exp.action_trial_start_time.getTime();
-    	
-    	// decrement maker-getter if this is a turker 
+
+    	// decrement maker-getter if this is a turker
 	    if (turk.workerId.length > 0) {
 	        var xmlHttp = null;
 	        xmlHttp = new XMLHttpRequest()

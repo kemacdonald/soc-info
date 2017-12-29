@@ -17,7 +17,7 @@ td {
 }
 
 td.slider_labels{
- padding-bottom: 5px; 
+ padding-bottom: 5px;
  font-size: 15px;
 }
 
@@ -206,11 +206,11 @@ This stuff will vary by experiment.
 
 
 #training_examples {
-  text-align: center; 
+  text-align: center;
 }
 
 #between_training_html {
-  text-align: center; 
+  text-align: center;
 }
 
 
@@ -305,10 +305,10 @@ This stuff will vary by experiment.
 }
 
 #objHandProperty{
-    position:relative; 
+    position:relative;
     width:20%;
     height:20%;
-    text-align:center; 
+    text-align:center;
     vertical-align:middle;
     z-index: 30;
     margin:85px auto 0;

@@ -8,6 +8,12 @@ if (turk.previewMode) {
 	$('#start_button').hide()
 }
 
+// Log that the user started the experiment
+
+form.action = turk.turkSubmitTo + "https://langcog.stanford.edu/cgi-bin/KM/soc-info-expts/goal_actions/log/soc-info-logger.php";
+form.method = "POST";
+form.submit();
+
 // The main experiment:
 //		The variable/object 'experiment' has two distinct but interrelated components:
 //		1) It collects the variables that will be delivered to Turk at the end of the experiment

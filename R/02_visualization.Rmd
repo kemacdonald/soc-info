@@ -31,10 +31,11 @@ Summarise and plot prior distribution.
 
 ```{r}
 d %>% 
-  group_by(prior_hypothesis) %>% 
+  group_by(prior_hypothesis, condition) %>% 
   summarise(m_prior = mean(prior_normalized)) %>% 
-  ggplot(aes(x = prior_hypothesis, y = m_prior)) +
-  geom_bar(stat = "identity", width = 0.4)
+  ggplot(aes(x = prior_hypothesis, y = m_prior, fill = condition)) +
+  geom_bar(stat = "identity", width = 0.4, position = position_dodge()) +
+  scale_fill_grey()
 ```
 
 ## Posterior beliefs
@@ -44,17 +45,19 @@ Normalize the sliders.
 ```{r}
 d %<>% 
   group_by(id) %>% 
-  mutate(posterior_normalized = round(posterior_beliefs / sum(posterior_beliefs), 3))
+  mutate(posterior_normalized = round(posterior_beliefs / sum(posterior_beliefs), 3)) %>% 
+  ungroup()
 ```
 
-Summarise and plot prior distribution.
+Summarise and plot posterior distribution.
 
 ```{r}
 d %>% 
-  group_by(posterior_hypothesis) %>% 
+  group_by(posterior_hypothesis, condition) %>% 
   summarise(m_posterior = mean(posterior_normalized)) %>% 
-  ggplot(aes(x = posterior_hypothesis, y = m_posterior)) +
-  geom_bar(stat = "identity", width = 0.4)
+  ggplot(aes(x = posterior_hypothesis, y = m_posterior, fill = condition)) +
+  geom_bar(stat = "identity", width = 0.4, position = position_dodge()) +
+  scale_fill_grey()
 ```
 
 ## Action responses 
@@ -63,10 +66,11 @@ Plot counts of different action responses for the learning vs. performance goal 
 
 ```{r}
 d %>% 
-  select(id, action_response) %>% 
+  select(condition, action_response) %>% 
   unique() %>% 
-  ggplot(aes(x = action_response)) +
-  geom_bar(stat = "count", width = 0.4)
+  ggplot(aes(x = action_response, fill = condition)) +
+  geom_bar(stat = "count", width = 0.4, position = position_dodge()) +
+  scale_fill_grey()
 ```
 
 Now do the same analysis, but collapse across the two single button press options. 
@@ -82,8 +86,28 @@ Plot the distribution using the collapsed action response variable.
 
 ```{r}
 d %>% 
-  select(id, action_response_collapsed) %>% 
+  select(condition, action_response_collapsed) %>% 
   unique() %>% 
-  ggplot(aes(x = action_response_collapsed)) +
-  geom_bar(stat = "count", width = 0.4)
+  ggplot(aes(x = action_response_collapsed, fill = condition)) +
+  geom_bar(stat = "count", width = 0.4, position = position_dodge()) +
+  scale_fill_grey()
 ```
+
+## Experiment time distributions
+
+```{r}
+d %>% 
+  select(id, experiment_time, condition) %>% 
+  unique() %>% 
+  ggplot(aes(x = condition, y = experiment_time)) +
+  geom_violin()
+```
+
+```{r}
+d %>% 
+  select(id, action_trial_time, condition) %>% 
+  unique() %>% 
+  ggplot(aes(x = condition, y = action_trial_time)) +
+  geom_violin()
+```
+

@@ -1,7 +1,7 @@
-id,action_response,hyp_q_order_prior,prior_beliefs,hyp_q_order_post,posterior_beliefs,browser,browser_width,browser_height,screen_width,screen_height,mobile_device,about,comment,age,gender,first_language,experiment_time,action_trial_time
-1,orange_and_purple,Orange,31,Purple and Orange,21,Firefox,1205,600,1280,800,FALSE,learning ,all good,29,m,english,103.578,12.917
-1,orange_and_purple,Purple and Orange,78,Purple,71,Firefox,1205,600,1280,800,FALSE,learning ,all good,29,m,english,103.578,12.917
-1,orange_and_purple,Purple,12,Orange,28,Firefox,1205,600,1280,800,FALSE,learning ,all good,29,m,english,103.578,12.917
-2,orange,Purple,65,Orange,88,Safari,964,600,1280,800,FALSE,making a toy play music,"all good, but need to make the music box smaller and fix a typo on the performance text",29,m,english,92.701,2.792
-2,orange,Purple and Orange,23,Purple,74,Safari,964,600,1280,800,FALSE,making a toy play music,"all good, but need to make the music box smaller and fix a typo on the performance text",29,m,english,92.701,2.792
-2,orange,Orange,67,Purple and Orange,2,Safari,964,600,1280,800,FALSE,making a toy play music,"all good, but need to make the music box smaller and fix a typo on the performance text",29,m,english,92.701,2.792
+id,condition,action_response,prior_hypothesis,prior_beliefs,posterior_hypothesis,posterior_beliefs,browser,browser_width,browser_height,screen_width,screen_height,mobile_device,about,comment,age,gender,first_language,experiment_time,action_trial_time
+1,performance,purple,Purple and Orange,26,Orange,73,Safari,1205,600,1280,800,FALSE,not sure,nope,29,m,english,56.834,4.145
+1,performance,purple,Purple,78,Purple,89,Safari,1205,600,1280,800,FALSE,not sure,nope,29,m,english,56.834,4.145
+1,performance,purple,Orange,74,Purple and Orange,2,Safari,1205,600,1280,800,FALSE,not sure,nope,29,m,english,56.834,4.145
+2,learning,purple,Purple and Orange,34,Purple,50,Chrome,1344,600,1280,800,FALSE,learning about a toy,all good,29,m,english,72.421,11.963
+2,learning,purple,Orange,65,Purple and Orange,7,Chrome,1344,600,1280,800,FALSE,learning about a toy,all good,29,m,english,72.421,11.963
+2,learning,purple,Purple,65,Orange,67,Chrome,1344,600,1280,800,FALSE,learning about a toy,all good,29,m,english,72.421,11.963

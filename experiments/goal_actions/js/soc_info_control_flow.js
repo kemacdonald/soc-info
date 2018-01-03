@@ -20,6 +20,7 @@ exp = {
 
 	// store participant's intervention choice
 	action_response: "",
+	goal_condition: goal_condition,
 
 	// store randomization stuff
 	music_box: music_box,

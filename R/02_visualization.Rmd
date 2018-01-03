@@ -1,0 +1,89 @@
+---
+title: "SOC-INFO Visualization"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(magrittr); library(tidyverse); library(here) 
+theme_set(theme_minimal())
+```
+
+```{r}
+d_path <- "data/02_tidy_data/"
+d <- read_csv(here(d_path, "goal_actions_tidy.csv"))
+```
+
+## Prior beliefs
+
+Normalize the sliders.
+
+```{r}
+d %<>% 
+  group_by(id) %>% 
+  mutate(prior_normalized = round(prior_beliefs / sum(prior_beliefs), 3)) 
+```
+
+Summarise and plot prior distribution.
+
+```{r}
+d %>% 
+  group_by(prior_hypothesis) %>% 
+  summarise(m_prior = mean(prior_normalized)) %>% 
+  ggplot(aes(x = prior_hypothesis, y = m_prior)) +
+  geom_bar(stat = "identity", width = 0.4)
+```
+
+## Posterior beliefs
+
+Normalize the sliders.
+
+```{r}
+d %<>% 
+  group_by(id) %>% 
+  mutate(posterior_normalized = round(posterior_beliefs / sum(posterior_beliefs), 3))
+```
+
+Summarise and plot prior distribution.
+
+```{r}
+d %>% 
+  group_by(posterior_hypothesis) %>% 
+  summarise(m_posterior = mean(posterior_normalized)) %>% 
+  ggplot(aes(x = posterior_hypothesis, y = m_posterior)) +
+  geom_bar(stat = "identity", width = 0.4)
+```
+
+## Action responses 
+
+Plot counts of different action responses for the learning vs. performance goal conditions.
+
+```{r}
+d %>% 
+  select(id, action_response) %>% 
+  unique() %>% 
+  ggplot(aes(x = action_response)) +
+  geom_bar(stat = "count", width = 0.4)
+```
+
+Now do the same analysis, but collapse across the two single button press options. 
+
+```{r}
+d %<>% 
+  mutate(action_response_collapsed = ifelse(action_response == "orange_and_purple", 
+                                            "both_buttons", 
+                                            "single_button"))
+```
+
+Plot the distribution using the collapsed action response variable.
+
+```{r}
+d %>% 
+  select(id, action_response_collapsed) %>% 
+  unique() %>% 
+  ggplot(aes(x = action_response_collapsed)) +
+  geom_bar(stat = "count", width = 0.4)
+```

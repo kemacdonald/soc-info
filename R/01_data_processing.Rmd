@@ -1,6 +1,5 @@
 ---
 title: "SOC-INFO data processing"
-author: "Kyle MacDonald, Erica Yoon, Mika Asaba"
 output: html_document
 ---
 
@@ -27,10 +26,11 @@ json_to_df <- function(data_path, file) {
   
   data.frame(
     workerid = d$WorkerId, 
+    condition = d$answers$goal_condition,
     action_response = d$answers$action_response,
-    hyp_q_order_prior = d$answers$hypotheses_slider_order_prior %>% unlist(),
+    prior_hypothesis = d$answers$hypotheses_slider_order_prior %>% unlist(),
     prior_beliefs = d$answers$prior_beliefs %>% unlist(),
-    hyp_q_order_post = d$answers$hypotheses_slider_order_posterior %>% unlist(),
+    posterior_hypothesis = d$answers$hypotheses_slider_order_posterior %>% unlist(),
     posterior_beliefs = d$answers$posterior_beliefs %>% unlist(),
     browser = d$answers$browser,
     browser_width = d$answers$browser_width,

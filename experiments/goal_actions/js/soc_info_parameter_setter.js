@@ -26,7 +26,6 @@ try {
     var cond = random(1,numConditions); // if maker-getter fails, generate condition number randomly
 }
 
-cond = "1"
 cond = cond.toString();
 
 // set up experiment variables based on condition

@@ -17,47 +17,49 @@ d_path <- "data/02_tidy_data/"
 d <- read_csv(here(d_path, "goal_actions_tidy.csv"))
 ```
 
-## Prior beliefs
+## Prior and posterior beliefs
+
+Tidy up the data frame.
+
+```{r}
+prior <-  d %>% 
+  select(id, condition, prior_beliefs, prior_hypothesis) %>% 
+  mutate(hypothesis_type = "prior") %>% 
+  rename(slider_value = prior_beliefs,
+         hypothesis = prior_hypothesis)
+
+posterior <- d %>% 
+  select(id, condition, posterior_beliefs, posterior_hypothesis) %>% 
+  mutate(hypothesis_type = "posterior") %>% 
+  rename(slider_value = posterior_beliefs,
+         hypothesis = posterior_hypothesis)
+  
+d_beliefs <- bind_rows(prior, posterior)
+```
 
 Normalize the sliders.
 
 ```{r}
-d %<>% 
-  group_by(id) %>% 
-  mutate(prior_normalized = round(prior_beliefs / sum(prior_beliefs), 3)) 
-```
-
-Summarise and plot prior distribution.
-
-```{r}
-d %>% 
-  group_by(prior_hypothesis, condition) %>% 
-  summarise(m_prior = mean(prior_normalized)) %>% 
-  ggplot(aes(x = prior_hypothesis, y = m_prior, fill = condition)) +
-  geom_bar(stat = "identity", width = 0.4, position = position_dodge()) +
-  scale_fill_grey()
-```
-
-## Posterior beliefs
-
-Normalize the sliders.
-
-```{r}
-d %<>% 
-  group_by(id) %>% 
-  mutate(posterior_normalized = round(posterior_beliefs / sum(posterior_beliefs), 3)) %>% 
+d_beliefs %<>% 
+  group_by(id, hypothesis_type) %>% 
+  mutate(slider_value_normalized = round(slider_value / sum(slider_value), 3)) %>% 
   ungroup()
 ```
 
-Summarise and plot posterior distribution.
-
-```{r}
-d %>% 
-  group_by(posterior_hypothesis, condition) %>% 
-  summarise(m_posterior = mean(posterior_normalized)) %>% 
-  ggplot(aes(x = posterior_hypothesis, y = m_posterior, fill = condition)) +
+Now summarise and plot.
+  
+```{r}  
+d_beliefs %>% 
+  mutate(hypothesis_type = factor(hypothesis_type) %>% fct_rev()) %>% 
+  group_by(hypothesis_type, condition, hypothesis) %>% 
+  summarise(m = mean(slider_value_normalized)) %>% 
+  ggplot(aes(x = hypothesis, y = m, fill = condition)) +
   geom_bar(stat = "identity", width = 0.4, position = position_dodge()) +
-  scale_fill_grey()
+  geom_hline(yintercept = 0.3, linetype = "dashed") +
+  scale_fill_grey() +
+  ggthemes::theme_few() +
+  theme(legend.position = "top") +
+  facet_wrap(~hypothesis_type)
 ```
 
 ## Action responses 
@@ -86,7 +88,7 @@ Plot the distribution using the collapsed action response variable.
 
 ```{r}
 d %>% 
-  select(condition, action_response_collapsed) %>% 
+  select(id, condition, action_response_collapsed) %>% 
   unique() %>% 
   ggplot(aes(x = action_response_collapsed, fill = condition)) +
   geom_bar(stat = "count", width = 0.4, position = position_dodge()) +
@@ -95,6 +97,8 @@ d %>%
 
 ## Experiment time distributions
 
+Plot the distribution of overall time on the experiment across conditions.
+
 ```{r}
 d %>% 
   select(id, experiment_time, condition) %>% 
@@ -102,6 +106,8 @@ d %>%
   ggplot(aes(x = condition, y = experiment_time)) +
   geom_violin()
 ```
+
+Make the same plot, but for the time spent on the action decision.
 
 ```{r}
 d %>% 

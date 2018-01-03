@@ -1,7 +1,16 @@
 id,condition,action_response,prior_hypothesis,prior_beliefs,posterior_hypothesis,posterior_beliefs,browser,browser_width,browser_height,screen_width,screen_height,mobile_device,about,comment,age,gender,first_language,experiment_time,action_trial_time
-1,performance,purple,Purple and Orange,26,Orange,73,Safari,1205,600,1280,800,FALSE,not sure,nope,29,m,english,56.834,4.145
-1,performance,purple,Purple,78,Purple,89,Safari,1205,600,1280,800,FALSE,not sure,nope,29,m,english,56.834,4.145
-1,performance,purple,Orange,74,Purple and Orange,2,Safari,1205,600,1280,800,FALSE,not sure,nope,29,m,english,56.834,4.145
-2,learning,purple,Purple and Orange,34,Purple,50,Chrome,1344,600,1280,800,FALSE,learning about a toy,all good,29,m,english,72.421,11.963
-2,learning,purple,Orange,65,Purple and Orange,7,Chrome,1344,600,1280,800,FALSE,learning about a toy,all good,29,m,english,72.421,11.963
-2,learning,purple,Purple,65,Orange,67,Chrome,1344,600,1280,800,FALSE,learning about a toy,all good,29,m,english,72.421,11.963
+1,performance,orange_and_purple,Purple and Orange,78,Purple,31,Chrome,1533,807,1600,900,FALSE,I'm not really sure,Nothing was broken,26,m,English,122.744,4.84
+1,performance,orange_and_purple,Purple,35,Orange,28,Chrome,1533,807,1600,900,FALSE,I'm not really sure,Nothing was broken,26,m,English,122.744,4.84
+1,performance,orange_and_purple,Orange,37,Purple and Orange,70,Chrome,1533,807,1600,900,FALSE,I'm not really sure,Nothing was broken,26,m,English,122.744,4.84
+2,learning,orange,Purple and Orange,100,Purple and Orange,23,Chrome,707,600,1680,1050,FALSE,I think this task was looking to see how perceptive we are in identifying what children are more likely to be drawn to.,No problems. Thank you!,41,m,English,169.135,41.189
+2,learning,orange,Orange,78,Orange,100,Chrome,707,600,1680,1050,FALSE,I think this task was looking to see how perceptive we are in identifying what children are more likely to be drawn to.,No problems. Thank you!,41,m,English,169.135,41.189
+2,learning,orange,Purple,78,Purple,40,Chrome,707,600,1680,1050,FALSE,I think this task was looking to see how perceptive we are in identifying what children are more likely to be drawn to.,No problems. Thank you!,41,m,English,169.135,41.189
+3,learning,orange_and_purple,Orange,30,Purple and Orange,93,Chrome,1299,637,1366,768,FALSE,To see if respondents felt two actions were needed in place of one,Very straightforward - thank you,42,m,English,115.477,10.377
+3,learning,orange_and_purple,Purple,31,Purple,14,Chrome,1299,637,1366,768,FALSE,To see if respondents felt two actions were needed in place of one,Very straightforward - thank you,42,m,English,115.477,10.377
+3,learning,orange_and_purple,Purple and Orange,86,Orange,15,Chrome,1299,637,1366,768,FALSE,To see if respondents felt two actions were needed in place of one,Very straightforward - thank you,42,m,English,115.477,10.377
+4,learning,orange_and_purple,Orange,1,Orange,1,Chrome,1299,637,1366,768,FALSE,How people make choices.,No further comments.,34,m,English,110.379,14.625
+4,learning,orange_and_purple,Purple,1,Purple and Orange,100,Chrome,1299,637,1366,768,FALSE,How people make choices.,No further comments.,34,m,English,110.379,14.625
+4,learning,orange_and_purple,Purple and Orange,100,Purple,1,Chrome,1299,637,1366,768,FALSE,How people make choices.,No further comments.,34,m,English,110.379,14.625
+5,performance,purple,Purple,85,Purple,86,Chrome,1278,710,1344,840,FALSE,Choice,No,26,f,English,121.283,14.415
+5,performance,purple,Orange,86,Orange,77,Chrome,1278,710,1344,840,FALSE,Choice,No,26,f,English,121.283,14.415
+5,performance,purple,Purple and Orange,88,Purple and Orange,74,Chrome,1278,710,1344,840,FALSE,Choice,No,26,f,English,121.283,14.415

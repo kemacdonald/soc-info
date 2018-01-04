@@ -2,15 +2,27 @@ id,condition,action_response,prior_hypothesis,prior_beliefs,posterior_hypothesis
 1,performance,orange_and_purple,Purple and Orange,78,Purple,31,Chrome,1533,807,1600,900,FALSE,I'm not really sure,Nothing was broken,26,m,English,122.744,4.84
 1,performance,orange_and_purple,Purple,35,Orange,28,Chrome,1533,807,1600,900,FALSE,I'm not really sure,Nothing was broken,26,m,English,122.744,4.84
 1,performance,orange_and_purple,Orange,37,Purple and Orange,70,Chrome,1533,807,1600,900,FALSE,I'm not really sure,Nothing was broken,26,m,English,122.744,4.84
-2,learning,orange,Purple and Orange,100,Purple and Orange,23,Chrome,707,600,1680,1050,FALSE,I think this task was looking to see how perceptive we are in identifying what children are more likely to be drawn to.,No problems. Thank you!,41,m,English,169.135,41.189
-2,learning,orange,Orange,78,Orange,100,Chrome,707,600,1680,1050,FALSE,I think this task was looking to see how perceptive we are in identifying what children are more likely to be drawn to.,No problems. Thank you!,41,m,English,169.135,41.189
-2,learning,orange,Purple,78,Purple,40,Chrome,707,600,1680,1050,FALSE,I think this task was looking to see how perceptive we are in identifying what children are more likely to be drawn to.,No problems. Thank you!,41,m,English,169.135,41.189
-3,learning,orange_and_purple,Orange,30,Purple and Orange,93,Chrome,1299,637,1366,768,FALSE,To see if respondents felt two actions were needed in place of one,Very straightforward - thank you,42,m,English,115.477,10.377
-3,learning,orange_and_purple,Purple,31,Purple,14,Chrome,1299,637,1366,768,FALSE,To see if respondents felt two actions were needed in place of one,Very straightforward - thank you,42,m,English,115.477,10.377
-3,learning,orange_and_purple,Purple and Orange,86,Orange,15,Chrome,1299,637,1366,768,FALSE,To see if respondents felt two actions were needed in place of one,Very straightforward - thank you,42,m,English,115.477,10.377
-4,learning,orange_and_purple,Orange,1,Orange,1,Chrome,1299,637,1366,768,FALSE,How people make choices.,No further comments.,34,m,English,110.379,14.625
-4,learning,orange_and_purple,Purple,1,Purple and Orange,100,Chrome,1299,637,1366,768,FALSE,How people make choices.,No further comments.,34,m,English,110.379,14.625
-4,learning,orange_and_purple,Purple and Orange,100,Purple,1,Chrome,1299,637,1366,768,FALSE,How people make choices.,No further comments.,34,m,English,110.379,14.625
-5,performance,purple,Purple,85,Purple,86,Chrome,1278,710,1344,840,FALSE,Choice,No,26,f,English,121.283,14.415
-5,performance,purple,Orange,86,Orange,77,Chrome,1278,710,1344,840,FALSE,Choice,No,26,f,English,121.283,14.415
-5,performance,purple,Purple and Orange,88,Purple and Orange,74,Chrome,1278,710,1344,840,FALSE,Choice,No,26,f,English,121.283,14.415
+2,performance,orange,Purple,1,Purple and Orange,1,Chrome,1870,600,1920,1080,FALSE,"If I had to guess, I would say it had something to do with how intuitive the controls looked to be, without any explicit instructions (i.e. can someone figure out how to use it just by looking at it).",Everything worked perfectly.,34,m,English,773.73,16.808
+2,performance,orange,Purple and Orange,1,Orange,100,Chrome,1870,600,1920,1080,FALSE,"If I had to guess, I would say it had something to do with how intuitive the controls looked to be, without any explicit instructions (i.e. can someone figure out how to use it just by looking at it).",Everything worked perfectly.,34,m,English,773.73,16.808
+2,performance,orange,Orange,100,Purple,1,Chrome,1870,600,1920,1080,FALSE,"If I had to guess, I would say it had something to do with how intuitive the controls looked to be, without any explicit instructions (i.e. can someone figure out how to use it just by looking at it).",Everything worked perfectly.,34,m,English,773.73,16.808
+3,learning,purple,Orange,100,Purple and Orange,1,Chrome,881,772,1366,768,FALSE,Trial and error,None,37,f,English,117.375,22.671
+3,learning,purple,Purple,100,Purple,100,Chrome,881,772,1366,768,FALSE,Trial and error,None,37,f,English,117.375,22.671
+3,learning,purple,Purple and Orange,1,Orange,1,Chrome,881,772,1366,768,FALSE,Trial and error,None,37,f,English,117.375,22.671
+4,learning,orange,Purple and Orange,100,Purple and Orange,23,Chrome,707,600,1680,1050,FALSE,I think this task was looking to see how perceptive we are in identifying what children are more likely to be drawn to.,No problems. Thank you!,41,m,English,169.135,41.189
+4,learning,orange,Orange,78,Orange,100,Chrome,707,600,1680,1050,FALSE,I think this task was looking to see how perceptive we are in identifying what children are more likely to be drawn to.,No problems. Thank you!,41,m,English,169.135,41.189
+4,learning,orange,Purple,78,Purple,40,Chrome,707,600,1680,1050,FALSE,I think this task was looking to see how perceptive we are in identifying what children are more likely to be drawn to.,No problems. Thank you!,41,m,English,169.135,41.189
+5,learning,orange_and_purple,Orange,30,Purple and Orange,93,Chrome,1299,637,1366,768,FALSE,To see if respondents felt two actions were needed in place of one,Very straightforward - thank you,42,m,English,115.477,10.377
+5,learning,orange_and_purple,Purple,31,Purple,14,Chrome,1299,637,1366,768,FALSE,To see if respondents felt two actions were needed in place of one,Very straightforward - thank you,42,m,English,115.477,10.377
+5,learning,orange_and_purple,Purple and Orange,86,Orange,15,Chrome,1299,637,1366,768,FALSE,To see if respondents felt two actions were needed in place of one,Very straightforward - thank you,42,m,English,115.477,10.377
+6,learning,orange,Purple,73,Purple and Orange,8,Chrome,1289,648,1366,768,FALSE,Decision making,No comments,63,m,English,174.007,20.568
+6,learning,orange,Purple and Orange,16,Orange,92,Chrome,1289,648,1366,768,FALSE,Decision making,No comments,63,m,English,174.007,20.568
+6,learning,orange,Orange,74,Purple,2,Chrome,1289,648,1366,768,FALSE,Decision making,No comments,63,m,English,174.007,20.568
+7,learning,orange_and_purple,Orange,1,Orange,1,Chrome,1299,637,1366,768,FALSE,How people make choices.,No further comments.,34,m,English,110.379,14.625
+7,learning,orange_and_purple,Purple,1,Purple and Orange,100,Chrome,1299,637,1366,768,FALSE,How people make choices.,No further comments.,34,m,English,110.379,14.625
+7,learning,orange_and_purple,Purple and Orange,100,Purple,1,Chrome,1299,637,1366,768,FALSE,How people make choices.,No further comments.,34,m,English,110.379,14.625
+8,performance,purple,Purple,85,Purple,86,Chrome,1278,710,1344,840,FALSE,Choice,No,26,f,English,121.283,14.415
+8,performance,purple,Orange,86,Orange,77,Chrome,1278,710,1344,840,FALSE,Choice,No,26,f,English,121.283,14.415
+8,performance,purple,Purple and Orange,88,Purple and Orange,74,Chrome,1278,710,1344,840,FALSE,Choice,No,26,f,English,121.283,14.415
+9,performance,purple,Orange,1,Purple and Orange,1,Chrome,1853,974,1920,1080,FALSE,i have no idea,,26,m,english ,66.526,4.321
+9,performance,purple,Purple,100,Orange,1,Chrome,1853,974,1920,1080,FALSE,i have no idea,,26,m,english ,66.526,4.321
+9,performance,purple,Purple and Orange,1,Purple,100,Chrome,1853,974,1920,1080,FALSE,i have no idea,,26,m,english ,66.526,4.321

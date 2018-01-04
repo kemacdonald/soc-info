@@ -12,7 +12,7 @@ library(lubridate); library(jsonlite); library(tidyverse); library(here)
 ```
 
 ```{r}
-d_path <- "data/01_raw_data/goal_actions/production-results"
+d_path <- "data/01_raw_data/goal_actions/pilotA/production-results"
 ```
 
 ## Load raw json data

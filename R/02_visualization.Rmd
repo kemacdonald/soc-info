@@ -56,6 +56,7 @@ d_beliefs %>%
   ggplot(aes(x = hypothesis, y = m, fill = condition)) +
   geom_bar(stat = "identity", width = 0.4, position = position_dodge()) +
   geom_hline(yintercept = 0.3, linetype = "dashed") +
+  lims(y = c(0,1)) +
   scale_fill_grey() +
   ggthemes::theme_few() +
   theme(legend.position = "top") +
@@ -68,10 +69,15 @@ Plot counts of different action responses for the learning vs. performance goal 
 
 ```{r}
 d %>% 
-  select(condition, action_response) %>% 
+  select(condition, action_response, id) %>% 
   unique() %>% 
-  ggplot(aes(x = action_response, fill = condition)) +
-  geom_bar(stat = "count", width = 0.4, position = position_dodge()) +
+  group_by(action_response, condition) %>% 
+  count() %>% 
+  group_by(condition) %>% 
+  mutate(prop = n / sum(n)) %>% 
+  ggplot(aes(x = action_response, y = prop, fill = condition)) +
+  geom_bar(stat = "identity", width = 0.4, position = position_dodge()) +
+  lims(y = c(0,1)) +
   scale_fill_grey()
 ```
 
@@ -88,10 +94,15 @@ Plot the distribution using the collapsed action response variable.
 
 ```{r}
 d %>% 
-  select(id, condition, action_response_collapsed) %>% 
+  select(condition, action_response_collapsed, id) %>% 
   unique() %>% 
-  ggplot(aes(x = action_response_collapsed, fill = condition)) +
-  geom_bar(stat = "count", width = 0.4, position = position_dodge()) +
+  group_by(action_response_collapsed, condition) %>% 
+  count() %>% 
+  group_by(condition) %>% 
+  mutate(prop = n / sum(n)) %>% 
+  ggplot(aes(x = action_response_collapsed, y = prop, fill = condition)) +
+  geom_bar(stat = "identity", width = 0.4, position = position_dodge()) +
+  lims(y = c(0,1)) +
   scale_fill_grey()
 ```
 

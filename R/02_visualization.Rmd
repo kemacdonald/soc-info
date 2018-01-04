@@ -4,17 +4,30 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 ```
+
+## Setup
 
 ```{r}
 library(magrittr); library(tidyverse); library(here) 
 theme_set(theme_minimal())
 ```
 
+Read data. 
+
 ```{r}
 d_path <- "data/02_tidy_data/"
 d <- read_csv(here(d_path, "goal_actions_tidy.csv"))
+```
+
+## Table of comments
+
+```{r}
+d %>% 
+  select(id, age, gender, about, comment) %>% 
+  unique() %>% 
+  knitr::kable()
 ```
 
 ## Prior and posterior beliefs
@@ -34,7 +47,10 @@ posterior <- d %>%
   rename(slider_value = posterior_beliefs,
          hypothesis = posterior_hypothesis)
   
-d_beliefs <- bind_rows(prior, posterior)
+d_beliefs <- bind_rows(prior, posterior) %>% 
+  mutate(slider_response_collapsed = ifelse(hypothesis == "Purple and Orange", 
+                                            "both_buttons", 
+                                            "single_button"))
 ```
 
 Normalize the sliders.
@@ -54,6 +70,35 @@ d_beliefs %>%
   group_by(hypothesis_type, condition, hypothesis) %>% 
   summarise(m = mean(slider_value_normalized)) %>% 
   ggplot(aes(x = hypothesis, y = m, fill = condition)) +
+  geom_bar(stat = "identity", width = 0.4, position = position_dodge()) +
+  geom_hline(yintercept = 0.3, linetype = "dashed") +
+  lims(y = c(0,1)) +
+  scale_fill_grey() +
+  ggthemes::theme_few() +
+  theme(legend.position = "top") +
+  facet_wrap(~hypothesis_type)
+```
+
+Create variable that collapses across both single button responses
+
+```{r}
+d_beliefs_collapsed <- d_beliefs %>% 
+  group_by(id, hypothesis_type, slider_response_collapsed) %>% 
+  mutate(slider_value_2 = sum(slider_value)) %>% 
+  select(id, hypothesis_type, slider_response_collapsed, slider_value_2, condition) %>% 
+  unique() %>% 
+  group_by(id, hypothesis_type, condition) %>% 
+  mutate(slider_value_norm_2 = round(slider_value_2 / sum(slider_value_2), 3)) %>% 
+  ungroup()
+```
+
+```{r}
+d_beliefs_collapsed %>% 
+  mutate(hypothesis_type = factor(hypothesis_type) %>% fct_rev(),
+         slider_response_collapsed = factor(slider_response_collapsed) %>% fct_rev()) %>% 
+  group_by(hypothesis_type, condition, slider_response_collapsed) %>% 
+  summarise(m = mean(slider_value_norm_2)) %>% 
+  ggplot(aes(x = slider_response_collapsed, y = m, fill = condition)) +
   geom_bar(stat = "identity", width = 0.4, position = position_dodge()) +
   geom_hline(yintercept = 0.3, linetype = "dashed") +
   lims(y = c(0,1)) +
@@ -95,6 +140,7 @@ Plot the distribution using the collapsed action response variable.
 ```{r}
 d %>% 
   select(condition, action_response_collapsed, id) %>% 
+  mutate(action_response_collapsed = factor(action_response_collapsed) %>% fct_rev()) %>%
   unique() %>% 
   group_by(action_response_collapsed, condition) %>% 
   count() %>% 
@@ -103,6 +149,7 @@ d %>%
   ggplot(aes(x = action_response_collapsed, y = prop, fill = condition)) +
   geom_bar(stat = "identity", width = 0.4, position = position_dodge()) +
   lims(y = c(0,1)) +
+  labs(y = "Prop. Participants", x = "Action Selected") +
   scale_fill_grey()
 ```
 

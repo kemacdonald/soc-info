@@ -42,11 +42,11 @@ switch (cond) {
 var bonus_amount = '10 cent'
 
 if(goal_condition == "learning") {
-    goal_text_html = `The toy developer wants to know how quickly children could <b>learn how to make the toy play music.</b> <br><br> You will receive a <b> ${bonus_amount} bonus after submitting the HIT for learning</b> which action makes the toy work.`
-    goal_html_action_slide = `Remember, you will receive a <b> ${bonus_amount} bonus</b> after submitting the HIT for <b>learning which action makes the toy work.</b>`
+    goal_text_html = `The toy developer wants to know how quickly children could <b>learn how to make the toy play music.</b> <br><br> You will receive a <b> ${bonus_amount} bonus after submitting the HIT for selecting an action that helps you learn how the toy works</b>. You will lose out on this bonus if you don’t learn how the toy works.`
+    goal_html_action_slide = `Remember, you will receive a <b> ${bonus_amount} bonus after submitting the HIT for selecting an action that helps you learn how the toy works</b>. You will lose out on this bonus if you don’t learn how the toy works.`
 } else {
-    goal_text_html = `The toy developer wants to know how quickly children could <b>make the toy play music.</b> <br><br> You will receive a <b> ${bonus_amount} bonus after submitting the HIT for selecting an action</b> that makes the toy work.`
-    goal_html_action_slide = `Remember, you will receive a <b> ${bonus_amount} bonus</b> after submitting the HIT for <b>selecting an action that makes the work.</b>`
+    goal_text_html = `The toy developer wants to know how quickly children could <b>make the toy play music.</b> <br><br> You will receive a <b> ${bonus_amount} bonus after submitting the HIT for selecting an action that makes the toy work</b>. You will lose out on this bonus if your action doesn't make the toy work.`
+    goal_html_action_slide = `Remember, you will receive a <b>${bonus_amount} bonus after submitting the HIT for selecting an action that makes the toy work</b>. You will lose out on this bonus if your action doesn't make the toy work.`
 }
 
 // set up variables for later randomization

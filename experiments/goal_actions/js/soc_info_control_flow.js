@@ -135,9 +135,9 @@ hypotheses_slide: function() {
 	// display the correct text
 	if(exp.hyp_type == "posterior") {
     exp.hypotheses_slider_order_posterior = rand_slider_labels;
- 		hyp_text_html = "After hearing the toy play music, how likely is it that each of the following actions are <b>necessary</b> to make the toy work?";
+ 		hyp_text_html = "After performing your action, now how do you think the toy works?";
  	} else if (exp.hyp_type == "prior") {
- 		hyp_text_html = "Before performing any action, how likely is it that each of the following actions are <b>necessary</b> to make the toy work?";
+ 		hyp_text_html = "Before performing any action, how do you think the toy works?";
     // store slider label order to link responses to hypothesis later on
     exp.hypotheses_slider_order_prior = rand_slider_labels;
  	}
@@ -151,14 +151,14 @@ hypotheses_slide: function() {
 
     	// check if there is whitespace handles the case of  "both purple and orange buttons"
     	if(hasWhiteSpace(label_color)) {
-    		slider_html = `<td><b>Press both the <font color="purple">Purple </font> and <font color="orange">Orange</font> Buttons</b></td>
+    		slider_html = `<td><b>Pressing both the <font color="purple">Purple </font> and <font color="orange">Orange</font> Buttons at the same time</b></td>
           <td>
              <div id="slidecontainer">
                 <input type="range" min="1" max="100" value="50" class="slider" id="myRange3">
             </div>
           </td>`
     	} else {
-    		slider_html = `<td><b>Press just the <font color="${label_color}"> ${label_color} </font> Button</b></td>
+    		slider_html = `<td><b>Pressing just the <font color="${label_color}"> ${label_color} </font> Button by itself</b></td>
     		<td>
     			<div id="slidecontainer">
     				<input type="range" min="1" max="100" value="50" class="slider" id="myRange1">
@@ -246,9 +246,9 @@ hypotheses_slide: function() {
 
     	// check if there is whitespace handles the case of  "both purple and orange buttons"
     	if(hasWhiteSpace(button_label)) {
-    		button_html = '<span><label class="btn btn-default"><input type="radio" name="intervention" value="orange_and_purple"/>Press Orange and Purple Button at the same time</label></span>'
+    		button_html = '<span><label class="btn btn-default"><input type="radio" name="intervention" value="orange_and_purple"/>Press the Orange and Purple Button at the same time</label></span>'
     	} else {
-    		button_html = `<span><label class="btn btn-default"><input type="radio" name="intervention" value=${button_label}/>Press ${button_label} Button</label></span>`
+    		button_html = `<span><label class="btn btn-default"><input type="radio" name="intervention" value=${button_label}/>Press the ${button_label} Button</label></span>`
     	}
 
       $(`#action_button_`+i.toString()).html(button_html);

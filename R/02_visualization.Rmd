@@ -175,3 +175,39 @@ d %>%
   geom_violin()
 ```
 
+## Plot belief change
+
+```{r}
+d_beliefs_collapsed %>% 
+  ggplot(aes(x = hypothesis_type, y = slider_value_norm_2, color = condition)) +
+  geom_line(aes(group = id), size = 1) + 
+  geom_jitter(width = 0.03, size = 2) +
+  facet_wrap(~slider_response_collapsed) +
+  lims(y = c(0,1)) +
+  ggthemes::theme_few() +
+  theme(legend.position = "top")
+```
+
+Now as a function of action response 
+
+```{r}
+plot_data <- d_beliefs_collapsed %>% 
+  left_join(., select(d, id, action_response_collapsed) %>% unique(), by = "id") %>% 
+  mutate(hypothesis_type = factor(hypothesis_type) %>% fct_rev(),
+         slider_response_collapsed = factor(slider_response_collapsed) %>% fct_rev()) 
+
+plot_data %>% 
+  ggplot(aes(x = hypothesis_type, y = slider_value_norm_2, 
+             color = condition,
+             linetype = action_response_collapsed)) +
+  geom_line(aes(group = id), size = 0.5) + 
+  geom_jitter(width = 0, size = 2) +
+  ggrepel::geom_label_repel(data = filter(plot_data, hypothesis_type == "posterior"),
+                                          aes(label = id)) +
+  facet_grid(~slider_response_collapsed) +
+  lims(y = c(0,1)) +
+  langcog::scale_color_solarized() +
+  ggthemes::theme_few() +
+  theme(legend.position = "top")
+```
+

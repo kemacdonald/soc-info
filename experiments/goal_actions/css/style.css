@@ -33,6 +33,10 @@ td.slider_labels{
   width: 80%;
 }
 
+#hypotheses_text{
+	font-size: 26px;
+}
+
 .slider_container {
   height: 70px;
   width: 500px;

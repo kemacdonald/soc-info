@@ -135,7 +135,7 @@ hypotheses_slide: function() {
 	// display the correct text
 	if(exp.hyp_type == "posterior") {
     exp.hypotheses_slider_order_posterior = rand_slider_labels;
- 		hyp_text_html = "After performing your action, now how do you think the toy works?";
+ 		hyp_text_html = "After performing your action, how do you think the toy works?";
  	} else if (exp.hyp_type == "prior") {
  		hyp_text_html = "Before performing any action, how do you think the toy works?";
     // store slider label order to link responses to hypothesis later on

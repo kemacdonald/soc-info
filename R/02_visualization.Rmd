@@ -18,55 +18,24 @@ Read data.
 
 ```{r}
 d_path <- "data/02_tidy_data/"
-d <- read_csv(here(d_path, "goal_actions_tidy.csv"))
+d <- read_csv(here(d_path, "goal_actions_tidy_pilotB.csv"))
 ```
 
 ## Table of comments
 
 ```{r}
 d %>% 
-  select(id, age, gender, about, comment) %>% 
+  select(id, age, gender, about) %>% 
   unique() %>% 
   knitr::kable()
 ```
 
 ## Prior and posterior beliefs
 
-Tidy up the data frame.
-
-```{r}
-prior <-  d %>% 
-  select(id, condition, prior_beliefs, prior_hypothesis) %>% 
-  mutate(hypothesis_type = "prior") %>% 
-  rename(slider_value = prior_beliefs,
-         hypothesis = prior_hypothesis)
-
-posterior <- d %>% 
-  select(id, condition, posterior_beliefs, posterior_hypothesis) %>% 
-  mutate(hypothesis_type = "posterior") %>% 
-  rename(slider_value = posterior_beliefs,
-         hypothesis = posterior_hypothesis)
-  
-d_beliefs <- bind_rows(prior, posterior) %>% 
-  mutate(slider_response_collapsed = ifelse(hypothesis == "Purple and Orange", 
-                                            "both_buttons", 
-                                            "single_button"))
-```
-
-Normalize the sliders.
-
-```{r}
-d_beliefs %<>% 
-  group_by(id, hypothesis_type) %>% 
-  mutate(slider_value_normalized = round(slider_value / sum(slider_value), 3)) %>% 
-  ungroup()
-```
-
 Now summarise and plot.
   
 ```{r}  
-d_beliefs %>% 
-  mutate(hypothesis_type = factor(hypothesis_type) %>% fct_rev()) %>% 
+d %>% 
   group_by(hypothesis_type, condition, hypothesis) %>% 
   summarise(m = mean(slider_value_normalized)) %>% 
   ggplot(aes(x = hypothesis, y = m, fill = condition)) +
@@ -79,21 +48,10 @@ d_beliefs %>%
   facet_wrap(~hypothesis_type)
 ```
 
-Create variable that collapses across both single button responses
+Same plot but collapsing across the single button hypotheses. 
 
 ```{r}
-d_beliefs_collapsed <- d_beliefs %>% 
-  group_by(id, hypothesis_type, slider_response_collapsed) %>% 
-  mutate(slider_value_2 = sum(slider_value)) %>% 
-  select(id, hypothesis_type, slider_response_collapsed, slider_value_2, condition) %>% 
-  unique() %>% 
-  group_by(id, hypothesis_type, condition) %>% 
-  mutate(slider_value_norm_2 = round(slider_value_2 / sum(slider_value_2), 3)) %>% 
-  ungroup()
-```
-
-```{r}
-d_beliefs_collapsed %>% 
+d %>% 
   mutate(hypothesis_type = factor(hypothesis_type) %>% fct_rev(),
          slider_response_collapsed = factor(slider_response_collapsed) %>% fct_rev()) %>% 
   group_by(hypothesis_type, condition, slider_response_collapsed) %>% 
@@ -126,15 +84,6 @@ d %>%
   scale_fill_grey()
 ```
 
-Now do the same analysis, but collapse across the two single button press options. 
-
-```{r}
-d %<>% 
-  mutate(action_response_collapsed = ifelse(action_response == "orange_and_purple", 
-                                            "both_buttons", 
-                                            "single_button"))
-```
-
 Plot the distribution using the collapsed action response variable.
 
 ```{r}
@@ -161,8 +110,10 @@ Plot the distribution of overall time on the experiment across conditions.
 d %>% 
   select(id, experiment_time, condition) %>% 
   unique() %>% 
-  ggplot(aes(x = condition, y = experiment_time)) +
-  geom_violin()
+  ggplot(aes(x = condition, y = experiment_time / 60)) +
+  geom_boxplot(width = 0.3) +
+  lims(y = c(0,max(d$experiment_time / 60))) +
+  labs(y = "Time (min)")
 ```
 
 Make the same plot, but for the time spent on the action decision.
@@ -172,13 +123,15 @@ d %>%
   select(id, action_trial_time, condition) %>% 
   unique() %>% 
   ggplot(aes(x = condition, y = action_trial_time)) +
-  geom_violin()
+  geom_boxplot(width = 0.3) +
+  lims(y = c(0,max(d$action_trial_time))) +
+  labs(y = "Time (sec)")
 ```
 
 ## Plot belief change
 
 ```{r}
-d_beliefs_collapsed %>% 
+d %>% 
   ggplot(aes(x = hypothesis_type, y = slider_value_norm_2, color = condition)) +
   geom_line(aes(group = id), size = 1) + 
   geom_jitter(width = 0.03, size = 2) +
@@ -188,26 +141,18 @@ d_beliefs_collapsed %>%
   theme(legend.position = "top")
 ```
 
-Now as a function of action response 
+Now as a function of which action participants chose
 
 ```{r}
-plot_data <- d_beliefs_collapsed %>% 
-  left_join(., select(d, id, action_response_collapsed) %>% unique(), by = "id") %>% 
-  mutate(hypothesis_type = factor(hypothesis_type) %>% fct_rev(),
-         slider_response_collapsed = factor(slider_response_collapsed) %>% fct_rev()) 
-
-plot_data %>% 
+d %>% 
   ggplot(aes(x = hypothesis_type, y = slider_value_norm_2, 
              color = condition,
              linetype = action_response_collapsed)) +
   geom_line(aes(group = id), size = 0.5) + 
   geom_jitter(width = 0, size = 2) +
-  ggrepel::geom_label_repel(data = filter(plot_data, hypothesis_type == "posterior"),
-                                          aes(label = id)) +
   facet_grid(~slider_response_collapsed) +
   lims(y = c(0,1)) +
   langcog::scale_color_solarized() +
   ggthemes::theme_few() +
   theme(legend.position = "top")
 ```
-

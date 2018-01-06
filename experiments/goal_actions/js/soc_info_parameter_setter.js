@@ -15,8 +15,8 @@ var numConditions = 2
 var slider_start_val = "50"
 
 try {
-    var filename = "soc_info_goals_pilot";
-    var condCounts = "1,10;2,10";
+    var filename = "soc_info_goals_pilotB";
+    var condCounts = "1,25;2,25";
     var xmlHttp = null;
     xmlHttp = new XMLHttpRequest();
     xmlHttp.open( "GET", "https://langcog.stanford.edu/cgi-bin/KM/subject_equalizer_km/maker_getter.php?conds=" + condCounts + "&filename=" + filename, false );

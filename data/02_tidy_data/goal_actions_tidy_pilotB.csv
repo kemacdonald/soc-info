@@ -1,0 +1,331 @@
+id,condition,slider_value,hypothesis,hypothesis_type,slider_response_collapsed,slider_value_normalized,slider_value_norm_2,browser,browser_width,browser_height,screen_width,screen_height,mobile_device,about,comment,age,gender,first_language,experiment_time,action_trial_time,action_response_collapsed,action_response
+1,performance,95,Purple and Orange,prior,both_buttons,0.748,0.748,Chrome,648,610,1366,768,FALSE,idk,no,32,f,eng,44.668,6.791,single_button,purple
+1,performance,25,Orange,prior,single_button,0.197,0.252,Chrome,648,610,1366,768,FALSE,idk,no,32,f,eng,44.668,6.791,single_button,purple
+1,performance,7,Purple,prior,single_button,0.055,0.252,Chrome,648,610,1366,768,FALSE,idk,no,32,f,eng,44.668,6.791,single_button,purple
+2,performance,100,Orange,prior,single_button,0.498,0.995,Chrome,1299,600,1366,768,FALSE,Looking at what and how people assume things,no,24,m,English,124.906,9.569,single_button,purple
+2,performance,100,Purple,prior,single_button,0.498,0.995,Chrome,1299,600,1366,768,FALSE,Looking at what and how people assume things,no,24,m,English,124.906,9.569,single_button,purple
+2,performance,1,Purple and Orange,prior,both_buttons,0.005,0.005,Chrome,1299,600,1366,768,FALSE,Looking at what and how people assume things,no,24,m,English,124.906,9.569,single_button,purple
+3,performance,82,Purple,prior,single_button,0.374,0.772,Chrome,1213,694,1280,800,FALSE,no clue,no,31,F,ENGLISH,92.439,7.914,single_button,purple
+3,performance,50,Purple and Orange,prior,both_buttons,0.228,0.228,Chrome,1213,694,1280,800,FALSE,no clue,no,31,F,ENGLISH,92.439,7.914,single_button,purple
+3,performance,87,Orange,prior,single_button,0.397,0.772,Chrome,1213,694,1280,800,FALSE,no clue,no,31,F,ENGLISH,92.439,7.914,single_button,purple
+4,learning,12,Purple and Orange,prior,both_buttons,0.073,0.073,Chrome,1147,575,1093,615,FALSE,"I am not sure what the task was about, but perhaps it was to see how likely it was that I would believe the brightest button would make the music play.",Nothing was broken.,43,f,English,170.559,12.8,single_button,orange
+4,learning,87,Purple,prior,single_button,0.527,0.927,Chrome,1147,575,1093,615,FALSE,"I am not sure what the task was about, but perhaps it was to see how likely it was that I would believe the brightest button would make the music play.",Nothing was broken.,43,f,English,170.559,12.8,single_button,orange
+4,learning,66,Orange,prior,single_button,0.4,0.927,Chrome,1147,575,1093,615,FALSE,"I am not sure what the task was about, but perhaps it was to see how likely it was that I would believe the brightest button would make the music play.",Nothing was broken.,43,f,English,170.559,12.8,single_button,orange
+5,performance,22,Purple,prior,single_button,0.15,0.735,Chrome,1853,949,1920,1080,FALSE,Decision making,,19,m,English,138.24,16.324,single_button,orange
+5,performance,39,Purple and Orange,prior,both_buttons,0.265,0.265,Chrome,1853,949,1920,1080,FALSE,Decision making,,19,m,English,138.24,16.324,single_button,orange
+5,performance,86,Orange,prior,single_button,0.585,0.735,Chrome,1853,949,1920,1080,FALSE,Decision making,,19,m,English,138.24,16.324,single_button,orange
+6,performance,17,Purple,prior,single_button,0.138,0.285,Chrome,1133,639,2560,1440,FALSE,To see if people could figure out the logic behind making a children's toy.,None,36,m,English,106.848,6.1,both_buttons,orange_and_purple
+6,performance,88,Purple and Orange,prior,both_buttons,0.715,0.715,Chrome,1133,639,2560,1440,FALSE,To see if people could figure out the logic behind making a children's toy.,None,36,m,English,106.848,6.1,both_buttons,orange_and_purple
+6,performance,18,Orange,prior,single_button,0.146,0.285,Chrome,1133,639,2560,1440,FALSE,To see if people could figure out the logic behind making a children's toy.,None,36,m,English,106.848,6.1,both_buttons,orange_and_purple
+7,performance,100,Orange,prior,single_button,0.457,0.913,Chrome,1229,600,1280,800,FALSE,how people make the toy work,none cool hit,33,male,english,90.586,15.114,single_button,orange
+7,performance,19,Purple and Orange,prior,both_buttons,0.087,0.087,Chrome,1229,600,1280,800,FALSE,how people make the toy work,none cool hit,33,male,english,90.586,15.114,single_button,orange
+7,performance,100,Purple,prior,single_button,0.457,0.913,Chrome,1229,600,1280,800,FALSE,how people make the toy work,none cool hit,33,male,english,90.586,15.114,single_button,orange
+8,learning,100,Purple and Orange,prior,both_buttons,0.385,0.385,Chrome,1299,662,1366,768,FALSE,analyzing humans,no,42,m,english,131.853,29.209,both_buttons,orange_and_purple
+8,learning,81,Purple,prior,single_button,0.312,0.615,Chrome,1299,662,1366,768,FALSE,analyzing humans,no,42,m,english,131.853,29.209,both_buttons,orange_and_purple
+8,learning,79,Orange,prior,single_button,0.304,0.615,Chrome,1299,662,1366,768,FALSE,analyzing humans,no,42,m,english,131.853,29.209,both_buttons,orange_and_purple
+9,learning,100,Purple,prior,single_button,0.498,0.995,Chrome,1213,694,1280,800,FALSE,I have no idea.,"There was nothing broken, nothing wrong. The HIT worked great!",41,f,English,176.967,14.37,single_button,orange
+9,learning,100,Orange,prior,single_button,0.498,0.995,Chrome,1213,694,1280,800,FALSE,I have no idea.,"There was nothing broken, nothing wrong. The HIT worked great!",41,f,English,176.967,14.37,single_button,orange
+9,learning,1,Purple and Orange,prior,both_buttons,0.005,0.005,Chrome,1213,694,1280,800,FALSE,I have no idea.,"There was nothing broken, nothing wrong. The HIT worked great!",41,f,English,176.967,14.37,single_button,orange
+10,learning,87,Purple and Orange,prior,both_buttons,0.626,0.626,Chrome,1030,678,1600,900,FALSE,figuring out how a toy works,no,34,f,english,86.793,6.921,both_buttons,orange_and_purple
+10,learning,27,Purple,prior,single_button,0.194,0.374,Chrome,1030,678,1600,900,FALSE,figuring out how a toy works,no,34,f,english,86.793,6.921,both_buttons,orange_and_purple
+10,learning,25,Orange,prior,single_button,0.18,0.374,Chrome,1030,678,1600,900,FALSE,figuring out how a toy works,no,34,f,english,86.793,6.921,both_buttons,orange_and_purple
+11,performance,100,Purple,prior,single_button,0.498,0.995,Chrome,1373,769,1440,900,FALSE,Baby toys,Nothing was broken for me.,38,f,English,115.022,11.008,single_button,orange
+11,performance,1,Purple and Orange,prior,both_buttons,0.005,0.005,Chrome,1373,769,1440,900,FALSE,Baby toys,Nothing was broken for me.,38,f,English,115.022,11.008,single_button,orange
+11,performance,100,Orange,prior,single_button,0.498,0.995,Chrome,1373,769,1440,900,FALSE,Baby toys,Nothing was broken for me.,38,f,English,115.022,11.008,single_button,orange
+12,learning,100,Purple and Orange,prior,both_buttons,0.98,0.98,Chrome,977,918,1920,1080,FALSE,how to get a toy to play music,nope,24,f,english,163.585,5.264,both_buttons,orange_and_purple
+12,learning,1,Purple,prior,single_button,0.01,0.02,Chrome,977,918,1920,1080,FALSE,how to get a toy to play music,nope,24,f,english,163.585,5.264,both_buttons,orange_and_purple
+12,learning,1,Orange,prior,single_button,0.01,0.02,Chrome,977,918,1920,1080,FALSE,how to get a toy to play music,nope,24,f,english,163.585,5.264,both_buttons,orange_and_purple
+13,performance,84,Purple and Orange,prior,both_buttons,0.368,0.368,Chrome,1837,929,1920,1080,FALSE,perceptions,fun,39,f,English,102.107,10.617,both_buttons,orange_and_purple
+13,performance,71,Purple,prior,single_button,0.311,0.632,Chrome,1837,929,1920,1080,FALSE,perceptions,fun,39,f,English,102.107,10.617,both_buttons,orange_and_purple
+13,performance,73,Orange,prior,single_button,0.32,0.632,Chrome,1837,929,1920,1080,FALSE,perceptions,fun,39,f,English,102.107,10.617,both_buttons,orange_and_purple
+14,learning,89,Purple and Orange,prior,both_buttons,0.654,0.654,Chrome,1031,961,1920,1080,FALSE,To see how many people would pick each choice.,No comments,33,f,English,150.857,12.378,both_buttons,orange_and_purple
+14,learning,24,Orange,prior,single_button,0.176,0.346,Chrome,1031,961,1920,1080,FALSE,To see how many people would pick each choice.,No comments,33,f,English,150.857,12.378,both_buttons,orange_and_purple
+14,learning,23,Purple,prior,single_button,0.169,0.346,Chrome,1031,961,1920,1080,FALSE,To see how many people would pick each choice.,No comments,33,f,English,150.857,12.378,both_buttons,orange_and_purple
+15,performance,1,Purple and Orange,prior,both_buttons,0.005,0.005,Chrome,523,859,1920,1080,FALSE,not really sure ?,,50,f,english,103.016,8.344,single_button,purple
+15,performance,100,Purple,prior,single_button,0.535,0.995,Chrome,523,859,1920,1080,FALSE,not really sure ?,,50,f,english,103.016,8.344,single_button,purple
+15,performance,86,Orange,prior,single_button,0.46,0.995,Chrome,523,859,1920,1080,FALSE,not really sure ?,,50,f,english,103.016,8.344,single_button,purple
+16,learning,71,Purple,prior,single_button,0.298,0.58,Chrome,908,600,1920,1080,FALSE,To better understand our decisions when interacting with a new device.,Everything was perfectly clear and I did not encounter any issues.,30,m,English,218.136,26.484,both_buttons,orange_and_purple
+16,learning,100,Purple and Orange,prior,both_buttons,0.42,0.42,Chrome,908,600,1920,1080,FALSE,To better understand our decisions when interacting with a new device.,Everything was perfectly clear and I did not encounter any issues.,30,m,English,218.136,26.484,both_buttons,orange_and_purple
+16,learning,67,Orange,prior,single_button,0.282,0.58,Chrome,908,600,1920,1080,FALSE,To better understand our decisions when interacting with a new device.,Everything was perfectly clear and I did not encounter any issues.,30,m,English,218.136,26.484,both_buttons,orange_and_purple
+17,learning,18,Purple,prior,single_button,0.149,0.289,Chrome,1449,708,1366,768,FALSE,No idea,no thank you,44,f,english,90.84,10.24,both_buttons,orange_and_purple
+17,learning,86,Purple and Orange,prior,both_buttons,0.711,0.711,Chrome,1449,708,1366,768,FALSE,No idea,no thank you,44,f,english,90.84,10.24,both_buttons,orange_and_purple
+17,learning,17,Orange,prior,single_button,0.14,0.289,Chrome,1449,708,1366,768,FALSE,No idea,no thank you,44,f,english,90.84,10.24,both_buttons,orange_and_purple
+18,learning,6,Purple and Orange,prior,both_buttons,0.047,0.047,Chrome,1533,600,1600,900,FALSE,Not sure,"All good, thanks",45,male,English,80.136,9.593,single_button,purple
+18,learning,61,Purple,prior,single_button,0.48,0.953,Chrome,1533,600,1600,900,FALSE,Not sure,"All good, thanks",45,male,English,80.136,9.593,single_button,purple
+18,learning,60,Orange,prior,single_button,0.472,0.953,Chrome,1533,600,1600,900,FALSE,Not sure,"All good, thanks",45,male,English,80.136,9.593,single_button,purple
+19,performance,86,Purple and Orange,prior,both_buttons,0.333,0.333,Chrome,1299,662,1366,768,FALSE,Decision making,Everything worked properly.,31,F,English,122.181,12.269,single_button,orange
+19,performance,72,Purple,prior,single_button,0.279,0.667,Chrome,1299,662,1366,768,FALSE,Decision making,Everything worked properly.,31,F,English,122.181,12.269,single_button,orange
+19,performance,100,Orange,prior,single_button,0.388,0.667,Chrome,1299,662,1366,768,FALSE,Decision making,Everything worked properly.,31,F,English,122.181,12.269,single_button,orange
+20,performance,74,Orange,prior,single_button,0.296,0.6,Firefox,908,600,1920,1080,FALSE,Seeing what people's first reactions are to something,No,22,f,English,82.656,5.355,both_buttons,orange_and_purple
+20,performance,76,Purple,prior,single_button,0.304,0.6,Firefox,908,600,1920,1080,FALSE,Seeing what people's first reactions are to something,No,22,f,English,82.656,5.355,both_buttons,orange_and_purple
+20,performance,100,Purple and Orange,prior,both_buttons,0.4,0.4,Firefox,908,600,1920,1080,FALSE,Seeing what people's first reactions are to something,No,22,f,English,82.656,5.355,both_buttons,orange_and_purple
+21,learning,77,Purple and Orange,prior,both_buttons,0.291,0.291,Firefox,1207,622,1360,768,FALSE,no clue,Good Luck!! ,40,m,English,101.372,19.738,single_button,purple
+21,learning,88,Orange,prior,single_button,0.332,0.709,Firefox,1207,622,1360,768,FALSE,no clue,Good Luck!! ,40,m,English,101.372,19.738,single_button,purple
+21,learning,100,Purple,prior,single_button,0.377,0.709,Firefox,1207,622,1360,768,FALSE,no clue,Good Luck!! ,40,m,English,101.372,19.738,single_button,purple
+22,performance,82,Orange,prior,single_button,0.488,0.994,Chrome,1061,930,1680,1050,FALSE,How we process information and find solution for a problem,no,29,mal,english,89.284,12.355,single_button,orange
+22,performance,1,Purple and Orange,prior,both_buttons,0.006,0.006,Chrome,1061,930,1680,1050,FALSE,How we process information and find solution for a problem,no,29,mal,english,89.284,12.355,single_button,orange
+22,performance,85,Purple,prior,single_button,0.506,0.994,Chrome,1061,930,1680,1050,FALSE,How we process information and find solution for a problem,no,29,mal,english,89.284,12.355,single_button,orange
+23,performance,50,Orange,prior,single_button,0.495,0.99,Firefox,1533,600,1600,900,FALSE,intution,No,37,male,English,114.08,14.743,single_button,purple
+23,performance,1,Purple and Orange,prior,both_buttons,0.01,0.01,Firefox,1533,600,1600,900,FALSE,intution,No,37,male,English,114.08,14.743,single_button,purple
+23,performance,50,Purple,prior,single_button,0.495,0.99,Firefox,1533,600,1600,900,FALSE,intution,No,37,male,English,114.08,14.743,single_button,purple
+24,learning,83,Orange,prior,single_button,0.506,0.909,Chrome,1165,600,1536,864,FALSE,HUMAN PERCEPTION,NO,33,MALE,ENGLISH,153.227,11.418,single_button,orange
+24,learning,15,Purple and Orange,prior,both_buttons,0.091,0.091,Chrome,1165,600,1536,864,FALSE,HUMAN PERCEPTION,NO,33,MALE,ENGLISH,153.227,11.418,single_button,orange
+24,learning,66,Purple,prior,single_button,0.402,0.909,Chrome,1165,600,1536,864,FALSE,HUMAN PERCEPTION,NO,33,MALE,ENGLISH,153.227,11.418,single_button,orange
+25,learning,65,Purple,prior,single_button,0.474,0.964,Chrome,1853,974,1920,1080,FALSE,To see what peoples instincts told them about how to work something simple.,Nope.,34,m,English,127.162,15.731,single_button,purple
+25,learning,5,Purple and Orange,prior,both_buttons,0.036,0.036,Chrome,1853,974,1920,1080,FALSE,To see what peoples instincts told them about how to work something simple.,Nope.,34,m,English,127.162,15.731,single_button,purple
+25,learning,67,Orange,prior,single_button,0.489,0.964,Chrome,1853,974,1920,1080,FALSE,To see what peoples instincts told them about how to work something simple.,Nope.,34,m,English,127.162,15.731,single_button,purple
+26,performance,100,Orange,prior,single_button,0.662,0.669,Chrome,1230,600,1920,1080,FALSE,To study how colors affect choices.,Thank you!,33,m,English,110.098,8.289,single_button,orange
+26,performance,50,Purple and Orange,prior,both_buttons,0.331,0.331,Chrome,1230,600,1920,1080,FALSE,To study how colors affect choices.,Thank you!,33,m,English,110.098,8.289,single_button,orange
+26,performance,1,Purple,prior,single_button,0.007,0.669,Chrome,1230,600,1920,1080,FALSE,To study how colors affect choices.,Thank you!,33,m,English,110.098,8.289,single_button,orange
+27,performance,61,Purple,prior,single_button,0.299,0.593,Chrome,1171,602,1360,768,FALSE,I have no idea,Nope,18,M,english,126.534,34.671,both_buttons,orange_and_purple
+27,performance,83,Purple and Orange,prior,both_buttons,0.407,0.407,Chrome,1171,602,1360,768,FALSE,I have no idea,Nope,18,M,english,126.534,34.671,both_buttons,orange_and_purple
+27,performance,60,Orange,prior,single_button,0.294,0.593,Chrome,1171,602,1360,768,FALSE,I have no idea,Nope,18,M,english,126.534,34.671,both_buttons,orange_and_purple
+28,performance,69,Orange,prior,single_button,0.312,0.62,Firefox,1456,720,1525,858,FALSE,how an adult conceptualizes a child's problem solving skills?,,41,male,english,237.344,17.6,both_buttons,orange_and_purple
+28,performance,84,Purple and Orange,prior,both_buttons,0.38,0.38,Firefox,1456,720,1525,858,FALSE,how an adult conceptualizes a child's problem solving skills?,,41,male,english,237.344,17.6,both_buttons,orange_and_purple
+28,performance,68,Purple,prior,single_button,0.308,0.62,Firefox,1456,720,1525,858,FALSE,how an adult conceptualizes a child's problem solving skills?,,41,male,english,237.344,17.6,both_buttons,orange_and_purple
+29,performance,51,Orange,prior,single_button,0.325,0.669,Chrome,1473,779,1920,1080,FALSE,to see how we think and ratinalize,no,54,f,English,81.152,13.041,both_buttons,orange_and_purple
+29,performance,52,Purple and Orange,prior,both_buttons,0.331,0.331,Chrome,1473,779,1920,1080,FALSE,to see how we think and ratinalize,no,54,f,English,81.152,13.041,both_buttons,orange_and_purple
+29,performance,54,Purple,prior,single_button,0.344,0.669,Chrome,1473,779,1920,1080,FALSE,to see how we think and ratinalize,no,54,f,English,81.152,13.041,both_buttons,orange_and_purple
+30,learning,1,Orange,prior,single_button,0.01,0.02,Chrome,994,983,1920,1080,FALSE,reasoning and deduction,"Everything was clear and worked properly. Thanks for the opportunity to participate; I wish you success with your research! Also, please note that on December 15th, 2017 amazon forced all users to begin using the new worker site. One of the many changes is the inability for workers to see the ""Auto Approval"" time set by requesters. Many workers use this information to aid in deciding whether or not to do a HIT. Please consider including the Auto Approval time in your HIT descriptions.",45,m,English,171.485,12.351,both_buttons,orange_and_purple
+30,learning,100,Purple and Orange,prior,both_buttons,0.98,0.98,Chrome,994,983,1920,1080,FALSE,reasoning and deduction,"Everything was clear and worked properly. Thanks for the opportunity to participate; I wish you success with your research! Also, please note that on December 15th, 2017 amazon forced all users to begin using the new worker site. One of the many changes is the inability for workers to see the ""Auto Approval"" time set by requesters. Many workers use this information to aid in deciding whether or not to do a HIT. Please consider including the Auto Approval time in your HIT descriptions.",45,m,English,171.485,12.351,both_buttons,orange_and_purple
+30,learning,1,Purple,prior,single_button,0.01,0.02,Chrome,994,983,1920,1080,FALSE,reasoning and deduction,"Everything was clear and worked properly. Thanks for the opportunity to participate; I wish you success with your research! Also, please note that on December 15th, 2017 amazon forced all users to begin using the new worker site. One of the many changes is the inability for workers to see the ""Auto Approval"" time set by requesters. Many workers use this information to aid in deciding whether or not to do a HIT. Please consider including the Auto Approval time in your HIT descriptions.",45,m,English,171.485,12.351,both_buttons,orange_and_purple
+31,learning,80,Purple,prior,single_button,0.367,0.739,Chrome,1853,984,1920,1080,FALSE,A childrens toy.,Nothing.,25,m,English,68.423,8.031,single_button,purple
+31,learning,57,Purple and Orange,prior,both_buttons,0.261,0.261,Chrome,1853,984,1920,1080,FALSE,A childrens toy.,Nothing.,25,m,English,68.423,8.031,single_button,purple
+31,learning,81,Orange,prior,single_button,0.372,0.739,Chrome,1853,984,1920,1080,FALSE,A childrens toy.,Nothing.,25,m,English,68.423,8.031,single_button,purple
+32,learning,16,Orange,prior,single_button,0.108,0.324,Chrome,977,887,1920,1080,FALSE,getting the right combo to make a toy work,i don't think so,31,m,english,133.889,1.722,both_buttons,orange_and_purple
+32,learning,100,Purple and Orange,prior,both_buttons,0.676,0.676,Chrome,977,887,1920,1080,FALSE,getting the right combo to make a toy work,i don't think so,31,m,english,133.889,1.722,both_buttons,orange_and_purple
+32,learning,32,Purple,prior,single_button,0.216,0.324,Chrome,977,887,1920,1080,FALSE,getting the right combo to make a toy work,i don't think so,31,m,english,133.889,1.722,both_buttons,orange_and_purple
+33,learning,50,Purple and Orange,prior,both_buttons,0.202,0.202,Chrome,1853,949,1920,1080,FALSE,To see how people made decisions when given a scenario,none,23,m,English,299.854,13.648,both_buttons,orange_and_purple
+33,learning,98,Purple,prior,single_button,0.395,0.798,Chrome,1853,949,1920,1080,FALSE,To see how people made decisions when given a scenario,none,23,m,English,299.854,13.648,both_buttons,orange_and_purple
+33,learning,100,Orange,prior,single_button,0.403,0.798,Chrome,1853,949,1920,1080,FALSE,To see how people made decisions when given a scenario,none,23,m,English,299.854,13.648,both_buttons,orange_and_purple
+34,learning,100,Purple,prior,single_button,0.441,0.881,Chrome,1299,600,1366,768,FALSE,Problem solving and logic.,No,38,f,English,232.456,58.841,both_buttons,orange_and_purple
+34,learning,27,Purple and Orange,prior,both_buttons,0.119,0.119,Chrome,1299,600,1366,768,FALSE,Problem solving and logic.,No,38,f,English,232.456,58.841,both_buttons,orange_and_purple
+34,learning,100,Orange,prior,single_button,0.441,0.881,Chrome,1299,600,1366,768,FALSE,Problem solving and logic.,No,38,f,English,232.456,58.841,both_buttons,orange_and_purple
+35,learning,36,Purple,prior,single_button,0.224,0.453,Chrome,1853,974,1920,1080,FALSE,Trying to see how quickly children can learn to play the music.,No,39,f,English,144.363,7.652,both_buttons,orange_and_purple
+35,learning,88,Purple and Orange,prior,both_buttons,0.547,0.547,Chrome,1853,974,1920,1080,FALSE,Trying to see how quickly children can learn to play the music.,No,39,f,English,144.363,7.652,both_buttons,orange_and_purple
+35,learning,37,Orange,prior,single_button,0.23,0.453,Chrome,1853,974,1920,1080,FALSE,Trying to see how quickly children can learn to play the music.,No,39,f,English,144.363,7.652,both_buttons,orange_and_purple
+36,performance,24,Orange,prior,single_button,0.192,0.368,Chrome,1299,600,1366,768,FALSE,not sure,no,26,f,English,55.999,6.739,both_buttons,orange_and_purple
+36,performance,22,Purple,prior,single_button,0.176,0.368,Chrome,1299,600,1366,768,FALSE,not sure,no,26,f,English,55.999,6.739,both_buttons,orange_and_purple
+36,performance,79,Purple and Orange,prior,both_buttons,0.632,0.632,Chrome,1299,600,1366,768,FALSE,not sure,no,26,f,English,55.999,6.739,both_buttons,orange_and_purple
+37,learning,18,Purple and Orange,prior,both_buttons,0.122,0.122,Chrome,1022,600,1366,768,FALSE,no idea,no,35,f,english,102.589,12.84,single_button,purple
+37,learning,43,Orange,prior,single_button,0.291,0.878,Chrome,1022,600,1366,768,FALSE,no idea,no,35,f,english,102.589,12.84,single_button,purple
+37,learning,87,Purple,prior,single_button,0.588,0.878,Chrome,1022,600,1366,768,FALSE,no idea,no,35,f,english,102.589,12.84,single_button,purple
+38,learning,33,Purple,prior,single_button,0.237,0.899,Chrome,1230,600,1280,800,FALSE,design,the product design was bad the orange should have been furthest from the person and the purple closest,21,m,English,108.027,16.05,single_button,orange
+38,learning,92,Orange,prior,single_button,0.662,0.899,Chrome,1230,600,1280,800,FALSE,design,the product design was bad the orange should have been furthest from the person and the purple closest,21,m,English,108.027,16.05,single_button,orange
+38,learning,14,Purple and Orange,prior,both_buttons,0.101,0.101,Chrome,1230,600,1280,800,FALSE,design,the product design was bad the orange should have been furthest from the person and the purple closest,21,m,English,108.027,16.05,single_button,orange
+39,performance,50,Orange,prior,single_button,0.299,0.599,Chrome,730,780,1440,900,FALSE,Determining how something works,No,24,F,English,140.712,4.629,both_buttons,orange_and_purple
+39,performance,67,Purple and Orange,prior,both_buttons,0.401,0.401,Chrome,730,780,1440,900,FALSE,Determining how something works,No,24,F,English,140.712,4.629,both_buttons,orange_and_purple
+39,performance,50,Purple,prior,single_button,0.299,0.599,Chrome,730,780,1440,900,FALSE,Determining how something works,No,24,F,English,140.712,4.629,both_buttons,orange_and_purple
+40,learning,50,Orange,prior,single_button,0.25,0.5,Chrome,708,772,1600,900,FALSE,decision makin,,38,f,english,90.199,12.228,single_button,purple
+40,learning,100,Purple and Orange,prior,both_buttons,0.5,0.5,Chrome,708,772,1600,900,FALSE,decision makin,,38,f,english,90.199,12.228,single_button,purple
+40,learning,50,Purple,prior,single_button,0.25,0.5,Chrome,708,772,1600,900,FALSE,decision makin,,38,f,english,90.199,12.228,single_button,purple
+41,performance,1,Orange,prior,single_button,0.01,0.02,Chrome,1230,600,1280,800,FALSE,To assess perceptions,No,28,M,English,91.013,4.082,both_buttons,orange_and_purple
+41,performance,1,Purple,prior,single_button,0.01,0.02,Chrome,1230,600,1280,800,FALSE,To assess perceptions,No,28,M,English,91.013,4.082,both_buttons,orange_and_purple
+41,performance,100,Purple and Orange,prior,both_buttons,0.98,0.98,Chrome,1230,600,1280,800,FALSE,To assess perceptions,No,28,M,English,91.013,4.082,both_buttons,orange_and_purple
+42,performance,19,Purple and Orange,prior,both_buttons,0.16,0.16,Chrome,1299,637,1366,768,FALSE,I have no idea,that was interesting,35,F,English,89.231,25.459,single_button,purple
+42,performance,50,Purple,prior,single_button,0.42,0.84,Chrome,1299,637,1366,768,FALSE,I have no idea,that was interesting,35,F,English,89.231,25.459,single_button,purple
+42,performance,50,Orange,prior,single_button,0.42,0.84,Chrome,1299,637,1366,768,FALSE,I have no idea,that was interesting,35,F,English,89.231,25.459,single_button,purple
+43,performance,100,Purple and Orange,prior,both_buttons,0.49,0.49,Chrome,1470,734,1536,864,FALSE,To see if people can figure how the toy works,no,25,female,english,226.431,20.642,both_buttons,orange_and_purple
+43,performance,55,Orange,prior,single_button,0.27,0.51,Chrome,1470,734,1536,864,FALSE,To see if people can figure how the toy works,no,25,female,english,226.431,20.642,both_buttons,orange_and_purple
+43,performance,49,Purple,prior,single_button,0.24,0.51,Chrome,1470,734,1536,864,FALSE,To see if people can figure how the toy works,no,25,female,english,226.431,20.642,both_buttons,orange_and_purple
+44,performance,57,Purple,prior,single_button,0.352,0.907,Chrome,1237,702,1366,768,FALSE,how people get things to work?,no,42,f,english,133.545,19.241,single_button,orange
+44,performance,15,Purple and Orange,prior,both_buttons,0.093,0.093,Chrome,1237,702,1366,768,FALSE,how people get things to work?,no,42,f,english,133.545,19.241,single_button,orange
+44,performance,90,Orange,prior,single_button,0.556,0.907,Chrome,1237,702,1366,768,FALSE,how people get things to work?,no,42,f,english,133.545,19.241,single_button,orange
+45,learning,74,Purple and Orange,prior,both_buttons,0.372,0.372,Chrome,1974,956,1366,768,FALSE,i'm not sure,,24,m,english,72.154,11.77,single_button,orange
+45,learning,95,Orange,prior,single_button,0.477,0.628,Chrome,1974,956,1366,768,FALSE,i'm not sure,,24,m,english,72.154,11.77,single_button,orange
+45,learning,30,Purple,prior,single_button,0.151,0.628,Chrome,1974,956,1366,768,FALSE,i'm not sure,,24,m,english,72.154,11.77,single_button,orange
+46,learning,25,Purple,prior,single_button,0.18,0.281,Chrome,966,887,1920,1080,FALSE,figuring out how toys work,no,35,f,english,71.609,12.493,both_buttons,orange_and_purple
+46,learning,14,Orange,prior,single_button,0.101,0.281,Chrome,966,887,1920,1080,FALSE,figuring out how toys work,no,35,f,english,71.609,12.493,both_buttons,orange_and_purple
+46,learning,100,Purple and Orange,prior,both_buttons,0.719,0.719,Chrome,966,887,1920,1080,FALSE,figuring out how toys work,no,35,f,english,71.609,12.493,both_buttons,orange_and_purple
+47,performance,50,Purple,prior,single_button,0.251,0.749,Chrome,1632,996,2048,1152,FALSE,not sure,,28,f,Chinese,152.285,35.58,both_buttons,orange_and_purple
+47,performance,50,Purple and Orange,prior,both_buttons,0.251,0.251,Chrome,1632,996,2048,1152,FALSE,not sure,,28,f,Chinese,152.285,35.58,both_buttons,orange_and_purple
+47,performance,99,Orange,prior,single_button,0.497,0.749,Chrome,1632,996,2048,1152,FALSE,not sure,,28,f,Chinese,152.285,35.58,both_buttons,orange_and_purple
+48,performance,1,Orange,prior,single_button,0.01,0.99,Chrome,1099,600,1920,1080,FALSE,It was about perceptions.,No,25,m,English,45.388,5.632,single_button,purple
+48,performance,100,Purple,prior,single_button,0.98,0.99,Chrome,1099,600,1920,1080,FALSE,It was about perceptions.,No,25,m,English,45.388,5.632,single_button,purple
+48,performance,1,Purple and Orange,prior,both_buttons,0.01,0.01,Chrome,1099,600,1920,1080,FALSE,It was about perceptions.,No,25,m,English,45.388,5.632,single_button,purple
+49,performance,60,Purple,prior,single_button,0.324,0.795,Chrome,1145,600,1280,800,FALSE,which button makes the music play!,no but this was fun.,24,f,english,67.688,7.462,single_button,orange
+49,performance,87,Orange,prior,single_button,0.47,0.795,Chrome,1145,600,1280,800,FALSE,which button makes the music play!,no but this was fun.,24,f,english,67.688,7.462,single_button,orange
+49,performance,38,Purple and Orange,prior,both_buttons,0.205,0.205,Chrome,1145,600,1280,800,FALSE,which button makes the music play!,no but this was fun.,24,f,english,67.688,7.462,single_button,orange
+50,learning,21,Purple and Orange,prior,both_buttons,0.13,0.13,Chrome,1299,637,1366,768,FALSE,Learning about which choice makes something work.,It all worked fine for me.,20,m,English,140.981,11.724,single_button,orange
+50,learning,71,Orange,prior,single_button,0.441,0.87,Chrome,1299,637,1366,768,FALSE,Learning about which choice makes something work.,It all worked fine for me.,20,m,English,140.981,11.724,single_button,orange
+50,learning,69,Purple,prior,single_button,0.429,0.87,Chrome,1299,637,1366,768,FALSE,Learning about which choice makes something work.,It all worked fine for me.,20,m,English,140.981,11.724,single_button,orange
+51,performance,28,Purple,prior,single_button,0.133,0.569,Chrome,1297,702,1366,768,FALSE,no idea,no,56,m,english,85.069,10.969,single_button,orange
+51,performance,91,Purple and Orange,prior,both_buttons,0.431,0.431,Chrome,1297,702,1366,768,FALSE,no idea,no,56,m,english,85.069,10.969,single_button,orange
+51,performance,92,Orange,prior,single_button,0.436,0.569,Chrome,1297,702,1366,768,FALSE,no idea,no,56,m,english,85.069,10.969,single_button,orange
+52,learning,1,Purple and Orange,prior,both_buttons,0.005,0.005,Chrome,1176,600,1366,768,FALSE,Seeing how people make choices,,32,f,English,89.081,15.148,single_button,orange
+52,learning,100,Purple,prior,single_button,0.498,0.995,Chrome,1176,600,1366,768,FALSE,Seeing how people make choices,,32,f,English,89.081,15.148,single_button,orange
+52,learning,100,Orange,prior,single_button,0.498,0.995,Chrome,1176,600,1366,768,FALSE,Seeing how people make choices,,32,f,English,89.081,15.148,single_button,orange
+53,learning,84,Orange,prior,single_button,0.336,0.668,Chrome,983,929,1920,1080,FALSE,Guessing how the toy works,Nope.,21,f,English,176.206,24.545,both_buttons,orange_and_purple
+53,learning,83,Purple,prior,single_button,0.332,0.668,Chrome,983,929,1920,1080,FALSE,Guessing how the toy works,Nope.,21,f,English,176.206,24.545,both_buttons,orange_and_purple
+53,learning,83,Purple and Orange,prior,both_buttons,0.332,0.332,Chrome,983,929,1920,1080,FALSE,Guessing how the toy works,Nope.,21,f,English,176.206,24.545,both_buttons,orange_and_purple
+54,learning,75,Purple,prior,single_button,0.332,0.664,Chrome,1855,966,1920,1080,FALSE,not sure,not really,37,Male,English,99.501,8.408,both_buttons,orange_and_purple
+54,learning,75,Orange,prior,single_button,0.332,0.664,Chrome,1855,966,1920,1080,FALSE,not sure,not really,37,Male,English,99.501,8.408,both_buttons,orange_and_purple
+54,learning,76,Purple and Orange,prior,both_buttons,0.336,0.336,Chrome,1855,966,1920,1080,FALSE,not sure,not really,37,Male,English,99.501,8.408,both_buttons,orange_and_purple
+55,performance,100,Purple and Orange,prior,both_buttons,0.333,0.333,Chrome,1213,590,1280,720,FALSE,Which button(s) people would choose.,,36,f,English,74.236,6.629,single_button,purple
+55,performance,100,Purple,prior,single_button,0.333,0.667,Chrome,1213,590,1280,720,FALSE,Which button(s) people would choose.,,36,f,English,74.236,6.629,single_button,purple
+55,performance,100,Orange,prior,single_button,0.333,0.667,Chrome,1213,590,1280,720,FALSE,Which button(s) people would choose.,,36,f,English,74.236,6.629,single_button,purple
+1,performance,100,Orange,posterior,single_button,0.781,0.898,Chrome,648,610,1366,768,FALSE,idk,no,32,f,eng,44.668,6.791,single_button,purple
+1,performance,13,Purple and Orange,posterior,both_buttons,0.102,0.102,Chrome,648,610,1366,768,FALSE,idk,no,32,f,eng,44.668,6.791,single_button,purple
+1,performance,15,Purple,posterior,single_button,0.117,0.898,Chrome,648,610,1366,768,FALSE,idk,no,32,f,eng,44.668,6.791,single_button,purple
+2,performance,50,Orange,posterior,single_button,0.331,0.993,Chrome,1299,600,1366,768,FALSE,Looking at what and how people assume things,no,24,m,English,124.906,9.569,single_button,purple
+2,performance,100,Purple,posterior,single_button,0.662,0.993,Chrome,1299,600,1366,768,FALSE,Looking at what and how people assume things,no,24,m,English,124.906,9.569,single_button,purple
+2,performance,1,Purple and Orange,posterior,both_buttons,0.007,0.007,Chrome,1299,600,1366,768,FALSE,Looking at what and how people assume things,no,24,m,English,124.906,9.569,single_button,purple
+3,performance,100,Purple,posterior,single_button,0.98,0.99,Chrome,1213,694,1280,800,FALSE,no clue,no,31,F,ENGLISH,92.439,7.914,single_button,purple
+3,performance,1,Purple and Orange,posterior,both_buttons,0.01,0.01,Chrome,1213,694,1280,800,FALSE,no clue,no,31,F,ENGLISH,92.439,7.914,single_button,purple
+3,performance,1,Orange,posterior,single_button,0.01,0.99,Chrome,1213,694,1280,800,FALSE,no clue,no,31,F,ENGLISH,92.439,7.914,single_button,purple
+4,learning,1,Purple and Orange,posterior,both_buttons,0.008,0.008,Chrome,1147,575,1093,615,FALSE,"I am not sure what the task was about, but perhaps it was to see how likely it was that I would believe the brightest button would make the music play.",Nothing was broken.,43,f,English,170.559,12.8,single_button,orange
+4,learning,100,Orange,posterior,single_button,0.826,0.992,Chrome,1147,575,1093,615,FALSE,"I am not sure what the task was about, but perhaps it was to see how likely it was that I would believe the brightest button would make the music play.",Nothing was broken.,43,f,English,170.559,12.8,single_button,orange
+4,learning,20,Purple,posterior,single_button,0.165,0.992,Chrome,1147,575,1093,615,FALSE,"I am not sure what the task was about, but perhaps it was to see how likely it was that I would believe the brightest button would make the music play.",Nothing was broken.,43,f,English,170.559,12.8,single_button,orange
+5,performance,1,Purple,posterior,single_button,0.01,0.99,Chrome,1853,949,1920,1080,FALSE,Decision making,,19,m,English,138.24,16.324,single_button,orange
+5,performance,1,Purple and Orange,posterior,both_buttons,0.01,0.01,Chrome,1853,949,1920,1080,FALSE,Decision making,,19,m,English,138.24,16.324,single_button,orange
+5,performance,100,Orange,posterior,single_button,0.98,0.99,Chrome,1853,949,1920,1080,FALSE,Decision making,,19,m,English,138.24,16.324,single_button,orange
+6,performance,1,Purple,posterior,single_button,0.01,0.02,Chrome,1133,639,2560,1440,FALSE,To see if people could figure out the logic behind making a children's toy.,None,36,m,English,106.848,6.1,both_buttons,orange_and_purple
+6,performance,1,Orange,posterior,single_button,0.01,0.02,Chrome,1133,639,2560,1440,FALSE,To see if people could figure out the logic behind making a children's toy.,None,36,m,English,106.848,6.1,both_buttons,orange_and_purple
+6,performance,100,Purple and Orange,posterior,both_buttons,0.98,0.98,Chrome,1133,639,2560,1440,FALSE,To see if people could figure out the logic behind making a children's toy.,None,36,m,English,106.848,6.1,both_buttons,orange_and_purple
+7,performance,80,Purple,posterior,single_button,0.39,0.878,Chrome,1229,600,1280,800,FALSE,how people make the toy work,none cool hit,33,male,english,90.586,15.114,single_button,orange
+7,performance,25,Purple and Orange,posterior,both_buttons,0.122,0.122,Chrome,1229,600,1280,800,FALSE,how people make the toy work,none cool hit,33,male,english,90.586,15.114,single_button,orange
+7,performance,100,Orange,posterior,single_button,0.488,0.878,Chrome,1229,600,1280,800,FALSE,how people make the toy work,none cool hit,33,male,english,90.586,15.114,single_button,orange
+8,learning,79,Purple,posterior,single_button,0.306,0.612,Chrome,1299,662,1366,768,FALSE,analyzing humans,no,42,m,english,131.853,29.209,both_buttons,orange_and_purple
+8,learning,100,Purple and Orange,posterior,both_buttons,0.388,0.388,Chrome,1299,662,1366,768,FALSE,analyzing humans,no,42,m,english,131.853,29.209,both_buttons,orange_and_purple
+8,learning,79,Orange,posterior,single_button,0.306,0.612,Chrome,1299,662,1366,768,FALSE,analyzing humans,no,42,m,english,131.853,29.209,both_buttons,orange_and_purple
+9,learning,100,Orange,posterior,single_button,0.98,0.99,Chrome,1213,694,1280,800,FALSE,I have no idea.,"There was nothing broken, nothing wrong. The HIT worked great!",41,f,English,176.967,14.37,single_button,orange
+9,learning,1,Purple,posterior,single_button,0.01,0.99,Chrome,1213,694,1280,800,FALSE,I have no idea.,"There was nothing broken, nothing wrong. The HIT worked great!",41,f,English,176.967,14.37,single_button,orange
+9,learning,1,Purple and Orange,posterior,both_buttons,0.01,0.01,Chrome,1213,694,1280,800,FALSE,I have no idea.,"There was nothing broken, nothing wrong. The HIT worked great!",41,f,English,176.967,14.37,single_button,orange
+10,learning,1,Purple,posterior,single_button,0.01,0.02,Chrome,1030,678,1600,900,FALSE,figuring out how a toy works,no,34,f,english,86.793,6.921,both_buttons,orange_and_purple
+10,learning,1,Orange,posterior,single_button,0.01,0.02,Chrome,1030,678,1600,900,FALSE,figuring out how a toy works,no,34,f,english,86.793,6.921,both_buttons,orange_and_purple
+10,learning,100,Purple and Orange,posterior,both_buttons,0.98,0.98,Chrome,1030,678,1600,900,FALSE,figuring out how a toy works,no,34,f,english,86.793,6.921,both_buttons,orange_and_purple
+11,performance,73,Purple,posterior,single_button,0.42,0.994,Chrome,1373,769,1440,900,FALSE,Baby toys,Nothing was broken for me.,38,f,English,115.022,11.008,single_button,orange
+11,performance,100,Orange,posterior,single_button,0.575,0.994,Chrome,1373,769,1440,900,FALSE,Baby toys,Nothing was broken for me.,38,f,English,115.022,11.008,single_button,orange
+11,performance,1,Purple and Orange,posterior,both_buttons,0.006,0.006,Chrome,1373,769,1440,900,FALSE,Baby toys,Nothing was broken for me.,38,f,English,115.022,11.008,single_button,orange
+12,learning,14,Orange,posterior,single_button,0.113,0.194,Chrome,977,918,1920,1080,FALSE,how to get a toy to play music,nope,24,f,english,163.585,5.264,both_buttons,orange_and_purple
+12,learning,10,Purple,posterior,single_button,0.081,0.194,Chrome,977,918,1920,1080,FALSE,how to get a toy to play music,nope,24,f,english,163.585,5.264,both_buttons,orange_and_purple
+12,learning,100,Purple and Orange,posterior,both_buttons,0.806,0.806,Chrome,977,918,1920,1080,FALSE,how to get a toy to play music,nope,24,f,english,163.585,5.264,both_buttons,orange_and_purple
+13,performance,17,Purple,posterior,single_button,0.119,0.301,Chrome,1837,929,1920,1080,FALSE,perceptions,fun,39,f,English,102.107,10.617,both_buttons,orange_and_purple
+13,performance,26,Orange,posterior,single_button,0.182,0.301,Chrome,1837,929,1920,1080,FALSE,perceptions,fun,39,f,English,102.107,10.617,both_buttons,orange_and_purple
+13,performance,100,Purple and Orange,posterior,both_buttons,0.699,0.699,Chrome,1837,929,1920,1080,FALSE,perceptions,fun,39,f,English,102.107,10.617,both_buttons,orange_and_purple
+14,learning,100,Purple and Orange,posterior,both_buttons,0.98,0.98,Chrome,1031,961,1920,1080,FALSE,To see how many people would pick each choice.,No comments,33,f,English,150.857,12.378,both_buttons,orange_and_purple
+14,learning,1,Orange,posterior,single_button,0.01,0.02,Chrome,1031,961,1920,1080,FALSE,To see how many people would pick each choice.,No comments,33,f,English,150.857,12.378,both_buttons,orange_and_purple
+14,learning,1,Purple,posterior,single_button,0.01,0.02,Chrome,1031,961,1920,1080,FALSE,To see how many people would pick each choice.,No comments,33,f,English,150.857,12.378,both_buttons,orange_and_purple
+15,performance,1,Orange,posterior,single_button,0.01,0.99,Chrome,523,859,1920,1080,FALSE,not really sure ?,,50,f,english,103.016,8.344,single_button,purple
+15,performance,1,Purple and Orange,posterior,both_buttons,0.01,0.01,Chrome,523,859,1920,1080,FALSE,not really sure ?,,50,f,english,103.016,8.344,single_button,purple
+15,performance,100,Purple,posterior,single_button,0.98,0.99,Chrome,523,859,1920,1080,FALSE,not really sure ?,,50,f,english,103.016,8.344,single_button,purple
+16,learning,100,Purple and Orange,posterior,both_buttons,0.98,0.98,Chrome,908,600,1920,1080,FALSE,To better understand our decisions when interacting with a new device.,Everything was perfectly clear and I did not encounter any issues.,30,m,English,218.136,26.484,both_buttons,orange_and_purple
+16,learning,1,Orange,posterior,single_button,0.01,0.02,Chrome,908,600,1920,1080,FALSE,To better understand our decisions when interacting with a new device.,Everything was perfectly clear and I did not encounter any issues.,30,m,English,218.136,26.484,both_buttons,orange_and_purple
+16,learning,1,Purple,posterior,single_button,0.01,0.02,Chrome,908,600,1920,1080,FALSE,To better understand our decisions when interacting with a new device.,Everything was perfectly clear and I did not encounter any issues.,30,m,English,218.136,26.484,both_buttons,orange_and_purple
+17,learning,100,Purple and Orange,posterior,both_buttons,0.606,0.606,Chrome,1449,708,1366,768,FALSE,No idea,no thank you,44,f,english,90.84,10.24,both_buttons,orange_and_purple
+17,learning,35,Purple,posterior,single_button,0.212,0.394,Chrome,1449,708,1366,768,FALSE,No idea,no thank you,44,f,english,90.84,10.24,both_buttons,orange_and_purple
+17,learning,30,Orange,posterior,single_button,0.182,0.394,Chrome,1449,708,1366,768,FALSE,No idea,no thank you,44,f,english,90.84,10.24,both_buttons,orange_and_purple
+18,learning,38,Orange,posterior,single_button,0.218,0.793,Chrome,1533,600,1600,900,FALSE,Not sure,"All good, thanks",45,male,English,80.136,9.593,single_button,purple
+18,learning,100,Purple,posterior,single_button,0.575,0.793,Chrome,1533,600,1600,900,FALSE,Not sure,"All good, thanks",45,male,English,80.136,9.593,single_button,purple
+18,learning,36,Purple and Orange,posterior,both_buttons,0.207,0.207,Chrome,1533,600,1600,900,FALSE,Not sure,"All good, thanks",45,male,English,80.136,9.593,single_button,purple
+19,performance,100,Purple and Orange,posterior,both_buttons,0.382,0.382,Chrome,1299,662,1366,768,FALSE,Decision making,Everything worked properly.,31,F,English,122.181,12.269,single_button,orange
+19,performance,100,Orange,posterior,single_button,0.382,0.618,Chrome,1299,662,1366,768,FALSE,Decision making,Everything worked properly.,31,F,English,122.181,12.269,single_button,orange
+19,performance,62,Purple,posterior,single_button,0.237,0.618,Chrome,1299,662,1366,768,FALSE,Decision making,Everything worked properly.,31,F,English,122.181,12.269,single_button,orange
+20,performance,68,Purple,posterior,single_button,0.297,0.603,Firefox,908,600,1920,1080,FALSE,Seeing what people's first reactions are to something,No,22,f,English,82.656,5.355,both_buttons,orange_and_purple
+20,performance,70,Orange,posterior,single_button,0.306,0.603,Firefox,908,600,1920,1080,FALSE,Seeing what people's first reactions are to something,No,22,f,English,82.656,5.355,both_buttons,orange_and_purple
+20,performance,91,Purple and Orange,posterior,both_buttons,0.397,0.397,Firefox,908,600,1920,1080,FALSE,Seeing what people's first reactions are to something,No,22,f,English,82.656,5.355,both_buttons,orange_and_purple
+21,learning,82,Purple and Orange,posterior,both_buttons,0.355,0.355,Firefox,1207,622,1360,768,FALSE,no clue,Good Luck!! ,40,m,English,101.372,19.738,single_button,purple
+21,learning,49,Orange,posterior,single_button,0.212,0.645,Firefox,1207,622,1360,768,FALSE,no clue,Good Luck!! ,40,m,English,101.372,19.738,single_button,purple
+21,learning,100,Purple,posterior,single_button,0.433,0.645,Firefox,1207,622,1360,768,FALSE,no clue,Good Luck!! ,40,m,English,101.372,19.738,single_button,purple
+22,performance,1,Purple,posterior,single_button,0.01,0.99,Chrome,1061,930,1680,1050,FALSE,How we process information and find solution for a problem,no,29,mal,english,89.284,12.355,single_button,orange
+22,performance,1,Purple and Orange,posterior,both_buttons,0.01,0.01,Chrome,1061,930,1680,1050,FALSE,How we process information and find solution for a problem,no,29,mal,english,89.284,12.355,single_button,orange
+22,performance,100,Orange,posterior,single_button,0.98,0.99,Chrome,1061,930,1680,1050,FALSE,How we process information and find solution for a problem,no,29,mal,english,89.284,12.355,single_button,orange
+23,performance,1,Purple and Orange,posterior,both_buttons,0.01,0.01,Firefox,1533,600,1600,900,FALSE,intution,No,37,male,English,114.08,14.743,single_button,purple
+23,performance,100,Purple,posterior,single_button,0.98,0.99,Firefox,1533,600,1600,900,FALSE,intution,No,37,male,English,114.08,14.743,single_button,purple
+23,performance,1,Orange,posterior,single_button,0.01,0.99,Firefox,1533,600,1600,900,FALSE,intution,No,37,male,English,114.08,14.743,single_button,purple
+24,learning,1,Purple and Orange,posterior,both_buttons,0.01,0.01,Chrome,1165,600,1536,864,FALSE,HUMAN PERCEPTION,NO,33,MALE,ENGLISH,153.227,11.418,single_button,orange
+24,learning,100,Orange,posterior,single_button,0.98,0.99,Chrome,1165,600,1536,864,FALSE,HUMAN PERCEPTION,NO,33,MALE,ENGLISH,153.227,11.418,single_button,orange
+24,learning,1,Purple,posterior,single_button,0.01,0.99,Chrome,1165,600,1536,864,FALSE,HUMAN PERCEPTION,NO,33,MALE,ENGLISH,153.227,11.418,single_button,orange
+25,learning,1,Purple and Orange,posterior,both_buttons,0.01,0.01,Chrome,1853,974,1920,1080,FALSE,To see what peoples instincts told them about how to work something simple.,Nope.,34,m,English,127.162,15.731,single_button,purple
+25,learning,100,Purple,posterior,single_button,0.98,0.99,Chrome,1853,974,1920,1080,FALSE,To see what peoples instincts told them about how to work something simple.,Nope.,34,m,English,127.162,15.731,single_button,purple
+25,learning,1,Orange,posterior,single_button,0.01,0.99,Chrome,1853,974,1920,1080,FALSE,To see what peoples instincts told them about how to work something simple.,Nope.,34,m,English,127.162,15.731,single_button,purple
+26,performance,100,Orange,posterior,single_button,0.98,0.99,Chrome,1230,600,1920,1080,FALSE,To study how colors affect choices.,Thank you!,33,m,English,110.098,8.289,single_button,orange
+26,performance,1,Purple,posterior,single_button,0.01,0.99,Chrome,1230,600,1920,1080,FALSE,To study how colors affect choices.,Thank you!,33,m,English,110.098,8.289,single_button,orange
+26,performance,1,Purple and Orange,posterior,both_buttons,0.01,0.01,Chrome,1230,600,1920,1080,FALSE,To study how colors affect choices.,Thank you!,33,m,English,110.098,8.289,single_button,orange
+27,performance,1,Orange,posterior,single_button,0.01,0.02,Chrome,1171,602,1360,768,FALSE,I have no idea,Nope,18,M,english,126.534,34.671,both_buttons,orange_and_purple
+27,performance,100,Purple and Orange,posterior,both_buttons,0.98,0.98,Chrome,1171,602,1360,768,FALSE,I have no idea,Nope,18,M,english,126.534,34.671,both_buttons,orange_and_purple
+27,performance,1,Purple,posterior,single_button,0.01,0.02,Chrome,1171,602,1360,768,FALSE,I have no idea,Nope,18,M,english,126.534,34.671,both_buttons,orange_and_purple
+28,performance,1,Orange,posterior,single_button,0.01,0.02,Firefox,1456,720,1525,858,FALSE,how an adult conceptualizes a child's problem solving skills?,,41,male,english,237.344,17.6,both_buttons,orange_and_purple
+28,performance,1,Purple,posterior,single_button,0.01,0.02,Firefox,1456,720,1525,858,FALSE,how an adult conceptualizes a child's problem solving skills?,,41,male,english,237.344,17.6,both_buttons,orange_and_purple
+28,performance,100,Purple and Orange,posterior,both_buttons,0.98,0.98,Firefox,1456,720,1525,858,FALSE,how an adult conceptualizes a child's problem solving skills?,,41,male,english,237.344,17.6,both_buttons,orange_and_purple
+29,performance,52,Orange,posterior,single_button,0.255,0.51,Chrome,1473,779,1920,1080,FALSE,to see how we think and ratinalize,no,54,f,English,81.152,13.041,both_buttons,orange_and_purple
+29,performance,52,Purple,posterior,single_button,0.255,0.51,Chrome,1473,779,1920,1080,FALSE,to see how we think and ratinalize,no,54,f,English,81.152,13.041,both_buttons,orange_and_purple
+29,performance,100,Purple and Orange,posterior,both_buttons,0.49,0.49,Chrome,1473,779,1920,1080,FALSE,to see how we think and ratinalize,no,54,f,English,81.152,13.041,both_buttons,orange_and_purple
+30,learning,1,Orange,posterior,single_button,0.01,0.02,Chrome,994,983,1920,1080,FALSE,reasoning and deduction,"Everything was clear and worked properly. Thanks for the opportunity to participate; I wish you success with your research! Also, please note that on December 15th, 2017 amazon forced all users to begin using the new worker site. One of the many changes is the inability for workers to see the ""Auto Approval"" time set by requesters. Many workers use this information to aid in deciding whether or not to do a HIT. Please consider including the Auto Approval time in your HIT descriptions.",45,m,English,171.485,12.351,both_buttons,orange_and_purple
+30,learning,1,Purple,posterior,single_button,0.01,0.02,Chrome,994,983,1920,1080,FALSE,reasoning and deduction,"Everything was clear and worked properly. Thanks for the opportunity to participate; I wish you success with your research! Also, please note that on December 15th, 2017 amazon forced all users to begin using the new worker site. One of the many changes is the inability for workers to see the ""Auto Approval"" time set by requesters. Many workers use this information to aid in deciding whether or not to do a HIT. Please consider including the Auto Approval time in your HIT descriptions.",45,m,English,171.485,12.351,both_buttons,orange_and_purple
+30,learning,100,Purple and Orange,posterior,both_buttons,0.98,0.98,Chrome,994,983,1920,1080,FALSE,reasoning and deduction,"Everything was clear and worked properly. Thanks for the opportunity to participate; I wish you success with your research! Also, please note that on December 15th, 2017 amazon forced all users to begin using the new worker site. One of the many changes is the inability for workers to see the ""Auto Approval"" time set by requesters. Many workers use this information to aid in deciding whether or not to do a HIT. Please consider including the Auto Approval time in your HIT descriptions.",45,m,English,171.485,12.351,both_buttons,orange_and_purple
+31,learning,45,Purple and Orange,posterior,both_buttons,0.208,0.208,Chrome,1853,984,1920,1080,FALSE,A childrens toy.,Nothing.,25,m,English,68.423,8.031,single_button,purple
+31,learning,95,Purple,posterior,single_button,0.44,0.792,Chrome,1853,984,1920,1080,FALSE,A childrens toy.,Nothing.,25,m,English,68.423,8.031,single_button,purple
+31,learning,76,Orange,posterior,single_button,0.352,0.792,Chrome,1853,984,1920,1080,FALSE,A childrens toy.,Nothing.,25,m,English,68.423,8.031,single_button,purple
+32,learning,10,Purple,posterior,single_button,0.09,0.099,Chrome,977,887,1920,1080,FALSE,getting the right combo to make a toy work,i don't think so,31,m,english,133.889,1.722,both_buttons,orange_and_purple
+32,learning,1,Orange,posterior,single_button,0.009,0.099,Chrome,977,887,1920,1080,FALSE,getting the right combo to make a toy work,i don't think so,31,m,english,133.889,1.722,both_buttons,orange_and_purple
+32,learning,100,Purple and Orange,posterior,both_buttons,0.901,0.901,Chrome,977,887,1920,1080,FALSE,getting the right combo to make a toy work,i don't think so,31,m,english,133.889,1.722,both_buttons,orange_and_purple
+33,learning,100,Purple and Orange,posterior,both_buttons,0.769,0.769,Chrome,1853,949,1920,1080,FALSE,To see how people made decisions when given a scenario,none,23,m,English,299.854,13.648,both_buttons,orange_and_purple
+33,learning,15,Purple,posterior,single_button,0.115,0.231,Chrome,1853,949,1920,1080,FALSE,To see how people made decisions when given a scenario,none,23,m,English,299.854,13.648,both_buttons,orange_and_purple
+33,learning,15,Orange,posterior,single_button,0.115,0.231,Chrome,1853,949,1920,1080,FALSE,To see how people made decisions when given a scenario,none,23,m,English,299.854,13.648,both_buttons,orange_and_purple
+34,learning,100,Purple,posterior,single_button,0.333,0.667,Chrome,1299,600,1366,768,FALSE,Problem solving and logic.,No,38,f,English,232.456,58.841,both_buttons,orange_and_purple
+34,learning,100,Orange,posterior,single_button,0.333,0.667,Chrome,1299,600,1366,768,FALSE,Problem solving and logic.,No,38,f,English,232.456,58.841,both_buttons,orange_and_purple
+34,learning,100,Purple and Orange,posterior,both_buttons,0.333,0.333,Chrome,1299,600,1366,768,FALSE,Problem solving and logic.,No,38,f,English,232.456,58.841,both_buttons,orange_and_purple
+35,learning,100,Purple and Orange,posterior,both_buttons,0.714,0.714,Chrome,1853,974,1920,1080,FALSE,Trying to see how quickly children can learn to play the music.,No,39,f,English,144.363,7.652,both_buttons,orange_and_purple
+35,learning,20,Orange,posterior,single_button,0.143,0.286,Chrome,1853,974,1920,1080,FALSE,Trying to see how quickly children can learn to play the music.,No,39,f,English,144.363,7.652,both_buttons,orange_and_purple
+35,learning,20,Purple,posterior,single_button,0.143,0.286,Chrome,1853,974,1920,1080,FALSE,Trying to see how quickly children can learn to play the music.,No,39,f,English,144.363,7.652,both_buttons,orange_and_purple
+36,performance,24,Purple,posterior,single_button,0.161,0.329,Chrome,1299,600,1366,768,FALSE,not sure,no,26,f,English,55.999,6.739,both_buttons,orange_and_purple
+36,performance,25,Orange,posterior,single_button,0.168,0.329,Chrome,1299,600,1366,768,FALSE,not sure,no,26,f,English,55.999,6.739,both_buttons,orange_and_purple
+36,performance,100,Purple and Orange,posterior,both_buttons,0.671,0.671,Chrome,1299,600,1366,768,FALSE,not sure,no,26,f,English,55.999,6.739,both_buttons,orange_and_purple
+37,learning,100,Purple,posterior,single_button,0.5,0.75,Chrome,1022,600,1366,768,FALSE,no idea,no,35,f,english,102.589,12.84,single_button,purple
+37,learning,50,Purple and Orange,posterior,both_buttons,0.25,0.25,Chrome,1022,600,1366,768,FALSE,no idea,no,35,f,english,102.589,12.84,single_button,purple
+37,learning,50,Orange,posterior,single_button,0.25,0.75,Chrome,1022,600,1366,768,FALSE,no idea,no,35,f,english,102.589,12.84,single_button,purple
+38,learning,6,Purple,posterior,single_button,0.046,0.809,Chrome,1230,600,1280,800,FALSE,design,the product design was bad the orange should have been furthest from the person and the purple closest,21,m,English,108.027,16.05,single_button,orange
+38,learning,25,Purple and Orange,posterior,both_buttons,0.191,0.191,Chrome,1230,600,1280,800,FALSE,design,the product design was bad the orange should have been furthest from the person and the purple closest,21,m,English,108.027,16.05,single_button,orange
+38,learning,100,Orange,posterior,single_button,0.763,0.809,Chrome,1230,600,1280,800,FALSE,design,the product design was bad the orange should have been furthest from the person and the purple closest,21,m,English,108.027,16.05,single_button,orange
+39,performance,88,Purple and Orange,posterior,both_buttons,0.603,0.603,Chrome,730,780,1440,900,FALSE,Determining how something works,No,24,F,English,140.712,4.629,both_buttons,orange_and_purple
+39,performance,30,Orange,posterior,single_button,0.205,0.397,Chrome,730,780,1440,900,FALSE,Determining how something works,No,24,F,English,140.712,4.629,both_buttons,orange_and_purple
+39,performance,28,Purple,posterior,single_button,0.192,0.397,Chrome,730,780,1440,900,FALSE,Determining how something works,No,24,F,English,140.712,4.629,both_buttons,orange_and_purple
+40,learning,1,Orange,posterior,single_button,0.01,0.99,Chrome,708,772,1600,900,FALSE,decision makin,,38,f,english,90.199,12.228,single_button,purple
+40,learning,1,Purple and Orange,posterior,both_buttons,0.01,0.01,Chrome,708,772,1600,900,FALSE,decision makin,,38,f,english,90.199,12.228,single_button,purple
+40,learning,100,Purple,posterior,single_button,0.98,0.99,Chrome,708,772,1600,900,FALSE,decision makin,,38,f,english,90.199,12.228,single_button,purple
+41,performance,1,Purple,posterior,single_button,0.01,0.02,Chrome,1230,600,1280,800,FALSE,To assess perceptions,No,28,M,English,91.013,4.082,both_buttons,orange_and_purple
+41,performance,100,Purple and Orange,posterior,both_buttons,0.98,0.98,Chrome,1230,600,1280,800,FALSE,To assess perceptions,No,28,M,English,91.013,4.082,both_buttons,orange_and_purple
+41,performance,1,Orange,posterior,single_button,0.01,0.02,Chrome,1230,600,1280,800,FALSE,To assess perceptions,No,28,M,English,91.013,4.082,both_buttons,orange_and_purple
+42,performance,100,Purple,posterior,single_button,0.98,0.99,Chrome,1299,637,1366,768,FALSE,I have no idea,that was interesting,35,F,English,89.231,25.459,single_button,purple
+42,performance,1,Purple and Orange,posterior,both_buttons,0.01,0.01,Chrome,1299,637,1366,768,FALSE,I have no idea,that was interesting,35,F,English,89.231,25.459,single_button,purple
+42,performance,1,Orange,posterior,single_button,0.01,0.99,Chrome,1299,637,1366,768,FALSE,I have no idea,that was interesting,35,F,English,89.231,25.459,single_button,purple
+43,performance,1,Orange,posterior,single_button,0.01,0.02,Chrome,1470,734,1536,864,FALSE,To see if people can figure how the toy works,no,25,female,english,226.431,20.642,both_buttons,orange_and_purple
+43,performance,1,Purple,posterior,single_button,0.01,0.02,Chrome,1470,734,1536,864,FALSE,To see if people can figure how the toy works,no,25,female,english,226.431,20.642,both_buttons,orange_and_purple
+43,performance,100,Purple and Orange,posterior,both_buttons,0.98,0.98,Chrome,1470,734,1536,864,FALSE,To see if people can figure how the toy works,no,25,female,english,226.431,20.642,both_buttons,orange_and_purple
+44,performance,87,Orange,posterior,single_button,0.978,0.989,Chrome,1237,702,1366,768,FALSE,how people get things to work?,no,42,f,english,133.545,19.241,single_button,orange
+44,performance,1,Purple and Orange,posterior,both_buttons,0.011,0.011,Chrome,1237,702,1366,768,FALSE,how people get things to work?,no,42,f,english,133.545,19.241,single_button,orange
+44,performance,1,Purple,posterior,single_button,0.011,0.989,Chrome,1237,702,1366,768,FALSE,how people get things to work?,no,42,f,english,133.545,19.241,single_button,orange
+45,learning,71,Purple,posterior,single_button,0.376,0.905,Chrome,1974,956,1366,768,FALSE,i'm not sure,,24,m,english,72.154,11.77,single_button,orange
+45,learning,100,Orange,posterior,single_button,0.529,0.905,Chrome,1974,956,1366,768,FALSE,i'm not sure,,24,m,english,72.154,11.77,single_button,orange
+45,learning,18,Purple and Orange,posterior,both_buttons,0.095,0.095,Chrome,1974,956,1366,768,FALSE,i'm not sure,,24,m,english,72.154,11.77,single_button,orange
+46,learning,100,Purple and Orange,posterior,both_buttons,0.98,0.98,Chrome,966,887,1920,1080,FALSE,figuring out how toys work,no,35,f,english,71.609,12.493,both_buttons,orange_and_purple
+46,learning,1,Purple,posterior,single_button,0.01,0.02,Chrome,966,887,1920,1080,FALSE,figuring out how toys work,no,35,f,english,71.609,12.493,both_buttons,orange_and_purple
+46,learning,1,Orange,posterior,single_button,0.01,0.02,Chrome,966,887,1920,1080,FALSE,figuring out how toys work,no,35,f,english,71.609,12.493,both_buttons,orange_and_purple
+47,performance,100,Purple and Orange,posterior,both_buttons,0.493,0.493,Chrome,1632,996,2048,1152,FALSE,not sure,,28,f,Chinese,152.285,35.58,both_buttons,orange_and_purple
+47,performance,51,Orange,posterior,single_button,0.251,0.507,Chrome,1632,996,2048,1152,FALSE,not sure,,28,f,Chinese,152.285,35.58,both_buttons,orange_and_purple
+47,performance,52,Purple,posterior,single_button,0.256,0.507,Chrome,1632,996,2048,1152,FALSE,not sure,,28,f,Chinese,152.285,35.58,both_buttons,orange_and_purple
+48,performance,100,Purple,posterior,single_button,0.98,0.99,Chrome,1099,600,1920,1080,FALSE,It was about perceptions.,No,25,m,English,45.388,5.632,single_button,purple
+48,performance,1,Orange,posterior,single_button,0.01,0.99,Chrome,1099,600,1920,1080,FALSE,It was about perceptions.,No,25,m,English,45.388,5.632,single_button,purple
+48,performance,1,Purple and Orange,posterior,both_buttons,0.01,0.01,Chrome,1099,600,1920,1080,FALSE,It was about perceptions.,No,25,m,English,45.388,5.632,single_button,purple
+49,performance,1,Purple,posterior,single_button,0.01,0.99,Chrome,1145,600,1280,800,FALSE,which button makes the music play!,no but this was fun.,24,f,english,67.688,7.462,single_button,orange
+49,performance,1,Purple and Orange,posterior,both_buttons,0.01,0.01,Chrome,1145,600,1280,800,FALSE,which button makes the music play!,no but this was fun.,24,f,english,67.688,7.462,single_button,orange
+49,performance,100,Orange,posterior,single_button,0.98,0.99,Chrome,1145,600,1280,800,FALSE,which button makes the music play!,no but this was fun.,24,f,english,67.688,7.462,single_button,orange
+50,learning,100,Orange,posterior,single_button,0.645,0.794,Chrome,1299,637,1366,768,FALSE,Learning about which choice makes something work.,It all worked fine for me.,20,m,English,140.981,11.724,single_button,orange
+50,learning,23,Purple,posterior,single_button,0.148,0.794,Chrome,1299,637,1366,768,FALSE,Learning about which choice makes something work.,It all worked fine for me.,20,m,English,140.981,11.724,single_button,orange
+50,learning,32,Purple and Orange,posterior,both_buttons,0.206,0.206,Chrome,1299,637,1366,768,FALSE,Learning about which choice makes something work.,It all worked fine for me.,20,m,English,140.981,11.724,single_button,orange
+51,performance,1,Purple and Orange,posterior,both_buttons,0.009,0.009,Chrome,1297,702,1366,768,FALSE,no idea,no,56,m,english,85.069,10.969,single_button,orange
+51,performance,100,Orange,posterior,single_button,0.943,0.991,Chrome,1297,702,1366,768,FALSE,no idea,no,56,m,english,85.069,10.969,single_button,orange
+51,performance,5,Purple,posterior,single_button,0.047,0.991,Chrome,1297,702,1366,768,FALSE,no idea,no,56,m,english,85.069,10.969,single_button,orange
+52,learning,100,Orange,posterior,single_button,0.373,0.746,Chrome,1176,600,1366,768,FALSE,Seeing how people make choices,,32,f,English,89.081,15.148,single_button,orange
+52,learning,68,Purple and Orange,posterior,both_buttons,0.254,0.254,Chrome,1176,600,1366,768,FALSE,Seeing how people make choices,,32,f,English,89.081,15.148,single_button,orange
+52,learning,100,Purple,posterior,single_button,0.373,0.746,Chrome,1176,600,1366,768,FALSE,Seeing how people make choices,,32,f,English,89.081,15.148,single_button,orange
+53,learning,1,Orange,posterior,single_button,0.01,0.02,Chrome,983,929,1920,1080,FALSE,Guessing how the toy works,Nope.,21,f,English,176.206,24.545,both_buttons,orange_and_purple
+53,learning,1,Purple,posterior,single_button,0.01,0.02,Chrome,983,929,1920,1080,FALSE,Guessing how the toy works,Nope.,21,f,English,176.206,24.545,both_buttons,orange_and_purple
+53,learning,100,Purple and Orange,posterior,both_buttons,0.98,0.98,Chrome,983,929,1920,1080,FALSE,Guessing how the toy works,Nope.,21,f,English,176.206,24.545,both_buttons,orange_and_purple
+54,learning,100,Purple and Orange,posterior,both_buttons,0.98,0.98,Chrome,1855,966,1920,1080,FALSE,not sure,not really,37,Male,English,99.501,8.408,both_buttons,orange_and_purple
+54,learning,1,Purple,posterior,single_button,0.01,0.02,Chrome,1855,966,1920,1080,FALSE,not sure,not really,37,Male,English,99.501,8.408,both_buttons,orange_and_purple
+54,learning,1,Orange,posterior,single_button,0.01,0.02,Chrome,1855,966,1920,1080,FALSE,not sure,not really,37,Male,English,99.501,8.408,both_buttons,orange_and_purple
+55,performance,100,Purple,posterior,single_button,0.485,0.66,Chrome,1213,590,1280,720,FALSE,Which button(s) people would choose.,,36,f,English,74.236,6.629,single_button,purple
+55,performance,70,Purple and Orange,posterior,both_buttons,0.34,0.34,Chrome,1213,590,1280,720,FALSE,Which button(s) people would choose.,,36,f,English,74.236,6.629,single_button,purple
+55,performance,36,Orange,posterior,single_button,0.175,0.66,Chrome,1213,590,1280,720,FALSE,Which button(s) people would choose.,,36,f,English,74.236,6.629,single_button,purple

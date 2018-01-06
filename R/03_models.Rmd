@@ -1,0 +1,96 @@
+---
+title: "Soc-Info Statistical Models"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+```
+
+## Setup
+
+```{r}
+library(magrittr); library(tidyverse); library(here); library(rstanarm) 
+theme_set(theme_minimal())
+```
+
+Read data. 
+
+```{r}
+d_path <- "data/02_tidy_data/"
+d <- read_csv(here(d_path, "goal_actions_tidy_pilotB.csv"))
+```
+
+## Model condition difference in action selection 
+
+```{r}
+d_model <- d %>% 
+  select(id, condition, action_response_collapsed) %>% 
+  unique() %>% 
+  mutate(action_numeric = ifelse(action_response_collapsed == "single_button", 0, 1))
+```
+
+Treat as binary response -> logistic regression. No repeated measurements, so we don't model random effects.
+
+```{r}
+m_bglm <- stan_glm(
+  action_numeric ~ condition, # specify model formula the same way as in glm
+  data = d_model,
+  family = binomial(link = "logit"), 
+  prior_intercept = normal(0, 10),
+  chains = 4
+)
+```
+
+Get a dataframe: One row per posterior sample
+
+```{r}
+# make function to convert logit back to probability 
+logit_to_prob <- function(logit) {
+  odds <- exp(logit)
+  odds / (1 + odds)
+}
+```
+
+```{r}
+d_post <- m_bglm %>% 
+  as.data.frame() %>% 
+  as_tibble() %>% 
+  dplyr::rename(learning = `(Intercept)`,
+                performance_beta = conditionperformance) %>% 
+  mutate(performance = learning + performance_beta,
+         cond_difference = learning - performance, 
+         sample_id = 1:n()) %>% 
+  select(-performance_beta) %>% 
+  gather(key = condition, value = param_est, -sample_id) %>% 
+  mutate(acc_prob_scale = logit_to_prob(param_est))
+```
+
+Plot posterior over condition means.
+
+```{r}
+group_means <- d_post %>% 
+  filter(condition != "cond_difference") %>% 
+  ggplot(aes(x = acc_prob_scale, color = condition)) +
+  geom_line(stat = "density", size = 2) +
+  scale_color_grey() +
+  labs(x = "Prob. Select Two Buttons", y = "Density") +
+  theme(legend.position = "top")
+```
+
+Plot posterior distribution over condition difference.
+
+```{r}
+cond_diff <- d_post %>% 
+  filter(condition == "cond_difference") %>% 
+  ggplot(aes(x = param_est)) +
+  geom_vline(xintercept = 0, linetype = "dashed") +
+  geom_line(stat = "density", size = 2) +
+  scale_color_grey() +
+  labs(x = "Condition Diff. (logit scale)", y = "Density") 
+```
+
+```{r}
+cowplot::plot_grid(group_means, cond_diff)
+```
+

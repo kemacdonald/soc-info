@@ -21,12 +21,21 @@ d_path <- "data/02_tidy_data/"
 d <- read_csv(here(d_path, "goal_actions_tidy_pilotB.csv"))
 ```
 
+```{r}
+d %<>% 
+  mutate(hypothesis_type = factor(hypothesis_type) %>% fct_rev(),
+         slider_response_collapsed = factor(slider_response_collapsed) %>% fct_rev(),
+         action_response_collapsed = factor(action_response_collapsed) %>% fct_rev()) 
+```
+
+
 ## Table of comments
 
 ```{r}
 d %>% 
-  select(id, age, gender, about) %>% 
+  select(id, age, condition, about) %>% 
   unique() %>% 
+  arrange(condition) %>% 
   knitr::kable()
 ```
 
@@ -52,8 +61,6 @@ Same plot but collapsing across the single button hypotheses.
 
 ```{r}
 d %>% 
-  mutate(hypothesis_type = factor(hypothesis_type) %>% fct_rev(),
-         slider_response_collapsed = factor(slider_response_collapsed) %>% fct_rev()) %>% 
   group_by(hypothesis_type, condition, slider_response_collapsed) %>% 
   summarise(m = mean(slider_value_norm_2)) %>% 
   ggplot(aes(x = slider_response_collapsed, y = m, fill = condition)) +
@@ -62,6 +69,7 @@ d %>%
   lims(y = c(0,1)) +
   scale_fill_grey() +
   ggthemes::theme_few() +
+  labs(x = "Hypothesis", y = "Beliefs") +
   theme(legend.position = "top") +
   facet_wrap(~hypothesis_type)
 ```
@@ -89,7 +97,6 @@ Plot the distribution using the collapsed action response variable.
 ```{r}
 d %>% 
   select(condition, action_response_collapsed, id) %>% 
-  mutate(action_response_collapsed = factor(action_response_collapsed) %>% fct_rev()) %>%
   unique() %>% 
   group_by(action_response_collapsed, condition) %>% 
   count() %>% 
@@ -101,6 +108,18 @@ d %>%
   labs(y = "Prop. Participants", x = "Action Selected") +
   scale_fill_grey()
 ```
+
+Make a table of the raw counts.
+
+```{r}
+d %>% 
+  select(condition, action_response_collapsed, id) %>% 
+  unique() %>% 
+  group_by(action_response_collapsed, condition) %>% 
+  count() %>% 
+  knitr::kable()
+```
+
 
 ## Experiment time distributions
 
@@ -122,10 +141,10 @@ Make the same plot, but for the time spent on the action decision.
 d %>% 
   select(id, action_trial_time, condition) %>% 
   unique() %>% 
-  ggplot(aes(x = condition, y = action_trial_time)) +
-  geom_boxplot(width = 0.3) +
-  lims(y = c(0,max(d$action_trial_time))) +
-  labs(y = "Time (sec)")
+  ggplot(aes(x = action_trial_time)) +
+  geom_histogram() + 
+  facet_wrap(~condition)
+  
 ```
 
 ## Plot belief change
@@ -137,6 +156,7 @@ d %>%
   geom_jitter(width = 0.03, size = 2) +
   facet_wrap(~slider_response_collapsed) +
   lims(y = c(0,1)) +
+  langcog::scale_color_solarized() +
   ggthemes::theme_few() +
   theme(legend.position = "top")
 ```

@@ -18,7 +18,8 @@ Read data.
 
 ```{r}
 d_path <- "data/02_tidy_data/"
-d <- read_csv(here(d_path, "goal_actions_tidy_pilotB.csv"))
+d <- read_csv(here(d_path, "goal_actions_tidy_pilotB.csv")) %>%
+  mutate(hypothesis_type = relevel(factor(hypothesis_type), "prior"))
 ```
 
 ## Table of comments
@@ -52,7 +53,8 @@ Same plot but collapsing across the single button hypotheses.
 
 ```{r}
 d %>% 
-  mutate(hypothesis_type = factor(hypothesis_type) %>% fct_rev(),
+  mutate(
+    # hypothesis_type = factor(hypothesis_type) %>% fct_rev(),
          slider_response_collapsed = factor(slider_response_collapsed) %>% fct_rev()) %>% 
   group_by(hypothesis_type, condition, slider_response_collapsed) %>% 
   summarise(m = mean(slider_value_norm_2)) %>% 
@@ -81,7 +83,9 @@ d %>%
   ggplot(aes(x = action_response, y = prop, fill = condition)) +
   geom_bar(stat = "identity", width = 0.4, position = position_dodge()) +
   lims(y = c(0,1)) +
-  scale_fill_grey()
+  scale_fill_grey() +
+  facet_grid(.~condition)
+  
 ```
 
 Plot the distribution using the collapsed action response variable.

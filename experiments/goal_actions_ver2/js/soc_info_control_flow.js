@@ -130,6 +130,7 @@ exp = {
 hypotheses_slide: function() {
 	// show music box
 //	$(`#music_box_hyps`).html(music_box_html)
+	$(`#music_box_hyps`).html('<img src="imgs/NoLabel.jpeg" height="200" width="300">')
 
   // randomize slider labels
   rand_slider_labels = shuffle(hypotheses_slider_labels)
@@ -154,21 +155,21 @@ hypotheses_slide: function() {
 
     	// check if there is whitespace handles the case of  "both purple and orange buttons"
     	if(toy_label.includes("Both")) {
-    		slider_html = `<td><b>BothMusicLight toy</b></td>
+    		slider_html = `<td><img src="imgs/BothMusicLight.jpeg" height="100" width="150"></td><td><b>BothMusicLight toy</b></td>
           <td>
              <div id="slidecontainer">
                 <input type="range" min="1" max="100" value="50" class="slider" id="myRange3">
             </div>
           </td>`
     	} else if (toy_label.includes("Button")){
-    		slider_html = `<td><b>ButtonMusic toy</b></td>
+    		slider_html = `<td><img src="imgs/ButtonMusic.jpeg" height="100" width="150"></td><td><b>ButtonMusic toy</b></td>
     		<td>
     			<div id="slidecontainer">
     				<input type="range" min="1" max="100" value="50" class="slider" id="myRange1">
     			</div>
     		</td>`
     	} else if (toy_label.includes("Handle")){
-    		slider_html = `<td><b>HandleMusic toy</b></td>
+    		slider_html = `<td><img src="imgs/HandleMusic.jpeg" height="100" width="150"></td><td><b>HandleMusic toy</b></td>
     		<td>
     			<div id="slidecontainer">
     				<input type="range" min="1" max="100" value="50" class="slider" id="myRange1">
@@ -242,6 +243,7 @@ hypotheses_slide: function() {
   	$(`#notes_gif_actions`).css('visibility','hidden')
  		// show music box
 // 		$(`#music_box_actions`).html(music_box_html)
+ 		$(`#music_box_actions`).html('<img src="imgs/NoLabel.jpeg" height="200" width="300">')
 
  		// show action text based on condition assignment
  		$("#goal_text_action").html(goal_html_action_slide)

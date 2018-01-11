@@ -56,7 +56,7 @@ if(goal_condition == "learning") {
 music_box_imgs =  ["BothMusicLight.jpeg", "ButtonMusic.jpeg", "HandleMusic.jpeg"]
 music_box = shuffle(music_box_imgs)
     for(i = 0; i < music_box.length; i++) {
-        music_box_html = `<img src="imgs/${music_box[i]}" height="200" width="300">`
+        music_box_html = `<img src="imgs/${music_box[i]}" height="120" width="200">`
     	$(`#music_box_intro_` + i.toString()).html(music_box_html);
     	$(`#music_box_goals_` + i.toString()).html(music_box_html);
     	$(`#music_box_actions_` + i.toString()).html(music_box_html);

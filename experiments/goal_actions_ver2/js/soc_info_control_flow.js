@@ -61,7 +61,10 @@ exp = {
     // hide music gif
     $(`#notes_gif`).css('visibility','hidden')
 		// show music box
-		$(`#music_box_intro`).html(music_box_html)
+//		$(`#music_box_intro`).html(music_box_html)
+//		$(`#music_box_intro_1`).html(music_box_html_1)
+//		$(`#music_box_intro_2`).html(music_box_html_2)
+//		$(`#music_box_intro_3`).html(music_box_html_3)
 		// store the start time of the experiment
 		exp.exp_start_time = new Date();
 		showSlide('toy_intro')
@@ -69,7 +72,7 @@ exp = {
 
 	//build goal manipulation slide
 	goals_slide: function() {
-		$(`#music_box_goals`).html(music_box_html)
+//		$(`#music_box_goals`).html(music_box_html)
 
 		time_interval = 2500 // in ms should be 2500
 
@@ -126,7 +129,7 @@ exp = {
 
 hypotheses_slide: function() {
 	// show music box
-	$(`#music_box_hyps`).html(music_box_html)
+//	$(`#music_box_hyps`).html(music_box_html)
 
   // randomize slider labels
   rand_slider_labels = shuffle(hypotheses_slider_labels)
@@ -147,11 +150,9 @@ hypotheses_slide: function() {
 
   // for loop to create sliders programatically and randomize order of hypotheses
     for(i = 0; i < rand_slider_labels.length; i++) {
-//    	label_color = rand_slider_labels[i];
     	toy_label = rand_slider_labels[i];
 
     	// check if there is whitespace handles the case of  "both purple and orange buttons"
-//    	if(hasWhiteSpace(label_color)) {
     	if(toy_label.includes("Both")) {
     		slider_html = `<td><b>BothMusicLight toy</b></td>
           <td>
@@ -240,7 +241,7 @@ hypotheses_slide: function() {
 		// hide music gif
   	$(`#notes_gif_actions`).css('visibility','hidden')
  		// show music box
- 		$(`#music_box_actions`).html(music_box_html)
+// 		$(`#music_box_actions`).html(music_box_html)
 
  		// show action text based on condition assignment
  		$("#goal_text_action").html(goal_html_action_slide)

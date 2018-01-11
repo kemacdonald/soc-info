@@ -228,3 +228,7 @@ function resetSliders(n_sliders) {
 function checkTrue(value) {
         return value == true;
 }
+
+function remove(array, element) {
+    return array.filter(e => e !== element);
+}

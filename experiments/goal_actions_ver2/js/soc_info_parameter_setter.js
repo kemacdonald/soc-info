@@ -67,3 +67,4 @@ music_box = shuffle(music_box_imgs)
 //action_labels = ["Purple" , "Orange", "Purple and Orange"]
 hypotheses_slider_labels = ["ButtonMusic" , "HandleMusic", "BothMusicLight"]
 action_labels = ["Press the button" , "Pull the handle", "Press the button and pull the handle"]
+effect_labels = ["play music" , "turn on the light"]

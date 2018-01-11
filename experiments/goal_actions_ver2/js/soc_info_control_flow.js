@@ -27,6 +27,7 @@ exp = {
 	hypotheses_slider_order_prior: "",
   hypotheses_slider_order_posterior: "",
 	actions_buttons_order: "",
+    toy_inst_num: 0,
 
 	// store participant's browser info
 	browser: BrowserDetect.browser,
@@ -56,6 +57,7 @@ exp = {
   action_trial_time: "",
 
 	hyp_type: "prior", // this is hacky solution to make the hypotheses slides show up in the correct order: basically, we start with the hyp_type as prior and later switch to the posterior for displaying the correct slider bars
+    rand_slider_labels: shuffle(hypotheses_slider_labels),
 
 	toy_slide: function() {
     // hide music gif
@@ -126,6 +128,87 @@ exp = {
  	  });
 
  },
+    
+    toy_instructions_slide: function() {
+    exp.toy_inst_num++;    
+    
+    toys_not_both = remove(exp.rand_slider_labels, "BothMusicLight")
+        
+    if (exp.toy_inst_num == 1) {
+	$(`#music_box_instructions`).html('<img src="imgs/'+toys_not_both[0]+'.jpeg" height="200" width="300">')        
+    } else if (exp.toy_inst_num == 2) {
+	$(`#music_box_instructions`).html('<img src="imgs/'+toys_not_both[1]+'.jpeg" height="200" width="300">')                
+    } else if (exp.toy_inst_num == 3) {
+	$(`#music_box_instructions`).html('<img src="imgs/BothMusicLight.jpeg" height="200" width="300">')                
+    };
+            
+ 		// create the randomized radio buttons
+ 	  rand_hyp_labels = shuffle(action_labels);
+    exp.actions_buttons_order = rand_hyp_labels; // store order in the experiment object
+
+        for(i = 0; i < rand_hyp_labels.length; i++) {
+    	action_label = rand_hyp_labels[i];
+
+    	// check if there is whitespace handles the case of  "both purple and orange buttons"
+    	if(action_label.includes("and")) {
+    		button_html = '<span><label class="btn btn-default"><input type="radio" name="intervention" value="both"/>' + action_label + '</label></span>'
+    	} else if (action_label.includes("button")){
+    		button_html = '<span><label class="btn btn-default"><input type="radio" name="intervention" value="button"/>' + action_label + '</label></span>'
+    	} else if (action_label.includes("handle")){
+    		button_html = '<span><label class="btn btn-default"><input type="radio" name="intervention" value="handle"/>' + action_label + '</label></span>'
+    	}
+
+      $(`#initial1_button_`+i.toString()).html(button_html);
+      $(`#initial2_button_`+i.toString()).html(button_html);
+    }
+        
+        $('#initial_question1').html('How do you make the toy ' + effect_labels[0] + '?');
+        $('#initial_question2').html('How do you make the toy ' + effect_labels[1] + '?');
+        
+        
+         	showSlide('toy-instructions')
+
+    },
+    
+ initial_check_close: function(response){
+ 	// store the end time of actions trial
+ 	exp.action_trial_end_time = new Date();
+ 	// store the action choice
+ 	exp.action_response = response;
+
+ 	// switch the hypothesis type to posterior
+// 	exp.hyp_type = "posterior";
+
+  // wait 500 ms and then display the sucess message
+  setTimeout(function(){
+        $("#actions_test_check").html(answer_success_message);
+     }, 1000);
+
+ 	// then play sound which also advances slide (a little hacky)
+// 	exp.play_music('action_slide');
+    exp.hypotheses_slide();
+ },
+
+  // Tests if the participant responded to action question
+ initial_check: function() {
+	// store response
+	response = $(`input:radio[name=intervention]:checked`).val()
+
+	// if response field is empty, then throw an error message
+		if (typeof response == 'undefined') {
+    		answer_error_message = '<font color="red"><b>Please select an action.</b></font>';
+    		$("#actions_test_check").html(answer_error_message);
+    	} else {
+        //disable the radio buttons so user can't change answer while music is playing
+        $(`input:radio[name=intervention]`).attr('disabled',true)
+        // create answer message
+        answer_success_message = `<font color="green"><b>Congratulations! You made the toy play music.</b></font>`
+        // clean up the response string and move on in the experiment
+        response_clean = response.toLowerCase().replace("/","");
+    		exp.initial_check_close(response_clean);
+    	};
+	},
+
 
 hypotheses_slide: function() {
 	// show music box
@@ -155,21 +238,21 @@ hypotheses_slide: function() {
 
     	// check if there is whitespace handles the case of  "both purple and orange buttons"
     	if(toy_label.includes("Both")) {
-    		slider_html = `<td><img src="imgs/BothMusicLight.jpeg" height="100" width="150"></td><td><b>BothMusicLight toy</b></td>
+    		slider_html = `<td align="right"><img src="imgs/BothMusicLight.jpeg" height="120" width="150" align="right"></td><td><b>BothMusicLight toy</b></td>
           <td>
              <div id="slidecontainer">
                 <input type="range" min="1" max="100" value="50" class="slider" id="myRange3">
             </div>
           </td>`
     	} else if (toy_label.includes("Button")){
-    		slider_html = `<td><img src="imgs/ButtonMusic.jpeg" height="100" width="150"></td><td><b>ButtonMusic toy</b></td>
+    		slider_html = `<td align="right"><img src="imgs/ButtonMusic.jpeg" height="120" width="150" align="right"></td><td><b>ButtonMusic toy</b></td>
     		<td>
     			<div id="slidecontainer">
     				<input type="range" min="1" max="100" value="50" class="slider" id="myRange1">
     			</div>
     		</td>`
     	} else if (toy_label.includes("Handle")){
-    		slider_html = `<td><img src="imgs/HandleMusic.jpeg" height="100" width="150"></td><td><b>HandleMusic toy</b></td>
+    		slider_html = `<td align="right"><img src="imgs/HandleMusic.jpeg" height="120" width="150" align="right"></td><td><b>HandleMusic toy</b></td>
     		<td>
     			<div id="slidecontainer">
     				<input type="range" min="1" max="100" value="50" class="slider" id="myRange1">
@@ -290,7 +373,8 @@ hypotheses_slide: function() {
      }, 1000);
 
  	// then play sound which also advances slide (a little hacky)
- 	exp.play_music('action_slide');
+// 	exp.play_music('action_slide');
+ 	showSlide('action_slide');
  },
 
  final_slide: function() {

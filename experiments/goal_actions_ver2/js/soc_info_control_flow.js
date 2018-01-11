@@ -180,13 +180,17 @@ exp = {
 // 	exp.hyp_type = "posterior";
 
   // wait 500 ms and then display the sucess message
-  setTimeout(function(){
-        $("#actions_test_check").html(answer_success_message);
-     }, 1000);
+//  setTimeout(function(){
+//        $("#actions_test_check").html(answer_success_message);
+//     }, 1000);
 
  	// then play sound which also advances slide (a little hacky)
 // 	exp.play_music('action_slide');
-    exp.hypotheses_slide();
+     if (exp.toy_inst_num == 3) {
+          exp.hypotheses_slide();
+     } else {
+         exp.toy_instructions_slide();
+     }
  },
 
   // Tests if the participant responded to action question

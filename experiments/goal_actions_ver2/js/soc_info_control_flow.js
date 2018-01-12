@@ -58,6 +58,7 @@ exp = {
 
     hyp_type: "prior", // this is hacky solution to make the hypotheses slides show up in the correct order: basically, we start with the hyp_type as prior and later switch to the posterior for displaying the correct slider bars
     rand_slider_labels: shuffle(hypotheses_slider_labels),
+    rand_action_labels: shuffle(action_labels),
 
     toy_slide: function () {
         // hide music gif
@@ -161,11 +162,11 @@ exp = {
         };
 
         // create the randomized radio buttons
-        rand_hyp_labels = shuffle(action_labels);
-        exp.actions_buttons_order = rand_hyp_labels; // store order in the experiment object
+//        rand_hyp_labels = shuffle(action_labels);
+//        exp.actions_buttons_order = exp.rand_hyp_labels; // store order in the experiment object
 
-        for (i = 0; i < rand_hyp_labels.length; i++) {
-            action_label = rand_hyp_labels[i];
+        for (i = 0; i < exp.rand_action_labels.length; i++) {
+            action_label = exp.rand_action_labels[i];
 
             // check if there is whitespace handles the case of  "both purple and orange buttons"
             if (action_label.includes("and")) {
@@ -358,13 +359,13 @@ exp = {
         // show action text based on condition assignment
         $("#goal_text_action").html(goal_html_action_slide)
         // create the randomized radio buttons
-        rand_hyp_labels = shuffle(action_labels);
-        exp.actions_buttons_order = rand_hyp_labels; // store order in the experiment object
+//        rand_hyp_labels = shuffle(action_labels);
+//        exp.actions_buttons_order = rand_hyp_labels; // store order in the experiment object
 
         // build up button html using a for loop
-        for (i = 0; i < rand_hyp_labels.length; i++) {
+        for (i = 0; i < exp.rand_action_labels.length; i++) {
             //    	button_label = rand_hyp_labels[i];
-            action_label = rand_hyp_labels[i];
+            action_label = exp.rand_action_labels[i];
 
             // check if there is whitespace handles the case of  "both purple and orange buttons"
             //    	if(hasWhiteSpace(button_label)) {
@@ -396,7 +397,7 @@ exp = {
         // wait 500 ms and then display the sucess message
         setTimeout(function () {
             $("#actions_test_check").html(answer_success_message);
-        }, 1000);
+        }, 700);
 
         // then play sound which also advances slide (a little hacky)
         exp.play_music('action_slide');

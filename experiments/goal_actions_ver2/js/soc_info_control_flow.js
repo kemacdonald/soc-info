@@ -245,7 +245,7 @@ exp = {
                         exp.hypotheses_slider_order_posterior = rand_slider_labels;
                         hyp_text_html = "After performing your action, how likely do you think this toy is a ...";
                     } else if (exp.hyp_type == "prior") {
-                        hyp_text_html = "Before performing any action, how likely do you think this toy is a ...";
+                        hyp_text_html = "One day you're walking and you see your toy on the ground. <br>You pick it up and notice that it's missing its label. <br><br> How likely do you think this toy is a ...";
                         // store slider label order to link responses to hypothesis later on
                         exp.hypotheses_slider_order_prior = rand_slider_labels;
                     }

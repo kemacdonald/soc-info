@@ -42,7 +42,6 @@
                 document.getElementsByTagName('body')[0].innerHTML = "You have already completed the maximum number of HITs allowed by this requester. Please click 'Return HIT' to avoid any impact on your approval rating.";
             }
         })();
-
     </script>
 
 </head>
@@ -72,54 +71,58 @@
         </p>
     </div>
 
-<!-- Toy Intro Slide -->
-<div class="slide" id="toy_intro">
-    <table align="center">
-        <tr>
-            <td align="center" width="10">
-                <p class="block-text">Imagine that you are a children’s toy developer, and you’ve designed three toys that each work in different ways. You've labelled each toy at the bottom.</p>
-            </td>
-        </tr>
-        <tr>
-            <td align='center'>
-<!--                <img id="notes_gif" src="imgs/music_notes.gif" alt="music notes" style="width:160px;height:80px;">-->
-                <div id="music_box_intro">
-                    <center>
-                        <table>
-                            <tr>
-                                <td><div id ="music_box_intro_0"></div></td>
-                                <td><div id ="music_box_intro_1"></div></td>
-                                <td><div id ="music_box_intro_2"></div></td>
-                            </tr>
-                        </table>
-                    </center>
-                </div>                
-<!--
-                <audio id="sound_player">
+    <!-- Toy Intro Slide -->
+    <div class="slide" id="toy_intro">
+        <table align="center">
+            <tr>
+                <td align="center" width="10">
+                    <p class="block-text">Imagine that you are a children’s toy developer, and you’ve designed three toys that each work in different ways. You've labelled each toy at the bottom.</p>
+                </td>
+            </tr>
+            <tr>
+                <td align='center'>
+                    <!--                <img id="notes_gif" src="imgs/music_notes.gif" alt="music notes" style="width:160px;height:80px;">-->
+                    <div id="music_box_intro">
+                        <center>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <div id="music_box_intro_0"></div>
+                                    </td>
+                                    <td>
+                                        <div id="music_box_intro_1"></div>
+                                    </td>
+                                    <td>
+                                        <div id="music_box_intro_2"></div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </center>
+                    </div>
+                    <audio id="sound_player">
               <source src="imgs/music_trimmed.m4a" type="audio/mp4">
             </audio>
--->
-                <p align="center"> Click <b>Next</b> to see how each toy works.</p>
-<!--                <button type="button" id="play_music" onClick="exp.play_music('toy_slide')">Next-->
-                <button type="button" id="play_music" onClick="exp.toy_instructions_slide()">Next
+                    <p align="center"> Click <b>Next</b> to see how each toy works.</p>
+                    <!--                <button type="button" id="play_music" onClick="exp.play_music('toy_slide')">Next-->
+                    <button type="button" id="play_music" onClick="exp.toy_instructions_slide()">Next
             </button>
-            </td>
-        </tr>
-    </table>
+                </td>
+            </tr>
+        </table>
 
-    <div id="slider1"></div>
+        <div id="slider1"></div>
 
-</div>
+    </div>
 
     <!-- Toy instructions Slide-->
     <div class="slide" id="toy-instructions">
-       <div align="center" id="music_box_instructions"></div>
+        <div align="center" id="music_box_instructions"></div>
 
         <p class="action-text">Please answer the following questions to make sure you've understood the instructions.</p>
 
         <p class="action-text" id="initial_question1"></p>
 
-        <p class="action-text" id="goal_text_action"></p>
+        <!--        <p class="action-text" id="goal_text_action"></p>-->
 
         <div id="initial1_buttons" align="center">
             <fieldset>
@@ -132,7 +135,7 @@
         </div>
         <br><br>
 
-        <p class="action-text"  id="initial_question2"></p>
+        <p class="action-text" id="initial_question2"></p>
 
         <div id="initial2_buttons" align="center">
             <fieldset>
@@ -144,14 +147,14 @@
             </fieldset>
         </div>
         <br>
-        
+
         <table align="center">
             <tr>
                 <td align="center">
-<!--                    <p> If your action makes the toy work, you will hear music.</p>-->
+                    <!--                    <p> If your action makes the toy work, you will hear music.</p>-->
                     <div align='center'>
                         <button type="button" id="actions_to_hyp" onClick="exp.initial_check()">Submit Action</button>
-                        <div align="center" id="actions_test_check"></div>
+                        <div align="center" id="initial_test_check"></div>
                 </td>
             </tr>
         </table>
@@ -159,182 +162,196 @@
 
         </div>
 
-    <!-- Goal Manipulation Slide -->
-    <div class="slide" id="goal_manipulation">
-        <table align="center">
-            <tr>
-                <td align="center">
-                    <p class="block-text" id="goal_text"> </p>
-                </td>
-            </tr>
-            <tr>
-                <td align='center'>
-<!--                    <div id="music_box_goals"></div>-->
-                    <div id="music_box_goals">
-                    <center>
-                        <table>
-                            <tr>
-                                <td><div id ="music_box_goals_0"></div></td>
-                                <td><div id ="music_box_goals_1"></div></td>
-                                <td><div id ="music_box_goals_2"></div></td>
-                            </tr>
-                        </table>
-                    </center>
-                </div> 
-
-                </td>
-            </tr>
-            <tr>
-                <td align="center">
-                    <button type="button" id="goals_to_action" onClick="exp.hypotheses_slide()">Advance the task</button>
-                </td>
-            </tr>
-        </table>
-    </div>
-
-    <!-- Actions Slide-->
-    <div class="slide" id="actions">
-        <div align="center">
-            <img id="notes_gif_actions" src="imgs/music_notes.gif" alt="music notes" style="width:160px;height:80px;">
-        </div>
-
-        <div align="center" id="music_box_actions"></div>
-
-        <p class="action-text">Imagine you only had one attempt to play with the toy. Which action would you want to try?</p>
-
-        <p class="action-text" id="goal_text_action"></p>
-
-        <br>
-
-        <div id="action_buttons" align="center">
-            <fieldset>
-                <form>
-                    <div id="action_button_0" align="left"></div>
-                    <div id="action_button_1" align="left"></div>
-                    <div id="action_button_2" align="left"></div>
-                </form>
-            </fieldset>
-        </div>
-
-        <br>
-
-        <div id="music_box_actions">
-            <p align='center'> Remember that the toy can be one of the three: </p>
-                    <center>
-                        <table>
-                            <tr>
-                                <td><div id ="music_box_actions_0"></div></td>
-                                <td><div id ="music_box_actions_1"></div></td>
-                                <td><div id ="music_box_actions_2"></div></td>
-                            </tr>
-                        </table>
-                    </center>
-                </div> 
-
-        
-        <table align="center">
-            <tr>
-                <td align="center">
-                    <p> If your action makes the toy work, you will hear music.</p>
-                    <div align='center'>
-                        <button type="button" id="actions_to_hyp" onClick="exp.actions_check()">Submit Action</button>
-                        <div align="center" id="actions_test_check"></div>
-                </td>
-            </tr>
-        </table>
-
-
-        </div>
-
-        <!--  Hypotheses Slide-->
-        <div class="slide" id="hypotheses">
-
-            <div align="center" id="music_box_hyps"></div><br>
-
-            <div align="center">
-                <p id="hypotheses_text"></p>
-            </div>
-
-            <table id="slider_table" , align="center">
+        <!-- Goal Manipulation Slide -->
+        <div class="slide" id="goal_manipulation">
+            <table align="center">
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td class="slider_labels">
-                        <div class="left_label">very unlikely</div>
-                        <div class="right_label">very likely</div>
+                    <td align="center">
+                        <!--                    <p class="block-text" id="goal_text"> </p>-->
                     </td>
                 </tr>
+                <tr>
+                    <td align='center'>
+                        <!--                    <div id="music_box_goals"></div>-->
+                        <div id="music_box_goals">
+                            <center>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <div id="music_box_goals_0"></div>
+                                        </td>
+                                        <td>
+                                            <div id="music_box_goals_1"></div>
+                                        </td>
+                                        <td>
+                                            <div id="music_box_goals_2"></div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </center>
+                        </div>
 
-                <tr id="hyp_row_0"></tr>
-                <tr id="hyp_row_1"></tr>
-                <tr id="hyp_row_2"></tr>
-
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <button type="button" id="goals_to_action" onClick="exp.hypotheses_slide()">Advance the task</button>
+                    </td>
+                </tr>
             </table>
+        </div>
 
-            <div align='center'>
-                <button type="button" id="hyps_to_end" onClick="exp.hypotheses_check()">Advance the task</button>
+        <!-- Actions Slide-->
+        <div class="slide" id="actions">
+            <div align="center">
+                <div align="center" id="actions_test_check"></div>
+                <img id="notes_gif_actions" src="imgs/music_notes.gif" alt="music notes" style="width:160px;height:80px;">
             </div>
 
-            <div align="center" id="sliders_test_check"></div>
+            <div align="center" id="music_box_actions"></div>
 
-        </div>
+            <p class="action-text" id="goal_text"></p>
+
+            <p class="action-text">Which action do you want to take?</p>
+            <!--        <p class="action-text" id="goal_text_action"></p>-->
 
 
-        <div class="slide" id="final_questions">
-            <center> Please answer the following questions to help us improve our task. Thank you!<br> <br>
-                <p class="block-text">
-                    What do you think this task was about? <br>
-                    <input type="text" id="about" name="about" size="70">
-                </p>
-                <p class="block-text" name="comments">
-                    Do you have any other comments for us? Was there anything broken or that could be improved? <br>
-                    <input type="text" id="comments" name="comments" size="70">
-                </p>
-                <p class="block-text" name="age">
-                    What is your age in years? <br>
-                    <input type="text" id="age" name="age" size="70">
-                </p>
-                <p class="block-text" name="gender">
-                    What is your gender? (m = male, f = female, o = other) <br>
-                    <input type="text" id="gender" name="gender" size="70">
-                </p>
-                <p class="block-text" name="language">
-                    What is your first language? <br>
-                    <input type="text" id="language" name="language" size="70">
-                </p>
-                <table align="center">
+            <!--        <br>-->
+
+            <div id="action_buttons" align="center">
+                <fieldset>
+                    <form>
+                        <div id="action_button_0" align="left"></div>
+                        <div id="action_button_1" align="left"></div>
+                        <div id="action_button_2" align="left"></div>
+                    </form>
+                </fieldset>
+            </div>
+
+            <br><br>
+
+            <div id="music_box_actions">
+                <p align='center'> Remember that the toy can be one of the three: </p>
+                <center>
+                    <table>
+                        <tr>
+                            <td>
+                                <div id="music_box_actions_0"></div>
+                            </td>
+                            <td>
+                                <div id="music_box_actions_1"></div>
+                            </td>
+                            <td>
+                                <div id="music_box_actions_2"></div>
+                            </td>
+                        </tr>
+                    </table>
+                </center>
+            </div>
+
+
+            <table align="center">
+                <tr>
+                    <td align="center">
+                        <!--                    <p> If your action makes the toy work, you will hear music.</p>-->
+                        <div align='center'>
+                            <button type="button" id="actions_to_hyp" onClick="exp.actions_check()">Submit Action</button>
+                    </td>
+                </tr>
+            </table>
+
+
+            </div>
+
+            <!--  Hypotheses Slide-->
+            <div class="slide" id="hypotheses">
+
+                <div align="center" id="music_box_hyps"></div><br>
+
+                <div align="center">
+                    <p id="hypotheses_text"></p>
+                </div>
+
+                <table id="slider_table" , align="center">
                     <tr>
-                        <td align="center">
-                            <button type="button" id="checkFinishedButton" onClick="exp.check_finished()">Finished: Submit to MTurk</button>
-                            <div id="checkMessage"> </div>
-                            <!--dynamically built in javascript-->
+                        <td></td>
+                        <td></td>
+                        <td class="slider_labels">
+                            <div class="left_label">very unlikely</div>
+                            <div class="right_label">very likely</div>
                         </td>
                     </tr>
+
+                    <tr id="hyp_row_0"></tr>
+                    <tr id="hyp_row_1"></tr>
+                    <tr id="hyp_row_2"></tr>
+
                 </table>
-        </div>
 
-        <div class="slide" id="finished">
-            <p class="block-text">
-                You're finished - thanks for participating! Submitting to Mechanical Turk...
-            </p>
-        </div>
+                <div align='center'>
+                    <button type="button" id="hyps_to_end" onClick="exp.hypotheses_check()">Advance the task</button>
+                </div>
 
+                <div align="center" id="sliders_test_check"></div>
 
-
-        <!-- The js scripts delaration section. To improve functionality there are a few js scripts so that parameters can be more easily set and functions be edited. The first one is pragmods_helper_functions_c1.js which contains simple functions. Note that these .js need to be declared in a proper order. -->
-        <script src="js/soc_info_helper_functions.js"></script>
-
-        <!-- This .js file will set the variable random parameters of the experiment. When it comes to vectorize the parameters of the experiment using this -->
-        <script src="js/soc_info_parameter_setter.js"></script>
-
-        <!-- This .js file is in charge of controlling the dynamic glow of the activities including constructing the text that is used in the familiarization task and -->
-        <script src="js/soc_info_control_flow.js"></script>
+            </div>
 
 
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="js/bootstrap.min.js"></script>
+            <div class="slide" id="final_questions">
+                <center> Please answer the following questions to help us improve our task. Thank you!<br> <br>
+                    <p class="block-text">
+                        What do you think this task was about? <br>
+                        <input type="text" id="about" name="about" size="70">
+                    </p>
+                    <p class="block-text" name="comments">
+                        Do you have any other comments for us? Was there anything broken or that could be improved? <br>
+                        <input type="text" id="comments" name="comments" size="70">
+                    </p>
+                    <p class="block-text" name="age">
+                        What is your age in years? <br>
+                        <input type="text" id="age" name="age" size="70">
+                    </p>
+                    <p class="block-text" name="gender">
+                        What is your gender? (m = male, f = female, o = other) <br>
+                        <input type="text" id="gender" name="gender" size="70">
+                    </p>
+                    <p class="block-text" name="language">
+                        What is your first language? <br>
+                        <input type="text" id="language" name="language" size="70">
+                    </p>
+                    <table align="center">
+                        <tr>
+                            <td align="center">
+                                <button type="button" id="checkFinishedButton" onClick="exp.check_finished()">Finished: Submit to MTurk</button>
+                                <div id="checkMessage"> </div>
+                                <!--dynamically built in javascript-->
+                            </td>
+                        </tr>
+                    </table>
+            </div>
+
+            <div class="slide" id="finished">
+                <p class="block-text">
+                    You're finished - thanks for participating! Submitting to Mechanical Turk...
+                </p>
+            </div>
+
+
+
+            <!-- The js scripts delaration section. To improve functionality there are a few js scripts so that parameters can be more easily set and functions be edited. The first one is pragmods_helper_functions_c1.js which contains simple functions. Note that these .js need to be declared in a proper order. -->
+            <script src="js/soc_info_helper_functions.js"></script>
+
+            <!-- This .js file will set the variable random parameters of the experiment. When it comes to vectorize the parameters of the experiment using this -->
+            <script src="js/soc_info_parameter_setter.js"></script>
+
+            <!-- This .js file is in charge of controlling the dynamic glow of the activities including constructing the text that is used in the familiarization task and -->
+            <script src="js/soc_info_control_flow.js"></script>
+
+
+            <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+            <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
+            <!-- Include all compiled plugins (below), or include individual files as needed -->
+            <script src="js/bootstrap.min.js"></script>
 
 
 </body>

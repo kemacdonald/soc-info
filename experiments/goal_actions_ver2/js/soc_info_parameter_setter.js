@@ -11,7 +11,7 @@ var num_actions = 3
  * Returns a condition number
  */
 
-var numConditions = 2
+var numConditions = 3
 var slider_start_val = "50"
 
 try {
@@ -36,17 +36,26 @@ switch (cond) {
         break;
     case "2":
         goal_condition = "performance";
+        break;
+    case "3":
+        goal_condition = "presentation";
         break
 }
 
 var bonus_amount = '10 cent'
 
 if(goal_condition == "learning") {
-    goal_text_html = `The toy developer wants to know how quickly children could <b>learn how to make the toy play music.</b> <br><br> You will receive a <b> ${bonus_amount} bonus after submitting the HIT for selecting an action that helps you learn how the toy works</b>. You will lose out on this bonus if you don’t learn how the toy works.`
-    goal_html_action_slide = `Remember, you will receive a <b> ${bonus_amount} bonus after submitting the HIT for selecting an action that helps you learn how the toy works</b>. You will lose out on this bonus if you don’t learn how the toy works.`
+    goal_text_html = `Your supervisor comes along and says, "The toy is missing the label! Can you figure out whether this toy is a "ButtonMusic toy", "HandleMusic toy", or "BothMusicLight toy"? <br><br> You get a chance to try <b>ONE action to figure out which toy this is</b>, and you will get a ${bonus_amount} bonus after submitting the HIT if you figure it out correctly.`
+    goal_html_action_slide = `Remember, you will receive a <b> ${bonus_amount} bonus if you correctly learn which toy this is</b>. You will lose out on this bonus if you don’t learn which toy it is.`
+} else if (goal_condition == "performance") {
+    goal_text_html = `"Your supervisor comes along and says, "That must be your new toy! Can you make it play music? <br><br> You get a chance to take <b>ONE action to make the toy play music</b>, and you will get a ${bonus_amount} bonus if the toy plays music."
+`
+    goal_html_action_slide = `Remember, you will receive a <b>${bonus_amount} bonus if you make the toy play music</b>. You will lose out on this bonus if your action doesn't make the toy play music.`
 } else {
-    goal_text_html = `The toy developer wants to know how quickly children could <b>make the toy play music.</b> <br><br> You will receive a <b> ${bonus_amount} bonus after submitting the HIT for selecting an action that makes the toy work</b>. You will lose out on this bonus if your action doesn't make the toy work.`
-    goal_html_action_slide = `Remember, you will receive a <b>${bonus_amount} bonus after submitting the HIT for selecting an action that makes the toy work</b>. You will lose out on this bonus if your action doesn't make the toy work.`
+    goal_text_html = `Your supervisor comes along and says, "What is that thing?" You want to impress your supervisor and show that you're an expert with the toy. <br><br>
+You get a chance to take <b>ONE action to impress your supervisor</b>, and you will get a ${bonus_amount} if he is impressed.
+`
+    goal_html_action_slide = `Remember, you will receive a <b>${bonus_amount} bonus if you successfully impress your supervisor by selecting ONE action </b>. You will lose out on this bonus if your supervisor is not impressed.`    
 }
 
 // set up variables for later randomization

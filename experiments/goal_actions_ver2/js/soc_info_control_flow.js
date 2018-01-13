@@ -18,6 +18,10 @@ exp = {
     // The first batch, however, is set determined by the experiment conditions
     // and therefore should not be affected by the decisions made by the experimental subject.
 
+    // store manipulation check responses
+    initial_response1: [],
+    initial_response2: [],
+    
     // store participant's intervention choice
     action_response: "",
     goal_condition: goal_condition,
@@ -64,36 +68,33 @@ exp = {
         // hide music gif
         $(`#notes_gif`).css('visibility', 'hidden')
         // show music box
-        //		$(`#music_box_intro`).html(music_box_html)
-        //		$(`#music_box_intro_1`).html(music_box_html_1)
-        //		$(`#music_box_intro_2`).html(music_box_html_2)
-        //		$(`#music_box_intro_3`).html(music_box_html_3)
+        $(`#music_box_intro`).html('<img src="imgs/LabelInst.jpeg" height="350" width="500">')
         // store the start time of the experiment
         exp.exp_start_time = new Date();
         showSlide('toy_intro')
     },
 
-    //build goal manipulation slide
-    goals_slide: function () {
-        //		$(`#music_box_goals`).html(music_box_html)
-
-        time_interval = 2500 // in ms should be 2500
-
-        // disable advance button to ensure that participants read goal manipulation
-        $('#goals_to_action').prop("disabled", true);
-
-        // set up goal instructions based on condition
-        instructions_html = `<table align="center"> ${goal_text_html} </table>`;
-        $(`#goal_text`).html(instructions_html)
-
-
-        showSlide(`goal_manipulation`)
-
-        setTimeout(function () {
-            $('#goals_to_action').prop("disabled", false);
-        }, time_interval);
-
-    },
+    //    //build goal manipulation slide
+    //    goals_slide: function () {
+    //        //		$(`#music_box_goals`).html(music_box_html)
+    //
+    //        time_interval = 2500 // in ms should be 2500
+    //
+    //        // disable advance button to ensure that participants read goal manipulation
+    //        $('#goals_to_action').prop("disabled", true);
+    //
+    //        // set up goal instructions based on condition
+    //        instructions_html = `<table align="center"> ${goal_text_html} </table>`;
+    //        $(`#goal_text`).html(instructions_html)
+    //
+    //
+    //        showSlide(`goal_manipulation`)
+    //
+    //        setTimeout(function () {
+    //            $('#goals_to_action').prop("disabled", false);
+    //        }, time_interval);
+    //
+    //    },
 
     play_music: function (slide_id) {
 
@@ -137,52 +138,54 @@ exp = {
 
         toys_not_both = remove(exp.rand_slider_labels, "BothMusicLight")
         toys_inst = {
-            ButtonMusic: "<b>ButtonMusic toy</b> instructions: Press the button on the left to play music. Pull the handle on the right to turn on the light.",
-            HandleMusic: "<b>HandleMusic toy</b> instructions: Pull the handle on the right to play music. Press the button on the left to turn on the light.",
-            BothMusicLight: "<b>BothMusicLight toy</b> instructions: Pull the handle on the right AND press the button on the left to turn on the light and play music. The button press or handle pull on its own doesn’t produce any effect.",
+            ButtonMusic: "<b>ButtonMusic toy</b> instructions: Press the button on the right to play music. Pull the handle on the left to turn on the light. Doing both produces both effects.",
+            HandleMusic: "<b>HandleMusic toy</b> instructions: Pull the handle on the left to play music. Press the button on the right to turn on the light. Doing both produces both effects.",
+            BothMusicLight: "<b>BothMusicLight toy</b> instructions: Pull the handle on the left AND press the button on the right to turn on the light and play music at the same time. The button press or handle pull on its own doesn’t produce any effect.",
         };
-
-        //            if (toys_not_both[0] == "buttonMusic")
 
         if (exp.toy_inst_num == 1) {
             $(`#music_box_instructions`).html(
-                '<p class="action-text">These are the instructions for <b>the ' + toys_not_both[0] + ' toy</b>.</p>' +
+                '<p class="action-text" align="center">These are the instructions for <b>the ' + toys_not_both[0] + ' toy</b>.</p>' +
                 '<img src="imgs/' + toys_not_both[0] + '.jpeg" height="200" width="300">' +
                 '<p class="action-text"><i>' + toys_inst[toys_not_both[0]] + '</i></p>')
         } else if (exp.toy_inst_num == 2) {
             $(`#music_box_instructions`).html(
-                '<p class="action-text">These are the instructions for <b>the ' + toys_not_both[1] + ' toy</b>.</p>' +
+                '<p class="action-text" align="center">These are the instructions for <b>the ' + toys_not_both[1] + ' toy</b>.</p>' +
                 '<img src="imgs/' + toys_not_both[1] + '.jpeg" height="200" width="300">' +
                 '<p class="action-text"><i>' + toys_inst[toys_not_both[1]] + '</i></p>')
         } else if (exp.toy_inst_num == 3) {
             $(`#music_box_instructions`).html(
-                '<p class="action-text">These are the instructions for <b>the BothMusicLight toy</b>.</p>' +
+                '<p class="action-text" align="center">These are the instructions for <b>the BothMusicLight toy</b>.</p>' +
                 '<img src="imgs/BothMusicLight.jpeg" height="200" width="300">' +
                 '<p class="action-text"><i>' + toys_inst["BothMusicLight"] + '</i></p>')
         };
-
-        // create the randomized radio buttons
-//        rand_hyp_labels = shuffle(action_labels);
-//        exp.actions_buttons_order = exp.rand_hyp_labels; // store order in the experiment object
 
         for (i = 0; i < exp.rand_action_labels.length; i++) {
             action_label = exp.rand_action_labels[i];
 
             // check if there is whitespace handles the case of  "both purple and orange buttons"
-            if (action_label.includes("and")) {
-                button_html = '<span><label class="btn btn-default"><input type="radio" name="intervention" value="both"/>' + action_label + '</label></span>'
+            if (action_label.includes(" and ")) {
+                initial_html = '<span><label class="btn btn-default"><input type="radio" name="initial_action1" value="both"/>' + action_label + '</label></span>'
             } else if (action_label.includes("button")) {
-                button_html = '<span><label class="btn btn-default"><input type="radio" name="intervention" value="button"/>' + action_label + '</label></span>'
+                initial_html = '<span><label class="btn btn-default"><input type="radio" name="initial_action1" value="button"/>' + action_label + '</label></span>'
             } else if (action_label.includes("handle")) {
-                button_html = '<span><label class="btn btn-default"><input type="radio" name="intervention" value="handle"/>' + action_label + '</label></span>'
+                initial_html = '<span><label class="btn btn-default"><input type="radio" name="initial_action1" value="handle"/>' + action_label + '</label></span>'
             }
 
-            $(`#initial1_button_` + i.toString()).html(button_html);
-            $(`#initial2_button_` + i.toString()).html(button_html);
+            $(`#initial1_button_` + i.toString()).html(initial_html);
+            
+            if (action_label.includes(" and ")) {
+                initial_html = '<span><label class="btn btn-default"><input type="radio" name="initial_action2" value="both"/>' + action_label + '</label></span>'
+            } else if (action_label.includes("button")) {
+                initial_html = '<span><label class="btn btn-default"><input type="radio" name="initial_action2" value="button"/>' + action_label + '</label></span>'
+            } else if (action_label.includes("handle")) {
+                initial_html = '<span><label class="btn btn-default"><input type="radio" name="initial_action2" value="handle"/>' + action_label + '</label></span>'
+            }
+            $(`#initial2_button_` + i.toString()).html(initial_html);
         }
 
-        $('#initial_question1').html('How do you make this toy <b>' + effect_labels[0] + '</b>?');
-        $('#initial_question2').html('How do you make this toy <b>' + effect_labels[1] + '</b>?');
+        $('#initial_question1').html('How would you make this toy <b>' + effect_labels[0] + '</b>?');
+        $('#initial_question2').html('How would you make this toy <b>' + effect_labels[1] + '</b>?');
 
 
         showSlide('toy-instructions')
@@ -191,9 +194,12 @@ exp = {
 
     initial_check_close: function (response) {
         // store the end time of actions trial
-        exp.action_trial_end_time = new Date();
+//        exp.initial_trial_end_time = new Date();
         // store the action choice
-        exp.action_response = response;
+        response1 = response[0];
+        response2 = response[1];
+        exp.initial_response1.push(response1);
+        exp.initial_response2.push(response2);
         $("#initial_test_check").html('');
 
         // switch the hypothesis type to posterior
@@ -216,19 +222,23 @@ exp = {
     // Tests if the participant responded to action question
     initial_check: function () {
         // store response
-        response = $(`input:radio[name=intervention]:checked`).val()
+        response1 = $(`input:radio[name=initial_action1]:checked`).val()
+        response2 = $(`input:radio[name=initial_action2]:checked`).val()
 
         // if response field is empty, then throw an error message
-        if (typeof response == 'undefined') {
+        if (typeof response1 == 'undefined' | typeof response2 == 'undefined') {
             answer_error_message = '<font color="red"><b>Please select a response.</b></font>';
             $("#initial_test_check").html(answer_error_message);
         } else {
             //disable the radio buttons so user can't change answer while music is playing
-            $(`input:radio[name=intervention]`).attr('disabled', true)
+            $(`input:radio[name=initial_action1]`).attr('disabled', true)
+            $(`input:radio[name=initial_action2]`).attr('disabled', true)
             // create answer message
             answer_success_message = `<font color="green"><b>Congratulations! You made the toy play music.</b></font>`
             // clean up the response string and move on in the experiment
-            response_clean = response.toLowerCase().replace("/", "");
+            response_clean1 = response1.toLowerCase().replace("/", "");
+            response_clean2 = response2.toLowerCase().replace("/", "");
+            response_clean = [response_clean1, response_clean2]
             exp.initial_check_close(response_clean);
         };
     },
@@ -249,7 +259,7 @@ exp = {
             exp.hypotheses_slider_order_posterior = rand_slider_labels;
             hyp_text_html = "After performing your action, how likely do you think this toy is a ...";
         } else if (exp.hyp_type == "prior") {
-            hyp_text_html = "One day you're walking and you see your toy on the ground. <br>You pick it up and notice that it's missing its label. <br><br> How likely do you think this toy is a ...";
+            hyp_text_html = "Imagine that one of your toys was missing its label. <br><br> How likely do you think this toy is a ...";
             // store slider label order to link responses to hypothesis later on
             exp.hypotheses_slider_order_prior = rand_slider_labels;
         }
@@ -347,6 +357,7 @@ exp = {
     },
 
     actions_slide: function () {
+        window.scrollTo(0, 100);
         // hide music gif
         $(`#notes_gif_actions`).css('visibility', 'hidden')
         // show music box
@@ -359,8 +370,8 @@ exp = {
         // show action text based on condition assignment
         $("#goal_text_action").html(goal_html_action_slide)
         // create the randomized radio buttons
-//        rand_hyp_labels = shuffle(action_labels);
-//        exp.actions_buttons_order = rand_hyp_labels; // store order in the experiment object
+        //        rand_hyp_labels = shuffle(action_labels);
+        //        exp.actions_buttons_order = rand_hyp_labels; // store order in the experiment object
 
         // build up button html using a for loop
         for (i = 0; i < exp.rand_action_labels.length; i++) {

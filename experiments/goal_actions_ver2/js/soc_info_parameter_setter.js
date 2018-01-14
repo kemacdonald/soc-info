@@ -15,7 +15,7 @@ var numConditions = 3
 var slider_start_val = "50"
 
 try {
-    var filename = "soc_info_goals_pilotC";
+    var filename = "soc_info_goals_ver2_pilot";
     var condCounts = "1,25;2,25;3,25";
     var xmlHttp = null;
     xmlHttp = new XMLHttpRequest();
@@ -54,7 +54,7 @@ if(goal_condition == "learning") {
 } else {
     goal_text_html = `One day you are at your desk working and your boss walks by. He says, "That must be one of the new toys that you've been working on. How does it work?" <br><br>Unfortunately, you were in a rush when you built this particular toy and forgot to label it. <br><br>If you only had <b>one chance to impress your boss and show that you're competent</b>, which action would you want to take? <b>You will get a ${bonus_amount} for impressing your boss</b>.
 `
-    goal_html_action_slide = `Remember, you will receive a <b>${bonus_amount} bonus if you successfully impress your supervisor with a SINGLE action </b>. You will lose out on this bonus if your supervisor is not impressed.`    
+    goal_html_action_slide = `Remember, you will receive a <b>${bonus_amount} bonus if you successfully impress your supervisor with a SINGLE action </b>. You will lose out on this bonus if your supervisor is not impressed.`
 }
 
 // set up variables for later randomization

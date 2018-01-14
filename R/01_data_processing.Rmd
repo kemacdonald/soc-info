@@ -12,7 +12,8 @@ library(lubridate); library(magrittr); library(jsonlite); library(tidyverse); li
 ```
 
 ```{r}
-d_path <- "data/01_raw_data/goal_actions/pilotB/production-results"
+#d_path <- "data/01_raw_data/goal_actions/pilotB/production-results"
+d_path <- "data/01_raw_data/goal_actions_ver2/pilotA/sandbox-results/"
 ```
 
 ## Load raw json data
@@ -23,10 +24,13 @@ Write a function that reads the raw json, extacts the information we care about,
 # takes a list and extracts the information we care about
 json_to_df <- function(data_path, file) {
   d <- read_json(path = here(data_path, file))
+  d
+}
   
   data.frame(
     workerid = d$WorkerId, 
     condition = d$answers$goal_condition,
+     = d$answers$intial_response1 %>% unlist(),
     action_response = d$answers$action_response,
     prior_hypothesis = d$answers$hypotheses_slider_order_prior %>% unlist(),
     prior_beliefs = d$answers$prior_beliefs %>% unlist(),
@@ -53,7 +57,7 @@ Use purrr to map our read json function over all files in the raw data directory
 
 ```{r}
 files <- dir(here(d_path))
-df <- files %>% purrr::map_df(~ json_to_df(data_path = d_path, .)) 
+df <- files %>% purrr::map(~ json_to_df(data_path = d_path, .)) 
 ```
 
 ## Anonymize Turker ids. 

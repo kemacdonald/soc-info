@@ -19,9 +19,11 @@ exp = {
     // and therefore should not be affected by the decisions made by the experimental subject.
 
     // store manipulation check responses
-    initial_response1: [],
-    initial_response2: [],
-    
+    manip_check_music_response: [],
+    manip_check_light_response: [],
+    manip_check_order: [],
+    manip_check_effect_order: effect_labels,
+
     // store participant's intervention choice
     action_response: "",
     goal_condition: goal_condition,
@@ -144,16 +146,19 @@ exp = {
         };
 
         if (exp.toy_inst_num == 1) {
+          exp.manip_check_order.push(toys_not_both[0]);
             $(`#music_box_instructions`).html(
                 '<p class="action-text" align="center">These are the instructions for <b>the ' + toys_not_both[0] + ' toy</b>.</p>' +
                 '<img src="imgs/' + toys_not_both[0] + '.jpeg" height="200" width="300">' +
                 '<p class="action-text"><i>' + toys_inst[toys_not_both[0]] + '</i></p>')
-        } else if (exp.toy_inst_num == 2) {
-            $(`#music_box_instructions`).html(
-                '<p class="action-text" align="center">These are the instructions for <b>the ' + toys_not_both[1] + ' toy</b>.</p>' +
-                '<img src="imgs/' + toys_not_both[1] + '.jpeg" height="200" width="300">' +
-                '<p class="action-text"><i>' + toys_inst[toys_not_both[1]] + '</i></p>')
+              } else if (exp.toy_inst_num == 2) {
+                exp.manip_check_order.push(toys_not_both[1]);
+                $(`#music_box_instructions`).html(
+                  '<p class="action-text" align="center">These are the instructions for <b>the ' + toys_not_both[1] + ' toy</b>.</p>' +
+                  '<img src="imgs/' + toys_not_both[1] + '.jpeg" height="200" width="300">' +
+                  '<p class="action-text"><i>' + toys_inst[toys_not_both[1]] + '</i></p>')
         } else if (exp.toy_inst_num == 3) {
+          exp.manip_check_order.push("BothMusicLight");
             $(`#music_box_instructions`).html(
                 '<p class="action-text" align="center">These are the instructions for <b>the BothMusicLight toy</b>.</p>' +
                 '<img src="imgs/BothMusicLight.jpeg" height="200" width="300">' +
@@ -173,7 +178,7 @@ exp = {
             }
 
             $(`#initial1_button_` + i.toString()).html(initial_html);
-            
+
             if (action_label.includes(" and ")) {
                 initial_html = '<span><label class="btn btn-default"><input type="radio" name="initial_action2" value="both"/>' + action_label + '</label></span>'
             } else if (action_label.includes("button")) {
@@ -198,8 +203,8 @@ exp = {
         // store the action choice
         response1 = response[0];
         response2 = response[1];
-        exp.initial_response1.push(response1);
-        exp.initial_response2.push(response2);
+        exp.manip_check_music_response.push(response1);
+        exp.manip_check_light_response.push(response2);
         $("#initial_test_check").html('');
 
         // switch the hypothesis type to posterior

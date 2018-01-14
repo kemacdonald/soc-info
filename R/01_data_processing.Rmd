@@ -8,7 +8,8 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ```{r}
-library(lubridate); library(magrittr); library(jsonlite); library(tidyverse); library(here) 
+library(lubridate); library(magrittr); library(jsonlite); 
+library(tidyverse); library(here)
 ```
 
 ```{r}
@@ -24,13 +25,12 @@ Write a function that reads the raw json, extacts the information we care about,
 # takes a list and extracts the information we care about
 json_to_df <- function(data_path, file) {
   d <- read_json(path = here(data_path, file))
-  d
-}
-  
-  data.frame(
+  tibble(
     workerid = d$WorkerId, 
     condition = d$answers$goal_condition,
-     = d$answers$intial_response1 %>% unlist(),
+    music_check_response = d$answers$manip_check_music_response %>% unlist(),
+    light_check_response = d$answers$manip_check_light_response %>% unlist(),
+    manip_check_order = d$answers$manip_check_order %>% unlist(),
     action_response = d$answers$action_response,
     prior_hypothesis = d$answers$hypotheses_slider_order_prior %>% unlist(),
     prior_beliefs = d$answers$prior_beliefs %>% unlist(),
@@ -57,7 +57,13 @@ Use purrr to map our read json function over all files in the raw data directory
 
 ```{r}
 files <- dir(here(d_path))
-df <- files %>% purrr::map(~ json_to_df(data_path = d_path, .)) 
+df <- files %>% purrr::map_df(~ json_to_df(data_path = d_path, .)) 
+```
+
+Convert all strings to lower case.
+
+```{r}
+df %<>% mutate_if(is.character, str_to_lower)
 ```
 
 ## Anonymize Turker ids. 
@@ -73,6 +79,32 @@ df_wide <- left_join(df, df_anonymized, by = "workerid") %>%
 ```
 
 ## Clean up and variable creation
+
+Score the manipulation check.
+
+```{r}
+actions <- c("button", "handle", "both")
+
+# some string manipulation to get clean order variable
+manip_check <- df_wide %>% 
+  select(id, condition, contains("check")) %>% 
+  rowwise() %>% 
+  mutate(manip_check_order_action = str_sub(manip_check_order, 
+                                            start = 1, 
+                                            end = str_locate(manip_check_order, "music")[1] - 1)
+  )
+
+# score the manipulation check
+manip_check %<>% 
+  mutate(manip_check_score = ifelse(music_check_response == manip_check_order_action,
+                                    "correct", "incorrect")) %>% 
+  group_by(id) %>% 
+  mutate(pass_manip_check = ifelse(str_detect(manip_check_score, "incorrect"),
+                                              FALSE,
+                                              TRUE)) %>% 
+  select(id, condition, pass_manip_check) %>% 
+  unique()
+```
 
 Tidy up the data frame.
 
@@ -90,9 +122,9 @@ posterior <- df_wide %>%
          hypothesis = posterior_hypothesis)
 
 d_final <- bind_rows(prior, posterior) %>% 
-  mutate(slider_response_collapsed = ifelse(hypothesis == "Purple and Orange", 
-                                            "both_buttons", 
-                                            "single_button"),
+  mutate(slider_response_type_collapsed = ifelse(hypothesis == "bothmusiclight", 
+                                            "both_actions", 
+                                            "single_action"),
          slider_value = as.integer(slider_value))
 ```
 
@@ -109,50 +141,64 @@ Create variable that collapses across both single button responses.
 
 ```{r}
 d_final_collapsed <- d_final %>% 
-  group_by(id, hypothesis_type, slider_response_collapsed) %>% 
+  group_by(id, hypothesis_type, slider_response_type_collapsed) %>% 
   mutate(slider_value_2 = sum(slider_value)) %>% 
-  select(id, hypothesis_type, slider_response_collapsed, slider_value_2, condition) %>% 
+  select(id, hypothesis_type, slider_response_type_collapsed, slider_value_2, condition) %>% 
   unique() %>% 
   group_by(id, hypothesis_type, condition) %>% 
   mutate(slider_value_norm_2 = round(slider_value_2 / sum(slider_value_2), 3)) %>% 
-  select(id, hypothesis_type, condition, slider_response_collapsed, slider_value_norm_2)
+  select(id, hypothesis_type, condition, slider_response_type_collapsed, slider_value_norm_2)
 ```
 
 Add the second normalized slider variable to the belief data frame.
 
 ```{r}
-d_final %<>% left_join(., d_final_collapsed)
+d_final %<>% left_join(., d_final_collapsed,
+                       by = c("id", "condition", "hypothesis_type",
+                              "slider_response_type_collapsed"))
 ```
 
 Add participant info.
 
 ```{r}
 d_final %<>% left_join(., 
-                         select(df_wide, id, condition, browser:action_trial_time) %>% unique(),
-                         by = c("id", "condition"))
+                       select(df_wide, id, condition, 
+                              browser:action_trial_time) %>% 
+                         unique(),
+                       by = c("id", "condition"))
+```
+
+Add manipulation check info.
+
+```{r}
+d_final %<>% left_join(., manip_check, by = c("id", "condition"))
 ```
 
 Now create a collaposed action response variable and add to the beliefs data frame
 
 ```{r}
-df_wide %<>% mutate(action_response_collapsed = ifelse(action_response == "orange_and_purple", 
-                                                       "both_buttons", 
-                                                       "single_button"))
+df_wide %<>% mutate(action_response_collapsed = ifelse(action_response == "both", 
+                                                       "both_actions", 
+                                                       "single_action"))
 ```
 
 Now join everything together and create some factor variables in the order we want for plotting.
 
 ```{r}
 d_final %<>%
-  left_join(., select(df_wide, id, condition, action_response_collapsed, action_response) %>% unique(),
+  left_join(., select(df_wide, id, condition, 
+                      action_response_collapsed, 
+                      action_response) %>% 
+              unique(),
             by = c("id", "condition")) %>% 
   mutate(hypothesis_type = factor(hypothesis_type) %>% fct_rev(),
-         slider_response_collapsed = factor(slider_response_collapsed) %>% fct_rev()) 
+         slider_response_type_collapsed = factor(slider_response_type_collapsed) %>% fct_rev()) 
 ```
 
 ## Write to disk. 
 
 ```{r}
-write_csv(d_final, path = here("/data/02_tidy_data", "goal_actions_tidy_pilotB.csv"))
+write_csv(d_final, path = here("/data/02_tidy_data", 
+                               "goal_actions_ver2_tidy_pilotA.csv"))
 ```
 

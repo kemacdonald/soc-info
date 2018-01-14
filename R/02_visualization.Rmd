@@ -18,17 +18,18 @@ Read data.
 
 ```{r}
 d_path <- "data/02_tidy_data/"
-d <- read_csv(here(d_path, "goal_actions_tidy_pilotB.csv")) %>%
+d_file_name <- "goal_actions_ver2_tidy_pilotA.csv"
+
+d <- read_csv(here(d_path, d_file_name)) %>%
   mutate(hypothesis_type = relevel(factor(hypothesis_type), "prior"))
 ```
 
 ```{r}
 d %<>% 
   mutate(hypothesis_type = factor(hypothesis_type) %>% fct_rev(),
-         slider_response_collapsed = factor(slider_response_collapsed) %>% fct_rev(),
+         slider_response_type_collapsed = factor(slider_response_type_collapsed) %>% fct_rev(),
          action_response_collapsed = factor(action_response_collapsed) %>% fct_rev()) 
 ```
-
 
 ## Table of comments
 
@@ -62,9 +63,9 @@ Same plot but collapsing across the single button hypotheses.
 
 ```{r}
 d %>% 
-  group_by(hypothesis_type, condition, slider_response_collapsed) %>% 
+  group_by(hypothesis_type, condition, slider_response_type_collapsed) %>% 
   summarise(m = mean(slider_value_norm_2)) %>% 
-  ggplot(aes(x = slider_response_collapsed, y = m, fill = condition)) +
+  ggplot(aes(x = slider_response_type_collapsed, y = m, fill = condition)) +
   geom_bar(stat = "identity", width = 0.4, position = position_dodge()) +
   geom_hline(yintercept = 0.3, linetype = "dashed") +
   lims(y = c(0,1)) +
@@ -147,7 +148,6 @@ d %>%
   ggplot(aes(x = action_trial_time)) +
   geom_histogram() + 
   facet_wrap(~condition)
-  
 ```
 
 ## Plot belief change
@@ -157,7 +157,7 @@ d %>%
   ggplot(aes(x = hypothesis_type, y = slider_value_norm_2, color = condition)) +
   geom_line(aes(group = id), size = 1) + 
   geom_jitter(width = 0.03, size = 2) +
-  facet_wrap(~slider_response_collapsed) +
+  facet_wrap(~slider_response_type_collapsed) +
   lims(y = c(0,1)) +
   langcog::scale_color_solarized() +
   ggthemes::theme_few() +
@@ -173,7 +173,7 @@ d %>%
              linetype = action_response_collapsed)) +
   geom_line(aes(group = id), size = 0.5) + 
   geom_jitter(width = 0, size = 2) +
-  facet_grid(~slider_response_collapsed) +
+  facet_grid(~slider_response_type_collapsed) +
   lims(y = c(0,1)) +
   langcog::scale_color_solarized() +
   ggthemes::theme_few() +

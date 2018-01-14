@@ -411,7 +411,7 @@ exp = {
 
             // check if there is whitespace handles the case of  "both purple and orange buttons"
             //    	if(hasWhiteSpace(button_label)) {
-            if (action_label.includes("and")) {
+            if (action_label.includes(" and ")) {
                 button_html = '<span><label class="btn btn-default"><input type="radio" name="intervention" value="both"/>' + action_label + '</label></span>'
             } else if (action_label.includes("button")) {
                 button_html = '<span><label class="btn btn-default"><input type="radio" name="intervention" value="button"/>' + action_label + '</label></span>'

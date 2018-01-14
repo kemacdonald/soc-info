@@ -18,15 +18,13 @@ Read data.
 
 ```{r}
 d_path <- "data/02_tidy_data/"
-d_file_name <- "goal_actions_ver2_tidy_pilotA.csv"
-
-d <- read_csv(here(d_path, d_file_name)) %>%
-  mutate(hypothesis_type = relevel(factor(hypothesis_type), "prior"))
+d_file_name <- "goal_actions_ver2_tidy_pilot.csv"
+d <- read_csv(here(d_path, d_file_name)) 
 ```
 
 ```{r}
 d %<>% 
-  mutate(hypothesis_type = factor(hypothesis_type) %>% fct_rev(),
+  mutate(hypothesis_type = relevel(factor(hypothesis_type), "prior"),
          slider_response_type_collapsed = factor(slider_response_type_collapsed) %>% fct_rev(),
          action_response_collapsed = factor(action_response_collapsed) %>% fct_rev()) 
 ```
@@ -35,7 +33,7 @@ d %<>%
 
 ```{r}
 d %>% 
-  select(id, age, condition, about) %>% 
+  select(id, age, condition, about, comment) %>% 
   unique() %>% 
   arrange(condition) %>% 
   knitr::kable()
@@ -84,8 +82,7 @@ Plot counts of different action responses for the learning vs. performance goal 
 d %>% 
   select(condition, action_response, id) %>% 
   unique() %>% 
-  group_by(action_response, condition) %>% 
-  count() %>% 
+  count(action_response, condition) %>% 
   group_by(condition) %>% 
   mutate(prop = n / sum(n)) %>% 
   ggplot(aes(x = action_response, y = prop, fill = condition)) +
@@ -102,8 +99,7 @@ Plot the distribution using the collapsed action response variable.
 d %>% 
   select(condition, action_response_collapsed, id) %>% 
   unique() %>% 
-  group_by(action_response_collapsed, condition) %>% 
-  count() %>% 
+  count(action_response_collapsed, condition) %>% 
   group_by(condition) %>% 
   mutate(prop = n / sum(n)) %>% 
   ggplot(aes(x = action_response_collapsed, y = prop, fill = condition)) +
@@ -119,11 +115,9 @@ Make a table of the raw counts.
 d %>% 
   select(condition, action_response_collapsed, id) %>% 
   unique() %>% 
-  group_by(action_response_collapsed, condition) %>% 
-  count() %>% 
+  count(action_response_collapsed, condition) %>% 
   knitr::kable()
 ```
-
 
 ## Experiment time distributions
 
@@ -147,6 +141,7 @@ d %>%
   unique() %>% 
   ggplot(aes(x = action_trial_time)) +
   geom_histogram() + 
+  labs(x = c("time (sec)")) +
   facet_wrap(~condition)
 ```
 
@@ -154,10 +149,10 @@ d %>%
 
 ```{r}
 d %>% 
-  ggplot(aes(x = hypothesis_type, y = slider_value_norm_2, color = condition)) +
+  ggplot(aes(x = hypothesis_type, y = slider_value_normalized, color = condition)) +
   geom_line(aes(group = id), size = 1) + 
   geom_jitter(width = 0.03, size = 2) +
-  facet_wrap(~slider_response_type_collapsed) +
+  facet_wrap(~hypothesis) +
   lims(y = c(0,1)) +
   langcog::scale_color_solarized() +
   ggthemes::theme_few() +
@@ -168,12 +163,12 @@ Now as a function of which action participants chose
 
 ```{r}
 d %>% 
-  ggplot(aes(x = hypothesis_type, y = slider_value_norm_2, 
+  ggplot(aes(x = hypothesis_type, y = slider_value_normalized, 
              color = condition,
-             linetype = action_response_collapsed)) +
+             linetype = action_response)) +
   geom_line(aes(group = id), size = 0.5) + 
   geom_jitter(width = 0, size = 2) +
-  facet_grid(~slider_response_type_collapsed) +
+  facet_grid(~hypothesis) +
   lims(y = c(0,1)) +
   langcog::scale_color_solarized() +
   ggthemes::theme_few() +

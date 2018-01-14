@@ -108,29 +108,55 @@ exp = {
         } else if (slide_id == "toy_slide") {
             var audio_delay = 500 // ms
         }
-        setTimeout(function () {
-            window.scrollTo(0, 0);
-            myAudio.play(); // play sound
-            if (slide_id == "action_slide") {
-                $(`#notes_gif_actions`).css('visibility', 'visible')
-            } else {
-                $(`#notes_gif`).css('visibility', 'visible')
+
+        // this error handling code deals with a change in Safari which made user interaction required for starting audio
+        var promise = myAudio.play();
+
+        if (promise !== undefined) {
+              promise.catch(error => {
+                  // Auto-play was prevented, so we just show the visual GIF and advance the slide without playing music
+                 setTimeout(function () {
+                      if (slide_id == "action_slide") {
+                          $(`#notes_gif_actions`).css('visibility', 'visible')
+                      } else {
+                          $(`#notes_gif`).css('visibility', 'visible')
+                      }
+
+                      if (slide_id == "toy_slide") {
+                          exp.goals_slide();
+                      } else if (slide_id == "action_slide") {
+                          exp.hypotheses_slide();
+                      }
+                  }, audio_delay);
+
+              }).then(() => {
+                  // Auto-play started
+                  console.log("all good")
+                  // if we don't get a promise error, then execute the rest of the function
+                  setTimeout(function () {
+                      window.scrollTo(0, 0);
+                      myAudio.play(); // play sound
+                      if (slide_id == "action_slide") {
+                          $(`#notes_gif_actions`).css('visibility', 'visible')
+                      } else {
+                          $(`#notes_gif`).css('visibility', 'visible')
+                      }
+                  }, audio_delay);
+
+                  // this function checks that the music has ended
+                  // and then advances to either goal manipulation or posterior hypotheses slide depending on location in experiment
+                  myAudio.addEventListener("ended", function () {
+                      myAudio.currentTime = 0;
+
+                      if (slide_id == "toy_slide") {
+                          exp.goals_slide();
+                      } else if (slide_id == "action_slide") {
+                          exp.hypotheses_slide();
+                      }
+                  });
+              });
             }
-        }, audio_delay);
 
-        // this function checks that the music has ended
-        // and then advances to either goal manipulation or posterior hypotheses slide depending on location in experiment
-
-
-        myAudio.addEventListener("ended", function () {
-            myAudio.currentTime = 0;
-
-            if (slide_id == "toy_slide") {
-                exp.goals_slide();
-            } else if (slide_id == "action_slide") {
-                exp.hypotheses_slide();
-            }
-        });
 
     },
 

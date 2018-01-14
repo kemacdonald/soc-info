@@ -35,7 +35,55 @@ Learning takes place in social contexts.
 
 A simple case study of situations where people have to decide between information gain and self-presentation,
 
-# Model
+# Computational model
+
+Our model works under the same key assumption as that in recent computational models of social cognition: that people act approximately optimally given a utility function. In @yoon2017, the speaker’s total utility was represented as a weighted combination of informational and social utilities, reflecting a principled tradeoff between the two utilities. Similarly, we propose a model of a learner who considers different utilities and chooses to prioritize one over another. We consider three utilities: *learning*, *performance*, and *presentational*.
+
+First, the *learning utility* is represented by an OED model, which quantifies the *expected utility* of different information seeking actions. The set of queries is defined as $Q_1, Q_2, ..., Q_n = {Q}$. The expected utility of each query ($EU(Q)$) is a function of two factors: (1) the probability of obtaining a specific answer
+$P(a)$ weighted by (2) the usefulness of that answer for achieving the learning goal $U(a)$.
+
+$$EU(Q) = \sum_{a\in q}{P(a)U(a)}$$
+
+There are a variety of ways to define the usefulness function to score each answer (for a detailed analysis of different approaches, see @nelson2005). One standard method is to use *information gain*, which is defined as the change in the learner's overall uncertainty (difference in entoropy) before and after receiving an answer.
+
+$$ U_{learning} = U(a) = ent(H) - ent(H|a)$$
+
+Where $ent(H)$ is defined using Shannon entropy \footnote{Shannon entropy is a measure of unpredictability or amount of uncertainty in the learner's probability distribution over hypotheses. Intuitively, higher entropy distributions are more uncertain and harder to predict. For example, if the learner believes that all hypotheses are equally likely, then they are in a state of high uncertainty/entropy. In contrast, if the learner firmly believes in one hypothesis, then uncertainty/entropy is low.} @mackay2003, which provides a measure of the overall amount of uncertainty in the learner's beliefs about the candidate hypotheses. 
+
+$$ent(H) = -\sum_{a\in A}{P(h)log_2P(h)}$$
+
+The conditional entropy computation is the same, but takes into account the change in the learner's beliefs after seeing an answer.
+
+$$ ent(H|a) = -\sum_{h\in H}{P(h|a)logP(h|a)} $$
+
+To calculate the change in the learner's belief in a hypothesis $P(h|a)$, we use Bayes rule. 
+
+$$ P(h|a) = \frac{P(h)P(a|h)}{P(a)} $$ 
+
+The learner performs the expected utility computation for each query in the set of possible queries and picks the one that maximizes utility. In practice, the learner considers each possible answer, scores the answer with the usefulness function, and weights the score using the probability of getting that answer. 
+
+Second, the *performance utility* is the utility of successfully making the toy operate. Specifically within our current paradigm, the performance utility is the expected utility of music playing ($m$) given the learner's action $a$. 
+
+$$ U_{performance} = \ln(P_L(m | a)) $$
+When there is no observer present, the learner considers the tradeoff between the learning utility and performance utility, and he determines his action based on a weighted combination of the two utilities: 
+
+$$ U(a;\phi; obs = no) = \phi \cdot U_{learning} + (1-\phi) \cdot U_{performance} ,$$
+\noindent
+where $\phi$ is a mixture parameter governing the extent to which the learner prioritizes information gain over making the toy play music. 
+
+When there is another person present to observe the learner's action, this observer $O$ reasons about the competence $c$ of the learner $L$ which is equal to whether the learner was able to make the toy work.
+
+$$ P_O(c) \propto P_L(m | a)$$
+
+The learner thinks about how the observer infers the learner's competence, and the *presentational* utility then is based on maximizing the apparent competence inferred by the observer.
+
+$$ U_{presentation} = \ln(P_O(c)) $$
+Thus, when there is an observer present, the learner considers the tradeoff between the learning utility and presentational utility: 
+
+$$ U(m;a;\phi; obs = yes) = \phi \cdot U_{learning} + (1-\phi) \cdot U_{presentational}$$
+Based on the utility functions above, the learner ($L$) chooses his action $a$ approximately optimally (as per optimality parameter $\lambda$) given his goal weight and observer presence.
+
+$$ P_L(a | \phi, obs) \propto \exp(\lambda \cdot \mathbb{E}[U(a;\phi; obs)])$$
 
 # Experiment
 

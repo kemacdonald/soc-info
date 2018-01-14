@@ -1,0 +1,75 @@
+---
+title: "Learning in social context"
+bibliography: library.bib
+csl: apa6.csl
+document-params: "10pt, letterpaper"
+
+author-information: > 
+    \author{{\large \bf Erica J. Yoon}, {\large \bf Kyle MacDonald}, \and {\large \bf Mika Asaba} \\ \{ejyoon, kylem4, masaba\} @stanford.edu \\ Department of Psychology, Stanford University}
+
+abstract: 
+    "..."
+    
+keywords:
+    "Learning; social context; information gain; OED; self-presentation; goal tradeoff"
+    
+output: cogsci2016::cogsci_paper
+---
+
+```{r global_options, include=FALSE}
+rm(list=ls())
+knitr::opts_chunk$set(fig.width=3, fig.height=3, fig.crop = F, fig.pos = "tb", fig.path='figs/',
+                      echo=F, warning=F, cache=F, message=F, sanitize = T)
+```
+
+```{r, libraries}
+library(png)
+library(grid)
+library(ggplot2)
+library(xtable)
+```
+
+# Introduction
+
+Learning takes place in social contexts.
+
+A simple case study of situations where people have to decide between information gain and self-presentation,
+
+# Model
+
+# Experiment
+
+## Method
+
+### Participants
+
+FIXME participants with IP addresses in the United States were recruited on Amazon’s Mechanical Turk.
+
+### Stimuli and Design
+
+We asked participants to imagine they were children's toy developers. We presented three different toys that look very similar but each work in different ways, and provided instructions for them. *The ButtonMusic toy* instructions were: *"Press the button on the right to play music. Pull the handle on the left to turn on the light. Doing both produces both effects."* "*The HandleMusic toy* instuctions were: *"Pull the handle on the left to play music. Press the button on the right to turn on the light. Doing both produces both effects."* and "*the BothMusicLight toy* instuctions were: *"Pull the handle on the left AND press the button on the right to turn on the light and play music at the same time. The button press or handle pull on its own doesn’t produce any effect."* Each toy had a label showing its name.
+
+We presented a story to the participants that their boss motivated a goal the participants must achieve by acting on the toy. Importantly, the toy was missing its label, such that partcipants could not know whether the toy was a ButtonMusic, HandleMusic, or BothMusicLight toy. In the *learning* condition, the boss said "That must be one of the new toys that you've been working on. But it looks like you forgot to put on the label! Can you figure out whether this toy is a ButtonMusic toy, HandleMusic toy, or BothMusicLight toy?"; in the *performance* condition, the boss said "That must be one of the new toys that you've been working on. I want to hear the music it plays."; and in the *presentation* condition, the boss said "That must be one of the new toys that you've been working on. How does it work?" followed by the prompt "... you only had one chance to impress your boss and show that you're competent ..." Then we asked participants to select one action to try out on the toy: to "press the button", "pull the handle", or "press the button and pull the handle." Each participant was randomly assigned to one of three goal conditions, and shown a randomized order of actions to choose from.
+
+### Procedure
+
+Participants were first introduced to the task and shown a picture of a toy with labels on its parts. Then they read instructions for each of the three toys, after which they were asked what they would do to make the toy play music and to make it turn on the light, to make sure they understood the instructions. We then asked participants to rate prior likelihood that an unknown toy is a ButtonMusic toy, HandleMusic toy, or BothMusicLight toy. Participants read a scenario for one of the three goal conditions, and the following instruction: "If you only had one chance to try a SINGLE action to [goal], which action would you want to take? You will get a 10 cent bonus after submitting the HIT if you [goal]." After selecting a response out of three possible actions, the participants were asked again to rate the likelihood for which toy the unlabeled toy was. The experiment can be viewed at https://langcog.stanford.edu/expts/EJY/soc-info/goal_actions_ver2/soc_info_goals.html.
+
+# Results
+
+# Discussion 
+
+# Acknowledgements
+
+This work was supported by NSERC postgraduate doctoral scholarship PGSD3-454094-2014 to EJY ... FIXME.
+
+# References 
+
+```{r}
+# References will be generated automatically by Pandoc and included here.
+# The following code is some latex to format the bibliography. Do not remove it.
+```
+
+\setlength{\parindent}{-0.1in} 
+\setlength{\leftskip}{0.125in}
+\noindent

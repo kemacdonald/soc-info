@@ -22,13 +22,6 @@ d_file_name <- "goal_actions_ver2_tidy_pilot.csv"
 d <- read_csv(here(d_path, d_file_name)) 
 ```
 
-```{r}
-d %<>% 
-  mutate(hypothesis_type = relevel(factor(hypothesis_type), "prior"),
-         slider_response_type_collapsed = factor(slider_response_type_collapsed) %>% fct_rev(),
-         action_response_collapsed = factor(action_response_collapsed) %>% fct_rev()) 
-```
-
 ## Table of comments
 
 ```{r}
@@ -38,6 +31,12 @@ d %>%
   arrange(condition) %>% 
   knitr::kable()
 ```
+
+```{r}
+d %<>% mutate(hypothesis_type = factor(hypothesis_type) %>% fct_rev(),
+              hypothesis = factor(hypothesis) %>% fct_rev())
+```
+
 
 ## Prior and posterior beliefs
 
@@ -53,24 +52,8 @@ d %>%
   lims(y = c(0,1)) +
   scale_fill_grey() +
   ggthemes::theme_few() +
-  theme(legend.position = "top") +
-  facet_wrap(~hypothesis_type)
-```
-
-Same plot but collapsing across the single button hypotheses. 
-
-```{r}
-d %>% 
-  group_by(hypothesis_type, condition, slider_response_type_collapsed) %>% 
-  summarise(m = mean(slider_value_norm_2)) %>% 
-  ggplot(aes(x = slider_response_type_collapsed, y = m, fill = condition)) +
-  geom_bar(stat = "identity", width = 0.4, position = position_dodge()) +
-  geom_hline(yintercept = 0.3, linetype = "dashed") +
-  lims(y = c(0,1)) +
-  scale_fill_grey() +
-  ggthemes::theme_few() +
-  labs(x = "Hypothesis", y = "Beliefs") +
-  theme(legend.position = "top") +
+  theme(legend.position = "top",
+        axis.text.x = element_text(angle = 45, vjust = 0.5)) +
   facet_wrap(~hypothesis_type)
 ```
 
@@ -93,29 +76,13 @@ d %>%
   
 ```
 
-Plot the distribution using the collapsed action response variable.
-
-```{r}
-d %>% 
-  select(condition, action_response_collapsed, id) %>% 
-  unique() %>% 
-  count(action_response_collapsed, condition) %>% 
-  group_by(condition) %>% 
-  mutate(prop = n / sum(n)) %>% 
-  ggplot(aes(x = action_response_collapsed, y = prop, fill = condition)) +
-  geom_bar(stat = "identity", width = 0.4, position = position_dodge()) +
-  lims(y = c(0,1)) +
-  labs(y = "Prop. Participants", x = "Action Selected") +
-  scale_fill_grey()
-```
-
 Make a table of the raw counts.
 
 ```{r}
 d %>% 
-  select(condition, action_response_collapsed, id) %>% 
+  select(condition, action_response, id) %>% 
   unique() %>% 
-  count(action_response_collapsed, condition) %>% 
+  count(action_response, condition) %>% 
   knitr::kable()
 ```
 
@@ -159,7 +126,7 @@ d %>%
   theme(legend.position = "top")
 ```
 
-Now as a function of which action participants chose
+Now make the same plot, but as a function of which action participants chose
 
 ```{r}
 d %>% 

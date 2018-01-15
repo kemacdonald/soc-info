@@ -208,21 +208,21 @@ exp = {
 
             // check if there is whitespace handles the case of  "both purple and orange buttons"
             if (action_label.includes(" and ")) {
-                initial_html = '<span><label class="btn btn-default"><input type="radio" name="initial_action1" value="both"/>' + action_label + '</label></span>'
+                initial_html = '<span><label class="btn btn-default btn-action"><input type="radio" name="initial_action1" value="both"/>' + action_label + '</label></span>'
             } else if (action_label.includes("button")) {
-                initial_html = '<span><label class="btn btn-default"><input type="radio" name="initial_action1" value="button"/>' + action_label + '</label></span>'
+                initial_html = '<span><label class="btn btn-default btn-action"><input type="radio" name="initial_action1" value="button"/>' + action_label + '</label></span>'
             } else if (action_label.includes("handle")) {
-                initial_html = '<span><label class="btn btn-default"><input type="radio" name="initial_action1" value="handle"/>' + action_label + '</label></span>'
+                initial_html = '<span><label class="btn btn-default btn-action"><input type="radio" name="initial_action1" value="handle"/>' + action_label + '</label></span>'
             }
 
             $(`#initial1_button_` + i.toString()).html(initial_html);
 
             if (action_label.includes(" and ")) {
-                initial_html = '<span><label class="btn btn-default"><input type="radio" name="initial_action2" value="both"/>' + action_label + '</label></span>'
+                initial_html = '<span><label class="btn btn-default btn-action"><input type="radio" name="initial_action2" value="both"/>' + action_label + '</label></span>'
             } else if (action_label.includes("button")) {
-                initial_html = '<span><label class="btn btn-default"><input type="radio" name="initial_action2" value="button"/>' + action_label + '</label></span>'
+                initial_html = '<span><label class="btn btn-default btn-action"><input type="radio" name="initial_action2" value="button"/>' + action_label + '</label></span>'
             } else if (action_label.includes("handle")) {
-                initial_html = '<span><label class="btn btn-default"><input type="radio" name="initial_action2" value="handle"/>' + action_label + '</label></span>'
+                initial_html = '<span><label class="btn btn-default btn-action"><input type="radio" name="initial_action2" value="handle"/>' + action_label + '</label></span>'
             }
             $(`#initial2_button_` + i.toString()).html(initial_html);
         }
@@ -424,11 +424,11 @@ exp = {
             // check if there is whitespace handles the case of  "both purple and orange buttons"
             //    	if(hasWhiteSpace(button_label)) {
             if (action_label.includes(" and ")) {
-                button_html = '<span><label class="btn btn-default"><input type="radio" name="intervention" value="both"/>' + action_label + '</label></span>'
+                button_html = '<span><label class="btn btn-default btn-action"><input type="radio" name="intervention" value="both"/>' + action_label + '</label></span>'
             } else if (action_label.includes("button")) {
-                button_html = '<span><label class="btn btn-default"><input type="radio" name="intervention" value="button"/>' + action_label + '</label></span>'
+                button_html = '<span><label class="btn btn-default btn-action"><input type="radio" name="intervention" value="button"/>' + action_label + '</label></span>'
             } else if (action_label.includes("handle")) {
-                button_html = '<span><label class="btn btn-default"><input type="radio" name="intervention" value="handle"/>' + action_label + '</label></span>'
+                button_html = '<span><label class="btn btn-default btn-action"><input type="radio" name="intervention" value="handle"/>' + action_label + '</label></span>'
             }
 
             $(`#action_button_` + i.toString()).html(button_html);

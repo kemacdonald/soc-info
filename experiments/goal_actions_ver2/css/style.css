@@ -239,6 +239,10 @@ This stuff will vary by experiment.
   margin: 0 auto;
 }
 
+.btn-action {
+    text-align:left;
+}
+
 .block-text {
   width: 500px;
   text-align: justify;

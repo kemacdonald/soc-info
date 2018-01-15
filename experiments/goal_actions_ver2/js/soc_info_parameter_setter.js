@@ -96,12 +96,12 @@ for (i = 0; i < music_box.length; i++) {
 
 if (outcome == "music") {
     hypotheses_slider_labels = ["ButtonMusic", "HandleMusic", "BothMusicLight"]
-    action_labels = ["Press the button", "Pull the handle", "Press the button and pull the handle"]
+        action_labels = ["Press the button on its own", "Pull the handle on its own", "Press the button and pull the handle<br>at the same time"]
     effect_labels = ["play music", "turn on the light", "play music AND turn on the light"]
     label_inst = "LabelInst1.jpeg"
 } else {
     hypotheses_slider_labels = ["ButtonLight", "HandleLight", "BothLightMusic"]
-    action_labels = ["Press the button", "Pull the handle", "Press the button and pull the handle"]
+        action_labels = ["Press the button on its own", "Pull the handle on its own", "Press the button and pull the handle<br>at the same time"]
     effect_labels = ["turn on the light", "play music", "turn on the light AND play music"]
     label_inst = "LabelInst2.jpeg"
 

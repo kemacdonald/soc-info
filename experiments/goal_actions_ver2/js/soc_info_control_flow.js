@@ -70,7 +70,7 @@ exp = {
         // hide music gif
         $(`#notes_gif`).css('visibility', 'hidden')
         // show music box
-        $(`#music_box_intro`).html('<img src="imgs/LabelInst.jpeg" height="350" width="500">')
+        $(`#music_box_intro`).html('<img src="imgs/' + label_inst + '" height="350" width="500">')
         // store the start time of the experiment
         exp.exp_start_time = new Date();
         showSlide('toy_intro')
@@ -113,49 +113,49 @@ exp = {
         var promise = myAudio.play();
 
         if (promise !== undefined) {
-              promise.catch(error => {
-                  // Auto-play was prevented, so we just show the visual GIF and advance the slide without playing music
-                 setTimeout(function () {
-                      if (slide_id == "action_slide") {
-                          $(`#notes_gif_actions`).css('visibility', 'visible')
-                      } else {
-                          $(`#notes_gif`).css('visibility', 'visible')
-                      }
+            promise.catch(error => {
+                // Auto-play was prevented, so we just show the visual GIF and advance the slide without playing music
+                setTimeout(function () {
+                    if (slide_id == "action_slide") {
+                        $(`#notes_gif_actions`).css('visibility', 'visible')
+                    } else {
+                        $(`#notes_gif`).css('visibility', 'visible')
+                    }
 
-                      if (slide_id == "toy_slide") {
-                          exp.goals_slide();
-                      } else if (slide_id == "action_slide") {
-                          exp.hypotheses_slide();
-                      }
-                  }, audio_delay);
+                    if (slide_id == "toy_slide") {
+                        exp.goals_slide();
+                    } else if (slide_id == "action_slide") {
+                        exp.hypotheses_slide();
+                    }
+                }, audio_delay);
 
-              }).then(() => {
-                  // Auto-play started
-                  console.log("all good")
-                  // if we don't get a promise error, then execute the rest of the function
-                  setTimeout(function () {
-                      window.scrollTo(0, 0);
-                      myAudio.play(); // play sound
-                      if (slide_id == "action_slide") {
-                          $(`#notes_gif_actions`).css('visibility', 'visible')
-                      } else {
-                          $(`#notes_gif`).css('visibility', 'visible')
-                      }
-                  }, audio_delay);
+            }).then(() => {
+                // Auto-play started
+                console.log("all good")
+                // if we don't get a promise error, then execute the rest of the function
+                setTimeout(function () {
+                    window.scrollTo(0, 0);
+                    myAudio.play(); // play sound
+                    if (slide_id == "action_slide") {
+                        $(`#notes_gif_actions`).css('visibility', 'visible')
+                    } else {
+                        $(`#notes_gif`).css('visibility', 'visible')
+                    }
+                }, audio_delay);
 
-                  // this function checks that the music has ended
-                  // and then advances to either goal manipulation or posterior hypotheses slide depending on location in experiment
-                  myAudio.addEventListener("ended", function () {
-                      myAudio.currentTime = 0;
+                // this function checks that the music has ended
+                // and then advances to either goal manipulation or posterior hypotheses slide depending on location in experiment
+                myAudio.addEventListener("ended", function () {
+                    myAudio.currentTime = 0;
 
-                      if (slide_id == "toy_slide") {
-                          exp.goals_slide();
-                      } else if (slide_id == "action_slide") {
-                          exp.hypotheses_slide();
-                      }
-                  });
-              });
-            }
+                    if (slide_id == "toy_slide") {
+                        exp.goals_slide();
+                    } else if (slide_id == "action_slide") {
+                        exp.hypotheses_slide();
+                    }
+                });
+            });
+        }
 
 
     },
@@ -164,31 +164,43 @@ exp = {
         exp.toy_inst_num++;
         window.scrollTo(0, 0);
 
-        toys_not_both = remove(exp.rand_slider_labels, "BothMusicLight")
-        toys_inst = {
-            ButtonMusic: "<b>ButtonMusic toy</b> instructions: Press the button on the right to play music. Pull the handle on the left to turn on the light. Doing both produces both effects.",
-            HandleMusic: "<b>HandleMusic toy</b> instructions: Pull the handle on the left to play music. Press the button on the right to turn on the light. Doing both produces both effects.",
-            BothMusicLight: "<b>BothMusicLight toy</b> instructions: Pull the handle on the left AND press the button on the right to turn on the light and play music at the same time. The button press or handle pull on its own doesn’t produce any effect.",
+        if (outcome == "music") {
+            toys_not_both = remove(exp.rand_slider_labels, "BothMusicLight");
+            toy_both = "BothMusicLight"
+            toys_inst = {
+                ButtonMusic: "<b>ButtonMusic toy</b> instructions: Press the button on the right to play music. Pull the handle on the left to turn on the light. Doing both produces both effects at the same time.",
+                HandleMusic: "<b>HandleMusic toy</b> instructions: Pull the handle on the left to play music. Press the button on the right to turn on the light. Doing both produces both effects at the same time.",
+                BothMusicLight: "<b>BothMusicLight toy</b> instructions: Pull the handle on the left AND press the button on the right to play music and turn on the light at the same time. The button press or handle pull on its own doesn’t produce any effect."
+            }
+        } else {
+            toys_not_both = remove(exp.rand_slider_labels, "BothLightMusic");
+            toy_both = "BothLightMusic"
+            toys_inst = {
+                ButtonLight: "<b>ButtonLight toy</b> instructions: Press the button on the right to turn on the light. Pull the handle on the left to play music. Doing both produces both effects at the same time.",
+                HandleLight: "<b>HandleMusic toy</b> instructions: Pull the handle on the left to turn on the light. Press the button on the right to play music. Doing both produces both effects at the same time.",
+                BothLightMusic: "<b>BothLightMusic toy</b> instructions: Pull the handle on the left AND press the button on the right to turn on the light and play music at the same time. The button press or handle pull on its own doesn’t produce any effect."
+
+            }
         };
 
         if (exp.toy_inst_num == 1) {
-          exp.manip_check_order.push(toys_not_both[0]);
+            exp.manip_check_order.push(toys_not_both[0]);
             $(`#music_box_instructions`).html(
                 '<p class="action-text" align="center">These are the instructions for <b>the ' + toys_not_both[0] + ' toy</b>.</p>' +
                 '<img src="imgs/' + toys_not_both[0] + '.jpeg" height="200" width="300">' +
                 '<p class="action-text"><i>' + toys_inst[toys_not_both[0]] + '</i></p>')
-              } else if (exp.toy_inst_num == 2) {
-                exp.manip_check_order.push(toys_not_both[1]);
-                $(`#music_box_instructions`).html(
-                  '<p class="action-text" align="center">These are the instructions for <b>the ' + toys_not_both[1] + ' toy</b>.</p>' +
-                  '<img src="imgs/' + toys_not_both[1] + '.jpeg" height="200" width="300">' +
-                  '<p class="action-text"><i>' + toys_inst[toys_not_both[1]] + '</i></p>')
-        } else if (exp.toy_inst_num == 3) {
-          exp.manip_check_order.push("BothMusicLight");
+        } else if (exp.toy_inst_num == 2) {
+            exp.manip_check_order.push(toys_not_both[1]);
             $(`#music_box_instructions`).html(
-                '<p class="action-text" align="center">These are the instructions for <b>the BothMusicLight toy</b>.</p>' +
-                '<img src="imgs/BothMusicLight.jpeg" height="200" width="300">' +
-                '<p class="action-text"><i>' + toys_inst["BothMusicLight"] + '</i></p>')
+                '<p class="action-text" align="center">These are the instructions for <b>the ' + toys_not_both[1] + ' toy</b>.</p>' +
+                '<img src="imgs/' + toys_not_both[1] + '.jpeg" height="200" width="300">' +
+                '<p class="action-text"><i>' + toys_inst[toys_not_both[1]] + '</i></p>')
+        } else if (exp.toy_inst_num == 3) {
+            exp.manip_check_order.push(toy_both);
+            $(`#music_box_instructions`).html(
+                '<p class="action-text" align="center">These are the instructions for <b>the  ' + toy_both + ' toy</b>.</p>' +
+                '<img src="imgs/' + toy_both + '.jpeg" height="200" width="300">' +
+                '<p class="action-text"><i>' + toys_inst[toy_both] + '</i></p>')
         };
 
         for (i = 0; i < exp.rand_action_labels.length; i++) {
@@ -225,7 +237,7 @@ exp = {
 
     initial_check_close: function (response) {
         // store the end time of actions trial
-//        exp.initial_trial_end_time = new Date();
+        //        exp.initial_trial_end_time = new Date();
         // store the action choice
         response1 = response[0];
         response2 = response[1];
@@ -304,21 +316,21 @@ exp = {
 
             // check if there is whitespace handles the case of  "both purple and orange buttons"
             if (toy_label.includes("Both")) {
-                slider_html = `<td align="right"><img src="imgs/BothMusicLight.jpeg" height="120" width="150" align="right"></td><td><b>BothMusicLight toy</b></td>
+                slider_html = `<td align="right"><img src="imgs/` + hypotheses_slider_labels[2] + `.jpeg" height="120" width="150" align="right"></td><td><b>` + hypotheses_slider_labels[2] + ` toy</b></td>
           <td>
              <div id="slidecontainer">
                 <input type="range" min="1" max="100" value="50" class="slider" id="myRange3">
             </div>
           </td>`
             } else if (toy_label.includes("Button")) {
-                slider_html = `<td align="right"><img src="imgs/ButtonMusic.jpeg" height="120" width="150" align="right"></td><td><b>ButtonMusic toy</b></td>
+                slider_html = `<td align="right"><img src="imgs/` + hypotheses_slider_labels[0] + `.jpeg" height="120" width="150" align="right"></td><td><b>` + hypotheses_slider_labels[0] + ` toy</b></td>
     		<td>
     			<div id="slidecontainer">
     				<input type="range" min="1" max="100" value="50" class="slider" id="myRange1">
     			</div>
     		</td>`
             } else if (toy_label.includes("Handle")) {
-                slider_html = `<td align="right"><img src="imgs/HandleMusic.jpeg" height="120" width="150" align="right"></td><td><b>HandleMusic toy</b></td>
+                slider_html = `<td align="right"><img src="imgs/` + hypotheses_slider_labels[1] + `.jpeg" height="120" width="150" align="right"></td><td><b>` + hypotheses_slider_labels[1] + ` toy</b></td>
     		<td>
     			<div id="slidecontainer">
     				<input type="range" min="1" max="100" value="50" class="slider" id="myRange1">
@@ -438,12 +450,19 @@ exp = {
 
         // wait 500 ms and then display the sucess message
         setTimeout(function () {
+            window.scrollTo(0, 0);
             $("#actions_test_check").html(answer_success_message);
-        }, 700);
+            $(`#music_box_actions`).html('<img src="imgs/'+ response_outcome + '" height="200" width="300">')
+        }, 500);
 
+        if (response == "both" || outcome == "music") {
         // then play sound which also advances slide (a little hacky)
-        exp.play_music('action_slide');
-        //                    showSlide('action_slide');
+        exp.play_music('action_slide');            
+        } else {
+        setTimeout(function () {
+          exp.hypotheses_slide();
+        }, 2000);
+        }
     },
 
     final_slide: function () {
@@ -463,7 +482,16 @@ exp = {
             //disable the radio buttons so user can't change answer while music is playing
             $(`input:radio[name=intervention]`).attr('disabled', true)
             // create answer message
-            answer_success_message = `<font color="green"><b>Look, you made the toy play music!</b></font>`
+            if (response == "both") {
+                answer_success_message = `<font color="green"><b>Look, you made the toy play music and turn on the light!</b></font>`
+                response_outcome = "toyLight.jpeg"
+            } else if (outcome == "music") {
+                answer_success_message = `<font color="green"><b>Look, you made the toy play music!</b></font>`
+                response_outcome = "NoLabel.jpeg"
+            } else if (outcome == "light") {
+                answer_success_message = `<font color="green"><b>Look, you made the toy turn on the light!</b></font>`
+                response_outcome = "toyLight.jpeg"
+            }
             // clean up the response string and move on in the experiment
             response_clean = response.toLowerCase().replace("/", "");
             exp.actions_close(response_clean);

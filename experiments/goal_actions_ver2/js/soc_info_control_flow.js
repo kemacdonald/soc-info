@@ -177,7 +177,7 @@ exp = {
             toy_both = "BothLightMusic"
             toys_inst = {
                 ButtonLight: "<b>ButtonLight toy</b> instructions: Press the button on the right to turn on the light. Pull the handle on the left to play music. Doing both produces both effects at the same time.",
-                HandleLight: "<b>HandleMusic toy</b> instructions: Pull the handle on the left to turn on the light. Press the button on the right to play music. Doing both produces both effects at the same time.",
+                HandleLight: "<b>HandleLight toy</b> instructions: Pull the handle on the left to turn on the light. Press the button on the right to play music. Doing both produces both effects at the same time.",
                 BothLightMusic: "<b>BothLightMusic toy</b> instructions: Pull the handle on the left AND press the button on the right to turn on the light and play music at the same time. The button press or handle pull on its own doesn’t produce any effect."
 
             }

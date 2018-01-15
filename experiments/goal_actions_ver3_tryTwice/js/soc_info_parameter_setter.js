@@ -29,7 +29,7 @@ try {
 cond = cond.toString();
 
 // set up experiment variables based on condition
-//cond = "7";
+//cond = "3";
 switch (cond) {
     case "1":
         goal_condition = "learning";

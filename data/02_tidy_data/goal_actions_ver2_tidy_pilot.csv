@@ -1,523 +1,451 @@
-id,condition,slider_value,hypothesis,hypothesis_type,slider_response_type_collapsed,slider_value_normalized,slider_value_norm_2,browser,browser_width,browser_height,screen_width,screen_height,mobile_device,about,comment,age,gender,first_language,experiment_time,action_trial_time,pass_manip_check,action_response_collapsed,action_response
-1,performance,35,both,prior,both_actions,0.215,0.215,chrome,1289,648,1366,768,FALSE,i don't know,none,27,f,english,142.031,14.077,TRUE,both_actions,both
-1,performance,58,button,prior,single_action,0.356,0.785,chrome,1289,648,1366,768,FALSE,i don't know,none,27,f,english,142.031,14.077,TRUE,both_actions,both
-1,performance,70,handle,prior,single_action,0.429,0.785,chrome,1289,648,1366,768,FALSE,i don't know,none,27,f,english,142.031,14.077,TRUE,both_actions,both
-2,learning,36,handle,prior,single_action,0.324,0.658,chrome,1230,676,1280,800,FALSE,logic,no,35,f,english,140.12,29.647,TRUE,single_action,button
-2,learning,38,both,prior,both_actions,0.342,0.342,chrome,1230,676,1280,800,FALSE,logic,no,35,f,english,140.12,29.647,TRUE,single_action,button
-2,learning,37,button,prior,single_action,0.333,0.658,chrome,1230,676,1280,800,FALSE,logic,no,35,f,english,140.12,29.647,TRUE,single_action,button
-3,learning,73,handle,prior,single_action,0.503,0.848,chrome,1028,600,1093,615,FALSE,if i could figure out which music box it was.,no.,47,m,english,236.229,74.277,TRUE,single_action,button
-3,learning,50,button,prior,single_action,0.345,0.848,chrome,1028,600,1093,615,FALSE,if i could figure out which music box it was.,no.,47,m,english,236.229,74.277,TRUE,single_action,button
-3,learning,22,both,prior,both_actions,0.152,0.152,chrome,1028,600,1093,615,FALSE,if i could figure out which music box it was.,no.,47,m,english,236.229,74.277,TRUE,single_action,button
-4,learning,84,both,prior,both_actions,0.587,0.587,chrome,1082,600,1920,1080,FALSE,studying how people reason about cause and effect.,no problems.,30,male,english,255.826,31.907,TRUE,both_actions,both
-4,learning,31,button,prior,single_action,0.217,0.413,chrome,1082,600,1920,1080,FALSE,studying how people reason about cause and effect.,no problems.,30,male,english,255.826,31.907,TRUE,both_actions,both
-4,learning,28,handle,prior,single_action,0.196,0.413,chrome,1082,600,1920,1080,FALSE,studying how people reason about cause and effect.,no problems.,30,male,english,255.826,31.907,TRUE,both_actions,both
-5,learning,90,both,prior,both_actions,0.4,0.4,chrome,1533,769,1600,900,FALSE,i'm not sure,no,34,f,english,635.05,31.619,TRUE,both_actions,both
-5,learning,95,handle,prior,single_action,0.422,0.6,chrome,1533,769,1600,900,FALSE,i'm not sure,no,34,f,english,635.05,31.619,TRUE,both_actions,both
-5,learning,40,button,prior,single_action,0.178,0.6,chrome,1533,769,1600,900,FALSE,i'm not sure,no,34,f,english,635.05,31.619,TRUE,both_actions,both
-6,performance,100,handle,prior,single_action,0.333,0.667,chrome,1076,681,1280,800,FALSE,reasoning,no,38,m,english,159.828,20.912,TRUE,both_actions,both
-6,performance,100,both,prior,both_actions,0.333,0.333,chrome,1076,681,1280,800,FALSE,reasoning,no,38,m,english,159.828,20.912,TRUE,both_actions,both
-6,performance,100,button,prior,single_action,0.333,0.667,chrome,1076,681,1280,800,FALSE,reasoning,no,38,m,english,159.828,20.912,TRUE,both_actions,both
-7,presentation,44,both,prior,both_actions,0.344,0.344,chrome,1016,510,1366,768,FALSE,risk accessment bias,no comment,63,m,english,223.658,26.923,TRUE,both_actions,both
-7,presentation,42,button,prior,single_action,0.328,0.656,chrome,1016,510,1366,768,FALSE,risk accessment bias,no comment,63,m,english,223.658,26.923,TRUE,both_actions,both
-7,presentation,42,handle,prior,single_action,0.328,0.656,chrome,1016,510,1366,768,FALSE,risk accessment bias,no comment,63,m,english,223.658,26.923,TRUE,both_actions,both
-8,presentation,20,handle,prior,single_action,0.146,0.27,chrome,1176,588,1366,768,FALSE,logical guessing,no,49,f,english,357.264,53.916,TRUE,both_actions,both
-8,presentation,100,both,prior,both_actions,0.73,0.73,chrome,1176,588,1366,768,FALSE,logical guessing,no,49,f,english,357.264,53.916,TRUE,both_actions,both
-8,presentation,17,button,prior,single_action,0.124,0.27,chrome,1176,588,1366,768,FALSE,logical guessing,no,49,f,english,357.264,53.916,TRUE,both_actions,both
-9,learning,99,button,prior,single_action,0.339,0.675,chrome,1843,1080,1920,1200,FALSE,understanding how an action can make something work.,great survey and would love to work on others from you in the future. ,31,f,english,208.604,52.55,TRUE,single_action,button
-9,learning,98,handle,prior,single_action,0.336,0.675,chrome,1843,1080,1920,1200,FALSE,understanding how an action can make something work.,great survey and would love to work on others from you in the future. ,31,f,english,208.604,52.55,TRUE,single_action,button
-9,learning,95,both,prior,both_actions,0.325,0.325,chrome,1843,1080,1920,1200,FALSE,understanding how an action can make something work.,great survey and would love to work on others from you in the future. ,31,f,english,208.604,52.55,TRUE,single_action,button
-10,performance,34,handle,prior,single_action,0.318,0.673,chrome,1175,615,1366,768,FALSE,i have no idea.,no.,42,f,english,196.382,44.338,TRUE,single_action,handle
-10,performance,35,both,prior,both_actions,0.327,0.327,chrome,1175,615,1366,768,FALSE,i have no idea.,no.,42,f,english,196.382,44.338,TRUE,single_action,handle
-10,performance,38,button,prior,single_action,0.355,0.673,chrome,1175,615,1366,768,FALSE,i have no idea.,no.,42,f,english,196.382,44.338,TRUE,single_action,handle
-11,performance,75,both,prior,both_actions,0.346,0.346,chrome,1111,625,1366,768,FALSE,i'm not really sure.,no,40,f,english,400.412,28.651,FALSE,single_action,button
-11,performance,82,button,prior,single_action,0.378,0.654,chrome,1111,625,1366,768,FALSE,i'm not really sure.,no,40,f,english,400.412,28.651,FALSE,single_action,button
-11,performance,60,handle,prior,single_action,0.276,0.654,chrome,1111,625,1366,768,FALSE,i'm not really sure.,no,40,f,english,400.412,28.651,FALSE,single_action,button
-12,learning,50,button,prior,single_action,0.307,0.693,chrome,1870,600,1920,1080,FALSE,how we would go about coming to a definitive conclusion after figuring out the instructions to a toy.,"no other comment, other than i tried my best.",28,m,english,1709.973,436.087,TRUE,single_action,handle
-12,learning,63,handle,prior,single_action,0.387,0.693,chrome,1870,600,1920,1080,FALSE,how we would go about coming to a definitive conclusion after figuring out the instructions to a toy.,"no other comment, other than i tried my best.",28,m,english,1709.973,436.087,TRUE,single_action,handle
-12,learning,50,both,prior,both_actions,0.307,0.307,chrome,1870,600,1920,1080,FALSE,how we would go about coming to a definitive conclusion after figuring out the instructions to a toy.,"no other comment, other than i tried my best.",28,m,english,1709.973,436.087,TRUE,single_action,handle
-13,presentation,37,button,prior,single_action,0.333,0.667,chrome,1342,929,1920,1080,FALSE,if you're willing to gamble that it's not bothmusiclight and only trigger one of the inputs.,,27,m,english,219.206,22.69,TRUE,both_actions,both
-13,presentation,37,handle,prior,single_action,0.333,0.667,chrome,1342,929,1920,1080,FALSE,if you're willing to gamble that it's not bothmusiclight and only trigger one of the inputs.,,27,m,english,219.206,22.69,TRUE,both_actions,both
-13,presentation,37,both,prior,both_actions,0.333,0.333,chrome,1342,929,1920,1080,FALSE,if you're willing to gamble that it's not bothmusiclight and only trigger one of the inputs.,,27,m,english,219.206,22.69,TRUE,both_actions,both
-14,performance,59,button,prior,single_action,0.349,0.58,chrome,1470,759,1536,864,FALSE,how we learn,no,44,m,english,311.708,18.015,TRUE,both_actions,both
-14,performance,59,button,prior,single_action,0.349,0.58,chrome,1470,759,1536,864,FALSE,how we learn,no,44,m,english,311.708,18.015,FALSE,both_actions,both
-14,performance,39,handle,prior,single_action,0.231,0.58,chrome,1470,759,1536,864,FALSE,how we learn,no,44,m,english,311.708,18.015,TRUE,both_actions,both
-14,performance,39,handle,prior,single_action,0.231,0.58,chrome,1470,759,1536,864,FALSE,how we learn,no,44,m,english,311.708,18.015,FALSE,both_actions,both
-14,performance,71,both,prior,both_actions,0.42,0.42,chrome,1470,759,1536,864,FALSE,how we learn,no,44,m,english,311.708,18.015,TRUE,both_actions,both
-14,performance,71,both,prior,both_actions,0.42,0.42,chrome,1470,759,1536,864,FALSE,how we learn,no,44,m,english,311.708,18.015,FALSE,both_actions,both
-15,learning,67,handle,prior,single_action,0.307,0.711,chrome,1375,826,1440,900,FALSE,figuring out which design is more intuitive,,39,female,english,251.069,47.192,TRUE,single_action,button
-15,learning,63,both,prior,both_actions,0.289,0.289,chrome,1375,826,1440,900,FALSE,figuring out which design is more intuitive,,39,female,english,251.069,47.192,TRUE,single_action,button
-15,learning,88,button,prior,single_action,0.404,0.711,chrome,1375,826,1440,900,FALSE,figuring out which design is more intuitive,,39,female,english,251.069,47.192,TRUE,single_action,button
-16,learning,13,handle,prior,single_action,0.102,0.219,chrome,1749,883,1366,768,FALSE,accuracy of a job,,34,male,english,398.588,33.112,TRUE,both_actions,both
-16,learning,13,handle,prior,single_action,0.102,0.219,chrome,1749,883,1366,768,FALSE,accuracy of a job,,34,male,english,398.588,33.112,FALSE,both_actions,both
-16,learning,15,button,prior,single_action,0.117,0.219,chrome,1749,883,1366,768,FALSE,accuracy of a job,,34,male,english,398.588,33.112,TRUE,both_actions,both
-16,learning,15,button,prior,single_action,0.117,0.219,chrome,1749,883,1366,768,FALSE,accuracy of a job,,34,male,english,398.588,33.112,FALSE,both_actions,both
-16,learning,100,both,prior,both_actions,0.781,0.781,chrome,1749,883,1366,768,FALSE,accuracy of a job,,34,male,english,398.588,33.112,TRUE,both_actions,both
-16,learning,100,both,prior,both_actions,0.781,0.781,chrome,1749,883,1366,768,FALSE,accuracy of a job,,34,male,english,398.588,33.112,FALSE,both_actions,both
-17,learning,100,handle,prior,single_action,0.333,0.667,chrome,996,1228,1080,1920,FALSE,using logic and process of elimination to predict outcome,no comments,64,f,english,407.597,72.927,TRUE,single_action,button
-17,learning,100,both,prior,both_actions,0.333,0.333,chrome,996,1228,1080,1920,FALSE,using logic and process of elimination to predict outcome,no comments,64,f,english,407.597,72.927,TRUE,single_action,button
-17,learning,100,button,prior,single_action,0.333,0.667,chrome,996,1228,1080,1920,FALSE,using logic and process of elimination to predict outcome,no comments,64,f,english,407.597,72.927,TRUE,single_action,button
-18,learning,24,both,prior,both_actions,0.162,0.162,chrome,1091,703,1280,800,FALSE,i don't know,everything seemed to work well,33,f,english,228.034,50.725,TRUE,single_action,button
-18,learning,83,button,prior,single_action,0.561,0.838,chrome,1091,703,1280,800,FALSE,i don't know,everything seemed to work well,33,f,english,228.034,50.725,TRUE,single_action,button
-18,learning,41,handle,prior,single_action,0.277,0.838,chrome,1091,703,1280,800,FALSE,i don't know,everything seemed to work well,33,f,english,228.034,50.725,TRUE,single_action,button
-19,presentation,70,handle,prior,single_action,0.34,0.699,chrome,1635,787,1280,720,FALSE,not really sure,no,46,f,english,225.095,26.57,TRUE,both_actions,both
-19,presentation,74,button,prior,single_action,0.359,0.699,chrome,1635,787,1280,720,FALSE,not really sure,no,46,f,english,225.095,26.57,TRUE,both_actions,both
-19,presentation,62,both,prior,both_actions,0.301,0.301,chrome,1635,787,1280,720,FALSE,not really sure,no,46,f,english,225.095,26.57,TRUE,both_actions,both
-20,learning,89,handle,prior,single_action,0.332,0.627,chrome,1299,637,1366,768,FALSE,?,na,25,female,english,202.262,43.502,FALSE,both_actions,both
-20,learning,89,handle,prior,single_action,0.332,0.627,chrome,1299,637,1366,768,FALSE,?,na,25,female,english,202.262,43.502,TRUE,both_actions,both
-20,learning,100,both,prior,both_actions,0.373,0.373,chrome,1299,637,1366,768,FALSE,?,na,25,female,english,202.262,43.502,FALSE,both_actions,both
-20,learning,100,both,prior,both_actions,0.373,0.373,chrome,1299,637,1366,768,FALSE,?,na,25,female,english,202.262,43.502,TRUE,both_actions,both
-20,learning,79,button,prior,single_action,0.295,0.627,chrome,1299,637,1366,768,FALSE,?,na,25,female,english,202.262,43.502,FALSE,both_actions,both
-20,learning,79,button,prior,single_action,0.295,0.627,chrome,1299,637,1366,768,FALSE,?,na,25,female,english,202.262,43.502,TRUE,both_actions,both
-21,learning,35,button,prior,single_action,0.354,0.687,chrome,392,600,412,732,TRUE,not sure,nope,27,f,english,285.838,60.183,TRUE,single_action,button
-21,learning,33,handle,prior,single_action,0.333,0.687,chrome,392,600,412,732,TRUE,not sure,nope,27,f,english,285.838,60.183,TRUE,single_action,button
-21,learning,31,both,prior,both_actions,0.313,0.313,chrome,392,600,412,732,TRUE,not sure,nope,27,f,english,285.838,60.183,TRUE,single_action,button
-22,learning,77,handle,prior,single_action,0.326,0.576,chrome,1390,600,1440,900,FALSE,no sure,no,38,m,english,346.701,10.048,TRUE,single_action,handle
-22,learning,100,both,prior,both_actions,0.424,0.424,chrome,1390,600,1440,900,FALSE,no sure,no,38,m,english,346.701,10.048,TRUE,single_action,handle
-22,learning,59,button,prior,single_action,0.25,0.576,chrome,1390,600,1440,900,FALSE,no sure,no,38,m,english,346.701,10.048,TRUE,single_action,handle
-23,performance,52,both,prior,both_actions,0.338,0.338,chrome,1217,615,1600,900,FALSE,"i have no idea, some kind of reasoning ",,44,f,english ,168.33,17.239,FALSE,both_actions,both
-23,performance,52,both,prior,both_actions,0.338,0.338,chrome,1217,615,1600,900,FALSE,"i have no idea, some kind of reasoning ",,44,f,english ,168.33,17.239,TRUE,both_actions,both
-23,performance,51,handle,prior,single_action,0.331,0.662,chrome,1217,615,1600,900,FALSE,"i have no idea, some kind of reasoning ",,44,f,english ,168.33,17.239,FALSE,both_actions,both
-23,performance,51,handle,prior,single_action,0.331,0.662,chrome,1217,615,1600,900,FALSE,"i have no idea, some kind of reasoning ",,44,f,english ,168.33,17.239,TRUE,both_actions,both
-23,performance,51,button,prior,single_action,0.331,0.662,chrome,1217,615,1600,900,FALSE,"i have no idea, some kind of reasoning ",,44,f,english ,168.33,17.239,FALSE,both_actions,both
-23,performance,51,button,prior,single_action,0.331,0.662,chrome,1217,615,1600,900,FALSE,"i have no idea, some kind of reasoning ",,44,f,english ,168.33,17.239,TRUE,both_actions,both
-24,learning,81,both,prior,both_actions,0.379,0.379,chrome,1357,777,1280,800,FALSE,not too sure exactly. ,everything worked and was interesting. thank you!,33,male,english,208.032,42.273,TRUE,single_action,button
-24,learning,65,button,prior,single_action,0.304,0.621,chrome,1357,777,1280,800,FALSE,not too sure exactly. ,everything worked and was interesting. thank you!,33,male,english,208.032,42.273,TRUE,single_action,button
-24,learning,68,handle,prior,single_action,0.318,0.621,chrome,1357,777,1280,800,FALSE,not too sure exactly. ,everything worked and was interesting. thank you!,33,male,english,208.032,42.273,TRUE,single_action,button
-25,presentation,44,button,prior,single_action,0.326,0.667,firefox,1533,600,1600,900,FALSE,how people make estimates based on only certain information.,"no, i do not.",45,f,english,306.109,25.35,TRUE,both_actions,both
-25,presentation,45,both,prior,both_actions,0.333,0.333,firefox,1533,600,1600,900,FALSE,how people make estimates based on only certain information.,"no, i do not.",45,f,english,306.109,25.35,TRUE,both_actions,both
-25,presentation,46,handle,prior,single_action,0.341,0.667,firefox,1533,600,1600,900,FALSE,how people make estimates based on only certain information.,"no, i do not.",45,f,english,306.109,25.35,TRUE,both_actions,both
-26,presentation,33,button,prior,single_action,0.314,0.638,chrome,1299,637,1366,768,FALSE,i think that this task was about using logic to narrow down options to the most likely option,thanks for the opportunity to participate and good luck with your research!,51,m,english,204.262,17.502,TRUE,both_actions,both
-26,presentation,34,handle,prior,single_action,0.324,0.638,chrome,1299,637,1366,768,FALSE,i think that this task was about using logic to narrow down options to the most likely option,thanks for the opportunity to participate and good luck with your research!,51,m,english,204.262,17.502,TRUE,both_actions,both
-26,presentation,38,both,prior,both_actions,0.362,0.362,chrome,1299,637,1366,768,FALSE,i think that this task was about using logic to narrow down options to the most likely option,thanks for the opportunity to participate and good luck with your research!,51,m,english,204.262,17.502,TRUE,both_actions,both
-27,learning,100,handle,prior,single_action,0.333,0.667,chrome,1853,974,1920,1080,FALSE,understanding instructions,no,25,f,english,109.051,22.35,FALSE,single_action,button
-27,learning,100,handle,prior,single_action,0.333,0.667,chrome,1853,974,1920,1080,FALSE,understanding instructions,no,25,f,english,109.051,22.35,TRUE,single_action,button
-27,learning,100,button,prior,single_action,0.333,0.667,chrome,1853,974,1920,1080,FALSE,understanding instructions,no,25,f,english,109.051,22.35,FALSE,single_action,button
-27,learning,100,button,prior,single_action,0.333,0.667,chrome,1853,974,1920,1080,FALSE,understanding instructions,no,25,f,english,109.051,22.35,TRUE,single_action,button
-27,learning,100,both,prior,both_actions,0.333,0.333,chrome,1853,974,1920,1080,FALSE,understanding instructions,no,25,f,english,109.051,22.35,FALSE,single_action,button
-27,learning,100,both,prior,both_actions,0.333,0.333,chrome,1853,974,1920,1080,FALSE,understanding instructions,no,25,f,english,109.051,22.35,TRUE,single_action,button
-28,presentation,20,both,prior,both_actions,0.159,0.159,chrome,1837,922,1920,1080,FALSE,perceptions,interesting,39,f,english,373.283,34.581,TRUE,both_actions,both
-28,presentation,8,button,prior,single_action,0.063,0.841,chrome,1837,922,1920,1080,FALSE,perceptions,interesting,39,f,english,373.283,34.581,TRUE,both_actions,both
-28,presentation,98,handle,prior,single_action,0.778,0.841,chrome,1837,922,1920,1080,FALSE,perceptions,interesting,39,f,english,373.283,34.581,TRUE,both_actions,both
-29,learning,89,handle,prior,single_action,0.809,0.918,chrome,1150,850,1280,800,FALSE,logic,n/a,27,m,english,321.476,175.022,TRUE,single_action,button
-29,learning,9,both,prior,both_actions,0.082,0.082,chrome,1150,850,1280,800,FALSE,logic,n/a,27,m,english,321.476,175.022,TRUE,single_action,button
-29,learning,12,button,prior,single_action,0.109,0.918,chrome,1150,850,1280,800,FALSE,logic,n/a,27,m,english,321.476,175.022,TRUE,single_action,button
-30,presentation,47,handle,prior,single_action,0.318,0.993,chrome,1680,885,1920,1080,FALSE,i'm not entirely certain,"no further comment, at this time",34,m,english,131.613,20.457,TRUE,single_action,button
-30,presentation,100,button,prior,single_action,0.676,0.993,chrome,1680,885,1920,1080,FALSE,i'm not entirely certain,"no further comment, at this time",34,m,english,131.613,20.457,TRUE,single_action,button
-30,presentation,1,both,prior,both_actions,0.007,0.007,chrome,1680,885,1920,1080,FALSE,i'm not entirely certain,"no further comment, at this time",34,m,english,131.613,20.457,TRUE,single_action,button
-31,performance,98,handle,prior,single_action,0.45,0.541,firefox,1199,869,1280,1024,FALSE,"i am not sure, maybe how we read directions and apply them.",no,63,f,english,249.862,14.876,TRUE,single_action,handle
-31,performance,100,both,prior,both_actions,0.459,0.459,firefox,1199,869,1280,1024,FALSE,"i am not sure, maybe how we read directions and apply them.",no,63,f,english,249.862,14.876,TRUE,single_action,handle
-31,performance,20,button,prior,single_action,0.092,0.541,firefox,1199,869,1280,1024,FALSE,"i am not sure, maybe how we read directions and apply them.",no,63,f,english,249.862,14.876,TRUE,single_action,handle
-32,performance,54,handle,prior,single_action,0.342,0.677,chrome,340,600,360,640,TRUE,paying attention and understanding directions,"no, it worked fine. ",35,m,english,200.79,24.538,TRUE,both_actions,both
-32,performance,53,button,prior,single_action,0.335,0.677,chrome,340,600,360,640,TRUE,paying attention and understanding directions,"no, it worked fine. ",35,m,english,200.79,24.538,TRUE,both_actions,both
-32,performance,51,both,prior,both_actions,0.323,0.323,chrome,340,600,360,640,TRUE,paying attention and understanding directions,"no, it worked fine. ",35,m,english,200.79,24.538,TRUE,both_actions,both
-33,performance,35,handle,prior,single_action,0.212,0.685,chrome,1128,932,2048,1152,FALSE,how people understand the workings of systems.,no,32,m,english,166.953,14.36,TRUE,both_actions,both
-33,performance,78,button,prior,single_action,0.473,0.685,chrome,1128,932,2048,1152,FALSE,how people understand the workings of systems.,no,32,m,english,166.953,14.36,TRUE,both_actions,both
-33,performance,52,both,prior,both_actions,0.315,0.315,chrome,1128,932,2048,1152,FALSE,how people understand the workings of systems.,no,32,m,english,166.953,14.36,TRUE,both_actions,both
-34,performance,56,button,prior,single_action,0.275,0.578,chrome,1636,828,1366,768,FALSE,logical thinking/reading comprehension,,30,m,english,121.112,15.517,TRUE,both_actions,both
-34,performance,62,handle,prior,single_action,0.304,0.578,chrome,1636,828,1366,768,FALSE,logical thinking/reading comprehension,,30,m,english,121.112,15.517,TRUE,both_actions,both
-34,performance,86,both,prior,both_actions,0.422,0.422,chrome,1636,828,1366,768,FALSE,logical thinking/reading comprehension,,30,m,english,121.112,15.517,TRUE,both_actions,both
-35,learning,100,both,prior,both_actions,0.98,0.98,chrome,1299,675,1366,768,FALSE,figuring out a music box toy,everything worked great,37,f,english,229.413,34.973,TRUE,both_actions,both
-35,learning,1,handle,prior,single_action,0.01,0.02,chrome,1299,675,1366,768,FALSE,figuring out a music box toy,everything worked great,37,f,english,229.413,34.973,TRUE,both_actions,both
-35,learning,1,button,prior,single_action,0.01,0.02,chrome,1299,675,1366,768,FALSE,figuring out a music box toy,everything worked great,37,f,english,229.413,34.973,TRUE,both_actions,both
-36,presentation,100,button,prior,single_action,0.422,0.844,chrome,1217,615,1600,900,FALSE,"i think it had something to do with logic, like, possibilites and exclusions.","this was fun. it worked fine, and the music and graphic were nice.",50,f,english,267.243,26.484,TRUE,both_actions,both
-36,presentation,100,handle,prior,single_action,0.422,0.844,chrome,1217,615,1600,900,FALSE,"i think it had something to do with logic, like, possibilites and exclusions.","this was fun. it worked fine, and the music and graphic were nice.",50,f,english,267.243,26.484,TRUE,both_actions,both
-36,presentation,37,both,prior,both_actions,0.156,0.156,chrome,1217,615,1600,900,FALSE,"i think it had something to do with logic, like, possibilites and exclusions.","this was fun. it worked fine, and the music and graphic were nice.",50,f,english,267.243,26.484,TRUE,both_actions,both
-37,performance,82,both,prior,both_actions,0.48,0.48,chrome,1022,600,1088,615,FALSE,i don't know.,no issues.,35,f,english,560.767,37.198,TRUE,both_actions,both
-37,performance,25,handle,prior,single_action,0.146,0.52,chrome,1022,600,1088,615,FALSE,i don't know.,no issues.,35,f,english,560.767,37.198,TRUE,both_actions,both
-37,performance,64,button,prior,single_action,0.374,0.52,chrome,1022,600,1088,615,FALSE,i don't know.,no issues.,35,f,english,560.767,37.198,TRUE,both_actions,both
-38,learning,100,button,prior,single_action,0.333,0.667,firefox,1533,739,1600,900,FALSE,reasoning,no,32,f,english,120.042,13.586,TRUE,both_actions,both
-38,learning,100,handle,prior,single_action,0.333,0.667,firefox,1533,739,1600,900,FALSE,reasoning,no,32,f,english,120.042,13.586,TRUE,both_actions,both
-38,learning,100,both,prior,both_actions,0.333,0.333,firefox,1533,739,1600,900,FALSE,reasoning,no,32,f,english,120.042,13.586,TRUE,both_actions,both
-39,performance,29,both,prior,both_actions,0.177,0.177,chrome,1853,987,1920,1080,FALSE,seeing which toy music box the consumer would chose.,none.,1991,m,english,360.3,75.609,TRUE,single_action,button
-39,performance,64,handle,prior,single_action,0.39,0.823,chrome,1853,987,1920,1080,FALSE,seeing which toy music box the consumer would chose.,none.,1991,m,english,360.3,75.609,TRUE,single_action,button
-39,performance,71,button,prior,single_action,0.433,0.823,chrome,1853,987,1920,1080,FALSE,seeing which toy music box the consumer would chose.,none.,1991,m,english,360.3,75.609,TRUE,single_action,button
-40,performance,83,handle,prior,single_action,0.329,0.659,chrome,1174,925,1920,1080,FALSE,problem solving,all worked fine!,33,f,english,217.813,38.743,TRUE,both_actions,both
-40,performance,83,button,prior,single_action,0.329,0.659,chrome,1174,925,1920,1080,FALSE,problem solving,all worked fine!,33,f,english,217.813,38.743,TRUE,both_actions,both
-40,performance,86,both,prior,both_actions,0.341,0.341,chrome,1174,925,1920,1080,FALSE,problem solving,all worked fine!,33,f,english,217.813,38.743,TRUE,both_actions,both
-41,performance,53,button,prior,single_action,0.338,0.669,chrome,1299,637,1366,768,FALSE,logic,no,36,f,english,250.661,76.54,TRUE,both_actions,both
-41,performance,52,both,prior,both_actions,0.331,0.331,chrome,1299,637,1366,768,FALSE,logic,no,36,f,english,250.661,76.54,TRUE,both_actions,both
-41,performance,52,handle,prior,single_action,0.331,0.669,chrome,1299,637,1366,768,FALSE,logic,no,36,f,english,250.661,76.54,TRUE,both_actions,both
-42,presentation,78,handle,prior,single_action,0.305,0.609,chrome,1299,637,1366,768,FALSE,not sure,no,57,male,english,213.477,43.363,TRUE,both_actions,both
-42,presentation,78,button,prior,single_action,0.305,0.609,chrome,1299,637,1366,768,FALSE,not sure,no,57,male,english,213.477,43.363,TRUE,both_actions,both
-42,presentation,100,both,prior,both_actions,0.391,0.391,chrome,1299,637,1366,768,FALSE,not sure,no,57,male,english,213.477,43.363,TRUE,both_actions,both
-43,presentation,100,button,prior,single_action,0.333,0.667,firefox,1299,635,1366,768,FALSE,i'm not sure,no,27,m,english,297.117,32.24,TRUE,both_actions,both
-43,presentation,100,handle,prior,single_action,0.333,0.667,firefox,1299,635,1366,768,FALSE,i'm not sure,no,27,m,english,297.117,32.24,TRUE,both_actions,both
-43,presentation,100,both,prior,both_actions,0.333,0.333,firefox,1299,635,1366,768,FALSE,i'm not sure,no,27,m,english,297.117,32.24,TRUE,both_actions,both
-44,performance,100,both,prior,both_actions,0.667,0.667,chrome,1299,637,1366,768,FALSE,chices,no,49,f,english,303.203,29.915,TRUE,both_actions,both
-44,performance,26,handle,prior,single_action,0.173,0.333,chrome,1299,637,1366,768,FALSE,chices,no,49,f,english,303.203,29.915,TRUE,both_actions,both
-44,performance,24,button,prior,single_action,0.16,0.333,chrome,1299,637,1366,768,FALSE,chices,no,49,f,english,303.203,29.915,TRUE,both_actions,both
-45,performance,70,both,prior,both_actions,0.446,0.446,firefox,1299,600,1366,768,FALSE,memory??,no,69,f,english,305.92,42.242,TRUE,both_actions,both
-45,performance,83,button,prior,single_action,0.529,0.554,firefox,1299,600,1366,768,FALSE,memory??,no,69,f,english,305.92,42.242,TRUE,both_actions,both
-45,performance,4,handle,prior,single_action,0.025,0.554,firefox,1299,600,1366,768,FALSE,memory??,no,69,f,english,305.92,42.242,TRUE,both_actions,both
-46,learning,26,button,prior,single_action,0.338,0.662,chrome,1296,637,1093,615,FALSE,unclear,good hit,62,male,english,195.99,37.338,TRUE,single_action,button
-46,learning,25,handle,prior,single_action,0.325,0.662,chrome,1296,637,1093,615,FALSE,unclear,good hit,62,male,english,195.99,37.338,TRUE,single_action,button
-46,learning,26,both,prior,both_actions,0.338,0.338,chrome,1296,637,1093,615,FALSE,unclear,good hit,62,male,english,195.99,37.338,TRUE,single_action,button
-47,presentation,69,button,prior,single_action,0.379,0.549,chrome,1134,763,1280,768,FALSE,i'm unsure. my thought process wasn't really logical in selecting which one option would tell me what the toy did - it was more like a gratification thing. pulling the handle seems like the first activity a person would do on that toy.,"everything was fine, thanks.",50,f,english,179.006,9.678,TRUE,single_action,handle
-47,presentation,31,handle,prior,single_action,0.17,0.549,chrome,1134,763,1280,768,FALSE,i'm unsure. my thought process wasn't really logical in selecting which one option would tell me what the toy did - it was more like a gratification thing. pulling the handle seems like the first activity a person would do on that toy.,"everything was fine, thanks.",50,f,english,179.006,9.678,TRUE,single_action,handle
-47,presentation,82,both,prior,both_actions,0.451,0.451,chrome,1134,763,1280,768,FALSE,i'm unsure. my thought process wasn't really logical in selecting which one option would tell me what the toy did - it was more like a gratification thing. pulling the handle seems like the first activity a person would do on that toy.,"everything was fine, thanks.",50,f,english,179.006,9.678,TRUE,single_action,handle
-48,presentation,35,handle,prior,single_action,0.31,0.664,chrome,1250,803,1920,1080,FALSE,risk and prediction,,48,m,english,135.133,16.938,TRUE,both_actions,both
-48,presentation,38,both,prior,both_actions,0.336,0.336,chrome,1250,803,1920,1080,FALSE,risk and prediction,,48,m,english,135.133,16.938,TRUE,both_actions,both
-48,presentation,40,button,prior,single_action,0.354,0.664,chrome,1250,803,1920,1080,FALSE,risk and prediction,,48,m,english,135.133,16.938,TRUE,both_actions,both
-49,presentation,100,both,prior,both_actions,0.662,0.662,firefox,1300,644,1366,768,FALSE,decesions,interesting survey. no problems.,59,f,english,476.089,61.056,FALSE,both_actions,both
-49,presentation,100,both,prior,both_actions,0.662,0.662,firefox,1300,644,1366,768,FALSE,decesions,interesting survey. no problems.,59,f,english,476.089,61.056,TRUE,both_actions,both
-49,presentation,1,handle,prior,single_action,0.007,0.338,firefox,1300,644,1366,768,FALSE,decesions,interesting survey. no problems.,59,f,english,476.089,61.056,FALSE,both_actions,both
-49,presentation,1,handle,prior,single_action,0.007,0.338,firefox,1300,644,1366,768,FALSE,decesions,interesting survey. no problems.,59,f,english,476.089,61.056,TRUE,both_actions,both
-49,presentation,50,button,prior,single_action,0.331,0.338,firefox,1300,644,1366,768,FALSE,decesions,interesting survey. no problems.,59,f,english,476.089,61.056,FALSE,both_actions,both
-49,presentation,50,button,prior,single_action,0.331,0.338,firefox,1300,644,1366,768,FALSE,decesions,interesting survey. no problems.,59,f,english,476.089,61.056,TRUE,both_actions,both
-50,learning,13,button,prior,single_action,0.106,0.878,firefox,1521,781,1600,900,FALSE,logic issues,n/a,56,m,english,231.613,60.039,TRUE,single_action,handle
-50,learning,15,both,prior,both_actions,0.122,0.122,firefox,1521,781,1600,900,FALSE,logic issues,n/a,56,m,english,231.613,60.039,TRUE,single_action,handle
-50,learning,95,handle,prior,single_action,0.772,0.878,firefox,1521,781,1600,900,FALSE,logic issues,n/a,56,m,english,231.613,60.039,TRUE,single_action,handle
-51,performance,16,handle,prior,single_action,0.11,0.452,chrome,923,1211,1707,960,FALSE,see how people decide how to make sure something will work,no,34,m,english,173.455,23.587,TRUE,both_actions,both
-51,performance,80,both,prior,both_actions,0.548,0.548,chrome,923,1211,1707,960,FALSE,see how people decide how to make sure something will work,no,34,m,english,173.455,23.587,TRUE,both_actions,both
-51,performance,50,button,prior,single_action,0.342,0.452,chrome,923,1211,1707,960,FALSE,see how people decide how to make sure something will work,no,34,m,english,173.455,23.587,TRUE,both_actions,both
-52,performance,80,both,prior,both_actions,0.432,0.432,chrome,1336,693,1440,900,FALSE,logic,none,62,male,english,242.312,46.761,TRUE,single_action,handle
-52,performance,29,button,prior,single_action,0.157,0.568,chrome,1336,693,1440,900,FALSE,logic,none,62,male,english,242.312,46.761,TRUE,single_action,handle
-52,performance,76,handle,prior,single_action,0.411,0.568,chrome,1336,693,1440,900,FALSE,logic,none,62,male,english,242.312,46.761,TRUE,single_action,handle
-53,learning,31,handle,prior,single_action,0.242,0.742,chrome,1299,600,1366,768,FALSE,measuring logic,no,46,m,english,184.33,26.037,TRUE,single_action,handle
-53,learning,33,both,prior,both_actions,0.258,0.258,chrome,1299,600,1366,768,FALSE,measuring logic,no,46,m,english,184.33,26.037,TRUE,single_action,handle
-53,learning,64,button,prior,single_action,0.5,0.742,chrome,1299,600,1366,768,FALSE,measuring logic,no,46,m,english,184.33,26.037,TRUE,single_action,handle
-54,presentation,100,button,prior,single_action,0.333,0.667,chrome,1470,734,1536,864,FALSE,i have no idea.  how well i remember maybe?,nothing was broken,58,f,english,342.07,38.447,TRUE,both_actions,both
-54,presentation,100,both,prior,both_actions,0.333,0.333,chrome,1470,734,1536,864,FALSE,i have no idea.  how well i remember maybe?,nothing was broken,58,f,english,342.07,38.447,TRUE,both_actions,both
-54,presentation,100,handle,prior,single_action,0.333,0.667,chrome,1470,734,1536,864,FALSE,i have no idea.  how well i remember maybe?,nothing was broken,58,f,english,342.07,38.447,TRUE,both_actions,both
-55,learning,65,both,prior,both_actions,0.293,0.293,chrome,1331,691,1536,864,FALSE,making decisions,n/a,22,female,english,200.439,39.069,TRUE,single_action,handle
-55,learning,65,both,prior,both_actions,0.293,0.293,chrome,1331,691,1536,864,FALSE,making decisions,n/a,22,female,english,200.439,39.069,FALSE,single_action,handle
-55,learning,88,button,prior,single_action,0.396,0.707,chrome,1331,691,1536,864,FALSE,making decisions,n/a,22,female,english,200.439,39.069,TRUE,single_action,handle
-55,learning,88,button,prior,single_action,0.396,0.707,chrome,1331,691,1536,864,FALSE,making decisions,n/a,22,female,english,200.439,39.069,FALSE,single_action,handle
-55,learning,69,handle,prior,single_action,0.311,0.707,chrome,1331,691,1536,864,FALSE,making decisions,n/a,22,female,english,200.439,39.069,TRUE,single_action,handle
-55,learning,69,handle,prior,single_action,0.311,0.707,chrome,1331,691,1536,864,FALSE,making decisions,n/a,22,female,english,200.439,39.069,FALSE,single_action,handle
-56,presentation,100,both,prior,both_actions,0.333,0.333,chrome,1281,561,1366,768,FALSE,idk,no,34,male,english,176.077,26.948,TRUE,both_actions,both
-56,presentation,100,button,prior,single_action,0.333,0.667,chrome,1281,561,1366,768,FALSE,idk,no,34,male,english,176.077,26.948,TRUE,both_actions,both
-56,presentation,100,handle,prior,single_action,0.333,0.667,chrome,1281,561,1366,768,FALSE,idk,no,34,male,english,176.077,26.948,TRUE,both_actions,both
-57,presentation,100,handle,prior,single_action,0.333,0.667,chrome,1299,637,1366,768,FALSE,if we could figure out the type of toy.,no comments,39,f,english,176.974,20.051,TRUE,both_actions,both
-57,presentation,100,both,prior,both_actions,0.333,0.333,chrome,1299,637,1366,768,FALSE,if we could figure out the type of toy.,no comments,39,f,english,176.974,20.051,TRUE,both_actions,both
-57,presentation,100,button,prior,single_action,0.333,0.667,chrome,1299,637,1366,768,FALSE,if we could figure out the type of toy.,no comments,39,f,english,176.974,20.051,TRUE,both_actions,both
-58,presentation,7,both,prior,both_actions,0.084,0.084,chrome,1173,630,1280,800,FALSE,unsure,no comments,43,m,english,169.866,28.169,FALSE,both_actions,both
-58,presentation,7,both,prior,both_actions,0.084,0.084,chrome,1173,630,1280,800,FALSE,unsure,no comments,43,m,english,169.866,28.169,TRUE,both_actions,both
-58,presentation,56,handle,prior,single_action,0.675,0.916,chrome,1173,630,1280,800,FALSE,unsure,no comments,43,m,english,169.866,28.169,FALSE,both_actions,both
-58,presentation,56,handle,prior,single_action,0.675,0.916,chrome,1173,630,1280,800,FALSE,unsure,no comments,43,m,english,169.866,28.169,TRUE,both_actions,both
-58,presentation,20,button,prior,single_action,0.241,0.916,chrome,1173,630,1280,800,FALSE,unsure,no comments,43,m,english,169.866,28.169,FALSE,both_actions,both
-58,presentation,20,button,prior,single_action,0.241,0.916,chrome,1173,630,1280,800,FALSE,unsure,no comments,43,m,english,169.866,28.169,TRUE,both_actions,both
-59,learning,36,handle,prior,single_action,0.242,0.523,chrome,1643,1354,3440,1440,FALSE,decision making,,25,m,english,127.002,25.054,TRUE,both_actions,both
-59,learning,71,both,prior,both_actions,0.477,0.477,chrome,1643,1354,3440,1440,FALSE,decision making,,25,m,english,127.002,25.054,TRUE,both_actions,both
-59,learning,42,button,prior,single_action,0.282,0.523,chrome,1643,1354,3440,1440,FALSE,decision making,,25,m,english,127.002,25.054,TRUE,both_actions,both
-60,performance,12,both,prior,both_actions,0.104,0.104,firefox,2350,600,2400,1350,FALSE,probabilities,no,30,m,english,202.26,28.483,TRUE,both_actions,both
-60,performance,52,handle,prior,single_action,0.452,0.896,firefox,2350,600,2400,1350,FALSE,probabilities,no,30,m,english,202.26,28.483,TRUE,both_actions,both
-60,performance,51,button,prior,single_action,0.443,0.896,firefox,2350,600,2400,1350,FALSE,probabilities,no,30,m,english,202.26,28.483,TRUE,both_actions,both
-61,presentation,78,handle,prior,single_action,0.363,0.535,chrome,1853,100,1920,1080,FALSE,to see how people look at instructions,none,55,f,english,401.812,44.785,FALSE,both_actions,both
-61,presentation,78,handle,prior,single_action,0.363,0.535,chrome,1853,100,1920,1080,FALSE,to see how people look at instructions,none,55,f,english,401.812,44.785,TRUE,both_actions,both
-61,presentation,100,both,prior,both_actions,0.465,0.465,chrome,1853,100,1920,1080,FALSE,to see how people look at instructions,none,55,f,english,401.812,44.785,FALSE,both_actions,both
-61,presentation,100,both,prior,both_actions,0.465,0.465,chrome,1853,100,1920,1080,FALSE,to see how people look at instructions,none,55,f,english,401.812,44.785,TRUE,both_actions,both
-61,presentation,37,button,prior,single_action,0.172,0.535,chrome,1853,100,1920,1080,FALSE,to see how people look at instructions,none,55,f,english,401.812,44.785,FALSE,both_actions,both
-61,presentation,37,button,prior,single_action,0.172,0.535,chrome,1853,100,1920,1080,FALSE,to see how people look at instructions,none,55,f,english,401.812,44.785,TRUE,both_actions,both
-62,learning,74,handle,prior,single_action,0.383,0.741,chrome,1470,600,1536,864,FALSE,deductive reasoning ,thank you. a3c0lpvn749uf3: id in case of errors in submission software communication,33,f,english,194.597,29.933,TRUE,single_action,handle
-62,learning,69,button,prior,single_action,0.358,0.741,chrome,1470,600,1536,864,FALSE,deductive reasoning ,thank you. a3c0lpvn749uf3: id in case of errors in submission software communication,33,f,english,194.597,29.933,TRUE,single_action,handle
-62,learning,50,both,prior,both_actions,0.259,0.259,chrome,1470,600,1536,864,FALSE,deductive reasoning ,thank you. a3c0lpvn749uf3: id in case of errors in submission software communication,33,f,english,194.597,29.933,TRUE,single_action,handle
-63,presentation,74,both,prior,both_actions,0.409,0.409,chrome,1292,623,1366,768,FALSE,options,no,27,f,english,134.095,7.015,FALSE,single_action,handle
-63,presentation,74,both,prior,both_actions,0.409,0.409,chrome,1292,623,1366,768,FALSE,options,no,27,f,english,134.095,7.015,TRUE,single_action,handle
-63,presentation,78,handle,prior,single_action,0.431,0.591,chrome,1292,623,1366,768,FALSE,options,no,27,f,english,134.095,7.015,FALSE,single_action,handle
-63,presentation,78,handle,prior,single_action,0.431,0.591,chrome,1292,623,1366,768,FALSE,options,no,27,f,english,134.095,7.015,TRUE,single_action,handle
-63,presentation,29,button,prior,single_action,0.16,0.591,chrome,1292,623,1366,768,FALSE,options,no,27,f,english,134.095,7.015,FALSE,single_action,handle
-63,presentation,29,button,prior,single_action,0.16,0.591,chrome,1292,623,1366,768,FALSE,options,no,27,f,english,134.095,7.015,TRUE,single_action,handle
-64,presentation,93,handle,prior,single_action,0.323,0.67,chrome,580,600,1366,768,FALSE,i'm not sure.,no.,30,m,english,177.859,57.314,FALSE,both_actions,both
-64,presentation,93,handle,prior,single_action,0.323,0.67,chrome,580,600,1366,768,FALSE,i'm not sure.,no.,30,m,english,177.859,57.314,TRUE,both_actions,both
-64,presentation,95,both,prior,both_actions,0.33,0.33,chrome,580,600,1366,768,FALSE,i'm not sure.,no.,30,m,english,177.859,57.314,FALSE,both_actions,both
-64,presentation,95,both,prior,both_actions,0.33,0.33,chrome,580,600,1366,768,FALSE,i'm not sure.,no.,30,m,english,177.859,57.314,TRUE,both_actions,both
-64,presentation,100,button,prior,single_action,0.347,0.67,chrome,580,600,1366,768,FALSE,i'm not sure.,no.,30,m,english,177.859,57.314,FALSE,both_actions,both
-64,presentation,100,button,prior,single_action,0.347,0.67,chrome,580,600,1366,768,FALSE,i'm not sure.,no.,30,m,english,177.859,57.314,TRUE,both_actions,both
-65,performance,57,handle,prior,single_action,0.385,0.926,chrome,1299,662,1366,768,FALSE,how we assign probability to something?,no,36,m,english,264.231,40.195,TRUE,both_actions,both
-65,performance,80,button,prior,single_action,0.541,0.926,chrome,1299,662,1366,768,FALSE,how we assign probability to something?,no,36,m,english,264.231,40.195,TRUE,both_actions,both
-65,performance,11,both,prior,both_actions,0.074,0.074,chrome,1299,662,1366,768,FALSE,how we assign probability to something?,no,36,m,english,264.231,40.195,TRUE,both_actions,both
-66,learning,26,button,prior,single_action,0.239,0.495,firefox,1230,676,1280,800,FALSE,to see how i problem solve. ,"yeah, it jumped at the end and played some music, and then quickly moved to a slider screen at the end. i did the sliders twice. ",30,m,english,179.233,53.542,TRUE,both_actions,both
-66,learning,28,handle,prior,single_action,0.257,0.495,firefox,1230,676,1280,800,FALSE,to see how i problem solve. ,"yeah, it jumped at the end and played some music, and then quickly moved to a slider screen at the end. i did the sliders twice. ",30,m,english,179.233,53.542,TRUE,both_actions,both
-66,learning,55,both,prior,both_actions,0.505,0.505,firefox,1230,676,1280,800,FALSE,to see how i problem solve. ,"yeah, it jumped at the end and played some music, and then quickly moved to a slider screen at the end. i did the sliders twice. ",30,m,english,179.233,53.542,TRUE,both_actions,both
-67,performance,35,button,prior,single_action,0.321,0.651,chrome,1533,600,1600,900,FALSE,probability and problem solving.,,48,f,english,203.795,24.333,TRUE,both_actions,both
-67,performance,36,handle,prior,single_action,0.33,0.651,chrome,1533,600,1600,900,FALSE,probability and problem solving.,,48,f,english,203.795,24.333,TRUE,both_actions,both
-67,performance,38,both,prior,both_actions,0.349,0.349,chrome,1533,600,1600,900,FALSE,probability and problem solving.,,48,f,english,203.795,24.333,TRUE,both_actions,both
-68,presentation,29,handle,prior,single_action,0.201,0.771,chrome,464,524,1920,1080,FALSE,i'm not sure,,26,female,english,369.457,13.196,FALSE,both_actions,both
-68,presentation,29,handle,prior,single_action,0.201,0.771,chrome,464,524,1920,1080,FALSE,i'm not sure,,26,female,english,369.457,13.196,TRUE,both_actions,both
-68,presentation,33,both,prior,both_actions,0.229,0.229,chrome,464,524,1920,1080,FALSE,i'm not sure,,26,female,english,369.457,13.196,FALSE,both_actions,both
-68,presentation,33,both,prior,both_actions,0.229,0.229,chrome,464,524,1920,1080,FALSE,i'm not sure,,26,female,english,369.457,13.196,TRUE,both_actions,both
-68,presentation,82,button,prior,single_action,0.569,0.771,chrome,464,524,1920,1080,FALSE,i'm not sure,,26,female,english,369.457,13.196,FALSE,both_actions,both
-68,presentation,82,button,prior,single_action,0.569,0.771,chrome,464,524,1920,1080,FALSE,i'm not sure,,26,female,english,369.457,13.196,TRUE,both_actions,both
-69,presentation,60,handle,prior,single_action,0.357,0.542,chrome,1219,797,1440,900,FALSE,to see how different people see how toys work without labels.,nothing broken.,31,f,english,168.264,24.539,TRUE,single_action,handle
-69,presentation,31,button,prior,single_action,0.185,0.542,chrome,1219,797,1440,900,FALSE,to see how different people see how toys work without labels.,nothing broken.,31,f,english,168.264,24.539,TRUE,single_action,handle
-69,presentation,77,both,prior,both_actions,0.458,0.458,chrome,1219,797,1440,900,FALSE,to see how different people see how toys work without labels.,nothing broken.,31,f,english,168.264,24.539,TRUE,single_action,handle
-70,performance,72,button,prior,single_action,0.272,0.623,chrome,1299,678,1366,768,FALSE,not sure,no,39,f,english,215.512,52.113,TRUE,single_action,button
-70,performance,100,both,prior,both_actions,0.377,0.377,chrome,1299,678,1366,768,FALSE,not sure,no,39,f,english,215.512,52.113,TRUE,single_action,button
-70,performance,93,handle,prior,single_action,0.351,0.623,chrome,1299,678,1366,768,FALSE,not sure,no,39,f,english,215.512,52.113,TRUE,single_action,button
-71,performance,83,button,prior,single_action,0.413,0.507,chrome,1853,974,1920,1080,FALSE,i'm not sure,no,34,f,english,161.214,22.055,TRUE,both_actions,both
-71,performance,19,handle,prior,single_action,0.095,0.507,chrome,1853,974,1920,1080,FALSE,i'm not sure,no,34,f,english,161.214,22.055,TRUE,both_actions,both
-71,performance,99,both,prior,both_actions,0.493,0.493,chrome,1853,974,1920,1080,FALSE,i'm not sure,no,34,f,english,161.214,22.055,TRUE,both_actions,both
-72,performance,1,both,prior,both_actions,0.005,0.005,chrome,1016,510,1366,768,FALSE,no idea,no,42,f,bulgarian,203.741,27.137,TRUE,single_action,button
-72,performance,100,button,prior,single_action,0.498,0.995,chrome,1016,510,1366,768,FALSE,no idea,no,42,f,bulgarian,203.741,27.137,TRUE,single_action,button
-72,performance,100,handle,prior,single_action,0.498,0.995,chrome,1016,510,1366,768,FALSE,no idea,no,42,f,bulgarian,203.741,27.137,TRUE,single_action,button
-73,presentation,100,both,prior,both_actions,0.361,0.361,chrome,1709,854,1600,900,FALSE,reading instructions,no,48,f,english,117.767,13.223,TRUE,both_actions,both
-73,presentation,90,button,prior,single_action,0.325,0.639,chrome,1709,854,1600,900,FALSE,reading instructions,no,48,f,english,117.767,13.223,TRUE,both_actions,both
-73,presentation,87,handle,prior,single_action,0.314,0.639,chrome,1709,854,1600,900,FALSE,reading instructions,no,48,f,english,117.767,13.223,TRUE,both_actions,both
-74,performance,31,handle,prior,single_action,0.29,0.57,chrome,1176,614,1366,768,FALSE,logical reasoning.,the task was quick and interesting.,51,m,english,466.609,40.415,TRUE,both_actions,both
-74,performance,30,button,prior,single_action,0.28,0.57,chrome,1176,614,1366,768,FALSE,logical reasoning.,the task was quick and interesting.,51,m,english,466.609,40.415,TRUE,both_actions,both
-74,performance,46,both,prior,both_actions,0.43,0.43,chrome,1176,614,1366,768,FALSE,logical reasoning.,the task was quick and interesting.,51,m,english,466.609,40.415,TRUE,both_actions,both
-75,performance,63,both,prior,both_actions,0.323,0.323,chrome,1331,668,1536,864,FALSE,i am not sure,no,41,f,english,162.584,33.848,TRUE,single_action,button
-75,performance,64,button,prior,single_action,0.328,0.677,chrome,1331,668,1536,864,FALSE,i am not sure,no,41,f,english,162.584,33.848,TRUE,single_action,button
-75,performance,68,handle,prior,single_action,0.349,0.677,chrome,1331,668,1536,864,FALSE,i am not sure,no,41,f,english,162.584,33.848,TRUE,single_action,button
-1,performance,79,handle,posterior,single_action,0.339,0.67,chrome,1289,648,1366,768,FALSE,i don't know,none,27,f,english,142.031,14.077,TRUE,both_actions,both
-1,performance,77,both,posterior,both_actions,0.33,0.33,chrome,1289,648,1366,768,FALSE,i don't know,none,27,f,english,142.031,14.077,TRUE,both_actions,both
-1,performance,77,button,posterior,single_action,0.33,0.67,chrome,1289,648,1366,768,FALSE,i don't know,none,27,f,english,142.031,14.077,TRUE,both_actions,both
-2,learning,1,handle,posterior,single_action,0.01,0.99,chrome,1230,676,1280,800,FALSE,logic,no,35,f,english,140.12,29.647,TRUE,single_action,button
-2,learning,100,button,posterior,single_action,0.98,0.99,chrome,1230,676,1280,800,FALSE,logic,no,35,f,english,140.12,29.647,TRUE,single_action,button
-2,learning,1,both,posterior,both_actions,0.01,0.01,chrome,1230,676,1280,800,FALSE,logic,no,35,f,english,140.12,29.647,TRUE,single_action,button
-3,learning,100,button,posterior,single_action,0.98,0.99,chrome,1028,600,1093,615,FALSE,if i could figure out which music box it was.,no.,47,m,english,236.229,74.277,TRUE,single_action,button
-3,learning,1,both,posterior,both_actions,0.01,0.01,chrome,1028,600,1093,615,FALSE,if i could figure out which music box it was.,no.,47,m,english,236.229,74.277,TRUE,single_action,button
-3,learning,1,handle,posterior,single_action,0.01,0.99,chrome,1028,600,1093,615,FALSE,if i could figure out which music box it was.,no.,47,m,english,236.229,74.277,TRUE,single_action,button
-4,learning,33,both,posterior,both_actions,0.204,0.204,chrome,1082,600,1920,1080,FALSE,studying how people reason about cause and effect.,no problems.,30,male,english,255.826,31.907,TRUE,both_actions,both
-4,learning,64,button,posterior,single_action,0.395,0.796,chrome,1082,600,1920,1080,FALSE,studying how people reason about cause and effect.,no problems.,30,male,english,255.826,31.907,TRUE,both_actions,both
-4,learning,65,handle,posterior,single_action,0.401,0.796,chrome,1082,600,1920,1080,FALSE,studying how people reason about cause and effect.,no problems.,30,male,english,255.826,31.907,TRUE,both_actions,both
-5,learning,73,handle,posterior,single_action,0.317,0.565,chrome,1533,769,1600,900,FALSE,i'm not sure,no,34,f,english,635.05,31.619,TRUE,both_actions,both
-5,learning,57,button,posterior,single_action,0.248,0.565,chrome,1533,769,1600,900,FALSE,i'm not sure,no,34,f,english,635.05,31.619,TRUE,both_actions,both
-5,learning,100,both,posterior,both_actions,0.435,0.435,chrome,1533,769,1600,900,FALSE,i'm not sure,no,34,f,english,635.05,31.619,TRUE,both_actions,both
-6,performance,100,both,posterior,both_actions,0.333,0.333,chrome,1076,681,1280,800,FALSE,reasoning,no,38,m,english,159.828,20.912,TRUE,both_actions,both
-6,performance,100,handle,posterior,single_action,0.333,0.667,chrome,1076,681,1280,800,FALSE,reasoning,no,38,m,english,159.828,20.912,TRUE,both_actions,both
-6,performance,100,button,posterior,single_action,0.333,0.667,chrome,1076,681,1280,800,FALSE,reasoning,no,38,m,english,159.828,20.912,TRUE,both_actions,both
-7,presentation,72,both,posterior,both_actions,0.419,0.419,chrome,1016,510,1366,768,FALSE,risk accessment bias,no comment,63,m,english,223.658,26.923,TRUE,both_actions,both
-7,presentation,50,handle,posterior,single_action,0.291,0.581,chrome,1016,510,1366,768,FALSE,risk accessment bias,no comment,63,m,english,223.658,26.923,TRUE,both_actions,both
-7,presentation,50,button,posterior,single_action,0.291,0.581,chrome,1016,510,1366,768,FALSE,risk accessment bias,no comment,63,m,english,223.658,26.923,TRUE,both_actions,both
-8,presentation,50,handle,posterior,single_action,0.495,0.99,chrome,1176,588,1366,768,FALSE,logical guessing,no,49,f,english,357.264,53.916,TRUE,both_actions,both
-8,presentation,1,both,posterior,both_actions,0.01,0.01,chrome,1176,588,1366,768,FALSE,logical guessing,no,49,f,english,357.264,53.916,TRUE,both_actions,both
-8,presentation,50,button,posterior,single_action,0.495,0.99,chrome,1176,588,1366,768,FALSE,logical guessing,no,49,f,english,357.264,53.916,TRUE,both_actions,both
-9,learning,99,button,posterior,single_action,0.615,0.646,chrome,1843,1080,1920,1200,FALSE,understanding how an action can make something work.,great survey and would love to work on others from you in the future. ,31,f,english,208.604,52.55,TRUE,single_action,button
-9,learning,5,handle,posterior,single_action,0.031,0.646,chrome,1843,1080,1920,1200,FALSE,understanding how an action can make something work.,great survey and would love to work on others from you in the future. ,31,f,english,208.604,52.55,TRUE,single_action,button
-9,learning,57,both,posterior,both_actions,0.354,0.354,chrome,1843,1080,1920,1200,FALSE,understanding how an action can make something work.,great survey and would love to work on others from you in the future. ,31,f,english,208.604,52.55,TRUE,single_action,button
-10,performance,1,both,posterior,both_actions,0.01,0.01,chrome,1175,615,1366,768,FALSE,i have no idea.,no.,42,f,english,196.382,44.338,TRUE,single_action,handle
-10,performance,100,handle,posterior,single_action,0.98,0.99,chrome,1175,615,1366,768,FALSE,i have no idea.,no.,42,f,english,196.382,44.338,TRUE,single_action,handle
-10,performance,1,button,posterior,single_action,0.01,0.99,chrome,1175,615,1366,768,FALSE,i have no idea.,no.,42,f,english,196.382,44.338,TRUE,single_action,handle
-11,performance,85,button,posterior,single_action,0.57,0.718,chrome,1111,625,1366,768,FALSE,i'm not really sure.,no,40,f,english,400.412,28.651,FALSE,single_action,button
-11,performance,42,both,posterior,both_actions,0.282,0.282,chrome,1111,625,1366,768,FALSE,i'm not really sure.,no,40,f,english,400.412,28.651,FALSE,single_action,button
-11,performance,22,handle,posterior,single_action,0.148,0.718,chrome,1111,625,1366,768,FALSE,i'm not really sure.,no,40,f,english,400.412,28.651,FALSE,single_action,button
-12,learning,100,handle,posterior,single_action,0.98,0.99,chrome,1870,600,1920,1080,FALSE,how we would go about coming to a definitive conclusion after figuring out the instructions to a toy.,"no other comment, other than i tried my best.",28,m,english,1709.973,436.087,TRUE,single_action,handle
-12,learning,1,button,posterior,single_action,0.01,0.99,chrome,1870,600,1920,1080,FALSE,how we would go about coming to a definitive conclusion after figuring out the instructions to a toy.,"no other comment, other than i tried my best.",28,m,english,1709.973,436.087,TRUE,single_action,handle
-12,learning,1,both,posterior,both_actions,0.01,0.01,chrome,1870,600,1920,1080,FALSE,how we would go about coming to a definitive conclusion after figuring out the instructions to a toy.,"no other comment, other than i tried my best.",28,m,english,1709.973,436.087,TRUE,single_action,handle
-13,presentation,30,handle,posterior,single_action,0.323,0.667,chrome,1342,929,1920,1080,FALSE,if you're willing to gamble that it's not bothmusiclight and only trigger one of the inputs.,,27,m,english,219.206,22.69,TRUE,both_actions,both
-13,presentation,32,button,posterior,single_action,0.344,0.667,chrome,1342,929,1920,1080,FALSE,if you're willing to gamble that it's not bothmusiclight and only trigger one of the inputs.,,27,m,english,219.206,22.69,TRUE,both_actions,both
-13,presentation,31,both,posterior,both_actions,0.333,0.333,chrome,1342,929,1920,1080,FALSE,if you're willing to gamble that it's not bothmusiclight and only trigger one of the inputs.,,27,m,english,219.206,22.69,TRUE,both_actions,both
-14,performance,20,button,posterior,single_action,0.161,0.282,chrome,1470,759,1536,864,FALSE,how we learn,no,44,m,english,311.708,18.015,TRUE,both_actions,both
-14,performance,20,button,posterior,single_action,0.161,0.282,chrome,1470,759,1536,864,FALSE,how we learn,no,44,m,english,311.708,18.015,FALSE,both_actions,both
-14,performance,89,both,posterior,both_actions,0.718,0.718,chrome,1470,759,1536,864,FALSE,how we learn,no,44,m,english,311.708,18.015,TRUE,both_actions,both
-14,performance,89,both,posterior,both_actions,0.718,0.718,chrome,1470,759,1536,864,FALSE,how we learn,no,44,m,english,311.708,18.015,FALSE,both_actions,both
-14,performance,15,handle,posterior,single_action,0.121,0.282,chrome,1470,759,1536,864,FALSE,how we learn,no,44,m,english,311.708,18.015,TRUE,both_actions,both
-14,performance,15,handle,posterior,single_action,0.121,0.282,chrome,1470,759,1536,864,FALSE,how we learn,no,44,m,english,311.708,18.015,FALSE,both_actions,both
-15,learning,1,handle,posterior,single_action,0.01,0.99,chrome,1375,826,1440,900,FALSE,figuring out which design is more intuitive,,39,female,english,251.069,47.192,TRUE,single_action,button
-15,learning,100,button,posterior,single_action,0.98,0.99,chrome,1375,826,1440,900,FALSE,figuring out which design is more intuitive,,39,female,english,251.069,47.192,TRUE,single_action,button
-15,learning,1,both,posterior,both_actions,0.01,0.01,chrome,1375,826,1440,900,FALSE,figuring out which design is more intuitive,,39,female,english,251.069,47.192,TRUE,single_action,button
-16,learning,1,button,posterior,single_action,0.01,0.02,chrome,1749,883,1366,768,FALSE,accuracy of a job,,34,male,english,398.588,33.112,TRUE,both_actions,both
-16,learning,1,button,posterior,single_action,0.01,0.02,chrome,1749,883,1366,768,FALSE,accuracy of a job,,34,male,english,398.588,33.112,FALSE,both_actions,both
-16,learning,100,both,posterior,both_actions,0.98,0.98,chrome,1749,883,1366,768,FALSE,accuracy of a job,,34,male,english,398.588,33.112,TRUE,both_actions,both
-16,learning,100,both,posterior,both_actions,0.98,0.98,chrome,1749,883,1366,768,FALSE,accuracy of a job,,34,male,english,398.588,33.112,FALSE,both_actions,both
-16,learning,1,handle,posterior,single_action,0.01,0.02,chrome,1749,883,1366,768,FALSE,accuracy of a job,,34,male,english,398.588,33.112,TRUE,both_actions,both
-16,learning,1,handle,posterior,single_action,0.01,0.02,chrome,1749,883,1366,768,FALSE,accuracy of a job,,34,male,english,398.588,33.112,FALSE,both_actions,both
-17,learning,1,handle,posterior,single_action,0.01,0.99,chrome,996,1228,1080,1920,FALSE,using logic and process of elimination to predict outcome,no comments,64,f,english,407.597,72.927,TRUE,single_action,button
-17,learning,1,both,posterior,both_actions,0.01,0.01,chrome,996,1228,1080,1920,FALSE,using logic and process of elimination to predict outcome,no comments,64,f,english,407.597,72.927,TRUE,single_action,button
-17,learning,100,button,posterior,single_action,0.98,0.99,chrome,996,1228,1080,1920,FALSE,using logic and process of elimination to predict outcome,no comments,64,f,english,407.597,72.927,TRUE,single_action,button
-18,learning,1,both,posterior,both_actions,0.01,0.01,chrome,1091,703,1280,800,FALSE,i don't know,everything seemed to work well,33,f,english,228.034,50.725,TRUE,single_action,button
-18,learning,1,handle,posterior,single_action,0.01,0.99,chrome,1091,703,1280,800,FALSE,i don't know,everything seemed to work well,33,f,english,228.034,50.725,TRUE,single_action,button
-18,learning,100,button,posterior,single_action,0.98,0.99,chrome,1091,703,1280,800,FALSE,i don't know,everything seemed to work well,33,f,english,228.034,50.725,TRUE,single_action,button
-19,presentation,65,both,posterior,both_actions,0.297,0.297,chrome,1635,787,1280,720,FALSE,not really sure,no,46,f,english,225.095,26.57,TRUE,both_actions,both
-19,presentation,62,button,posterior,single_action,0.283,0.703,chrome,1635,787,1280,720,FALSE,not really sure,no,46,f,english,225.095,26.57,TRUE,both_actions,both
-19,presentation,92,handle,posterior,single_action,0.42,0.703,chrome,1635,787,1280,720,FALSE,not really sure,no,46,f,english,225.095,26.57,TRUE,both_actions,both
-20,learning,91,handle,posterior,single_action,0.324,0.68,chrome,1299,637,1366,768,FALSE,?,na,25,female,english,202.262,43.502,FALSE,both_actions,both
-20,learning,91,handle,posterior,single_action,0.324,0.68,chrome,1299,637,1366,768,FALSE,?,na,25,female,english,202.262,43.502,TRUE,both_actions,both
-20,learning,90,both,posterior,both_actions,0.32,0.32,chrome,1299,637,1366,768,FALSE,?,na,25,female,english,202.262,43.502,FALSE,both_actions,both
-20,learning,90,both,posterior,both_actions,0.32,0.32,chrome,1299,637,1366,768,FALSE,?,na,25,female,english,202.262,43.502,TRUE,both_actions,both
-20,learning,100,button,posterior,single_action,0.356,0.68,chrome,1299,637,1366,768,FALSE,?,na,25,female,english,202.262,43.502,FALSE,both_actions,both
-20,learning,100,button,posterior,single_action,0.356,0.68,chrome,1299,637,1366,768,FALSE,?,na,25,female,english,202.262,43.502,TRUE,both_actions,both
-21,learning,31,button,posterior,single_action,0.32,0.649,chrome,392,600,412,732,TRUE,not sure,nope,27,f,english,285.838,60.183,TRUE,single_action,button
-21,learning,32,handle,posterior,single_action,0.33,0.649,chrome,392,600,412,732,TRUE,not sure,nope,27,f,english,285.838,60.183,TRUE,single_action,button
-21,learning,34,both,posterior,both_actions,0.351,0.351,chrome,392,600,412,732,TRUE,not sure,nope,27,f,english,285.838,60.183,TRUE,single_action,button
-22,learning,68,both,posterior,both_actions,0.312,0.312,chrome,1390,600,1440,900,FALSE,no sure,no,38,m,english,346.701,10.048,TRUE,single_action,handle
-22,learning,77,button,posterior,single_action,0.353,0.688,chrome,1390,600,1440,900,FALSE,no sure,no,38,m,english,346.701,10.048,TRUE,single_action,handle
-22,learning,73,handle,posterior,single_action,0.335,0.688,chrome,1390,600,1440,900,FALSE,no sure,no,38,m,english,346.701,10.048,TRUE,single_action,handle
-23,performance,71,both,posterior,both_actions,0.392,0.392,chrome,1217,615,1600,900,FALSE,"i have no idea, some kind of reasoning ",,44,f,english ,168.33,17.239,FALSE,both_actions,both
-23,performance,71,both,posterior,both_actions,0.392,0.392,chrome,1217,615,1600,900,FALSE,"i have no idea, some kind of reasoning ",,44,f,english ,168.33,17.239,TRUE,both_actions,both
-23,performance,54,handle,posterior,single_action,0.298,0.608,chrome,1217,615,1600,900,FALSE,"i have no idea, some kind of reasoning ",,44,f,english ,168.33,17.239,FALSE,both_actions,both
-23,performance,54,handle,posterior,single_action,0.298,0.608,chrome,1217,615,1600,900,FALSE,"i have no idea, some kind of reasoning ",,44,f,english ,168.33,17.239,TRUE,both_actions,both
-23,performance,56,button,posterior,single_action,0.309,0.608,chrome,1217,615,1600,900,FALSE,"i have no idea, some kind of reasoning ",,44,f,english ,168.33,17.239,FALSE,both_actions,both
-23,performance,56,button,posterior,single_action,0.309,0.608,chrome,1217,615,1600,900,FALSE,"i have no idea, some kind of reasoning ",,44,f,english ,168.33,17.239,TRUE,both_actions,both
-24,learning,86,handle,posterior,single_action,0.376,0.703,chrome,1357,777,1280,800,FALSE,not too sure exactly. ,everything worked and was interesting. thank you!,33,male,english,208.032,42.273,TRUE,single_action,button
-24,learning,75,button,posterior,single_action,0.328,0.703,chrome,1357,777,1280,800,FALSE,not too sure exactly. ,everything worked and was interesting. thank you!,33,male,english,208.032,42.273,TRUE,single_action,button
-24,learning,68,both,posterior,both_actions,0.297,0.297,chrome,1357,777,1280,800,FALSE,not too sure exactly. ,everything worked and was interesting. thank you!,33,male,english,208.032,42.273,TRUE,single_action,button
-25,presentation,71,both,posterior,both_actions,0.318,0.318,firefox,1533,600,1600,900,FALSE,how people make estimates based on only certain information.,"no, i do not.",45,f,english,306.109,25.35,TRUE,both_actions,both
-25,presentation,74,handle,posterior,single_action,0.332,0.682,firefox,1533,600,1600,900,FALSE,how people make estimates based on only certain information.,"no, i do not.",45,f,english,306.109,25.35,TRUE,both_actions,both
-25,presentation,78,button,posterior,single_action,0.35,0.682,firefox,1533,600,1600,900,FALSE,how people make estimates based on only certain information.,"no, i do not.",45,f,english,306.109,25.35,TRUE,both_actions,both
-26,presentation,30,button,posterior,single_action,0.185,0.383,chrome,1299,637,1366,768,FALSE,i think that this task was about using logic to narrow down options to the most likely option,thanks for the opportunity to participate and good luck with your research!,51,m,english,204.262,17.502,TRUE,both_actions,both
-26,presentation,32,handle,posterior,single_action,0.198,0.383,chrome,1299,637,1366,768,FALSE,i think that this task was about using logic to narrow down options to the most likely option,thanks for the opportunity to participate and good luck with your research!,51,m,english,204.262,17.502,TRUE,both_actions,both
-26,presentation,100,both,posterior,both_actions,0.617,0.617,chrome,1299,637,1366,768,FALSE,i think that this task was about using logic to narrow down options to the most likely option,thanks for the opportunity to participate and good luck with your research!,51,m,english,204.262,17.502,TRUE,both_actions,both
-27,learning,100,button,posterior,single_action,0.498,0.995,chrome,1853,974,1920,1080,FALSE,understanding instructions,no,25,f,english,109.051,22.35,FALSE,single_action,button
-27,learning,100,button,posterior,single_action,0.498,0.995,chrome,1853,974,1920,1080,FALSE,understanding instructions,no,25,f,english,109.051,22.35,TRUE,single_action,button
-27,learning,1,both,posterior,both_actions,0.005,0.005,chrome,1853,974,1920,1080,FALSE,understanding instructions,no,25,f,english,109.051,22.35,FALSE,single_action,button
-27,learning,1,both,posterior,both_actions,0.005,0.005,chrome,1853,974,1920,1080,FALSE,understanding instructions,no,25,f,english,109.051,22.35,TRUE,single_action,button
-27,learning,100,handle,posterior,single_action,0.498,0.995,chrome,1853,974,1920,1080,FALSE,understanding instructions,no,25,f,english,109.051,22.35,FALSE,single_action,button
-27,learning,100,handle,posterior,single_action,0.498,0.995,chrome,1853,974,1920,1080,FALSE,understanding instructions,no,25,f,english,109.051,22.35,TRUE,single_action,button
-28,presentation,34,handle,posterior,single_action,0.178,0.555,chrome,1837,922,1920,1080,FALSE,perceptions,interesting,39,f,english,373.283,34.581,TRUE,both_actions,both
-28,presentation,72,button,posterior,single_action,0.377,0.555,chrome,1837,922,1920,1080,FALSE,perceptions,interesting,39,f,english,373.283,34.581,TRUE,both_actions,both
-28,presentation,85,both,posterior,both_actions,0.445,0.445,chrome,1837,922,1920,1080,FALSE,perceptions,interesting,39,f,english,373.283,34.581,TRUE,both_actions,both
-29,learning,1,both,posterior,both_actions,0.01,0.01,chrome,1150,850,1280,800,FALSE,logic,n/a,27,m,english,321.476,175.022,TRUE,single_action,button
-29,learning,1,handle,posterior,single_action,0.01,0.99,chrome,1150,850,1280,800,FALSE,logic,n/a,27,m,english,321.476,175.022,TRUE,single_action,button
-29,learning,100,button,posterior,single_action,0.98,0.99,chrome,1150,850,1280,800,FALSE,logic,n/a,27,m,english,321.476,175.022,TRUE,single_action,button
-30,presentation,1,both,posterior,both_actions,0.01,0.01,chrome,1680,885,1920,1080,FALSE,i'm not entirely certain,"no further comment, at this time",34,m,english,131.613,20.457,TRUE,single_action,button
-30,presentation,1,handle,posterior,single_action,0.01,0.99,chrome,1680,885,1920,1080,FALSE,i'm not entirely certain,"no further comment, at this time",34,m,english,131.613,20.457,TRUE,single_action,button
-30,presentation,100,button,posterior,single_action,0.98,0.99,chrome,1680,885,1920,1080,FALSE,i'm not entirely certain,"no further comment, at this time",34,m,english,131.613,20.457,TRUE,single_action,button
-31,performance,1,button,posterior,single_action,0.005,0.502,firefox,1199,869,1280,1024,FALSE,"i am not sure, maybe how we read directions and apply them.",no,63,f,english,249.862,14.876,TRUE,single_action,handle
-31,performance,100,both,posterior,both_actions,0.498,0.498,firefox,1199,869,1280,1024,FALSE,"i am not sure, maybe how we read directions and apply them.",no,63,f,english,249.862,14.876,TRUE,single_action,handle
-31,performance,100,handle,posterior,single_action,0.498,0.502,firefox,1199,869,1280,1024,FALSE,"i am not sure, maybe how we read directions and apply them.",no,63,f,english,249.862,14.876,TRUE,single_action,handle
-32,performance,50,both,posterior,both_actions,0.329,0.329,chrome,340,600,360,640,TRUE,paying attention and understanding directions,"no, it worked fine. ",35,m,english,200.79,24.538,TRUE,both_actions,both
-32,performance,51,handle,posterior,single_action,0.336,0.671,chrome,340,600,360,640,TRUE,paying attention and understanding directions,"no, it worked fine. ",35,m,english,200.79,24.538,TRUE,both_actions,both
-32,performance,51,button,posterior,single_action,0.336,0.671,chrome,340,600,360,640,TRUE,paying attention and understanding directions,"no, it worked fine. ",35,m,english,200.79,24.538,TRUE,both_actions,both
-33,performance,49,button,posterior,single_action,0.327,0.667,chrome,1128,932,2048,1152,FALSE,how people understand the workings of systems.,no,32,m,english,166.953,14.36,TRUE,both_actions,both
-33,performance,51,handle,posterior,single_action,0.34,0.667,chrome,1128,932,2048,1152,FALSE,how people understand the workings of systems.,no,32,m,english,166.953,14.36,TRUE,both_actions,both
-33,performance,50,both,posterior,both_actions,0.333,0.333,chrome,1128,932,2048,1152,FALSE,how people understand the workings of systems.,no,32,m,english,166.953,14.36,TRUE,both_actions,both
-34,performance,55,handle,posterior,single_action,0.331,0.663,chrome,1636,828,1366,768,FALSE,logical thinking/reading comprehension,,30,m,english,121.112,15.517,TRUE,both_actions,both
-34,performance,55,button,posterior,single_action,0.331,0.663,chrome,1636,828,1366,768,FALSE,logical thinking/reading comprehension,,30,m,english,121.112,15.517,TRUE,both_actions,both
-34,performance,56,both,posterior,both_actions,0.337,0.337,chrome,1636,828,1366,768,FALSE,logical thinking/reading comprehension,,30,m,english,121.112,15.517,TRUE,both_actions,both
-35,learning,100,handle,posterior,single_action,0.333,0.667,chrome,1299,675,1366,768,FALSE,figuring out a music box toy,everything worked great,37,f,english,229.413,34.973,TRUE,both_actions,both
-35,learning,100,both,posterior,both_actions,0.333,0.333,chrome,1299,675,1366,768,FALSE,figuring out a music box toy,everything worked great,37,f,english,229.413,34.973,TRUE,both_actions,both
-35,learning,100,button,posterior,single_action,0.333,0.667,chrome,1299,675,1366,768,FALSE,figuring out a music box toy,everything worked great,37,f,english,229.413,34.973,TRUE,both_actions,both
-36,presentation,80,both,posterior,both_actions,0.367,0.367,chrome,1217,615,1600,900,FALSE,"i think it had something to do with logic, like, possibilites and exclusions.","this was fun. it worked fine, and the music and graphic were nice.",50,f,english,267.243,26.484,TRUE,both_actions,both
-36,presentation,80,button,posterior,single_action,0.367,0.633,chrome,1217,615,1600,900,FALSE,"i think it had something to do with logic, like, possibilites and exclusions.","this was fun. it worked fine, and the music and graphic were nice.",50,f,english,267.243,26.484,TRUE,both_actions,both
-36,presentation,58,handle,posterior,single_action,0.266,0.633,chrome,1217,615,1600,900,FALSE,"i think it had something to do with logic, like, possibilites and exclusions.","this was fun. it worked fine, and the music and graphic were nice.",50,f,english,267.243,26.484,TRUE,both_actions,both
-37,performance,94,both,posterior,both_actions,0.487,0.487,chrome,1022,600,1088,615,FALSE,i don't know.,no issues.,35,f,english,560.767,37.198,TRUE,both_actions,both
-37,performance,24,handle,posterior,single_action,0.124,0.513,chrome,1022,600,1088,615,FALSE,i don't know.,no issues.,35,f,english,560.767,37.198,TRUE,both_actions,both
-37,performance,75,button,posterior,single_action,0.389,0.513,chrome,1022,600,1088,615,FALSE,i don't know.,no issues.,35,f,english,560.767,37.198,TRUE,both_actions,both
-38,learning,100,both,posterior,both_actions,0.334,0.334,firefox,1533,739,1600,900,FALSE,reasoning,no,32,f,english,120.042,13.586,TRUE,both_actions,both
-38,learning,99,handle,posterior,single_action,0.331,0.666,firefox,1533,739,1600,900,FALSE,reasoning,no,32,f,english,120.042,13.586,TRUE,both_actions,both
-38,learning,100,button,posterior,single_action,0.334,0.666,firefox,1533,739,1600,900,FALSE,reasoning,no,32,f,english,120.042,13.586,TRUE,both_actions,both
-39,performance,11,both,posterior,both_actions,0.059,0.059,chrome,1853,987,1920,1080,FALSE,seeing which toy music box the consumer would chose.,none.,1991,m,english,360.3,75.609,TRUE,single_action,button
-39,performance,81,handle,posterior,single_action,0.435,0.941,chrome,1853,987,1920,1080,FALSE,seeing which toy music box the consumer would chose.,none.,1991,m,english,360.3,75.609,TRUE,single_action,button
-39,performance,94,button,posterior,single_action,0.505,0.941,chrome,1853,987,1920,1080,FALSE,seeing which toy music box the consumer would chose.,none.,1991,m,english,360.3,75.609,TRUE,single_action,button
-40,performance,82,button,posterior,single_action,0.336,0.668,chrome,1174,925,1920,1080,FALSE,problem solving,all worked fine!,33,f,english,217.813,38.743,TRUE,both_actions,both
-40,performance,81,handle,posterior,single_action,0.332,0.668,chrome,1174,925,1920,1080,FALSE,problem solving,all worked fine!,33,f,english,217.813,38.743,TRUE,both_actions,both
-40,performance,81,both,posterior,both_actions,0.332,0.332,chrome,1174,925,1920,1080,FALSE,problem solving,all worked fine!,33,f,english,217.813,38.743,TRUE,both_actions,both
-41,performance,92,both,posterior,both_actions,0.326,0.326,chrome,1299,637,1366,768,FALSE,logic,no,36,f,english,250.661,76.54,TRUE,both_actions,both
-41,performance,95,button,posterior,single_action,0.337,0.674,chrome,1299,637,1366,768,FALSE,logic,no,36,f,english,250.661,76.54,TRUE,both_actions,both
-41,performance,95,handle,posterior,single_action,0.337,0.674,chrome,1299,637,1366,768,FALSE,logic,no,36,f,english,250.661,76.54,TRUE,both_actions,both
-42,presentation,50,both,posterior,both_actions,0.25,0.25,chrome,1299,637,1366,768,FALSE,not sure,no,57,male,english,213.477,43.363,TRUE,both_actions,both
-42,presentation,50,button,posterior,single_action,0.25,0.75,chrome,1299,637,1366,768,FALSE,not sure,no,57,male,english,213.477,43.363,TRUE,both_actions,both
-42,presentation,100,handle,posterior,single_action,0.5,0.75,chrome,1299,637,1366,768,FALSE,not sure,no,57,male,english,213.477,43.363,TRUE,both_actions,both
-43,presentation,100,button,posterior,single_action,0.345,0.655,firefox,1299,635,1366,768,FALSE,i'm not sure,no,27,m,english,297.117,32.24,TRUE,both_actions,both
-43,presentation,90,handle,posterior,single_action,0.31,0.655,firefox,1299,635,1366,768,FALSE,i'm not sure,no,27,m,english,297.117,32.24,TRUE,both_actions,both
-43,presentation,100,both,posterior,both_actions,0.345,0.345,firefox,1299,635,1366,768,FALSE,i'm not sure,no,27,m,english,297.117,32.24,TRUE,both_actions,both
-44,performance,50,handle,posterior,single_action,0.256,0.513,chrome,1299,637,1366,768,FALSE,chices,no,49,f,english,303.203,29.915,TRUE,both_actions,both
-44,performance,50,button,posterior,single_action,0.256,0.513,chrome,1299,637,1366,768,FALSE,chices,no,49,f,english,303.203,29.915,TRUE,both_actions,both
-44,performance,95,both,posterior,both_actions,0.487,0.487,chrome,1299,637,1366,768,FALSE,chices,no,49,f,english,303.203,29.915,TRUE,both_actions,both
-45,performance,76,button,posterior,single_action,0.429,0.48,firefox,1299,600,1366,768,FALSE,memory??,no,69,f,english,305.92,42.242,TRUE,both_actions,both
-45,performance,92,both,posterior,both_actions,0.52,0.52,firefox,1299,600,1366,768,FALSE,memory??,no,69,f,english,305.92,42.242,TRUE,both_actions,both
-45,performance,9,handle,posterior,single_action,0.051,0.48,firefox,1299,600,1366,768,FALSE,memory??,no,69,f,english,305.92,42.242,TRUE,both_actions,both
-46,learning,96,button,posterior,single_action,0.914,0.971,chrome,1296,637,1093,615,FALSE,unclear,good hit,62,male,english,195.99,37.338,TRUE,single_action,button
-46,learning,3,both,posterior,both_actions,0.029,0.029,chrome,1296,637,1093,615,FALSE,unclear,good hit,62,male,english,195.99,37.338,TRUE,single_action,button
-46,learning,6,handle,posterior,single_action,0.057,0.971,chrome,1296,637,1093,615,FALSE,unclear,good hit,62,male,english,195.99,37.338,TRUE,single_action,button
-47,presentation,69,both,posterior,both_actions,0.375,0.375,chrome,1134,763,1280,768,FALSE,i'm unsure. my thought process wasn't really logical in selecting which one option would tell me what the toy did - it was more like a gratification thing. pulling the handle seems like the first activity a person would do on that toy.,"everything was fine, thanks.",50,f,english,179.006,9.678,TRUE,single_action,handle
-47,presentation,32,button,posterior,single_action,0.174,0.625,chrome,1134,763,1280,768,FALSE,i'm unsure. my thought process wasn't really logical in selecting which one option would tell me what the toy did - it was more like a gratification thing. pulling the handle seems like the first activity a person would do on that toy.,"everything was fine, thanks.",50,f,english,179.006,9.678,TRUE,single_action,handle
-47,presentation,83,handle,posterior,single_action,0.451,0.625,chrome,1134,763,1280,768,FALSE,i'm unsure. my thought process wasn't really logical in selecting which one option would tell me what the toy did - it was more like a gratification thing. pulling the handle seems like the first activity a person would do on that toy.,"everything was fine, thanks.",50,f,english,179.006,9.678,TRUE,single_action,handle
-48,presentation,81,handle,posterior,single_action,0.506,0.531,chrome,1250,803,1920,1080,FALSE,risk and prediction,,48,m,english,135.133,16.938,TRUE,both_actions,both
-48,presentation,75,both,posterior,both_actions,0.469,0.469,chrome,1250,803,1920,1080,FALSE,risk and prediction,,48,m,english,135.133,16.938,TRUE,both_actions,both
-48,presentation,4,button,posterior,single_action,0.025,0.531,chrome,1250,803,1920,1080,FALSE,risk and prediction,,48,m,english,135.133,16.938,TRUE,both_actions,both
-49,presentation,50,button,posterior,single_action,0.331,0.669,firefox,1300,644,1366,768,FALSE,decesions,interesting survey. no problems.,59,f,english,476.089,61.056,FALSE,both_actions,both
-49,presentation,50,button,posterior,single_action,0.331,0.669,firefox,1300,644,1366,768,FALSE,decesions,interesting survey. no problems.,59,f,english,476.089,61.056,TRUE,both_actions,both
-49,presentation,50,both,posterior,both_actions,0.331,0.331,firefox,1300,644,1366,768,FALSE,decesions,interesting survey. no problems.,59,f,english,476.089,61.056,FALSE,both_actions,both
-49,presentation,50,both,posterior,both_actions,0.331,0.331,firefox,1300,644,1366,768,FALSE,decesions,interesting survey. no problems.,59,f,english,476.089,61.056,TRUE,both_actions,both
-49,presentation,51,handle,posterior,single_action,0.338,0.669,firefox,1300,644,1366,768,FALSE,decesions,interesting survey. no problems.,59,f,english,476.089,61.056,FALSE,both_actions,both
-49,presentation,51,handle,posterior,single_action,0.338,0.669,firefox,1300,644,1366,768,FALSE,decesions,interesting survey. no problems.,59,f,english,476.089,61.056,TRUE,both_actions,both
-50,learning,9,both,posterior,both_actions,0.082,0.082,firefox,1521,781,1600,900,FALSE,logic issues,n/a,56,m,english,231.613,60.039,TRUE,single_action,handle
-50,learning,98,handle,posterior,single_action,0.891,0.918,firefox,1521,781,1600,900,FALSE,logic issues,n/a,56,m,english,231.613,60.039,TRUE,single_action,handle
-50,learning,3,button,posterior,single_action,0.027,0.918,firefox,1521,781,1600,900,FALSE,logic issues,n/a,56,m,english,231.613,60.039,TRUE,single_action,handle
-51,performance,71,both,posterior,both_actions,0.362,0.362,chrome,923,1211,1707,960,FALSE,see how people decide how to make sure something will work,no,34,m,english,173.455,23.587,TRUE,both_actions,both
-51,performance,70,button,posterior,single_action,0.357,0.638,chrome,923,1211,1707,960,FALSE,see how people decide how to make sure something will work,no,34,m,english,173.455,23.587,TRUE,both_actions,both
-51,performance,55,handle,posterior,single_action,0.281,0.638,chrome,923,1211,1707,960,FALSE,see how people decide how to make sure something will work,no,34,m,english,173.455,23.587,TRUE,both_actions,both
-52,performance,4,button,posterior,single_action,0.02,0.51,chrome,1336,693,1440,900,FALSE,logic,none,62,male,english,242.312,46.761,TRUE,single_action,handle
-52,performance,97,handle,posterior,single_action,0.49,0.51,chrome,1336,693,1440,900,FALSE,logic,none,62,male,english,242.312,46.761,TRUE,single_action,handle
-52,performance,97,both,posterior,both_actions,0.49,0.49,chrome,1336,693,1440,900,FALSE,logic,none,62,male,english,242.312,46.761,TRUE,single_action,handle
-53,learning,100,handle,posterior,single_action,0.98,0.99,chrome,1299,600,1366,768,FALSE,measuring logic,no,46,m,english,184.33,26.037,TRUE,single_action,handle
-53,learning,1,button,posterior,single_action,0.01,0.99,chrome,1299,600,1366,768,FALSE,measuring logic,no,46,m,english,184.33,26.037,TRUE,single_action,handle
-53,learning,1,both,posterior,both_actions,0.01,0.01,chrome,1299,600,1366,768,FALSE,measuring logic,no,46,m,english,184.33,26.037,TRUE,single_action,handle
-54,presentation,99,button,posterior,single_action,0.493,0.99,chrome,1470,734,1536,864,FALSE,i have no idea.  how well i remember maybe?,nothing was broken,58,f,english,342.07,38.447,TRUE,both_actions,both
-54,presentation,100,handle,posterior,single_action,0.498,0.99,chrome,1470,734,1536,864,FALSE,i have no idea.  how well i remember maybe?,nothing was broken,58,f,english,342.07,38.447,TRUE,both_actions,both
-54,presentation,2,both,posterior,both_actions,0.01,0.01,chrome,1470,734,1536,864,FALSE,i have no idea.  how well i remember maybe?,nothing was broken,58,f,english,342.07,38.447,TRUE,both_actions,both
-55,learning,82,both,posterior,both_actions,0.363,0.363,chrome,1331,691,1536,864,FALSE,making decisions,n/a,22,female,english,200.439,39.069,TRUE,single_action,handle
-55,learning,82,both,posterior,both_actions,0.363,0.363,chrome,1331,691,1536,864,FALSE,making decisions,n/a,22,female,english,200.439,39.069,FALSE,single_action,handle
-55,learning,62,handle,posterior,single_action,0.274,0.637,chrome,1331,691,1536,864,FALSE,making decisions,n/a,22,female,english,200.439,39.069,TRUE,single_action,handle
-55,learning,62,handle,posterior,single_action,0.274,0.637,chrome,1331,691,1536,864,FALSE,making decisions,n/a,22,female,english,200.439,39.069,FALSE,single_action,handle
-55,learning,82,button,posterior,single_action,0.363,0.637,chrome,1331,691,1536,864,FALSE,making decisions,n/a,22,female,english,200.439,39.069,TRUE,single_action,handle
-55,learning,82,button,posterior,single_action,0.363,0.637,chrome,1331,691,1536,864,FALSE,making decisions,n/a,22,female,english,200.439,39.069,FALSE,single_action,handle
-56,presentation,100,handle,posterior,single_action,0.333,0.667,chrome,1281,561,1366,768,FALSE,idk,no,34,male,english,176.077,26.948,TRUE,both_actions,both
-56,presentation,100,both,posterior,both_actions,0.333,0.333,chrome,1281,561,1366,768,FALSE,idk,no,34,male,english,176.077,26.948,TRUE,both_actions,both
-56,presentation,100,button,posterior,single_action,0.333,0.667,chrome,1281,561,1366,768,FALSE,idk,no,34,male,english,176.077,26.948,TRUE,both_actions,both
-57,presentation,59,button,posterior,single_action,0.263,0.554,chrome,1299,637,1366,768,FALSE,if we could figure out the type of toy.,no comments,39,f,english,176.974,20.051,TRUE,both_actions,both
-57,presentation,65,handle,posterior,single_action,0.29,0.554,chrome,1299,637,1366,768,FALSE,if we could figure out the type of toy.,no comments,39,f,english,176.974,20.051,TRUE,both_actions,both
-57,presentation,100,both,posterior,both_actions,0.446,0.446,chrome,1299,637,1366,768,FALSE,if we could figure out the type of toy.,no comments,39,f,english,176.974,20.051,TRUE,both_actions,both
-58,presentation,83,button,posterior,single_action,0.421,0.569,chrome,1173,630,1280,800,FALSE,unsure,no comments,43,m,english,169.866,28.169,FALSE,both_actions,both
-58,presentation,83,button,posterior,single_action,0.421,0.569,chrome,1173,630,1280,800,FALSE,unsure,no comments,43,m,english,169.866,28.169,TRUE,both_actions,both
-58,presentation,29,handle,posterior,single_action,0.147,0.569,chrome,1173,630,1280,800,FALSE,unsure,no comments,43,m,english,169.866,28.169,FALSE,both_actions,both
-58,presentation,29,handle,posterior,single_action,0.147,0.569,chrome,1173,630,1280,800,FALSE,unsure,no comments,43,m,english,169.866,28.169,TRUE,both_actions,both
-58,presentation,85,both,posterior,both_actions,0.431,0.431,chrome,1173,630,1280,800,FALSE,unsure,no comments,43,m,english,169.866,28.169,FALSE,both_actions,both
-58,presentation,85,both,posterior,both_actions,0.431,0.431,chrome,1173,630,1280,800,FALSE,unsure,no comments,43,m,english,169.866,28.169,TRUE,both_actions,both
-59,learning,89,button,posterior,single_action,0.434,0.893,chrome,1643,1354,3440,1440,FALSE,decision making,,25,m,english,127.002,25.054,TRUE,both_actions,both
-59,learning,22,both,posterior,both_actions,0.107,0.107,chrome,1643,1354,3440,1440,FALSE,decision making,,25,m,english,127.002,25.054,TRUE,both_actions,both
-59,learning,94,handle,posterior,single_action,0.459,0.893,chrome,1643,1354,3440,1440,FALSE,decision making,,25,m,english,127.002,25.054,TRUE,both_actions,both
-60,performance,32,button,posterior,single_action,0.291,0.964,firefox,2350,600,2400,1350,FALSE,probabilities,no,30,m,english,202.26,28.483,TRUE,both_actions,both
-60,performance,74,handle,posterior,single_action,0.673,0.964,firefox,2350,600,2400,1350,FALSE,probabilities,no,30,m,english,202.26,28.483,TRUE,both_actions,both
-60,performance,4,both,posterior,both_actions,0.036,0.036,firefox,2350,600,2400,1350,FALSE,probabilities,no,30,m,english,202.26,28.483,TRUE,both_actions,both
-61,presentation,100,handle,posterior,single_action,0.433,0.567,chrome,1853,100,1920,1080,FALSE,to see how people look at instructions,none,55,f,english,401.812,44.785,FALSE,both_actions,both
-61,presentation,100,handle,posterior,single_action,0.433,0.567,chrome,1853,100,1920,1080,FALSE,to see how people look at instructions,none,55,f,english,401.812,44.785,TRUE,both_actions,both
-61,presentation,100,both,posterior,both_actions,0.433,0.433,chrome,1853,100,1920,1080,FALSE,to see how people look at instructions,none,55,f,english,401.812,44.785,FALSE,both_actions,both
-61,presentation,100,both,posterior,both_actions,0.433,0.433,chrome,1853,100,1920,1080,FALSE,to see how people look at instructions,none,55,f,english,401.812,44.785,TRUE,both_actions,both
-61,presentation,31,button,posterior,single_action,0.134,0.567,chrome,1853,100,1920,1080,FALSE,to see how people look at instructions,none,55,f,english,401.812,44.785,FALSE,both_actions,both
-61,presentation,31,button,posterior,single_action,0.134,0.567,chrome,1853,100,1920,1080,FALSE,to see how people look at instructions,none,55,f,english,401.812,44.785,TRUE,both_actions,both
-62,learning,78,handle,posterior,single_action,0.379,0.757,chrome,1470,600,1536,864,FALSE,deductive reasoning ,thank you. a3c0lpvn749uf3: id in case of errors in submission software communication,33,f,english,194.597,29.933,TRUE,single_action,handle
-62,learning,78,button,posterior,single_action,0.379,0.757,chrome,1470,600,1536,864,FALSE,deductive reasoning ,thank you. a3c0lpvn749uf3: id in case of errors in submission software communication,33,f,english,194.597,29.933,TRUE,single_action,handle
-62,learning,50,both,posterior,both_actions,0.243,0.243,chrome,1470,600,1536,864,FALSE,deductive reasoning ,thank you. a3c0lpvn749uf3: id in case of errors in submission software communication,33,f,english,194.597,29.933,TRUE,single_action,handle
-63,presentation,67,button,posterior,single_action,0.394,0.818,chrome,1292,623,1366,768,FALSE,options,no,27,f,english,134.095,7.015,FALSE,single_action,handle
-63,presentation,67,button,posterior,single_action,0.394,0.818,chrome,1292,623,1366,768,FALSE,options,no,27,f,english,134.095,7.015,TRUE,single_action,handle
-63,presentation,72,handle,posterior,single_action,0.424,0.818,chrome,1292,623,1366,768,FALSE,options,no,27,f,english,134.095,7.015,FALSE,single_action,handle
-63,presentation,72,handle,posterior,single_action,0.424,0.818,chrome,1292,623,1366,768,FALSE,options,no,27,f,english,134.095,7.015,TRUE,single_action,handle
-63,presentation,31,both,posterior,both_actions,0.182,0.182,chrome,1292,623,1366,768,FALSE,options,no,27,f,english,134.095,7.015,FALSE,single_action,handle
-63,presentation,31,both,posterior,both_actions,0.182,0.182,chrome,1292,623,1366,768,FALSE,options,no,27,f,english,134.095,7.015,TRUE,single_action,handle
-64,presentation,3,button,posterior,single_action,0.029,0.048,chrome,580,600,1366,768,FALSE,i'm not sure.,no.,30,m,english,177.859,57.314,FALSE,both_actions,both
-64,presentation,3,button,posterior,single_action,0.029,0.048,chrome,580,600,1366,768,FALSE,i'm not sure.,no.,30,m,english,177.859,57.314,TRUE,both_actions,both
-64,presentation,2,handle,posterior,single_action,0.019,0.048,chrome,580,600,1366,768,FALSE,i'm not sure.,no.,30,m,english,177.859,57.314,FALSE,both_actions,both
-64,presentation,2,handle,posterior,single_action,0.019,0.048,chrome,580,600,1366,768,FALSE,i'm not sure.,no.,30,m,english,177.859,57.314,TRUE,both_actions,both
-64,presentation,100,both,posterior,both_actions,0.952,0.952,chrome,580,600,1366,768,FALSE,i'm not sure.,no.,30,m,english,177.859,57.314,FALSE,both_actions,both
-64,presentation,100,both,posterior,both_actions,0.952,0.952,chrome,580,600,1366,768,FALSE,i'm not sure.,no.,30,m,english,177.859,57.314,TRUE,both_actions,both
-65,performance,39,both,posterior,both_actions,0.225,0.225,chrome,1299,662,1366,768,FALSE,how we assign probability to something?,no,36,m,english,264.231,40.195,TRUE,both_actions,both
-65,performance,66,handle,posterior,single_action,0.382,0.775,chrome,1299,662,1366,768,FALSE,how we assign probability to something?,no,36,m,english,264.231,40.195,TRUE,both_actions,both
-65,performance,68,button,posterior,single_action,0.393,0.775,chrome,1299,662,1366,768,FALSE,how we assign probability to something?,no,36,m,english,264.231,40.195,TRUE,both_actions,both
-66,learning,24,handle,posterior,single_action,0.242,0.495,firefox,1230,676,1280,800,FALSE,to see how i problem solve. ,"yeah, it jumped at the end and played some music, and then quickly moved to a slider screen at the end. i did the sliders twice. ",30,m,english,179.233,53.542,TRUE,both_actions,both
-66,learning,25,button,posterior,single_action,0.253,0.495,firefox,1230,676,1280,800,FALSE,to see how i problem solve. ,"yeah, it jumped at the end and played some music, and then quickly moved to a slider screen at the end. i did the sliders twice. ",30,m,english,179.233,53.542,TRUE,both_actions,both
-66,learning,50,both,posterior,both_actions,0.505,0.505,firefox,1230,676,1280,800,FALSE,to see how i problem solve. ,"yeah, it jumped at the end and played some music, and then quickly moved to a slider screen at the end. i did the sliders twice. ",30,m,english,179.233,53.542,TRUE,both_actions,both
-67,performance,31,button,posterior,single_action,0.307,0.663,chrome,1533,600,1600,900,FALSE,probability and problem solving.,,48,f,english,203.795,24.333,TRUE,both_actions,both
-67,performance,34,both,posterior,both_actions,0.337,0.337,chrome,1533,600,1600,900,FALSE,probability and problem solving.,,48,f,english,203.795,24.333,TRUE,both_actions,both
-67,performance,36,handle,posterior,single_action,0.356,0.663,chrome,1533,600,1600,900,FALSE,probability and problem solving.,,48,f,english,203.795,24.333,TRUE,both_actions,both
-68,presentation,100,button,posterior,single_action,0.5,0.705,chrome,464,524,1920,1080,FALSE,i'm not sure,,26,female,english,369.457,13.196,FALSE,both_actions,both
-68,presentation,100,button,posterior,single_action,0.5,0.705,chrome,464,524,1920,1080,FALSE,i'm not sure,,26,female,english,369.457,13.196,TRUE,both_actions,both
-68,presentation,41,handle,posterior,single_action,0.205,0.705,chrome,464,524,1920,1080,FALSE,i'm not sure,,26,female,english,369.457,13.196,FALSE,both_actions,both
-68,presentation,41,handle,posterior,single_action,0.205,0.705,chrome,464,524,1920,1080,FALSE,i'm not sure,,26,female,english,369.457,13.196,TRUE,both_actions,both
-68,presentation,59,both,posterior,both_actions,0.295,0.295,chrome,464,524,1920,1080,FALSE,i'm not sure,,26,female,english,369.457,13.196,FALSE,both_actions,both
-68,presentation,59,both,posterior,both_actions,0.295,0.295,chrome,464,524,1920,1080,FALSE,i'm not sure,,26,female,english,369.457,13.196,TRUE,both_actions,both
-69,presentation,83,handle,posterior,single_action,0.61,0.757,chrome,1219,797,1440,900,FALSE,to see how different people see how toys work without labels.,nothing broken.,31,f,english,168.264,24.539,TRUE,single_action,handle
-69,presentation,33,both,posterior,both_actions,0.243,0.243,chrome,1219,797,1440,900,FALSE,to see how different people see how toys work without labels.,nothing broken.,31,f,english,168.264,24.539,TRUE,single_action,handle
-69,presentation,20,button,posterior,single_action,0.147,0.757,chrome,1219,797,1440,900,FALSE,to see how different people see how toys work without labels.,nothing broken.,31,f,english,168.264,24.539,TRUE,single_action,handle
-70,performance,94,both,posterior,both_actions,0.418,0.418,chrome,1299,678,1366,768,FALSE,not sure,no,39,f,english,215.512,52.113,TRUE,single_action,button
-70,performance,65,button,posterior,single_action,0.289,0.582,chrome,1299,678,1366,768,FALSE,not sure,no,39,f,english,215.512,52.113,TRUE,single_action,button
-70,performance,66,handle,posterior,single_action,0.293,0.582,chrome,1299,678,1366,768,FALSE,not sure,no,39,f,english,215.512,52.113,TRUE,single_action,button
-71,performance,47,handle,posterior,single_action,0.247,0.495,chrome,1853,974,1920,1080,FALSE,i'm not sure,no,34,f,english,161.214,22.055,TRUE,both_actions,both
-71,performance,96,both,posterior,both_actions,0.505,0.505,chrome,1853,974,1920,1080,FALSE,i'm not sure,no,34,f,english,161.214,22.055,TRUE,both_actions,both
-71,performance,47,button,posterior,single_action,0.247,0.495,chrome,1853,974,1920,1080,FALSE,i'm not sure,no,34,f,english,161.214,22.055,TRUE,both_actions,both
-72,performance,100,button,posterior,single_action,0.98,0.99,chrome,1016,510,1366,768,FALSE,no idea,no,42,f,bulgarian,203.741,27.137,TRUE,single_action,button
-72,performance,1,handle,posterior,single_action,0.01,0.99,chrome,1016,510,1366,768,FALSE,no idea,no,42,f,bulgarian,203.741,27.137,TRUE,single_action,button
-72,performance,1,both,posterior,both_actions,0.01,0.01,chrome,1016,510,1366,768,FALSE,no idea,no,42,f,bulgarian,203.741,27.137,TRUE,single_action,button
-73,presentation,100,button,posterior,single_action,0.333,0.667,chrome,1709,854,1600,900,FALSE,reading instructions,no,48,f,english,117.767,13.223,TRUE,both_actions,both
-73,presentation,100,both,posterior,both_actions,0.333,0.333,chrome,1709,854,1600,900,FALSE,reading instructions,no,48,f,english,117.767,13.223,TRUE,both_actions,both
-73,presentation,100,handle,posterior,single_action,0.333,0.667,chrome,1709,854,1600,900,FALSE,reading instructions,no,48,f,english,117.767,13.223,TRUE,both_actions,both
-74,performance,20,handle,posterior,single_action,0.256,0.538,chrome,1176,614,1366,768,FALSE,logical reasoning.,the task was quick and interesting.,51,m,english,466.609,40.415,TRUE,both_actions,both
-74,performance,22,button,posterior,single_action,0.282,0.538,chrome,1176,614,1366,768,FALSE,logical reasoning.,the task was quick and interesting.,51,m,english,466.609,40.415,TRUE,both_actions,both
-74,performance,36,both,posterior,both_actions,0.462,0.462,chrome,1176,614,1366,768,FALSE,logical reasoning.,the task was quick and interesting.,51,m,english,466.609,40.415,TRUE,both_actions,both
-75,performance,1,handle,posterior,single_action,0.01,0.99,chrome,1331,668,1536,864,FALSE,i am not sure,no,41,f,english,162.584,33.848,TRUE,single_action,button
-75,performance,100,button,posterior,single_action,0.98,0.99,chrome,1331,668,1536,864,FALSE,i am not sure,no,41,f,english,162.584,33.848,TRUE,single_action,button
-75,performance,1,both,posterior,both_actions,0.01,0.01,chrome,1331,668,1536,864,FALSE,i am not sure,no,41,f,english,162.584,33.848,TRUE,single_action,button
+id,condition,slider_value,hypothesis,hypothesis_type,slider_response_type_collapsed,slider_value_normalized,slider_value_norm_2,browser,browser_width,browser_height,screen_width,screen_height,mobile_device,about,comment,age,gender,first_language,experiment_time,action_trial_time,manip_check_score,action_response_collapsed,action_response
+1,performance,35,both,prior,both_actions,0.215,0.215,chrome,1289,648,1366,768,FALSE,i don't know,none,27,f,english,142.031,14.077,3,both_actions,both
+1,performance,58,button,prior,single_action,0.356,0.785,chrome,1289,648,1366,768,FALSE,i don't know,none,27,f,english,142.031,14.077,3,both_actions,both
+1,performance,70,handle,prior,single_action,0.429,0.785,chrome,1289,648,1366,768,FALSE,i don't know,none,27,f,english,142.031,14.077,3,both_actions,both
+2,learning,36,handle,prior,single_action,0.324,0.658,chrome,1230,676,1280,800,FALSE,logic,no,35,f,english,140.12,29.647,3,single_action,button
+2,learning,38,both,prior,both_actions,0.342,0.342,chrome,1230,676,1280,800,FALSE,logic,no,35,f,english,140.12,29.647,3,single_action,button
+2,learning,37,button,prior,single_action,0.333,0.658,chrome,1230,676,1280,800,FALSE,logic,no,35,f,english,140.12,29.647,3,single_action,button
+3,learning,73,handle,prior,single_action,0.503,0.848,chrome,1028,600,1093,615,FALSE,if i could figure out which music box it was.,no.,47,m,english,236.229,74.277,3,single_action,button
+3,learning,50,button,prior,single_action,0.345,0.848,chrome,1028,600,1093,615,FALSE,if i could figure out which music box it was.,no.,47,m,english,236.229,74.277,3,single_action,button
+3,learning,22,both,prior,both_actions,0.152,0.152,chrome,1028,600,1093,615,FALSE,if i could figure out which music box it was.,no.,47,m,english,236.229,74.277,3,single_action,button
+4,learning,84,both,prior,both_actions,0.587,0.587,chrome,1082,600,1920,1080,FALSE,studying how people reason about cause and effect.,no problems.,30,male,english,255.826,31.907,3,both_actions,both
+4,learning,31,button,prior,single_action,0.217,0.413,chrome,1082,600,1920,1080,FALSE,studying how people reason about cause and effect.,no problems.,30,male,english,255.826,31.907,3,both_actions,both
+4,learning,28,handle,prior,single_action,0.196,0.413,chrome,1082,600,1920,1080,FALSE,studying how people reason about cause and effect.,no problems.,30,male,english,255.826,31.907,3,both_actions,both
+5,learning,90,both,prior,both_actions,0.4,0.4,chrome,1533,769,1600,900,FALSE,i'm not sure,no,34,f,english,635.05,31.619,3,both_actions,both
+5,learning,95,handle,prior,single_action,0.422,0.6,chrome,1533,769,1600,900,FALSE,i'm not sure,no,34,f,english,635.05,31.619,3,both_actions,both
+5,learning,40,button,prior,single_action,0.178,0.6,chrome,1533,769,1600,900,FALSE,i'm not sure,no,34,f,english,635.05,31.619,3,both_actions,both
+6,performance,100,handle,prior,single_action,0.333,0.667,chrome,1076,681,1280,800,FALSE,reasoning,no,38,m,english,159.828,20.912,3,both_actions,both
+6,performance,100,both,prior,both_actions,0.333,0.333,chrome,1076,681,1280,800,FALSE,reasoning,no,38,m,english,159.828,20.912,3,both_actions,both
+6,performance,100,button,prior,single_action,0.333,0.667,chrome,1076,681,1280,800,FALSE,reasoning,no,38,m,english,159.828,20.912,3,both_actions,both
+7,presentation,44,both,prior,both_actions,0.344,0.344,chrome,1016,510,1366,768,FALSE,risk accessment bias,no comment,63,m,english,223.658,26.923,3,both_actions,both
+7,presentation,42,button,prior,single_action,0.328,0.656,chrome,1016,510,1366,768,FALSE,risk accessment bias,no comment,63,m,english,223.658,26.923,3,both_actions,both
+7,presentation,42,handle,prior,single_action,0.328,0.656,chrome,1016,510,1366,768,FALSE,risk accessment bias,no comment,63,m,english,223.658,26.923,3,both_actions,both
+8,presentation,20,handle,prior,single_action,0.146,0.27,chrome,1176,588,1366,768,FALSE,logical guessing,no,49,f,english,357.264,53.916,3,both_actions,both
+8,presentation,100,both,prior,both_actions,0.73,0.73,chrome,1176,588,1366,768,FALSE,logical guessing,no,49,f,english,357.264,53.916,3,both_actions,both
+8,presentation,17,button,prior,single_action,0.124,0.27,chrome,1176,588,1366,768,FALSE,logical guessing,no,49,f,english,357.264,53.916,3,both_actions,both
+9,learning,99,button,prior,single_action,0.339,0.675,chrome,1843,1080,1920,1200,FALSE,understanding how an action can make something work.,great survey and would love to work on others from you in the future. ,31,f,english,208.604,52.55,3,single_action,button
+9,learning,98,handle,prior,single_action,0.336,0.675,chrome,1843,1080,1920,1200,FALSE,understanding how an action can make something work.,great survey and would love to work on others from you in the future. ,31,f,english,208.604,52.55,3,single_action,button
+9,learning,95,both,prior,both_actions,0.325,0.325,chrome,1843,1080,1920,1200,FALSE,understanding how an action can make something work.,great survey and would love to work on others from you in the future. ,31,f,english,208.604,52.55,3,single_action,button
+10,performance,34,handle,prior,single_action,0.318,0.673,chrome,1175,615,1366,768,FALSE,i have no idea.,no.,42,f,english,196.382,44.338,3,single_action,handle
+10,performance,35,both,prior,both_actions,0.327,0.327,chrome,1175,615,1366,768,FALSE,i have no idea.,no.,42,f,english,196.382,44.338,3,single_action,handle
+10,performance,38,button,prior,single_action,0.355,0.673,chrome,1175,615,1366,768,FALSE,i have no idea.,no.,42,f,english,196.382,44.338,3,single_action,handle
+11,performance,75,both,prior,both_actions,0.346,0.346,chrome,1111,625,1366,768,FALSE,i'm not really sure.,no,40,f,english,400.412,28.651,0,single_action,button
+11,performance,82,button,prior,single_action,0.378,0.654,chrome,1111,625,1366,768,FALSE,i'm not really sure.,no,40,f,english,400.412,28.651,0,single_action,button
+11,performance,60,handle,prior,single_action,0.276,0.654,chrome,1111,625,1366,768,FALSE,i'm not really sure.,no,40,f,english,400.412,28.651,0,single_action,button
+12,learning,50,button,prior,single_action,0.307,0.693,chrome,1870,600,1920,1080,FALSE,how we would go about coming to a definitive conclusion after figuring out the instructions to a toy.,"no other comment, other than i tried my best.",28,m,english,1709.973,436.087,3,single_action,handle
+12,learning,63,handle,prior,single_action,0.387,0.693,chrome,1870,600,1920,1080,FALSE,how we would go about coming to a definitive conclusion after figuring out the instructions to a toy.,"no other comment, other than i tried my best.",28,m,english,1709.973,436.087,3,single_action,handle
+12,learning,50,both,prior,both_actions,0.307,0.307,chrome,1870,600,1920,1080,FALSE,how we would go about coming to a definitive conclusion after figuring out the instructions to a toy.,"no other comment, other than i tried my best.",28,m,english,1709.973,436.087,3,single_action,handle
+13,presentation,37,button,prior,single_action,0.333,0.667,chrome,1342,929,1920,1080,FALSE,if you're willing to gamble that it's not bothmusiclight and only trigger one of the inputs.,,27,m,english,219.206,22.69,3,both_actions,both
+13,presentation,37,handle,prior,single_action,0.333,0.667,chrome,1342,929,1920,1080,FALSE,if you're willing to gamble that it's not bothmusiclight and only trigger one of the inputs.,,27,m,english,219.206,22.69,3,both_actions,both
+13,presentation,37,both,prior,both_actions,0.333,0.333,chrome,1342,929,1920,1080,FALSE,if you're willing to gamble that it's not bothmusiclight and only trigger one of the inputs.,,27,m,english,219.206,22.69,3,both_actions,both
+14,performance,59,button,prior,single_action,0.349,0.58,chrome,1470,759,1536,864,FALSE,how we learn,no,44,m,english,311.708,18.015,2,both_actions,both
+14,performance,39,handle,prior,single_action,0.231,0.58,chrome,1470,759,1536,864,FALSE,how we learn,no,44,m,english,311.708,18.015,2,both_actions,both
+14,performance,71,both,prior,both_actions,0.42,0.42,chrome,1470,759,1536,864,FALSE,how we learn,no,44,m,english,311.708,18.015,2,both_actions,both
+15,learning,67,handle,prior,single_action,0.307,0.711,chrome,1375,826,1440,900,FALSE,figuring out which design is more intuitive,,39,female,english,251.069,47.192,3,single_action,button
+15,learning,63,both,prior,both_actions,0.289,0.289,chrome,1375,826,1440,900,FALSE,figuring out which design is more intuitive,,39,female,english,251.069,47.192,3,single_action,button
+15,learning,88,button,prior,single_action,0.404,0.711,chrome,1375,826,1440,900,FALSE,figuring out which design is more intuitive,,39,female,english,251.069,47.192,3,single_action,button
+16,learning,13,handle,prior,single_action,0.102,0.219,chrome,1749,883,1366,768,FALSE,accuracy of a job,,34,male,english,398.588,33.112,2,both_actions,both
+16,learning,15,button,prior,single_action,0.117,0.219,chrome,1749,883,1366,768,FALSE,accuracy of a job,,34,male,english,398.588,33.112,2,both_actions,both
+16,learning,100,both,prior,both_actions,0.781,0.781,chrome,1749,883,1366,768,FALSE,accuracy of a job,,34,male,english,398.588,33.112,2,both_actions,both
+17,learning,100,handle,prior,single_action,0.333,0.667,chrome,996,1228,1080,1920,FALSE,using logic and process of elimination to predict outcome,no comments,64,f,english,407.597,72.927,3,single_action,button
+17,learning,100,both,prior,both_actions,0.333,0.333,chrome,996,1228,1080,1920,FALSE,using logic and process of elimination to predict outcome,no comments,64,f,english,407.597,72.927,3,single_action,button
+17,learning,100,button,prior,single_action,0.333,0.667,chrome,996,1228,1080,1920,FALSE,using logic and process of elimination to predict outcome,no comments,64,f,english,407.597,72.927,3,single_action,button
+18,learning,24,both,prior,both_actions,0.162,0.162,chrome,1091,703,1280,800,FALSE,i don't know,everything seemed to work well,33,f,english,228.034,50.725,3,single_action,button
+18,learning,83,button,prior,single_action,0.561,0.838,chrome,1091,703,1280,800,FALSE,i don't know,everything seemed to work well,33,f,english,228.034,50.725,3,single_action,button
+18,learning,41,handle,prior,single_action,0.277,0.838,chrome,1091,703,1280,800,FALSE,i don't know,everything seemed to work well,33,f,english,228.034,50.725,3,single_action,button
+19,presentation,70,handle,prior,single_action,0.34,0.699,chrome,1635,787,1280,720,FALSE,not really sure,no,46,f,english,225.095,26.57,3,both_actions,both
+19,presentation,74,button,prior,single_action,0.359,0.699,chrome,1635,787,1280,720,FALSE,not really sure,no,46,f,english,225.095,26.57,3,both_actions,both
+19,presentation,62,both,prior,both_actions,0.301,0.301,chrome,1635,787,1280,720,FALSE,not really sure,no,46,f,english,225.095,26.57,3,both_actions,both
+20,learning,89,handle,prior,single_action,0.332,0.627,chrome,1299,637,1366,768,FALSE,?,na,25,female,english,202.262,43.502,2,both_actions,both
+20,learning,100,both,prior,both_actions,0.373,0.373,chrome,1299,637,1366,768,FALSE,?,na,25,female,english,202.262,43.502,2,both_actions,both
+20,learning,79,button,prior,single_action,0.295,0.627,chrome,1299,637,1366,768,FALSE,?,na,25,female,english,202.262,43.502,2,both_actions,both
+21,learning,35,button,prior,single_action,0.354,0.687,chrome,392,600,412,732,TRUE,not sure,nope,27,f,english,285.838,60.183,3,single_action,button
+21,learning,33,handle,prior,single_action,0.333,0.687,chrome,392,600,412,732,TRUE,not sure,nope,27,f,english,285.838,60.183,3,single_action,button
+21,learning,31,both,prior,both_actions,0.313,0.313,chrome,392,600,412,732,TRUE,not sure,nope,27,f,english,285.838,60.183,3,single_action,button
+22,learning,77,handle,prior,single_action,0.326,0.576,chrome,1390,600,1440,900,FALSE,no sure,no,38,m,english,346.701,10.048,3,single_action,handle
+22,learning,100,both,prior,both_actions,0.424,0.424,chrome,1390,600,1440,900,FALSE,no sure,no,38,m,english,346.701,10.048,3,single_action,handle
+22,learning,59,button,prior,single_action,0.25,0.576,chrome,1390,600,1440,900,FALSE,no sure,no,38,m,english,346.701,10.048,3,single_action,handle
+23,performance,52,both,prior,both_actions,0.338,0.338,chrome,1217,615,1600,900,FALSE,"i have no idea, some kind of reasoning ",,44,f,english ,168.33,17.239,1,both_actions,both
+23,performance,51,handle,prior,single_action,0.331,0.662,chrome,1217,615,1600,900,FALSE,"i have no idea, some kind of reasoning ",,44,f,english ,168.33,17.239,1,both_actions,both
+23,performance,51,button,prior,single_action,0.331,0.662,chrome,1217,615,1600,900,FALSE,"i have no idea, some kind of reasoning ",,44,f,english ,168.33,17.239,1,both_actions,both
+24,learning,81,both,prior,both_actions,0.379,0.379,chrome,1357,777,1280,800,FALSE,not too sure exactly. ,everything worked and was interesting. thank you!,33,male,english,208.032,42.273,3,single_action,button
+24,learning,65,button,prior,single_action,0.304,0.621,chrome,1357,777,1280,800,FALSE,not too sure exactly. ,everything worked and was interesting. thank you!,33,male,english,208.032,42.273,3,single_action,button
+24,learning,68,handle,prior,single_action,0.318,0.621,chrome,1357,777,1280,800,FALSE,not too sure exactly. ,everything worked and was interesting. thank you!,33,male,english,208.032,42.273,3,single_action,button
+25,presentation,44,button,prior,single_action,0.326,0.667,firefox,1533,600,1600,900,FALSE,how people make estimates based on only certain information.,"no, i do not.",45,f,english,306.109,25.35,3,both_actions,both
+25,presentation,45,both,prior,both_actions,0.333,0.333,firefox,1533,600,1600,900,FALSE,how people make estimates based on only certain information.,"no, i do not.",45,f,english,306.109,25.35,3,both_actions,both
+25,presentation,46,handle,prior,single_action,0.341,0.667,firefox,1533,600,1600,900,FALSE,how people make estimates based on only certain information.,"no, i do not.",45,f,english,306.109,25.35,3,both_actions,both
+26,presentation,33,button,prior,single_action,0.314,0.638,chrome,1299,637,1366,768,FALSE,i think that this task was about using logic to narrow down options to the most likely option,thanks for the opportunity to participate and good luck with your research!,51,m,english,204.262,17.502,3,both_actions,both
+26,presentation,34,handle,prior,single_action,0.324,0.638,chrome,1299,637,1366,768,FALSE,i think that this task was about using logic to narrow down options to the most likely option,thanks for the opportunity to participate and good luck with your research!,51,m,english,204.262,17.502,3,both_actions,both
+26,presentation,38,both,prior,both_actions,0.362,0.362,chrome,1299,637,1366,768,FALSE,i think that this task was about using logic to narrow down options to the most likely option,thanks for the opportunity to participate and good luck with your research!,51,m,english,204.262,17.502,3,both_actions,both
+27,learning,100,handle,prior,single_action,0.333,0.667,chrome,1853,974,1920,1080,FALSE,understanding instructions,no,25,f,english,109.051,22.35,1,single_action,button
+27,learning,100,button,prior,single_action,0.333,0.667,chrome,1853,974,1920,1080,FALSE,understanding instructions,no,25,f,english,109.051,22.35,1,single_action,button
+27,learning,100,both,prior,both_actions,0.333,0.333,chrome,1853,974,1920,1080,FALSE,understanding instructions,no,25,f,english,109.051,22.35,1,single_action,button
+28,presentation,20,both,prior,both_actions,0.159,0.159,chrome,1837,922,1920,1080,FALSE,perceptions,interesting,39,f,english,373.283,34.581,3,both_actions,both
+28,presentation,8,button,prior,single_action,0.063,0.841,chrome,1837,922,1920,1080,FALSE,perceptions,interesting,39,f,english,373.283,34.581,3,both_actions,both
+28,presentation,98,handle,prior,single_action,0.778,0.841,chrome,1837,922,1920,1080,FALSE,perceptions,interesting,39,f,english,373.283,34.581,3,both_actions,both
+29,learning,89,handle,prior,single_action,0.809,0.918,chrome,1150,850,1280,800,FALSE,logic,n/a,27,m,english,321.476,175.022,3,single_action,button
+29,learning,9,both,prior,both_actions,0.082,0.082,chrome,1150,850,1280,800,FALSE,logic,n/a,27,m,english,321.476,175.022,3,single_action,button
+29,learning,12,button,prior,single_action,0.109,0.918,chrome,1150,850,1280,800,FALSE,logic,n/a,27,m,english,321.476,175.022,3,single_action,button
+30,presentation,47,handle,prior,single_action,0.318,0.993,chrome,1680,885,1920,1080,FALSE,i'm not entirely certain,"no further comment, at this time",34,m,english,131.613,20.457,3,single_action,button
+30,presentation,100,button,prior,single_action,0.676,0.993,chrome,1680,885,1920,1080,FALSE,i'm not entirely certain,"no further comment, at this time",34,m,english,131.613,20.457,3,single_action,button
+30,presentation,1,both,prior,both_actions,0.007,0.007,chrome,1680,885,1920,1080,FALSE,i'm not entirely certain,"no further comment, at this time",34,m,english,131.613,20.457,3,single_action,button
+31,performance,98,handle,prior,single_action,0.45,0.541,firefox,1199,869,1280,1024,FALSE,"i am not sure, maybe how we read directions and apply them.",no,63,f,english,249.862,14.876,3,single_action,handle
+31,performance,100,both,prior,both_actions,0.459,0.459,firefox,1199,869,1280,1024,FALSE,"i am not sure, maybe how we read directions and apply them.",no,63,f,english,249.862,14.876,3,single_action,handle
+31,performance,20,button,prior,single_action,0.092,0.541,firefox,1199,869,1280,1024,FALSE,"i am not sure, maybe how we read directions and apply them.",no,63,f,english,249.862,14.876,3,single_action,handle
+32,performance,54,handle,prior,single_action,0.342,0.677,chrome,340,600,360,640,TRUE,paying attention and understanding directions,"no, it worked fine. ",35,m,english,200.79,24.538,3,both_actions,both
+32,performance,53,button,prior,single_action,0.335,0.677,chrome,340,600,360,640,TRUE,paying attention and understanding directions,"no, it worked fine. ",35,m,english,200.79,24.538,3,both_actions,both
+32,performance,51,both,prior,both_actions,0.323,0.323,chrome,340,600,360,640,TRUE,paying attention and understanding directions,"no, it worked fine. ",35,m,english,200.79,24.538,3,both_actions,both
+33,performance,35,handle,prior,single_action,0.212,0.685,chrome,1128,932,2048,1152,FALSE,how people understand the workings of systems.,no,32,m,english,166.953,14.36,3,both_actions,both
+33,performance,78,button,prior,single_action,0.473,0.685,chrome,1128,932,2048,1152,FALSE,how people understand the workings of systems.,no,32,m,english,166.953,14.36,3,both_actions,both
+33,performance,52,both,prior,both_actions,0.315,0.315,chrome,1128,932,2048,1152,FALSE,how people understand the workings of systems.,no,32,m,english,166.953,14.36,3,both_actions,both
+34,performance,56,button,prior,single_action,0.275,0.578,chrome,1636,828,1366,768,FALSE,logical thinking/reading comprehension,,30,m,english,121.112,15.517,3,both_actions,both
+34,performance,62,handle,prior,single_action,0.304,0.578,chrome,1636,828,1366,768,FALSE,logical thinking/reading comprehension,,30,m,english,121.112,15.517,3,both_actions,both
+34,performance,86,both,prior,both_actions,0.422,0.422,chrome,1636,828,1366,768,FALSE,logical thinking/reading comprehension,,30,m,english,121.112,15.517,3,both_actions,both
+35,learning,100,both,prior,both_actions,0.98,0.98,chrome,1299,675,1366,768,FALSE,figuring out a music box toy,everything worked great,37,f,english,229.413,34.973,3,both_actions,both
+35,learning,1,handle,prior,single_action,0.01,0.02,chrome,1299,675,1366,768,FALSE,figuring out a music box toy,everything worked great,37,f,english,229.413,34.973,3,both_actions,both
+35,learning,1,button,prior,single_action,0.01,0.02,chrome,1299,675,1366,768,FALSE,figuring out a music box toy,everything worked great,37,f,english,229.413,34.973,3,both_actions,both
+36,presentation,100,button,prior,single_action,0.422,0.844,chrome,1217,615,1600,900,FALSE,"i think it had something to do with logic, like, possibilites and exclusions.","this was fun. it worked fine, and the music and graphic were nice.",50,f,english,267.243,26.484,3,both_actions,both
+36,presentation,100,handle,prior,single_action,0.422,0.844,chrome,1217,615,1600,900,FALSE,"i think it had something to do with logic, like, possibilites and exclusions.","this was fun. it worked fine, and the music and graphic were nice.",50,f,english,267.243,26.484,3,both_actions,both
+36,presentation,37,both,prior,both_actions,0.156,0.156,chrome,1217,615,1600,900,FALSE,"i think it had something to do with logic, like, possibilites and exclusions.","this was fun. it worked fine, and the music and graphic were nice.",50,f,english,267.243,26.484,3,both_actions,both
+37,performance,82,both,prior,both_actions,0.48,0.48,chrome,1022,600,1088,615,FALSE,i don't know.,no issues.,35,f,english,560.767,37.198,3,both_actions,both
+37,performance,25,handle,prior,single_action,0.146,0.52,chrome,1022,600,1088,615,FALSE,i don't know.,no issues.,35,f,english,560.767,37.198,3,both_actions,both
+37,performance,64,button,prior,single_action,0.374,0.52,chrome,1022,600,1088,615,FALSE,i don't know.,no issues.,35,f,english,560.767,37.198,3,both_actions,both
+38,learning,100,button,prior,single_action,0.333,0.667,firefox,1533,739,1600,900,FALSE,reasoning,no,32,f,english,120.042,13.586,3,both_actions,both
+38,learning,100,handle,prior,single_action,0.333,0.667,firefox,1533,739,1600,900,FALSE,reasoning,no,32,f,english,120.042,13.586,3,both_actions,both
+38,learning,100,both,prior,both_actions,0.333,0.333,firefox,1533,739,1600,900,FALSE,reasoning,no,32,f,english,120.042,13.586,3,both_actions,both
+39,performance,29,both,prior,both_actions,0.177,0.177,chrome,1853,987,1920,1080,FALSE,seeing which toy music box the consumer would chose.,none.,1991,m,english,360.3,75.609,3,single_action,button
+39,performance,64,handle,prior,single_action,0.39,0.823,chrome,1853,987,1920,1080,FALSE,seeing which toy music box the consumer would chose.,none.,1991,m,english,360.3,75.609,3,single_action,button
+39,performance,71,button,prior,single_action,0.433,0.823,chrome,1853,987,1920,1080,FALSE,seeing which toy music box the consumer would chose.,none.,1991,m,english,360.3,75.609,3,single_action,button
+40,performance,83,handle,prior,single_action,0.329,0.659,chrome,1174,925,1920,1080,FALSE,problem solving,all worked fine!,33,f,english,217.813,38.743,3,both_actions,both
+40,performance,83,button,prior,single_action,0.329,0.659,chrome,1174,925,1920,1080,FALSE,problem solving,all worked fine!,33,f,english,217.813,38.743,3,both_actions,both
+40,performance,86,both,prior,both_actions,0.341,0.341,chrome,1174,925,1920,1080,FALSE,problem solving,all worked fine!,33,f,english,217.813,38.743,3,both_actions,both
+41,performance,53,button,prior,single_action,0.338,0.669,chrome,1299,637,1366,768,FALSE,logic,no,36,f,english,250.661,76.54,3,both_actions,both
+41,performance,52,both,prior,both_actions,0.331,0.331,chrome,1299,637,1366,768,FALSE,logic,no,36,f,english,250.661,76.54,3,both_actions,both
+41,performance,52,handle,prior,single_action,0.331,0.669,chrome,1299,637,1366,768,FALSE,logic,no,36,f,english,250.661,76.54,3,both_actions,both
+42,presentation,78,handle,prior,single_action,0.305,0.609,chrome,1299,637,1366,768,FALSE,not sure,no,57,male,english,213.477,43.363,3,both_actions,both
+42,presentation,78,button,prior,single_action,0.305,0.609,chrome,1299,637,1366,768,FALSE,not sure,no,57,male,english,213.477,43.363,3,both_actions,both
+42,presentation,100,both,prior,both_actions,0.391,0.391,chrome,1299,637,1366,768,FALSE,not sure,no,57,male,english,213.477,43.363,3,both_actions,both
+43,presentation,100,button,prior,single_action,0.333,0.667,firefox,1299,635,1366,768,FALSE,i'm not sure,no,27,m,english,297.117,32.24,3,both_actions,both
+43,presentation,100,handle,prior,single_action,0.333,0.667,firefox,1299,635,1366,768,FALSE,i'm not sure,no,27,m,english,297.117,32.24,3,both_actions,both
+43,presentation,100,both,prior,both_actions,0.333,0.333,firefox,1299,635,1366,768,FALSE,i'm not sure,no,27,m,english,297.117,32.24,3,both_actions,both
+44,performance,100,both,prior,both_actions,0.667,0.667,chrome,1299,637,1366,768,FALSE,chices,no,49,f,english,303.203,29.915,3,both_actions,both
+44,performance,26,handle,prior,single_action,0.173,0.333,chrome,1299,637,1366,768,FALSE,chices,no,49,f,english,303.203,29.915,3,both_actions,both
+44,performance,24,button,prior,single_action,0.16,0.333,chrome,1299,637,1366,768,FALSE,chices,no,49,f,english,303.203,29.915,3,both_actions,both
+45,performance,70,both,prior,both_actions,0.446,0.446,firefox,1299,600,1366,768,FALSE,memory??,no,69,f,english,305.92,42.242,3,both_actions,both
+45,performance,83,button,prior,single_action,0.529,0.554,firefox,1299,600,1366,768,FALSE,memory??,no,69,f,english,305.92,42.242,3,both_actions,both
+45,performance,4,handle,prior,single_action,0.025,0.554,firefox,1299,600,1366,768,FALSE,memory??,no,69,f,english,305.92,42.242,3,both_actions,both
+46,learning,26,button,prior,single_action,0.338,0.662,chrome,1296,637,1093,615,FALSE,unclear,good hit,62,male,english,195.99,37.338,3,single_action,button
+46,learning,25,handle,prior,single_action,0.325,0.662,chrome,1296,637,1093,615,FALSE,unclear,good hit,62,male,english,195.99,37.338,3,single_action,button
+46,learning,26,both,prior,both_actions,0.338,0.338,chrome,1296,637,1093,615,FALSE,unclear,good hit,62,male,english,195.99,37.338,3,single_action,button
+47,presentation,69,button,prior,single_action,0.379,0.549,chrome,1134,763,1280,768,FALSE,i'm unsure. my thought process wasn't really logical in selecting which one option would tell me what the toy did - it was more like a gratification thing. pulling the handle seems like the first activity a person would do on that toy.,"everything was fine, thanks.",50,f,english,179.006,9.678,3,single_action,handle
+47,presentation,31,handle,prior,single_action,0.17,0.549,chrome,1134,763,1280,768,FALSE,i'm unsure. my thought process wasn't really logical in selecting which one option would tell me what the toy did - it was more like a gratification thing. pulling the handle seems like the first activity a person would do on that toy.,"everything was fine, thanks.",50,f,english,179.006,9.678,3,single_action,handle
+47,presentation,82,both,prior,both_actions,0.451,0.451,chrome,1134,763,1280,768,FALSE,i'm unsure. my thought process wasn't really logical in selecting which one option would tell me what the toy did - it was more like a gratification thing. pulling the handle seems like the first activity a person would do on that toy.,"everything was fine, thanks.",50,f,english,179.006,9.678,3,single_action,handle
+48,presentation,35,handle,prior,single_action,0.31,0.664,chrome,1250,803,1920,1080,FALSE,risk and prediction,,48,m,english,135.133,16.938,3,both_actions,both
+48,presentation,38,both,prior,both_actions,0.336,0.336,chrome,1250,803,1920,1080,FALSE,risk and prediction,,48,m,english,135.133,16.938,3,both_actions,both
+48,presentation,40,button,prior,single_action,0.354,0.664,chrome,1250,803,1920,1080,FALSE,risk and prediction,,48,m,english,135.133,16.938,3,both_actions,both
+49,presentation,100,both,prior,both_actions,0.662,0.662,firefox,1300,644,1366,768,FALSE,decesions,interesting survey. no problems.,59,f,english,476.089,61.056,1,both_actions,both
+49,presentation,1,handle,prior,single_action,0.007,0.338,firefox,1300,644,1366,768,FALSE,decesions,interesting survey. no problems.,59,f,english,476.089,61.056,1,both_actions,both
+49,presentation,50,button,prior,single_action,0.331,0.338,firefox,1300,644,1366,768,FALSE,decesions,interesting survey. no problems.,59,f,english,476.089,61.056,1,both_actions,both
+50,learning,13,button,prior,single_action,0.106,0.878,firefox,1521,781,1600,900,FALSE,logic issues,n/a,56,m,english,231.613,60.039,3,single_action,handle
+50,learning,15,both,prior,both_actions,0.122,0.122,firefox,1521,781,1600,900,FALSE,logic issues,n/a,56,m,english,231.613,60.039,3,single_action,handle
+50,learning,95,handle,prior,single_action,0.772,0.878,firefox,1521,781,1600,900,FALSE,logic issues,n/a,56,m,english,231.613,60.039,3,single_action,handle
+51,performance,16,handle,prior,single_action,0.11,0.452,chrome,923,1211,1707,960,FALSE,see how people decide how to make sure something will work,no,34,m,english,173.455,23.587,3,both_actions,both
+51,performance,80,both,prior,both_actions,0.548,0.548,chrome,923,1211,1707,960,FALSE,see how people decide how to make sure something will work,no,34,m,english,173.455,23.587,3,both_actions,both
+51,performance,50,button,prior,single_action,0.342,0.452,chrome,923,1211,1707,960,FALSE,see how people decide how to make sure something will work,no,34,m,english,173.455,23.587,3,both_actions,both
+52,performance,80,both,prior,both_actions,0.432,0.432,chrome,1336,693,1440,900,FALSE,logic,none,62,male,english,242.312,46.761,3,single_action,handle
+52,performance,29,button,prior,single_action,0.157,0.568,chrome,1336,693,1440,900,FALSE,logic,none,62,male,english,242.312,46.761,3,single_action,handle
+52,performance,76,handle,prior,single_action,0.411,0.568,chrome,1336,693,1440,900,FALSE,logic,none,62,male,english,242.312,46.761,3,single_action,handle
+53,learning,31,handle,prior,single_action,0.242,0.742,chrome,1299,600,1366,768,FALSE,measuring logic,no,46,m,english,184.33,26.037,3,single_action,handle
+53,learning,33,both,prior,both_actions,0.258,0.258,chrome,1299,600,1366,768,FALSE,measuring logic,no,46,m,english,184.33,26.037,3,single_action,handle
+53,learning,64,button,prior,single_action,0.5,0.742,chrome,1299,600,1366,768,FALSE,measuring logic,no,46,m,english,184.33,26.037,3,single_action,handle
+54,presentation,100,button,prior,single_action,0.333,0.667,chrome,1470,734,1536,864,FALSE,i have no idea.  how well i remember maybe?,nothing was broken,58,f,english,342.07,38.447,3,both_actions,both
+54,presentation,100,both,prior,both_actions,0.333,0.333,chrome,1470,734,1536,864,FALSE,i have no idea.  how well i remember maybe?,nothing was broken,58,f,english,342.07,38.447,3,both_actions,both
+54,presentation,100,handle,prior,single_action,0.333,0.667,chrome,1470,734,1536,864,FALSE,i have no idea.  how well i remember maybe?,nothing was broken,58,f,english,342.07,38.447,3,both_actions,both
+55,learning,65,both,prior,both_actions,0.293,0.293,chrome,1331,691,1536,864,FALSE,making decisions,n/a,22,female,english,200.439,39.069,2,single_action,handle
+55,learning,88,button,prior,single_action,0.396,0.707,chrome,1331,691,1536,864,FALSE,making decisions,n/a,22,female,english,200.439,39.069,2,single_action,handle
+55,learning,69,handle,prior,single_action,0.311,0.707,chrome,1331,691,1536,864,FALSE,making decisions,n/a,22,female,english,200.439,39.069,2,single_action,handle
+56,presentation,100,both,prior,both_actions,0.333,0.333,chrome,1281,561,1366,768,FALSE,idk,no,34,male,english,176.077,26.948,3,both_actions,both
+56,presentation,100,button,prior,single_action,0.333,0.667,chrome,1281,561,1366,768,FALSE,idk,no,34,male,english,176.077,26.948,3,both_actions,both
+56,presentation,100,handle,prior,single_action,0.333,0.667,chrome,1281,561,1366,768,FALSE,idk,no,34,male,english,176.077,26.948,3,both_actions,both
+57,presentation,100,handle,prior,single_action,0.333,0.667,chrome,1299,637,1366,768,FALSE,if we could figure out the type of toy.,no comments,39,f,english,176.974,20.051,3,both_actions,both
+57,presentation,100,both,prior,both_actions,0.333,0.333,chrome,1299,637,1366,768,FALSE,if we could figure out the type of toy.,no comments,39,f,english,176.974,20.051,3,both_actions,both
+57,presentation,100,button,prior,single_action,0.333,0.667,chrome,1299,637,1366,768,FALSE,if we could figure out the type of toy.,no comments,39,f,english,176.974,20.051,3,both_actions,both
+58,presentation,7,both,prior,both_actions,0.084,0.084,chrome,1173,630,1280,800,FALSE,unsure,no comments,43,m,english,169.866,28.169,2,both_actions,both
+58,presentation,56,handle,prior,single_action,0.675,0.916,chrome,1173,630,1280,800,FALSE,unsure,no comments,43,m,english,169.866,28.169,2,both_actions,both
+58,presentation,20,button,prior,single_action,0.241,0.916,chrome,1173,630,1280,800,FALSE,unsure,no comments,43,m,english,169.866,28.169,2,both_actions,both
+59,learning,36,handle,prior,single_action,0.242,0.523,chrome,1643,1354,3440,1440,FALSE,decision making,,25,m,english,127.002,25.054,3,both_actions,both
+59,learning,71,both,prior,both_actions,0.477,0.477,chrome,1643,1354,3440,1440,FALSE,decision making,,25,m,english,127.002,25.054,3,both_actions,both
+59,learning,42,button,prior,single_action,0.282,0.523,chrome,1643,1354,3440,1440,FALSE,decision making,,25,m,english,127.002,25.054,3,both_actions,both
+60,performance,12,both,prior,both_actions,0.104,0.104,firefox,2350,600,2400,1350,FALSE,probabilities,no,30,m,english,202.26,28.483,3,both_actions,both
+60,performance,52,handle,prior,single_action,0.452,0.896,firefox,2350,600,2400,1350,FALSE,probabilities,no,30,m,english,202.26,28.483,3,both_actions,both
+60,performance,51,button,prior,single_action,0.443,0.896,firefox,2350,600,2400,1350,FALSE,probabilities,no,30,m,english,202.26,28.483,3,both_actions,both
+61,presentation,78,handle,prior,single_action,0.363,0.535,chrome,1853,100,1920,1080,FALSE,to see how people look at instructions,none,55,f,english,401.812,44.785,2,both_actions,both
+61,presentation,100,both,prior,both_actions,0.465,0.465,chrome,1853,100,1920,1080,FALSE,to see how people look at instructions,none,55,f,english,401.812,44.785,2,both_actions,both
+61,presentation,37,button,prior,single_action,0.172,0.535,chrome,1853,100,1920,1080,FALSE,to see how people look at instructions,none,55,f,english,401.812,44.785,2,both_actions,both
+62,learning,74,handle,prior,single_action,0.383,0.741,chrome,1470,600,1536,864,FALSE,deductive reasoning ,thank you. a3c0lpvn749uf3: id in case of errors in submission software communication,33,f,english,194.597,29.933,3,single_action,handle
+62,learning,69,button,prior,single_action,0.358,0.741,chrome,1470,600,1536,864,FALSE,deductive reasoning ,thank you. a3c0lpvn749uf3: id in case of errors in submission software communication,33,f,english,194.597,29.933,3,single_action,handle
+62,learning,50,both,prior,both_actions,0.259,0.259,chrome,1470,600,1536,864,FALSE,deductive reasoning ,thank you. a3c0lpvn749uf3: id in case of errors in submission software communication,33,f,english,194.597,29.933,3,single_action,handle
+63,presentation,74,both,prior,both_actions,0.409,0.409,chrome,1292,623,1366,768,FALSE,options,no,27,f,english,134.095,7.015,2,single_action,handle
+63,presentation,78,handle,prior,single_action,0.431,0.591,chrome,1292,623,1366,768,FALSE,options,no,27,f,english,134.095,7.015,2,single_action,handle
+63,presentation,29,button,prior,single_action,0.16,0.591,chrome,1292,623,1366,768,FALSE,options,no,27,f,english,134.095,7.015,2,single_action,handle
+64,presentation,93,handle,prior,single_action,0.323,0.67,chrome,580,600,1366,768,FALSE,i'm not sure.,no.,30,m,english,177.859,57.314,2,both_actions,both
+64,presentation,95,both,prior,both_actions,0.33,0.33,chrome,580,600,1366,768,FALSE,i'm not sure.,no.,30,m,english,177.859,57.314,2,both_actions,both
+64,presentation,100,button,prior,single_action,0.347,0.67,chrome,580,600,1366,768,FALSE,i'm not sure.,no.,30,m,english,177.859,57.314,2,both_actions,both
+65,performance,57,handle,prior,single_action,0.385,0.926,chrome,1299,662,1366,768,FALSE,how we assign probability to something?,no,36,m,english,264.231,40.195,3,both_actions,both
+65,performance,80,button,prior,single_action,0.541,0.926,chrome,1299,662,1366,768,FALSE,how we assign probability to something?,no,36,m,english,264.231,40.195,3,both_actions,both
+65,performance,11,both,prior,both_actions,0.074,0.074,chrome,1299,662,1366,768,FALSE,how we assign probability to something?,no,36,m,english,264.231,40.195,3,both_actions,both
+66,learning,26,button,prior,single_action,0.239,0.495,firefox,1230,676,1280,800,FALSE,to see how i problem solve. ,"yeah, it jumped at the end and played some music, and then quickly moved to a slider screen at the end. i did the sliders twice. ",30,m,english,179.233,53.542,3,both_actions,both
+66,learning,28,handle,prior,single_action,0.257,0.495,firefox,1230,676,1280,800,FALSE,to see how i problem solve. ,"yeah, it jumped at the end and played some music, and then quickly moved to a slider screen at the end. i did the sliders twice. ",30,m,english,179.233,53.542,3,both_actions,both
+66,learning,55,both,prior,both_actions,0.505,0.505,firefox,1230,676,1280,800,FALSE,to see how i problem solve. ,"yeah, it jumped at the end and played some music, and then quickly moved to a slider screen at the end. i did the sliders twice. ",30,m,english,179.233,53.542,3,both_actions,both
+67,performance,35,button,prior,single_action,0.321,0.651,chrome,1533,600,1600,900,FALSE,probability and problem solving.,,48,f,english,203.795,24.333,3,both_actions,both
+67,performance,36,handle,prior,single_action,0.33,0.651,chrome,1533,600,1600,900,FALSE,probability and problem solving.,,48,f,english,203.795,24.333,3,both_actions,both
+67,performance,38,both,prior,both_actions,0.349,0.349,chrome,1533,600,1600,900,FALSE,probability and problem solving.,,48,f,english,203.795,24.333,3,both_actions,both
+68,presentation,29,handle,prior,single_action,0.201,0.771,chrome,464,524,1920,1080,FALSE,i'm not sure,,26,female,english,369.457,13.196,1,both_actions,both
+68,presentation,33,both,prior,both_actions,0.229,0.229,chrome,464,524,1920,1080,FALSE,i'm not sure,,26,female,english,369.457,13.196,1,both_actions,both
+68,presentation,82,button,prior,single_action,0.569,0.771,chrome,464,524,1920,1080,FALSE,i'm not sure,,26,female,english,369.457,13.196,1,both_actions,both
+69,presentation,60,handle,prior,single_action,0.357,0.542,chrome,1219,797,1440,900,FALSE,to see how different people see how toys work without labels.,nothing broken.,31,f,english,168.264,24.539,3,single_action,handle
+69,presentation,31,button,prior,single_action,0.185,0.542,chrome,1219,797,1440,900,FALSE,to see how different people see how toys work without labels.,nothing broken.,31,f,english,168.264,24.539,3,single_action,handle
+69,presentation,77,both,prior,both_actions,0.458,0.458,chrome,1219,797,1440,900,FALSE,to see how different people see how toys work without labels.,nothing broken.,31,f,english,168.264,24.539,3,single_action,handle
+70,performance,72,button,prior,single_action,0.272,0.623,chrome,1299,678,1366,768,FALSE,not sure,no,39,f,english,215.512,52.113,3,single_action,button
+70,performance,100,both,prior,both_actions,0.377,0.377,chrome,1299,678,1366,768,FALSE,not sure,no,39,f,english,215.512,52.113,3,single_action,button
+70,performance,93,handle,prior,single_action,0.351,0.623,chrome,1299,678,1366,768,FALSE,not sure,no,39,f,english,215.512,52.113,3,single_action,button
+71,performance,83,button,prior,single_action,0.413,0.507,chrome,1853,974,1920,1080,FALSE,i'm not sure,no,34,f,english,161.214,22.055,3,both_actions,both
+71,performance,19,handle,prior,single_action,0.095,0.507,chrome,1853,974,1920,1080,FALSE,i'm not sure,no,34,f,english,161.214,22.055,3,both_actions,both
+71,performance,99,both,prior,both_actions,0.493,0.493,chrome,1853,974,1920,1080,FALSE,i'm not sure,no,34,f,english,161.214,22.055,3,both_actions,both
+72,performance,1,both,prior,both_actions,0.005,0.005,chrome,1016,510,1366,768,FALSE,no idea,no,42,f,bulgarian,203.741,27.137,3,single_action,button
+72,performance,100,button,prior,single_action,0.498,0.995,chrome,1016,510,1366,768,FALSE,no idea,no,42,f,bulgarian,203.741,27.137,3,single_action,button
+72,performance,100,handle,prior,single_action,0.498,0.995,chrome,1016,510,1366,768,FALSE,no idea,no,42,f,bulgarian,203.741,27.137,3,single_action,button
+73,presentation,100,both,prior,both_actions,0.361,0.361,chrome,1709,854,1600,900,FALSE,reading instructions,no,48,f,english,117.767,13.223,3,both_actions,both
+73,presentation,90,button,prior,single_action,0.325,0.639,chrome,1709,854,1600,900,FALSE,reading instructions,no,48,f,english,117.767,13.223,3,both_actions,both
+73,presentation,87,handle,prior,single_action,0.314,0.639,chrome,1709,854,1600,900,FALSE,reading instructions,no,48,f,english,117.767,13.223,3,both_actions,both
+74,performance,31,handle,prior,single_action,0.29,0.57,chrome,1176,614,1366,768,FALSE,logical reasoning.,the task was quick and interesting.,51,m,english,466.609,40.415,3,both_actions,both
+74,performance,30,button,prior,single_action,0.28,0.57,chrome,1176,614,1366,768,FALSE,logical reasoning.,the task was quick and interesting.,51,m,english,466.609,40.415,3,both_actions,both
+74,performance,46,both,prior,both_actions,0.43,0.43,chrome,1176,614,1366,768,FALSE,logical reasoning.,the task was quick and interesting.,51,m,english,466.609,40.415,3,both_actions,both
+75,performance,63,both,prior,both_actions,0.323,0.323,chrome,1331,668,1536,864,FALSE,i am not sure,no,41,f,english,162.584,33.848,3,single_action,button
+75,performance,64,button,prior,single_action,0.328,0.677,chrome,1331,668,1536,864,FALSE,i am not sure,no,41,f,english,162.584,33.848,3,single_action,button
+75,performance,68,handle,prior,single_action,0.349,0.677,chrome,1331,668,1536,864,FALSE,i am not sure,no,41,f,english,162.584,33.848,3,single_action,button
+1,performance,79,handle,posterior,single_action,0.339,0.67,chrome,1289,648,1366,768,FALSE,i don't know,none,27,f,english,142.031,14.077,3,both_actions,both
+1,performance,77,both,posterior,both_actions,0.33,0.33,chrome,1289,648,1366,768,FALSE,i don't know,none,27,f,english,142.031,14.077,3,both_actions,both
+1,performance,77,button,posterior,single_action,0.33,0.67,chrome,1289,648,1366,768,FALSE,i don't know,none,27,f,english,142.031,14.077,3,both_actions,both
+2,learning,1,handle,posterior,single_action,0.01,0.99,chrome,1230,676,1280,800,FALSE,logic,no,35,f,english,140.12,29.647,3,single_action,button
+2,learning,100,button,posterior,single_action,0.98,0.99,chrome,1230,676,1280,800,FALSE,logic,no,35,f,english,140.12,29.647,3,single_action,button
+2,learning,1,both,posterior,both_actions,0.01,0.01,chrome,1230,676,1280,800,FALSE,logic,no,35,f,english,140.12,29.647,3,single_action,button
+3,learning,100,button,posterior,single_action,0.98,0.99,chrome,1028,600,1093,615,FALSE,if i could figure out which music box it was.,no.,47,m,english,236.229,74.277,3,single_action,button
+3,learning,1,both,posterior,both_actions,0.01,0.01,chrome,1028,600,1093,615,FALSE,if i could figure out which music box it was.,no.,47,m,english,236.229,74.277,3,single_action,button
+3,learning,1,handle,posterior,single_action,0.01,0.99,chrome,1028,600,1093,615,FALSE,if i could figure out which music box it was.,no.,47,m,english,236.229,74.277,3,single_action,button
+4,learning,33,both,posterior,both_actions,0.204,0.204,chrome,1082,600,1920,1080,FALSE,studying how people reason about cause and effect.,no problems.,30,male,english,255.826,31.907,3,both_actions,both
+4,learning,64,button,posterior,single_action,0.395,0.796,chrome,1082,600,1920,1080,FALSE,studying how people reason about cause and effect.,no problems.,30,male,english,255.826,31.907,3,both_actions,both
+4,learning,65,handle,posterior,single_action,0.401,0.796,chrome,1082,600,1920,1080,FALSE,studying how people reason about cause and effect.,no problems.,30,male,english,255.826,31.907,3,both_actions,both
+5,learning,73,handle,posterior,single_action,0.317,0.565,chrome,1533,769,1600,900,FALSE,i'm not sure,no,34,f,english,635.05,31.619,3,both_actions,both
+5,learning,57,button,posterior,single_action,0.248,0.565,chrome,1533,769,1600,900,FALSE,i'm not sure,no,34,f,english,635.05,31.619,3,both_actions,both
+5,learning,100,both,posterior,both_actions,0.435,0.435,chrome,1533,769,1600,900,FALSE,i'm not sure,no,34,f,english,635.05,31.619,3,both_actions,both
+6,performance,100,both,posterior,both_actions,0.333,0.333,chrome,1076,681,1280,800,FALSE,reasoning,no,38,m,english,159.828,20.912,3,both_actions,both
+6,performance,100,handle,posterior,single_action,0.333,0.667,chrome,1076,681,1280,800,FALSE,reasoning,no,38,m,english,159.828,20.912,3,both_actions,both
+6,performance,100,button,posterior,single_action,0.333,0.667,chrome,1076,681,1280,800,FALSE,reasoning,no,38,m,english,159.828,20.912,3,both_actions,both
+7,presentation,72,both,posterior,both_actions,0.419,0.419,chrome,1016,510,1366,768,FALSE,risk accessment bias,no comment,63,m,english,223.658,26.923,3,both_actions,both
+7,presentation,50,handle,posterior,single_action,0.291,0.581,chrome,1016,510,1366,768,FALSE,risk accessment bias,no comment,63,m,english,223.658,26.923,3,both_actions,both
+7,presentation,50,button,posterior,single_action,0.291,0.581,chrome,1016,510,1366,768,FALSE,risk accessment bias,no comment,63,m,english,223.658,26.923,3,both_actions,both
+8,presentation,50,handle,posterior,single_action,0.495,0.99,chrome,1176,588,1366,768,FALSE,logical guessing,no,49,f,english,357.264,53.916,3,both_actions,both
+8,presentation,1,both,posterior,both_actions,0.01,0.01,chrome,1176,588,1366,768,FALSE,logical guessing,no,49,f,english,357.264,53.916,3,both_actions,both
+8,presentation,50,button,posterior,single_action,0.495,0.99,chrome,1176,588,1366,768,FALSE,logical guessing,no,49,f,english,357.264,53.916,3,both_actions,both
+9,learning,99,button,posterior,single_action,0.615,0.646,chrome,1843,1080,1920,1200,FALSE,understanding how an action can make something work.,great survey and would love to work on others from you in the future. ,31,f,english,208.604,52.55,3,single_action,button
+9,learning,5,handle,posterior,single_action,0.031,0.646,chrome,1843,1080,1920,1200,FALSE,understanding how an action can make something work.,great survey and would love to work on others from you in the future. ,31,f,english,208.604,52.55,3,single_action,button
+9,learning,57,both,posterior,both_actions,0.354,0.354,chrome,1843,1080,1920,1200,FALSE,understanding how an action can make something work.,great survey and would love to work on others from you in the future. ,31,f,english,208.604,52.55,3,single_action,button
+10,performance,1,both,posterior,both_actions,0.01,0.01,chrome,1175,615,1366,768,FALSE,i have no idea.,no.,42,f,english,196.382,44.338,3,single_action,handle
+10,performance,100,handle,posterior,single_action,0.98,0.99,chrome,1175,615,1366,768,FALSE,i have no idea.,no.,42,f,english,196.382,44.338,3,single_action,handle
+10,performance,1,button,posterior,single_action,0.01,0.99,chrome,1175,615,1366,768,FALSE,i have no idea.,no.,42,f,english,196.382,44.338,3,single_action,handle
+11,performance,85,button,posterior,single_action,0.57,0.718,chrome,1111,625,1366,768,FALSE,i'm not really sure.,no,40,f,english,400.412,28.651,0,single_action,button
+11,performance,42,both,posterior,both_actions,0.282,0.282,chrome,1111,625,1366,768,FALSE,i'm not really sure.,no,40,f,english,400.412,28.651,0,single_action,button
+11,performance,22,handle,posterior,single_action,0.148,0.718,chrome,1111,625,1366,768,FALSE,i'm not really sure.,no,40,f,english,400.412,28.651,0,single_action,button
+12,learning,100,handle,posterior,single_action,0.98,0.99,chrome,1870,600,1920,1080,FALSE,how we would go about coming to a definitive conclusion after figuring out the instructions to a toy.,"no other comment, other than i tried my best.",28,m,english,1709.973,436.087,3,single_action,handle
+12,learning,1,button,posterior,single_action,0.01,0.99,chrome,1870,600,1920,1080,FALSE,how we would go about coming to a definitive conclusion after figuring out the instructions to a toy.,"no other comment, other than i tried my best.",28,m,english,1709.973,436.087,3,single_action,handle
+12,learning,1,both,posterior,both_actions,0.01,0.01,chrome,1870,600,1920,1080,FALSE,how we would go about coming to a definitive conclusion after figuring out the instructions to a toy.,"no other comment, other than i tried my best.",28,m,english,1709.973,436.087,3,single_action,handle
+13,presentation,30,handle,posterior,single_action,0.323,0.667,chrome,1342,929,1920,1080,FALSE,if you're willing to gamble that it's not bothmusiclight and only trigger one of the inputs.,,27,m,english,219.206,22.69,3,both_actions,both
+13,presentation,32,button,posterior,single_action,0.344,0.667,chrome,1342,929,1920,1080,FALSE,if you're willing to gamble that it's not bothmusiclight and only trigger one of the inputs.,,27,m,english,219.206,22.69,3,both_actions,both
+13,presentation,31,both,posterior,both_actions,0.333,0.333,chrome,1342,929,1920,1080,FALSE,if you're willing to gamble that it's not bothmusiclight and only trigger one of the inputs.,,27,m,english,219.206,22.69,3,both_actions,both
+14,performance,20,button,posterior,single_action,0.161,0.282,chrome,1470,759,1536,864,FALSE,how we learn,no,44,m,english,311.708,18.015,2,both_actions,both
+14,performance,89,both,posterior,both_actions,0.718,0.718,chrome,1470,759,1536,864,FALSE,how we learn,no,44,m,english,311.708,18.015,2,both_actions,both
+14,performance,15,handle,posterior,single_action,0.121,0.282,chrome,1470,759,1536,864,FALSE,how we learn,no,44,m,english,311.708,18.015,2,both_actions,both
+15,learning,1,handle,posterior,single_action,0.01,0.99,chrome,1375,826,1440,900,FALSE,figuring out which design is more intuitive,,39,female,english,251.069,47.192,3,single_action,button
+15,learning,100,button,posterior,single_action,0.98,0.99,chrome,1375,826,1440,900,FALSE,figuring out which design is more intuitive,,39,female,english,251.069,47.192,3,single_action,button
+15,learning,1,both,posterior,both_actions,0.01,0.01,chrome,1375,826,1440,900,FALSE,figuring out which design is more intuitive,,39,female,english,251.069,47.192,3,single_action,button
+16,learning,1,button,posterior,single_action,0.01,0.02,chrome,1749,883,1366,768,FALSE,accuracy of a job,,34,male,english,398.588,33.112,2,both_actions,both
+16,learning,100,both,posterior,both_actions,0.98,0.98,chrome,1749,883,1366,768,FALSE,accuracy of a job,,34,male,english,398.588,33.112,2,both_actions,both
+16,learning,1,handle,posterior,single_action,0.01,0.02,chrome,1749,883,1366,768,FALSE,accuracy of a job,,34,male,english,398.588,33.112,2,both_actions,both
+17,learning,1,handle,posterior,single_action,0.01,0.99,chrome,996,1228,1080,1920,FALSE,using logic and process of elimination to predict outcome,no comments,64,f,english,407.597,72.927,3,single_action,button
+17,learning,1,both,posterior,both_actions,0.01,0.01,chrome,996,1228,1080,1920,FALSE,using logic and process of elimination to predict outcome,no comments,64,f,english,407.597,72.927,3,single_action,button
+17,learning,100,button,posterior,single_action,0.98,0.99,chrome,996,1228,1080,1920,FALSE,using logic and process of elimination to predict outcome,no comments,64,f,english,407.597,72.927,3,single_action,button
+18,learning,1,both,posterior,both_actions,0.01,0.01,chrome,1091,703,1280,800,FALSE,i don't know,everything seemed to work well,33,f,english,228.034,50.725,3,single_action,button
+18,learning,1,handle,posterior,single_action,0.01,0.99,chrome,1091,703,1280,800,FALSE,i don't know,everything seemed to work well,33,f,english,228.034,50.725,3,single_action,button
+18,learning,100,button,posterior,single_action,0.98,0.99,chrome,1091,703,1280,800,FALSE,i don't know,everything seemed to work well,33,f,english,228.034,50.725,3,single_action,button
+19,presentation,65,both,posterior,both_actions,0.297,0.297,chrome,1635,787,1280,720,FALSE,not really sure,no,46,f,english,225.095,26.57,3,both_actions,both
+19,presentation,62,button,posterior,single_action,0.283,0.703,chrome,1635,787,1280,720,FALSE,not really sure,no,46,f,english,225.095,26.57,3,both_actions,both
+19,presentation,92,handle,posterior,single_action,0.42,0.703,chrome,1635,787,1280,720,FALSE,not really sure,no,46,f,english,225.095,26.57,3,both_actions,both
+20,learning,91,handle,posterior,single_action,0.324,0.68,chrome,1299,637,1366,768,FALSE,?,na,25,female,english,202.262,43.502,2,both_actions,both
+20,learning,90,both,posterior,both_actions,0.32,0.32,chrome,1299,637,1366,768,FALSE,?,na,25,female,english,202.262,43.502,2,both_actions,both
+20,learning,100,button,posterior,single_action,0.356,0.68,chrome,1299,637,1366,768,FALSE,?,na,25,female,english,202.262,43.502,2,both_actions,both
+21,learning,31,button,posterior,single_action,0.32,0.649,chrome,392,600,412,732,TRUE,not sure,nope,27,f,english,285.838,60.183,3,single_action,button
+21,learning,32,handle,posterior,single_action,0.33,0.649,chrome,392,600,412,732,TRUE,not sure,nope,27,f,english,285.838,60.183,3,single_action,button
+21,learning,34,both,posterior,both_actions,0.351,0.351,chrome,392,600,412,732,TRUE,not sure,nope,27,f,english,285.838,60.183,3,single_action,button
+22,learning,68,both,posterior,both_actions,0.312,0.312,chrome,1390,600,1440,900,FALSE,no sure,no,38,m,english,346.701,10.048,3,single_action,handle
+22,learning,77,button,posterior,single_action,0.353,0.688,chrome,1390,600,1440,900,FALSE,no sure,no,38,m,english,346.701,10.048,3,single_action,handle
+22,learning,73,handle,posterior,single_action,0.335,0.688,chrome,1390,600,1440,900,FALSE,no sure,no,38,m,english,346.701,10.048,3,single_action,handle
+23,performance,71,both,posterior,both_actions,0.392,0.392,chrome,1217,615,1600,900,FALSE,"i have no idea, some kind of reasoning ",,44,f,english ,168.33,17.239,1,both_actions,both
+23,performance,54,handle,posterior,single_action,0.298,0.608,chrome,1217,615,1600,900,FALSE,"i have no idea, some kind of reasoning ",,44,f,english ,168.33,17.239,1,both_actions,both
+23,performance,56,button,posterior,single_action,0.309,0.608,chrome,1217,615,1600,900,FALSE,"i have no idea, some kind of reasoning ",,44,f,english ,168.33,17.239,1,both_actions,both
+24,learning,86,handle,posterior,single_action,0.376,0.703,chrome,1357,777,1280,800,FALSE,not too sure exactly. ,everything worked and was interesting. thank you!,33,male,english,208.032,42.273,3,single_action,button
+24,learning,75,button,posterior,single_action,0.328,0.703,chrome,1357,777,1280,800,FALSE,not too sure exactly. ,everything worked and was interesting. thank you!,33,male,english,208.032,42.273,3,single_action,button
+24,learning,68,both,posterior,both_actions,0.297,0.297,chrome,1357,777,1280,800,FALSE,not too sure exactly. ,everything worked and was interesting. thank you!,33,male,english,208.032,42.273,3,single_action,button
+25,presentation,71,both,posterior,both_actions,0.318,0.318,firefox,1533,600,1600,900,FALSE,how people make estimates based on only certain information.,"no, i do not.",45,f,english,306.109,25.35,3,both_actions,both
+25,presentation,74,handle,posterior,single_action,0.332,0.682,firefox,1533,600,1600,900,FALSE,how people make estimates based on only certain information.,"no, i do not.",45,f,english,306.109,25.35,3,both_actions,both
+25,presentation,78,button,posterior,single_action,0.35,0.682,firefox,1533,600,1600,900,FALSE,how people make estimates based on only certain information.,"no, i do not.",45,f,english,306.109,25.35,3,both_actions,both
+26,presentation,30,button,posterior,single_action,0.185,0.383,chrome,1299,637,1366,768,FALSE,i think that this task was about using logic to narrow down options to the most likely option,thanks for the opportunity to participate and good luck with your research!,51,m,english,204.262,17.502,3,both_actions,both
+26,presentation,32,handle,posterior,single_action,0.198,0.383,chrome,1299,637,1366,768,FALSE,i think that this task was about using logic to narrow down options to the most likely option,thanks for the opportunity to participate and good luck with your research!,51,m,english,204.262,17.502,3,both_actions,both
+26,presentation,100,both,posterior,both_actions,0.617,0.617,chrome,1299,637,1366,768,FALSE,i think that this task was about using logic to narrow down options to the most likely option,thanks for the opportunity to participate and good luck with your research!,51,m,english,204.262,17.502,3,both_actions,both
+27,learning,100,button,posterior,single_action,0.498,0.995,chrome,1853,974,1920,1080,FALSE,understanding instructions,no,25,f,english,109.051,22.35,1,single_action,button
+27,learning,1,both,posterior,both_actions,0.005,0.005,chrome,1853,974,1920,1080,FALSE,understanding instructions,no,25,f,english,109.051,22.35,1,single_action,button
+27,learning,100,handle,posterior,single_action,0.498,0.995,chrome,1853,974,1920,1080,FALSE,understanding instructions,no,25,f,english,109.051,22.35,1,single_action,button
+28,presentation,34,handle,posterior,single_action,0.178,0.555,chrome,1837,922,1920,1080,FALSE,perceptions,interesting,39,f,english,373.283,34.581,3,both_actions,both
+28,presentation,72,button,posterior,single_action,0.377,0.555,chrome,1837,922,1920,1080,FALSE,perceptions,interesting,39,f,english,373.283,34.581,3,both_actions,both
+28,presentation,85,both,posterior,both_actions,0.445,0.445,chrome,1837,922,1920,1080,FALSE,perceptions,interesting,39,f,english,373.283,34.581,3,both_actions,both
+29,learning,1,both,posterior,both_actions,0.01,0.01,chrome,1150,850,1280,800,FALSE,logic,n/a,27,m,english,321.476,175.022,3,single_action,button
+29,learning,1,handle,posterior,single_action,0.01,0.99,chrome,1150,850,1280,800,FALSE,logic,n/a,27,m,english,321.476,175.022,3,single_action,button
+29,learning,100,button,posterior,single_action,0.98,0.99,chrome,1150,850,1280,800,FALSE,logic,n/a,27,m,english,321.476,175.022,3,single_action,button
+30,presentation,1,both,posterior,both_actions,0.01,0.01,chrome,1680,885,1920,1080,FALSE,i'm not entirely certain,"no further comment, at this time",34,m,english,131.613,20.457,3,single_action,button
+30,presentation,1,handle,posterior,single_action,0.01,0.99,chrome,1680,885,1920,1080,FALSE,i'm not entirely certain,"no further comment, at this time",34,m,english,131.613,20.457,3,single_action,button
+30,presentation,100,button,posterior,single_action,0.98,0.99,chrome,1680,885,1920,1080,FALSE,i'm not entirely certain,"no further comment, at this time",34,m,english,131.613,20.457,3,single_action,button
+31,performance,1,button,posterior,single_action,0.005,0.502,firefox,1199,869,1280,1024,FALSE,"i am not sure, maybe how we read directions and apply them.",no,63,f,english,249.862,14.876,3,single_action,handle
+31,performance,100,both,posterior,both_actions,0.498,0.498,firefox,1199,869,1280,1024,FALSE,"i am not sure, maybe how we read directions and apply them.",no,63,f,english,249.862,14.876,3,single_action,handle
+31,performance,100,handle,posterior,single_action,0.498,0.502,firefox,1199,869,1280,1024,FALSE,"i am not sure, maybe how we read directions and apply them.",no,63,f,english,249.862,14.876,3,single_action,handle
+32,performance,50,both,posterior,both_actions,0.329,0.329,chrome,340,600,360,640,TRUE,paying attention and understanding directions,"no, it worked fine. ",35,m,english,200.79,24.538,3,both_actions,both
+32,performance,51,handle,posterior,single_action,0.336,0.671,chrome,340,600,360,640,TRUE,paying attention and understanding directions,"no, it worked fine. ",35,m,english,200.79,24.538,3,both_actions,both
+32,performance,51,button,posterior,single_action,0.336,0.671,chrome,340,600,360,640,TRUE,paying attention and understanding directions,"no, it worked fine. ",35,m,english,200.79,24.538,3,both_actions,both
+33,performance,49,button,posterior,single_action,0.327,0.667,chrome,1128,932,2048,1152,FALSE,how people understand the workings of systems.,no,32,m,english,166.953,14.36,3,both_actions,both
+33,performance,51,handle,posterior,single_action,0.34,0.667,chrome,1128,932,2048,1152,FALSE,how people understand the workings of systems.,no,32,m,english,166.953,14.36,3,both_actions,both
+33,performance,50,both,posterior,both_actions,0.333,0.333,chrome,1128,932,2048,1152,FALSE,how people understand the workings of systems.,no,32,m,english,166.953,14.36,3,both_actions,both
+34,performance,55,handle,posterior,single_action,0.331,0.663,chrome,1636,828,1366,768,FALSE,logical thinking/reading comprehension,,30,m,english,121.112,15.517,3,both_actions,both
+34,performance,55,button,posterior,single_action,0.331,0.663,chrome,1636,828,1366,768,FALSE,logical thinking/reading comprehension,,30,m,english,121.112,15.517,3,both_actions,both
+34,performance,56,both,posterior,both_actions,0.337,0.337,chrome,1636,828,1366,768,FALSE,logical thinking/reading comprehension,,30,m,english,121.112,15.517,3,both_actions,both
+35,learning,100,handle,posterior,single_action,0.333,0.667,chrome,1299,675,1366,768,FALSE,figuring out a music box toy,everything worked great,37,f,english,229.413,34.973,3,both_actions,both
+35,learning,100,both,posterior,both_actions,0.333,0.333,chrome,1299,675,1366,768,FALSE,figuring out a music box toy,everything worked great,37,f,english,229.413,34.973,3,both_actions,both
+35,learning,100,button,posterior,single_action,0.333,0.667,chrome,1299,675,1366,768,FALSE,figuring out a music box toy,everything worked great,37,f,english,229.413,34.973,3,both_actions,both
+36,presentation,80,both,posterior,both_actions,0.367,0.367,chrome,1217,615,1600,900,FALSE,"i think it had something to do with logic, like, possibilites and exclusions.","this was fun. it worked fine, and the music and graphic were nice.",50,f,english,267.243,26.484,3,both_actions,both
+36,presentation,80,button,posterior,single_action,0.367,0.633,chrome,1217,615,1600,900,FALSE,"i think it had something to do with logic, like, possibilites and exclusions.","this was fun. it worked fine, and the music and graphic were nice.",50,f,english,267.243,26.484,3,both_actions,both
+36,presentation,58,handle,posterior,single_action,0.266,0.633,chrome,1217,615,1600,900,FALSE,"i think it had something to do with logic, like, possibilites and exclusions.","this was fun. it worked fine, and the music and graphic were nice.",50,f,english,267.243,26.484,3,both_actions,both
+37,performance,94,both,posterior,both_actions,0.487,0.487,chrome,1022,600,1088,615,FALSE,i don't know.,no issues.,35,f,english,560.767,37.198,3,both_actions,both
+37,performance,24,handle,posterior,single_action,0.124,0.513,chrome,1022,600,1088,615,FALSE,i don't know.,no issues.,35,f,english,560.767,37.198,3,both_actions,both
+37,performance,75,button,posterior,single_action,0.389,0.513,chrome,1022,600,1088,615,FALSE,i don't know.,no issues.,35,f,english,560.767,37.198,3,both_actions,both
+38,learning,100,both,posterior,both_actions,0.334,0.334,firefox,1533,739,1600,900,FALSE,reasoning,no,32,f,english,120.042,13.586,3,both_actions,both
+38,learning,99,handle,posterior,single_action,0.331,0.666,firefox,1533,739,1600,900,FALSE,reasoning,no,32,f,english,120.042,13.586,3,both_actions,both
+38,learning,100,button,posterior,single_action,0.334,0.666,firefox,1533,739,1600,900,FALSE,reasoning,no,32,f,english,120.042,13.586,3,both_actions,both
+39,performance,11,both,posterior,both_actions,0.059,0.059,chrome,1853,987,1920,1080,FALSE,seeing which toy music box the consumer would chose.,none.,1991,m,english,360.3,75.609,3,single_action,button
+39,performance,81,handle,posterior,single_action,0.435,0.941,chrome,1853,987,1920,1080,FALSE,seeing which toy music box the consumer would chose.,none.,1991,m,english,360.3,75.609,3,single_action,button
+39,performance,94,button,posterior,single_action,0.505,0.941,chrome,1853,987,1920,1080,FALSE,seeing which toy music box the consumer would chose.,none.,1991,m,english,360.3,75.609,3,single_action,button
+40,performance,82,button,posterior,single_action,0.336,0.668,chrome,1174,925,1920,1080,FALSE,problem solving,all worked fine!,33,f,english,217.813,38.743,3,both_actions,both
+40,performance,81,handle,posterior,single_action,0.332,0.668,chrome,1174,925,1920,1080,FALSE,problem solving,all worked fine!,33,f,english,217.813,38.743,3,both_actions,both
+40,performance,81,both,posterior,both_actions,0.332,0.332,chrome,1174,925,1920,1080,FALSE,problem solving,all worked fine!,33,f,english,217.813,38.743,3,both_actions,both
+41,performance,92,both,posterior,both_actions,0.326,0.326,chrome,1299,637,1366,768,FALSE,logic,no,36,f,english,250.661,76.54,3,both_actions,both
+41,performance,95,button,posterior,single_action,0.337,0.674,chrome,1299,637,1366,768,FALSE,logic,no,36,f,english,250.661,76.54,3,both_actions,both
+41,performance,95,handle,posterior,single_action,0.337,0.674,chrome,1299,637,1366,768,FALSE,logic,no,36,f,english,250.661,76.54,3,both_actions,both
+42,presentation,50,both,posterior,both_actions,0.25,0.25,chrome,1299,637,1366,768,FALSE,not sure,no,57,male,english,213.477,43.363,3,both_actions,both
+42,presentation,50,button,posterior,single_action,0.25,0.75,chrome,1299,637,1366,768,FALSE,not sure,no,57,male,english,213.477,43.363,3,both_actions,both
+42,presentation,100,handle,posterior,single_action,0.5,0.75,chrome,1299,637,1366,768,FALSE,not sure,no,57,male,english,213.477,43.363,3,both_actions,both
+43,presentation,100,button,posterior,single_action,0.345,0.655,firefox,1299,635,1366,768,FALSE,i'm not sure,no,27,m,english,297.117,32.24,3,both_actions,both
+43,presentation,90,handle,posterior,single_action,0.31,0.655,firefox,1299,635,1366,768,FALSE,i'm not sure,no,27,m,english,297.117,32.24,3,both_actions,both
+43,presentation,100,both,posterior,both_actions,0.345,0.345,firefox,1299,635,1366,768,FALSE,i'm not sure,no,27,m,english,297.117,32.24,3,both_actions,both
+44,performance,50,handle,posterior,single_action,0.256,0.513,chrome,1299,637,1366,768,FALSE,chices,no,49,f,english,303.203,29.915,3,both_actions,both
+44,performance,50,button,posterior,single_action,0.256,0.513,chrome,1299,637,1366,768,FALSE,chices,no,49,f,english,303.203,29.915,3,both_actions,both
+44,performance,95,both,posterior,both_actions,0.487,0.487,chrome,1299,637,1366,768,FALSE,chices,no,49,f,english,303.203,29.915,3,both_actions,both
+45,performance,76,button,posterior,single_action,0.429,0.48,firefox,1299,600,1366,768,FALSE,memory??,no,69,f,english,305.92,42.242,3,both_actions,both
+45,performance,92,both,posterior,both_actions,0.52,0.52,firefox,1299,600,1366,768,FALSE,memory??,no,69,f,english,305.92,42.242,3,both_actions,both
+45,performance,9,handle,posterior,single_action,0.051,0.48,firefox,1299,600,1366,768,FALSE,memory??,no,69,f,english,305.92,42.242,3,both_actions,both
+46,learning,96,button,posterior,single_action,0.914,0.971,chrome,1296,637,1093,615,FALSE,unclear,good hit,62,male,english,195.99,37.338,3,single_action,button
+46,learning,3,both,posterior,both_actions,0.029,0.029,chrome,1296,637,1093,615,FALSE,unclear,good hit,62,male,english,195.99,37.338,3,single_action,button
+46,learning,6,handle,posterior,single_action,0.057,0.971,chrome,1296,637,1093,615,FALSE,unclear,good hit,62,male,english,195.99,37.338,3,single_action,button
+47,presentation,69,both,posterior,both_actions,0.375,0.375,chrome,1134,763,1280,768,FALSE,i'm unsure. my thought process wasn't really logical in selecting which one option would tell me what the toy did - it was more like a gratification thing. pulling the handle seems like the first activity a person would do on that toy.,"everything was fine, thanks.",50,f,english,179.006,9.678,3,single_action,handle
+47,presentation,32,button,posterior,single_action,0.174,0.625,chrome,1134,763,1280,768,FALSE,i'm unsure. my thought process wasn't really logical in selecting which one option would tell me what the toy did - it was more like a gratification thing. pulling the handle seems like the first activity a person would do on that toy.,"everything was fine, thanks.",50,f,english,179.006,9.678,3,single_action,handle
+47,presentation,83,handle,posterior,single_action,0.451,0.625,chrome,1134,763,1280,768,FALSE,i'm unsure. my thought process wasn't really logical in selecting which one option would tell me what the toy did - it was more like a gratification thing. pulling the handle seems like the first activity a person would do on that toy.,"everything was fine, thanks.",50,f,english,179.006,9.678,3,single_action,handle
+48,presentation,81,handle,posterior,single_action,0.506,0.531,chrome,1250,803,1920,1080,FALSE,risk and prediction,,48,m,english,135.133,16.938,3,both_actions,both
+48,presentation,75,both,posterior,both_actions,0.469,0.469,chrome,1250,803,1920,1080,FALSE,risk and prediction,,48,m,english,135.133,16.938,3,both_actions,both
+48,presentation,4,button,posterior,single_action,0.025,0.531,chrome,1250,803,1920,1080,FALSE,risk and prediction,,48,m,english,135.133,16.938,3,both_actions,both
+49,presentation,50,button,posterior,single_action,0.331,0.669,firefox,1300,644,1366,768,FALSE,decesions,interesting survey. no problems.,59,f,english,476.089,61.056,1,both_actions,both
+49,presentation,50,both,posterior,both_actions,0.331,0.331,firefox,1300,644,1366,768,FALSE,decesions,interesting survey. no problems.,59,f,english,476.089,61.056,1,both_actions,both
+49,presentation,51,handle,posterior,single_action,0.338,0.669,firefox,1300,644,1366,768,FALSE,decesions,interesting survey. no problems.,59,f,english,476.089,61.056,1,both_actions,both
+50,learning,9,both,posterior,both_actions,0.082,0.082,firefox,1521,781,1600,900,FALSE,logic issues,n/a,56,m,english,231.613,60.039,3,single_action,handle
+50,learning,98,handle,posterior,single_action,0.891,0.918,firefox,1521,781,1600,900,FALSE,logic issues,n/a,56,m,english,231.613,60.039,3,single_action,handle
+50,learning,3,button,posterior,single_action,0.027,0.918,firefox,1521,781,1600,900,FALSE,logic issues,n/a,56,m,english,231.613,60.039,3,single_action,handle
+51,performance,71,both,posterior,both_actions,0.362,0.362,chrome,923,1211,1707,960,FALSE,see how people decide how to make sure something will work,no,34,m,english,173.455,23.587,3,both_actions,both
+51,performance,70,button,posterior,single_action,0.357,0.638,chrome,923,1211,1707,960,FALSE,see how people decide how to make sure something will work,no,34,m,english,173.455,23.587,3,both_actions,both
+51,performance,55,handle,posterior,single_action,0.281,0.638,chrome,923,1211,1707,960,FALSE,see how people decide how to make sure something will work,no,34,m,english,173.455,23.587,3,both_actions,both
+52,performance,4,button,posterior,single_action,0.02,0.51,chrome,1336,693,1440,900,FALSE,logic,none,62,male,english,242.312,46.761,3,single_action,handle
+52,performance,97,handle,posterior,single_action,0.49,0.51,chrome,1336,693,1440,900,FALSE,logic,none,62,male,english,242.312,46.761,3,single_action,handle
+52,performance,97,both,posterior,both_actions,0.49,0.49,chrome,1336,693,1440,900,FALSE,logic,none,62,male,english,242.312,46.761,3,single_action,handle
+53,learning,100,handle,posterior,single_action,0.98,0.99,chrome,1299,600,1366,768,FALSE,measuring logic,no,46,m,english,184.33,26.037,3,single_action,handle
+53,learning,1,button,posterior,single_action,0.01,0.99,chrome,1299,600,1366,768,FALSE,measuring logic,no,46,m,english,184.33,26.037,3,single_action,handle
+53,learning,1,both,posterior,both_actions,0.01,0.01,chrome,1299,600,1366,768,FALSE,measuring logic,no,46,m,english,184.33,26.037,3,single_action,handle
+54,presentation,99,button,posterior,single_action,0.493,0.99,chrome,1470,734,1536,864,FALSE,i have no idea.  how well i remember maybe?,nothing was broken,58,f,english,342.07,38.447,3,both_actions,both
+54,presentation,100,handle,posterior,single_action,0.498,0.99,chrome,1470,734,1536,864,FALSE,i have no idea.  how well i remember maybe?,nothing was broken,58,f,english,342.07,38.447,3,both_actions,both
+54,presentation,2,both,posterior,both_actions,0.01,0.01,chrome,1470,734,1536,864,FALSE,i have no idea.  how well i remember maybe?,nothing was broken,58,f,english,342.07,38.447,3,both_actions,both
+55,learning,82,both,posterior,both_actions,0.363,0.363,chrome,1331,691,1536,864,FALSE,making decisions,n/a,22,female,english,200.439,39.069,2,single_action,handle
+55,learning,62,handle,posterior,single_action,0.274,0.637,chrome,1331,691,1536,864,FALSE,making decisions,n/a,22,female,english,200.439,39.069,2,single_action,handle
+55,learning,82,button,posterior,single_action,0.363,0.637,chrome,1331,691,1536,864,FALSE,making decisions,n/a,22,female,english,200.439,39.069,2,single_action,handle
+56,presentation,100,handle,posterior,single_action,0.333,0.667,chrome,1281,561,1366,768,FALSE,idk,no,34,male,english,176.077,26.948,3,both_actions,both
+56,presentation,100,both,posterior,both_actions,0.333,0.333,chrome,1281,561,1366,768,FALSE,idk,no,34,male,english,176.077,26.948,3,both_actions,both
+56,presentation,100,button,posterior,single_action,0.333,0.667,chrome,1281,561,1366,768,FALSE,idk,no,34,male,english,176.077,26.948,3,both_actions,both
+57,presentation,59,button,posterior,single_action,0.263,0.554,chrome,1299,637,1366,768,FALSE,if we could figure out the type of toy.,no comments,39,f,english,176.974,20.051,3,both_actions,both
+57,presentation,65,handle,posterior,single_action,0.29,0.554,chrome,1299,637,1366,768,FALSE,if we could figure out the type of toy.,no comments,39,f,english,176.974,20.051,3,both_actions,both
+57,presentation,100,both,posterior,both_actions,0.446,0.446,chrome,1299,637,1366,768,FALSE,if we could figure out the type of toy.,no comments,39,f,english,176.974,20.051,3,both_actions,both
+58,presentation,83,button,posterior,single_action,0.421,0.569,chrome,1173,630,1280,800,FALSE,unsure,no comments,43,m,english,169.866,28.169,2,both_actions,both
+58,presentation,29,handle,posterior,single_action,0.147,0.569,chrome,1173,630,1280,800,FALSE,unsure,no comments,43,m,english,169.866,28.169,2,both_actions,both
+58,presentation,85,both,posterior,both_actions,0.431,0.431,chrome,1173,630,1280,800,FALSE,unsure,no comments,43,m,english,169.866,28.169,2,both_actions,both
+59,learning,89,button,posterior,single_action,0.434,0.893,chrome,1643,1354,3440,1440,FALSE,decision making,,25,m,english,127.002,25.054,3,both_actions,both
+59,learning,22,both,posterior,both_actions,0.107,0.107,chrome,1643,1354,3440,1440,FALSE,decision making,,25,m,english,127.002,25.054,3,both_actions,both
+59,learning,94,handle,posterior,single_action,0.459,0.893,chrome,1643,1354,3440,1440,FALSE,decision making,,25,m,english,127.002,25.054,3,both_actions,both
+60,performance,32,button,posterior,single_action,0.291,0.964,firefox,2350,600,2400,1350,FALSE,probabilities,no,30,m,english,202.26,28.483,3,both_actions,both
+60,performance,74,handle,posterior,single_action,0.673,0.964,firefox,2350,600,2400,1350,FALSE,probabilities,no,30,m,english,202.26,28.483,3,both_actions,both
+60,performance,4,both,posterior,both_actions,0.036,0.036,firefox,2350,600,2400,1350,FALSE,probabilities,no,30,m,english,202.26,28.483,3,both_actions,both
+61,presentation,100,handle,posterior,single_action,0.433,0.567,chrome,1853,100,1920,1080,FALSE,to see how people look at instructions,none,55,f,english,401.812,44.785,2,both_actions,both
+61,presentation,100,both,posterior,both_actions,0.433,0.433,chrome,1853,100,1920,1080,FALSE,to see how people look at instructions,none,55,f,english,401.812,44.785,2,both_actions,both
+61,presentation,31,button,posterior,single_action,0.134,0.567,chrome,1853,100,1920,1080,FALSE,to see how people look at instructions,none,55,f,english,401.812,44.785,2,both_actions,both
+62,learning,78,handle,posterior,single_action,0.379,0.757,chrome,1470,600,1536,864,FALSE,deductive reasoning ,thank you. a3c0lpvn749uf3: id in case of errors in submission software communication,33,f,english,194.597,29.933,3,single_action,handle
+62,learning,78,button,posterior,single_action,0.379,0.757,chrome,1470,600,1536,864,FALSE,deductive reasoning ,thank you. a3c0lpvn749uf3: id in case of errors in submission software communication,33,f,english,194.597,29.933,3,single_action,handle
+62,learning,50,both,posterior,both_actions,0.243,0.243,chrome,1470,600,1536,864,FALSE,deductive reasoning ,thank you. a3c0lpvn749uf3: id in case of errors in submission software communication,33,f,english,194.597,29.933,3,single_action,handle
+63,presentation,67,button,posterior,single_action,0.394,0.818,chrome,1292,623,1366,768,FALSE,options,no,27,f,english,134.095,7.015,2,single_action,handle
+63,presentation,72,handle,posterior,single_action,0.424,0.818,chrome,1292,623,1366,768,FALSE,options,no,27,f,english,134.095,7.015,2,single_action,handle
+63,presentation,31,both,posterior,both_actions,0.182,0.182,chrome,1292,623,1366,768,FALSE,options,no,27,f,english,134.095,7.015,2,single_action,handle
+64,presentation,3,button,posterior,single_action,0.029,0.048,chrome,580,600,1366,768,FALSE,i'm not sure.,no.,30,m,english,177.859,57.314,2,both_actions,both
+64,presentation,2,handle,posterior,single_action,0.019,0.048,chrome,580,600,1366,768,FALSE,i'm not sure.,no.,30,m,english,177.859,57.314,2,both_actions,both
+64,presentation,100,both,posterior,both_actions,0.952,0.952,chrome,580,600,1366,768,FALSE,i'm not sure.,no.,30,m,english,177.859,57.314,2,both_actions,both
+65,performance,39,both,posterior,both_actions,0.225,0.225,chrome,1299,662,1366,768,FALSE,how we assign probability to something?,no,36,m,english,264.231,40.195,3,both_actions,both
+65,performance,66,handle,posterior,single_action,0.382,0.775,chrome,1299,662,1366,768,FALSE,how we assign probability to something?,no,36,m,english,264.231,40.195,3,both_actions,both
+65,performance,68,button,posterior,single_action,0.393,0.775,chrome,1299,662,1366,768,FALSE,how we assign probability to something?,no,36,m,english,264.231,40.195,3,both_actions,both
+66,learning,24,handle,posterior,single_action,0.242,0.495,firefox,1230,676,1280,800,FALSE,to see how i problem solve. ,"yeah, it jumped at the end and played some music, and then quickly moved to a slider screen at the end. i did the sliders twice. ",30,m,english,179.233,53.542,3,both_actions,both
+66,learning,25,button,posterior,single_action,0.253,0.495,firefox,1230,676,1280,800,FALSE,to see how i problem solve. ,"yeah, it jumped at the end and played some music, and then quickly moved to a slider screen at the end. i did the sliders twice. ",30,m,english,179.233,53.542,3,both_actions,both
+66,learning,50,both,posterior,both_actions,0.505,0.505,firefox,1230,676,1280,800,FALSE,to see how i problem solve. ,"yeah, it jumped at the end and played some music, and then quickly moved to a slider screen at the end. i did the sliders twice. ",30,m,english,179.233,53.542,3,both_actions,both
+67,performance,31,button,posterior,single_action,0.307,0.663,chrome,1533,600,1600,900,FALSE,probability and problem solving.,,48,f,english,203.795,24.333,3,both_actions,both
+67,performance,34,both,posterior,both_actions,0.337,0.337,chrome,1533,600,1600,900,FALSE,probability and problem solving.,,48,f,english,203.795,24.333,3,both_actions,both
+67,performance,36,handle,posterior,single_action,0.356,0.663,chrome,1533,600,1600,900,FALSE,probability and problem solving.,,48,f,english,203.795,24.333,3,both_actions,both
+68,presentation,100,button,posterior,single_action,0.5,0.705,chrome,464,524,1920,1080,FALSE,i'm not sure,,26,female,english,369.457,13.196,1,both_actions,both
+68,presentation,41,handle,posterior,single_action,0.205,0.705,chrome,464,524,1920,1080,FALSE,i'm not sure,,26,female,english,369.457,13.196,1,both_actions,both
+68,presentation,59,both,posterior,both_actions,0.295,0.295,chrome,464,524,1920,1080,FALSE,i'm not sure,,26,female,english,369.457,13.196,1,both_actions,both
+69,presentation,83,handle,posterior,single_action,0.61,0.757,chrome,1219,797,1440,900,FALSE,to see how different people see how toys work without labels.,nothing broken.,31,f,english,168.264,24.539,3,single_action,handle
+69,presentation,33,both,posterior,both_actions,0.243,0.243,chrome,1219,797,1440,900,FALSE,to see how different people see how toys work without labels.,nothing broken.,31,f,english,168.264,24.539,3,single_action,handle
+69,presentation,20,button,posterior,single_action,0.147,0.757,chrome,1219,797,1440,900,FALSE,to see how different people see how toys work without labels.,nothing broken.,31,f,english,168.264,24.539,3,single_action,handle
+70,performance,94,both,posterior,both_actions,0.418,0.418,chrome,1299,678,1366,768,FALSE,not sure,no,39,f,english,215.512,52.113,3,single_action,button
+70,performance,65,button,posterior,single_action,0.289,0.582,chrome,1299,678,1366,768,FALSE,not sure,no,39,f,english,215.512,52.113,3,single_action,button
+70,performance,66,handle,posterior,single_action,0.293,0.582,chrome,1299,678,1366,768,FALSE,not sure,no,39,f,english,215.512,52.113,3,single_action,button
+71,performance,47,handle,posterior,single_action,0.247,0.495,chrome,1853,974,1920,1080,FALSE,i'm not sure,no,34,f,english,161.214,22.055,3,both_actions,both
+71,performance,96,both,posterior,both_actions,0.505,0.505,chrome,1853,974,1920,1080,FALSE,i'm not sure,no,34,f,english,161.214,22.055,3,both_actions,both
+71,performance,47,button,posterior,single_action,0.247,0.495,chrome,1853,974,1920,1080,FALSE,i'm not sure,no,34,f,english,161.214,22.055,3,both_actions,both
+72,performance,100,button,posterior,single_action,0.98,0.99,chrome,1016,510,1366,768,FALSE,no idea,no,42,f,bulgarian,203.741,27.137,3,single_action,button
+72,performance,1,handle,posterior,single_action,0.01,0.99,chrome,1016,510,1366,768,FALSE,no idea,no,42,f,bulgarian,203.741,27.137,3,single_action,button
+72,performance,1,both,posterior,both_actions,0.01,0.01,chrome,1016,510,1366,768,FALSE,no idea,no,42,f,bulgarian,203.741,27.137,3,single_action,button
+73,presentation,100,button,posterior,single_action,0.333,0.667,chrome,1709,854,1600,900,FALSE,reading instructions,no,48,f,english,117.767,13.223,3,both_actions,both
+73,presentation,100,both,posterior,both_actions,0.333,0.333,chrome,1709,854,1600,900,FALSE,reading instructions,no,48,f,english,117.767,13.223,3,both_actions,both
+73,presentation,100,handle,posterior,single_action,0.333,0.667,chrome,1709,854,1600,900,FALSE,reading instructions,no,48,f,english,117.767,13.223,3,both_actions,both
+74,performance,20,handle,posterior,single_action,0.256,0.538,chrome,1176,614,1366,768,FALSE,logical reasoning.,the task was quick and interesting.,51,m,english,466.609,40.415,3,both_actions,both
+74,performance,22,button,posterior,single_action,0.282,0.538,chrome,1176,614,1366,768,FALSE,logical reasoning.,the task was quick and interesting.,51,m,english,466.609,40.415,3,both_actions,both
+74,performance,36,both,posterior,both_actions,0.462,0.462,chrome,1176,614,1366,768,FALSE,logical reasoning.,the task was quick and interesting.,51,m,english,466.609,40.415,3,both_actions,both
+75,performance,1,handle,posterior,single_action,0.01,0.99,chrome,1331,668,1536,864,FALSE,i am not sure,no,41,f,english,162.584,33.848,3,single_action,button
+75,performance,100,button,posterior,single_action,0.98,0.99,chrome,1331,668,1536,864,FALSE,i am not sure,no,41,f,english,162.584,33.848,3,single_action,button
+75,performance,1,both,posterior,both_actions,0.01,0.01,chrome,1331,668,1536,864,FALSE,i am not sure,no,41,f,english,162.584,33.848,3,single_action,button

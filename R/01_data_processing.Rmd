@@ -59,6 +59,17 @@ files <- dir(here(d_path))
 df <- files %>% purrr::map_df(~ json_to_df(data_path = d_path, .)) 
 ```
 
+## Data checks
+
+How many participants in each condition?
+
+```{r}
+df %>% 
+  distinct(workerid, condition) %>% 
+  count(condition) %>% 
+  knitr::kable()
+```
+
 Convert all strings to lower case.
 
 ```{r}
@@ -95,13 +106,11 @@ manip_check <- df_wide %>%
 
 # score the manipulation check
 manip_check %<>% 
-  mutate(manip_check_score = ifelse(music_check_response == manip_check_order_action,
-                                    "correct", "incorrect")) %>% 
+  mutate(manip_check_correct = ifelse(music_check_response == manip_check_order_action,
+                                    TRUE, FALSE)) %>% 
   group_by(id) %>% 
-  mutate(pass_manip_check = ifelse(str_detect(manip_check_score, "incorrect"),
-                                              FALSE,
-                                              TRUE)) %>% 
-  select(id, condition, pass_manip_check) %>% 
+  mutate(manip_check_score = sum(manip_check_correct)) %>% 
+  select(id, condition, manip_check_score) %>% 
   unique()
 ```
 

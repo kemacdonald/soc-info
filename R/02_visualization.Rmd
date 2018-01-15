@@ -27,7 +27,17 @@ d %<>% mutate(hypothesis_type = factor(hypothesis_type) %>% fct_rev(),
               hypothesis = factor(hypothesis) %>% fct_rev())
 ```
 
-## Data checks
+## Table of comments
+
+```{r}
+d %>% 
+  select(id, age, condition, about, comment) %>% 
+  unique() %>% 
+  arrange(condition) %>% 
+  knitr::kable()
+```
+
+## Data checks and filtering
 
 How many participants in each condition?
 
@@ -39,14 +49,20 @@ d %>%
   kable()
 ```
 
-## Table of comments
+How many participants did not pass the manipulation checks?
 
 ```{r}
 d %>% 
-  select(id, age, condition, about, comment) %>% 
-  unique() %>% 
-  arrange(condition) %>% 
-  knitr::kable()
+  filter(manip_check_score >= 3) %>% 
+  distinct(id, condition) %>% 
+  count(condition) %>% 
+  kable()
+```
+
+Now filter if the participant got fewer than 3 out of 3 manipulation checks correct. 
+
+```{r}
+d_filt <- d %>% filter(manip_check_score == 3)
 ```
 
 ## Prior and posterior beliefs
@@ -74,7 +90,7 @@ d %>%
 Plot counts of different action responses for the learning vs. performance goal conditions.
 
 ```{r}
-d %>% 
+no_filt_plot <- d %>% 
   select(condition, action_response, id) %>% 
   unique() %>% 
   count(action_response, condition) %>% 
@@ -85,7 +101,28 @@ d %>%
   lims(y = c(0,1)) +
   ggthemes::scale_fill_ptol() +
   facet_grid(.~condition) +
-  theme(panel.border = element_rect(fill=NA, size=0.5, color = "grey"))
+  theme(panel.border = element_rect(fill=NA, size=0.5, color = "grey")) +
+  ggtitle("Not filtered")
+```
+
+```{r}
+filt_plot <- d_filt %>% 
+  select(condition, action_response, id) %>% 
+  unique() %>% 
+  count(action_response, condition) %>% 
+  group_by(condition) %>% 
+  mutate(prop = n / sum(n)) %>% 
+  ggplot(aes(x = action_response, y = prop, fill = condition)) +
+  geom_bar(stat = "identity", width = 0.4, position = position_dodge()) +
+  lims(y = c(0,1)) +
+  ggthemes::scale_fill_ptol() +
+  facet_grid(.~condition) +
+  theme(panel.border = element_rect(fill=NA, size=0.5, color = "grey")) +
+  ggtitle("Filtered")
+```
+
+```{r}
+cowplot::plot_grid(no_filt_plot, filt_plot)
 ```
 
 Make a table of the raw counts.

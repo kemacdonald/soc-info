@@ -5,7 +5,7 @@ csl: apa6.csl
 document-params: "10pt, letterpaper"
 
 author-information: > 
-    \author{{\large \bf Erica J. Yoon}, {\large \bf Kyle MacDonald}, \and {\large \bf Mika Asaba} \\ \{ejyoon, kylem4, masaba\} @stanford.edu \\ Department of Psychology, Stanford University}
+    \author{{\large \bf Erica J. Yoon*}, {\large \bf Kyle MacDonald*}, {\large \bf Mika Asaba}, {\large \bf Hyowon Gweon}, \and {\large \bf Michael C. Frank} \\ \{ejyoon, kylem4, masaba, hyo, mcfrank\} @stanford.edu \\ Department of Psychology, Stanford University \\ *These authors contributed equally to this work.}
 
 abstract: 
     "..."

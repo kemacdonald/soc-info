@@ -92,6 +92,11 @@ Plot counts of different action responses for the learning vs. performance goal 
 ```{r}
 d %>% 
   select(condition, action_response, id) %>% 
+  mutate(condition = fct_recode(condition,
+                                "No goal" = "nogoal",
+                                "Learning" = "learning",
+                                "Performance" = "performance",
+                                "Presentation" = "presentation")) %>%
   unique() %>% 
   count(action_response, condition) %>% 
   group_by(condition) %>% 
@@ -101,7 +106,9 @@ d %>%
   lims(y = c(0,1)) +
   ggthemes::scale_fill_ptol() +
   facet_grid(.~condition) +
-  theme(panel.border = element_rect(fill=NA, size=0.5, color = "grey")) 
+  theme(panel.border = element_rect(fill=NA, size=0.5, color = "grey")) +
+  xlab("Action responses") +
+  guides(fill=FALSE)
 ```
 
 Make a table of the raw counts.

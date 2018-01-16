@@ -6,65 +6,9 @@
 // Number of actions on the critical trial
 var num_actions = 3
 
-/* Call Maker getter to get cond variables
- * Takes number and counts for each condition
- * Returns a condition number
- */
-
-var numConditions = 8
-var slider_start_val = "50"
-
-try {
-    var filename = "soc_info_goals_ver2_pilotD";
-    var condCounts = "1,25;2,25;3,25;4,25;5,25;6,25";
-    var xmlHttp = null;
-    xmlHttp = new XMLHttpRequest();
-    xmlHttp.open("GET", "https://langcog.stanford.edu/cgi-bin/KM/subject_equalizer_km/maker_getter.php?conds=" + condCounts + "&filename=" + filename, false);
-    xmlHttp.send(null);
-    var cond = xmlHttp.responseText; // For actual experimental runs
-} catch (e) {
-    var cond = random(1, numConditions); // if maker-getter fails, generate condition number randomly
-}
-
-cond = cond.toString();
-
-// set up experiment variables based on condition
-cond = "7";
-switch (cond) {
-    case "1":
-        goal_condition = "learning";
-        outcome = "music";
-        break;
-    case "2":
-        goal_condition = "performance";
-        outcome = "music";
-        break;
-    case "3":
-        goal_condition = "presentation";
-        outcome = "music";
-        break
-    case "4":
-        goal_condition = "learning";
-        outcome = "light";
-        break;
-    case "5":
-        goal_condition = "performance";
-        outcome = "light";
-        break;
-    case "6":
-        goal_condition = "presentation";
-        outcome = "light";
-        break
-    case "7":
-        goal_condition = "noGoal";
-        outcome = "music";
-        break
-    case "8":
-        goal_condition = "noGoal";
-        outcome = "light";
-        break
-}
-
+// set up global experiment variables
+goal_condition = "noGoal";
+outcome = "music";
 var bonus_amount = '10 cent'
 
 if (goal_condition == "learning" && outcome == "light") {
@@ -92,9 +36,9 @@ if (goal_condition == "learning" && outcome == "light") {
 }
 
 if (outcome == "music") {
-   music_box_imgs = ["BothMusicLight.jpeg", "ButtonMusic.jpeg", "HandleMusic.jpeg"] 
+   music_box_imgs = ["BothMusicLight.jpeg", "ButtonMusic.jpeg", "HandleMusic.jpeg"]
 } else {
-   music_box_imgs = ["BothLightMusic.jpeg", "HandleLight.jpeg", "ButtonLight.jpeg"] 
+   music_box_imgs = ["BothLightMusic.jpeg", "HandleLight.jpeg", "ButtonLight.jpeg"]
 }
 
 music_box = shuffle(music_box_imgs)

@@ -49,7 +49,7 @@ exp = {
 
     // Participant demo info
     about: "",
-    comment: "",
+    why_action: "",
     age: "",
     gender: "",
     language: "",
@@ -457,17 +457,17 @@ exp = {
 
 //        if (response == "both" || outcome == "music") {
 //        // then play sound which also advances slide (a little hacky)
-//        exp.play_music('action_slide');            
+//        exp.play_music('action_slide');
 //        } else {
 //        setTimeout(function () {
 //          exp.hypotheses_slide();
 //        }, 2000);
 //        }
-        
+
         setTimeout(function () {
             exp.final_slide();
         }, 500);
-        
+
     },
 
     final_slide: function () {
@@ -511,7 +511,7 @@ exp = {
                 '</font>');
         } else {
             exp.about = document.getElementById("about").value;
-            exp.comment = document.getElementById("comments").value;
+            exp.why_action = document.getElementById("why_action").value;
             exp.age = document.getElementById("age").value;
             exp.gender = document.getElementById("gender").value;
             exp.language = document.getElementById("language").value;
@@ -527,17 +527,8 @@ exp = {
         exp.exp_end_time = new Date();
 
         // compute experiment time variables (all in ms)
-        exp.experiment_completion_time = exp.exp_end_time.getTime() - exp.exp_start_time.getTime();
-
-        exp.action_trial_time = exp.action_trial_end_time.getTime() - exp.action_trial_start_time.getTime();
-
-        // decrement maker-getter if this is a turker
-        if (turk.workerId.length > 0) {
-            var xmlHttp = null;
-            xmlHttp = new XMLHttpRequest()
-            xmlHttp.open("GET", "https://langcog.stanford.edu/cgi-bin/KM/subject_equalizer_km/decrementer.php?filename=" + filename + "&to_decrement=" + cond, false);
-            xmlHttp.send(null)
-        }
+        //exp.experiment_completion_time = exp.exp_end_time.getTime() - exp.exp_start_time.getTime();
+        //exp.action_trial_time = exp.action_trial_end_time.getTime() - exp.action_trial_start_time.getTime();
 
         showSlide("finished");
 

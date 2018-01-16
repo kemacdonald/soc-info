@@ -1,0 +1,197 @@
+---
+title: "soc-info model"
+output: html_notebook
+---
+
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(rwebppl)
+library(jsonlite)
+library(magrittr)
+library(ggthemes)
+library(forcats)
+library(knitr)
+library(gganimate)
+library(RColorBrewer)
+library(cowplot)
+library(here)
+
+```
+
+
+```{r utils}
+utils <- '
+var rawProb = function(dist, val) {
+  Math.pow(Math.E, dist.score(val))
+};
+           
+var getSymbolEnt = function(prob) {
+  prob == 0 ? 0 : prob*Math.log2(prob)* -1
+};
+
+var computeEntropy = function(probsVect) {
+  var entropyEach = map(function(x) { return getSymbolEnt(x) }, probsVect);  
+  var entropyTotal = sum(entropyEach);
+  return entropyTotal;
+};
+
+var bayesFun = function(A, B, BGivenA) {
+  (A * BGivenA) / B
+}
+
+var infoGainAnswer = function(priorEnt, condProbs) {
+  var posteriorEnt = computeEntropy(condProbs);
+  return priorEnt - posteriorEnt;
+}
+
+var infoGainQuestion = function(infoGainAnswerVect, probAnswerVect) {
+  var multiply = function(x, y) { return x * y; };
+  var posteriorEnt = sum(map2(multiply, infoGainAnswerVect, probAnswerVect));
+  return posteriorEnt
+}
+'
+```
+
+```{r define}
+define <- '
+var obsPres = [true, false];
+var weightBins = [0.1, 0.3, 0.5, 0.7, 0.9]
+
+var machineTypes = ["albatross", "bumblebee", "chestnut"];
+
+// p(machine)
+var machineTypePrior = Categorical({vs: ["albatross", "bumblebee", "chestnut"],
+                                    ps: [.4, .4, .2]});
+
+// p(buttonPress)
+var buttonPresses = ["A", "B", "AB"];
+var buttonPressPrior = Categorical({vs: buttonPresses,
+//                                     ps: [.4, .4, .2]}); 
+                                    ps: [.2, .2, .6]}); 
+
+// p(music | buttonPress)
+var playMusic = function(buttonPress) {
+  (buttonPress == "A") ? .4:
+  (buttonPress == "B") ? .4:
+  (buttonPress == "AB") ? 1:
+  0
+}
+
+// p(machine identity | buttonPress & music)
+var testMachine = function(state, buttonPress) {
+  return (buttonPress == "A" ? 
+          Categorical({vs: ["albatross", "bumblebee", "chestnut"], 
+                       ps: [1, 0, 0]}) :
+          buttonPress == "B" ? 
+          Categorical({vs: ["albatross", "bumblebee", "chestnut"], 
+                       ps: [0, 1, 0]}) :
+          buttonPress == "AB" ? 
+          Categorical({vs: ["albatross", "bumblebee", "chestnut"], 
+                       ps: [0.4, 0.4, 0.2]}) :
+          "nothing");
+}
+
+// compute info gain for question involving a particular button press (A, B, or A&B)
+var igQuestion = function(buttonPress) {
+  var priorEntLearner = computeEntropy(
+    map (function (x) { return Math.pow(Math.E, machineTypePrior.score(x))}, 
+         machineTypes));
+
+  var igAnswerYes = infoGainAnswer(priorEntLearner, 
+                                    map(function(x) 
+                                        {return rawProb(testMachine("state", buttonPress),x)}, 
+                                        machineTypes))
+  var igAnswerNo = infoGainAnswer(priorEntLearner, 
+                                    map(function(x) {return 1-rawProb(testMachine("state", buttonPress),x)}, 
+                                        machineTypes))
+
+  return infoGainQuestion(
+                 [igAnswerYes, igAnswerNo],
+                 [playMusic(buttonPress), 
+                  1-playMusic(buttonPress)])
+}
+
+var optimality = 1.7;
+'
+```
+
+
+
+```{r soc-info}
+socInfo <-'
+var observer1 = cache(function(buttonPress) {
+   return Infer({method: "enumerate"}, 
+function() {
+     var competence = playMusic(buttonPress);
+     return competence;
+  }); 
+}, 10000)
+
+var learner1 = cache(function(phi) {
+   return Infer({method: "enumerate"}, 
+function(observerPresent) {
+     var buttonPress = sample(buttonPressPrior);
+     var competence = uniformDraw([0,1]);
+    var O1 = observer1(buttonPress);
+
+    var learningUtility = phi*igQuestion(buttonPress)
+    var presentationUtility = (1-phi)*rawProb(O1,competence)
+   var performanceUtility = (1-phi)*playMusic(buttonPress)
+    
+    var learnerUtility = function(observerPresent) {
+      return (observerPresent == true ? 
+              learningUtility + presentationUtility :
+              learningUtility + performanceUtility
+             )}             
+    factor(optimality*learnerUtility(observerPresent))
+    return buttonPress;  
+   
+  });   
+}, 10000)
+'
+```
+
+```{r}
+learnerCall <- '
+_.flatten(
+map(function(phi){
+    map(function(observerPresent){
+      var actionProbs = learner1(phi, observerPresent)
+      var actObj = _.fromPairs(map(function(a){
+        [a, Math.exp(actionProbs.score(a))]
+      }, buttonPresses))
+       return extend(actObj,{ phi: phi, obsPres: observerPresent})
+    }, obsPres)
+}, weightBins))
+'
+```
+
+### learner viz
+
+```{r}
+rs.l1 <- webppl(paste(utils, define, socInfo, learnerCall,  sep = '\n'))
+
+
+rs.l1.tidy <- data.frame(rs.l1) %>% 
+  gather(key=action, value=prob, -phi, -obsPres)
+```
+
+```{r}
+fig.l1 <- ggplot(rs.l1.tidy %>%
+                   filter(obsPres == TRUE) %>%
+                   mutate(action = relevel(factor(action), ref="AB")),
+       aes( x = action, y = prob, group = action, fill = action) )+
+  geom_bar(position = position_dodge(), stat = 'identity', color = 'black')+
+  scale_y_continuous(limits = c(0, 0.9), breaks = c(0, 0.25, 0.5, 0.75))+
+  facet_grid(.~phi, labeller=label_both)+
+  # scale_fill_manual(values =  rev(brewer.pal(5,"RdBu")))+
+  # scale_fill_manual(values =  brewer.pal(4,"RdBu"))+
+  scale_fill_solarized()+
+  guides(fill = F)+
+  theme_few()+
+  ylab("action probability")
+
+fig.l1
+# ggsave("img/l0.pdf", width = 7, height = 4)
+```

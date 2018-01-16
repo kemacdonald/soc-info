@@ -34,6 +34,7 @@ d %>%
   select(id, age, condition, about, comment) %>% 
   unique() %>% 
   arrange(condition) %>% 
+  sample_n(10) %>% 
   knitr::kable()
 ```
 
@@ -53,7 +54,7 @@ How many participants passed the manipulation checks?
 
 ```{r}
 d %>% 
-  filter(manip_check_score >= 2) %>% 
+  filter(manip_check_score >= 3) %>% 
   distinct(id, condition) %>% 
   count(condition) %>% 
   kable()

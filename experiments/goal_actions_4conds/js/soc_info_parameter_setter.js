@@ -15,7 +15,7 @@ var numConditions = 8
 var slider_start_val = "50"
 
 try {
-    var filename = "soc_info_goals_4conds";
+    var filename = "soc_info_goals_4conds_v2";
     var condCounts = "1,12;2,12;3,12;4,12;5,12;6,12;7,12;8,12";
     var xmlHttp = null;
     xmlHttp = new XMLHttpRequest();
@@ -92,9 +92,9 @@ if (goal_condition == "learning" && outcome == "light") {
 }
 
 if (outcome == "music") {
-   music_box_imgs = ["BothMusicLight.jpeg", "ButtonMusic.jpeg", "HandleMusic.jpeg"] 
+   music_box_imgs = ["BothMusicLight.jpeg", "ButtonMusic.jpeg", "HandleMusic.jpeg"]
 } else {
-   music_box_imgs = ["BothLightMusic.jpeg", "HandleLight.jpeg", "ButtonLight.jpeg"] 
+   music_box_imgs = ["BothLightMusic.jpeg", "HandleLight.jpeg", "ButtonLight.jpeg"]
 }
 
 music_box = shuffle(music_box_imgs)

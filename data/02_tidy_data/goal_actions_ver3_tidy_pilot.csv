@@ -1,0 +1,601 @@
+id,condition,slider_value,hypothesis,hypothesis_type,slider_value_normalized,outcome,browser,browser_width,browser_height,screen_width,screen_height,mobile_device,about,comment,age,gender,first_language,experiment_time,action_trial_time,manip_check_score,action_response
+1,performance,32,handle,prior,0.33,music,chrome,1533,769,1600,900,FALSE,reasoning,thank you for the hit and have a great day!,43,f,english,285.416,28.946,3,both
+1,performance,32,both,prior,0.33,music,chrome,1533,769,1600,900,FALSE,reasoning,thank you for the hit and have a great day!,43,f,english,285.416,28.946,3,both
+1,performance,33,button,prior,0.34,music,chrome,1533,769,1600,900,FALSE,reasoning,thank you for the hit and have a great day!,43,f,english,285.416,28.946,3,both
+2,presentation,33,both,prior,0.173,music,chrome,1299,600,1366,768,FALSE,game theory,,33,m,english,148.62,13.826,3,both
+2,presentation,79,handle,prior,0.414,music,chrome,1299,600,1366,768,FALSE,game theory,,33,m,english,148.62,13.826,3,both
+2,presentation,79,button,prior,0.414,music,chrome,1299,600,1366,768,FALSE,game theory,,33,m,english,148.62,13.826,3,both
+3,nogoal,29,button,prior,0.199,music,chrome,1219,797,1440,900,FALSE,to see if people prefer buttons over handles.,nothing broken,31,f,english,125.926,12.017,3,handle
+3,nogoal,75,handle,prior,0.514,music,chrome,1219,797,1440,900,FALSE,to see if people prefer buttons over handles.,nothing broken,31,f,english,125.926,12.017,3,handle
+3,nogoal,42,both,prior,0.288,music,chrome,1219,797,1440,900,FALSE,to see if people prefer buttons over handles.,nothing broken,31,f,english,125.926,12.017,3,handle
+4,presentation,66,handle,prior,0.283,light,chrome,1239,883,1680,1050,FALSE,i have no idea!,no,45,f,english,175.685,17.719,3,both
+4,presentation,67,button,prior,0.288,light,chrome,1239,883,1680,1050,FALSE,i have no idea!,no,45,f,english,175.685,17.719,3,both
+4,presentation,100,both,prior,0.429,light,chrome,1239,883,1680,1050,FALSE,i have no idea!,no,45,f,english,175.685,17.719,3,both
+5,presentation,65,button,prior,0.406,light,chrome,1259,600,1440,900,FALSE,deductive reasoning,no,30,m,english,180.537,18.028,3,both
+5,presentation,66,handle,prior,0.412,light,chrome,1259,600,1440,900,FALSE,deductive reasoning,no,30,m,english,180.537,18.028,3,both
+5,presentation,29,both,prior,0.181,light,chrome,1259,600,1440,900,FALSE,deductive reasoning,no,30,m,english,180.537,18.028,3,both
+6,presentation,99,handle,prior,0.469,music,chrome,1619,797,2560,1440,FALSE,how does a toy work without a label,it worked great,28,f,english,215.106,35.688,3,both
+6,presentation,100,button,prior,0.474,music,chrome,1619,797,2560,1440,FALSE,how does a toy work without a label,it worked great,28,f,english,215.106,35.688,3,both
+6,presentation,12,both,prior,0.057,music,chrome,1619,797,2560,1440,FALSE,how does a toy work without a label,it worked great,28,f,english,215.106,35.688,3,both
+7,nogoal,30,button,prior,0.333,music,chrome,1974,993,1366,768,FALSE,i have no clue.  it seemed really really easy.,that music was unexpected and so cute! i loved it. ,30,f,english,191.269,36.219,3,button
+7,nogoal,30,handle,prior,0.333,music,chrome,1974,993,1366,768,FALSE,i have no clue.  it seemed really really easy.,that music was unexpected and so cute! i loved it. ,30,f,english,191.269,36.219,3,button
+7,nogoal,30,both,prior,0.333,music,chrome,1974,993,1366,768,FALSE,i have no clue.  it seemed really really easy.,that music was unexpected and so cute! i loved it. ,30,f,english,191.269,36.219,3,button
+8,learning,47,handle,prior,0.343,light,chrome,1299,600,1366,768,FALSE,to determine my opinions on how a toy works,,28,f,english,502.027,142.896,3,handle
+8,learning,38,button,prior,0.277,light,chrome,1299,600,1366,768,FALSE,to determine my opinions on how a toy works,,28,f,english,502.027,142.896,3,handle
+8,learning,52,both,prior,0.38,light,chrome,1299,600,1366,768,FALSE,to determine my opinions on how a toy works,,28,f,english,502.027,142.896,3,handle
+9,performance,100,button,prior,0.5,light,chrome,1657,600,1536,864,FALSE,"i have no earthly idea.  i mean, it's probably not to recruit engineers. if i really had to guess, i'd say it's so researchers can laugh at how stupid peons on this platform are.  the mockery is well-deserved. i'd electrocute myself with my toy.",my light and music came on! woohoo!,40,m,english,269.775,21.332,3,both
+9,performance,99,handle,prior,0.495,light,chrome,1657,600,1536,864,FALSE,"i have no earthly idea.  i mean, it's probably not to recruit engineers. if i really had to guess, i'd say it's so researchers can laugh at how stupid peons on this platform are.  the mockery is well-deserved. i'd electrocute myself with my toy.",my light and music came on! woohoo!,40,m,english,269.775,21.332,3,both
+9,performance,1,both,prior,0.005,light,chrome,1657,600,1536,864,FALSE,"i have no earthly idea.  i mean, it's probably not to recruit engineers. if i really had to guess, i'd say it's so researchers can laugh at how stupid peons on this platform are.  the mockery is well-deserved. i'd electrocute myself with my toy.",my light and music came on! woohoo!,40,m,english,269.775,21.332,3,both
+10,learning,70,handle,prior,0.44,light,chrome,1533,600,1600,900,FALSE,deducing what did what.,nothing.,35,m,english,136.148,19.796,3,handle
+10,learning,15,both,prior,0.094,light,chrome,1533,600,1600,900,FALSE,deducing what did what.,nothing.,35,m,english,136.148,19.796,3,handle
+10,learning,74,button,prior,0.465,light,chrome,1533,600,1600,900,FALSE,deducing what did what.,nothing.,35,m,english,136.148,19.796,3,handle
+11,nogoal,63,handle,prior,0.31,music,chrome,959,624,1024,768,FALSE,i don't know?,no comments at the current time.,38,f,english,226.086,50.493,2,button
+11,nogoal,78,both,prior,0.384,music,chrome,959,624,1024,768,FALSE,i don't know?,no comments at the current time.,38,f,english,226.086,50.493,2,button
+11,nogoal,62,button,prior,0.305,music,chrome,959,624,1024,768,FALSE,i don't know?,no comments at the current time.,38,f,english,226.086,50.493,2,button
+12,performance,6,handle,prior,0.034,light,chrome,1853,959,1920,1080,FALSE,memorization,none,32,m,english,277.494,49.629,3,button
+12,performance,94,button,prior,0.525,light,chrome,1853,959,1920,1080,FALSE,memorization,none,32,m,english,277.494,49.629,3,button
+12,performance,79,both,prior,0.441,light,chrome,1853,959,1920,1080,FALSE,memorization,none,32,m,english,277.494,49.629,3,button
+13,presentation,29,button,prior,0.315,light,chrome,1299,675,1366,768,FALSE,i don't know.,,34,f,english,188.51,34.113,3,both
+13,presentation,31,handle,prior,0.337,light,chrome,1299,675,1366,768,FALSE,i don't know.,,34,f,english,188.51,34.113,3,both
+13,presentation,32,both,prior,0.348,light,chrome,1299,675,1366,768,FALSE,i don't know.,,34,f,english,188.51,34.113,3,both
+14,performance,34,button,prior,0.327,music,chrome,1299,637,1366,768,FALSE,i'm not sure.,,32,f,english,134.427,29.082,3,both
+14,performance,34,both,prior,0.327,music,chrome,1299,637,1366,768,FALSE,i'm not sure.,,32,f,english,134.427,29.082,3,both
+14,performance,36,handle,prior,0.346,music,chrome,1299,637,1366,768,FALSE,i'm not sure.,,32,f,english,134.427,29.082,3,both
+15,nogoal,45,both,prior,0.317,music,chrome,1244,600,1440,900,FALSE,to see how well we could learn how to operate a toy. ,no,59,f,english,373.351,33.447,2,both
+15,nogoal,51,button,prior,0.359,music,chrome,1244,600,1440,900,FALSE,to see how well we could learn how to operate a toy. ,no,59,f,english,373.351,33.447,2,both
+15,nogoal,46,handle,prior,0.324,music,chrome,1244,600,1440,900,FALSE,to see how well we could learn how to operate a toy. ,no,59,f,english,373.351,33.447,2,both
+16,presentation,71,both,prior,0.413,music,chrome,1390,600,1440,900,FALSE,i am not really sure,no,38,,english,339.456,51.936,2,both
+16,presentation,100,button,prior,0.581,music,chrome,1390,600,1440,900,FALSE,i am not really sure,no,38,,english,339.456,51.936,2,both
+16,presentation,1,handle,prior,0.006,music,chrome,1390,600,1440,900,FALSE,i am not really sure,no,38,,english,339.456,51.936,2,both
+17,learning,71,button,prior,0.563,music,chrome,1299,600,1366,768,FALSE,it ask opinions,need detailed information,25,female,english,1160.353,65.234,1,both
+17,learning,18,both,prior,0.143,music,chrome,1299,600,1366,768,FALSE,it ask opinions,need detailed information,25,female,english,1160.353,65.234,1,both
+17,learning,37,handle,prior,0.294,music,chrome,1299,600,1366,768,FALSE,it ask opinions,need detailed information,25,female,english,1160.353,65.234,1,both
+18,learning,92,handle,prior,0.484,music,chrome,1638,844,1536,864,FALSE,how individual would choose to label a toy,"the first 2 questions asked how to make the components work individually, not at the same time.",37,f,english,241.667,29.013,2,both
+18,learning,95,both,prior,0.5,music,chrome,1638,844,1536,864,FALSE,how individual would choose to label a toy,"the first 2 questions asked how to make the components work individually, not at the same time.",37,f,english,241.667,29.013,2,both
+18,learning,3,button,prior,0.016,music,chrome,1638,844,1536,864,FALSE,how individual would choose to label a toy,"the first 2 questions asked how to make the components work individually, not at the same time.",37,f,english,241.667,29.013,2,both
+19,learning,23,button,prior,0.15,light,chrome,1299,600,1366,768,FALSE,what you prefer the toy to do,"the wording was a little confusing, it said the label was missing the toy was likely or unlikely what? ", 39,f,english,319.82,30.305,3,both
+19,learning,97,both,prior,0.634,light,chrome,1299,600,1366,768,FALSE,what you prefer the toy to do,"the wording was a little confusing, it said the label was missing the toy was likely or unlikely what? ", 39,f,english,319.82,30.305,3,both
+19,learning,33,handle,prior,0.216,light,chrome,1299,600,1366,768,FALSE,what you prefer the toy to do,"the wording was a little confusing, it said the label was missing the toy was likely or unlikely what? ", 39,f,english,319.82,30.305,3,both
+20,learning,72,handle,prior,0.444,light,chrome,1853,987,1920,1080,FALSE,to see how we solve problems,thanks,31,male,english,142.407,21.546,2,both
+20,learning,17,both,prior,0.105,light,chrome,1853,987,1920,1080,FALSE,to see how we solve problems,thanks,31,male,english,142.407,21.546,2,both
+20,learning,73,button,prior,0.451,light,chrome,1853,987,1920,1080,FALSE,to see how we solve problems,thanks,31,male,english,142.407,21.546,2,both
+21,nogoal,81,button,prior,0.435,light,chrome,1183,600,1280,800,FALSE,this task was about teaching the participant how to work a toy one way and then switching it up another way to see if the participant will get accustomed to the change.,,33,f,english,615.506,104.724,3,button
+21,nogoal,80,both,prior,0.43,light,chrome,1183,600,1280,800,FALSE,this task was about teaching the participant how to work a toy one way and then switching it up another way to see if the participant will get accustomed to the change.,,33,f,english,615.506,104.724,3,button
+21,nogoal,25,handle,prior,0.134,light,chrome,1183,600,1280,800,FALSE,this task was about teaching the participant how to work a toy one way and then switching it up another way to see if the participant will get accustomed to the change.,,33,f,english,615.506,104.724,3,button
+22,nogoal,27,both,prior,0.158,music,chrome,1176,602,1366,768,FALSE,not sure,none.,33,f,english,122.049,22.023,3,both
+22,nogoal,91,button,prior,0.532,music,chrome,1176,602,1366,768,FALSE,not sure,none.,33,f,english,122.049,22.023,3,both
+22,nogoal,53,handle,prior,0.31,music,chrome,1176,602,1366,768,FALSE,not sure,none.,33,f,english,122.049,22.023,3,both
+23,nogoal,12,handle,prior,0.103,music,chrome,1167,647,1600,900,FALSE,i think it's about memory or maybe even attention span of very similar looking situations. i think it might also have something to do with checking which instructions one can remember in a series of events.,"when i was asked what i'd do if i only had one chance to play with the toy, i chose to pull the level and press the button at the same time. when that happened, the toy started playing music while lighting up. the screen suddenly went to the next part and i never got to see what was on the bottom half of the page.",35,m,filipino,454.165,52.077,3,both
+23,nogoal,16,both,prior,0.137,music,chrome,1167,647,1600,900,FALSE,i think it's about memory or maybe even attention span of very similar looking situations. i think it might also have something to do with checking which instructions one can remember in a series of events.,"when i was asked what i'd do if i only had one chance to play with the toy, i chose to pull the level and press the button at the same time. when that happened, the toy started playing music while lighting up. the screen suddenly went to the next part and i never got to see what was on the bottom half of the page.",35,m,filipino,454.165,52.077,3,both
+23,nogoal,89,button,prior,0.761,music,chrome,1167,647,1600,900,FALSE,i think it's about memory or maybe even attention span of very similar looking situations. i think it might also have something to do with checking which instructions one can remember in a series of events.,"when i was asked what i'd do if i only had one chance to play with the toy, i chose to pull the level and press the button at the same time. when that happened, the toy started playing music while lighting up. the screen suddenly went to the next part and i never got to see what was on the bottom half of the page.",35,m,filipino,454.165,52.077,3,both
+24,performance,83,handle,prior,0.43,music,chrome,1299,600,1366,768,FALSE,unsure,none,24,f,english,138.492,15.378,2,both
+24,performance,83,both,prior,0.43,music,chrome,1299,600,1366,768,FALSE,unsure,none,24,f,english,138.492,15.378,2,both
+24,performance,27,button,prior,0.14,music,chrome,1299,600,1366,768,FALSE,unsure,none,24,f,english,138.492,15.378,2,both
+25,learning,18,handle,prior,0.151,light,chrome,957,600,1024,768,FALSE,no idea. following instructions?,no comment. everything worked perfectly. thank you.,31,m,english,208.277,42.944,3,button
+25,learning,1,both,prior,0.008,light,chrome,957,600,1024,768,FALSE,no idea. following instructions?,no comment. everything worked perfectly. thank you.,31,m,english,208.277,42.944,3,button
+25,learning,100,button,prior,0.84,light,chrome,957,600,1024,768,FALSE,no idea. following instructions?,no comment. everything worked perfectly. thank you.,31,m,english,208.277,42.944,3,button
+26,nogoal,30,handle,prior,0.254,music,chrome,696,730,1440,900,FALSE,not sure,nothing broken.  i think i chose the wrong selections for box #2 originally.  oops!,45,f,english,242.098,55.391,3,handle
+26,nogoal,61,both,prior,0.517,music,chrome,696,730,1440,900,FALSE,not sure,nothing broken.  i think i chose the wrong selections for box #2 originally.  oops!,45,f,english,242.098,55.391,3,handle
+26,nogoal,27,button,prior,0.229,music,chrome,696,730,1440,900,FALSE,not sure,nothing broken.  i think i chose the wrong selections for box #2 originally.  oops!,45,f,english,242.098,55.391,3,handle
+27,learning,26,button,prior,0.197,light,chrome,1389,699,1600,900,FALSE,to examine how people come to make decisions based on logic and reasoning.,everything was clear and easy to understand.,26,m,english,327.031,47.126,3,button
+27,learning,26,handle,prior,0.197,light,chrome,1389,699,1600,900,FALSE,to examine how people come to make decisions based on logic and reasoning.,everything was clear and easy to understand.,26,m,english,327.031,47.126,3,button
+27,learning,80,both,prior,0.606,light,chrome,1389,699,1600,900,FALSE,to examine how people come to make decisions based on logic and reasoning.,everything was clear and easy to understand.,26,m,english,327.031,47.126,3,button
+28,learning,37,button,prior,0.316,light,chrome,1299,600,1366,768,FALSE,efficient decision making,none,46,f,english,279.239,68.786,3,handle
+28,learning,39,both,prior,0.333,light,chrome,1299,600,1366,768,FALSE,efficient decision making,none,46,f,english,279.239,68.786,3,handle
+28,learning,41,handle,prior,0.35,light,chrome,1299,600,1366,768,FALSE,efficient decision making,none,46,f,english,279.239,68.786,3,handle
+29,learning,100,button,prior,0.339,music,chrome,340,600,360,640,TRUE,see how people think and problem solve,no,34,male,english,250.86,38.169,3,both
+29,learning,95,both,prior,0.322,music,chrome,340,600,360,640,TRUE,see how people think and problem solve,no,34,male,english,250.86,38.169,3,both
+29,learning,100,handle,prior,0.339,music,chrome,340,600,360,640,TRUE,see how people think and problem solve,no,34,male,english,250.86,38.169,3,both
+30,nogoal,19,button,prior,0.178,music,chrome,1244,600,1440,900,FALSE,critical thinking?,this was a very odd task,32,f,english,235.601,18.864,3,both
+30,nogoal,22,handle,prior,0.206,music,chrome,1244,600,1440,900,FALSE,critical thinking?,this was a very odd task,32,f,english,235.601,18.864,3,both
+30,nogoal,66,both,prior,0.617,music,chrome,1244,600,1440,900,FALSE,critical thinking?,this was a very odd task,32,f,english,235.601,18.864,3,both
+31,presentation,84,button,prior,0.512,music,chrome,1544,1184,2560,1080,FALSE,decision making,none,27,m,english,110.568,3.277,3,handle
+31,presentation,15,both,prior,0.091,music,chrome,1544,1184,2560,1080,FALSE,decision making,none,27,m,english,110.568,3.277,3,handle
+31,presentation,65,handle,prior,0.396,music,chrome,1544,1184,2560,1080,FALSE,decision making,none,27,m,english,110.568,3.277,3,handle
+32,learning,4,both,prior,0.038,light,chrome,1853,974,1920,1080,FALSE,maybe to see what method we naturally resort to when thinking about it?,,34,m,english,225.506,42.361,3,handle
+32,learning,15,handle,prior,0.143,light,chrome,1853,974,1920,1080,FALSE,maybe to see what method we naturally resort to when thinking about it?,,34,m,english,225.506,42.361,3,handle
+32,learning,86,button,prior,0.819,light,chrome,1853,974,1920,1080,FALSE,maybe to see what method we naturally resort to when thinking about it?,,34,m,english,225.506,42.361,3,handle
+33,learning,31,handle,prior,0.32,light,chrome,2061,969,1600,900,FALSE,probability and reasoning,"no, all good.",46,m,english,296.159,48.487,3,button
+33,learning,32,button,prior,0.33,light,chrome,2061,969,1600,900,FALSE,probability and reasoning,"no, all good.",46,m,english,296.159,48.487,3,button
+33,learning,34,both,prior,0.351,light,chrome,2061,969,1600,900,FALSE,probability and reasoning,"no, all good.",46,m,english,296.159,48.487,3,button
+34,presentation,58,button,prior,0.319,light,chrome,1176,602,1366,768,FALSE,toys,,33,f,english,120.542,10.262,1,button
+34,presentation,60,handle,prior,0.33,light,chrome,1176,602,1366,768,FALSE,toys,,33,f,english,120.542,10.262,1,button
+34,presentation,64,both,prior,0.352,light,chrome,1176,602,1366,768,FALSE,toys,,33,f,english,120.542,10.262,1,button
+35,performance,67,both,prior,0.328,music,chrome,1299,613,1366,768,FALSE,calculating user probability (or lack of knowledge pertaining to probability),interesting task!,32,female,english,276.744,27.72,3,both
+35,performance,68,handle,prior,0.333,music,chrome,1299,613,1366,768,FALSE,calculating user probability (or lack of knowledge pertaining to probability),interesting task!,32,female,english,276.744,27.72,3,both
+35,performance,69,button,prior,0.338,music,chrome,1299,613,1366,768,FALSE,calculating user probability (or lack of knowledge pertaining to probability),interesting task!,32,female,english,276.744,27.72,3,both
+36,performance,91,both,prior,0.595,music,chrome,1534,765,1600,900,FALSE,seeing if you pay attention to complex instructions.,none thanks.,24, m,english,119.913,16.764,3,both
+36,performance,25,button,prior,0.163,music,chrome,1534,765,1600,900,FALSE,seeing if you pay attention to complex instructions.,none thanks.,24, m,english,119.913,16.764,3,both
+36,performance,37,handle,prior,0.242,music,chrome,1534,765,1600,900,FALSE,seeing if you pay attention to complex instructions.,none thanks.,24, m,english,119.913,16.764,3,both
+37,performance,28,both,prior,0.155,music,chrome,1470,759,1536,864,FALSE,to see if i could understand and follow instructions? ideas on how to design a toy?,no. im not sure.,44,f,english,363.517,37.478,3,button
+37,performance,76,handle,prior,0.42,music,chrome,1470,759,1536,864,FALSE,to see if i could understand and follow instructions? ideas on how to design a toy?,no. im not sure.,44,f,english,363.517,37.478,3,button
+37,performance,77,button,prior,0.425,music,chrome,1470,759,1536,864,FALSE,to see if i could understand and follow instructions? ideas on how to design a toy?,no. im not sure.,44,f,english,363.517,37.478,3,button
+38,nogoal,49,button,prior,0.327,music,chrome,1853,988,1920,1080,FALSE,no idea,,45,m,english,183.725,22.056,3,both
+38,nogoal,50,both,prior,0.333,music,chrome,1853,988,1920,1080,FALSE,no idea,,45,m,english,183.725,22.056,3,both
+38,nogoal,51,handle,prior,0.34,music,chrome,1853,988,1920,1080,FALSE,no idea,,45,m,english,183.725,22.056,3,both
+39,learning,61,handle,prior,0.347,music,chrome,1449,736,1366,768,FALSE,logical thinking (i failed),i'd like to know the correct answer!,31,female,english,335.682,150.336,3,both
+39,learning,26,both,prior,0.148,music,chrome,1449,736,1366,768,FALSE,logical thinking (i failed),i'd like to know the correct answer!,31,female,english,335.682,150.336,3,both
+39,learning,89,button,prior,0.506,music,chrome,1449,736,1366,768,FALSE,logical thinking (i failed),i'd like to know the correct answer!,31,female,english,335.682,150.336,3,both
+40,learning,76,handle,prior,0.444,light,chrome,1316,600,1366,768,FALSE,i have no idea.,,38,f,english,222.039,43.008,2,button
+40,learning,24,button,prior,0.14,light,chrome,1316,600,1366,768,FALSE,i have no idea.,,38,f,english,222.039,43.008,2,button
+40,learning,71,both,prior,0.415,light,chrome,1316,600,1366,768,FALSE,i have no idea.,,38,f,english,222.039,43.008,2,button
+41,nogoal,66,handle,prior,0.4,light,chrome,1230,600,1280,800,FALSE,how people figure things out,it was a little confusing,28,f,english,241.345,52.511,3,both
+41,nogoal,39,both,prior,0.236,light,chrome,1230,600,1280,800,FALSE,how people figure things out,it was a little confusing,28,f,english,241.345,52.511,3,both
+41,nogoal,60,button,prior,0.364,light,chrome,1230,600,1280,800,FALSE,how people figure things out,it was a little confusing,28,f,english,241.345,52.511,3,both
+42,learning,50,button,prior,0.37,music,safari,508,600,320,568,TRUE,cognitive ability?,thanks so much.,29,m,english,285.868,46.405,3,both
+42,learning,8,both,prior,0.059,music,safari,508,600,320,568,TRUE,cognitive ability?,thanks so much.,29,m,english,285.868,46.405,3,both
+42,learning,77,handle,prior,0.57,music,safari,508,600,320,568,TRUE,cognitive ability?,thanks so much.,29,m,english,285.868,46.405,3,both
+43,performance,73,handle,prior,0.338,light,chrome,1176,579,1366,768,FALSE,cognitive decision making,nope,35,female,english,141.373,26.719,2,both
+43,performance,72,both,prior,0.333,light,chrome,1176,579,1366,768,FALSE,cognitive decision making,nope,35,female,english,141.373,26.719,2,both
+43,performance,71,button,prior,0.329,light,chrome,1176,579,1366,768,FALSE,cognitive decision making,nope,35,female,english,141.373,26.719,2,both
+44,learning,7,handle,prior,0.057,music,chrome,1853,974,1920,1080,FALSE,how language effects our logic skills.,,33,m,english,252.617,62.956,2,handle
+44,learning,71,both,prior,0.582,music,chrome,1853,974,1920,1080,FALSE,how language effects our logic skills.,,33,m,english,252.617,62.956,2,handle
+44,learning,44,button,prior,0.361,music,chrome,1853,974,1920,1080,FALSE,how language effects our logic skills.,,33,m,english,252.617,62.956,2,handle
+45,nogoal,65,both,prior,0.399,music,chrome,1299,600,1366,768,FALSE,no clue,no,31,m,english,137.683,13.743,1,handle
+45,nogoal,49,button,prior,0.301,music,chrome,1299,600,1366,768,FALSE,no clue,no,31,m,english,137.683,13.743,1,handle
+45,nogoal,49,handle,prior,0.301,music,chrome,1299,600,1366,768,FALSE,no clue,no,31,m,english,137.683,13.743,1,handle
+46,nogoal,29,button,prior,0.312,music,chrome,1035,600,1920,1200,FALSE,logic,none,50,m,english,250.985,42.232,3,both
+46,nogoal,31,handle,prior,0.333,music,chrome,1035,600,1920,1200,FALSE,logic,none,50,m,english,250.985,42.232,3,both
+46,nogoal,33,both,prior,0.355,music,chrome,1035,600,1920,1200,FALSE,logic,none,50,m,english,250.985,42.232,3,both
+47,nogoal,32,button,prior,0.333,light,chrome,1230,600,1280,1024,FALSE,i don't know,none,28,m,english,149.83,54.6,3,handle
+47,nogoal,32,handle,prior,0.333,light,chrome,1230,600,1280,1024,FALSE,i don't know,none,28,m,english,149.83,54.6,3,handle
+47,nogoal,32,both,prior,0.333,light,chrome,1230,600,1280,1024,FALSE,i don't know,none,28,m,english,149.83,54.6,3,handle
+48,performance,25,handle,prior,0.231,light,chrome,1299,600,1366,768,FALSE,to assess logic in learning.,"the time that goes by when the music plays, i could not thoroughly read that page before it auto advanced.",26,m,english,356.32,23.817,3,both
+48,performance,62,both,prior,0.574,light,chrome,1299,600,1366,768,FALSE,to assess logic in learning.,"the time that goes by when the music plays, i could not thoroughly read that page before it auto advanced.",26,m,english,356.32,23.817,3,both
+48,performance,21,button,prior,0.194,light,chrome,1299,600,1366,768,FALSE,to assess logic in learning.,"the time that goes by when the music plays, i could not thoroughly read that page before it auto advanced.",26,m,english,356.32,23.817,3,both
+49,nogoal,80,both,prior,0.305,light,chrome,1380,640,1600,900,FALSE,memory/recall,,47,female,english,174.426,45.547,3,handle
+49,nogoal,82,button,prior,0.313,light,chrome,1380,640,1600,900,FALSE,memory/recall,,47,female,english,174.426,45.547,3,handle
+49,nogoal,100,handle,prior,0.382,light,chrome,1380,640,1600,900,FALSE,memory/recall,,47,female,english,174.426,45.547,3,handle
+50,learning,18,both,prior,0.106,music,chrome,1332,703,1536,864,FALSE,making a decision to figure out an unknown.,not at this time,37,m,english,278.912,37.473,3,button
+50,learning,75,handle,prior,0.441,music,chrome,1332,703,1536,864,FALSE,making a decision to figure out an unknown.,not at this time,37,m,english,278.912,37.473,3,button
+50,learning,77,button,prior,0.453,music,chrome,1332,703,1536,864,FALSE,making a decision to figure out an unknown.,not at this time,37,m,english,278.912,37.473,3,button
+51,nogoal,20,both,prior,0.137,music,chrome,1401,600,2560,1440,FALSE,not sure,no,33,m,english,144.961,55.351,3,both
+51,nogoal,69,handle,prior,0.473,music,chrome,1401,600,2560,1440,FALSE,not sure,no,33,m,english,144.961,55.351,3,both
+51,nogoal,57,button,prior,0.39,music,chrome,1401,600,2560,1440,FALSE,not sure,no,33,m,english,144.961,55.351,3,both
+52,performance,50,handle,prior,0.331,music,chrome,892,600,1360,768,FALSE,not sure,each of 3 possibilities had the same probability so i tried to mark them the same likelihood ,50,m,english,285.383,29.797,3,both
+52,performance,51,both,prior,0.338,music,chrome,892,600,1360,768,FALSE,not sure,each of 3 possibilities had the same probability so i tried to mark them the same likelihood ,50,m,english,285.383,29.797,3,both
+52,performance,50,button,prior,0.331,music,chrome,892,600,1360,768,FALSE,not sure,each of 3 possibilities had the same probability so i tried to mark them the same likelihood ,50,m,english,285.383,29.797,3,both
+53,performance,9,both,prior,0.088,light,chrome,1853,974,1920,1080,FALSE,unsure,no,39,f,english,263.592,30.753,3,both
+53,performance,92,button,prior,0.902,light,chrome,1853,974,1920,1080,FALSE,unsure,no,39,f,english,263.592,30.753,3,both
+53,performance,1,handle,prior,0.01,light,chrome,1853,974,1920,1080,FALSE,unsure,no,39,f,english,263.592,30.753,3,both
+54,presentation,65,handle,prior,0.414,light,chrome,1098,812,1280,1024,FALSE,i have no idea. would we pick the unlikely but creative toy,no it was fun thanks,36,f,english,291.115,65.013,3,both
+54,presentation,1,both,prior,0.006,light,chrome,1098,812,1280,1024,FALSE,i have no idea. would we pick the unlikely but creative toy,no it was fun thanks,36,f,english,291.115,65.013,3,both
+54,presentation,91,button,prior,0.58,light,chrome,1098,812,1280,1024,FALSE,i have no idea. would we pick the unlikely but creative toy,no it was fun thanks,36,f,english,291.115,65.013,3,both
+55,presentation,69,both,prior,0.416,music,chrome,1299,600,1366,768,FALSE,toy function,no,34,m,english,117.295,12.006,3,both
+55,presentation,64,handle,prior,0.386,music,chrome,1299,600,1366,768,FALSE,toy function,no,34,m,english,117.295,12.006,3,both
+55,presentation,33,button,prior,0.199,music,chrome,1299,600,1366,768,FALSE,toy function,no,34,m,english,117.295,12.006,3,both
+56,performance,71,button,prior,0.317,light,chrome,1230,600,1280,800,FALSE,memory,no,26,f,english,133.192,13.82,3,both
+56,performance,77,handle,prior,0.344,light,chrome,1230,600,1280,800,FALSE,memory,no,26,f,english,133.192,13.82,3,both
+56,performance,76,both,prior,0.339,light,chrome,1230,600,1280,800,FALSE,memory,no,26,f,english,133.192,13.82,3,both
+57,presentation,78,handle,prior,0.411,music,chrome,642,561,1280,800,FALSE,i don't know.,no., 45,f,english,178.278,19.685,3,both
+57,presentation,79,button,prior,0.416,music,chrome,642,561,1280,800,FALSE,i don't know.,no., 45,f,english,178.278,19.685,3,both
+57,presentation,33,both,prior,0.174,music,chrome,642,561,1280,800,FALSE,i don't know.,no., 45,f,english,178.278,19.685,3,both
+58,performance,38,both,prior,0.328,light,chrome,1301,702,1366,768,FALSE,logic,no,55,male,english,219.176,30.793,3,both
+58,performance,39,handle,prior,0.336,light,chrome,1301,702,1366,768,FALSE,logic,no,55,male,english,219.176,30.793,3,both
+58,performance,39,button,prior,0.336,light,chrome,1301,702,1366,768,FALSE,logic,no,55,male,english,219.176,30.793,3,both
+59,performance,83,handle,prior,0.344,light,chrome,1213,918,1280,1024,FALSE,about the toy actions,great,24,m,english ,131.119,8.426,1,both
+59,performance,83,button,prior,0.344,light,chrome,1213,918,1280,1024,FALSE,about the toy actions,great,24,m,english ,131.119,8.426,1,both
+59,performance,75,both,prior,0.311,light,chrome,1213,918,1280,1024,FALSE,about the toy actions,great,24,m,english ,131.119,8.426,1,both
+60,performance,27,button,prior,0.325,light,chrome,1026,600,1360,768,FALSE,i think it was about using logic in decision making. ,i did not encounter any problems. i thing the interface was functional and pleasant.,46,m,english,378.695,37.824,3,both
+60,performance,27,handle,prior,0.325,light,chrome,1026,600,1360,768,FALSE,i think it was about using logic in decision making. ,i did not encounter any problems. i thing the interface was functional and pleasant.,46,m,english,378.695,37.824,3,both
+60,performance,29,both,prior,0.349,light,chrome,1026,600,1360,768,FALSE,i think it was about using logic in decision making. ,i did not encounter any problems. i thing the interface was functional and pleasant.,46,m,english,378.695,37.824,3,both
+61,nogoal,94,button,prior,0.94,light,chrome,1299,637,1366,768,FALSE,i believe this task was to ensure to read the directions before playing this game and understanding the type of result that you want to have.,everything ran smooth.,69,m,english,347.122,25.918,2,both
+61,nogoal,5,both,prior,0.05,light,chrome,1299,637,1366,768,FALSE,i believe this task was to ensure to read the directions before playing this game and understanding the type of result that you want to have.,everything ran smooth.,69,m,english,347.122,25.918,2,both
+61,nogoal,1,handle,prior,0.01,light,chrome,1299,637,1366,768,FALSE,i believe this task was to ensure to read the directions before playing this game and understanding the type of result that you want to have.,everything ran smooth.,69,m,english,347.122,25.918,2,both
+62,learning,43,handle,prior,0.426,light,chrome,420,953,1920,1080,FALSE,a toy machine,nope,31,m,english,201.736,30.373,2,handle
+62,learning,57,button,prior,0.564,light,chrome,420,953,1920,1080,FALSE,a toy machine,nope,31,m,english,201.736,30.373,2,handle
+62,learning,1,both,prior,0.01,light,chrome,420,953,1920,1080,FALSE,a toy machine,nope,31,m,english,201.736,30.373,2,handle
+63,presentation,1,button,prior,0.01,light,chrome,1390,662,1440,900,FALSE,interpreting/studying cognitive abilities ,no,27,m,english,357.102,45.563,3,both
+63,presentation,1,handle,prior,0.01,light,chrome,1390,662,1440,900,FALSE,interpreting/studying cognitive abilities ,no,27,m,english,357.102,45.563,3,both
+63,presentation,100,both,prior,0.98,light,chrome,1390,662,1440,900,FALSE,interpreting/studying cognitive abilities ,no,27,m,english,357.102,45.563,3,both
+64,presentation,37,handle,prior,0.352,music,chrome,1299,600,1366,768,FALSE,making logical inferences,everything worked. loved the music!,58,f,english,240.736,20.314,3,both
+64,presentation,1,both,prior,0.01,music,chrome,1299,600,1366,768,FALSE,making logical inferences,everything worked. loved the music!,58,f,english,240.736,20.314,3,both
+64,presentation,67,button,prior,0.638,music,chrome,1299,600,1366,768,FALSE,making logical inferences,everything worked. loved the music!,58,f,english,240.736,20.314,3,both
+65,presentation,31,both,prior,0.161,music,chrome,1087,600,1920,1080,FALSE,studying how people reason mechanically,no comments,30,male,english,212.018,16.996,3,both
+65,presentation,80,button,prior,0.417,music,chrome,1087,600,1920,1080,FALSE,studying how people reason mechanically,no comments,30,male,english,212.018,16.996,3,both
+65,presentation,81,handle,prior,0.422,music,chrome,1087,600,1920,1080,FALSE,studying how people reason mechanically,no comments,30,male,english,212.018,16.996,3,both
+66,learning,49,button,prior,0.368,music,chrome,1163,600,1280,800,FALSE,logical reasoning,i do not have any comments.,31,m,english,453.075,135.265,3,both
+66,learning,83,handle,prior,0.624,music,chrome,1163,600,1280,800,FALSE,logical reasoning,i do not have any comments.,31,m,english,453.075,135.265,3,both
+66,learning,1,both,prior,0.008,music,chrome,1163,600,1280,800,FALSE,logical reasoning,i do not have any comments.,31,m,english,453.075,135.265,3,both
+67,nogoal,23,both,prior,0.126,music,chrome,1853,949,1920,1080,FALSE,determining different pattern combinations that result in a set  outcome: music and light,everything worked fine.,34,m,english,299.752,15.602,3,both
+67,nogoal,70,handle,prior,0.385,music,chrome,1853,949,1920,1080,FALSE,determining different pattern combinations that result in a set  outcome: music and light,everything worked fine.,34,m,english,299.752,15.602,3,both
+67,nogoal,89,button,prior,0.489,music,chrome,1853,949,1920,1080,FALSE,determining different pattern combinations that result in a set  outcome: music and light,everything worked fine.,34,m,english,299.752,15.602,3,both
+68,presentation,18,handle,prior,0.093,light,safari,509,600,375,667,TRUE,marketing for a new toy,no improvements needed,33,m,english ,244.32,34.522,1,button
+68,presentation,89,both,prior,0.461,light,safari,509,600,375,667,TRUE,marketing for a new toy,no improvements needed,33,m,english ,244.32,34.522,1,button
+68,presentation,86,button,prior,0.446,light,safari,509,600,375,667,TRUE,marketing for a new toy,no improvements needed,33,m,english ,244.32,34.522,1,button
+69,presentation,73,button,prior,0.503,music,chrome,1470,600,1536,864,FALSE,"that people might favor the toy  they saw first, maybe?",,34,male,english,262.639,40.061,3,both
+69,presentation,35,handle,prior,0.241,music,chrome,1470,600,1536,864,FALSE,"that people might favor the toy  they saw first, maybe?",,34,male,english,262.639,40.061,3,both
+69,presentation,37,both,prior,0.255,music,chrome,1470,600,1536,864,FALSE,"that people might favor the toy  they saw first, maybe?",,34,male,english,262.639,40.061,3,both
+70,learning,55,button,prior,0.314,light,chrome,1176,602,1366,768,FALSE,memory,,27,f ,english,196.348,20.743,2,both
+70,learning,57,handle,prior,0.326,light,chrome,1176,602,1366,768,FALSE,memory,,27,f ,english,196.348,20.743,2,both
+70,learning,63,both,prior,0.36,light,chrome,1176,602,1366,768,FALSE,memory,,27,f ,english,196.348,20.743,2,both
+71,learning,22,handle,prior,0.289,music,chrome,647,647,1366,768,FALSE,how to make things work?,no,42,f,english,198.473,17.741,3,both
+71,learning,27,both,prior,0.355,music,chrome,647,647,1366,768,FALSE,how to make things work?,no,42,f,english,198.473,17.741,3,both
+71,learning,27,button,prior,0.355,music,chrome,647,647,1366,768,FALSE,how to make things work?,no,42,f,english,198.473,17.741,3,both
+72,learning,59,button,prior,0.527,light,chrome,1870,600,1920,1080,FALSE,logical decision making,n/a,26,m,english,233.5,48.193,3,handle
+72,learning,37,both,prior,0.33,light,chrome,1870,600,1920,1080,FALSE,logical decision making,n/a,26,m,english,233.5,48.193,3,handle
+72,learning,16,handle,prior,0.143,light,chrome,1870,600,1920,1080,FALSE,logical decision making,n/a,26,m,english,233.5,48.193,3,handle
+73,learning,1,button,prior,0.333,music,chrome,1299,600,1366,768,FALSE,decision making ,n/a,26,m,english,210.423,33.511,3,handle
+73,learning,1,handle,prior,0.333,music,chrome,1299,600,1366,768,FALSE,decision making ,n/a,26,m,english,210.423,33.511,3,handle
+73,learning,1,both,prior,0.333,music,chrome,1299,600,1366,768,FALSE,decision making ,n/a,26,m,english,210.423,33.511,3,handle
+74,performance,72,handle,prior,0.409,light,chrome,866,1041,1920,1080,FALSE,our views on a toy,no,33,f,english,178.262,18.543,3,both
+74,performance,85,both,prior,0.483,light,chrome,866,1041,1920,1080,FALSE,our views on a toy,no,33,f,english,178.262,18.543,3,both
+74,performance,19,button,prior,0.108,light,chrome,866,1041,1920,1080,FALSE,our views on a toy,no,33,f,english,178.262,18.543,3,both
+75,learning,71,button,prior,0.326,music,chrome,1299,662,1366,768,FALSE,reasoning?,when i tried to scroll down one of the pages advanced unexpectedly on me and i feel like it affected my answer on the last scenario of question,43,f,english,365.839,53.467,3,handle
+75,learning,63,both,prior,0.289,music,chrome,1299,662,1366,768,FALSE,reasoning?,when i tried to scroll down one of the pages advanced unexpectedly on me and i feel like it affected my answer on the last scenario of question,43,f,english,365.839,53.467,3,handle
+75,learning,84,handle,prior,0.385,music,chrome,1299,662,1366,768,FALSE,reasoning?,when i tried to scroll down one of the pages advanced unexpectedly on me and i feel like it affected my answer on the last scenario of question,43,f,english,365.839,53.467,3,handle
+76,learning,73,button,prior,0.315,light,chrome,1533,769,1600,900,FALSE,reasoning,all worked fine.,55,m,english,212.684,20.975,3,button
+76,learning,73,handle,prior,0.315,light,chrome,1533,769,1600,900,FALSE,reasoning,all worked fine.,55,m,english,212.684,20.975,3,button
+76,learning,86,both,prior,0.371,light,chrome,1533,769,1600,900,FALSE,reasoning,all worked fine.,55,m,english,212.684,20.975,3,button
+77,nogoal,27,handle,prior,0.346,music,chrome,1299,600,1366,768,FALSE,probability,nope,36,m,english,335.761,36.933,2,both
+77,nogoal,25,both,prior,0.321,music,chrome,1299,600,1366,768,FALSE,probability,nope,36,m,english,335.761,36.933,2,both
+77,nogoal,26,button,prior,0.333,music,chrome,1299,600,1366,768,FALSE,probability,nope,36,m,english,335.761,36.933,2,both
+78,performance,69,button,prior,0.317,music,chrome,1533,600,1600,900,FALSE,people's judgement. ,no,34,m,english,143.975,17.357,3,both
+78,performance,69,both,prior,0.317,music,chrome,1533,600,1600,900,FALSE,people's judgement. ,no,34,m,english,143.975,17.357,3,both
+78,performance,80,handle,prior,0.367,music,chrome,1533,600,1600,900,FALSE,people's judgement. ,no,34,m,english,143.975,17.357,3,both
+79,learning,35,button,prior,0.199,light,chrome,1299,662,1366,768,FALSE,logic,no,25,f,english,86.287,10.327,2,both
+79,learning,72,both,prior,0.409,light,chrome,1299,662,1366,768,FALSE,logic,no,25,f,english,86.287,10.327,2,both
+79,learning,69,handle,prior,0.392,light,chrome,1299,662,1366,768,FALSE,logic,no,25,f,english,86.287,10.327,2,both
+80,presentation,94,handle,prior,0.465,music,chrome,1390,826,1440,900,FALSE,i think this task examines perceptions of logic statements using the example of a toy.,instructions were clear.,32,m,english,233.777,24.273,3,both
+80,presentation,17,both,prior,0.084,music,chrome,1390,826,1440,900,FALSE,i think this task examines perceptions of logic statements using the example of a toy.,instructions were clear.,32,m,english,233.777,24.273,3,both
+80,presentation,91,button,prior,0.45,music,chrome,1390,826,1440,900,FALSE,i think this task examines perceptions of logic statements using the example of a toy.,instructions were clear.,32,m,english,233.777,24.273,3,both
+81,nogoal,64,both,prior,0.444,music,chrome,1470,759,1536,864,FALSE,decision making,differentiating between toys was confusing at first.  i submitted my first answer then thought the page didn't load.  i thought i was still on the first toy when i was on the second.,35,m,english,237.776,20.179,3,both
+81,nogoal,64,button,prior,0.444,music,chrome,1470,759,1536,864,FALSE,decision making,differentiating between toys was confusing at first.  i submitted my first answer then thought the page didn't load.  i thought i was still on the first toy when i was on the second.,35,m,english,237.776,20.179,3,both
+81,nogoal,16,handle,prior,0.111,music,chrome,1470,759,1536,864,FALSE,decision making,differentiating between toys was confusing at first.  i submitted my first answer then thought the page didn't load.  i thought i was still on the first toy when i was on the second.,35,m,english,237.776,20.179,3,both
+82,nogoal,78,button,prior,0.325,light,chrome,1452,600,1600,900,FALSE,i think it was about remembering things.,no,24,f,english,213.252,47.493,3,both
+82,nogoal,80,both,prior,0.333,light,chrome,1452,600,1600,900,FALSE,i think it was about remembering things.,no,24,f,english,213.252,47.493,3,both
+82,nogoal,82,handle,prior,0.342,light,chrome,1452,600,1600,900,FALSE,i think it was about remembering things.,no,24,f,english,213.252,47.493,3,both
+83,presentation,100,both,prior,0.333,light,chrome,598,630,1280,720,FALSE,making the toy work,thank you,32,f,english,227.749,74.96,2,both
+83,presentation,100,button,prior,0.333,light,chrome,598,630,1280,720,FALSE,making the toy work,thank you,32,f,english,227.749,74.96,2,both
+83,presentation,100,handle,prior,0.333,light,chrome,598,630,1280,720,FALSE,making the toy work,thank you,32,f,english,227.749,74.96,2,both
+84,presentation,31,both,prior,0.323,music,chrome,1470,734,1536,864,FALSE,decision making,no.,34,m,english,263.596,48.183,3,both
+84,presentation,32,handle,prior,0.333,music,chrome,1470,734,1536,864,FALSE,decision making,no.,34,m,english,263.596,48.183,3,both
+84,presentation,33,button,prior,0.344,music,chrome,1470,734,1536,864,FALSE,decision making,no.,34,m,english,263.596,48.183,3,both
+85,performance,1,both,prior,0.01,music,chrome,947,600,1024,820,FALSE,coordination,no,67,f,emglish,231.227,25.645,2,both
+85,performance,1,handle,prior,0.01,music,chrome,947,600,1024,820,FALSE,coordination,no,67,f,emglish,231.227,25.645,2,both
+85,performance,100,button,prior,0.98,music,chrome,947,600,1024,820,FALSE,coordination,no,67,f,emglish,231.227,25.645,2,both
+86,presentation,47,handle,prior,0.32,music,chrome,416,600,1366,768,FALSE,i have no idea,thanks,35,m,english,207.464,35.155,3,both
+86,presentation,50,button,prior,0.34,music,chrome,416,600,1366,768,FALSE,i have no idea,thanks,35,m,english,207.464,35.155,3,both
+86,presentation,50,both,prior,0.34,music,chrome,416,600,1366,768,FALSE,i have no idea,thanks,35,m,english,207.464,35.155,3,both
+87,performance,57,handle,prior,0.263,light,chrome,1047,538,1920,1080,FALSE,logic,no,68,m,english,514.667,35.954,3,both
+87,performance,100,both,prior,0.461,light,chrome,1047,538,1920,1080,FALSE,logic,no,68,m,english,514.667,35.954,3,both
+87,performance,60,button,prior,0.276,light,chrome,1047,538,1920,1080,FALSE,logic,no,68,m,english,514.667,35.954,3,both
+88,performance,51,button,prior,0.276,music,firefox,1214,600,1280,720,FALSE,i honestly don't know,,35,m,english,145.511,20.886,2,both
+88,performance,84,both,prior,0.454,music,firefox,1214,600,1280,720,FALSE,i honestly don't know,,35,m,english,145.511,20.886,2,both
+88,performance,50,handle,prior,0.27,music,firefox,1214,600,1280,720,FALSE,i honestly don't know,,35,m,english,145.511,20.886,2,both
+89,nogoal,93,handle,prior,0.492,light,safari,1219,600,1600,900,FALSE,not sure,no,30,f,english,355.31,47.519,3,both
+89,nogoal,88,button,prior,0.466,light,safari,1219,600,1600,900,FALSE,not sure,no,30,f,english,355.31,47.519,3,both
+89,nogoal,8,both,prior,0.042,light,safari,1219,600,1600,900,FALSE,not sure,no,30,f,english,355.31,47.519,3,both
+90,presentation,69,button,prior,0.445,light,chrome,1855,888,1920,1080,FALSE,to study a person's deduction ability.,no comments.,50,m,english,313.69,35.761,3,both
+90,presentation,85,handle,prior,0.548,light,chrome,1855,888,1920,1080,FALSE,to study a person's deduction ability.,no comments.,50,m,english,313.69,35.761,3,both
+90,presentation,1,both,prior,0.006,light,chrome,1855,888,1920,1080,FALSE,to study a person's deduction ability.,no comments.,50,m,english,313.69,35.761,3,both
+91,performance,18,both,prior,0.108,music,chrome,392,600,412,846,TRUE,not sure,no,31,f,english,64.435,7.731,0,handle
+91,performance,48,button,prior,0.289,music,chrome,392,600,412,846,TRUE,not sure,no,31,f,english,64.435,7.731,0,handle
+91,performance,100,handle,prior,0.602,music,chrome,392,600,412,846,TRUE,not sure,no,31,f,english,64.435,7.731,0,handle
+92,nogoal,44,both,prior,0.328,light,chrome,1533,600,1600,900,FALSE,deductive reasoning,no,36,f,english,192.899,26.512,3,button
+92,nogoal,45,handle,prior,0.336,light,chrome,1533,600,1600,900,FALSE,deductive reasoning,no,36,f,english,192.899,26.512,3,button
+92,nogoal,45,button,prior,0.336,light,chrome,1533,600,1600,900,FALSE,deductive reasoning,no,36,f,english,192.899,26.512,3,button
+93,nogoal,74,button,prior,0.326,light,chrome,1870,600,1920,1080,FALSE,how we problem solve,,36,m,english,282.458,28.697,1,handle
+93,nogoal,64,both,prior,0.282,light,chrome,1870,600,1920,1080,FALSE,how we problem solve,,36,m,english,282.458,28.697,1,handle
+93,nogoal,89,handle,prior,0.392,light,chrome,1870,600,1920,1080,FALSE,how we problem solve,,36,m,english,282.458,28.697,1,handle
+94,presentation,30,both,prior,0.227,light,chrome,1613,919,1680,1050,FALSE,how we interpret instructions,no comments,42,m,english,187.326,19.751,2,both
+94,presentation,51,button,prior,0.386,light,chrome,1613,919,1680,1050,FALSE,how we interpret instructions,no comments,42,m,english,187.326,19.751,2,both
+94,presentation,51,handle,prior,0.386,light,chrome,1613,919,1680,1050,FALSE,how we interpret instructions,no comments,42,m,english,187.326,19.751,2,both
+95,nogoal,15,both,prior,0.081,light,firefox,1299,600,1366,768,FALSE,logic,,40,m,english,173.358,19.441,3,button
+95,nogoal,85,handle,prior,0.459,light,firefox,1299,600,1366,768,FALSE,logic,,40,m,english,173.358,19.441,3,button
+95,nogoal,85,button,prior,0.459,light,firefox,1299,600,1366,768,FALSE,logic,,40,m,english,173.358,19.441,3,button
+96,nogoal,34,handle,prior,0.201,light,chrome,760,600,1920,1080,FALSE,cognition,none,62,m,english,533.668,50.845,3,both
+96,nogoal,100,both,prior,0.592,light,chrome,760,600,1920,1080,FALSE,cognition,none,62,m,english,533.668,50.845,3,both
+96,nogoal,35,button,prior,0.207,light,chrome,760,600,1920,1080,FALSE,cognition,none,62,m,english,533.668,50.845,3,both
+97,learning,17,both,prior,0.148,music,chrome,1470,772,1536,864,FALSE,not sure,no,28,male,english,167.683,48.816,2,handle
+97,learning,26,button,prior,0.226,music,chrome,1470,772,1536,864,FALSE,not sure,no,28,male,english,167.683,48.816,2,handle
+97,learning,72,handle,prior,0.626,music,chrome,1470,772,1536,864,FALSE,not sure,no,28,male,english,167.683,48.816,2,handle
+98,learning,100,both,prior,0.333,light,firefox,1186,611,1252,704,FALSE,i am not sure.,thanks,25,m,english,176.043,18.869,2,both
+98,learning,100,button,prior,0.333,light,firefox,1186,611,1252,704,FALSE,i am not sure.,thanks,25,m,english,176.043,18.869,2,both
+98,learning,100,handle,prior,0.333,light,firefox,1186,611,1252,704,FALSE,i am not sure.,thanks,25,m,english,176.043,18.869,2,both
+99,presentation,41,both,prior,0.17,music,chrome,1299,600,1366,768,FALSE,following directions,none,37,f,english,435.774,53.777,3,both
+99,presentation,100,handle,prior,0.415,music,chrome,1299,600,1366,768,FALSE,following directions,none,37,f,english,435.774,53.777,3,both
+99,presentation,100,button,prior,0.415,music,chrome,1299,600,1366,768,FALSE,following directions,none,37,f,english,435.774,53.777,3,both
+100,presentation,50,both,prior,0.34,light,chrome,1613,919,1680,1050,FALSE,critical thinking,,47,f,english,80.552,10.518,3,both
+100,presentation,47,handle,prior,0.32,light,chrome,1613,919,1680,1050,FALSE,critical thinking,,47,f,english,80.552,10.518,3,both
+100,presentation,50,button,prior,0.34,light,chrome,1613,919,1680,1050,FALSE,critical thinking,,47,f,english,80.552,10.518,3,both
+1,performance,36,both,posterior,0.324,music,chrome,1533,769,1600,900,FALSE,reasoning,thank you for the hit and have a great day!,43,f,english,285.416,28.946,3,both
+1,performance,37,button,posterior,0.333,music,chrome,1533,769,1600,900,FALSE,reasoning,thank you for the hit and have a great day!,43,f,english,285.416,28.946,3,both
+1,performance,38,handle,posterior,0.342,music,chrome,1533,769,1600,900,FALSE,reasoning,thank you for the hit and have a great day!,43,f,english,285.416,28.946,3,both
+2,presentation,76,handle,posterior,0.452,music,chrome,1299,600,1366,768,FALSE,game theory,,33,m,english,148.62,13.826,3,both
+2,presentation,74,both,posterior,0.44,music,chrome,1299,600,1366,768,FALSE,game theory,,33,m,english,148.62,13.826,3,both
+2,presentation,18,button,posterior,0.107,music,chrome,1299,600,1366,768,FALSE,game theory,,33,m,english,148.62,13.826,3,both
+3,nogoal,8,button,posterior,0.062,music,chrome,1219,797,1440,900,FALSE,to see if people prefer buttons over handles.,nothing broken,31,f,english,125.926,12.017,3,handle
+3,nogoal,95,handle,posterior,0.736,music,chrome,1219,797,1440,900,FALSE,to see if people prefer buttons over handles.,nothing broken,31,f,english,125.926,12.017,3,handle
+3,nogoal,26,both,posterior,0.202,music,chrome,1219,797,1440,900,FALSE,to see if people prefer buttons over handles.,nothing broken,31,f,english,125.926,12.017,3,handle
+4,presentation,69,both,posterior,0.289,light,chrome,1239,883,1680,1050,FALSE,i have no idea!,no,45,f,english,175.685,17.719,3,both
+4,presentation,70,handle,posterior,0.293,light,chrome,1239,883,1680,1050,FALSE,i have no idea!,no,45,f,english,175.685,17.719,3,both
+4,presentation,100,button,posterior,0.418,light,chrome,1239,883,1680,1050,FALSE,i have no idea!,no,45,f,english,175.685,17.719,3,both
+5,presentation,47,button,posterior,0.364,light,chrome,1259,600,1440,900,FALSE,deductive reasoning,no,30,m,english,180.537,18.028,3,both
+5,presentation,48,handle,posterior,0.372,light,chrome,1259,600,1440,900,FALSE,deductive reasoning,no,30,m,english,180.537,18.028,3,both
+5,presentation,34,both,posterior,0.264,light,chrome,1259,600,1440,900,FALSE,deductive reasoning,no,30,m,english,180.537,18.028,3,both
+6,presentation,100,button,posterior,0.333,music,chrome,1619,797,2560,1440,FALSE,how does a toy work without a label,it worked great,28,f,english,215.106,35.688,3,both
+6,presentation,100,handle,posterior,0.333,music,chrome,1619,797,2560,1440,FALSE,how does a toy work without a label,it worked great,28,f,english,215.106,35.688,3,both
+6,presentation,100,both,posterior,0.333,music,chrome,1619,797,2560,1440,FALSE,how does a toy work without a label,it worked great,28,f,english,215.106,35.688,3,both
+7,nogoal,1,handle,posterior,0.01,music,chrome,1974,993,1366,768,FALSE,i have no clue.  it seemed really really easy.,that music was unexpected and so cute! i loved it. ,30,f,english,191.269,36.219,3,button
+7,nogoal,100,button,posterior,0.98,music,chrome,1974,993,1366,768,FALSE,i have no clue.  it seemed really really easy.,that music was unexpected and so cute! i loved it. ,30,f,english,191.269,36.219,3,button
+7,nogoal,1,both,posterior,0.01,music,chrome,1974,993,1366,768,FALSE,i have no clue.  it seemed really really easy.,that music was unexpected and so cute! i loved it. ,30,f,english,191.269,36.219,3,button
+8,learning,83,handle,posterior,0.615,light,chrome,1299,600,1366,768,FALSE,to determine my opinions on how a toy works,,28,f,english,502.027,142.896,3,handle
+8,learning,51,both,posterior,0.378,light,chrome,1299,600,1366,768,FALSE,to determine my opinions on how a toy works,,28,f,english,502.027,142.896,3,handle
+8,learning,1,button,posterior,0.007,light,chrome,1299,600,1366,768,FALSE,to determine my opinions on how a toy works,,28,f,english,502.027,142.896,3,handle
+9,performance,87,handle,posterior,0.319,light,chrome,1657,600,1536,864,FALSE,"i have no earthly idea.  i mean, it's probably not to recruit engineers. if i really had to guess, i'd say it's so researchers can laugh at how stupid peons on this platform are.  the mockery is well-deserved. i'd electrocute myself with my toy.",my light and music came on! woohoo!,40,m,english,269.775,21.332,3,both
+9,performance,100,both,posterior,0.366,light,chrome,1657,600,1536,864,FALSE,"i have no earthly idea.  i mean, it's probably not to recruit engineers. if i really had to guess, i'd say it's so researchers can laugh at how stupid peons on this platform are.  the mockery is well-deserved. i'd electrocute myself with my toy.",my light and music came on! woohoo!,40,m,english,269.775,21.332,3,both
+9,performance,86,button,posterior,0.315,light,chrome,1657,600,1536,864,FALSE,"i have no earthly idea.  i mean, it's probably not to recruit engineers. if i really had to guess, i'd say it's so researchers can laugh at how stupid peons on this platform are.  the mockery is well-deserved. i'd electrocute myself with my toy.",my light and music came on! woohoo!,40,m,english,269.775,21.332,3,both
+10,learning,100,handle,posterior,0.98,light,chrome,1533,600,1600,900,FALSE,deducing what did what.,nothing.,35,m,english,136.148,19.796,3,handle
+10,learning,1,both,posterior,0.01,light,chrome,1533,600,1600,900,FALSE,deducing what did what.,nothing.,35,m,english,136.148,19.796,3,handle
+10,learning,1,button,posterior,0.01,light,chrome,1533,600,1600,900,FALSE,deducing what did what.,nothing.,35,m,english,136.148,19.796,3,handle
+11,nogoal,64,button,posterior,0.32,music,chrome,959,624,1024,768,FALSE,i don't know?,no comments at the current time.,38,f,english,226.086,50.493,2,button
+11,nogoal,74,both,posterior,0.37,music,chrome,959,624,1024,768,FALSE,i don't know?,no comments at the current time.,38,f,english,226.086,50.493,2,button
+11,nogoal,62,handle,posterior,0.31,music,chrome,959,624,1024,768,FALSE,i don't know?,no comments at the current time.,38,f,english,226.086,50.493,2,button
+12,performance,1,handle,posterior,0.01,light,chrome,1853,959,1920,1080,FALSE,memorization,none,32,m,english,277.494,49.629,3,button
+12,performance,100,button,posterior,0.971,light,chrome,1853,959,1920,1080,FALSE,memorization,none,32,m,english,277.494,49.629,3,button
+12,performance,2,both,posterior,0.019,light,chrome,1853,959,1920,1080,FALSE,memorization,none,32,m,english,277.494,49.629,3,button
+13,presentation,48,handle,posterior,0.333,light,chrome,1299,675,1366,768,FALSE,i don't know.,,34,f,english,188.51,34.113,3,both
+13,presentation,49,both,posterior,0.34,light,chrome,1299,675,1366,768,FALSE,i don't know.,,34,f,english,188.51,34.113,3,both
+13,presentation,47,button,posterior,0.326,light,chrome,1299,675,1366,768,FALSE,i don't know.,,34,f,english,188.51,34.113,3,both
+14,performance,33,handle,posterior,0.317,music,chrome,1299,637,1366,768,FALSE,i'm not sure.,,32,f,english,134.427,29.082,3,both
+14,performance,35,button,posterior,0.337,music,chrome,1299,637,1366,768,FALSE,i'm not sure.,,32,f,english,134.427,29.082,3,both
+14,performance,36,both,posterior,0.346,music,chrome,1299,637,1366,768,FALSE,i'm not sure.,,32,f,english,134.427,29.082,3,both
+15,nogoal,60,both,posterior,0.373,music,chrome,1244,600,1440,900,FALSE,to see how well we could learn how to operate a toy. ,no,59,f,english,373.351,33.447,2,both
+15,nogoal,51,button,posterior,0.317,music,chrome,1244,600,1440,900,FALSE,to see how well we could learn how to operate a toy. ,no,59,f,english,373.351,33.447,2,both
+15,nogoal,50,handle,posterior,0.311,music,chrome,1244,600,1440,900,FALSE,to see how well we could learn how to operate a toy. ,no,59,f,english,373.351,33.447,2,both
+16,presentation,1,handle,posterior,0.006,music,chrome,1390,600,1440,900,FALSE,i am not really sure,no,38,,english,339.456,51.936,2,both
+16,presentation,100,button,posterior,0.565,music,chrome,1390,600,1440,900,FALSE,i am not really sure,no,38,,english,339.456,51.936,2,both
+16,presentation,76,both,posterior,0.429,music,chrome,1390,600,1440,900,FALSE,i am not really sure,no,38,,english,339.456,51.936,2,both
+17,learning,35,handle,posterior,0.246,music,chrome,1299,600,1366,768,FALSE,it ask opinions,need detailed information,25,female,english,1160.353,65.234,1,both
+17,learning,34,both,posterior,0.239,music,chrome,1299,600,1366,768,FALSE,it ask opinions,need detailed information,25,female,english,1160.353,65.234,1,both
+17,learning,73,button,posterior,0.514,music,chrome,1299,600,1366,768,FALSE,it ask opinions,need detailed information,25,female,english,1160.353,65.234,1,both
+18,learning,90,both,posterior,0.612,music,chrome,1638,844,1536,864,FALSE,how individual would choose to label a toy,"the first 2 questions asked how to make the components work individually, not at the same time.",37,f,english,241.667,29.013,2,both
+18,learning,1,button,posterior,0.007,music,chrome,1638,844,1536,864,FALSE,how individual would choose to label a toy,"the first 2 questions asked how to make the components work individually, not at the same time.",37,f,english,241.667,29.013,2,both
+18,learning,56,handle,posterior,0.381,music,chrome,1638,844,1536,864,FALSE,how individual would choose to label a toy,"the first 2 questions asked how to make the components work individually, not at the same time.",37,f,english,241.667,29.013,2,both
+19,learning,19,button,posterior,0.151,light,chrome,1299,600,1366,768,FALSE,what you prefer the toy to do,"the wording was a little confusing, it said the label was missing the toy was likely or unlikely what? ", 39,f,english,319.82,30.305,3,both
+19,learning,23,handle,posterior,0.183,light,chrome,1299,600,1366,768,FALSE,what you prefer the toy to do,"the wording was a little confusing, it said the label was missing the toy was likely or unlikely what? ", 39,f,english,319.82,30.305,3,both
+19,learning,84,both,posterior,0.667,light,chrome,1299,600,1366,768,FALSE,what you prefer the toy to do,"the wording was a little confusing, it said the label was missing the toy was likely or unlikely what? ", 39,f,english,319.82,30.305,3,both
+20,learning,29,button,posterior,0.204,light,chrome,1853,987,1920,1080,FALSE,to see how we solve problems,thanks,31,male,english,142.407,21.546,2,both
+20,learning,33,handle,posterior,0.232,light,chrome,1853,987,1920,1080,FALSE,to see how we solve problems,thanks,31,male,english,142.407,21.546,2,both
+20,learning,80,both,posterior,0.563,light,chrome,1853,987,1920,1080,FALSE,to see how we solve problems,thanks,31,male,english,142.407,21.546,2,both
+21,nogoal,69,button,posterior,0.426,light,chrome,1183,600,1280,800,FALSE,this task was about teaching the participant how to work a toy one way and then switching it up another way to see if the participant will get accustomed to the change.,,33,f,english,615.506,104.724,3,button
+21,nogoal,67,handle,posterior,0.414,light,chrome,1183,600,1280,800,FALSE,this task was about teaching the participant how to work a toy one way and then switching it up another way to see if the participant will get accustomed to the change.,,33,f,english,615.506,104.724,3,button
+21,nogoal,26,both,posterior,0.16,light,chrome,1183,600,1280,800,FALSE,this task was about teaching the participant how to work a toy one way and then switching it up another way to see if the participant will get accustomed to the change.,,33,f,english,615.506,104.724,3,button
+22,nogoal,19,handle,posterior,0.128,music,chrome,1176,602,1366,768,FALSE,not sure,none.,33,f,english,122.049,22.023,3,both
+22,nogoal,100,both,posterior,0.676,music,chrome,1176,602,1366,768,FALSE,not sure,none.,33,f,english,122.049,22.023,3,both
+22,nogoal,29,button,posterior,0.196,music,chrome,1176,602,1366,768,FALSE,not sure,none.,33,f,english,122.049,22.023,3,both
+23,nogoal,100,button,posterior,0.98,music,chrome,1167,647,1600,900,FALSE,i think it's about memory or maybe even attention span of very similar looking situations. i think it might also have something to do with checking which instructions one can remember in a series of events.,"when i was asked what i'd do if i only had one chance to play with the toy, i chose to pull the level and press the button at the same time. when that happened, the toy started playing music while lighting up. the screen suddenly went to the next part and i never got to see what was on the bottom half of the page.",35,m,filipino,454.165,52.077,3,both
+23,nogoal,1,both,posterior,0.01,music,chrome,1167,647,1600,900,FALSE,i think it's about memory or maybe even attention span of very similar looking situations. i think it might also have something to do with checking which instructions one can remember in a series of events.,"when i was asked what i'd do if i only had one chance to play with the toy, i chose to pull the level and press the button at the same time. when that happened, the toy started playing music while lighting up. the screen suddenly went to the next part and i never got to see what was on the bottom half of the page.",35,m,filipino,454.165,52.077,3,both
+23,nogoal,1,handle,posterior,0.01,music,chrome,1167,647,1600,900,FALSE,i think it's about memory or maybe even attention span of very similar looking situations. i think it might also have something to do with checking which instructions one can remember in a series of events.,"when i was asked what i'd do if i only had one chance to play with the toy, i chose to pull the level and press the button at the same time. when that happened, the toy started playing music while lighting up. the screen suddenly went to the next part and i never got to see what was on the bottom half of the page.",35,m,filipino,454.165,52.077,3,both
+24,performance,76,handle,posterior,0.4,music,chrome,1299,600,1366,768,FALSE,unsure,none,24,f,english,138.492,15.378,2,both
+24,performance,14,button,posterior,0.074,music,chrome,1299,600,1366,768,FALSE,unsure,none,24,f,english,138.492,15.378,2,both
+24,performance,100,both,posterior,0.526,music,chrome,1299,600,1366,768,FALSE,unsure,none,24,f,english,138.492,15.378,2,both
+25,learning,1,handle,posterior,0.01,light,chrome,957,600,1024,768,FALSE,no idea. following instructions?,no comment. everything worked perfectly. thank you.,31,m,english,208.277,42.944,3,button
+25,learning,100,button,posterior,0.98,light,chrome,957,600,1024,768,FALSE,no idea. following instructions?,no comment. everything worked perfectly. thank you.,31,m,english,208.277,42.944,3,button
+25,learning,1,both,posterior,0.01,light,chrome,957,600,1024,768,FALSE,no idea. following instructions?,no comment. everything worked perfectly. thank you.,31,m,english,208.277,42.944,3,button
+26,nogoal,1,both,posterior,0.01,music,chrome,696,730,1440,900,FALSE,not sure,nothing broken.  i think i chose the wrong selections for box #2 originally.  oops!,45,f,english,242.098,55.391,3,handle
+26,nogoal,100,handle,posterior,0.98,music,chrome,696,730,1440,900,FALSE,not sure,nothing broken.  i think i chose the wrong selections for box #2 originally.  oops!,45,f,english,242.098,55.391,3,handle
+26,nogoal,1,button,posterior,0.01,music,chrome,696,730,1440,900,FALSE,not sure,nothing broken.  i think i chose the wrong selections for box #2 originally.  oops!,45,f,english,242.098,55.391,3,handle
+27,learning,21,both,posterior,0.167,light,chrome,1389,699,1600,900,FALSE,to examine how people come to make decisions based on logic and reasoning.,everything was clear and easy to understand.,26,m,english,327.031,47.126,3,button
+27,learning,84,button,posterior,0.667,light,chrome,1389,699,1600,900,FALSE,to examine how people come to make decisions based on logic and reasoning.,everything was clear and easy to understand.,26,m,english,327.031,47.126,3,button
+27,learning,21,handle,posterior,0.167,light,chrome,1389,699,1600,900,FALSE,to examine how people come to make decisions based on logic and reasoning.,everything was clear and easy to understand.,26,m,english,327.031,47.126,3,button
+28,learning,1,both,posterior,0.01,light,chrome,1299,600,1366,768,FALSE,efficient decision making,none,46,f,english,279.239,68.786,3,handle
+28,learning,100,handle,posterior,0.98,light,chrome,1299,600,1366,768,FALSE,efficient decision making,none,46,f,english,279.239,68.786,3,handle
+28,learning,1,button,posterior,0.01,light,chrome,1299,600,1366,768,FALSE,efficient decision making,none,46,f,english,279.239,68.786,3,handle
+29,learning,100,button,posterior,0.333,music,chrome,340,600,360,640,TRUE,see how people think and problem solve,no,34,male,english,250.86,38.169,3,both
+29,learning,100,both,posterior,0.333,music,chrome,340,600,360,640,TRUE,see how people think and problem solve,no,34,male,english,250.86,38.169,3,both
+29,learning,100,handle,posterior,0.333,music,chrome,340,600,360,640,TRUE,see how people think and problem solve,no,34,male,english,250.86,38.169,3,both
+30,nogoal,24,handle,posterior,0.2,music,chrome,1244,600,1440,900,FALSE,critical thinking?,this was a very odd task,32,f,english,235.601,18.864,3,both
+30,nogoal,25,both,posterior,0.208,music,chrome,1244,600,1440,900,FALSE,critical thinking?,this was a very odd task,32,f,english,235.601,18.864,3,both
+30,nogoal,71,button,posterior,0.592,music,chrome,1244,600,1440,900,FALSE,critical thinking?,this was a very odd task,32,f,english,235.601,18.864,3,both
+31,presentation,20,both,posterior,0.1,music,chrome,1544,1184,2560,1080,FALSE,decision making,none,27,m,english,110.568,3.277,3,handle
+31,presentation,81,handle,posterior,0.405,music,chrome,1544,1184,2560,1080,FALSE,decision making,none,27,m,english,110.568,3.277,3,handle
+31,presentation,99,button,posterior,0.495,music,chrome,1544,1184,2560,1080,FALSE,decision making,none,27,m,english,110.568,3.277,3,handle
+32,learning,31,both,posterior,0.316,light,chrome,1853,974,1920,1080,FALSE,maybe to see what method we naturally resort to when thinking about it?,,34,m,english,225.506,42.361,3,handle
+32,learning,33,button,posterior,0.337,light,chrome,1853,974,1920,1080,FALSE,maybe to see what method we naturally resort to when thinking about it?,,34,m,english,225.506,42.361,3,handle
+32,learning,34,handle,posterior,0.347,light,chrome,1853,974,1920,1080,FALSE,maybe to see what method we naturally resort to when thinking about it?,,34,m,english,225.506,42.361,3,handle
+33,learning,1,handle,posterior,0.01,light,chrome,2061,969,1600,900,FALSE,probability and reasoning,"no, all good.",46,m,english,296.159,48.487,3,button
+33,learning,100,button,posterior,0.98,light,chrome,2061,969,1600,900,FALSE,probability and reasoning,"no, all good.",46,m,english,296.159,48.487,3,button
+33,learning,1,both,posterior,0.01,light,chrome,2061,969,1600,900,FALSE,probability and reasoning,"no, all good.",46,m,english,296.159,48.487,3,button
+34,presentation,60,both,posterior,0.343,light,chrome,1176,602,1366,768,FALSE,toys,,33,f,english,120.542,10.262,1,button
+34,presentation,59,button,posterior,0.337,light,chrome,1176,602,1366,768,FALSE,toys,,33,f,english,120.542,10.262,1,button
+34,presentation,56,handle,posterior,0.32,light,chrome,1176,602,1366,768,FALSE,toys,,33,f,english,120.542,10.262,1,button
+35,performance,65,button,posterior,0.333,music,chrome,1299,613,1366,768,FALSE,calculating user probability (or lack of knowledge pertaining to probability),interesting task!,32,female,english,276.744,27.72,3,both
+35,performance,65,both,posterior,0.333,music,chrome,1299,613,1366,768,FALSE,calculating user probability (or lack of knowledge pertaining to probability),interesting task!,32,female,english,276.744,27.72,3,both
+35,performance,65,handle,posterior,0.333,music,chrome,1299,613,1366,768,FALSE,calculating user probability (or lack of knowledge pertaining to probability),interesting task!,32,female,english,276.744,27.72,3,both
+36,performance,28,button,posterior,0.2,music,chrome,1534,765,1600,900,FALSE,seeing if you pay attention to complex instructions.,none thanks.,24, m,english,119.913,16.764,3,both
+36,performance,79,both,posterior,0.564,music,chrome,1534,765,1600,900,FALSE,seeing if you pay attention to complex instructions.,none thanks.,24, m,english,119.913,16.764,3,both
+36,performance,33,handle,posterior,0.236,music,chrome,1534,765,1600,900,FALSE,seeing if you pay attention to complex instructions.,none thanks.,24, m,english,119.913,16.764,3,both
+37,performance,1,handle,posterior,0.01,music,chrome,1470,759,1536,864,FALSE,to see if i could understand and follow instructions? ideas on how to design a toy?,no. im not sure.,44,f,english,363.517,37.478,3,button
+37,performance,100,button,posterior,0.98,music,chrome,1470,759,1536,864,FALSE,to see if i could understand and follow instructions? ideas on how to design a toy?,no. im not sure.,44,f,english,363.517,37.478,3,button
+37,performance,1,both,posterior,0.01,music,chrome,1470,759,1536,864,FALSE,to see if i could understand and follow instructions? ideas on how to design a toy?,no. im not sure.,44,f,english,363.517,37.478,3,button
+38,nogoal,49,handle,posterior,0.331,music,chrome,1853,988,1920,1080,FALSE,no idea,,45,m,english,183.725,22.056,3,both
+38,nogoal,49,both,posterior,0.331,music,chrome,1853,988,1920,1080,FALSE,no idea,,45,m,english,183.725,22.056,3,both
+38,nogoal,50,button,posterior,0.338,music,chrome,1853,988,1920,1080,FALSE,no idea,,45,m,english,183.725,22.056,3,both
+39,learning,37,handle,posterior,0.255,music,chrome,1449,736,1366,768,FALSE,logical thinking (i failed),i'd like to know the correct answer!,31,female,english,335.682,150.336,3,both
+39,learning,80,both,posterior,0.552,music,chrome,1449,736,1366,768,FALSE,logical thinking (i failed),i'd like to know the correct answer!,31,female,english,335.682,150.336,3,both
+39,learning,28,button,posterior,0.193,music,chrome,1449,736,1366,768,FALSE,logical thinking (i failed),i'd like to know the correct answer!,31,female,english,335.682,150.336,3,both
+40,learning,80,both,posterior,0.567,light,chrome,1316,600,1366,768,FALSE,i have no idea.,,38,f,english,222.039,43.008,2,button
+40,learning,28,handle,posterior,0.199,light,chrome,1316,600,1366,768,FALSE,i have no idea.,,38,f,english,222.039,43.008,2,button
+40,learning,33,button,posterior,0.234,light,chrome,1316,600,1366,768,FALSE,i have no idea.,,38,f,english,222.039,43.008,2,button
+41,nogoal,64,both,posterior,0.542,light,chrome,1230,600,1280,800,FALSE,how people figure things out,it was a little confusing,28,f,english,241.345,52.511,3,both
+41,nogoal,42,button,posterior,0.356,light,chrome,1230,600,1280,800,FALSE,how people figure things out,it was a little confusing,28,f,english,241.345,52.511,3,both
+41,nogoal,12,handle,posterior,0.102,light,chrome,1230,600,1280,800,FALSE,how people figure things out,it was a little confusing,28,f,english,241.345,52.511,3,both
+42,learning,19,handle,posterior,0.151,music,safari,508,600,320,568,TRUE,cognitive ability?,thanks so much.,29,m,english,285.868,46.405,3,both
+42,learning,96,button,posterior,0.762,music,safari,508,600,320,568,TRUE,cognitive ability?,thanks so much.,29,m,english,285.868,46.405,3,both
+42,learning,11,both,posterior,0.087,music,safari,508,600,320,568,TRUE,cognitive ability?,thanks so much.,29,m,english,285.868,46.405,3,both
+43,performance,72,button,posterior,0.323,light,chrome,1176,579,1366,768,FALSE,cognitive decision making,nope,35,female,english,141.373,26.719,2,both
+43,performance,74,both,posterior,0.332,light,chrome,1176,579,1366,768,FALSE,cognitive decision making,nope,35,female,english,141.373,26.719,2,both
+43,performance,77,handle,posterior,0.345,light,chrome,1176,579,1366,768,FALSE,cognitive decision making,nope,35,female,english,141.373,26.719,2,both
+44,learning,29,button,posterior,0.271,music,chrome,1853,974,1920,1080,FALSE,how language effects our logic skills.,,33,m,english,252.617,62.956,2,handle
+44,learning,63,handle,posterior,0.589,music,chrome,1853,974,1920,1080,FALSE,how language effects our logic skills.,,33,m,english,252.617,62.956,2,handle
+44,learning,15,both,posterior,0.14,music,chrome,1853,974,1920,1080,FALSE,how language effects our logic skills.,,33,m,english,252.617,62.956,2,handle
+45,nogoal,58,both,posterior,0.302,music,chrome,1299,600,1366,768,FALSE,no clue,no,31,m,english,137.683,13.743,1,handle
+45,nogoal,50,button,posterior,0.26,music,chrome,1299,600,1366,768,FALSE,no clue,no,31,m,english,137.683,13.743,1,handle
+45,nogoal,84,handle,posterior,0.438,music,chrome,1299,600,1366,768,FALSE,no clue,no,31,m,english,137.683,13.743,1,handle
+46,nogoal,27,handle,posterior,0.329,music,chrome,1035,600,1920,1200,FALSE,logic,none,50,m,english,250.985,42.232,3,both
+46,nogoal,29,both,posterior,0.354,music,chrome,1035,600,1920,1200,FALSE,logic,none,50,m,english,250.985,42.232,3,both
+46,nogoal,26,button,posterior,0.317,music,chrome,1035,600,1920,1200,FALSE,logic,none,50,m,english,250.985,42.232,3,both
+47,nogoal,100,handle,posterior,0.98,light,chrome,1230,600,1280,1024,FALSE,i don't know,none,28,m,english,149.83,54.6,3,handle
+47,nogoal,1,button,posterior,0.01,light,chrome,1230,600,1280,1024,FALSE,i don't know,none,28,m,english,149.83,54.6,3,handle
+47,nogoal,1,both,posterior,0.01,light,chrome,1230,600,1280,1024,FALSE,i don't know,none,28,m,english,149.83,54.6,3,handle
+48,performance,20,button,posterior,0.167,light,chrome,1299,600,1366,768,FALSE,to assess logic in learning.,"the time that goes by when the music plays, i could not thoroughly read that page before it auto advanced.",26,m,english,356.32,23.817,3,both
+48,performance,20,handle,posterior,0.167,light,chrome,1299,600,1366,768,FALSE,to assess logic in learning.,"the time that goes by when the music plays, i could not thoroughly read that page before it auto advanced.",26,m,english,356.32,23.817,3,both
+48,performance,80,both,posterior,0.667,light,chrome,1299,600,1366,768,FALSE,to assess logic in learning.,"the time that goes by when the music plays, i could not thoroughly read that page before it auto advanced.",26,m,english,356.32,23.817,3,both
+49,nogoal,84,both,posterior,0.307,light,chrome,1380,640,1600,900,FALSE,memory/recall,,47,female,english,174.426,45.547,3,handle
+49,nogoal,90,handle,posterior,0.328,light,chrome,1380,640,1600,900,FALSE,memory/recall,,47,female,english,174.426,45.547,3,handle
+49,nogoal,100,button,posterior,0.365,light,chrome,1380,640,1600,900,FALSE,memory/recall,,47,female,english,174.426,45.547,3,handle
+50,learning,100,button,posterior,0.98,music,chrome,1332,703,1536,864,FALSE,making a decision to figure out an unknown.,not at this time,37,m,english,278.912,37.473,3,button
+50,learning,1,both,posterior,0.01,music,chrome,1332,703,1536,864,FALSE,making a decision to figure out an unknown.,not at this time,37,m,english,278.912,37.473,3,button
+50,learning,1,handle,posterior,0.01,music,chrome,1332,703,1536,864,FALSE,making a decision to figure out an unknown.,not at this time,37,m,english,278.912,37.473,3,button
+51,nogoal,95,both,posterior,0.699,music,chrome,1401,600,2560,1440,FALSE,not sure,no,33,m,english,144.961,55.351,3,both
+51,nogoal,21,handle,posterior,0.154,music,chrome,1401,600,2560,1440,FALSE,not sure,no,33,m,english,144.961,55.351,3,both
+51,nogoal,20,button,posterior,0.147,music,chrome,1401,600,2560,1440,FALSE,not sure,no,33,m,english,144.961,55.351,3,both
+52,performance,48,button,posterior,0.32,music,chrome,892,600,1360,768,FALSE,not sure,each of 3 possibilities had the same probability so i tried to mark them the same likelihood ,50,m,english,285.383,29.797,3,both
+52,performance,51,handle,posterior,0.34,music,chrome,892,600,1360,768,FALSE,not sure,each of 3 possibilities had the same probability so i tried to mark them the same likelihood ,50,m,english,285.383,29.797,3,both
+52,performance,51,both,posterior,0.34,music,chrome,892,600,1360,768,FALSE,not sure,each of 3 possibilities had the same probability so i tried to mark them the same likelihood ,50,m,english,285.383,29.797,3,both
+53,performance,1,handle,posterior,0.009,light,chrome,1853,974,1920,1080,FALSE,unsure,no,39,f,english,263.592,30.753,3,both
+53,performance,92,button,posterior,0.86,light,chrome,1853,974,1920,1080,FALSE,unsure,no,39,f,english,263.592,30.753,3,both
+53,performance,14,both,posterior,0.131,light,chrome,1853,974,1920,1080,FALSE,unsure,no,39,f,english,263.592,30.753,3,both
+54,presentation,51,button,posterior,0.254,light,chrome,1098,812,1280,1024,FALSE,i have no idea. would we pick the unlikely but creative toy,no it was fun thanks,36,f,english,291.115,65.013,3,both
+54,presentation,100,both,posterior,0.498,light,chrome,1098,812,1280,1024,FALSE,i have no idea. would we pick the unlikely but creative toy,no it was fun thanks,36,f,english,291.115,65.013,3,both
+54,presentation,50,handle,posterior,0.249,light,chrome,1098,812,1280,1024,FALSE,i have no idea. would we pick the unlikely but creative toy,no it was fun thanks,36,f,english,291.115,65.013,3,both
+55,presentation,69,both,posterior,0.367,music,chrome,1299,600,1366,768,FALSE,toy function,no,34,m,english,117.295,12.006,3,both
+55,presentation,37,handle,posterior,0.197,music,chrome,1299,600,1366,768,FALSE,toy function,no,34,m,english,117.295,12.006,3,both
+55,presentation,82,button,posterior,0.436,music,chrome,1299,600,1366,768,FALSE,toy function,no,34,m,english,117.295,12.006,3,both
+56,performance,74,both,posterior,0.376,light,chrome,1230,600,1280,800,FALSE,memory,no,26,f,english,133.192,13.82,3,both
+56,performance,60,button,posterior,0.305,light,chrome,1230,600,1280,800,FALSE,memory,no,26,f,english,133.192,13.82,3,both
+56,performance,63,handle,posterior,0.32,light,chrome,1230,600,1280,800,FALSE,memory,no,26,f,english,133.192,13.82,3,both
+57,presentation,76,both,posterior,0.528,music,chrome,642,561,1280,800,FALSE,i don't know.,no., 45,f,english,178.278,19.685,3,both
+57,presentation,32,handle,posterior,0.222,music,chrome,642,561,1280,800,FALSE,i don't know.,no., 45,f,english,178.278,19.685,3,both
+57,presentation,36,button,posterior,0.25,music,chrome,642,561,1280,800,FALSE,i don't know.,no., 45,f,english,178.278,19.685,3,both
+58,performance,37,handle,posterior,0.325,light,chrome,1301,702,1366,768,FALSE,logic,no,55,male,english,219.176,30.793,3,both
+58,performance,39,both,posterior,0.342,light,chrome,1301,702,1366,768,FALSE,logic,no,55,male,english,219.176,30.793,3,both
+58,performance,38,button,posterior,0.333,light,chrome,1301,702,1366,768,FALSE,logic,no,55,male,english,219.176,30.793,3,both
+59,performance,77,button,posterior,0.297,light,chrome,1213,918,1280,1024,FALSE,about the toy actions,great,24,m,english ,131.119,8.426,1,both
+59,performance,90,handle,posterior,0.347,light,chrome,1213,918,1280,1024,FALSE,about the toy actions,great,24,m,english ,131.119,8.426,1,both
+59,performance,92,both,posterior,0.355,light,chrome,1213,918,1280,1024,FALSE,about the toy actions,great,24,m,english ,131.119,8.426,1,both
+60,performance,20,both,posterior,0.317,light,chrome,1026,600,1360,768,FALSE,i think it was about using logic in decision making. ,i did not encounter any problems. i thing the interface was functional and pleasant.,46,m,english,378.695,37.824,3,both
+60,performance,21,button,posterior,0.333,light,chrome,1026,600,1360,768,FALSE,i think it was about using logic in decision making. ,i did not encounter any problems. i thing the interface was functional and pleasant.,46,m,english,378.695,37.824,3,both
+60,performance,22,handle,posterior,0.349,light,chrome,1026,600,1360,768,FALSE,i think it was about using logic in decision making. ,i did not encounter any problems. i thing the interface was functional and pleasant.,46,m,english,378.695,37.824,3,both
+61,nogoal,100,button,posterior,0.98,light,chrome,1299,637,1366,768,FALSE,i believe this task was to ensure to read the directions before playing this game and understanding the type of result that you want to have.,everything ran smooth.,69,m,english,347.122,25.918,2,both
+61,nogoal,1,both,posterior,0.01,light,chrome,1299,637,1366,768,FALSE,i believe this task was to ensure to read the directions before playing this game and understanding the type of result that you want to have.,everything ran smooth.,69,m,english,347.122,25.918,2,both
+61,nogoal,1,handle,posterior,0.01,light,chrome,1299,637,1366,768,FALSE,i believe this task was to ensure to read the directions before playing this game and understanding the type of result that you want to have.,everything ran smooth.,69,m,english,347.122,25.918,2,both
+62,learning,100,handle,posterior,0.641,light,chrome,420,953,1920,1080,FALSE,a toy machine,nope,31,m,english,201.736,30.373,2,handle
+62,learning,1,button,posterior,0.006,light,chrome,420,953,1920,1080,FALSE,a toy machine,nope,31,m,english,201.736,30.373,2,handle
+62,learning,55,both,posterior,0.353,light,chrome,420,953,1920,1080,FALSE,a toy machine,nope,31,m,english,201.736,30.373,2,handle
+63,presentation,100,both,posterior,0.333,light,chrome,1390,662,1440,900,FALSE,interpreting/studying cognitive abilities ,no,27,m,english,357.102,45.563,3,both
+63,presentation,100,button,posterior,0.333,light,chrome,1390,662,1440,900,FALSE,interpreting/studying cognitive abilities ,no,27,m,english,357.102,45.563,3,both
+63,presentation,100,handle,posterior,0.333,light,chrome,1390,662,1440,900,FALSE,interpreting/studying cognitive abilities ,no,27,m,english,357.102,45.563,3,both
+64,presentation,61,button,posterior,0.324,music,chrome,1299,600,1366,768,FALSE,making logical inferences,everything worked. loved the music!,58,f,english,240.736,20.314,3,both
+64,presentation,88,both,posterior,0.468,music,chrome,1299,600,1366,768,FALSE,making logical inferences,everything worked. loved the music!,58,f,english,240.736,20.314,3,both
+64,presentation,39,handle,posterior,0.207,music,chrome,1299,600,1366,768,FALSE,making logical inferences,everything worked. loved the music!,58,f,english,240.736,20.314,3,both
+65,presentation,55,button,posterior,0.34,music,chrome,1087,600,1920,1080,FALSE,studying how people reason mechanically,no comments,30,male,english,212.018,16.996,3,both
+65,presentation,38,both,posterior,0.235,music,chrome,1087,600,1920,1080,FALSE,studying how people reason mechanically,no comments,30,male,english,212.018,16.996,3,both
+65,presentation,69,handle,posterior,0.426,music,chrome,1087,600,1920,1080,FALSE,studying how people reason mechanically,no comments,30,male,english,212.018,16.996,3,both
+66,learning,1,handle,posterior,0.01,music,chrome,1163,600,1280,800,FALSE,logical reasoning,i do not have any comments.,31,m,english,453.075,135.265,3,both
+66,learning,1,button,posterior,0.01,music,chrome,1163,600,1280,800,FALSE,logical reasoning,i do not have any comments.,31,m,english,453.075,135.265,3,both
+66,learning,100,both,posterior,0.98,music,chrome,1163,600,1280,800,FALSE,logical reasoning,i do not have any comments.,31,m,english,453.075,135.265,3,both
+67,nogoal,23,handle,posterior,0.129,music,chrome,1853,949,1920,1080,FALSE,determining different pattern combinations that result in a set  outcome: music and light,everything worked fine.,34,m,english,299.752,15.602,3,both
+67,nogoal,98,both,posterior,0.551,music,chrome,1853,949,1920,1080,FALSE,determining different pattern combinations that result in a set  outcome: music and light,everything worked fine.,34,m,english,299.752,15.602,3,both
+67,nogoal,57,button,posterior,0.32,music,chrome,1853,949,1920,1080,FALSE,determining different pattern combinations that result in a set  outcome: music and light,everything worked fine.,34,m,english,299.752,15.602,3,both
+68,presentation,30,handle,posterior,0.19,light,safari,509,600,375,667,TRUE,marketing for a new toy,no improvements needed,33,m,english ,244.32,34.522,1,button
+68,presentation,71,button,posterior,0.449,light,safari,509,600,375,667,TRUE,marketing for a new toy,no improvements needed,33,m,english ,244.32,34.522,1,button
+68,presentation,57,both,posterior,0.361,light,safari,509,600,375,667,TRUE,marketing for a new toy,no improvements needed,33,m,english ,244.32,34.522,1,button
+69,presentation,37,handle,posterior,0.25,music,chrome,1470,600,1536,864,FALSE,"that people might favor the toy  they saw first, maybe?",,34,male,english,262.639,40.061,3,both
+69,presentation,73,both,posterior,0.493,music,chrome,1470,600,1536,864,FALSE,"that people might favor the toy  they saw first, maybe?",,34,male,english,262.639,40.061,3,both
+69,presentation,38,button,posterior,0.257,music,chrome,1470,600,1536,864,FALSE,"that people might favor the toy  they saw first, maybe?",,34,male,english,262.639,40.061,3,both
+70,learning,55,both,posterior,0.344,light,chrome,1176,602,1366,768,FALSE,memory,,27,f ,english,196.348,20.743,2,both
+70,learning,52,handle,posterior,0.325,light,chrome,1176,602,1366,768,FALSE,memory,,27,f ,english,196.348,20.743,2,both
+70,learning,53,button,posterior,0.331,light,chrome,1176,602,1366,768,FALSE,memory,,27,f ,english,196.348,20.743,2,both
+71,learning,31,handle,posterior,0.279,music,chrome,647,647,1366,768,FALSE,how to make things work?,no,42,f,english,198.473,17.741,3,both
+71,learning,19,button,posterior,0.171,music,chrome,647,647,1366,768,FALSE,how to make things work?,no,42,f,english,198.473,17.741,3,both
+71,learning,61,both,posterior,0.55,music,chrome,647,647,1366,768,FALSE,how to make things work?,no,42,f,english,198.473,17.741,3,both
+72,learning,1,button,posterior,0.01,light,chrome,1870,600,1920,1080,FALSE,logical decision making,n/a,26,m,english,233.5,48.193,3,handle
+72,learning,1,both,posterior,0.01,light,chrome,1870,600,1920,1080,FALSE,logical decision making,n/a,26,m,english,233.5,48.193,3,handle
+72,learning,100,handle,posterior,0.98,light,chrome,1870,600,1920,1080,FALSE,logical decision making,n/a,26,m,english,233.5,48.193,3,handle
+73,learning,1,button,posterior,0.25,music,chrome,1299,600,1366,768,FALSE,decision making ,n/a,26,m,english,210.423,33.511,3,handle
+73,learning,2,handle,posterior,0.5,music,chrome,1299,600,1366,768,FALSE,decision making ,n/a,26,m,english,210.423,33.511,3,handle
+73,learning,1,both,posterior,0.25,music,chrome,1299,600,1366,768,FALSE,decision making ,n/a,26,m,english,210.423,33.511,3,handle
+74,performance,58,both,posterior,0.343,light,chrome,866,1041,1920,1080,FALSE,our views on a toy,no,33,f,english,178.262,18.543,3,both
+74,performance,57,handle,posterior,0.337,light,chrome,866,1041,1920,1080,FALSE,our views on a toy,no,33,f,english,178.262,18.543,3,both
+74,performance,54,button,posterior,0.32,light,chrome,866,1041,1920,1080,FALSE,our views on a toy,no,33,f,english,178.262,18.543,3,both
+75,learning,73,handle,posterior,0.42,music,chrome,1299,662,1366,768,FALSE,reasoning?,when i tried to scroll down one of the pages advanced unexpectedly on me and i feel like it affected my answer on the last scenario of question,43,f,english,365.839,53.467,3,handle
+75,learning,1,button,posterior,0.006,music,chrome,1299,662,1366,768,FALSE,reasoning?,when i tried to scroll down one of the pages advanced unexpectedly on me and i feel like it affected my answer on the last scenario of question,43,f,english,365.839,53.467,3,handle
+75,learning,100,both,posterior,0.575,music,chrome,1299,662,1366,768,FALSE,reasoning?,when i tried to scroll down one of the pages advanced unexpectedly on me and i feel like it affected my answer on the last scenario of question,43,f,english,365.839,53.467,3,handle
+76,learning,3,handle,posterior,0.029,light,chrome,1533,769,1600,900,FALSE,reasoning,all worked fine.,55,m,english,212.684,20.975,3,button
+76,learning,4,both,posterior,0.038,light,chrome,1533,769,1600,900,FALSE,reasoning,all worked fine.,55,m,english,212.684,20.975,3,button
+76,learning,97,button,posterior,0.933,light,chrome,1533,769,1600,900,FALSE,reasoning,all worked fine.,55,m,english,212.684,20.975,3,button
+77,nogoal,39,both,posterior,0.348,music,chrome,1299,600,1366,768,FALSE,probability,nope,36,m,english,335.761,36.933,2,both
+77,nogoal,37,handle,posterior,0.33,music,chrome,1299,600,1366,768,FALSE,probability,nope,36,m,english,335.761,36.933,2,both
+77,nogoal,36,button,posterior,0.321,music,chrome,1299,600,1366,768,FALSE,probability,nope,36,m,english,335.761,36.933,2,both
+78,performance,77,handle,posterior,0.326,music,chrome,1533,600,1600,900,FALSE,people's judgement. ,no,34,m,english,143.975,17.357,3,both
+78,performance,79,button,posterior,0.335,music,chrome,1533,600,1600,900,FALSE,people's judgement. ,no,34,m,english,143.975,17.357,3,both
+78,performance,80,both,posterior,0.339,music,chrome,1533,600,1600,900,FALSE,people's judgement. ,no,34,m,english,143.975,17.357,3,both
+79,learning,75,both,posterior,0.405,light,chrome,1299,662,1366,768,FALSE,logic,no,25,f,english,86.287,10.327,2,both
+79,learning,50,handle,posterior,0.27,light,chrome,1299,662,1366,768,FALSE,logic,no,25,f,english,86.287,10.327,2,both
+79,learning,60,button,posterior,0.324,light,chrome,1299,662,1366,768,FALSE,logic,no,25,f,english,86.287,10.327,2,both
+80,presentation,83,both,posterior,0.3,music,chrome,1390,826,1440,900,FALSE,i think this task examines perceptions of logic statements using the example of a toy.,instructions were clear.,32,m,english,233.777,24.273,3,both
+80,presentation,97,handle,posterior,0.35,music,chrome,1390,826,1440,900,FALSE,i think this task examines perceptions of logic statements using the example of a toy.,instructions were clear.,32,m,english,233.777,24.273,3,both
+80,presentation,97,button,posterior,0.35,music,chrome,1390,826,1440,900,FALSE,i think this task examines perceptions of logic statements using the example of a toy.,instructions were clear.,32,m,english,233.777,24.273,3,both
+81,nogoal,64,both,posterior,0.278,music,chrome,1470,759,1536,864,FALSE,decision making,differentiating between toys was confusing at first.  i submitted my first answer then thought the page didn't load.  i thought i was still on the first toy when i was on the second.,35,m,english,237.776,20.179,3,both
+81,nogoal,66,handle,posterior,0.287,music,chrome,1470,759,1536,864,FALSE,decision making,differentiating between toys was confusing at first.  i submitted my first answer then thought the page didn't load.  i thought i was still on the first toy when i was on the second.,35,m,english,237.776,20.179,3,both
+81,nogoal,100,button,posterior,0.435,music,chrome,1470,759,1536,864,FALSE,decision making,differentiating between toys was confusing at first.  i submitted my first answer then thought the page didn't load.  i thought i was still on the first toy when i was on the second.,35,m,english,237.776,20.179,3,both
+82,nogoal,77,both,posterior,0.32,light,chrome,1452,600,1600,900,FALSE,i think it was about remembering things.,no,24,f,english,213.252,47.493,3,both
+82,nogoal,83,handle,posterior,0.344,light,chrome,1452,600,1600,900,FALSE,i think it was about remembering things.,no,24,f,english,213.252,47.493,3,both
+82,nogoal,81,button,posterior,0.336,light,chrome,1452,600,1600,900,FALSE,i think it was about remembering things.,no,24,f,english,213.252,47.493,3,both
+83,presentation,50,button,posterior,0.25,light,chrome,598,630,1280,720,FALSE,making the toy work,thank you,32,f,english,227.749,74.96,2,both
+83,presentation,50,handle,posterior,0.25,light,chrome,598,630,1280,720,FALSE,making the toy work,thank you,32,f,english,227.749,74.96,2,both
+83,presentation,100,both,posterior,0.5,light,chrome,598,630,1280,720,FALSE,making the toy work,thank you,32,f,english,227.749,74.96,2,both
+84,presentation,49,handle,posterior,0.318,music,chrome,1470,734,1536,864,FALSE,decision making,no.,34,m,english,263.596,48.183,3,both
+84,presentation,52,both,posterior,0.338,music,chrome,1470,734,1536,864,FALSE,decision making,no.,34,m,english,263.596,48.183,3,both
+84,presentation,53,button,posterior,0.344,music,chrome,1470,734,1536,864,FALSE,decision making,no.,34,m,english,263.596,48.183,3,both
+85,performance,100,button,posterior,0.98,music,chrome,947,600,1024,820,FALSE,coordination,no,67,f,emglish,231.227,25.645,2,both
+85,performance,1,both,posterior,0.01,music,chrome,947,600,1024,820,FALSE,coordination,no,67,f,emglish,231.227,25.645,2,both
+85,performance,1,handle,posterior,0.01,music,chrome,947,600,1024,820,FALSE,coordination,no,67,f,emglish,231.227,25.645,2,both
+86,presentation,51,both,posterior,0.338,music,chrome,416,600,1366,768,FALSE,i have no idea,thanks,35,m,english,207.464,35.155,3,both
+86,presentation,50,handle,posterior,0.331,music,chrome,416,600,1366,768,FALSE,i have no idea,thanks,35,m,english,207.464,35.155,3,both
+86,presentation,50,button,posterior,0.331,music,chrome,416,600,1366,768,FALSE,i have no idea,thanks,35,m,english,207.464,35.155,3,both
+87,performance,100,both,posterior,0.5,light,chrome,1047,538,1920,1080,FALSE,logic,no,68,m,english,514.667,35.954,3,both
+87,performance,50,handle,posterior,0.25,light,chrome,1047,538,1920,1080,FALSE,logic,no,68,m,english,514.667,35.954,3,both
+87,performance,50,button,posterior,0.25,light,chrome,1047,538,1920,1080,FALSE,logic,no,68,m,english,514.667,35.954,3,both
+88,performance,49,handle,posterior,0.247,music,firefox,1214,600,1280,720,FALSE,i honestly don't know,,35,m,english,145.511,20.886,2,both
+88,performance,49,button,posterior,0.247,music,firefox,1214,600,1280,720,FALSE,i honestly don't know,,35,m,english,145.511,20.886,2,both
+88,performance,100,both,posterior,0.505,music,firefox,1214,600,1280,720,FALSE,i honestly don't know,,35,m,english,145.511,20.886,2,both
+89,nogoal,89,handle,posterior,0.356,light,safari,1219,600,1600,900,FALSE,not sure,no,30,f,english,355.31,47.519,3,both
+89,nogoal,85,button,posterior,0.34,light,safari,1219,600,1600,900,FALSE,not sure,no,30,f,english,355.31,47.519,3,both
+89,nogoal,76,both,posterior,0.304,light,safari,1219,600,1600,900,FALSE,not sure,no,30,f,english,355.31,47.519,3,both
+90,presentation,40,handle,posterior,0.258,light,chrome,1855,888,1920,1080,FALSE,to study a person's deduction ability.,no comments.,50,m,english,313.69,35.761,3,both
+90,presentation,25,button,posterior,0.161,light,chrome,1855,888,1920,1080,FALSE,to study a person's deduction ability.,no comments.,50,m,english,313.69,35.761,3,both
+90,presentation,90,both,posterior,0.581,light,chrome,1855,888,1920,1080,FALSE,to study a person's deduction ability.,no comments.,50,m,english,313.69,35.761,3,both
+91,performance,100,button,posterior,0.513,music,chrome,392,600,412,846,TRUE,not sure,no,31,f,english,64.435,7.731,0,handle
+91,performance,94,both,posterior,0.482,music,chrome,392,600,412,846,TRUE,not sure,no,31,f,english,64.435,7.731,0,handle
+91,performance,1,handle,posterior,0.005,music,chrome,392,600,412,846,TRUE,not sure,no,31,f,english,64.435,7.731,0,handle
+92,nogoal,1,handle,posterior,0.01,light,chrome,1533,600,1600,900,FALSE,deductive reasoning,no,36,f,english,192.899,26.512,3,button
+92,nogoal,100,button,posterior,0.98,light,chrome,1533,600,1600,900,FALSE,deductive reasoning,no,36,f,english,192.899,26.512,3,button
+92,nogoal,1,both,posterior,0.01,light,chrome,1533,600,1600,900,FALSE,deductive reasoning,no,36,f,english,192.899,26.512,3,button
+93,nogoal,60,button,posterior,0.3,light,chrome,1870,600,1920,1080,FALSE,how we problem solve,,36,m,english,282.458,28.697,1,handle
+93,nogoal,74,both,posterior,0.37,light,chrome,1870,600,1920,1080,FALSE,how we problem solve,,36,m,english,282.458,28.697,1,handle
+93,nogoal,66,handle,posterior,0.33,light,chrome,1870,600,1920,1080,FALSE,how we problem solve,,36,m,english,282.458,28.697,1,handle
+94,presentation,50,button,posterior,0.331,light,chrome,1613,919,1680,1050,FALSE,how we interpret instructions,no comments,42,m,english,187.326,19.751,2,both
+94,presentation,50,both,posterior,0.331,light,chrome,1613,919,1680,1050,FALSE,how we interpret instructions,no comments,42,m,english,187.326,19.751,2,both
+94,presentation,51,handle,posterior,0.338,light,chrome,1613,919,1680,1050,FALSE,how we interpret instructions,no comments,42,m,english,187.326,19.751,2,both
+95,nogoal,1,handle,posterior,0.01,light,firefox,1299,600,1366,768,FALSE,logic,,40,m,english,173.358,19.441,3,button
+95,nogoal,100,button,posterior,0.98,light,firefox,1299,600,1366,768,FALSE,logic,,40,m,english,173.358,19.441,3,button
+95,nogoal,1,both,posterior,0.01,light,firefox,1299,600,1366,768,FALSE,logic,,40,m,english,173.358,19.441,3,button
+96,nogoal,100,both,posterior,0.595,light,chrome,760,600,1920,1080,FALSE,cognition,none,62,m,english,533.668,50.845,3,both
+96,nogoal,33,button,posterior,0.196,light,chrome,760,600,1920,1080,FALSE,cognition,none,62,m,english,533.668,50.845,3,both
+96,nogoal,35,handle,posterior,0.208,light,chrome,760,600,1920,1080,FALSE,cognition,none,62,m,english,533.668,50.845,3,both
+97,learning,35,button,posterior,0.271,music,chrome,1470,772,1536,864,FALSE,not sure,no,28,male,english,167.683,48.816,2,handle
+97,learning,58,handle,posterior,0.45,music,chrome,1470,772,1536,864,FALSE,not sure,no,28,male,english,167.683,48.816,2,handle
+97,learning,36,both,posterior,0.279,music,chrome,1470,772,1536,864,FALSE,not sure,no,28,male,english,167.683,48.816,2,handle
+98,learning,100,both,posterior,0.333,light,firefox,1186,611,1252,704,FALSE,i am not sure.,thanks,25,m,english,176.043,18.869,2,both
+98,learning,100,button,posterior,0.333,light,firefox,1186,611,1252,704,FALSE,i am not sure.,thanks,25,m,english,176.043,18.869,2,both
+98,learning,100,handle,posterior,0.333,light,firefox,1186,611,1252,704,FALSE,i am not sure.,thanks,25,m,english,176.043,18.869,2,both
+99,presentation,2,button,posterior,0.019,music,chrome,1299,600,1366,768,FALSE,following directions,none,37,f,english,435.774,53.777,3,both
+99,presentation,100,both,posterior,0.971,music,chrome,1299,600,1366,768,FALSE,following directions,none,37,f,english,435.774,53.777,3,both
+99,presentation,1,handle,posterior,0.01,music,chrome,1299,600,1366,768,FALSE,following directions,none,37,f,english,435.774,53.777,3,both
+100,presentation,12,both,posterior,0.097,light,chrome,1613,919,1680,1050,FALSE,critical thinking,,47,f,english,80.552,10.518,3,both
+100,presentation,12,handle,posterior,0.097,light,chrome,1613,919,1680,1050,FALSE,critical thinking,,47,f,english,80.552,10.518,3,both
+100,presentation,100,button,posterior,0.806,light,chrome,1613,919,1680,1050,FALSE,critical thinking,,47,f,english,80.552,10.518,3,both

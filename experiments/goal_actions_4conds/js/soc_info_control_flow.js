@@ -24,6 +24,9 @@ exp = {
     manip_check_order: [],
     manip_check_effect_order: effect_labels,
 
+    // store outcome 'condition'
+    outcome: outcome,
+
     // store participant's intervention choice
     action_response: "",
     goal_condition: goal_condition,
@@ -460,7 +463,7 @@ exp = {
 
         if (response == "both" || outcome == "music") {
         // then play sound which also advances slide (a little hacky)
-        exp.play_music('action_slide');            
+        exp.play_music('action_slide');
         } else {
         setTimeout(function () {
           exp.hypotheses_slide();

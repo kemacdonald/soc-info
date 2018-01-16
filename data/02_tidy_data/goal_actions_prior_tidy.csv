@@ -1,0 +1,3 @@
+id,condition,action_response,browser,browser_width,browser_height,screen_width,screen_height,mobile_device,about,comment,age,gender,first_language
+1,nogoal,both,chrome,1205,600,1280,800,FALSE,no idea,fun to do both actions,29,m,english
+2,nogoal,handle,firefox,1205,600,960,540,FALSE,not sure,handle seemed more fun,35,f,spanish

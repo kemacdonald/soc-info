@@ -18,6 +18,12 @@ Read data.
 
 ```{r}
 d_path <- "data/02_tidy_data/"
+
+## action priors
+d_prior_name <- "goal_actions_prior_tidy.csv"
+d_prior <- read_csv(here(d_path, d_prior_name))
+
+## action/beliefs data
 d_file_name <- "goal_actions_ver3_tidy_pilot.csv"
 d <- read_csv(here(d_path, d_file_name)) 
 ```
@@ -64,6 +70,22 @@ Now filter if the participant got fewer than 3 out of 3 manipulation checks corr
 
 ```{r}
 d %<>% filter(manip_check_score >= 3)
+```
+
+## Priors over actions
+
+```{r}  
+d_prior %>% 
+  count(action_response) %>% 
+  mutate(m = n / n()) %>% 
+  ggplot(aes(x = action_response, y = m)) +
+  geom_bar(stat = "identity", width = 0.4) +
+  geom_hline(yintercept = 0.3, linetype = "dashed") +
+  lims(y = c(0,0.7)) +
+  ggthemes::scale_fill_ptol() +
+  theme(legend.position = "top",
+        axis.text.x = element_text(angle = 45, vjust = 0.5),
+        panel.border = element_rect(fill=NA, size=0.5, color = "grey"))
 ```
 
 ## Prior and posterior beliefs

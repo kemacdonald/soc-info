@@ -1,0 +1,105 @@
+---
+title: "Soc-Info Prior Data Processing"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(lubridate); library(magrittr); library(jsonlite); 
+library(tidyverse); library(here)
+```
+
+```{r}
+d_path <- "data/01_raw_data/actions_prior/sandbox-results/"
+```
+
+## Load raw json data
+
+Write a function that reads the raw json, extacts the information we care about, and builds a tidy data frame. Note that this function is specific to the prior elicitation task, which stores fewer variables.
+
+```{r}
+json_to_df_prior <- function(data_path, file) {
+  d <- read_json(path = here(data_path, file))
+  tibble(
+    workerid = d$WorkerId, 
+    condition = d$answers$goal_condition,
+    action_response = d$answers$action_response,
+    browser = d$answers$browser,
+    browser_width = d$answers$browser_width,
+    browser_height = d$answers$browser_height,
+    screen_width = d$answers$screen_width,
+    screen_height = d$answers$screen_height,
+    mobile_device = d$answers$mobile_device,
+    about = d$answers$about,
+    comment = d$answers$why_action,
+    age = d$answers$age,
+    gender = d$answers$gender,
+    first_language = d$answers$language
+  )
+}
+```
+
+
+Use purrr's safely function to catch any errors.
+
+```{r}
+safe_json_to_df <- safely(json_to_df_prior)
+```
+
+Use purrr to map our read json function over all files in the raw data directory
+
+```{r}
+files <- dir(here(d_path))
+df_list <- files %>% purrr::map(~ safe_json_to_df(data_path = d_path, .)) 
+```
+
+Look at output to see where errors occurred.
+
+```{r}
+results <- df_list %>% transpose() 
+ok <- results$error %>% map_lgl(is_null)
+```
+
+Convert to data frame only keeping succssful function calls.
+
+```{r}
+df <- results$result %>% keep(ok) %>%  map_df(bind_rows)
+```
+
+## Data checks
+
+How many participants in each condition?
+
+```{r}
+df %>% 
+  distinct(workerid, condition) %>% 
+  count(condition) %>% 
+  knitr::kable()
+```
+
+Convert all strings to lower case.
+
+```{r}
+df %<>% mutate_if(is.character, str_to_lower)
+```
+
+## Anonymize Turker ids. 
+
+```{r}
+df_anonymized <- df %>% 
+  select(workerid) %>% 
+  distinct() %>% 
+  mutate(id = 1:nrow(.)) 
+
+df_wide <- left_join(df, df_anonymized, by = "workerid") %>% 
+  select(id, everything(), -workerid)
+```
+
+## Write to disk. 
+
+```{r}
+write_csv(df_wide, path = here("/data/02_tidy_data", "goal_actions_prior_tidy.csv"))
+```

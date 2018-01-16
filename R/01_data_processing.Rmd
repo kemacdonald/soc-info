@@ -13,7 +13,7 @@ library(tidyverse); library(here)
 ```
 
 ```{r}
-d_path <- "data/01_raw_data/goal_actions_ver2/pilotB/production-results/"
+d_path <- "data/01_raw_data/goal_actions_ver3/pilot/production-results/"
 ```
 
 ## Load raw json data
@@ -27,6 +27,7 @@ json_to_df <- function(data_path, file) {
   tibble(
     workerid = d$WorkerId, 
     condition = d$answers$goal_condition,
+    outcome = d$answers$outcome,
     music_check_response = d$answers$manip_check_music_response %>% unlist(),
     light_check_response = d$answers$manip_check_light_response %>% unlist(),
     manip_check_order = d$answers$manip_check_order %>% unlist(),
@@ -52,11 +53,30 @@ json_to_df <- function(data_path, file) {
 }
 ```
 
+Use purrr's safely function to catch any errors.
+
+```{r}
+safe_json_to_df <- safely(json_to_df)
+```
+
 Use purrr to map our read json function over all files in the raw data directory
 
 ```{r}
 files <- dir(here(d_path))
-df <- files %>% purrr::map_df(~ json_to_df(data_path = d_path, .)) 
+df_list <- files %>% purrr::map(~ safe_json_to_df(data_path = d_path, .)) 
+```
+
+Look at output to see where errors occurred.
+
+```{r}
+results <- df_list %>% transpose() 
+ok <- results$error %>% map_lgl(is_null)
+```
+
+Convert to data frame only keeping succssful function calls.
+
+```{r}
+df <- results$result %>% keep(ok) %>%  map_df(bind_rows)
 ```
 
 ## Data checks
@@ -97,17 +117,17 @@ actions <- c("button", "handle", "both")
 
 # some string manipulation to get clean order variable
 manip_check <- df_wide %>% 
-  select(id, condition, contains("check")) %>% 
+  select(id, condition, outcome, contains("check")) %>% 
   rowwise() %>% 
   mutate(manip_check_order_action = str_sub(manip_check_order, 
                                             start = 1, 
-                                            end = str_locate(manip_check_order, "music")[1] - 1)
+                                            end = str_locate(manip_check_order, outcome)[1] - 1)
   )
 
 # score the manipulation check
 manip_check %<>% 
   mutate(manip_check_correct = ifelse(music_check_response == manip_check_order_action,
-                                    TRUE, FALSE)) %>% 
+                                      TRUE, FALSE)) %>% 
   group_by(id) %>% 
   mutate(manip_check_score = sum(manip_check_correct)) %>% 
   select(id, condition, manip_check_score) %>% 
@@ -130,10 +150,7 @@ posterior <- df_wide %>%
          hypothesis = posterior_hypothesis)
 
 d_final <- bind_rows(prior, posterior) %>% 
-  mutate(slider_response_type_collapsed = ifelse(hypothesis == "bothmusiclight", 
-                                            "both_actions", 
-                                            "single_action"),
-         slider_value = as.integer(slider_value))
+  mutate(slider_value = as.integer(slider_value))
 ```
 
 Normalize the sliders.
@@ -145,32 +162,11 @@ d_final %<>%
   ungroup()
 ```
 
-Create variable that collapses across both single button responses.
-
-```{r}
-d_final_collapsed <- d_final %>% 
-  group_by(id, hypothesis_type, slider_response_type_collapsed) %>% 
-  mutate(slider_value_2 = sum(slider_value)) %>% 
-  select(id, hypothesis_type, slider_response_type_collapsed, slider_value_2, condition) %>% 
-  unique() %>% 
-  group_by(id, hypothesis_type, condition) %>% 
-  mutate(slider_value_norm_2 = round(slider_value_2 / sum(slider_value_2), 3)) %>% 
-  select(id, hypothesis_type, condition, slider_response_type_collapsed, slider_value_norm_2)
-```
-
-Add the second normalized slider variable to the belief data frame.
-
-```{r}
-d_final %<>% left_join(., d_final_collapsed,
-                       by = c("id", "condition", "hypothesis_type",
-                              "slider_response_type_collapsed"))
-```
-
 Add participant info.
 
 ```{r}
 d_final %<>% left_join(., 
-                       select(df_wide, id, condition, 
+                       select(df_wide, id, condition, outcome,
                               browser:action_trial_time) %>% 
                          unique(),
                        by = c("id", "condition"))
@@ -182,24 +178,12 @@ Add manipulation check info.
 d_final %<>% left_join(., manip_check, by = c("id", "condition"))
 ```
 
-Now create a collaposed action response variable and add to the beliefs data frame
-
-```{r}
-df_wide %<>% mutate(action_response_collapsed = ifelse(action_response == "both", 
-                                                       "both_actions", 
-                                                       "single_action"))
-```
-
 Now join everything together and create some factor variables in the order we want for plotting.
 
 ```{r}
 d_final %<>%
-  left_join(., select(df_wide, id, condition, 
-                      action_response_collapsed, 
-                      action_response) %>% 
-              unique(),
-            by = c("id", "condition")
-  )
+  left_join(., select(df_wide, id, condition, action_response) %>% unique(),
+            by = c("id", "condition"))
 ```
 
 Clean up the hypothesis variable.
@@ -208,14 +192,14 @@ Clean up the hypothesis variable.
 d_final %<>%
   rowwise() %>% 
   mutate(hypothesis = str_sub(hypothesis, 
-                                   start = 1, 
-                                   end = str_locate(hypothesis, "music")[1] - 1))
+                              start = 1, 
+                              end = str_locate(hypothesis, outcome)[1] - 1))
 ```
 
 ## Write to disk. 
 
 ```{r}
 write_csv(d_final, path = here("/data/02_tidy_data", 
-                               "goal_actions_ver2_tidy_pilot.csv"))
+                               "goal_actions_ver3_tidy_pilot.csv"))
 ```
 

@@ -13,7 +13,7 @@ library(tidyverse); library(here)
 ```
 
 ```{r}
-d_path <- "data/01_raw_data/actions_prior/sandbox-results/"
+d_path <- "data/01_raw_data/actions_prior/production-results/"
 ```
 
 ## Load raw json data
@@ -34,7 +34,7 @@ json_to_df_prior <- function(data_path, file) {
     screen_height = d$answers$screen_height,
     mobile_device = d$answers$mobile_device,
     about = d$answers$about,
-    comment = d$answers$why_action,
+    why_action = d$answers$why_action,
     age = d$answers$age,
     gender = d$answers$gender,
     first_language = d$answers$language

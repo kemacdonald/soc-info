@@ -74,10 +74,18 @@ d %<>% filter(manip_check_score >= 3)
 
 ## Priors over actions
 
+Make table. 
+
+```{r}
+d_prior %>% select(id, action_response, why_action) %>% kable()
+```
+
+Plot distribution over actions.
+
 ```{r}  
 d_prior %>% 
   count(action_response) %>% 
-  mutate(m = n / n()) %>% 
+  mutate(m = n / sum(n)) %>% 
   ggplot(aes(x = action_response, y = m)) +
   geom_bar(stat = "identity", width = 0.4) +
   geom_hline(yintercept = 0.3, linetype = "dashed") +

@@ -52,6 +52,7 @@ exp = {
 
     // Participant demo info
     about: "",
+    why_action: "",
     comment: "",
     age: "",
     gender: "",
@@ -511,6 +512,7 @@ exp = {
                 '<b>Please make sure you have answered all the questions. Thank you!</b>' +
                 '</font>');
         } else {
+            exp.why_action = document.getElementById("why_action").value;
             exp.about = document.getElementById("about").value;
             exp.comment = document.getElementById("comments").value;
             exp.age = document.getElementById("age").value;

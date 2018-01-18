@@ -15,8 +15,8 @@ var numConditions = 8
 var slider_start_val = "50"
 
 try {
-    var filename = "soc_info_goals_4conds_v2";
-    var condCounts = "1,12;2,12;3,12;4,12;5,12;6,12;7,12;8,12";
+    var filename = "soc_info_goals_4conds_full_sample";
+    var condCounts = "1,25;2,25;3,25;4,25;5,25;6,25;7,25;8,25";
     var xmlHttp = null;
     xmlHttp = new XMLHttpRequest();
     xmlHttp.open("GET", "https://langcog.stanford.edu/cgi-bin/KM/subject_equalizer_km/maker_getter.php?conds=" + condCounts + "&filename=" + filename, false);
@@ -29,7 +29,6 @@ try {
 cond = cond.toString();
 
 // set up experiment variables based on condition
-//cond = "7";
 switch (cond) {
     case "1":
         goal_condition = "learning";
@@ -99,7 +98,7 @@ if (outcome == "music") {
 
 music_box = shuffle(music_box_imgs)
 for (i = 0; i < music_box.length; i++) {
-    music_box_html = `<img src="imgs/${music_box[i]}" height="120" width="200">`
+    music_box_html = `<img src="imgs/${music_box[i]}" height="250" width="200">`
     //    	$(`#music_box_intro_` + i.toString()).html(music_box_html);
     $(`#music_box_goals_` + i.toString()).html(music_box_html);
     $(`#music_box_actions_` + i.toString()).html(music_box_html);

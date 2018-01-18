@@ -172,17 +172,17 @@ exp = {
             toys_not_both = remove(exp.rand_slider_labels, "BothMusicLight");
             toy_both = "BothMusicLight"
             toys_inst = {
-                ButtonMusic: "Instructions: Pull the handle on the left to turn on the light. Press the button on the right to play music. Doing both produces both effects at the same time.",
-                HandleMusic: "Instructions: Pull the handle on the left to play music. Press the button on the right to turn on the light. Doing both produces both effects at the same time.",
-                BothMusicLight: "Instructions: Pull the handle on the left AND press the button on the right to play music and turn on the light at the same time. The button press or handle pull on its own doesn’t produce any effect."
+                ButtonMusic: "Instructions: <br><br>*Pull the handle on the left to turn on the light. <br>*Press the button on the right to play music. <br>*Doing both produces both effects at the same time.",
+                HandleMusic: "Instructions: <br><br>*Pull the handle on the left to play music. <br>*Press the button on the right to turn on the light. <br>*Doing both produces both effects at the same time.",
+                BothMusicLight: "Instructions: <br><br>*Pull the handle on the left AND press the button on the right to play music and turn on the light at the same time. <br> *The button press or handle pull on its own doesn’t produce any effect."
             }
         } else {
             toys_not_both = remove(exp.rand_slider_labels, "BothLightMusic");
             toy_both = "BothLightMusic"
             toys_inst = {
-                ButtonLight: "Instructions: Pull the handle on the left to play music. Press the button on the right to turn on the light. Doing both produces both effects at the same time.",
-                HandleLight: "Instructions: Pull the handle on the left to turn on the light. Press the button on the right to play music. Doing both produces both effects at the same time.",
-                BothLightMusic: "Instructions: Pull the handle on the left AND press the button on the right to turn on the light and play music at the same time. The button press or handle pull on its own doesn’t produce any effect."
+                ButtonLight: "Instructions: <br><br>*Pull the handle on the left to play music. <br>*Press the button on the right to turn on the light. <br>*Doing both produces both effects at the same time.",
+                HandleLight: "Instructions: <br><br>*Pull the handle on the left to turn on the light. <br>*Press the button on the right to play music. <br>*Doing both produces both effects at the same time.",
+                BothLightMusic: "Instructions: <br><br>*Pull the handle on the left AND press the button on the right to turn on the light and play music at the same time. <br>*The button press or handle pull on its own doesn’t produce any effect."
 
             }
         };
@@ -192,19 +192,19 @@ exp = {
             $(`#music_box_instructions`).html(
                 '<p class="action-text" align="center">These are the instructions for the first toy type.</p>' +
                 '<img src="imgs/' + toys_not_both[0] + '.jpeg" height="200" width="300">' +
-                '<p class="action-text"><b><i>' + toys_inst[toys_not_both[0]] + '</b></i></p>')
+                '<p class="action-text"><b>' + toys_inst[toys_not_both[0]] + '</b></p>')
         } else if (exp.toy_inst_num == 2) {
             exp.manip_check_order.push(toys_not_both[1]);
             $(`#music_box_instructions`).html(
                 '<p class="action-text" align="center">These are the instructions for the second toy type.</p>' +
                 '<img src="imgs/' + toys_not_both[1] + '.jpeg" height="200" width="300">' +
-                '<p class="action-text"><b><i>' + toys_inst[toys_not_both[1]] + '</b></i></p>')
+                '<p class="action-text"><b>' + toys_inst[toys_not_both[1]] + '</b></p>')
         } else if (exp.toy_inst_num == 3) {
             exp.manip_check_order.push(toy_both);
             $(`#music_box_instructions`).html(
                 '<p class="action-text" align="center">These are the instructions for the third toy type.</p>' +
                 '<img src="imgs/' + toy_both + '.jpeg" height="200" width="300">' +
-                '<p class="action-text"><b><i>' + toys_inst[toy_both] + '</b></i></p>')
+                '<p class="action-text"><b>' + toys_inst[toy_both] + '</b></p>')
         };
 
         for (i = 0; i < exp.rand_action_labels.length; i++) {

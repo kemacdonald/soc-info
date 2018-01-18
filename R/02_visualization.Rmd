@@ -60,7 +60,7 @@ How many participants passed the manipulation checks?
 
 ```{r}
 d %>% 
-  filter(manip_check_score >= 3) %>% 
+  filter(manip_check_score >= 2) %>% 
   distinct(id, condition) %>% 
   count(condition) %>% 
   kable()
@@ -69,7 +69,7 @@ d %>%
 Now filter if the participant got fewer than 3 out of 3 manipulation checks correct. 
 
 ```{r}
-d %<>% filter(manip_check_score >= 3)
+d %<>% filter(manip_check_score >= 2)
 ```
 
 ## Priors over actions
@@ -173,10 +173,9 @@ Make the same plot, but for the time spent on the action decision.
 d %>% 
   select(id, action_trial_time, condition) %>% 
   unique() %>% 
-  ggplot(aes(x = action_trial_time)) +
-  geom_histogram() + 
+  ggplot(aes(x = condition, y = action_trial_time)) +
+  geom_boxplot(width = 0.3) +
   labs(x = c("time (sec)")) +
-  facet_wrap(~condition, ncol = 1) +
   theme(panel.border = element_rect(fill=NA, size=0.5, color = "grey"))
 ```
 

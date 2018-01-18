@@ -13,7 +13,8 @@ library(tidyverse); library(here)
 ```
 
 ```{r}
-d_path <- "data/01_raw_data/goal_actions_ver3/pilot/production-results"
+#d_path <- "data/01_raw_data/goal_actions_ver3/full_sample/sandbox-results"
+d_path <- "data/01_raw_data/goal_actions_ver3/full_sample/production-results"
 ```
 
 ## Load raw json data
@@ -43,6 +44,7 @@ json_to_df <- function(data_path, file) {
     screen_height = d$answers$screen_height,
     mobile_device = d$answers$mobile_device,
     about = d$answers$about,
+    why_action = d$answers$why_action,
     comment = d$answers$comment,
     age = d$answers$age,
     gender = d$answers$gender,
@@ -200,6 +202,6 @@ d_final %<>%
 
 ```{r}
 write_csv(d_final, path = here("/data/02_tidy_data", 
-                               "goal_actions_ver3_tidy_pilot.csv"))
+                               "goal_actions_ver3_tidy_full_sample.csv"))
 ```
 

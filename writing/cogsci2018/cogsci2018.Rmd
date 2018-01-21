@@ -80,7 +80,7 @@ to make the toy operate and perform a given function (*performance utility*),
 or to present himself as a competent individual who knows how to make the toy work (*presentational utility*; 
 see the model diagram in Figure 1).
 
-```{r model_diagram, fig.env = "figure*", fig.pos = "h", fig.width=12, fig.height=8, fig.align = "center", set.cap.width=T, num.cols.cap=2, fig.cap = "Diagram of the computational model: The learner considers possible hypotheses and his contextual goals. When an observer is absent, he considers his learning goal (to maximize information gain) and performance goal (to play music) and decides on an action. When an observer is present, his decision for an action is based on his learning goal vs. presentational goal (to have the observer infer his competence)."}
+```{r model_diagram, fig.env = "figure*", fig.pos = "h", fig.width=12, fig.height=8, fig.align = "center", set.cap.width=T, num.cols.cap=2, fig.cap = "Diagram of the computational model: The learner considers possible hypotheses and his contextual goals. When an observer is absent, he considers his learning goal (to maximize information gain) and performance goal (e.g. to play music) and decides on an action. When an observer is present, his decision for an action is based on his learning goal vs. presentational goal (to have the observer infer his competence)."}
 img1 <-  rasterGrob(as.raster(readPNG("figs/model-obsAbs.png")), interpolate = FALSE)
 img2 <-  rasterGrob(as.raster(readPNG("figs/model-obsPres.png")), interpolate = FALSE)
 grid.arrange(img1, img2, ncol = 1)

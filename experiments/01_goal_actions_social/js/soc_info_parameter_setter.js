@@ -28,6 +28,10 @@ try {
 
 cond = cond.toString();
 
+
+// for debugging
+cond = "3"
+
 // set up experiment variables based on condition
 switch (cond) {
     case "1":

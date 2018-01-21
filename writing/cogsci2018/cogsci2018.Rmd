@@ -1,5 +1,5 @@
 ---
-title: "Learning in social context"
+title: "Exploring and exploiting in social contexts"
 bibliography: library.bib
 csl: apa6.csl
 document-params: "10pt, letterpaper"
@@ -32,17 +32,27 @@ library(xtable)
 
 # Introduction
 
-If you were to cook a meal for yourself, do you want to follow the recipe you have tried before, or try a new recipe? The familiar recipe will ensure a good meal, but the new recipe might turn out to be even better, despite some risk that it might not. How would your decision change if the meal was for a date? Or for a charitable cooking teacher?
+If you were to cook a meal for yourself, would you want to follow a recipe you have tried before, or try a new recipe? The familiar recipe would ensure a good meal, but the new recipe might turn out to be even better, despite some risk that it might not. How would your decision change if the meal was for a date? Or for a charitable cooking teacher?
 
-We often face what is commonly known as "exploration-exploitation dilemma" [@sutton1998], where we need to choose between pursuing an overt, readily accessible reward based on our prior knowledge (*exploitation*) versus pursuing discovery of new knowledge (*exploration*). 
-How do we go about choosing between exploration and exploitation?
-We may consider our goals, and how much we want to achieve each goal relative to others: Do I want to prioritize learning a new way of cooking, or securing a decent meal? 
+We often face what is commonly known as "exploration-exploitation dilemma" [@sutton1998], where we need to choose between pursuing an overt, readily accessible reward based on our prior knowledge (*exploitation*) versus pursuing discovery of new knowledge that can yield a better reward in the long-term (*exploration*). 
+How do we go about choosing between these two options?
+We may consider our goals associated with each of the options, and how much we want to achieve each goal relative to others: Do I want to learn a new way of cooking, or secure a decent meal? 
 There may also be contextual factors at hand: Am I by myself, or is there a person whom I want to impress with a delicious meal?
-In this work, we seek to explain how people may behave given an exploration-exploitation dilemma, by (1) formalizing the tradeoff between an agent's goals for exploration versus exploitation; and (2) considering ways in which the social context (e.g. the presence of another person) may play a role. 
+In this work, we seek to explain how people may behave given an exploration-exploitation dilemma, by (1) formalizing the tradeoff between an agent's goals for exploration versus exploitation, and (2) considering ways in which the social context (e.g. the presence of another person) may play a role. 
 
-One prominent case study that shows people's exploratory behaviors is *active learning*, or actively constructing their own learning experience by making informative queries or exploring unknown contingencies (FIXME: cite Nelson, sutton). 
-Previous work in active learning have been productive in examining people's information-seeking behaviors, successfully capturing ... FIXME (FIXME: cite?). This line of research however has largely assumed that the learner's goal is only to explore and maximize information gain, and the role of social factors in shaping the learner's goals has not been examined. 
-We present a computational model formalizing the tradeoff between an agent’s exploratory and exploitive goals in an active learning context. The agent’s exploitive goals can be instantiated under two different contexts, with or without the presence of another person. We then look empirical judgments for a simplistic representation of our model across different goals and social contexts (i.e. presence of another person), which we show are consistent with the predictions of the model.
+One prominent case study that shows people's exploratory behaviors is *active learning* (also known as "self-directed" learning), or active construction of their own learning experience by making informative queries or exploring unknown contingencies [@nelson2005; @sutton1998; @gureckis2012]. 
+Active learning research has focused on whether the context of self-directed learning presents advantages in acquiring and processing more information for the learner (see @gureckis2012). 
+We are not always alone in a learning context, however; often there are teachers, peer learners, or other people around that might affect our learning process and outcome. 
+Indeed, when adults and children receive pedagogical instructions from a teacher or view actions of another learner, they show different rate of learning or exploratory information-seeking behaviors [@bonawitz2011; @markant2014].
+
+But what role does the *social* factor play on self-directed learning? 
+For example, can a learner's action choices differ based on the presence of an observer, regardless of whether the observer provides relevant information for learning?
+One possible answer is that a learner will infer what the observer thinks about the learner, e.g. how *competent* the learner is, based on what the learner did (cook a meal) and its outcome (a delicious meal). 
+Then the learner will choose between exploration and exploitation that will likely maximize favorable impression of the learner to the observer.
+
+We present a computational model formalizing the exploration-exploitation tradeoff in an active learning environment with social pressures. 
+The model shows that the agent's goal preference may change depending on the social context, in the presence or absence of another person. 
+We then look at empirical judgments for a simplistic representation of our model across different goals and social contexts (i.e. presence of another person), which are consistent with the predictions of the model.
 
 # Computational model
 

@@ -72,9 +72,9 @@ To start to examine people's exploration-exploitation tradeoff,
 we situate the model and paradigm in a simplistic learning environment.
 The learner in our model is to act on a toy,
 and can choose between two kinds of actions
-that will each lead to one outcome (new discovery) or the other (overt reward) with certainty.
+that will each lead to one outcome (new discovery) or the other (overt reward).
 The learner's action rests on his goals to explore versus exploit, 
-and is determined in part by the presence or absence of another person he cares about (i.e. his boss)\footnote{From here on, we use a male pronoun for Bob, the learner, and female pronoun for Ann, the observer.}.
+and is determined in part by the presence or absence of another person he cares about (i.e. his boss)\footnote{From here on, we use a male pronoun for Bob, the learner, and female pronoun for Ann, the boss and observer.}.
 
 A key assumption underlying inferences in recent Bayesian models of human social cognition is that 
 people act approximately optimally given a utility function [e.g. @goodman2016; @jara2016]. 
@@ -124,7 +124,7 @@ In our paradigm, a learner thinking about the learning utility considers acting 
 
 Second, the *performance utility* is the utility of successfully making the toy operate. Specifically within our current paradigm, the performance utility is the expected utility of music playing ($m$) given the learner's action $a$. 
 
-$$ U_{performance} = \ln(P_L(m | a)) $$
+$$ U_{performance} = P_L(m | a) $$
 \noindent
 Thus, performance utility is maximized by taking an action that is most likely to make the toy "go" and play music, which is the operation of interest.
 
@@ -140,7 +140,7 @@ $$ P_O(c) \propto P_L(m | a)$$
 
 The learner thinks about how the observer infers the learner's competence, and his *presentational* utility is based on maximizing the apparent competence inferred by the observer.
 
-$$ U_{presentation} = \ln(P_O(c)) $$
+$$ U_{presentation} = P_O(c) $$
 Thus, when there is an observer present, the learner considers the tradeoff between the learning utility and presentational utility: 
 
 $$ U(m;a;\phi; obs = yes) = \phi \cdot U_{learning} + (1-\phi) \cdot U_{presentational}$$

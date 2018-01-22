@@ -93,7 +93,7 @@ switch(goal_condition) {
 
 // select cover story based on social condition
 if (social_condition == "social") {
-  cover_story = `One day, while you are at your desk working, your boss walks by and says: <br><br> "That must be one of the new toys that you've been working on. But it looks like you forgot to put on the label! ${goal_question}`;
+  cover_story = `One day, while you are at your desk working, your boss walks by and says: "That must be one of the new toys that you've been working on. ${goal_question} <br><br> Unfortunately, you were in a rush when you built this particular toy and forgot to label it.`;
 } else {
   cover_story = `One day, while you are at your desk working, you see one of your toys lying on the ground. Unfortunately, you were in a rush when you built this particular toy and forgot to label it.`
 }

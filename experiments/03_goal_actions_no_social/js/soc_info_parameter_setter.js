@@ -11,12 +11,12 @@ var num_actions = 3
  * Returns a condition number
  */
 
-var numConditions = 8
+var numConditions = 7
 var slider_start_val = "50"
 
 try {
-    var filename = "soc_info_goals_no_soc_full_sample";
-    var condCounts = "1,25;2,25;3,25;4,25;5,25;6,25;7,50;";
+    var filename = "soc_info_goals_no_soc_good";
+    var condCounts = "1,25;2,25;3,25;4,25;5,25;6,25;7,50";
     var xmlHttp = null;
     xmlHttp = new XMLHttpRequest();
     xmlHttp.open("GET", "https://langcog.stanford.edu/cgi-bin/KM/subject_equalizer_km/maker_getter.php?conds=" + condCounts + "&filename=" + filename, false);
@@ -27,8 +27,6 @@ try {
 }
 
 cond = cond.toString();
-
-cond = "7"
 
 // set up experiment variables based on condition
 switch (cond) {
@@ -72,17 +70,17 @@ var bonus_amount = '10 cent'
 // select the text for the goals slide based on goal condition
 switch(goal_condition) {
     case "learning":
-        goal_question = `<br><br> "Can you figure out what label should go on the toy?"`;
+        goal_question = `Can you figure out what label should go on the toy?"`;
         goal_prompt = `to figure out what label should go on the toy`
         bonus_prompt = `figure out what label should go on the toy`;
         break;
     case "performance":
-        goal_question = `<br><br> "Can you make the ${outcome} turn on?"`;
+        goal_question = `Can you make the ${outcome} turn on?"`;
         goal_prompt = `to make the ${outcome} turn on`
         bonus_prompt = `make the ${outcome} turn on`;
         break;
     case "presentation":
-        goal_question = `<br><br> "Can you show me how the toy works?"`;
+        goal_question = `Can you show me how the toy works?"`;
         goal_prompt = `to impress your boss and show that you're competent`
         bonus_prompt = `impress your boss`;
         break;
@@ -95,9 +93,9 @@ switch(goal_condition) {
 
 // select cover story based on social condition
 if (social_condition == "social") {
-  cover_story = `One day you are at your desk working and your boss walks by. He says, "That must be one of the new toys that you've been working on. But it looks like you forgot to put on the label! ${goal_question}`;
+  cover_story = `One day, while you are at your desk working, your boss walks by and says: <br><br> "That must be one of the new toys that you've been working on. But it looks like you forgot to put on the label! ${goal_question}`;
 } else {
-  cover_story = `One day you are at your desk working and you see one of these toys lying on the ground. <br><br>Unfortunately, you were in a rush when you built this particular toy and forgot to label it. ${goal_question}`
+  cover_story = `One day, while you are at your desk working, you see one of your toys lying on the ground. Unfortunately, you were in a rush when you built this particular toy and forgot to label it.`
 }
 
 // now build the html text

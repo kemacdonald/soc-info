@@ -20,17 +20,19 @@ logit_to_prob <- function(x) {
 ```{r}
 library(magrittr); library(tidyverse); library(here); library(rstanarm) 
 library(brms)
-theme_set(theme_minimal() + theme(panel.border = element_rect(fill=NA, size=0.5, color = "grey"))) 
-```
 
-```{r}
+theme_set(theme_minimal() +
+            theme(legend.position = "top",
+                  axis.text.x = element_text(angle = 0, vjust = 0.5),
+                  panel.border = element_rect(fill=NA, size=0.5, color = "grey")))
+
 options(mc.cores=parallel::detectCores ()) # Run on multiple cores
 ```
 Read data. 
 
 ```{r}
 d_path <- "data/02_tidy_data/"
-d_file_name <- "goal_actions_ver3_tidy_pilot.csv"
+d_file_name <- "goal_actions_ver3_tidy_full_sample.csv"
 d <- read_csv(here(d_path, d_file_name)) 
 ```
 
@@ -46,8 +48,8 @@ Since there were three options, I think we need to use a softmax or multinomial 
 
 ```{r}
 d_model <- d %>%
-  filter(manip_check_score == 3) %>% 
-  select(id, condition, action_response) %>% 
+  filter(manip_check_score >= 2) %>% 
+  select(id, condition, action_response, action_trial_time) %>% 
   unique() %>% 
   mutate(condition_fact = factor(condition, 
                                  levels = c("nogoal", "presentation", "learning", 
@@ -92,3 +94,108 @@ tidy_samples %>%
        subtitle = "Reference group is the 'no-goal' condition and 'button' action",
        x = "estimate (logit scale)")
 ```
+
+## RT Model
+
+```{r}
+d_rt <- d_model %>% 
+  rename(rt = action_trial_time) %>% 
+  filter(rt <= mean(rt) + 3*sd(rt) & rt >= mean(rt) - 3*sd(rt)) %>% 
+  mutate(log_rt = log(rt))
+
+
+m_rt <- stan_lm(
+  log_rt ~ condition_fact,
+  data = d_rt,
+  prior = R2(0.75)
+)
+```
+
+Extract posterior samples for RT differences.
+
+```{r}
+samples_rt <- m_rt %>% 
+  as.data.frame() %>% 
+  as_tibble() %>% 
+  dplyr::rename(no_goal = `(Intercept)`,
+                learning_beta = condition_factlearning,
+                performance_beta = condition_factperformance,
+                presentation_beta = condition_factpresentation) %>% 
+  select(-sigma, -R2, -`log-fit_ratio`) %>% 
+  mutate(sample_id = 1:n()) %>% 
+  gather(key = condition, value = param_est, -sample_id) %>% 
+  mutate(rt_ms_scale = exp(param_est))
+```
+
+Plot posterior distributions over model params. 
+
+```{r}
+samples_rt %>% 
+  filter(condition != "no_goal") %>% 
+  ggplot(aes(x = param_est, color = condition)) + 
+  ggthemes::scale_color_ptol() +
+  geom_line(stat = "density", size = 1.5) +
+  geom_vline(xintercept = 0, linetype = "dashed") +
+  labs(title = "Posterior distribution over linear model predicting RT on action trial",
+       subtitle = "Reference group is the 'no-goal' condition",
+       x = "rt estimate (log scale)")
+```
+
+## Entropy analysis
+
+Roll our own entropy functions.
+
+```{r}
+get_symbol_ent <- function(prob) {
+  if(prob == 0) {
+    0
+  } else {
+    (prob * log2(prob)) * -1  
+  }
+}
+
+# compute entropy for each symbol in the probability vector 
+# and add them up
+compute_entropy <- function(probs_vect) {
+  sapply(probs_vect, get_symbol_ent) %>% 
+    sum()
+}
+```
+
+Compute prior and posterior entropy for each participant, and the entropy change.
+
+
+```{r}
+d_entropy <- d %>% 
+  filter(manip_check_score >= 2) %>% 
+  group_by(id, condition, hypothesis_type, action_response) %>% 
+  summarise(entropy_est = compute_entropy(slider_value_normalized)) %>% 
+  spread(hypothesis_type, entropy_est) %>% 
+  mutate(entropy_change = prior - posterior,
+         action_r_collap = ifelse(action_response == "both", "both", "single"))
+```
+
+Plot entropy change as a function of condition.
+
+```{r}
+d_entropy %>% 
+  mutate(action_r_collap = ifelse(action_response == "both", "both", "single")) %>% 
+  ggplot(aes(x = condition, y = entropy_change, color = condition)) +
+  geom_hline(yintercept = 0, linetype = "dashed") +
+  geom_violin(draw_quantiles = 0.5, trim = T, width = 1, size = 1, 
+              adjust = 1, fill = NA) +
+  geom_jitter(width = 0.07, alpha = 1, shape = 21, color = "darkgrey") +
+  ggthemes::scale_color_ptol() +
+  labs(x = NULL, y = "entropy change") +
+  facet_wrap(~action_r_collap)
+```
+
+Model entropy change across conditions.
+
+```{r}
+
+```
+
+
+
+

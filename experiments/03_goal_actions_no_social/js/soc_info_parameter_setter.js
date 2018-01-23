@@ -11,12 +11,13 @@ var num_actions = 3
  * Returns a condition number
  */
 
-var numConditions = 7
+//var numConditions = 7
+var numConditions = 6
 var slider_start_val = "50"
 
 try {
-    var filename = "soc_info_goals_no_soc_good";
-    var condCounts = "1,25;2,25;3,25;4,25;5,25;6,25;7,50";
+    var filename = "soc_info_goals_no_soc_finish";
+    var condCounts = "1,25;2,25;3,25;4,25;5,25;6,25";
     var xmlHttp = null;
     xmlHttp = new XMLHttpRequest();
     xmlHttp.open("GET", "https://langcog.stanford.edu/cgi-bin/KM/subject_equalizer_km/maker_getter.php?conds=" + condCounts + "&filename=" + filename, false);
@@ -54,10 +55,10 @@ switch (cond) {
         goal_condition = "noGoal";
         social_condition = "no-social";
         break
-    case "7":
-        goal_condition = "presentation";
-        social_condition = "social";
-        break
+    // case "7":
+    //     goal_condition = "presentation";
+    //     social_condition = "social";
+    //     break
 }
 
 // randomize outcomes

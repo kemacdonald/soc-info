@@ -1,48 +1,52 @@
 id,condition,action_response,browser,browser_width,browser_height,screen_width,screen_height,mobile_device,about,why_action,age,gender,first_language
 1,nogoal,handle,chrome,1230,600,1280,800,FALSE,seeing how different people would play with the toy,because i wanted to see what it did,19,m,english
 2,nogoal,both,chrome,1119,1100,1920,1200,FALSE,i don't know.,it felt right.,34,m,english
-3,nogoal,handle,chrome,1709,854,1600,900,FALSE,measuring how people make choices,it seemed the most interesting and most likely to do something,31,male,english
-4,nogoal,handle,chrome,1695,600,1920,1080,FALSE,"whether the general public likes shiny red candy-like buttons or manual levers/handles, or want it all and choose both",pull the handle down,48,f,english
-5,nogoal,handle,chrome,957,675,1024,768,FALSE,no clue at all. none.,it reminded me of the old slots machines. and it's more fun than pushing a button.,47,m,english
-6,nogoal,both,chrome,1533,1069,1600,1200,FALSE,decision making.,i am curious.,24,m,english
-7,nogoal,handle,chrome,1533,600,1600,900,FALSE,to see what people thought would cause an action to start.,i don't know.  i thought about it for a minute and thought that this would be the most useful thing.,33,m,english
-8,nogoal,handle,chrome,1120,866,1280,1024,FALSE,most appealing part of a new device,it seemed like that would start it up,46,f,english
-9,nogoal,button,firefox,1464,600,1536,864,FALSE,i don't really have a clue on this one.,"to be honest, i'm not sure.  it was just a kneejerk reaction i think.",54,m,english
-10,nogoal,both,chrome,1419,1067,1920,1080,FALSE,decision making,i selected this option to try to see if i could do both options at once.,29,m,english
-11,nogoal,both,chrome,1853,974,1920,1080,FALSE,i'm not sure,because it combined the two answers and offered more engagement with the object,26,m,english
-12,nogoal,handle,chrome,1225,699,1440,900,FALSE,not sure - potentially how we perceive cause and effect?,i think that pulling the handle would feel fun.,29,f,english
-13,nogoal,handle,chrome,1449,778,1366,768,FALSE,i don't know.,pulling the handle seemed the most significant.,36,m,english
-14,nogoal,handle,chrome,1010,510,1093,615,FALSE,unclear,it seemed the easiest,62,m,english
-15,nogoal,both,chrome,1023,600,1366,768,FALSE,really have no idea.,"if i had one chance, i would go for it all.",22,m,english
-16,nogoal,handle,chrome,1316,654,1366,768,FALSE,not sure,i felt it would actually do something,33,m,russian
-17,nogoal,button,chrome,1316,600,1366,768,FALSE,perception of choices,seems like it might be the best result based on speculation only,25,m,english
-18,nogoal,button,chrome,1853,974,1920,1080,FALSE,decision making in spontaneous one time events. ,i felt pressing the button or pulling the lever was most likely to cause the object to do something. i felt that the button was a quick way to test the device.,22,f,english
-19,nogoal,button,chrome,1853,949,1920,1080,FALSE,not really sure,"it's a big red button, it calls to me",37,male,english
-20,nogoal,handle,chrome,925,600,412,732,FALSE,not sure,wanted to see what it did,45,m,english
-21,nogoal,button,chrome,1099,600,1920,1080,FALSE,it was about perceptions.,i want to see what happens.,25,m,english
-22,nogoal,handle,chrome,1176,579,1366,768,FALSE,not sure,it seems likely to do something,42,m,english
-23,nogoal,button,chrome,1299,600,1366,768,FALSE,choices,i like button pressing (gamer),28,m,english
-24,nogoal,button,firefox,1211,1300,2560,1440,FALSE,no idea,it felt like the most logical choice overall,30,male,english
-25,nogoal,both,chrome,1316,600,1366,768,FALSE,toy box game action decision,maybe that action is the right one to operate it,29,m,spanish
-26,nogoal,button,chrome,1299,637,1366,768,FALSE,psychological preferences,drew me to it,34,female,english
-27,nogoal,button,chrome,1222,600,1280,800,FALSE,to see the rationale of individuals when utilizing a multi-faceted foreign object for the first time.,"i pushed the button because i think buttons require so little effort and are so easily pushed compared to the lever that requires a little bit more work to pull, so the button must be the obvious choice to utilize.",20,m,english
-28,nogoal,button,safari,1334,600,1440,900,FALSE,"how people make choices about exploring new things, maybe",i'd want to see what happened when i pushed the button - and the button was red so it called my attention.,46,m,english
-29,nogoal,button,chrome,1870,600,1920,1080,FALSE,actions users would perform on a toybox,because i believe something exciting would happen if i pressed the red button,32,f,english
-30,nogoal,handle,chrome,1870,600,1920,1080,FALSE,trying out a fun looking toy box things.,pulling on things is fun,38,male,english
-31,nogoal,button,chrome,1299,637,1366,768,FALSE,?,it was easy,25,female,english
-32,nogoal,both,chrome,1533,600,1600,900,FALSE,about choices and impulse,to get the most out of it,23,m,english
-33,nogoal,both,chrome,910,929,1920,1080,FALSE,unknown,it seemed to give the highest chance of success,30,f,english
-34,nogoal,button,chrome,1636,796,1366,768,FALSE,no idea.,"man, you only gave me three options, so i had to choose one of them.",32,o,english
-35,nogoal,both,chrome,1477,917,1536,864,FALSE,i don't know ,curiosity ,57,f,english 
-36,nogoal,both,chrome,806,148,1920,1080,FALSE,i don't know,because it would be the most interesting,23,m,english
-37,nogoal,handle,firefox,1470,600,1536,864,FALSE,i think the task is attempting to evaluate what catches people's attention.,it looked cool.,25,m,english
-38,nogoal,button,chrome,717,742,1600,900,FALSE,what was most appealing,"common action, curiosity, easy",30,f,english
-39,nogoal,button,chrome,1853,949,1920,1080,FALSE,"see if, when presented multiple choices, what our minds will lead us to do first",i think the button will do a more exciting action than the other,25,m,english
-40,nogoal,both,chrome,1469,759,1536,864,FALSE,learning how a toy works.,i felt like it would have the greatest chance of causing a reaction.,34,m,english
-41,nogoal,handle,firefox,1870,600,1920,1080,FALSE,if people prefer buttons or levels,it seemed like the most fun,24,m,english
-42,nogoal,button,chrome,1299,600,1366,768,FALSE,choices in gaming,so i can see what it does,23,f,english
-43,nogoal,handle,chrome,1308,600,1440,900,FALSE,i have no idea.,the handle caught my eye first so i was most intrigued by it.,34,f,english
-44,nogoal,both,chrome,1299,675,1366,768,FALSE,decision making,gut feeling just wanted to do both,31,m,english
-45,nogoal,button,chrome,1226,642,1366,768,FALSE,not sure,it's the one that stood out most to me,20,female,english
-46,nogoal,both,firefox,1299,600,1366,768,FALSE,interacting with new things,i wanted to get the most out of the toy and they seemed like they work together.,30,f,english
-47,nogoal,both,chrome,1316,654,1366,768,FALSE,thinking skills,just thinking about what they may do.,32,f,english
+3,nogoal,both,chrome,647,866,1280,1024,FALSE,to see what choices people made. ,because i wanted to see what would happen if i did both functions at the same time. ,41,male,english
+4,nogoal,handle,chrome,1709,854,1600,900,FALSE,measuring how people make choices,it seemed the most interesting and most likely to do something,31,male,english
+5,nogoal,handle,chrome,1695,600,1920,1080,FALSE,"whether the general public likes shiny red candy-like buttons or manual levers/handles, or want it all and choose both",pull the handle down,48,f,english
+6,nogoal,handle,chrome,957,675,1024,768,FALSE,no clue at all. none.,it reminded me of the old slots machines. and it's more fun than pushing a button.,47,m,english
+7,nogoal,button,chrome,1533,600,1600,900,FALSE,testing shape perceptions ,button seemed to me to indicate a bigger action would occur.,28,male,english
+8,nogoal,both,chrome,1533,1069,1600,1200,FALSE,decision making.,i am curious.,24,m,english
+9,nogoal,handle,chrome,1533,600,1600,900,FALSE,to see what people thought would cause an action to start.,i don't know.  i thought about it for a minute and thought that this would be the most useful thing.,33,m,english
+10,nogoal,handle,chrome,1120,866,1280,1024,FALSE,most appealing part of a new device,it seemed like that would start it up,46,f,english
+11,nogoal,button,firefox,1464,600,1536,864,FALSE,i don't really have a clue on this one.,"to be honest, i'm not sure.  it was just a kneejerk reaction i think.",54,m,english
+12,nogoal,both,chrome,1419,1067,1920,1080,FALSE,decision making,i selected this option to try to see if i could do both options at once.,29,m,english
+13,nogoal,both,chrome,1853,974,1920,1080,FALSE,i'm not sure,because it combined the two answers and offered more engagement with the object,26,m,english
+14,nogoal,handle,chrome,1225,699,1440,900,FALSE,not sure - potentially how we perceive cause and effect?,i think that pulling the handle would feel fun.,29,f,english
+15,nogoal,button,chrome,1299,600,1366,768,FALSE,not sure,seems right,25,f,english
+16,nogoal,handle,chrome,1449,778,1366,768,FALSE,i don't know.,pulling the handle seemed the most significant.,36,m,english
+17,nogoal,handle,chrome,1010,510,1093,615,FALSE,unclear,it seemed the easiest,62,m,english
+18,nogoal,both,chrome,1023,600,1366,768,FALSE,really have no idea.,"if i had one chance, i would go for it all.",22,m,english
+19,nogoal,handle,chrome,1316,654,1366,768,FALSE,not sure,i felt it would actually do something,33,m,russian
+20,nogoal,button,chrome,1316,600,1366,768,FALSE,perception of choices,seems like it might be the best result based on speculation only,25,m,english
+21,nogoal,button,chrome,1853,974,1920,1080,FALSE,decision making in spontaneous one time events. ,i felt pressing the button or pulling the lever was most likely to cause the object to do something. i felt that the button was a quick way to test the device.,22,f,english
+22,nogoal,button,chrome,1853,949,1920,1080,FALSE,not really sure,"it's a big red button, it calls to me",37,male,english
+23,nogoal,handle,chrome,925,600,412,732,FALSE,not sure,wanted to see what it did,45,m,english
+24,nogoal,button,chrome,1099,600,1920,1080,FALSE,it was about perceptions.,i want to see what happens.,25,m,english
+25,nogoal,button,chrome,827,944,1920,1080,FALSE,i really have no idea,i wanted to see what the button would do,39,f,english
+26,nogoal,handle,chrome,1176,579,1366,768,FALSE,not sure,it seems likely to do something,42,m,english
+27,nogoal,button,chrome,1299,600,1366,768,FALSE,choices,i like button pressing (gamer),28,m,english
+28,nogoal,button,firefox,1211,1300,2560,1440,FALSE,no idea,it felt like the most logical choice overall,30,male,english
+29,nogoal,both,chrome,1316,600,1366,768,FALSE,toy box game action decision,maybe that action is the right one to operate it,29,m,spanish
+30,nogoal,button,chrome,1299,637,1366,768,FALSE,psychological preferences,drew me to it,34,female,english
+31,nogoal,button,chrome,1222,600,1280,800,FALSE,to see the rationale of individuals when utilizing a multi-faceted foreign object for the first time.,"i pushed the button because i think buttons require so little effort and are so easily pushed compared to the lever that requires a little bit more work to pull, so the button must be the obvious choice to utilize.",20,m,english
+32,nogoal,button,safari,1334,600,1440,900,FALSE,"how people make choices about exploring new things, maybe",i'd want to see what happened when i pushed the button - and the button was red so it called my attention.,46,m,english
+33,nogoal,button,chrome,1870,600,1920,1080,FALSE,actions users would perform on a toybox,because i believe something exciting would happen if i pressed the red button,32,f,english
+34,nogoal,handle,chrome,1870,600,1920,1080,FALSE,trying out a fun looking toy box things.,pulling on things is fun,38,male,english
+35,nogoal,button,chrome,1299,637,1366,768,FALSE,?,it was easy,25,female,english
+36,nogoal,both,chrome,1533,600,1600,900,FALSE,about choices and impulse,to get the most out of it,23,m,english
+37,nogoal,both,chrome,910,929,1920,1080,FALSE,unknown,it seemed to give the highest chance of success,30,f,english
+38,nogoal,button,chrome,1636,796,1366,768,FALSE,no idea.,"man, you only gave me three options, so i had to choose one of them.",32,o,english
+39,nogoal,both,chrome,1477,917,1536,864,FALSE,i don't know ,curiosity ,57,f,english 
+40,nogoal,both,chrome,806,148,1920,1080,FALSE,i don't know,because it would be the most interesting,23,m,english
+41,nogoal,handle,firefox,1470,600,1536,864,FALSE,i think the task is attempting to evaluate what catches people's attention.,it looked cool.,25,m,english
+42,nogoal,button,chrome,717,742,1600,900,FALSE,what was most appealing,"common action, curiosity, easy",30,f,english
+43,nogoal,button,chrome,1853,949,1920,1080,FALSE,"see if, when presented multiple choices, what our minds will lead us to do first",i think the button will do a more exciting action than the other,25,m,english
+44,nogoal,both,chrome,1469,759,1536,864,FALSE,learning how a toy works.,i felt like it would have the greatest chance of causing a reaction.,34,m,english
+45,nogoal,handle,firefox,1870,600,1920,1080,FALSE,if people prefer buttons or levels,it seemed like the most fun,24,m,english
+46,nogoal,button,chrome,1299,600,1366,768,FALSE,choices in gaming,so i can see what it does,23,f,english
+47,nogoal,handle,chrome,1308,600,1440,900,FALSE,i have no idea.,the handle caught my eye first so i was most intrigued by it.,34,f,english
+48,nogoal,both,chrome,1299,675,1366,768,FALSE,decision making,gut feeling just wanted to do both,31,m,english
+49,nogoal,button,chrome,1226,642,1366,768,FALSE,not sure,it's the one that stood out most to me,20,female,english
+50,nogoal,both,firefox,1299,600,1366,768,FALSE,interacting with new things,i wanted to get the most out of the toy and they seemed like they work together.,30,f,english
+51,nogoal,both,chrome,1316,654,1366,768,FALSE,thinking skills,just thinking about what they may do.,32,f,english

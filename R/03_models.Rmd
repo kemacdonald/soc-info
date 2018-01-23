@@ -10,30 +10,17 @@ knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 ## Setup
 
 ```{r}
-logit_to_prob <- function(x) {
-  odds <- exp(x)
-  prob <- odds / (1 + odds)
-  prob
-}
+library(magrittr); library(tidyverse); library(here); 
+library(rstanarm); library(brms)
+source(here("R/soc_info_helpers.R"))
+options(mc.cores=parallel::detectCores())
 ```
 
-```{r}
-library(magrittr); library(tidyverse); library(here); library(rstanarm) 
-library(brms)
-
-theme_set(theme_minimal() +
-            theme(legend.position = "top",
-                  axis.text.x = element_text(angle = 0, vjust = 0.5),
-                  panel.border = element_rect(fill=NA, size=0.5, color = "grey")))
-
-options(mc.cores=parallel::detectCores ()) # Run on multiple cores
-```
 Read data. 
 
 ```{r}
-d_path <- "data/02_tidy_data/"
-d_file_name <- "goal_actions_ver3_tidy_full_sample.csv"
-d <- read_csv(here(d_path, d_file_name)) 
+d_path <- "data/03_merged_data/"
+d <- read_csv(here(d_path, "goal_actions_master.csv")) 
 ```
 
 ## Model condition difference in action selection
@@ -143,27 +130,7 @@ samples_rt %>%
 
 ## Entropy analysis
 
-Roll our own entropy functions.
-
-```{r}
-get_symbol_ent <- function(prob) {
-  if(prob == 0) {
-    0
-  } else {
-    (prob * log2(prob)) * -1  
-  }
-}
-
-# compute entropy for each symbol in the probability vector 
-# and add them up
-compute_entropy <- function(probs_vect) {
-  sapply(probs_vect, get_symbol_ent) %>% 
-    sum()
-}
-```
-
 Compute prior and posterior entropy for each participant, and the entropy change.
-
 
 ```{r}
 d_entropy <- d %>% 

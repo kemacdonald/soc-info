@@ -194,6 +194,12 @@ The experiment can be viewed at https://langcog.stanford.edu/expts/EJY/soc-info/
 
 # Results
 
+## Action selections
+
+## Response times
+
+## Entropy change
+
 # Discussion 
 
 # Acknowledgements

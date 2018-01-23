@@ -41,7 +41,6 @@ d %>%
   kable()
 ```
 
-
 ## Data checks and filtering
 
 How many participants in each condition?
@@ -285,4 +284,23 @@ cowplot::plot_grid(action_plot, sub_plots, labels = c("A"),
 ```{r}
 d_e2 <- filter(d, str_detect(experiment, pattern = "e2"))
 ```
+
+```{r}
+d_e2 %>% 
+  distinct(condition, social_condition, action_response, id) %>%
+  count(action_response, condition, social_condition) %>% 
+  group_by(condition, social_condition) %>% 
+  mutate(prop = n / sum(n)) %>% 
+  ggplot(aes(x = condition, y = prop, fill = fct_rev(action_response))) +
+  geom_bar(stat = "identity", width = 0.4) +
+  lims(y = c(0,1)) +
+  labs(x = NULL, y = "Prop. Participants", fill = "action response:") +
+  #scale_alpha_discrete(range = c(0.4,1)) + 
+  ggthemes::scale_fill_ptol() +
+  theme(panel.border = element_rect(fill=NA, size=0.5, color = "grey"),
+        panel.grid.minor = element_blank(),
+        plot.margin=unit(c(1,1,1.5,1.2),"cm")) +
+  facet_wrap(~social_condition)
+```
+
 

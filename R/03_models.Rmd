@@ -14,6 +14,7 @@ library(magrittr); library(tidyverse); library(here);
 library(rstanarm); library(brms)
 source(here("R/soc_info_helpers.R"))
 options(mc.cores=parallel::detectCores())
+set.seed (3875)
 ```
 
 Read data. 
@@ -35,9 +36,8 @@ Since there were three options, I think we need to use a softmax or multinomial 
 
 ```{r}
 d_model <- d %>%
-  filter(manip_check_score >= 2) %>% 
-  select(id, condition, action_response, action_trial_time) %>% 
-  unique() %>% 
+  filter(manip_check_score >= 2, str_detect(experiment, "e1")) %>% 
+  distinct(id, condition, action_response, action_trial_time) %>% 
   mutate(condition_fact = factor(condition, 
                                  levels = c("nogoal", "presentation", "learning", 
                                             "performance")),
@@ -45,9 +45,7 @@ d_model <- d %>%
                                        levels = c("button", "handle", "both")))
 ```
 
-```{r}
-set.seed (3875)
-
+```{r action model}
 m <- brm(action_response_fact ~ condition_fact,
              data=d_model,
              family="categorical", 
@@ -134,12 +132,15 @@ Compute prior and posterior entropy for each participant, and the entropy change
 
 ```{r}
 d_entropy <- d %>% 
-  filter(manip_check_score >= 2) %>% 
+  filter(manip_check_score >= 2, str_detect(experiment, pattern = "e2")) %>% 
   group_by(id, condition, hypothesis_type, action_response) %>% 
   summarise(entropy_est = compute_entropy(slider_value_normalized)) %>% 
   spread(hypothesis_type, entropy_est) %>% 
-  mutate(entropy_change = prior - posterior,
-         action_r_collap = ifelse(action_response == "both", "both", "single"))
+  mutate(entropy_change = posterior - prior,
+         action_r_collap = ifelse(action_response == "both", "both", "single"),
+         condition_fact = factor(condition, 
+                                 levels = c("nogoal", "presentation", "learning", 
+                                            "performance")))
 ```
 
 Plot entropy change as a function of condition.
@@ -160,9 +161,56 @@ d_entropy %>%
 Model entropy change across conditions.
 
 ```{r}
-
+m_entropy <- stan_lm(
+  entropy_change ~ condition_fact * action_r_collap,
+  data = d_entropy,
+  prior = R2(0.75)
+)
 ```
 
+```{r}
+samples_entropy <- m_entropy %>% 
+  as.data.frame() %>% 
+  as_tibble() %>% 
+  dplyr::rename(no_goal = `(Intercept)`,
+                learning_beta = condition_factlearning,
+                performance_beta = condition_factperformance,
+                presentation_beta = condition_factpresentation,
+                single_action_beta = action_r_collapsingle,
+                int_present_single_act = `condition_factpresentation:action_r_collapsingle`,
+                int_learn_single_act = `condition_factlearning:action_r_collapsingle`,
+                int_perf_single_act = `condition_factperformance:action_r_collapsingle`) %>% 
+  select(-sigma, -R2, -`log-fit_ratio`) %>% 
+  mutate(sample_id = 1:n()) %>% 
+  gather(key = effect, value = param_est, -sample_id) %>% 
+  mutate(eff_type = ifelse(str_detect(effect, "int"), "interaction", "main effect")) 
+```
 
+Plot main effects and interaction betas
 
+```{r}
+samples_entropy %>% 
+  ggplot(aes(x = param_est, color = effect)) + 
+  ggthemes::scale_color_ptol() +
+  geom_line(stat = "density", size = 1.5) +
+  geom_vline(xintercept = 0, linetype = "dashed") +
+  facet_wrap(~eff_type)
+```
 
+```{r}
+samples_entropy %>% 
+  group_by(effect) %>% 
+  summarise(m = mean(param_est), 
+            hdi_lower = quantile(param_est, probs = c(0.05)),
+            hdi_upper = quantile(param_est, probs = c(0.95)))
+```
+
+## Save posterior samples 
+
+```{r}
+posteriors <- list(action_m = tidy_samples,
+                   action_rt_m = samples_rt,
+                   entropy_m = samples_entropy)
+
+saveRDS(posteriors, file = here("data/03_merged_data", "soc-info-posterior-samples.rds"))
+```

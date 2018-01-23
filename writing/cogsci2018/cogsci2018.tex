@@ -103,11 +103,12 @@ asking to elicit informative responses). The key assumption is that
 learners will maximize the usefulness of their actions by gathering
 information that is especially helpful for their own learning. The
 effects of active learning have been the focus of much empirical work in
-education ({\textbf{???}}, {\textbf{???}}), machine learning
-({\textbf{???}}, {\textbf{???}}), and cognitive psychology
-({\textbf{???}}, {\textbf{???}}), with the common finding that active
-contexts lead to more rapid learning when compared to passive contexts
-where people do not have control over the flow of information.
+education (Grabinger \& Dunlap, 1995; Prince, 2004), machine learning
+(Ramirez-Loaiza, Sharma, Kumar, \& Bilgic, 2017; Settles, 2012), and
+cognitive psychology (Castro et al., 2009; Chi, 2009), with the common
+finding that active contexts lead to more rapid learning when compared
+to passive contexts where people do not have control over the flow of
+information.
 
 Work on exploratory actions in active learning often isolates people's
 information goals by removing the learner from any kind of social
@@ -122,7 +123,7 @@ whether they thought the behavior was accidental (less informative) or
 intentional (more informative). Moreover, adults and children will make
 even stronger inferences if they believe that another person selected
 their actions with the goal of helping them learn (i.e., teaching)
-({\textbf{???}}).
+(Shafto, Goodman, \& Frank, 2012).
 
 But how can we begin to understand the role of \emph{social} factors in
 self-directed learning contexts? Answering this question represents a
@@ -149,9 +150,9 @@ tradeoff in a self-directed learning context with social factors. We
 model a learner who considers his learning goal versus performance goal,
 which may be influenced by the social context (e.g.~the presence of
 another individual whom he wants to impress). We then look at adult
-participants' action choices within a simplistic task representing
-different goals and social contexts, and show that the empirical results
-are consistent with predictions of our model.
+participants' action choices within a minimalistic self-directed
+learning task representing different goals and social contexts, and show
+that people's choices are consistent with predictions of our model.
 
 \section{Computational model}\label{computational-model}
 
@@ -285,7 +286,20 @@ action \(a\) approximately optimally (as per optimality parameter
 
 \[ P_L(a | \phi, obs) \propto \exp(\lambda \cdot \mathbb{E}[U(a;\phi; obs)])\]
 
-\section{Experiment}\label{experiment}
+\section{Experiment 1}\label{experiment-1}
+
+In our Experiments, we wanted to look at people's action choices in a
+minimalistic self-directed learning environment with varying goals and
+social contexts. In Experiment 1, we wanted to confirm that participants
+will choose actions based on different goal descriptions, depending on
+whether we highlight learning goal, performance goal, or presentation
+goal. We were interested to see what people will choose to do when no
+goal is specified and they are free to explore. Thus, we asked
+participants to imagine a scenario in which they were expected to act on
+a toy with an uncertain causal mechanism, and we assigned participants
+to different goal conditions: learning goal (i.e.~learn how the toy
+works); performance goal (e.g.~make the toy play music); presentation
+goal (i.e.~impress their boss); and no goal.
 
 \subsection{Method}\label{method}
 
@@ -374,6 +388,16 @@ PGSD3-454094-2014 to EJY \ldots{} FIXME.
 \setlength{\parindent}{-0.1in} \setlength{\leftskip}{0.125in} \noindent
 
 \hypertarget{refs}{}
+\hypertarget{ref-castro2009human}{}
+Castro, R. M., Kalish, C., Nowak, R., Qian, R., Rogers, T., \& Zhu, X.
+(2009). Human active learning. In \emph{Advances in neural information
+processing systems} (pp. 241--248).
+
+\hypertarget{ref-chi2009active}{}
+Chi, M. T. (2009). Active-constructive-interactive: A conceptual
+framework for differentiating learning activities. \emph{Topics in
+Cognitive Science}, \emph{1}(1), 73--105.
+
 \hypertarget{ref-coenen2017}{}
 Coenen, A., Nelson, J. D., \& Gureckis, T. M. (2017). Asking the right
 questions about human inquiry.
@@ -393,6 +417,10 @@ Goodman, N. D., \& Frank, M. C. (2016). Pragmatic language
 interpretation as probabilistic inference. \emph{Trends in Cognitive
 Sciences}, \emph{20}(11), 818--829.
 
+\hypertarget{ref-grabinger1995rich}{}
+Grabinger, R. S., \& Dunlap, J. C. (1995). Rich environments for active
+learning: A definition. \emph{ALT-J}, \emph{3}(2), 5--34.
+
 \hypertarget{ref-jara2016}{}
 Jara-Ettinger, J., Gweon, H., Schulz, L. E., \& Tenenbaum, J. B. (2016).
 The naïve utility calculus: Computational principles underlying
@@ -411,6 +439,24 @@ algorithms}. Cambridge university press.
 Nelson, J. D. (2005). Finding useful questions: On bayesian
 diagnosticity, probability, impact, and information gain.
 \emph{Psychological Review}, \emph{112}(4).
+
+\hypertarget{ref-prince2004does}{}
+Prince, M. (2004). Does active learning work? A review of the research.
+\emph{Journal of Engineering Education}, \emph{93}(3), 223--231.
+
+\hypertarget{ref-ramirez2017active}{}
+Ramirez-Loaiza, M. E., Sharma, M., Kumar, G., \& Bilgic, M. (2017).
+Active learning: An empirical study of common baselines. \emph{Data
+Mining and Knowledge Discovery}, \emph{31}(2), 287--313.
+
+\hypertarget{ref-settles2012active}{}
+Settles, B. (2012). Active learning. \emph{Synthesis Lectures on
+Artificial Intelligence and Machine Learning}, \emph{6}(1), 1--114.
+
+\hypertarget{ref-shafto2012learning}{}
+Shafto, P., Goodman, N. D., \& Frank, M. C. (2012). Learning from
+others: The consequences of psychological reasoning for human learning.
+\emph{Perspectives on Psychological Science}, \emph{7}(4), 341--351.
 
 \hypertarget{ref-sutton1998}{}
 Sutton, R. S., \& Barto, A. G. (1998). \emph{Introduction to

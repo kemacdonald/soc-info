@@ -41,7 +41,7 @@ Work on exploratory actions in active learning often isolates people’s informa
 
 But how can we begin to understand the role of *social* factors in self-directed learning contexts? Answering this question represents a significant step because explore-exploit decisions often unfold within fundamentally social contexts where people must integrate the value of social goals and information goals when deciding what to do next. Consider that actions that maximize learning are inherently risky -- leading to mistakes and struggles -- which could be difficult to undertake in with someone else present. Thus, a learner might prioritize actions that maintain their reputation: looking more attractive, knowledgeable, or competent to the observer. In this case, the learner is leveraging psychological reasoning processes to infer what the observer thinks based on their action (cook a meal) and its outcome (a delicious meal).  If the learner is worried about the observer’s beliefs, then the they might choose actions that maximize the probability of maintaining a favorable impression in the eyes of the observer ('That meal was delicious, so he must be a good cook!'). Indeed, when the value of self-presentation is highlighted, children avoid opportunities that will help them learn new things but pose risks for public mistakes [@elliott1988; @dweck1988]. 
 
-We present the first computational model of the learning-performance tradeoff in a self-directed learning context with social factors. We model a learner who considers his learning goal versus performance goal, which may be influenced by the social context (e.g. the presence of another individual whom he wants to impress). We then look at adult participants’ action choices within a simplistic task  representing different goals and social contexts, and show that the empirical results are consistent with predictions of our model.
+We present the first computational model of the learning-performance tradeoff in a self-directed learning context with social factors. We model a learner who considers his learning goal versus performance goal, which may be influenced by the social context (e.g. the presence of another individual whom he wants to impress). We then look at adult participants’ action choices within a minimalistic self-directed learning task representing different goals and social contexts, and show that people's choices are consistent with predictions of our model.
 
 # Computational model
 
@@ -125,7 +125,17 @@ Based on the utility functions above, the learner ($L$) chooses his action $a$ a
 
 $$ P_L(a | \phi, obs) \propto \exp(\lambda \cdot \mathbb{E}[U(a;\phi; obs)])$$
 
-# Experiment
+# Experiment 1
+
+In our Experiments, we wanted to look at people's action choices in a minimalistic self-directed learning environment with varying goals and social contexts. 
+In Experiment 1, we wanted to confirm that participants will choose  actions based on different goal descriptions, depending on whether we highlight learning goal, performance goal, or presentation goal. 
+We were interested to see what people will choose to do when no goal is specified and they are free to explore.
+Thus, we asked participants to imagine a scenario in which they were expected to act on a toy with an uncertain causal mechanism, and 
+we assigned participants to different goal conditions: 
+learning goal (i.e. learn how the toy works); 
+performance goal (e.g. make the toy play music);
+presentation goal (i.e. impress their boss);
+and no goal.
 
 ## Method
 

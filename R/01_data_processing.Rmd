@@ -203,6 +203,7 @@ d_final %<>%
                               end = str_locate(hypothesis, outcome)[1] - 1))
 ```
 
+
 ## Write to disk
 
 ```{r}

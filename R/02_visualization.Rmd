@@ -233,22 +233,11 @@ d_e1 %>%
 
 ### Entropy analysis
 
-Compute prior and posterior entropy for each participant, and the entropy change.
-
-```{r}
-d_entropy <- d_e1 %>% 
-  group_by(id, condition, hypothesis_type, action_response) %>% 
-  summarise(entropy_est = compute_entropy(slider_value_normalized)) %>% 
-  spread(hypothesis_type, entropy_est) %>% 
-  mutate(entropy_change = posterior - prior,
-         action_r_collap = ifelse(action_response == "both", "both", "single"))
-```
-
 Plot entropy change as a function of condition.
 
 ```{r}
-entropy_plot <- d_entropy %>% 
-  mutate(action_r_collap = ifelse(action_response == "both", "both", "single")) %>% 
+entropy_plot <- d_e1 %>% 
+  distinct(id, condition, social_condition, entropy_change, action_r_collap) %>% 
   ggplot(aes(x = condition, y = entropy_change, color = fct_rev(action_r_collap),
              fill = fct_rev(action_r_collap))) +
   geom_hline(yintercept = 0, linetype = "solid", color = "grey20") +
@@ -285,22 +274,73 @@ cowplot::plot_grid(action_plot, sub_plots, labels = c("A"),
 d_e2 <- filter(d, str_detect(experiment, pattern = "e2"))
 ```
 
+Action plot
+
 ```{r}
-d_e2 %>% 
-  distinct(condition, social_condition, action_response, id) %>%
-  count(action_response, condition, social_condition) %>% 
+e2_action_plot <- d_e2 %>% 
+  distinct(condition, social_condition, action_r_collap, id) %>%
+  count(action_r_collap, condition, social_condition) %>% 
   group_by(condition, social_condition) %>% 
   mutate(prop = n / sum(n)) %>% 
-  ggplot(aes(x = condition, y = prop, fill = fct_rev(action_response))) +
-  geom_bar(stat = "identity", width = 0.4) +
+  filter(action_r_collap == "single") %>% 
+  ggplot(aes(x = condition, y = prop, fill = social_condition)) +
+  geom_bar(stat = "identity", width = 0.4, position = position_dodge()) +
   lims(y = c(0,1)) +
-  labs(x = NULL, y = "Prop. Participants", fill = "action response:") +
+  labs(x = NULL, y = "Prop. Participants", fill = "context:",
+       title = "Proportion of participants who chose the learning action") +
   #scale_alpha_discrete(range = c(0.4,1)) + 
   ggthemes::scale_fill_ptol() +
   theme(panel.border = element_rect(fill=NA, size=0.5, color = "grey"),
         panel.grid.minor = element_blank(),
-        plot.margin=unit(c(1,1,1.5,1.2),"cm")) +
-  facet_wrap(~social_condition)
+        legend.position = "bottom",
+        plot.margin=unit(c(1,1,1.5,1.2),"cm")) 
 ```
 
+RT plot
 
+```{r}
+e2_rt_plot <- d_e2 %>% 
+  distinct(id, action_trial_time, condition, social_condition) %>% 
+  filter(action_trial_time < mean(action_trial_time) + 2 * sd(action_trial_time),
+         action_trial_time > mean(action_trial_time) - 2 * sd(action_trial_time)) %>% 
+  ggplot(aes(x = condition, y = action_trial_time)) +
+  lims(y = c(0,100)) + 
+  geom_violin(fill = NA, draw_quantiles = 0.5, size = 1, trim = T, color = "grey30") + 
+  geom_jitter(width = 0.05, shape = 21, alpha = 0.9, color = "grey30", size = 1) + 
+  labs(y = c("response time (sec)"), x= NULL) +
+  theme(panel.border = element_rect(fill=NA, size=0.5, color = "grey"),
+        panel.grid.major = element_blank(),
+        plot.margin=unit(c(0.5,1,0.5,1.2),"cm")) 
+```
+
+Entropy change
+
+```{r}
+e2_ent_plot <- d_e2 %>% 
+  distinct(id, condition, social_condition, entropy_change, action_r_collap) %>% 
+  ggplot(aes(x = condition, y = entropy_change, color = fct_rev(action_r_collap),
+             fill = fct_rev(action_r_collap))) +
+  geom_hline(yintercept = 0, linetype = "solid", color = "grey20") +
+  geom_violin(position = position_dodge(width = 1), scale = "width", size = 1,
+              draw_quantiles = c(0.5), alpha = 0.3) +
+  geom_jitter(alpha = 1, shape = 21, size = 1, 
+              position = position_jitterdodge(dodge.width = 1, jitter.width = .05)) +
+  ggthemes::scale_color_ptol() +
+  ggthemes::scale_fill_ptol() +
+  lims(y = c(-1.5, 1.5)) +
+  guides(fill = F) + 
+  labs(x = NULL, y = "entropy change", color = "action response: ") +
+  theme(panel.border = element_rect(fill=NA, size=0.5, color = "grey"),
+        panel.grid.minor = element_blank(),
+        panel.grid.major = element_blank(),
+        plot.margin=unit(c(0.5,1,0.5,1.2),"cm")) 
+```
+
+```{r}
+sub_plots_e2 <- cowplot::plot_grid(e2_rt_plot, e2_ent_plot, labels = c("B", "C"), 
+                                ncol = 1,
+                                rel_heights = c(0.75,1))
+
+cowplot::plot_grid(e2_action_plot, sub_plots, labels = c("A"),
+                   rel_widths = c(1, 0.85))
+```

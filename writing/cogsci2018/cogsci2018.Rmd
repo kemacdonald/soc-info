@@ -145,16 +145,15 @@ FIXME participants with IP addresses in the United States were recruited on Amaz
 
 ### Stimuli and Design
 
-We presented three different toys that look very similar but each work in different ways, 
-and provided instructions for them. 
-The "ButtonMusic" toy instructions were: *"Press the button on the right to play music. Pull the handle on the left to turn on the light. Doing both produces both effects."* 
-The "HandleMusic" toy instuctions were: *"Pull the handle on the left to play music. Press the button on the right to turn on the light. Doing both produces both effects."* 
-The "BothMusicLight" toy instuctions were: *"Pull the handle on the left AND press the button on the right to turn on the light and play music at the same time. The button press or handle pull on its own doesn’t produce any effect."* 
-Each toy had a label showing its name.
+We presented images of three different toys that look very similar but each work in different ways, and provided instructions for them (see top of Fig. 1 for the toy types).
+Toy 1 instructions were: *"Pull the handle on the left to turn on the light.Press the button on the right to play music. Doing both produces both effects at the same time."* 
+Toy 2 instuctions were: *"Pull the handle on the left to play music. Press the button on the right to turn on the light. Doing both produces both effects."* 
+Toy 3 instuctions were: *"Pull the handle on the left AND press the button on the right to turn on the light and play music at the same time. The button press or handle pull on its own doesn’t produce any effect."* 
+Each toy had a label at the front, indicating which action(s) will make the toy operate, and with which outcome effect.
 
-We presented a story to the participants that motivated a goal the participants must achieve by acting on a given toy. 
-Importantly, the given toy was missing its label, such that partcipants could not know whether the toy was a ButtonMusic, HandleMusic, or BothMusicLight toy. 
-For all the participants, we asked them to imagine that they were a children's toy developer and that one day, their boss approached them and said: 
+We asked participants to act on one of these toys; importantly, the given toy was missing its label, such that partcipants could not know whether the toy was Toy 1, 2 or 3.
+We assigned participants into four goal conditions: 
+For participants in *learning*, *performance*, and *presentation* conditions, we asked them to imagine that they were children's toy developers and that one day, their boss approached them and said: 
 "That must be one of the new toys that you've been working on. But it looks like you forgot to put on the label! Can you figure out whether this toy is a ButtonMusic toy, HandleMusic toy, or BothMusicLight toy?" (*learning* condition); 
 "That must be one of the new toys that you've been working on. I want to hear the music it plays." (*performance* condition);
 or "That must be one of the new toys that you've been working on. How does it work?" followed by the prompt "... [Imagine] you only had one chance to impress your boss and show that you're competent ..." (*presentation* condition). 
@@ -166,9 +165,13 @@ and randomized the order of actions to choose from.
 
 ### Procedure
 
-Participants were first introduced to the task with a picture of a toy with labels on its parts. 
-Then they read instructions for each of the three toys, 
-after which they were asked what they would do to make the toy operate as manipulation check
+We first introduced participants to the task, by asking them to 
+"Imagine that [they] are a children’s toy developer, and [they've] designed three toys that each work in different ways".
+We showed them a picture of a possible toy with labels on its different parts. 
+Then they read instructions for each of the three toy types.
+We presented Toy 1 and Toy 2 instructions in a randomized order first,
+and then Toy 3 instructions.
+Afterwards, they were asked what they would do to make the toy operate as manipulation check
 (e.g. "How would you make the toy play music?").
 We asked participants to rate prior likelihood that an unknown toy is a ButtonMusic toy, HandleMusic toy, or BothMusicLight toy, to use as priors for our model. 
 Participants then read a scenario for one of the three goal conditions, 

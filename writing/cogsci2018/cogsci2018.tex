@@ -49,7 +49,11 @@
 % \textwidth 16cm
 % \textheight 21cm
 
+<<<<<<< HEAD
 \title{Learning versus performance in social contexts}
+=======
+\title{Exploring and exploiting in social contexts}
+>>>>>>> ea16332d5d1c776b3642b74c139550161e131a22
 
 
 \author{{\large \bf Erica J. Yoon*}, {\large \bf Kyle MacDonald*}, {\large \bf Mika Asaba}, {\large \bf Hyowon Gweon}, \and {\large \bf Michael C. Frank} \\ \{ejyoon, kylem4, masaba, hyo, mcfrank\} @stanford.edu \\ Department of Psychology, Stanford University \\ *These authors contributed equally to this work.}
@@ -68,6 +72,7 @@ tradeoff
 
 \section{Introduction}\label{introduction}
 
+<<<<<<< HEAD
 Imagine that you are a novice cook and you have to decide what meal to
 prepare for a first date. Should you choose a recipe that you have tried
 before or should you attempt to make something new? While the familiar
@@ -152,6 +157,78 @@ another individual whom he wants to impress). We then look at adult
 participants' action choices within a simplistic task representing
 different goals and social contexts, and show that the empirical results
 are consistent with predictions of our model.
+=======
+Imagine you had to cook a meal for yourself. Would you want to follow a
+recipe you have tried before, or venture a new recipe? The familiar
+recipe would ensure a good meal, but the new recipe might turn out to be
+even better, despite some risk that it might not. How would your
+decision change if the meal was for a date? Or for a charitable cooking
+teacher?
+
+We often face such ``exploration-exploitation dilemma'' (Sutton \&
+Barto, 1998), in which we have to choose between an overt, readily
+accessible reward based on what we already know (\emph{exploitation}),
+and a search for discovery of knowledge that we do not yet have
+(\emph{exploration}). How do we decide whether to explore or to exploit?
+We may think about our goals associated with each of the options, and
+how much we want to achieve each goal relative to others: Do I want to
+learn a new way of cooking, or secure a decent meal? We may also
+consider contextual factors that affect how much we prioritize each
+goal: For example, am I by myself, or is there a person whom I want to
+impress with a delicious meal? An agent can have a mixture of
+exploration and exploitation goals that conflict with each other. In
+this work, we seek to explain how people may behave given an
+exploration-exploitation dilemma, by (1) formalizing the tradeoff
+between an agent's goals for exploration versus exploitation, and (2)
+considering ways in which the social context (e.g.~the presence of
+another person) may play a role in how much value is placed on each goal
+instantiation.
+
+One prominent case study that shows people's exploratory behaviors is
+\emph{active learning} (also known as ``self-directed'' learning), or
+active construction of their own learning experience by making
+informative queries or exploring unknown contingencies (Gureckis \&
+Markant, 2012; Nelson, 2005; Sutton \& Barto, 1998). Active learning
+research has focused on whether the context of self-directed learning
+presents advantages in acquiring and processing more information for the
+learner (see Gureckis \& Markant (2012)). We are not always alone in a
+learning context, however; often there are teachers, peer learners, or
+other people around that might affect our learning process and outcome.
+Indeed, when adults and children receive pedagogical instructions from a
+teacher or view actions of another learner, they show different rate of
+learning or exploratory information-seeking behaviors (Bonawitz et al.,
+2011; Markant \& Gureckis, 2014).
+
+But what role does the \emph{social} factor play on self-directed
+learning? For example, can a learner's action choices differ based on
+the presence of an observer, regardless of whether the observer provides
+relevant information for learning? Instead of a learning goal, a learner
+may prioritize reputation management: looking more attractive,
+knowledgeable, or competent to an observer. In such case, the learner
+will infer what the observer thinks about the learner based on what the
+learner did (cook a meal) and its outcome (a delicious meal). Then the
+learner will choose between exploration and exploitation that will
+likely maximize favorable impression of the learner to the observer
+(`That meal was delicious, so he must be a good cook!').
+
+The link between self-directed learning and self-presentation to others
+is unclear. Self-presentational concerns affect people's prosocial and
+cheating behaviors (FIXME: cite). Socially elicited goals to prioritize
+presenting oneself as competent changes people's task choices and
+responses to difficulty (Dweck \& Leggett, 1988; Elliott \& Dweck,
+1988). But no work has looked at how the social pressure based on
+another person's presence influences people's strategies to act in a
+self-directed learning environment.
+
+We present a computational model formalizing the
+exploration-exploitation tradeoff in an active learning environment with
+social pressures. The model shows that the agent's goal preference may
+change depending on the social context, in the presence or absence of
+another person. We then look at empirical judgments for a simplistic
+representation of our model across different goals and social contexts
+(i.e.~presence of another person), which are consistent with the
+predictions of the model.
+>>>>>>> ea16332d5d1c776b3642b74c139550161e131a22
 
 \section{Computational model}\label{computational-model}
 
@@ -184,7 +261,7 @@ himself as a competent individual who knows how to make the toy work
 (\emph{presentational utility}; see the model diagram in Figure 1).
 
 \begin{CodeChunk}
-\captionsetup{width=0.8\textwidth}\begin{figure*}[h]
+\begin{figure*}[h]
 
 {\centering \includegraphics{figs/model_diagram-1} 
 
@@ -355,6 +432,12 @@ can be viewed at
 
 \section{Results}\label{results}
 
+\subsection{Action selections}\label{action-selections}
+
+\subsection{Response times}\label{response-times}
+
+\subsection{Entropy change}\label{entropy-change}
+
 \section{Discussion}\label{discussion}
 
 \section{Acknowledgements}\label{acknowledgements}
@@ -367,6 +450,12 @@ PGSD3-454094-2014 to EJY \ldots{} FIXME.
 \setlength{\parindent}{-0.1in} \setlength{\leftskip}{0.125in} \noindent
 
 \hypertarget{refs}{}
+\hypertarget{ref-bonawitz2011}{}
+Bonawitz, E., Shafto, P., Gweon, H., Goodman, N. D., Spelke, E., \&
+Schulz, L. (2011). The double-edged sword of pedagogy: Instruction
+limits spontaneous exploration and discovery. \emph{Cognition},
+\emph{120}(3), 322--330.
+
 \hypertarget{ref-coenen2017}{}
 Coenen, A., Nelson, J. D., \& Gureckis, T. M. (2017). Asking the right
 questions about human inquiry.
@@ -386,6 +475,11 @@ Goodman, N. D., \& Frank, M. C. (2016). Pragmatic language
 interpretation as probabilistic inference. \emph{Trends in Cognitive
 Sciences}, \emph{20}(11), 818--829.
 
+\hypertarget{ref-gureckis2012}{}
+Gureckis, T. M., \& Markant, D. B. (2012). Self-directed learning: A
+cognitive and computational perspective. \emph{Perspectives on
+Psychological Science}, \emph{7}(5), 464--481.
+
 \hypertarget{ref-jara2016}{}
 Jara-Ettinger, J., Gweon, H., Schulz, L. E., \& Tenenbaum, J. B. (2016).
 The naïve utility calculus: Computational principles underlying
@@ -399,6 +493,11 @@ experiment. \emph{The Annals of Mathematical Statistics}, 986--1005.
 \hypertarget{ref-mackay2003}{}
 MacKay, D. J. (2003). \emph{Information theory, inference and learning
 algorithms}. Cambridge university press.
+
+\hypertarget{ref-markant2014}{}
+Markant, D. B., \& Gureckis, T. M. (2014). Is it better to select or to
+receive? Learning via active and passive hypothesis testing.
+\emph{Journal of Experimental Psychology: General}, \emph{143}(1), 94.
 
 \hypertarget{ref-nelson2005}{}
 Nelson, J. D. (2005). Finding useful questions: On bayesian

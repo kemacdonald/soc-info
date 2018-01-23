@@ -10,11 +10,12 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r}
 library(lubridate); library(magrittr); library(jsonlite); 
 library(tidyverse); library(here)
+source(here("R/soc_info_helpers.R"))
 ```
 
 ```{r}
 #d_path <- "data/01_raw_data/goal_actions_ver3/full_sample/sandbox-results"
-d_path <- "data/01_raw_data/goal_actions_ver3/full_sample/production-results"
+d_path <- "data/01_raw_data/goal_actions_ver4/production-results"
 ```
 
 ## Load raw json data
@@ -28,6 +29,7 @@ json_to_df <- function(data_path, file) {
   tibble(
     workerid = d$WorkerId, 
     condition = d$answers$goal_condition,
+    social_condition = d$answers$social_condition,
     outcome = d$answers$outcome,
     music_check_response = d$answers$manip_check_music_response %>% unlist(),
     light_check_response = d$answers$manip_check_light_response %>% unlist(),
@@ -87,8 +89,8 @@ How many participants in each condition?
 
 ```{r}
 df %>% 
-  distinct(workerid, condition) %>% 
-  count(condition) %>% 
+  distinct(workerid, condition, social_condition) %>% 
+  count(condition, social_condition) %>% 
   knitr::kable()
 ```
 
@@ -184,7 +186,10 @@ Now join everything together and create some factor variables in the order we wa
 
 ```{r}
 d_final %<>%
-  left_join(., select(df_wide, id, condition, action_response) %>% unique(),
+  left_join(., select(df_wide, id, 
+                      condition, 
+                      social_condition, 
+                      action_response) %>% unique(),
             by = c("id", "condition"))
 ```
 
@@ -198,10 +203,10 @@ d_final %<>%
                               end = str_locate(hypothesis, outcome)[1] - 1))
 ```
 
-## Write to disk. 
+
+## Write to disk
 
 ```{r}
 write_csv(d_final, path = here("/data/02_tidy_data", 
-                               "goal_actions_ver3_tidy_full_sample.csv"))
+                               "goal_actions_no_soc_tidy.csv"))
 ```
-

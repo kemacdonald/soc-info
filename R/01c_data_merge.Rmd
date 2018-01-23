@@ -29,7 +29,11 @@ d <- read_csv(here(d_path, "goal_actions_ver3_tidy_full_sample.csv")) %>%
            condition == "presentation" ~ "social",
            condition == "performance" ~ "social",
            condition == "learning" ~ "social",
+<<<<<<< HEAD
            condition == "nogoal" ~ "no_social"
+=======
+           condition == "nogoal" ~ "no-social"
+>>>>>>> ea16332d5d1c776b3642b74c139550161e131a22
          ))
 
 # actions/beliefs with no social conditions
@@ -43,6 +47,22 @@ Merge data.
 d %<>% bind_rows(., d_no_soc)
 ```
 
+<<<<<<< HEAD
+=======
+Compute entropy change.
+
+```{r}
+d_entropy <- d %>% 
+  group_by(id, condition, social_condition, hypothesis_type, action_response) %>% 
+  summarise(entropy_est = compute_entropy(slider_value_normalized)) %>% 
+  spread(hypothesis_type, entropy_est) %>% 
+  mutate(entropy_change = posterior - prior,
+         action_r_collap = ifelse(action_response == "both", "both", "single"))
+
+d %<>% left_join(., d_entropy)
+```
+
+>>>>>>> ea16332d5d1c776b3642b74c139550161e131a22
 Write to disk.
 
 ```{r}

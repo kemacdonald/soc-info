@@ -11,37 +11,30 @@ knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 
 ```{r}
 library(knitr); library(magrittr); library(tidyverse); library(here)
-theme_set(theme_minimal() +
-            theme(legend.position = "top",
-                  axis.text.x = element_text(angle = 0, vjust = 0.5),
-                  panel.border = element_rect(fill=NA, size=0.5, color = "grey")))
+source(here("R/soc_info_helpers.R"))
 ```
 
 Read data. 
 
 ```{r}
-d_path <- "data/02_tidy_data/"
+d_path <- "data/03_merged_data"
+d_prior <- read_csv(here("data/02_tidy_data/goal_actions_prior_tidy.csv"))
+d <- read_csv(here(d_path, "goal_actions_master.csv"))
 
-## action priors
-d_prior_name <- "goal_actions_prior_tidy.csv"
-d_prior <- read_csv(here(d_path, d_prior_name))
-
-## action/beliefs data
-d_file_name <- "goal_actions_ver3_tidy_full_sample.csv"
-d <- read_csv(here(d_path, d_file_name)) 
-```
-
-```{r}
 d %<>% mutate(hypothesis_type = factor(hypothesis_type) %>% fct_rev(),
-              hypothesis = factor(hypothesis) %>% fct_rev())
+              hypothesis = factor(hypothesis) %>% fct_rev(),
+              condition = fct_recode(condition,
+                         "No goal" = "nogoal",
+                         "Learning" = "learning",
+                         "Performance" = "performance",
+                         "Presentation" = "presentation"))
 ```
 
 ## Table of comments
 
 ```{r}
 d %>% 
-  select(id, age, condition, about) %>% 
-  unique() %>% 
+  distinct(id, age, condition, social_condition, about) %>% 
   arrange(condition) %>% 
   group_by(condition) %>% 
   sample_n(size = 5) %>% 
@@ -54,9 +47,9 @@ How many participants in each condition?
 
 ```{r}
 d %>% 
-  select(id, condition) %>% 
-  unique() %>% 
-  count(condition) %>% 
+  distinct(id, condition, social_condition, experiment) %>% 
+  count(condition, social_condition, experiment) %>% 
+  arrange(experiment, social_condition, condition) %>% 
   kable()
 ```
 
@@ -64,8 +57,7 @@ How did participants do on the manipulation checks?
 
 ```{r}
 d %>% 
-  select(id, manip_check_score) %>% 
-  unique() %>% 
+  distinct(id, manip_check_score) %>% 
   pull(manip_check_score) %>% 
   qplot()
 ```
@@ -75,8 +67,8 @@ How many participants passed the manipulation checks?
 ```{r}
 d %>% 
   filter(manip_check_score >= 2) %>% 
-  distinct(id, condition) %>% 
-  count(condition) %>% 
+  distinct(id, condition, social_condition, experiment) %>% 
+  count(condition, social_condition, experiment) %>% 
   kable()
 ```
 
@@ -113,12 +105,18 @@ d_prior %>%
         panel.border = element_rect(fill=NA, size=0.5, color = "grey"))
 ```
 
-## Prior and posterior beliefs
+## Experiment 1
+
+```{r}
+d_e1 <- filter(d, str_detect(experiment, pattern = "e1"))
+```
+
+### Prior and posterior beliefs
 
 Now summarise and plot.
   
 ```{r}  
-d %>% 
+d_e1 %>% 
   group_by(hypothesis_type, condition, hypothesis) %>% 
   summarise(m = mean(slider_value_normalized)) %>% 
   ggplot(aes(x = hypothesis, y = m, fill = condition)) +
@@ -132,36 +130,31 @@ d %>%
   facet_wrap(~hypothesis_type)
 ```
 
-## Action responses 
+### Action responses 
 
 Plot counts of different action responses for the learning vs. performance goal conditions.
 
 ```{r}
-d %>% 
-  select(condition, action_response, id) %>% 
-  mutate(condition = fct_recode(condition,
-                                "No goal" = "nogoal",
-                                "Learning" = "learning",
-                                "Performance" = "performance",
-                                "Presentation" = "presentation")) %>%
-  unique() %>% 
+action_plot <- d_e1 %>% 
+  distinct(condition, action_response, id) %>%
   count(action_response, condition) %>% 
   group_by(condition) %>% 
   mutate(prop = n / sum(n)) %>% 
-  ggplot(aes(x = action_response, y = prop, fill = condition)) +
-  geom_bar(stat = "identity", width = 0.4, position = position_dodge()) +
+  ggplot(aes(x = condition, y = prop, fill = fct_rev(action_response))) +
+  geom_bar(stat = "identity", width = 0.4) +
   lims(y = c(0,1)) +
+  labs(x = NULL, y = "Prop. Participants", fill = "action response:") +
+  #scale_alpha_discrete(range = c(0.4,1)) + 
   ggthemes::scale_fill_ptol() +
-  facet_grid(.~condition) +
-  theme(panel.border = element_rect(fill=NA, size=0.5, color = "grey")) +
-  xlab("Action responses") +
-  guides(fill=FALSE)
+  theme(panel.border = element_rect(fill=NA, size=0.5, color = "grey"),
+        panel.grid.minor = element_blank(),
+        plot.margin=unit(c(1,1,1.5,1.2),"cm")) 
 ```
 
 Make a table of the raw counts.
 
 ```{r}
-d %>% 
+d_e1 %>% 
   select(condition, action_response, id) %>% 
   unique() %>% 
   count(action_response, condition) %>% 
@@ -169,15 +162,14 @@ d %>%
   knitr::kable()
 ```
 
-## Experiment time distributions
+### Response times
 
 Plot the distribution of overall time on the experiment across conditions.
 
 ```{r}
-d %>% 
-  select(id, experiment_time, condition) %>% 
+d_e1 %>% 
+  distinct(id, experiment_time, condition) %>% 
   filter(experiment_time <= 2 * sd(experiment_time)) %>% 
-  unique() %>% 
   ggplot(aes(x = condition, y = experiment_time / 60)) +
   geom_boxplot(width = 0.3) +
   lims(y = c(0,8)) +
@@ -187,14 +179,18 @@ d %>%
 Make the same plot, but for the time spent on the action decision.
 
 ```{r}
-d %>% 
-  select(id, action_trial_time, condition) %>% 
-  filter(action_trial_time <= 1 * sd(action_trial_time)) %>% 
-  unique() %>% 
+rt_plot <- d_e1 %>% 
+  distinct(id, action_trial_time, condition, action_response) %>% 
+  filter(action_trial_time < mean(action_trial_time) + 2 * sd(action_trial_time),
+         action_trial_time > mean(action_trial_time) - 2 * sd(action_trial_time)) %>% 
   ggplot(aes(x = condition, y = action_trial_time)) +
-  geom_boxplot(width = 0.3) +
-  labs(y = c("time (sec)"), x= NULL) +
-  theme(panel.border = element_rect(fill=NA, size=0.5, color = "grey"))
+  lims(y = c(0,100)) + 
+  geom_violin(fill = NA, draw_quantiles = 0.5, size = 1, trim = T, color = "grey30") + 
+  geom_jitter(width = 0.05, shape = 21, alpha = 0.9, color = "grey30", size = 1) + 
+  labs(y = c("response time (sec)"), x= NULL) +
+  theme(panel.border = element_rect(fill=NA, size=0.5, color = "grey"),
+        panel.grid.major = element_blank(),
+        plot.margin=unit(c(0.5,1,0.5,1.2),"cm"))
 ```
 
 ## Plot belief change
@@ -202,7 +198,7 @@ d %>%
 here we plot belief change as a function of condition and the action that participants chose.
 
 ```{r}
-d %>% 
+d_e1 %>% 
   ggplot(aes(x = hypothesis_type, y = slider_value_normalized, 
              color = action_response)) +
   geom_line(aes(group = id), size = 0.5) + 
@@ -218,7 +214,7 @@ d %>%
 Get the total belief change for each participant and plot as a function of condition.
 
 ```{r fig.width=8, out.width="80%", fig.asp = "0.6"}
-d %>% 
+d_e1 %>% 
   select(id, condition, hypothesis, hypothesis_type, slider_value_normalized, 
          action_response) %>% 
   spread(key = hypothesis_type, slider_value_normalized) %>% 
@@ -233,4 +229,118 @@ d %>%
   geom_jitter(width = 0.07, alpha = 1, shape = 21, color = "darkgrey") +
   ggthemes::scale_color_ptol() +
   facet_wrap(~condition, ncol = 4) 
+```
+
+### Entropy analysis
+
+Plot entropy change as a function of condition.
+
+```{r}
+entropy_plot <- d_e1 %>% 
+  distinct(id, condition, social_condition, entropy_change, action_r_collap) %>% 
+  ggplot(aes(x = condition, y = entropy_change, color = fct_rev(action_r_collap),
+             fill = fct_rev(action_r_collap))) +
+  geom_hline(yintercept = 0, linetype = "solid", color = "grey20") +
+  geom_violin(position = position_dodge(width = 1), scale = "width", size = 1,
+              draw_quantiles = c(0.5), alpha = 0.3) +
+  geom_jitter(alpha = 1, shape = 21, size = 1, 
+              position = position_jitterdodge(dodge.width = 1, jitter.width = .05)) +
+  ggthemes::scale_color_ptol() +
+  ggthemes::scale_fill_ptol() +
+  lims(y = c(-1.5, 1.5)) +
+  guides(fill = F) + 
+  labs(x = NULL, y = "entropy change", color = "action response: ") +
+  theme(panel.border = element_rect(fill=NA, size=0.5, color = "grey"),
+        panel.grid.minor = element_blank(),
+        panel.grid.major = element_blank(),
+        plot.margin=unit(c(0.5,1,0.5,1.2),"cm"))
+```
+
+Putting it all together.
+
+```{r}
+sub_plots <- cowplot::plot_grid(rt_plot, entropy_plot, labels = c("B", "C"), 
+                                ncol = 1,
+                                rel_heights = c(0.75,1))
+
+cowplot::plot_grid(action_plot, sub_plots, labels = c("A"),
+                   rel_widths = c(1, 0.85))
+```
+
+
+## Experiment 2
+
+```{r}
+d_e2 <- filter(d, str_detect(experiment, pattern = "e2"))
+```
+
+Action plot
+
+```{r}
+e2_action_plot <- d_e2 %>% 
+  distinct(condition, social_condition, action_r_collap, id) %>%
+  count(action_r_collap, condition, social_condition) %>% 
+  group_by(condition, social_condition) %>% 
+  mutate(prop = n / sum(n)) %>% 
+  filter(action_r_collap == "single") %>% 
+  ggplot(aes(x = condition, y = prop, fill = social_condition)) +
+  geom_bar(stat = "identity", width = 0.4, position = position_dodge()) +
+  lims(y = c(0,1)) +
+  labs(x = NULL, y = "Prop. Participants", fill = "context:",
+       title = "Proportion of participants who chose the learning action") +
+  #scale_alpha_discrete(range = c(0.4,1)) + 
+  ggthemes::scale_fill_ptol() +
+  theme(panel.border = element_rect(fill=NA, size=0.5, color = "grey"),
+        panel.grid.minor = element_blank(),
+        legend.position = "bottom",
+        plot.margin=unit(c(1,1,1.5,1.2),"cm")) 
+```
+
+RT plot
+
+```{r}
+e2_rt_plot <- d_e2 %>% 
+  distinct(id, action_trial_time, condition, social_condition) %>% 
+  filter(action_trial_time < mean(action_trial_time) + 2 * sd(action_trial_time),
+         action_trial_time > mean(action_trial_time) - 2 * sd(action_trial_time)) %>% 
+  ggplot(aes(x = condition, y = action_trial_time)) +
+  lims(y = c(0,100)) + 
+  geom_violin(fill = NA, draw_quantiles = 0.5, size = 1, trim = T, color = "grey30") + 
+  geom_jitter(width = 0.05, shape = 21, alpha = 0.9, color = "grey30", size = 1) + 
+  labs(y = c("response time (sec)"), x= NULL) +
+  theme(panel.border = element_rect(fill=NA, size=0.5, color = "grey"),
+        panel.grid.major = element_blank(),
+        plot.margin=unit(c(0.5,1,0.5,1.2),"cm")) 
+```
+
+Entropy change
+
+```{r}
+e2_ent_plot <- d_e2 %>% 
+  distinct(id, condition, social_condition, entropy_change, action_r_collap) %>% 
+  ggplot(aes(x = condition, y = entropy_change, color = fct_rev(action_r_collap),
+             fill = fct_rev(action_r_collap))) +
+  geom_hline(yintercept = 0, linetype = "solid", color = "grey20") +
+  geom_violin(position = position_dodge(width = 1), scale = "width", size = 1,
+              draw_quantiles = c(0.5), alpha = 0.3) +
+  geom_jitter(alpha = 1, shape = 21, size = 1, 
+              position = position_jitterdodge(dodge.width = 1, jitter.width = .05)) +
+  ggthemes::scale_color_ptol() +
+  ggthemes::scale_fill_ptol() +
+  lims(y = c(-1.5, 1.5)) +
+  guides(fill = F) + 
+  labs(x = NULL, y = "entropy change", color = "action response: ") +
+  theme(panel.border = element_rect(fill=NA, size=0.5, color = "grey"),
+        panel.grid.minor = element_blank(),
+        panel.grid.major = element_blank(),
+        plot.margin=unit(c(0.5,1,0.5,1.2),"cm")) 
+```
+
+```{r}
+sub_plots_e2 <- cowplot::plot_grid(e2_rt_plot, e2_ent_plot, labels = c("B", "C"), 
+                                ncol = 1,
+                                rel_heights = c(0.75,1))
+
+cowplot::plot_grid(e2_action_plot, sub_plots, labels = c("A"),
+                   rel_widths = c(1, 0.85))
 ```

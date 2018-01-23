@@ -1,0 +1,51 @@
+---
+title: "Soc-Info Data Merge"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+```
+
+## Setup
+
+```{r}
+library(knitr); library(magrittr); library(tidyverse); library(here)
+source(here("R/soc_info_helpers.R"))
+```
+
+Read data. 
+
+```{r}
+d_path <- "data/02_tidy_data/"
+
+## action priors
+d_prior <- read_csv(here(d_path, "goal_actions_prior_tidy.csv"))
+
+## action/beliefs data
+d <- read_csv(here(d_path, "goal_actions_ver3_tidy_full_sample.csv")) %>% 
+  mutate(experiment = "e1_soc_only",
+         social_condition = case_when(
+           condition == "presentation" ~ "social",
+           condition == "performance" ~ "social",
+           condition == "learning" ~ "social",
+           condition == "nogoal" ~ "no_social"
+         ))
+
+# actions/beliefs with no social conditions
+d_no_soc <- read_csv(here(d_path, "goal_actions_no_soc_tidy.csv")) %>% 
+  mutate(experiment = "e2_no_soc")
+```
+
+Merge data. 
+
+```{r}
+d %<>% bind_rows(., d_no_soc)
+```
+
+Write to disk.
+
+```{r}
+write_csv(d, path = here("/data/03_merged_data", "goal_actions_master.csv"))
+```
+

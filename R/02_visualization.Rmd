@@ -284,12 +284,13 @@ e2_action_plot <- d_e2 %>%
   mutate(prop = n / sum(n)) %>% 
   filter(action_r_collap == "single") %>% 
   ggplot(aes(x = condition, y = prop, fill = social_condition)) +
-  geom_bar(stat = "identity", width = 0.4, position = position_dodge()) +
+  geom_bar(stat = "identity", width = 0.6, position = position_dodge()) +
   lims(y = c(0,1)) +
   labs(x = NULL, y = "Prop. Participants", fill = "context:",
-       title = "Proportion of participants who chose the learning action") +
+       title = "Proportion of participants who chose 'learning' action") +
   #scale_alpha_discrete(range = c(0.4,1)) + 
-  ggthemes::scale_fill_ptol() +
+  #ggthemes::scale_fill_ptol() +
+  scale_fill_grey(start = 0.1, end = 0.6)+ 
   theme(panel.border = element_rect(fill=NA, size=0.5, color = "grey"),
         panel.grid.minor = element_blank(),
         legend.position = "bottom",
@@ -309,7 +310,7 @@ e2_rt_plot <- d_e2 %>%
   geom_jitter(width = 0.05, shape = 21, alpha = 0.9, color = "grey30", size = 1) + 
   labs(y = c("response time (sec)"), x= NULL) +
   theme(panel.border = element_rect(fill=NA, size=0.5, color = "grey"),
-        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
         plot.margin=unit(c(0.5,1,0.5,1.2),"cm")) 
 ```
 
@@ -332,7 +333,7 @@ e2_ent_plot <- d_e2 %>%
   labs(x = NULL, y = "entropy change", color = "action response: ") +
   theme(panel.border = element_rect(fill=NA, size=0.5, color = "grey"),
         panel.grid.minor = element_blank(),
-        panel.grid.major = element_blank(),
+        #panel.grid.major = element_blank(),
         plot.margin=unit(c(0.5,1,0.5,1.2),"cm")) 
 ```
 
@@ -341,6 +342,11 @@ sub_plots_e2 <- cowplot::plot_grid(e2_rt_plot, e2_ent_plot, labels = c("B", "C")
                                 ncol = 1,
                                 rel_heights = c(0.75,1))
 
-cowplot::plot_grid(e2_action_plot, sub_plots, labels = c("A"),
+cowplot::plot_grid(e2_action_plot, sub_plots_e2, labels = c("A"),
                    rel_widths = c(1, 0.85))
 ```
+
+```{r}
+ggsave("key_plot.pdf", plot = ggplot2::last_plot(), path = here::here(), scale = 1)
+```
+

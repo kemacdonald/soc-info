@@ -1,5 +1,5 @@
 ---
-title: "Exploring and exploiting in social contexts"
+title: "Learning versus performance in social contexts"
 bibliography: library.bib
 csl: apa6.csl
 document-params: "10pt, letterpaper"
@@ -32,39 +32,17 @@ library(xtable)
 
 # Introduction
 
-Imagine you had to cook a meal for yourself. Would you want to follow a recipe you have tried before, or venture a new recipe? The familiar recipe would ensure a good meal, but the new recipe might turn out to be even better, despite some risk that it might not. How would your decision change if the meal was for a date? Or for a charitable cooking teacher?
+Imagine that you are a novice cook and you have to decide what meal to prepare for a first date. Should you choose a recipe that you have tried before or should you attempt to make something new? While the familiar recipe has a high chance of ensuring a good meal, you are less likely to discover a new, delicious dish. The new recipe might taste even better, but it has a higher chance of turning out awful since you have never made it before. Now, consider how your decision making might change if instead of making the meal for first date, you were preparing it for a charitable cooking teacher whom you trust.
 
-We often face such "exploration-exploitation dilemma" [@sutton1998], in which we have to choose between an overt, readily accessible reward based on what we already know (*exploitation*), and a search for discovery of knowledge that we do not yet have (*exploration*). 
-How do we decide whether to explore or to exploit?
-We may think about our goals associated with each of the options, 
-and how much we want to achieve each goal relative to others: 
-Do I want to learn a new way of cooking, or secure a decent meal? 
-We may also consider contextual factors that affect how much we prioritize each goal: 
-For example, am I by myself, or is there a person whom I want to impress with a delicious meal?
-An agent can have a mixture of exploration and exploitation goals that conflict with each other.
-In this work, we seek to explain how people may behave given an exploration-exploitation dilemma, by (1) formalizing the tradeoff between an agent's goals for exploration versus exploitation, and (2) considering ways in which the social context (e.g. the presence of another person) may play a role in how much value is placed on each goal instantiation. 
+Scenarios like this, capture an "explore-exploit” dilemma [@sutton1998], in which we have to choose between actions that could (a) lead to an overt, readily accessible reward based on what we already know (*exploitation*) or (b) result in the discovery of new information (*exploration*). This decision of whether to explore or exploit is directly related to the relative strength of our goals within a particular context. In the cooking example, should I prioritize the goal of learning by cooking the new recipe, or should I emphasize the performance goal by preparing the tried and true meal? The key insight motivating the work reported here is that features of the social context play a fundamental role in the goals we consider and the relative weighting of each goal. And, in turn, the goals that we consider shape the actions take. We present a formal account to integrate social reasoning processes with decision making in the context of learning-performance tradeoff, as a case study of the explore-exploit dilemma.
 
-One prominent case study that shows people's exploratory behaviors is *active learning* (also known as "self-directed" learning), or active construction of their own learning experience by making informative queries or exploring unknown contingencies [@nelson2005; @sutton1998; @gureckis2012]. 
-Active learning research has focused on whether the context of self-directed learning presents advantages in acquiring and processing more information for the learner (see @gureckis2012). 
-We are not always alone in a learning context, however; often there are teachers, peer learners, or other people around that might affect our learning process and outcome. 
-Indeed, when adults and children receive pedagogical instructions from a teacher or view actions of another learner, they show different rate of learning or exploratory information-seeking behaviors [@bonawitz2011; @markant2014].
+We situate our integrative account within two theoretical frameworks: *active learning* and *pragmatic social reasoning*. Active learning refers to situations where people are given control over the sequence of information in a learning context (e.g., verbal question asking to elicit informative responses). The key assumption is that learners will maximize the usefulness of their actions by gathering information that is especially helpful for their own learning. The effects of active learning have been the focus of much empirical work in education [@grabinger1995rich; @prince2004does], machine learning [@settles2012active; @ramirez2017active], and cognitive psychology [@castro2009human; @chi2009active], with the common finding that active contexts lead to more rapid learning when compared to passive contexts where people do not have control over the flow of information. 
 
-But what role does the *social* factor play on self-directed learning?
-For example, can a learner's action choices differ based on the presence of an observer, regardless of whether the observer provides relevant information for learning?
-Instead of a learning goal, a learner may prioritize reputation management:
-looking more attractive, knowledgeable, or competent to an observer. 
-In such case, the learner will infer what the observer thinks about the learner based on what the learner did (cook a meal) and its outcome (a delicious meal). 
-Then the learner will choose between exploration and exploitation that will likely maximize favorable impression of the learner to the observer ('That meal was delicious, so he must be a good cook!').
+Work on exploratory actions in active learning often isolates people’s information goals by removing the learner from any kind of social context. In contrast, real-world learning is characterized by contexts where there are teachers, peer learners, or other individuals who can directly influence the utility of information gathering actions. Consider that there is now a large body of evidence suggesting that social reasoning processes can change the computations (i.e., inferences) that support learning from evidence. For example, children learn at different rates after observing the same evidence depending on whether they thought the behavior was accidental (less informative) or intentional (more informative). Moreover, adults and children will make even stronger inferences if they believe that another person selected their actions with the goal of helping them learn (i.e., teaching) [@shafto2012learning]. 
 
-The link between self-directed learning and self-presentation to others is unclear. 
-Self-presentational concerns affect people's prosocial and cheating behaviors (FIXME: cite).
-Socially elicited goals to prioritize presenting oneself as competent 
-changes people's task choices and responses to difficulty [@elliott1988; @dweck1988].
-But no work has looked at how the social pressure based on another person's presence influences people's strategies to act in a self-directed learning environment.
+But how can we begin to understand the role of *social* factors in self-directed learning contexts? Answering this question represents a significant step because explore-exploit decisions often unfold within fundamentally social contexts where people must integrate the value of social goals and information goals when deciding what to do next. Consider that actions that maximize learning are inherently risky -- leading to mistakes and struggles -- which could be difficult to undertake in with someone else present. Thus, a learner might prioritize actions that maintain their reputation: looking more attractive, knowledgeable, or competent to the observer. In this case, the learner is leveraging psychological reasoning processes to infer what the observer thinks based on their action (cook a meal) and its outcome (a delicious meal).  If the learner is worried about the observer’s beliefs, then the they might choose actions that maximize the probability of maintaining a favorable impression in the eyes of the observer ('That meal was delicious, so he must be a good cook!'). Indeed, when the value of self-presentation is highlighted, children avoid opportunities that will help them learn new things but pose risks for public mistakes [@elliott1988; @dweck1988]. 
 
-We present a computational model formalizing the exploration-exploitation tradeoff in an active learning environment with social pressures. 
-The model shows that the agent's goal preference may change depending on the social context, in the presence or absence of another person. 
-We then look at empirical judgments for a simplistic representation of our model across different goals and social contexts (i.e. presence of another person), which are consistent with the predictions of the model.
+We present the first computational model of the learning-performance tradeoff in a self-directed learning context with social factors. We model a learner who considers his learning goal versus performance goal, which may be influenced by the social context (e.g. the presence of another individual whom he wants to impress). We then look at adult participants’ action choices within a simplistic task  representing different goals and social contexts, and show that the empirical results are consistent with predictions of our model.
 
 # Computational model
 
@@ -154,7 +132,7 @@ $$ P_L(a | \phi, obs) \propto \exp(\lambda \cdot \mathbb{E}[U(a;\phi; obs)])$$
 
 ### Participants
 
-FIXME participants with IP addresses in the United States were recruited on Amazon’s Mechanical Turk. We excluded FIXME partcipants who failed to answer manipulation check questions correctly (See Procedure section for details on the manipulation check questions), and thus the remaining FIXME participants were included in our final analysis.
+FIXME participants with IP addresses in the United States were recruited on Amazon’s Mechanical Turk. We excluded FIXME partcipants who failed to answer at least two out of three set of manipulation check questions correctly (See Procedure section for details on the manipulation check questions), and thus the remaining FIXME participants were included in our final analysis.
 
 ### Stimuli and Design
 
@@ -191,7 +169,7 @@ You will get a 10 cent bonus after submitting the HIT if you [goal]."
 After selecting one of three possible actions to perform on the toy and 
 seeing that the toy successfully played music, 
 participants were asked again to rate the likelihood that the unlabeled toy was each of the three possible toys. 
-The experiment can be viewed at https://langcog.stanford.edu/expts/EJY/soc-info/goal_actions_ver2/soc_info_goals.html.
+Our hypothesis and method were pre-registered prior to data collection on the Open Science Framework (https://osf.io/kcjau).
 
 # Results
 

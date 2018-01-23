@@ -49,7 +49,7 @@
 % \textwidth 16cm
 % \textheight 21cm
 
-\title{Learning in social context}
+\title{Learning versus performance in social contexts}
 
 
 \author{{\large \bf Erica J. Yoon*}, {\large \bf Kyle MacDonald*}, {\large \bf Mika Asaba}, {\large \bf Hyowon Gweon}, \and {\large \bf Michael C. Frank} \\ \{ejyoon, kylem4, masaba, hyo, mcfrank\} @stanford.edu \\ Department of Psychology, Stanford University \\ *These authors contributed equally to this work.}
@@ -68,31 +68,120 @@ tradeoff
 
 \section{Introduction}\label{introduction}
 
-Learning takes place in social contexts.
+Imagine that you are a novice cook and you have to decide what meal to
+prepare for a first date. Should you choose a recipe that you have tried
+before or should you attempt to make something new? While the familiar
+recipe has a high chance of ensuring a good meal, you are less likely to
+discover a new, delicious dish. The new recipe might taste even better,
+but it has a higher chance of turning out awful since you have never
+made it before. Now, consider how your decision making might change if
+instead of making the meal for first date, you were preparing it for a
+charitable cooking teacher whom you trust.
 
-A simple case study of situations where people have to decide between
-information gain and self-presentation,
+Scenarios like this, capture an ``explore-exploit'' dilemma (Sutton \&
+Barto, 1998), in which we have to choose between actions that could (a)
+lead to an overt, readily accessible reward based on what we already
+know (\emph{exploitation}) or (b) result in the discovery of new
+information (\emph{exploration}). This decision of whether to explore or
+exploit is directly related to the relative strength of our goals within
+a particular context. In the cooking example, should I prioritize the
+goal of learning by cooking the new recipe, or should I emphasize the
+performance goal by preparing the tried and true meal? The key insight
+motivating the work reported here is that features of the social context
+play a fundamental role in the goals we consider and the relative
+weighting of each goal. And, in turn, the goals that we consider shape
+the actions take. We present a formal account to integrate social
+reasoning processes with decision making in the context of
+learning-performance tradeoff, as a case study of the explore-exploit
+dilemma.
+
+We situate our integrative account within two theoretical frameworks:
+\emph{active learning} and \emph{pragmatic social reasoning}. Active
+learning refers to situations where people are given control over the
+sequence of information in a learning context (e.g., verbal question
+asking to elicit informative responses). The key assumption is that
+learners will maximize the usefulness of their actions by gathering
+information that is especially helpful for their own learning. The
+effects of active learning have been the focus of much empirical work in
+education ({\textbf{???}}, {\textbf{???}}), machine learning
+({\textbf{???}}, {\textbf{???}}), and cognitive psychology
+({\textbf{???}}, {\textbf{???}}), with the common finding that active
+contexts lead to more rapid learning when compared to passive contexts
+where people do not have control over the flow of information.
+
+Work on exploratory actions in active learning often isolates people's
+information goals by removing the learner from any kind of social
+context. In contrast, real-world learning is characterized by contexts
+where there are teachers, peer learners, or other individuals who can
+directly influence the utility of information gathering actions.
+Consider that there is now a large body of evidence suggesting that
+social reasoning processes can change the computations (i.e.,
+inferences) that support learning from evidence. For example, children
+learn at different rates after observing the same evidence depending on
+whether they thought the behavior was accidental (less informative) or
+intentional (more informative). Moreover, adults and children will make
+even stronger inferences if they believe that another person selected
+their actions with the goal of helping them learn (i.e., teaching)
+({\textbf{???}}).
+
+But how can we begin to understand the role of \emph{social} factors in
+self-directed learning contexts? Answering this question represents a
+significant step because explore-exploit decisions often unfold within
+fundamentally social contexts where people must integrate the value of
+social goals and information goals when deciding what to do next.
+Consider that actions that maximize learning are inherently risky --
+leading to mistakes and struggles -- which could be difficult to
+undertake in with someone else present. Thus, a learner might prioritize
+actions that maintain their reputation: looking more attractive,
+knowledgeable, or competent to the observer. In this case, the learner
+is leveraging psychological reasoning processes to infer what the
+observer thinks based on their action (cook a meal) and its outcome (a
+delicious meal). If the learner is worried about the observer's beliefs,
+then the they might choose actions that maximize the probability of
+maintaining a favorable impression in the eyes of the observer (`That
+meal was delicious, so he must be a good cook!'). Indeed, when the value
+of self-presentation is highlighted, children avoid opportunities that
+will help them learn new things but pose risks for public mistakes
+(Dweck \& Leggett, 1988; Elliott \& Dweck, 1988).
+
+We present the first computational model of the learning-performance
+tradeoff in a self-directed learning context with social factors. We
+model a learner who considers his learning goal versus performance goal,
+which may be influenced by the social context (e.g.~the presence of
+another individual whom he wants to impress). We then look at adult
+participants' action choices within a simplistic task representing
+different goals and social contexts, and show that the empirical results
+are consistent with predictions of our model.
 
 \section{Computational model}\label{computational-model}
 
-A key assumption underlying inferences in recent formal models of social
-cognition is that people act approximately optimally given a utility
-function (e.g. Goodman \& Frank, 2016; Jara-Ettinger, Gweon, Schulz, \&
-Tenenbaum, 2016). Our model operates under the same principle of an
-approximately optimal agent, who reasons about the utility function that
-represents a combination of multiple goals. In Yoon, Tessler, Goodman,
-\& Frank (2017), the utility function comprised a weighted combination
-of multiple utilities (goals) considered by the speaker, reflecting a
+To start to examine people's exploration-exploitation tradeoff, we
+situate the model and paradigm in a simplistic learning environment. The
+learner in our model is to act on a toy, and can choose between two
+kinds of actions that will each lead to one outcome (new discovery) or
+the other (overt reward). The learner's action rests on his goals to
+explore versus exploit, and is determined in part by the presence or
+absence of another person he cares about (i.e.~his
+boss)\footnote{From here on, we use a male pronoun for Bob, the learner, and female pronoun for Ann, the boss and observer.}.
+
+A key assumption underlying inferences in recent Bayesian models of
+human social cognition is that people act approximately optimally given
+a utility function (e.g. Goodman \& Frank, 2016; Jara-Ettinger, Gweon,
+Schulz, \& Tenenbaum, 2016). Our model adopts the same utility-theoretic
+approach, and assumes an approximately optimal agent, who reasons about
+the utility function that represents a combination of multiple goals. In
+a recent model of polite language production (Yoon, Tessler, Goodman, \&
+Frank, 2017), the utility function comprised a weighted combination of
+multiple utilities (goals) considered by the speaker, reflecting a
 principled tradeoff between different communicative goals (e.g.~to be
-informative, to make the listener feel good, and to appear to be a
-helpful speaker). We use a similarly structured utility function that
-reflects different goals that a learner has in a social learning
-context. Specifically, we model how a person may make a decision to act
-based on his desire to learn how a toy works (\emph{learning utility}),
-to make the toy operate and perform a given function (\emph{performance
-utility}), or to present himself as a competent individual who knows how
-to make the toy work (\emph{presentational utility}; see the model
-diagram in Figure 1).
+informative, to be kind, and to appear to be a helpful speaker). We use
+a similarly structured utility function that reflects different goals
+that a learner has in a social learning context. Specifically, we model
+how a person may make a decision to act based on his desire to learn how
+a toy works (\emph{learning utility}), to make the toy operate and
+perform a given function (\emph{performance utility}), or to present
+himself as a competent individual who knows how to make the toy work
+(\emph{presentational utility}; see the model diagram in Figure 1).
 
 \begin{CodeChunk}
 \captionsetup{width=0.8\textwidth}\begin{figure*}[h]
@@ -101,7 +190,7 @@ diagram in Figure 1).
 
 }
 
-\caption[Diagram of the computational model]{Diagram of the computational model: The learner considers possible hypotheses and his contextual goals. When an observer is absent, he considers his learning goal (to maximize information gain) and performance goal (to play music) and decides on an action. When an observer is present, his decision for an action is based on his learning goal vs. presentational goal (to have the observer infer his competence).}\label{fig:model_diagram}
+\caption[Diagram of the computational model]{Diagram of the computational model: The learner considers possible hypotheses and his contextual goals. When an observer is absent, he considers his learning goal (to maximize information gain) and performance goal (e.g. to play music) and decides on an action. When an observer is present, his decision for an action is based on his learning goal vs. presentational goal (to have the observer infer his competence).}\label{fig:model_diagram}
 \end{figure*}
 \end{CodeChunk}
 
@@ -160,7 +249,7 @@ making the toy operate. Specifically within our current paradigm, the
 performance utility is the expected utility of music playing (\(m\))
 given the learner's action \(a\).
 
-\[ U_{performance} = \ln(P_L(m | a)) \] \noindent
+\[ U_{performance} = P_L(m | a) \] \noindent
 Thus, performance utility is maximized by taking an action that is most
 likely to make the toy ``go'' and play music, which is the operation of
 interest.
@@ -185,9 +274,9 @@ The learner thinks about how the observer infers the learner's
 competence, and his \emph{presentational} utility is based on maximizing
 the apparent competence inferred by the observer.
 
-\[ U_{presentation} = \ln(P_O(c)) \] Thus, when there is an observer
-present, the learner considers the tradeoff between the learning utility
-and presentational utility:
+\[ U_{presentation} = P_O(c) \] Thus, when there is an observer present,
+the learner considers the tradeoff between the learning utility and
+presentational utility:
 
 \[ U(m;a;\phi; obs = yes) = \phi \cdot U_{learning} + (1-\phi) \cdot U_{presentational}\]
 Based on the utility functions above, the learner (\(L\)) chooses his
@@ -210,57 +299,58 @@ FIXME participants were included in our final analysis.
 
 \subsubsection{Stimuli and Design}\label{stimuli-and-design}
 
-We asked participants to imagine they were children's toy developers. We
-presented three different toys that look very similar but each work in
-different ways, and provided instructions for them. \emph{The
-ButtonMusic toy} instructions were: \emph{``Press the button on the
+We presented three different toys that look very similar but each work
+in different ways, and provided instructions for them. The
+``ButtonMusic'' toy instructions were: \emph{``Press the button on the
 right to play music. Pull the handle on the left to turn on the light.
-Doing both produces both effects.''} ``\emph{The HandleMusic toy}
-instuctions were: \emph{``Pull the handle on the left to play music.
-Press the button on the right to turn on the light. Doing both produces
-both effects.''} and''\emph{the BothMusicLight toy} instuctions were:
-\emph{``Pull the handle on the left AND press the button on the right to
-turn on the light and play music at the same time. The button press or
-handle pull on its own doesn't produce any effect.''} Each toy had a
-label showing its name.
+Doing both produces both effects.''} The ``HandleMusic'' toy instuctions
+were: \emph{``Pull the handle on the left to play music. Press the
+button on the right to turn on the light. Doing both produces both
+effects.''} The ``BothMusicLight'' toy instuctions were: \emph{``Pull
+the handle on the left AND press the button on the right to turn on the
+light and play music at the same time. The button press or handle pull
+on its own doesn't produce any effect.''} Each toy had a label showing
+its name.
 
-We presented a story to the participants that their boss motivated a
-goal the participants must achieve by acting on the toy. Importantly,
-the toy was missing its label, such that partcipants could not know
+We presented a story to the participants that motivated a goal the
+participants must achieve by acting on a given toy. Importantly, the
+given toy was missing its label, such that partcipants could not know
 whether the toy was a ButtonMusic, HandleMusic, or BothMusicLight toy.
-In the \emph{learning} condition, the boss said ``That must be one of
-the new toys that you've been working on. But it looks like you forgot
-to put on the label! Can you figure out whether this toy is a
-ButtonMusic toy, HandleMusic toy, or BothMusicLight toy?''; in the
-\emph{performance} condition, the boss said ``That must be one of the
-new toys that you've been working on. I want to hear the music it
-plays.''; and in the \emph{presentation} condition, the boss said ``That
-must be one of the new toys that you've been working on. How does it
-work?'' followed by the prompt ``\ldots{} you only had one chance to
-impress your boss and show that you're competent \ldots{}'' Then we
-asked participants to select one action to try out on the toy: to
-``press the button'', ``pull the handle'', or ``press the button and
-pull the handle.'' Each participant was randomly assigned to one of
-three goal conditions, and shown a randomized order of actions to choose
-from.
+For all the participants, we asked them to imagine that they were a
+children's toy developer and that one day, their boss approached them
+and said: ``That must be one of the new toys that you've been working
+on. But it looks like you forgot to put on the label! Can you figure out
+whether this toy is a ButtonMusic toy, HandleMusic toy, or
+BothMusicLight toy?'' (\emph{learning} condition); ``That must be one of
+the new toys that you've been working on. I want to hear the music it
+plays.'' (\emph{performance} condition); or ``That must be one of the
+new toys that you've been working on. How does it work?'' followed by
+the prompt ``\ldots{} {[}Imagine{]} you only had one chance to impress
+your boss and show that you're competent \ldots{}'' (\emph{presentation}
+condition). We asked participants to select an action they would like to
+try out on the toy in order to accomplish the specified goal, out of
+three possible actions: to ``press the button'', ``pull the handle'', or
+``press the button and pull the handle.'' We randomly assigned each
+participant to one of the three goal conditions, and randomized the
+order of actions to choose from.
 
 \subsubsection{Procedure}\label{procedure}
 
-Participants were first introduced to the task and shown a picture of a
-toy with labels on its parts. Then they read instructions for each of
-the three toys, after which they were asked what they would do to make
-the toy play music and to make it turn on the light, to make sure they
-understood the instructions. Participants who answered these
-manipulation check questions incorrectly were excluded from our final
-analysis. We then asked participants to rate prior likelihood that an
+Participants were first introduced to the task with a picture of a toy
+with labels on its parts. Then they read instructions for each of the
+three toys, after which they were asked what they would do to make the
+toy operate as manipulation check (e.g. ``How would you make the toy
+play music?''). We asked participants to rate prior likelihood that an
 unknown toy is a ButtonMusic toy, HandleMusic toy, or BothMusicLight
-toy. Participants read a scenario for one of the three goal conditions,
-and the following instruction: ``If you only had one chance to try a
-SINGLE action to {[}goal{]}, which action would you want to take? You
-will get a 10 cent bonus after submitting the HIT if you {[}goal{]}.''
-After selecting a response out of three possible actions, the
-participants were asked again to rate the likelihood for which toy the
-unlabeled toy was. The experiment can be viewed at
+toy, to use as priors for our model. Participants then read a scenario
+for one of the three goal conditions, followed by the question: ``If you
+only had one chance to try a SINGLE action to {[}goal{]}, which action
+would you want to take? You will get a 10 cent bonus after submitting
+the HIT if you {[}goal{]}.'' After selecting one of three possible
+actions to perform on the toy and seeing that the toy successfully
+played music, participants were asked again to rate the likelihood that
+the unlabeled toy was each of the three possible toys. The experiment
+can be viewed at
 \url{https://langcog.stanford.edu/expts/EJY/soc-info/goal_actions_ver2/soc_info_goals.html}.
 
 \section{Results}\label{results}
@@ -278,8 +368,18 @@ PGSD3-454094-2014 to EJY \ldots{} FIXME.
 
 \hypertarget{refs}{}
 \hypertarget{ref-coenen2017}{}
-Coenen, A., Nelson, J. D., \& Gureckis, T. (2017). Asking the right
+Coenen, A., Nelson, J. D., \& Gureckis, T. M. (2017). Asking the right
 questions about human inquiry.
+
+\hypertarget{ref-dweck1988}{}
+Dweck, C. S., \& Leggett, E. L. (1988). A social-cognitive approach to
+motivation and personality. \emph{Psychological Review}, \emph{95}(2),
+256.
+
+\hypertarget{ref-elliott1988}{}
+Elliott, E. S., \& Dweck, C. S. (1988). Goals: An approach to motivation
+and achievement. \emph{Journal of Personality and Social Psychology},
+\emph{54}(1), 5.
 
 \hypertarget{ref-goodman2016}{}
 Goodman, N. D., \& Frank, M. C. (2016). Pragmatic language
@@ -304,6 +404,10 @@ algorithms}. Cambridge university press.
 Nelson, J. D. (2005). Finding useful questions: On bayesian
 diagnosticity, probability, impact, and information gain.
 \emph{Psychological Review}, \emph{112}(4).
+
+\hypertarget{ref-sutton1998}{}
+Sutton, R. S., \& Barto, A. G. (1998). \emph{Introduction to
+reinforcement learning} (Vol. 135). MIT Press Cambridge.
 
 \hypertarget{ref-yoon2017}{}
 Yoon, E. J., Tessler, M. H., Goodman, N. D., \& Frank, M. C. (2017). ``I

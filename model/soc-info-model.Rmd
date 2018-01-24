@@ -55,8 +55,9 @@ var infoGainQuestion = function(infoGainAnswerVect, probAnswerVect) {
 
 ```{r define}
 define <- '
-var obsPres = [true, false];
-var weightBins = [0.1, 0.3, 0.5, 0.7, 0.9]
+var obsPres = [1, 0];
+//var weightBins = [0.1, 0.3, 0.5, 0.7, 0.9]
+var weightBins = [0.9, 0.3, 0.5, 0.7, 0.1]
 
 var machineTypes = ["button", "handle", "both"];
 
@@ -127,41 +128,43 @@ function() {
   }); 
 }, 10000)
 
-var learner1 = cache(function(phi) {
-   return Infer({method: "enumerate"}, 
-function(observerPresent) {
+var learner1 = cache(function(phi, beta_pres, observerPresent) {
+   return Infer({method: "enumerate"}, function() {
      var action = sample(actionPrior);
      var competence = uniformDraw([0,1]);
-    var O1 = observer1(action);
+var O1 = observer1(action);
 
     var learningUtility = phi*igQuestion(action)
-    var presentationUtility = (1-phi)*rawProb(O1,competence)
+    var presentationUtility = observerPresent*beta_pres*rawProb(O1,competence)
    var performanceUtility = (1-phi)*playMusic(action)
-    
-    var learnerUtility = function(observerPresent) {
-      return (observerPresent == true ? 
-              learningUtility + presentationUtility :
-              learningUtility + performanceUtility
-             )}             
-    factor(optimality*learnerUtility(observerPresent))
+
+    var learnerUtility = learningUtility + presentationUtility + performanceUtility;
+
+    factor(optimality*learnerUtility)
     return action;  
    
   });   
 }, 10000)
+
+
+
+//learner1(0.5, 0.6, 1)
 '
 ```
 
 ```{r}
 learnerCall <- '
-_.flatten(
+_.flattenDeep(
 map(function(phi){
+map(function(beta_pres){
     map(function(observerPresent){
-      var actionProbs = learner1(phi, observerPresent)
+      var actionProbs = learner1(phi, beta_pres, observerPresent)
       var actObj = _.fromPairs(map(function(a){
         [a, Math.exp(actionProbs.score(a))]
       }, actions))
-       return extend(actObj,{ phi: phi, obsPres: observerPresent})
+       return extend(actObj,{ phi: phi, beta_pres: beta_pres, obsPres: observerPresent})
     }, obsPres)
+}, weightBins)
 }, weightBins))
 '
 ```
@@ -173,17 +176,17 @@ rs.l1 <- webppl(paste(utils, define, socInfo, learnerCall,  sep = '\n'))
 
 
 rs.l1.tidy <- data.frame(rs.l1) %>% 
-  gather(key=action, value=prob, -phi, -obsPres)
+  gather(key=action, value=prob, -phi, -obsPres, -beta_pres)
 ```
 
 ```{r}
 fig.l1 <- ggplot(rs.l1.tidy %>%
-                   filter(obsPres == TRUE) %>%
+                   filter(beta_pres == "0.7") %>%
                    mutate(action = relevel(factor(action), ref="both")),
        aes( x = action, y = prob, group = action, fill = action) )+
   geom_bar(position = position_dodge(), stat = 'identity', color = 'black')+
   scale_y_continuous(limits = c(0, 0.9), breaks = c(0, 0.25, 0.5, 0.75))+
-  facet_grid(.~phi, labeller=label_both)+
+  facet_grid(obsPres~phi, labeller=label_both)+
   # scale_fill_manual(values =  rev(brewer.pal(5,"RdBu")))+
   # scale_fill_manual(values =  brewer.pal(4,"RdBu"))+
   scale_fill_solarized()+

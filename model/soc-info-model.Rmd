@@ -58,58 +58,57 @@ define <- '
 var obsPres = [true, false];
 var weightBins = [0.1, 0.3, 0.5, 0.7, 0.9]
 
-var machineTypes = ["albatross", "bumblebee", "chestnut"];
+var machineTypes = ["button", "handle", "both"];
 
 // p(machine)
-var machineTypePrior = Categorical({vs: ["albatross", "bumblebee", "chestnut"],
+var machineTypePrior = Categorical({vs: machineTypes,
                                     ps: [.4, .4, .2]});
 
 // p(buttonPress)
-var buttonPresses = ["A", "B", "AB"];
-var buttonPressPrior = Categorical({vs: buttonPresses,
-//                                     ps: [.4, .4, .2]}); 
-                                    ps: [.2, .2, .6]}); 
+var actions = ["button", "handle", "both"];
+var actionPrior = Categorical({vs: actions,
+                                    ps: [.4, .3, .3]}); 
 
-// p(music | buttonPress)
-var playMusic = function(buttonPress) {
-  (buttonPress == "A") ? .4:
-  (buttonPress == "B") ? .4:
-  (buttonPress == "AB") ? 1:
+// p(music | action)
+var playMusic = function(action) {
+  (action == "button") ? .4:
+  (action == "handle") ? .4:
+  (action == "both") ? 1:
   0
 }
 
-// p(machine identity | buttonPress & music)
-var testMachine = function(state, buttonPress) {
-  return (buttonPress == "A" ? 
-          Categorical({vs: ["albatross", "bumblebee", "chestnut"], 
+// p(machine identity | action & music)
+var testMachine = function(state, action) {
+  return (action == "button" ? 
+          Categorical({vs: machineTypes, 
                        ps: [1, 0, 0]}) :
-          buttonPress == "B" ? 
-          Categorical({vs: ["albatross", "bumblebee", "chestnut"], 
+          action == "handle" ? 
+          Categorical({vs: machineTypes, 
                        ps: [0, 1, 0]}) :
-          buttonPress == "AB" ? 
-          Categorical({vs: ["albatross", "bumblebee", "chestnut"], 
+          action == "both" ? 
+          Categorical({vs: machineTypes, 
                        ps: [0.4, 0.4, 0.2]}) :
           "nothing");
 }
 
 // compute info gain for question involving a particular button press (A, B, or A&B)
-var igQuestion = function(buttonPress) {
+var igQuestion = function(action) {
   var priorEntLearner = computeEntropy(
     map (function (x) { return Math.pow(Math.E, machineTypePrior.score(x))}, 
          machineTypes));
 
   var igAnswerYes = infoGainAnswer(priorEntLearner, 
                                     map(function(x) 
-                                        {return rawProb(testMachine("state", buttonPress),x)}, 
+                                        {return rawProb(testMachine("state", action),x)}, 
                                         machineTypes))
   var igAnswerNo = infoGainAnswer(priorEntLearner, 
-                                    map(function(x) {return 1-rawProb(testMachine("state", buttonPress),x)}, 
+                                    map(function(x) {return 1-rawProb(testMachine("state", action),x)}, 
                                         machineTypes))
 
   return infoGainQuestion(
                  [igAnswerYes, igAnswerNo],
-                 [playMusic(buttonPress), 
-                  1-playMusic(buttonPress)])
+                 [playMusic(action), 
+                  1-playMusic(action)])
 }
 
 var optimality = 1.7;
@@ -120,10 +119,10 @@ var optimality = 1.7;
 
 ```{r soc-info}
 socInfo <-'
-var observer1 = cache(function(buttonPress) {
+var observer1 = cache(function(action) {
    return Infer({method: "enumerate"}, 
 function() {
-     var competence = playMusic(buttonPress);
+     var competence = playMusic(action);
      return competence;
   }); 
 }, 10000)
@@ -131,13 +130,13 @@ function() {
 var learner1 = cache(function(phi) {
    return Infer({method: "enumerate"}, 
 function(observerPresent) {
-     var buttonPress = sample(buttonPressPrior);
+     var action = sample(actionPrior);
      var competence = uniformDraw([0,1]);
-    var O1 = observer1(buttonPress);
+    var O1 = observer1(action);
 
-    var learningUtility = phi*igQuestion(buttonPress)
+    var learningUtility = phi*igQuestion(action)
     var presentationUtility = (1-phi)*rawProb(O1,competence)
-   var performanceUtility = (1-phi)*playMusic(buttonPress)
+   var performanceUtility = (1-phi)*playMusic(action)
     
     var learnerUtility = function(observerPresent) {
       return (observerPresent == true ? 
@@ -145,7 +144,7 @@ function(observerPresent) {
               learningUtility + performanceUtility
              )}             
     factor(optimality*learnerUtility(observerPresent))
-    return buttonPress;  
+    return action;  
    
   });   
 }, 10000)
@@ -160,7 +159,7 @@ map(function(phi){
       var actionProbs = learner1(phi, observerPresent)
       var actObj = _.fromPairs(map(function(a){
         [a, Math.exp(actionProbs.score(a))]
-      }, buttonPresses))
+      }, actions))
        return extend(actObj,{ phi: phi, obsPres: observerPresent})
     }, obsPres)
 }, weightBins))
@@ -180,7 +179,7 @@ rs.l1.tidy <- data.frame(rs.l1) %>%
 ```{r}
 fig.l1 <- ggplot(rs.l1.tidy %>%
                    filter(obsPres == TRUE) %>%
-                   mutate(action = relevel(factor(action), ref="AB")),
+                   mutate(action = relevel(factor(action), ref="both")),
        aes( x = action, y = prob, group = action, fill = action) )+
   geom_bar(position = position_dodge(), stat = 'identity', color = 'black')+
   scale_y_continuous(limits = c(0, 0.9), breaks = c(0, 0.25, 0.5, 0.75))+

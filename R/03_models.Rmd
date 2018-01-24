@@ -369,10 +369,8 @@ samples_entropy_e2 <- m_entropy_e2 %>%
                 single_action_beta = action_r_collapsingle) %>% 
   select(-sigma, -R2, -`log-fit_ratio`) %>% 
   mutate(sample_id = 1:n()) %>% 
-  gather(key = effect, value = param_est, -sample_id) %>% 
-  mutate(eff_type = ifelse(str_detect(effect, "int"), "interaction", "main effect")) 
+  gather(key = effect, value = param_est, -sample_id) 
 ```
-
 
 ## Save posterior samples 
 
@@ -392,7 +390,9 @@ posteriors <- list(action_logit_samples_e1 = samples_logit_act_e1,
                    action_logit_samples_e2 = samples_logit_act_e2,
                    action_logit_samples_e2_int = samples_logit_act_e2_int,
                    rt_samples_e2 = samples_rt_e2,
-                   ent_samples_e2 = samples_entropy_e2)
+                   ent_samples_e2 = samples_entropy_e2
+                   )
 
 saveRDS(posteriors, file = here("data/03_merged_data", "soc-info-posterior-samples.rds"))
+saveRDS(models, file = here("data/03_merged_data", "soc-info-models.rds"))
 ```

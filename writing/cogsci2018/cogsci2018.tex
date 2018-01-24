@@ -291,11 +291,11 @@ action \(a\) approximately optimally (as per optimality parameter
 \begin{CodeChunk}
 \begin{figure*}[tb]
 
-{\centering \includegraphics[width=0.95\linewidth]{figs/e1_behav_results-1} 
+{\centering \includegraphics[width=0.95\linewidth]{figs/e1_behav_results_plot-1} 
 
 }
 
-\caption[Behavioral results for E1]{Behavioral results for E1. Panel A shows the proportion of action decisions for each goal condition. Error bars represent 95\% binomial confidence intervals computed using Bayesian inference. Panel B shows violin plots of participants' response times on the action decisions. Each point represents a participant with the width of the violin representing the density of the data at that value. Panel C shows violin plots of participants' belief change (entropy) as a function of condition. Lower values represent higher certainty after selecting an action. Color in panels A and C represent the type of action participants selected.}\label{fig:e1_behav_results}
+\caption[Behavioral results for E1]{Behavioral results for E1. Panel A shows the proportion of action decisions for each goal condition. Error bars represent 95\% binomial confidence intervals computed using Bayesian inference. Panel B shows violin plots of participants' response times on the action decisions. Each point represents a participant with the width of the violin representing the density of the data at that value. Panel C shows violin plots of participants' belief change (entropy) as a function of condition. Lower values represent higher certainty after selecting an action. Color in panels A and C represent the type of action participants selected.}\label{fig:e1_behav_results_plot}
 \end{figure*}
 \end{CodeChunk}
 
@@ -339,15 +339,23 @@ participants were included in our final analysis.
 
 We presented images of three different toys that look very similar but
 each work in different ways, and provided instructions for them (see top
-of Fig. 1 for what the toys looked like). Toy 1 instructions were:
-\emph{``Pull the handle on the left to turn on the light. Press the
-button on the right to play music. Doing both produces both effects at
-the same time.''} Toy 2 instuctions were: \emph{``Pull the handle on the
-left to play music. Press the button on the right to turn on the light.
-Doing both produces both effects at the same time.''} Toy 3 instuctions
-were: \emph{``Pull the handle on the left AND press the button on the
-right to turn on the light and play music at the same time. The button
-press or handle pull on its own doesn't produce any effect.''}
+of Fig. 1 for what the toys looked like).
+
+\begin{itemize}
+\item
+  Toy 1 instructions were: \emph{``Pull the handle on the left to turn
+  on the light. Press the button on the right to play music. Doing both
+  produces both effects at the same time.''}
+\item
+  Toy 2 instuctions were: \emph{``Pull the handle on the left to play
+  music. Press the button on the right to turn on the light. Doing both
+  produces both effects at the same time.''}
+\item
+  Toy 3 instuctions were: \emph{``Pull the handle on the left AND press
+  the button on the right to turn on the light and play music at the
+  same time. The button press or handle pull on its own doesn't produce
+  any effect.''}
+\end{itemize}
 
 Thus, doing both button press and handle pull was immediately rewarding
 but uninformative (as it does not disambiguate the causal mechanism in
@@ -360,14 +368,14 @@ We asked participants to act on one of these toys; importantly, the
 given toy was missing its label, such that partcipants could not know
 whether the toy was Toy 1, 2 or 3. We assigned participants into four
 goal conditions. For participants in \emph{learning},
-\emph{performance}, and \emph{presentation} conditions, we asked them to
+\emph{performance}, and \emph{presentation} conditions,we asked them to
 imagine that they were children's toy developers and that one day their
 boss approached them. We then instructed participants to: figure out the
 correct label for the toy (\emph{learning} condition); make the toy play
 music (or turn the light on; \emph{performance} condition); or impress
 their boss and show that they are competent (\emph{presentation}
 condition). In \emph{no-goal} condition, participants were asked to
-select an actio We asked participants to select an action they would
+select an action. We asked participants to select an action they would
 like to try out on the toy in order to accomplish the specified goal,
 out of three possible actions: to ``press the button'', ``pull the
 handle'', or ``press the button and pull the handle.'' We randomly
@@ -407,19 +415,19 @@ about the possible toy designs using entropy, and belief change was
 measured as the difference in entropy before and after selecting an
 action.
 
-We used the \texttt{rstanarm} ({\textbf{???}}) package to fit Bayesian
-regression models estimating the differences across conditions. We
-report the uncertainty in our point estimates using 95\% Highest Density
-Intervals (HDI). The HDI provides a range of credible values given the
-data and model. All analysis code for the statistical models can be
-found in the online repository for this project:
+We used the \texttt{rstanarm} (Gabry \& Goodrich, 2016) package to fit
+Bayesian regression models estimating the differences across conditions.
+We report the uncertainty in our point estimates using 95\% Highest
+Density Intervals (HDI). The HDI provides a range of credible values
+given the data and model. All analysis code for the statistical models
+can be found in the online repository for this project:
 \url{https://github.com/kemacdonald/soc-info/R/03_models.Rmd}.
 
 Next, we present a Bayesian Data Analysis of the correspondence between
 our computational model and participants action responses. {[}FIXME --
 say more about the BDA?{]}
 
-\subsubsection{Action decisions}\label{action-decisions}
+\subsubsection{Action decisions:}\label{action-decisions}
 
 We modeled action decisions using a logistic regression specified as
 \texttt{$action \sim goal\_condition$} with the No-Goal condition as the
@@ -441,16 +449,16 @@ in the Performance condition selected actions at at similar rate
 (\(\beta\) = 0.53, {[}-0.33, 1.46{]}) with the 95\% HDI including the
 null value.
 
-\subsubsection{Action decision times}\label{action-decision-times}
+\subsubsection{Action decision times:}\label{action-decision-times}
 
-We analyzed response times in log space with the same model specifiation
-as the action decisions. Panel A of Figure 2 shows the full RT data
-distribution. On average, participants took 27.82 seconds to generate a
-response in the No-goal condidition. Participants took on on average
-1.48 seconds longer to generate a decision in the Learning condition
-(\(\beta\) = 0.39, {[}1.15, 1.88{]}) but produced similar response times
-in the Performance (\(\beta\) = -0.15, {[}0.66, 1.11{]}) and
-Presentation (\(\beta\) = -0.11, {[}1.15, 1.14{]}) conditions.
+We analyzed response times in log space using the same model
+specification. Panel A of Figure 2 shows the full RT data distribution.
+On average, participants took 27.82 seconds to generate a response in
+the No-goal condidition. Participants took on on average 1.48 seconds
+longer to generate a decision in the Learning condition (\(\beta\) =
+0.39, {[}1.15, 1.88{]}) but produced similar response times in the
+Performance (\(\beta\) = -0.15, {[}0.66, 1.11{]}) and Presentation
+(\(\beta\) = -0.11, {[}1.15, 1.14{]}) conditions.
 
 \subsubsection{Belief change}\label{belief-change}
 
@@ -465,7 +473,7 @@ Presentation (\(\beta\) = -0.11, {[}1.15, 1.14{]}) conditions.
 
 }
 
-\caption[Behavioral results for E2]{Behavioral results for E2.}\label{fig:e2_behav_results}
+\caption[Behavioral results for E2]{Behavioral results for E2. Panel A shows actions decisions with color representing social context. Panel B shows decision times. Panel C shows belief change. All other plotting conventions are the same as Figure 2.}\label{fig:e2_behav_results}
 \end{figure*}
 \end{CodeChunk}
 
@@ -520,9 +528,9 @@ The procedure was identical to Experiment 1.
 
 \subsubsection{Entropy change}\label{entropy-change}
 
-\subsubsection{Model fitting}\label{model-fitting}
+\subsubsection{BDA model-data fits}\label{bda-model-data-fits-1}
 
-\section{General discussion}\label{general-discussion}
+\section{General Discussion}\label{general-discussion}
 
 \section{Acknowledgements}\label{acknowledgements}
 
@@ -557,6 +565,10 @@ motivation and personality. \emph{Psychological Review}, \emph{95}(2),
 Elliott, E. S., \& Dweck, C. S. (1988). Goals: An approach to motivation
 and achievement. \emph{Journal of Personality and Social Psychology},
 \emph{54}(1), 5.
+
+\hypertarget{ref-gabry2016rstanarm}{}
+Gabry, J., \& Goodrich, B. (2016). Rstanarm: Bayesian applied regression
+modeling via stan. r package version 2.10. 0.
 
 \hypertarget{ref-goodman2016}{}
 Goodman, N. D., \& Frank, M. C. (2016). Pragmatic language

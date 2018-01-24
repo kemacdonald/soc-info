@@ -26,6 +26,14 @@ image_path <- "writing/cogsci2018/figs/"
 library(png); library(grid)
 library(gridExtra); library(xtable)
 library(tidyverse); library(here)
+
+source(here("R/soc_info_helpers.R"))
+```
+
+```{r read data and posterior samples}
+d <- read_csv(here("data/03_merged_data/goal_actions_master.csv"))
+d_prior <- read_csv(here("data/02_tidy_data/goal_actions_prior_tidy.csv"))
+d_models <- readRDS(here("data/03_merged_data/soc-info-posterior-samples.rds"))
 ```
 
 # Introduction
@@ -128,7 +136,11 @@ $$ P_L(a | \phi, obs) \propto \exp(\lambda \cdot \mathbb{E}[U(a;\phi; obs)])$$
 
 # Experiment 1
 
-```{r e1_behav_results, include = T, fig.env = "figure*", fig.pos = "tb", fig.width=5, fig.asp = 0.8, out.width= "95%", fig.align='center', fig.cap = "Behavioral results for E1."}
+```{r e1 filter}
+d_e1 <- d %>% filter(str_detect(experiment, "e1"))
+```
+
+```{r e1_behav_results, include = T, fig.env = "figure*", fig.pos = "tb", fig.width=5, fig.asp = 0.7, out.width= "95%", fig.align='center', fig.cap = "Behavioral results for E1. Panel A shows the proportion of action decisions for each goal condition. Error bars represent 95\\% binomial confidence intervals computed using Bayesian inference. Panel B shows violin plots of participants' response times on the action decisions. Each point represents a participant with the width of the violin representing the density of the data at that value. Panel C shows violin plots of participants' belief change (entropy) as a function of condition. Lower values represent higher certainty after selecting an action. Color in panels A and C represent the type of action participants selected."}
 png::readPNG(here::here(image_path, "e1_plot.png")) %>% 
   grid::grid.raster()
 ```
@@ -153,12 +165,27 @@ and no goal.
 
 We hypothesized that participants would choose an informative action more often in the following order of goal conditions (decreasing): learning, no goal, performance, and presentation\footnote{Our hypothesis and method were pre-registered prior to data collection on the Open Science Framework (https://osf.io/kcjau)}.
 
-
 ## Method
 
 ### Participants
 
-FIXME participants with IP addresses in the United States were recruited on Amazon’s Mechanical Turk. We excluded FIXME partcipants who failed to answer at least two out of three set of manipulation check questions correctly (See Procedure section for details on the manipulation check questions), and thus the remaining FIXME participants were included in our final analysis.
+```{r e1 participants}
+e1_participants <- d_e1 %>% 
+  distinct(id, condition) %>% 
+  count(condition)
+
+n_run <- sum(e1_participants$n)
+
+e1_excluded <- d_e1 %>%
+  filter(manip_check_score >= 2) %>% 
+  distinct(id, condition) %>% 
+  count(condition)
+
+n_excluded <- n_run - sum(e1_excluded$n)
+n_analyzed <- sum(e1_excluded$n)
+```
+
+We recruited `r n_run` participants (roughly 50 for each condition) on Amazon’s Mechanical Turk. To participate participants were required to have an IP addresses in the United States and a task approval rate above 85%. We excluded `r n_excluded` participants who failed to answer at least two out of three manipulation check questions correctly (see Procedure section for details on the manipulation check), and thus the remaining `r n_analyzed` participants were included in our final analysis.
 
 ### Stimuli and Design
 
@@ -166,6 +193,7 @@ We presented images of three different toys that look very similar but each work
 Toy 1 instructions were: *"Pull the handle on the left to turn on the light. Press the button on the right to play music. Doing both produces both effects at the same time."* 
 Toy 2 instuctions were: *"Pull the handle on the left to play music. Press the button on the right to turn on the light. Doing both produces both effects at the same time."* 
 Toy 3 instuctions were: *"Pull the handle on the left AND press the button on the right to turn on the light and play music at the same time. The button press or handle pull on its own doesn’t produce any effect."* 
+
 Thus, doing both button press and handle pull was immediately rewarding but uninformative (as it does not disambiguate the causal mechanism in any way), 
 whereas either of the single actions was completely disambiguating, but was uncertain to produce an immediate outcome.
 Each toy had a label at the front, indicating which action(s) will make the toy operate, and with which outcome effect.
@@ -207,15 +235,87 @@ participants were asked again to rate the likelihood that the unlabeled toy was 
 
 ## Results and discussion
 
-### Action selections
+### Analysis plan
 
-### Action response times
+First, we present behavioral analyses of participants' (1) action decisions, (2) action decision times, and (3) belief change (i.e., learning) ^[See TODO for a pre-registration of the analysis plan.]. Decision times correspond to the latency to make an action selection as measured from the start of the action decision trial (all RTs were analyzed in log space). We quantified participants' beliefs about the possible toy designs using entropy, and belief change was measured as the difference in entropy before and after selecting an action.
+
+We used the `rstanarm` [@gabry2016rstanarm] package to fit Bayesian regression models estimating the differences across conditions. We report the uncertainty in our point estimates using 95% Highest Density Intervals (HDI). The HDI provides a range of credible values given the data and model. All analysis code for the statistical models can be found in the online repository for this project: https://github.com/kemacdonald/soc-info/R/03_models.Rmd. 
+
+Next, we present a Bayesian Data Analysis of the correspondence between our computational model and participants action responses. [FIXME -- say more about the BDA?]
+
+### Action decisions
+
+```{r actions summarize model contrasts}
+e1_contrasts_act <- d_models$action_logit_e1 %>% 
+  group_by(effect) %>% 
+  summarise(prop = mean(param_est),
+            hdi_lower = quantile(param_est, probs = 0.025),
+            hdi_upper = quantile(param_est, probs = 0.975)) %>% 
+  mutate_if(.predicate = is.numeric, .funs = round, digits = 2) 
+```
+
+```{r actions get condition betas}
+# no-goal is the intercept or reference group
+ms_act_e1 <- d_models$action_logit_e1 %>% 
+  spread(effect, param_est) %>% 
+  mutate(performance = no_goal + performance_beta,
+         learning = no_goal + learning_beta,
+         presentation = no_goal + presentation_beta) %>% 
+  select(sample_id, no_goal, performance, learning, presentation) %>% 
+  gather(key = condition, value = param_est, -sample_id) %>% 
+  mutate(act_prob_scale = logit_to_prob(param_est)) %>% 
+  group_by(condition) %>% 
+  summarise(prop = mean(act_prob_scale),
+            hdi_lower = quantile(act_prob_scale, probs = 0.025),
+            hdi_upper = quantile(act_prob_scale, probs = 0.975)) %>% 
+  mutate_if(.predicate = is.numeric, .funs = round, digits = 2) 
+```
+
+We modeled action decisions using a logistic regression specified as \texttt{$action \sim goal\_condition$} with the No-Goal condition as the reference category. Participants' tendency to select a "single" action varied across conditions in the predicted pattern (see Panel A of Fig 2), with the highest proportion occuring in the Learning context ($M_{learn} =$ `r ms_act_e1$prop[1] * 100`%, [`r ms_act_e1$hdi_lower[1] * 100`%, `r ms_act_e1$hdi_upper[1] * 100`%]), followed by the No Goal context ($M_{noGoal} =$ `r ms_act_e1$prop[2] * 100`%, [`r ms_act_e1$hdi_lower[2] * 100`%, `r ms_act_e1$hdi_upper[2] * 100`%]), then Performance ($M_{perform} =$ `r ms_act_e1$prop[3] * 100`%, [`r ms_act_e1$hdi_lower[3] * 100`%, `r ms_act_e1$hdi_upper[3] * 100`%]), and the fewest single actions in the Presentation condtion ($M_{present} =$ `r ms_act_e1$prop[4] * 100`%, [`r ms_act_e1$hdi_lower[4] * 100`%, `r ms_act_e1$hdi_upper[4] * 100`%]). 
+
+Compared the No-Goal condition, participants selected the single action at a greater rate in the Learning context ($\beta$ = `r e1_contrasts_act$prop[1]`, [`r e1_contrasts_act$hdi_lower[1]`, `r e1_contrasts_act$hdi_upper[1]`]) and at lower rate in the Presentation context ($\beta$ = `r e1_contrasts_act$prop[4]`, [`r e1_contrasts_act$hdi_lower[4]`, `r e1_contrasts_act$hdi_upper[4]`]), with the null value of zero difference condition falling well outside the 95% HDI. In contrast, participants in the Performance condition selected actions at at similar rate ($\beta$ = `r e1_contrasts_act$prop[3]`, [`r e1_contrasts_act$hdi_lower[3]`, `r e1_contrasts_act$hdi_upper[3]`]) with the 95% HDI including the null value.
+
+### Action decision times
+
+```{r rt contrasts e1}
+e1_contrasts_rt <- d_models$rt_e1 %>% 
+  group_by(condition) %>% 
+  summarise(rt = median(rt_sec_scale),
+            hdi_lower = quantile(rt_sec_scale, probs = 0.025),
+            hdi_upper = quantile(rt_sec_scale, probs = 0.975),
+            rt_log = median(param_est),
+            hdi_lower_log = quantile(param_est, probs = 0.025),
+            hdi_upper_log = quantile(param_est, probs = 0.975)) %>% 
+  mutate_if(.predicate = is.numeric, .funs = round, digits = 2) 
+```
+
+```{r rt group means e1}
+ms_rt_e1 <- d_models$rt_e1 %>% 
+  select(-param_est) %>% 
+  spread(condition, rt_sec_scale) %>% 
+  mutate(performance = no_goal + performance_beta,
+         learning = no_goal + learning_beta,
+         presentation = no_goal + presentation_beta) %>% 
+  select(sample_id, no_goal, performance, learning, presentation) %>% 
+  gather(key = condition, value = rt_sec_scale, -sample_id) %>% 
+  group_by(condition) %>% 
+  summarise(rt = median(rt_sec_scale),
+            hdi_lower = quantile(rt_sec_scale, probs = 0.025),
+            hdi_upper = quantile(rt_sec_scale, probs = 0.975)) %>% 
+  mutate_if(.predicate = is.numeric, .funs = round, digits = 2) 
+```
+
+We analyzed response times in log space with the same model specifiation as the action decisions. Panel A of Figure 2 shows the full RT data distribution. On average, participants took `r ms_rt_e1$rt[2]` seconds to generate a response in the No-goal condidition. Participants took on on average `r e1_contrasts_rt$rt[1]` seconds longer to generate a decision in the Learning condition ($\beta$ = `r e1_contrasts_rt$rt_log[1]`, [`r e1_contrasts_rt$hdi_lower[1]`, `r e1_contrasts_rt$hdi_upper[1]`]) but produced similar response times  in the Performance ($\beta$ = `r e1_contrasts_rt$rt_log[3]`, [`r e1_contrasts_rt$hdi_lower[3]`, `r e1_contrasts_rt$hdi_upper[3]`]) and Presentation ($\beta$ = `r e1_contrasts_rt$rt_log[4]`, [`r e1_contrasts_rt$hdi_lower[1]`, `r e1_contrasts_rt$hdi_upper[4]`]) conditions.
 
 ### Belief change
 
 ### BDA model-data fits
 
 # Experiment 2
+
+```{r}
+d_e2 <- d %>% filter(str_detect(experiment, "e2"))
+```
 
 ```{r e2_behav_results, include = T, fig.env = "figure*", fig.pos = "tb", fig.width=5, fig.asp = 0.4, out.width= "95%", fig.align='center', fig.cap = "Behavioral results for E2."}
 png::readPNG(here::here(image_path, "e2_plot.png")) %>% 
@@ -228,6 +328,26 @@ to see whether the social context affects people's decision making differently i
 We hypothesized that social pressure should increase presentation-oriented, immediately-rewarding actions in the learning and no-goal conditions, but not in the performance condition in which they are already specified a goal in the same direction.
 
 ## Method
+
+### Participants
+
+```{r}
+e2_participants <- d_e2 %>% 
+  distinct(id, condition, social_condition) %>% 
+  count(condition, social_condition)
+
+n_run_e2 <- sum(e2_participants$n)
+
+e2_excluded <- d_e2 %>%
+  filter(manip_check_score >= 2) %>% 
+  distinct(id, condition, social_condition) %>% 
+  count(condition, social_condition)
+
+n_excluded_e2 <- n_run - sum(e2_excluded$n)
+n_analyzed_e2 <- sum(e2_excluded$n)
+```
+
+We recruited `r n_run_e2` participants (roughly 50 for each condition) on Amazon’s Mechanical Turk. To participate participants were required to have an IP addresses in the United States and a task approval rate above 85%. We excluded `r n_excluded_e2` participants who failed to answer at least two out of three manipulation check questions correctly, and thus the remaining `r n_analyzed_e2` participants were included in our final analysis.
 
 ### Stimuli and Design
 

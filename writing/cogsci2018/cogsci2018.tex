@@ -295,7 +295,7 @@ action \(a\) approximately optimally (as per optimality parameter
 
 }
 
-\caption[Behavioral results for E1]{Behavioral results for E1.}\label{fig:e1_behav_results}
+\caption[Behavioral results for E1]{Behavioral results for E1. Panel A shows the proportion of action decisions for each goal condition. Error bars represent 95\% binomial confidence intervals computed using Bayesian inference. Panel B shows violin plots of participants' response times on the action decisions. Each point represents a participant with the width of the violin representing the density of the data at that value. Panel C shows violin plots of participants' belief change (entropy) as a function of condition. Lower values represent higher certainty after selecting an action. Color in panels A and C represent the type of action participants selected.}\label{fig:e1_behav_results}
 \end{figure*}
 \end{CodeChunk}
 
@@ -327,12 +327,13 @@ presentation\footnote{Our hypothesis and method were pre-registered prior to dat
 
 \subsubsection{Participants}\label{participants}
 
-FIXME participants with IP addresses in the United States were recruited
-on Amazon's Mechanical Turk. We excluded FIXME partcipants who failed to
-answer at least two out of three set of manipulation check questions
-correctly (See Procedure section for details on the manipulation check
-questions), and thus the remaining FIXME participants were included in
-our final analysis.
+We recruited 196 participants (roughly 50 for each condition) on
+Amazon's Mechanical Turk. To participate participants were required to
+have an IP addresses in the United States and a task approval rate above
+85\%. We excluded 7 participants who failed to answer at least two out
+of three manipulation check questions correctly (see Procedure section
+for details on the manipulation check), and thus the remaining 189
+participants were included in our final analysis.
 
 \subsubsection{Stimuli and Design}\label{stimuli-and-design}
 
@@ -346,10 +347,11 @@ left to play music. Press the button on the right to turn on the light.
 Doing both produces both effects at the same time.''} Toy 3 instuctions
 were: \emph{``Pull the handle on the left AND press the button on the
 right to turn on the light and play music at the same time. The button
-press or handle pull on its own doesn't produce any effect.''} Thus,
-doing both button press and handle pull was immediately rewarding but
-uninformative (as it does not disambiguate the causal mechanism in any
-way), whereas either of the single actions was completely
+press or handle pull on its own doesn't produce any effect.''}
+
+Thus, doing both button press and handle pull was immediately rewarding
+but uninformative (as it does not disambiguate the causal mechanism in
+any way), whereas either of the single actions was completely
 disambiguating, but was uncertain to produce an immediate outcome. Each
 toy had a label at the front, indicating which action(s) will make the
 toy operate, and with which outcome effect.
@@ -393,9 +395,62 @@ of the three possible toys.
 
 \subsection{Results and discussion}\label{results-and-discussion}
 
-\subsubsection{Action selections}\label{action-selections}
+\subsubsection{Analysis plan}\label{analysis-plan}
 
-\subsubsection{Action response times}\label{action-response-times}
+First, we present behavioral analyses of participants' (1) action
+decisions, (2) action decision times, and (3) belief change (i.e.,
+learning).\footnote{See TODO for a pre-registration of the analysis
+  plan.} Decision times correspond to the latency to make an action
+selection as measured from the start of the action decision trial (all
+RTs were analyzed in log space). We quantified participants' beliefs
+about the possible toy designs using entropy, and belief change was
+measured as the difference in entropy before and after selecting an
+action.
+
+We used the \texttt{rstanarm} ({\textbf{???}}) package to fit Bayesian
+regression models estimating the differences across conditions. We
+report the uncertainty in our point estimates using 95\% Highest Density
+Intervals (HDI). The HDI provides a range of credible values given the
+data and model. All analysis code for the statistical models can be
+found in the online repository for this project:
+\url{https://github.com/kemacdonald/soc-info/R/03_models.Rmd}.
+
+Next, we present a Bayesian Data Analysis of the correspondence between
+our computational model and participants action responses. {[}FIXME --
+say more about the BDA?{]}
+
+\subsubsection{Action decisions}\label{action-decisions}
+
+We modeled action decisions using a logistic regression specified as
+\texttt{$action \sim goal\_condition$} with the No-Goal condition as the
+reference category. Participants' tendency to select a ``single'' action
+varied across conditions in the predicted pattern (see Panel A of Fig
+2), with the highest proportion occuring in the Learning context
+(\(M_{learn} =\) 32\%, {[}20\%, 45\%{]}), followed by the No Goal
+context (\(M_{noGoal} =\) 62\%, {[}48\%, 74\%{]}), then Performance
+(\(M_{perform} =\) 73\%, {[}59\%, 85\%{]}), and the fewest single
+actions in the Presentation condtion (\(M_{present} =\) 86\%, {[}76\%,
+95\%{]}).
+
+Compared the No-Goal condition, participants selected the single action
+at a greater rate in the Learning context (\(\beta\) = -1.27, {[}-2.08,
+-0.5{]}) and at lower rate in the Presentation context (\(\beta\) =
+1.43, {[}0.44, 2.52{]}), with the null value of zero difference
+condition falling well outside the 95\% HDI. In contrast, participants
+in the Performance condition selected actions at at similar rate
+(\(\beta\) = 0.53, {[}-0.33, 1.46{]}) with the 95\% HDI including the
+null value.
+
+\subsubsection{Action decision times}\label{action-decision-times}
+
+We analyzed response times in log space with the same model specifiation
+as the action decisions. Panel A of Figure 2 shows the full RT data
+distribution. On average, participants took 27.82 seconds to generate a
+response in the No-goal condidition. Participants took on on average
+1.48 seconds longer to generate a decision in the Learning condition
+(\(\beta\) = 0.39, {[}1.15, 1.88{]}) but produced similar response times
+in the Performance (\(\beta\) = -0.15, {[}0.66, 1.11{]}) and
+Presentation (\(\beta\) = -0.11, {[}1.15, 1.14{]}) conditions.
 
 \subsubsection{Belief change}\label{belief-change}
 
@@ -428,6 +483,15 @@ are already specified a goal in the same direction.
 
 \subsection{Method}\label{method-1}
 
+\subsubsection{Participants}\label{participants-1}
+
+We recruited 347 participants (roughly 50 for each condition) on
+Amazon's Mechanical Turk. To participate participants were required to
+have an IP addresses in the United States and a task approval rate above
+85\%. We excluded -129 participants who failed to answer at least two
+out of three manipulation check questions correctly, and thus the
+remaining 325 participants were included in our final analysis.
+
 \subsubsection{Stimuli and Design}\label{stimuli-and-design-1}
 
 The stimuli and design were identical to Experiment 1, except we had
@@ -450,7 +514,7 @@ The procedure was identical to Experiment 1.
 
 \subsection{Results and discussion}\label{results-and-discussion-1}
 
-\subsubsection{Action selections}\label{action-selections-1}
+\subsubsection{Action selections}\label{action-selections}
 
 \subsubsection{Response times}\label{response-times}
 

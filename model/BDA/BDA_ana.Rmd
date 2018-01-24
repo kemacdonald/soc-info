@@ -1,0 +1,54 @@
+---
+title: "BDA_ana"
+author: "Erica Yoon"
+date: "1/24/2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+library(here)
+library(jsonlite)
+library(langcog)
+library(ggthemes)
+```
+
+```{r jsonToDataFrame}
+bda <- fromJSON(here("model/results/soc-info-ver1-mcmc300_burn150_chainwebppl-json.json"), flatten = TRUE, simplifyDataFrame = TRUE)
+d <- bda$support %>%
+  gather(parameter, value) %>%
+  separate(parameter, c("parameter", "goal", "obsPres", "action"))
+```
+
+```{r phi and beta}
+d %>%
+  filter(grepl("phi", parameter) | grepl("beta", parameter)) %>%
+  ggplot(., aes(x = goal, y = value, color = parameter)) +
+  geom_jitter() +
+  facet_grid(.~obsPres)
+
+```
+
+```{r optimality}
+d %>%
+  filter(grepl("optimal", parameter)) %>%
+  ggplot(., aes(value)) +
+  geom_density() +
+  theme_few()
+```
+
+```{r action}
+d %>% 
+  filter(grepl("posterior", parameter),
+         action == "both") %>%
+  group_by(goal, obsPres, action) %>%
+  multi_boot_standard(col="value") %>%
+  mutate(prob = mean) %>%
+  select(-mean) %>%
+  ggplot(., aes(x = goal, y=prob, fill=obsPres)) +
+  geom_bar(stat="identity", position="dodge") +
+  theme_few() +
+  scale_fill_solarized()
+```

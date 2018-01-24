@@ -127,15 +127,23 @@ $$ P_L(a | \phi, obs) \propto \exp(\lambda \cdot \mathbb{E}[U(a;\phi; obs)])$$
 
 # Experiment 1
 
-In our Experiments, we wanted to look at people's action choices in a minimalistic self-directed learning environment with varying goals and social contexts. 
-In Experiment 1, we wanted to confirm that participants will choose  actions based on different goal descriptions, depending on whether we highlight learning goal, performance goal, or presentation goal. 
-We were interested to see what people will choose to do when no goal is specified and they are free to explore.
-Thus, we asked participants to imagine a scenario in which they were expected to act on a toy with an uncertain causal mechanism, and 
+In our experimental paradigms, we wanted to look at people's action choices 
+in a minimalistic self-directed learning environment with varying goals and social contexts. 
+The task would involve choosing between an action that is informative but potentially not immediately rewarding, and an action that is certainly immediately rewarding but not informative at all.
+In Experiment 1, we first wanted to confirm that participants would choose different actions 
+depending on goals that we highlighted. 
+We were also interested to see what people would choose to do 
+when no goal is specified and they are free to explore.
+Importantly, participants were limited to making only a single action,
+which meant the opportunity cost for the alternative action was at its highest.
+Thus, participants were asked to imagine that 
+they needed to act on a toy with an uncertain causal mechanism, and 
 we assigned participants to different goal conditions: 
 learning goal (i.e. learn how the toy works); 
 performance goal (e.g. make the toy play music);
 presentation goal (i.e. impress their boss);
 and no goal.
+We hypothesized that participants would choose an informative action more often in the following order of goal conditions (decreasing): learning, no goal, performance, and presentation\footnote{Our hypothesis and method were pre-registered prior to data collection on the Open Science Framework (https://osf.io/kcjau)}.
 
 ## Method
 
@@ -145,18 +153,25 @@ FIXME participants with IP addresses in the United States were recruited on Amaz
 
 ### Stimuli and Design
 
-We presented images of three different toys that look very similar but each work in different ways, and provided instructions for them (see top of Fig. 1 for the toy types).
-Toy 1 instructions were: *"Pull the handle on the left to turn on the light.Press the button on the right to play music. Doing both produces both effects at the same time."* 
-Toy 2 instuctions were: *"Pull the handle on the left to play music. Press the button on the right to turn on the light. Doing both produces both effects."* 
+We presented images of three different toys that look very similar but each work in different ways, and provided instructions for them (see top of Fig. 1 for what the toys looked like).
+Toy 1 instructions were: *"Pull the handle on the left to turn on the light. Press the button on the right to play music. Doing both produces both effects at the same time."* 
+Toy 2 instuctions were: *"Pull the handle on the left to play music. Press the button on the right to turn on the light. Doing both produces both effects at the same time."* 
 Toy 3 instuctions were: *"Pull the handle on the left AND press the button on the right to turn on the light and play music at the same time. The button press or handle pull on its own doesn’t produce any effect."* 
+Thus, doing both button press and handle pull was immediately rewarding but uninformative (as it does not disambiguate the causal mechanism in any way), 
+whereas either of the single actions was completely disambiguating, but was uncertain to produce an immediate outcome.
 Each toy had a label at the front, indicating which action(s) will make the toy operate, and with which outcome effect.
 
-We asked participants to act on one of these toys; importantly, the given toy was missing its label, such that partcipants could not know whether the toy was Toy 1, 2 or 3.
-We assigned participants into four goal conditions: 
-For participants in *learning*, *performance*, and *presentation* conditions, we asked them to imagine that they were children's toy developers and that one day, their boss approached them and said: 
-"That must be one of the new toys that you've been working on. But it looks like you forgot to put on the label! Can you figure out whether this toy is a ButtonMusic toy, HandleMusic toy, or BothMusicLight toy?" (*learning* condition); 
-"That must be one of the new toys that you've been working on. I want to hear the music it plays." (*performance* condition);
-or "That must be one of the new toys that you've been working on. How does it work?" followed by the prompt "... [Imagine] you only had one chance to impress your boss and show that you're competent ..." (*presentation* condition). 
+We asked participants to act on one of these toys; 
+importantly, the given toy was missing its label, 
+such that partcipants could not know whether the toy was Toy 1, 2 or 3.
+We assigned participants into four goal conditions. 
+For participants in *learning*, *performance*, and *presentation* conditions, 
+we asked them to imagine that they were children's toy developers and that one day their boss approached them. 
+We then instructed participants to:
+figure out the correct label for the toy (*learning* condition); 
+make the toy play music (or turn the light on; *performance* condition);
+or impress their boss and show that they are competent (*presentation* condition).
+In *no-goal* condition, participants were asked to select an actio
 We asked participants to select an action they would like to try out on the toy 
 in order to accomplish the specified goal, out of three possible actions: 
 to "press the button", "pull the handle", or "press the button and pull the handle." 
@@ -165,33 +180,71 @@ and randomized the order of actions to choose from.
 
 ### Procedure
 
-We first introduced participants to the task, by asking them to 
-"Imagine that [they] are a children’s toy developer, and [they've] designed three toys that each work in different ways".
-We showed them a picture of a possible toy with labels on its different parts. 
+We first introduced participants to the task, and showed them a picture of a possible toy with labels on its different parts. 
 Then they read instructions for each of the three toy types.
 We presented Toy 1 and Toy 2 instructions in a randomized order first,
 and then Toy 3 instructions.
 Afterwards, they were asked what they would do to make the toy operate as manipulation check
 (e.g. "How would you make the toy play music?").
-We asked participants to rate prior likelihood that an unknown toy is a ButtonMusic toy, HandleMusic toy, or BothMusicLight toy, to use as priors for our model. 
+We asked participants to rate prior likelihood that an unknown toy is Toy 1, 2, or 3, to use as priors for our model. 
 Participants then read a scenario for one of the three goal conditions, 
 followed by the question: 
-"If you only had one chance to try a SINGLE action to [goal], which action would you want to take? 
-You will get a 10 cent bonus after submitting the HIT if you [goal]." 
+"If you only had one chance to try a SINGLE action to [pursue the specified goal], 
+which action would you want to take? 
+You will get a 10 cent bonus after submitting the HIT if you [achieve the given goal]." 
 After selecting one of three possible actions to perform on the toy and 
 seeing that the toy successfully played music, 
-participants were asked again to rate the likelihood that the unlabeled toy was each of the three possible toys. 
-Our hypothesis and method were pre-registered prior to data collection on the Open Science Framework (https://osf.io/kcjau).
+participants were asked again to rate the likelihood that the unlabeled toy was each of the three possible toys.
 
-# Results
+## Results
 
-## Action selections
+### Behavioral results
 
-## Response times
+### Model fitting
 
-## Entropy change
+## Discussion 
 
-# Discussion 
+# Experiment 2
+
+In Experiment 1, we saw that participants made different action choices depending on the goal conditions, as we previously predicted.
+In Experiment 2, we manipulated goals as well as social contexts, 
+fully crossing the different goal conditions with the presence/absence of the boss, 
+to see whether the social context affects people's decision making differently in each goal condition.
+We hypothesized that social pressure should increase presentation-oriented, immediately-rewarding actions in the learning and no-goal conditions, 
+but not in the performance condition in which they are already specified a goal in the same direction.
+
+## Method
+
+### Stimuli and Design
+
+The stimuli and design were identical to Experiment 1,
+except we had seven different goal $\times$ social conditions.
+Goals remained identical to ones presented in Experiment 1;
+social conditions varied depending on whether the boss was present in the story (*social*)
+or she was absent (*non-social*).
+Thus, the conditions from Experiment 1 were used as *social-learning*, *social-performance*, *social-presentation*, and *non-social-no-goal* conditions in Experiment 2.
+We added three more conditions: *non-social-learning*, *non-social-performance*, and *social-no-goal*.
+Note that we did not have *non-social-presentation* condition, 
+because presentation goal by definition was to present oneself as competent to 
+and impress another person.  
+
+### Procedure
+
+The procedure was identical to Experiment 1.
+
+## Results
+
+### Action selections
+
+### Response times
+
+### Entropy change
+
+### Model fitting
+
+## Discussion
+
+# General discussion
 
 # Acknowledgements
 

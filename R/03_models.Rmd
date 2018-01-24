@@ -69,7 +69,7 @@ samples_logit_act_e1 <- m_act_logit %>%
   gather(key = effect, value = param_est, -sample_id)
 ```
 
-```{r action multinomial model}
+```{r action multinomial model, eval = F}
 # fit model
 m_act_multi <- brm(action_response_fact ~ condition_fact,
              data = d_model_e1,
@@ -205,8 +205,8 @@ d_model_e2 <- d %>%
   distinct(id, condition, action_response, action_r_collap, action_trial_time, 
            entropy_change, social_condition) %>% 
   mutate(condition_fact = factor(condition, 
-                                 levels = c("learning", "nogoal", "presentation",
-                                            "performance")),
+                                 levels = c("nogoal", "performance", "presentation",
+                                            "learning")),
          action_response_fact = factor(action_response, 
                                        levels = c("button", "handle", "both")),
          action_num = ifelse(action_r_collap == "both", 0, 1))
@@ -214,32 +214,82 @@ d_model_e2 <- d %>%
 
 Action as a function of social context and goal manipulation.
 
-```{r action logit model}
+```{r action logit model e2}
 t_prior <- student_t(df = 7, location = 0, scale = 2.5)
 m_act_logit_e2 <- stan_glm(action_num ~ condition_fact * social_condition, 
                         data = d_model_e2,
                         family = binomial(link = "logit"),
                         prior = t_prior, prior_intercept = t_prior)
-```
 
-
-```{r}
 samples_logit_act_e2 <- m_act_logit_e2 %>% 
   as.data.frame() %>% 
   as_tibble() %>% 
-  dplyr::rename(learning = `(Intercept)`,
-                no_goal_beta = condition_factnogoal,
+  dplyr::rename(no_goal = `(Intercept)`,
+                learning_beta = condition_factlearning,
                 performance_beta = condition_factperformance,
                 presentation_beta = condition_factpresentation,
                 social_beta =  social_conditionsocial,
-                int_ng_social = `condition_factnogoal:social_conditionsocial`,
+                int_learn_social = `condition_factlearning:social_conditionsocial`,
                 int_present_social = `condition_factpresentation:social_conditionsocial`,
-                int_perf_social = `condition_factpresentation:social_conditionsocial`
+                int_perf_social = `condition_factperformance:social_conditionsocial`
                 ) %>% 
   mutate(sample_id = 1:n()) %>% 
   gather(key = effect, value = param_est, -sample_id) %>% 
   mutate(eff_type = ifelse(str_detect(effect, "int"), "interaction", "main effect")) 
 ```
+
+```{r rt model e2}
+d_rt_e2 <- d_model_e2 %>% 
+  rename(rt = action_trial_time) %>% 
+  filter(rt <= mean(rt) + 3*sd(rt) & rt >= mean(rt) - 3*sd(rt)) %>% 
+  mutate(log_rt = log(rt))
+
+m_rt_e2 <- stan_lm(
+  log_rt ~ condition_fact,
+  data = d_rt_e2,
+  prior = R2(0.75),
+  adapt_delta = 0.99 # changed from 0.8 to 0.99 because of warning about divergent samples
+)
+
+samples_rt_e2 <- m_rt_e2 %>% 
+  as.data.frame() %>% 
+  as_tibble() %>% 
+  dplyr::rename(no_goal = `(Intercept)`,
+                learning_beta = condition_factlearning,
+                performance_beta = condition_factperformance,
+                presentation_beta = condition_factpresentation) %>% 
+  select(-sigma, -R2, -`log-fit_ratio`) %>% 
+  mutate(sample_id = 1:n()) %>% 
+  gather(key = condition, value = param_est, -sample_id) %>% 
+  mutate(rt_sec_scale = exp(param_est))
+```
+
+Model entropy change across conditions.
+
+```{r}
+m_entropy_e2 <- stan_lm(
+  entropy_change ~ condition_fact * action_r_collap,
+  data = d_model_e2,
+  prior = R2(0.75)
+)
+
+samples_entropy_e2 <- m_entropy_e2 %>% 
+  as.data.frame() %>% 
+  as_tibble() %>% 
+  dplyr::rename(no_goal = `(Intercept)`,
+                learning_beta = condition_factlearning,
+                performance_beta = condition_factperformance,
+                presentation_beta = condition_factpresentation,
+                single_action_beta = action_r_collapsingle,
+                int_present_single_act = `condition_factpresentation:action_r_collapsingle`,
+                int_learn_single_act = `condition_factlearning:action_r_collapsingle`,
+                int_perf_single_act = `condition_factperformance:action_r_collapsingle`) %>% 
+  select(-sigma, -R2, -`log-fit_ratio`) %>% 
+  mutate(sample_id = 1:n()) %>% 
+  gather(key = effect, value = param_est, -sample_id) %>% 
+  mutate(eff_type = ifelse(str_detect(effect, "int"), "interaction", "main effect")) 
+```
+
 
 ## Save posterior samples 
 
@@ -247,7 +297,9 @@ samples_logit_act_e2 <- m_act_logit_e2 %>%
 posteriors <- list(action_logit_e1 = samples_logit_act_e1,
                    rt_e1 = samples_rt_e1,
                    ent_e1 = samples_entropy_e1,
-                   action_logit_e2 = samples_logit_act_e2)
+                   action_logit_e2 = samples_logit_act_e2,
+                   rt_e2 = samples_rt_e2,
+                   ent_e2 = samples_entropy_e2)
 
 saveRDS(posteriors, file = here("data/03_merged_data", "soc-info-posterior-samples.rds"))
 ```

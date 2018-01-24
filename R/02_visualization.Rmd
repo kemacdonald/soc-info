@@ -7,6 +7,7 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+library(binom)
 library(knitr); library(magrittr); library(tidyverse); library(here)
 source(here("R/soc_info_helpers.R"))
 ```
@@ -132,8 +133,6 @@ d_e1 %>%
 Plot counts of different action responses for the learning vs. performance goal conditions.
 
 ```{r get prop credible intervals e1}
-library(binom)
-
 hpd_ref <- d_e1 %>% 
   distinct(id, condition, action_r_collap) %>%
   group_by(condition) %>% 
@@ -157,6 +156,7 @@ action_plot_e1 <- d_e1 %>%
   ggplot(aes(x = condition, y = prop, fill = action_r_collap, alpha = action_r_collap)) +
   geom_bar(stat = "identity", width = 0.4) +
   geom_linerange(aes(x = condition, ymin = lower, ymax = upper), inherit.aes = F,
+                 color = "black", alpha = 0.6, size = 1,
                  data = hpd_final) +
   lims(y = c(0,1)) +
   guides(alpha = F) +
@@ -165,8 +165,9 @@ action_plot_e1 <- d_e1 %>%
   labs(x = NULL, y = "Prop. Participants", fill = "action response:") +
   theme(panel.border = element_rect(fill=NA, size=0.5, color = "grey"),
         panel.grid.minor = element_blank(),
-        #panel.grid.major = element_blank(),
-        plot.margin=unit(c(0.5,1.2,0.5,1),"cm")) 
+        panel.grid.major = element_blank(),
+        plot.margin=unit(c(0.5,1,0.5,1),"cm"),
+        text = element_text(size = 12)) 
 ```
 
 Make a table of the raw counts.
@@ -195,9 +196,10 @@ rt_plot <- d_e1 %>%
   geom_jitter(width = 0.05, shape = 21, alpha = 0.9, color = "grey30", size = 1) + 
   labs(y = c("response time (sec)"), x= NULL) +
   theme(panel.border = element_rect(fill=NA, size=0.5, color = "grey"),
-        #panel.grid.major = element_blank(),
+        panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
-        plot.margin=unit(c(0.5,1,0.5,1.2),"cm"))
+        plot.margin=unit(c(0.5,1,0.5,1.2),"cm"),
+        text = element_text(size = 12))
 ```
 
 ## Plot belief change
@@ -258,9 +260,10 @@ entropy_plot <- d_e1 %>%
   guides(fill = F) + 
   labs(x = NULL, y = "entropy change", color = "action response: ") +
   theme(panel.border = element_rect(fill=NA, size=0.5, color = "grey"),
-        #panel.grid.minor = element_blank(),
+        panel.grid.minor = element_blank(),
         panel.grid.major = element_blank(),
-        plot.margin=unit(c(0.5,1,0.5,1.2),"cm"))
+        plot.margin=unit(c(0.5,1,0.5,1.2),"cm"), 
+        text = element_text(size = 12))
 ```
 
 Putting it all together.
@@ -268,18 +271,17 @@ Putting it all together.
 ```{r}
 sub_plots <- cowplot::plot_grid(rt_plot, entropy_plot, labels = c("B", "C"), 
                                 ncol = 1,
-                                rel_heights = c(0.75,1))
+                                rel_heights = c(0.7,1))
 
-cowplot::plot_grid(action_plot_e1, sub_plots, labels = c("A"),
+e1_plot <- cowplot::plot_grid(action_plot_e1, sub_plots, labels = c("A"),
                    rel_widths = c(1, 0.9))
 ```
 
 Save figure.
 
 ```{r}
-ggsave("e1_plot.png", plot = ggplot2::last_plot(), width = 9,
-       path = here::here("writing/cogsci2018/figs"), 
-       scale = 1.2)
+ggsave("e1_plot.png", plot = e1_plot, width = 10, height = 4.5,
+       path = here::here("writing/cogsci2018/figs"))
 ```
 
 ## Experiment 2
@@ -290,8 +292,20 @@ d_e2 <- filter(d, str_detect(experiment, pattern = "e2"))
 
 Action plot
 
-```{r}
-e2_action_plot <- d_e2 %>% 
+```{r get prop credible intervals e2}
+hpd_e2 <- d_e2 %>% 
+  distinct(id, condition, social_condition, action_r_collap) %>%
+  group_by(condition, social_condition) %>% 
+  mutate(n_participants = n()) %>% 
+  count(action_r_collap, n_participants, condition, social_condition) %>% 
+  filter(action_r_collap == "single") %>% 
+  rowwise() %>%
+  mutate(lower = binom.bayes(x = n, n = n_participants, conf.level = 0.95) %>% pull(lower),
+         upper = binom.bayes(x = n, n = n_participants, conf.level = 0.95) %>% pull(upper)) 
+```
+
+```{r make action plot e2}
+action_plot_e2 <- d_e2 %>% 
   distinct(condition, social_condition, action_r_collap, id) %>%
   count(action_r_collap, condition, social_condition) %>% 
   group_by(condition, social_condition) %>% 
@@ -299,12 +313,17 @@ e2_action_plot <- d_e2 %>%
   filter(action_r_collap == "single") %>% 
   ggplot(aes(x = condition, y = prop, fill = social_condition)) +
   geom_bar(stat = "identity", width = 0.6, position = position_dodge()) +
+  geom_linerange(aes(x = condition, ymin = lower, ymax = upper, 
+                     group = social_condition), inherit.aes = F,
+                 color = "grey50", alpha = 0.6, size = 1,
+                 position = position_dodge(width = 0.6),
+                 data = hpd_e2) +
   lims(y = c(0,1)) +
   labs(x = NULL, y = "Prop. Participants", fill = "context:") +
   scale_fill_grey(start = 0.1, end = 0.6)+ 
   theme(panel.border = element_rect(fill=NA, size=0.5, color = "grey"),
         panel.grid.minor = element_blank(),
-        #panel.grid.major = element_blank(),
+        panel.grid.major = element_blank(),
         plot.margin=unit(c(0.5,1.2,0.5,1),"cm"))
 ```
 
@@ -322,6 +341,7 @@ e2_rt_plot <- d_e2 %>%
   labs(y = c("response time (sec)"), x= NULL) +
   theme(panel.border = element_rect(fill=NA, size=0.5, color = "grey"),
         panel.grid.minor = element_blank(),
+        panel.grid.major = element_blank(),
         plot.margin=unit(c(0.5,1,0.5,1.2),"cm")) 
 ```
 
@@ -344,7 +364,7 @@ e2_ent_plot <- d_e2 %>%
   labs(x = NULL, y = "entropy change", color = "action response: ") +
   theme(panel.border = element_rect(fill=NA, size=0.5, color = "grey"),
         panel.grid.minor = element_blank(),
-        #panel.grid.major = element_blank(),
+        panel.grid.major = element_blank(),
         plot.margin=unit(c(0.5,1,0.5,1.2),"cm"))
 ```
 
@@ -353,13 +373,12 @@ sub_plots_e2 <- cowplot::plot_grid(e2_rt_plot, e2_ent_plot, labels = c("B", "C")
                                 ncol = 1,
                                 rel_heights = c(0.75,1))
 
-cowplot::plot_grid(e2_action_plot, sub_plots_e2, labels = c("A"),
+e2_plot <- cowplot::plot_grid(action_plot_e2, sub_plots_e2, labels = c("A"),
                    rel_widths = c(1, 0.85))
 ```
 
 ```{r}
-ggsave("e2_plot.png", plot = ggplot2::last_plot(), width = 9,
-       path = here::here("writing/cogsci2018/figs"), 
-       scale = 1.2)
+ggsave("e2_plot.png", plot = e2_plot, width = 10, height = 4.5,
+       path = here::here("writing/cogsci2018/figs"))
 ```
 

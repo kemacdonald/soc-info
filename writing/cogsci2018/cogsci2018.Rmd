@@ -17,16 +17,15 @@ output: cogsci2016::cogsci_paper
 ---
 
 ```{r global_options, include=FALSE}
-knitr::opts_chunk$set(fig.width=3, fig.height=3, fig.crop = F, fig.pos = "tb", fig.path='figs/',
-                      echo=F, warning=F, cache=F, message=F, sanitize = T)
-```
+knitr::opts_chunk$set(fig.width=3, fig.height=3, fig.crop = F, 
+                      fig.pos = "tb", fig.path='figs/', echo=F,
+                      warning=F, cache=F, message=F, sanitize = T)
 
-```{r, libraries}
-library(png)
-library(grid)
-library(gridExtra)
-library(ggplot2)
-library(xtable)
+image_path <- "writing/cogsci2018/figs/"
+
+library(png); library(grid)
+library(gridExtra); library(xtable)
+library(tidyverse); library(here)
 ```
 
 # Introduction
@@ -38,6 +37,17 @@ Scenarios like this, capture an "explore-exploit” dilemma [@sutton1998], in wh
 We situate our integrative account within two theoretical frameworks: *active learning* and *pragmatic social reasoning*. Active learning refers to situations where people are given control over the sequence of information in a learning context (e.g., verbal question asking to elicit informative responses). The key assumption is that learners will maximize the usefulness of their actions by gathering information that is especially helpful for their own learning. The effects of active learning have been the focus of much empirical work in education [@grabinger1995rich; @prince2004does], machine learning [@settles2012active; @ramirez2017active], and cognitive psychology [@castro2009human; @chi2009active], with the common finding that active contexts lead to more rapid learning when compared to passive contexts where people do not have control over the flow of information. 
 
 Work on exploratory actions in active learning often isolates people’s information goals by removing the learner from any kind of social context. In contrast, real-world learning is characterized by contexts where there are teachers, peer learners, or other individuals who can directly influence the utility of information gathering actions. Consider that there is now a large body of evidence suggesting that social reasoning processes can change the computations (i.e., inferences) that support learning from evidence. For example, children learn at different rates after observing the same evidence depending on whether they thought the behavior was accidental (less informative) or intentional (more informative). Moreover, adults and children will make even stronger inferences if they believe that another person selected their actions with the goal of helping them learn (i.e., teaching) [@shafto2012learning]. 
+
+```{r model_diagram, fig.env = "figure*", fig.pos = "tb", fig.width=4, fig.asp = 0.7, out.width= "100%", fig.align = "center", set.cap.width=T, num.cols.cap=2, fig.cap = "Diagram of the computational model: The learner considers possible hypotheses and his contextual goals. When an observer is absent, he considers his learning goal (to maximize information gain) and performance goal (e.g. to play music) and decides on an action. When an observer is present, his decision for an action is based on his learning goal vs. presentational goal (to have the observer infer his competence)."}
+
+img1 <- rasterGrob(as.raster(readPNG(here(image_path, "model-obsAbs.png"))), 
+                    interpolate = FALSE)
+
+img2 <- rasterGrob(as.raster(readPNG(here(image_path, "model-obsPres.png"))), 
+                   interpolate = FALSE)
+
+grid.arrange(img1, img2, ncol = 2)
+```
 
 But how can we begin to understand the role of *social* factors in self-directed learning contexts? Answering this question represents a significant step because explore-exploit decisions often unfold within fundamentally social contexts where people must integrate the value of social goals and information goals when deciding what to do next. Consider that actions that maximize learning are inherently risky -- leading to mistakes and struggles -- which could be difficult to undertake in with someone else present. Thus, a learner might prioritize actions that maintain their reputation: looking more attractive, knowledgeable, or competent to the observer. In this case, the learner is leveraging psychological reasoning processes to infer what the observer thinks based on their action (cook a meal) and its outcome (a delicious meal).  If the learner is worried about the observer’s beliefs, then the they might choose actions that maximize the probability of maintaining a favorable impression in the eyes of the observer ('That meal was delicious, so he must be a good cook!'). Indeed, when the value of self-presentation is highlighted, children avoid opportunities that will help them learn new things but pose risks for public mistakes [@elliott1988; @dweck1988]. 
 
@@ -53,27 +63,18 @@ that will each lead to one outcome (new discovery) or the other (overt reward).
 The learner's action rests on his goals to explore versus exploit, 
 and is determined in part by the presence or absence of another person he cares about (i.e. his boss)\footnote{From here on, we use a male pronoun for Bob, the learner, and female pronoun for Ann, the boss and observer.}.
 
-A key assumption underlying inferences in recent Bayesian models of human social cognition is that 
-people act approximately optimally given a utility function [e.g. @goodman2016; @jara2016]. 
+A key assumption underlying inferences in recent Bayesian models of human social cognition is that people act approximately optimally given a utility function [e.g. @goodman2016; @jara2016]. 
 Our model adopts the same utility-theoretic approach, and assumes an approximately optimal agent, 
 who reasons about the utility function that represents a combination of multiple goals. 
 In a recent model of polite language production [@yoon2017], 
-the utility function comprised a weighted combination of multiple utilities (goals) considered by the speaker, 
-reflecting a principled tradeoff between different communicative goals 
+the utility function comprised a weighted combination of multiple utilities (goals) considered by the speaker, reflecting a principled tradeoff between different communicative goals 
 (e.g. to be informative, to be kind, and to appear to be a helpful speaker). 
 We use a similarly structured utility function that reflects 
 different goals that a learner has in a social learning context.
 Specifically, we model how a person may make a decision to act based on 
 his desire to learn how a toy works (*learning utility*), 
 to make the toy operate and perform a given function (*performance utility*), 
-or to present himself as a competent individual who knows how to make the toy work (*presentational utility*; 
-see the model diagram in Figure 1).
-
-```{r model_diagram, fig.env = "figure*", fig.pos = "h", fig.width=12, fig.height=8, fig.align = "center", set.cap.width=T, num.cols.cap=2, fig.cap = "Diagram of the computational model: The learner considers possible hypotheses and his contextual goals. When an observer is absent, he considers his learning goal (to maximize information gain) and performance goal (e.g. to play music) and decides on an action. When an observer is present, his decision for an action is based on his learning goal vs. presentational goal (to have the observer infer his competence)."}
-img1 <-  rasterGrob(as.raster(readPNG("figs/model-obsAbs.png")), interpolate = FALSE)
-img2 <-  rasterGrob(as.raster(readPNG("figs/model-obsPres.png")), interpolate = FALSE)
-grid.arrange(img1, img2, ncol = 1)
-```
+or to present himself as a competent individual who knows how to make the toy work (*presentational utility*; see the model diagram in Figure 1).
 
 First, the *learning utility* symbolizes the goal to learn new information, which in our paradigm specifically is associated with figuring out how a given toy works. The learning utility is formally represented by an OED model ["Optimal Experiment Design"; @nelson2005; @lindley1956], which quantifies the *expected utility* of different information seeking actions. Here we follow the mathematical details of the OED approach as outlined in @coenen2017 that was implemented in our model. The set of queries, each realized through taking an action, is defined as $Q_1, Q_2, ..., Q_n = {Q}$. The expected utility of each query ($EU(Q)$) is a function of two factors: (1) the probability of obtaining a specific answer $P(a)$ weighted by (2) the usefulness of that answer for achieving the learning goal $U(a)$.
 
@@ -127,15 +128,14 @@ $$ P_L(a | \phi, obs) \propto \exp(\lambda \cdot \mathbb{E}[U(a;\phi; obs)])$$
 
 # Experiment 1
 
-In our Experiments, we wanted to look at people's action choices in a minimalistic self-directed learning environment with varying goals and social contexts. 
-In Experiment 1, we wanted to confirm that participants will choose  actions based on different goal descriptions, depending on whether we highlight learning goal, performance goal, or presentation goal. 
-We were interested to see what people will choose to do when no goal is specified and they are free to explore.
-Thus, we asked participants to imagine a scenario in which they were expected to act on a toy with an uncertain causal mechanism, and 
-we assigned participants to different goal conditions: 
-learning goal (i.e. learn how the toy works); 
-performance goal (e.g. make the toy play music);
-presentation goal (i.e. impress their boss);
-and no goal.
+```{r e1_behav_results, include = T, fig.env = "figure*", fig.pos = "t", fig.width=5, fig.asp = 0.8, out.width= "95%", fig.align='center', fig.cap = "Behavioral results for E1."}
+png::readPNG(here::here(image_path, "e1_plot.png")) %>% 
+  grid::grid.raster()
+```
+
+In our Experiments, we wanted to look at people's action choices in a minimalistic self-directed learning environment with varying goals and social contexts. In Experiment 1, we wanted to confirm that participants will choose  actions based on different goal descriptions, depending on whether we highlight learning goal, performance goal, or presentation goal. 
+
+We were interested to see what people will choose to do when no goal is specified and they are free to explore. Thus, we asked participants to imagine a scenario in which they were expected to act on a toy with an uncertain causal mechanism, and we assigned participants to different goal conditions: learning goal (i.e. learn how the toy works); performance goal (e.g. make the toy play music); presentation goal (i.e. impress their boss); and no goal.
 
 ## Method
 
@@ -183,19 +183,46 @@ seeing that the toy successfully played music,
 participants were asked again to rate the likelihood that the unlabeled toy was each of the three possible toys. 
 Our hypothesis and method were pre-registered prior to data collection on the Open Science Framework (https://osf.io/kcjau).
 
-# Results
+## Results and discussion
 
-## Action selections
+### Action selections
 
-## Response times
+### Action response times
 
-## Entropy change
+### Belief change
 
-# Discussion 
+### BDA model-data fits
+
+# Experiment 2
+
+```{r e2_behav_results, include = T, fig.env = "figure*", fig.pos = "t", fig.width=5, fig.asp = 0.4, out.width= "95%", fig.align='center', fig.cap = "Behavioral results for E2."}
+png::readPNG(here::here(image_path, "e2_plot.png")) %>% 
+  grid::grid.raster()
+```
+
+## Method
+
+### Participants
+
+### Stimuli and design
+
+### Procedure
+
+## Results and discussion
+
+### Action selections
+
+### Action response times
+
+### Belief change
+
+### BDA model-data fits
+
+# General Discussion 
 
 # Acknowledgements
 
-This work was supported by NSERC postgraduate doctoral scholarship PGSD3-454094-2014 to EJY ... FIXME.
+This work was supported by NSERC postgraduate doctoral scholarship PGSD3-454094-2014 to EJY and an NSF GRFP to KM [FIXME].
 
 # References 
 

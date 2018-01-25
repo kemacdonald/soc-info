@@ -69,8 +69,6 @@ var data = json.read('actionData.json');
 
 var goals = _.uniq(_.map(data, "goal"));
 var obsPresOptions = _.uniq(_.map(data, "obsPres"));
-display("goals = " + goals)
-display("obsPresOptions = " + obsPresOptions)
 // var obsPres = [1, 0];
 
 // var weightBins = [0.1, 0.3, 0.5, 0.7, 0.9]
@@ -139,7 +137,7 @@ var model = function() {
 
 // var optimality = 1.7;
 var parameter = {
-	optimality: uniformDrift({a: 0, b: 5, width:0.1})
+	optimality: uniformDrift({a: 0, b: 10, width:0.1})
 };
 
 var observer1 = cache(function(action) {
@@ -152,19 +150,25 @@ function() {
 
 var learner1 = cache(function(exptCondInfo) {
    return Infer({method: "enumerate"}, function() {
-	var phi = exptCondInfo.phi;
-	var beta_pres = exptCondInfo.betaPres;
+	var phi_learning = exptCondInfo.phi_learning;
+	var phi_perf = exptCondInfo.phi_perf;
+	var phi_pres = exptCondInfo.phi_pres;
 	var observerPresent = exptCondInfo.obsPres	
 	
      var action = sample(actionPrior);
      var competence = uniformDraw([0,1]);
+// 	var competence = sample(uniformDrift({a: 0, b: 1, width:0.1}))
+
 var O1 = observer1(action);
 
-    var learningUtility = phi*igQuestion(action)
-    var presentationUtility = observerPresent*beta_pres*rawProb(O1,competence)
-   var performanceUtility = (1-phi)*playMusic(action)
+    var learningUtility = phi_learning*igQuestion(action)/Math.log2(actions.length)
+//     var learningUtility = phi_learning*igQuestion(action)
+    var presentationUtility = observerPresent*phi_pres*rawProb(O1,competence)
+   var performanceUtility = phi_perf*playMusic(action)
    
-    var learnerUtility = learningUtility + presentationUtility + performanceUtility;
+    var learnerUtility = observerPresent == 1 ? 
+    learningUtility + presentationUtility + performanceUtility :
+    learningUtility + performanceUtility
 
     factor(parameter.optimality*learnerUtility)
     return action;  
@@ -177,23 +181,23 @@ var O1 = observer1(action);
 /////////////////////////////
 
 var goalWeightsAndPostPred = map(function(goal){
-
+map(function(observerPresent){
 var phiLearnPerf = {
-// phi: sample(goalWeightPrior, {kernelFn: kernelFn})
 phi: sample(goalWeightPrior)
 }
 var betaPres = {
-// beta: sample(goalWeightPrior, {kernelFn: kernelFn})
 beta: sample(goalWeightPrior)
 }
 
-var postPred = map(function(observerPresent){
+    var normalized_goalWeights = normalize([phiLearnPerf.phi, 1-phiLearnPerf.phi, betaPres.beta])
+    
 	var actionData = _.filter(data, {obsPres: observerPresent, goal: goal});
 	var exptConditionInfo = {
 		action:false,
-		phi: phiLearnPerf.phi,
-		betaPres: betaPres.beta,
-		obsPres: observerPresent,
+		obsPres: observerPresent,		
+		phi_learning: observerPresent == 1 ? normalized_goalWeights[0] : phiLearnPerf.phi,
+		phi_perf: observerPresent == 1 ? normalized_goalWeights[1] : 1-phiLearnPerf.phi,
+		phi_pres: observerPresent == 1 ? normalized_goalWeights[2] : 0,
 	};
 	
 	var modelPredictions = learner1(exptConditionInfo);
@@ -213,23 +217,23 @@ var postPred = map(function(observerPresent){
 			val: Math.exp(modelPredictions.score(a))
 		}
 	}, postSupport)
-	
-	return _.flattenDeep([postPredictive])
+
+		var postPred = _.flattenDeep([
+	postPredictive,
+	{key: "phiLearning", goal: goal, obsPres: observerPresent, action: "NA", val: exptConditionInfo.phi_learning},
+	{key: "phiPerformance", goal: goal, obsPres: observerPresent, action: "NA", val: exptConditionInfo.phi_perf},	
+	{key: "phiPresentation", goal: goal, obsPres: observerPresent, action: "NA", val: exptConditionInfo.phi_pres}	
+	])
+	return postPred
 	
 }, obsPresOptions)
-// 	display(postPred)
-
-	return [
-	postPred,
-	{key: "phi", goal: goal, obsPres: "NA", action: "NA", val: phiLearnPerf.phi},
-	{key: "betaPres", goal: goal, obsPres: "NA", action: "NA", val: betaPres.beta},	
-	]
 }, goals)
 
 var returnList = _.flattenDeep([
 	goalWeightsAndPostPred,
 	{key: "optimality", goal: "NA", obsPres: "NA", action: "NA", val: parameter.optimality}
 ])
+
 
   var returnObj = _.fromPairs(map(function(i){
     [i.key + "_" + i.goal + "_" + i.obsPres + "_" + i.action, i.val]
@@ -240,7 +244,7 @@ var returnList = _.flattenDeep([
 }
 
 
-var numSamples = 300;
+var numSamples = 100000;
 var method = "MCMC";
 var samples = numSamples;
 var burn = numSamples / 2;

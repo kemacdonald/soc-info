@@ -16,18 +16,53 @@ library(ggthemes)
 ```
 
 ```{r jsonToDataFrame}
-bda <- fromJSON(here("model/results/soc-info-ver1-mcmc300_burn150_chainwebppl-json.json"), flatten = TRUE, simplifyDataFrame = TRUE)
-d <- bda$support %>%
-  gather(parameter, value) %>%
-  separate(parameter, c("parameter", "goal", "obsPres", "action"))
+# bda1 <- fromJSON(here("model/BDA/results/soc-info-ver1-mcmc100000_burn50000_chain1.json"), flatten = TRUE, simplifyDataFrame = TRUE)
+# bda2 <- fromJSON(here("model/BDA/results/soc-info-ver1-mcmc100000_burn50000_chain2.json"), flatten = TRUE, simplifyDataFrame = TRUE)
+# bda3 <- fromJSON(here("model/BDA/results/soc-info-ver1-mcmc100000_burn50000_chain3.json"), flatten = TRUE, simplifyDataFrame = TRUE)
+# bda4 <- fromJSON(here("model/BDA/results/soc-info-ver1-mcmc100000_burn50000_chain4.json"), flatten = TRUE, simplifyDataFrame = TRUE)
+# 
+# d <-
+#   rbind(bda1$support %>%
+#              mutate(chain = 1),
+#            bda2$support %>%
+#              mutate(chain = 2),
+#            bda3$support %>%
+#              mutate(chain = 3),
+#            bda4$support %>%
+#              mutate(chain = 4)
+#         ) %>%
+#   gather(parameter, value, -chain) %>%
+#   separate(parameter, c("parameter", "goal", "obsPres", "action")) %>%
+#   mutate(goal = fct_recode(goal,
+#                            "no goal" = "noGoal"),
+#          context = fct_recode(obsPres,
+#                               "social" = "1",
+#                               "no-social" = "0"
+#                               ))
+# 
+# save(d, file=here("model/BDA/results/soc-info-ver1-mcmc100000_burn50000_4chains.RData"))
+
+load(here("model/BDA/results/soc-info-ver1-mcmc100000_burn50000_4chains.RData"))
 ```
 
 ```{r phi and beta}
 d %>%
-  filter(grepl("phi", parameter) | grepl("beta", parameter)) %>%
-  ggplot(., aes(x = goal, y = value, color = parameter)) +
-  geom_jitter() +
-  facet_grid(.~obsPres)
+  filter(grepl("phi", parameter)) %>%
+  filter(!(goal == "presentation" & context == "no-social")) %>%
+  group_by(parameter, goal, context) %>%
+  summarise(mean = mean(value)) %>%
+  ungroup() %>%
+  mutate(phi = fct_recode(parameter,
+                          "learning" = "phiLearning",
+                          "performance" = "phiPerformance",
+                          "presentation" = "phiPresentation"
+                          )) %>%
+  ggplot(., aes(x = goal, y = mean, fill = phi)) +
+  geom_bar(position="dodge", stat="identity") +
+  facet_grid(.~context, labeller=label_both) +
+  ylim(0,1) +
+  scale_fill_solarized() +
+  ylab("phi value")
 
 ```
 
@@ -41,14 +76,17 @@ d %>%
 
 ```{r action}
 d %>% 
+  mutate(action = fct_recode(action, 
+                             "single" = "button",
+                             "single" = "handle")) %>%
   filter(grepl("posterior", parameter),
-         action == "both") %>%
-  group_by(goal, obsPres, action) %>%
-  multi_boot_standard(col="value") %>%
-  mutate(prob = mean) %>%
-  select(-mean) %>%
-  ggplot(., aes(x = goal, y=prob, fill=obsPres)) +
+         action != "both") %>%
+  filter(!(goal == "presentation" & obsPres == "0")) %>%
+  group_by(goal, context, action) %>%
+  summarise(prob = mean(value)) %>%
+  ggplot(., aes(x = goal, y=prob, fill=context)) +
   geom_bar(stat="identity", position="dodge") +
   theme_few() +
-  scale_fill_solarized()
+  scale_fill_solarized() +
+  ylab("predicted likelihood of choosing 'single' action")
 ```

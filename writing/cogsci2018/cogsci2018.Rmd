@@ -279,6 +279,38 @@ We analyzed response times in log space using the same model specification. Pane
 
 ### Belief change:
 
+```{r entropy contrasts e1}
+e1_contrasts_ent <- d_models$ent_samples_e1 %>% 
+  group_by(effect) %>% 
+  summarise(ent_change = median(param_est),
+            hdi_lower = quantile(param_est, probs = 0.025),
+            hdi_upper = quantile(param_est, probs = 0.975)) %>% 
+  mutate_if(.predicate = is.numeric, .funs = round, digits = 2) 
+```
+
+```{r entropy group means e1}
+e1_ent_means <- d_models$ent_samples_e1 %>% 
+  select(-eff_type) %>% 
+  spread(effect, param_est) %>% 
+  mutate(performance_both = no_goal + performance_beta,
+         learning_both = no_goal + learning_beta,
+         presentation_both = no_goal + presentation_beta,
+         no_goal_single = no_goal + single_action_beta,
+         performance_single = no_goal + performance_beta + single_action_beta,
+         learning_single = no_goal + learning_beta + single_action_beta,
+         presentation_single = no_goal + presentation_beta + single_action_beta) %>% 
+  rename(no_goal_both = no_goal) %>% 
+  select(-contains("beta")) %>% 
+  gather(key = condition, value = param_est, -sample_id) %>% 
+  group_by(condition) %>% 
+  summarise(ent_change = mean(param_est),
+            hdi_lower = quantile(param_est, probs = 0.025),
+            hdi_upper = quantile(param_est, probs = 0.975)) %>% 
+  mutate_if(.predicate = is.numeric, .funs = round, digits = 2) 
+```
+
+We modeled change in entropy (see Panel C of Fig 2) as a function of goal condition and participants' action selections: \texttt{$entropy\_change \sim goal\_condition + action\_response$}. Across all conditions, people who selected the single action showed a greater reduction in entropy ($\beta$ = `r e1_contrasts_ent$ent_change[4]`, [`r e1_contrasts_ent$hdi_lower[4]`, `r e1_contrasts_ent$hdi_upper[4]`]. We did not see evidence of an interaction between goal condition and action selection. However, recall that a larger proportion of participants selected the single action in the Learning condition, so the probability of learning is likely to be greater in this context.  
+
 # Experiment 2
 
 ```{r e2 filter}
@@ -330,7 +362,7 @@ The procedure was identical to Experiment 1.
 ### Action decisions:
 
 ```{r e2 actions summarize model contrasts}
-e2_contrasts_act <- d_models$action_logit_e2 %>% 
+e2_contrasts_act <- d_models$action_logit_samples_e2_int %>% 
   group_by(effect, eff_type) %>% 
   summarise(prop = mean(param_est),
             hdi_lower = quantile(param_est, probs = 0.025),
@@ -340,24 +372,24 @@ e2_contrasts_act <- d_models$action_logit_e2 %>%
 
 ```{r e2 actions get condition betas}
 # no-goal-no-social is the intercept or reference group
-ms_act_e2 <- d_models$action_logit_e2 %>% 
-  select(-eff_type) %>% 
+ms_act_e2 <- d_models$action_logit_samples_e2 %>% 
   spread(effect, param_est) %>% 
+  rename(social_beta = social_conditionsocial) %>% 
   mutate(no_goal_soc = no_goal + social_beta,
          performance_no_soc = no_goal + performance_beta,
-         performance_soc = no_goal + performance_beta + social_beta*int_perf_social,
+         performance_soc = no_goal + performance_beta + social_beta,
          learning_no_soc = no_goal + learning_beta,
-         learning_soc = no_goal + learning_beta + social_beta*int_learn_social,
-         presentation_no_soc = no_goal + presentation_beta,
-         presentation_soc = no_goal + presentation_beta + social_beta*int_present_social) %>% 
-  select(sample_id, no_goal, no_goal_soc:presentation_soc) %>% 
+         learning_soc = no_goal + learning_beta + social_beta,
+         presentation_soc = no_goal + presentation_beta + social_beta) %>% 
+  select(- ends_with("_beta")) %>% 
   gather(key = condition, value = param_est, -sample_id) %>% 
   mutate(act_prob_scale = logit_to_prob(param_est)) %>% 
   group_by(condition) %>% 
   summarise(prop = mean(act_prob_scale),
             hdi_lower = quantile(act_prob_scale, probs = 0.025),
             hdi_upper = quantile(act_prob_scale, probs = 0.975)) %>% 
-  mutate_if(.predicate = is.numeric, .funs = round, digits = 2) 
+  mutate_if(.predicate = is.numeric, .funs = round, digits = 2) %>% 
+  arrange(prop)
 ```
 
 We modeled action decisions using a logistic regression specified as \texttt{$action \sim goal\_condition * social\_context$} with the No-Goal and No-Social condition as the reference category. 
@@ -369,7 +401,7 @@ Participants' tendency to select a "single" action varied across conditions in t
 ### Decision times:
 
 ```{r rt contrasts e2}
-e2_contrasts_rt <- d_models$rt_e2 %>% 
+e2_contrasts_rt <- d_models$rt_samples_e2 %>% 
   group_by(condition) %>% 
   summarise(rt = median(rt_sec_scale),
             hdi_lower = quantile(rt_sec_scale, probs = 0.025),
@@ -381,7 +413,7 @@ e2_contrasts_rt <- d_models$rt_e2 %>%
 ```
 
 ```{r rt group means e2}
-ms_rt_e2 <- d_models$rt_e2 %>% 
+ms_rt_e2 <- d_models$rt_samples_e2 %>% 
   select(-param_est) %>% 
   spread(condition, rt_sec_scale) %>% 
   mutate(performance = no_goal + performance_beta,
@@ -420,7 +452,7 @@ d %>%
   geom_bar(position="dodge", stat="identity") +
   facet_grid(.~context, labeller=label_both) +
   ylim(0,1) +
-  scale_fill_solarized() +
+  langcog::scale_fill_solarized() +
   ylab("phi value")
 ```
 
@@ -436,8 +468,8 @@ d %>%
   summarise(prob = mean(value)) %>%
   ggplot(., aes(x = goal, y=prob, fill=context)) +
   geom_bar(stat="identity", position="dodge") +
-  theme_few() +
-  scale_fill_solarized() +
+  ggthemes::theme_few() +
+  langcog::scale_fill_solarized() +
   ylab("predicted likelihood of choosing 'single' action")
 ```
 

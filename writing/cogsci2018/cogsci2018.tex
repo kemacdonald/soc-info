@@ -167,12 +167,12 @@ that people's choices are consistent with predictions of our model.
 
 \section{Computational model}\label{computational-model}
 
-To start to examine people's exploration-exploitation tradeoff, we
-situate the model and paradigm in a simplistic learning environment. The
-learner in our model is to act on a toy, and can choose between two
-kinds of actions that will each lead to one outcome (new discovery) or
-the other (overt reward). The learner's action rests on his goals to
-explore versus exploit, and is determined in part by the presence or
+To examine people's learning-performance tradeoff, we situated our model
+and paradigm in a simple learning environment. The learner in our model
+has a toy that he can act on, and can choose between two kinds of
+actions that will each lead to one outcome (new discovery) or the other
+(immediate reward). The learner's action rests on his goals to explore
+versus exploit, which in turn are determined in part by the presence or
 absence of another person he cares about (i.e.~his
 boss)\footnote{From here on, we use a male pronoun for Bob, the learner, and female pronoun for Ann, the boss and observer.}.
 
@@ -180,19 +180,15 @@ A key assumption underlying inferences in recent Bayesian models of
 human social cognition is that people act approximately optimally given
 a utility function (e.g. Goodman \& Frank, 2016; Jara-Ettinger, Gweon,
 Schulz, \& Tenenbaum, 2016). Our model adopts the same utility-theoretic
-approach, and assumes an approximately optimal agent, who reasons about
-the utility function that represents a combination of multiple goals. In
-a recent model of polite language production (Yoon, Tessler, Goodman, \&
-Frank, 2017), the utility function comprised a weighted combination of
-multiple utilities (goals) considered by the speaker, reflecting a
-principled tradeoff between different communicative goals (e.g.~to be
-informative, to be kind, and to appear to be a helpful speaker). We use
-a similarly structured utility function that reflects different goals
-that a learner has in a social learning context. Specifically, we model
-how a person may make a decision to act based on his desire to learn how
-a toy works (\emph{learning utility}), to make the toy operate and
-perform a given function (\emph{performance utility}), or to present
-himself as a competent individual who knows how to make the toy work
+approach, and assumes an approximately optimal agent who reasons about
+the utility function that represents a weighted combination of multiple
+goals (Yoon, Tessler, Goodman, \& Frank, 2017). Our model thus reflects
+a principled tradeoff between different goals that a learner has in a
+social learning context. Specifically, we model how a person may make a
+decision to act based on his desire to learn how a toy works
+(\emph{learning utility}), to make the toy operate and perform a given
+function (\emph{performance utility}), or to present himself as a
+competent individual who knows how to make the toy work
 (\emph{presentational utility}; see the model diagram in Figure 1).
 
 First, the \emph{learning utility} symbolizes the goal to learn new
@@ -217,9 +213,9 @@ each answer (for a detailed analysis of different approaches, see Nelson
 defined as the change in the learner's overall uncertainty (difference
 in entropy) before and after receiving an answer. This information gain
 is then the usefulness of the answer to the query, and thus is equal to
-the learning utility:
+the learning utility (\(U_{learn}\)):
 
-\[ U_{learning} = U(a) = ent(H) - ent(H|a)\] \noindent
+\[ U_{learn} = U(a) = \frac{ent(H) - ent(H|a)}{log_2n}\] \noindent
 where \(ent(H)\) is defined using Shannon
 entropy\footnote{Shannon entropy is a measure of unpredictability or amount of uncertainty in the learner's probability distribution over hypotheses. Intuitively, higher entropy distributions are more uncertain and harder to predict. For example, if the learner believes that all hypotheses are equally likely, then they are in a state of high uncertainty/entropy. In contrast, if the learner firmly believes in one hypothesis, then uncertainty/entropy is low.}.
 MacKay (2003), which provides a measure of the overall amount of
@@ -236,6 +232,8 @@ To calculate the change in the learner's belief in a hypothesis
 \[ P(h|a) = \frac{P(h)P(a|h)}{P(a)} \]
 
 \noindent
+Finally, the difference in entropy is normalized by \(log_2 n\).
+
 The learner performs the expected utility computation for each query in
 the set of possible queries and picks the one that maximizes utility. In
 practice, the learner considers each possible answer, scores the answer
@@ -246,40 +244,41 @@ another, and computes how informative a given answer should be in
 reducing uncertainty about how the toy works.
 
 Second, the \emph{performance utility} is the utility of successfully
-making the toy operate. Specifically within our current paradigm, the
-performance utility is the expected utility of music playing (\(m\))
-given the learner's action \(a\).
+making the toy operate and achieving an immediate rewarding outcome.
+Specifically within our current paradigm, the performance utility
+(\(U_{perf}\)) is the expected likelihood of performance (e.g.~turning
+on music; \(m\)) given the learner's action \(a\).
 
-\[ U_{performance} = P_L(m | a) \] \noindent
+\[ U_{perf} = P_L(m | a) \] \noindent
 Thus, performance utility is maximized by taking an action that is most
-likely to make the toy ``go'' and play music, which is the operation of
-interest.
+likely to make the toy ``go'' and play music or turn the light on, which
+is the outcome of interest.
 
 When there is no observer present, the learner considers the tradeoff
 between the learning utility and performance utility, and he determines
 his action based on a weighted combination of the two utilities:
 
-\[ U(a;\phi; obs = no) = \phi \cdot U_{learning} + (1-\phi) \cdot U_{performance} ,\]
+\[ U(a;\phi; obs = no) = \phi_{learn} \cdot U_{learn} + \phi_{perf} \cdot U_{perf} ,\]
 \noindent
 where \(\phi\) is a mixture parameter governing the extent to which the
-learner prioritizes information gain over making the toy play music.
+learner prioritizes information gain over immediate reward.
 
 When there is another person present to observe the learner's action,
-this observer \(O\) reasons about the competence \(c\) of the learner
-\(L\) which is equal to whether the learner was able to make the toy
-work.
+this observer \(O\) is expected to reason about the competence \(c\) of
+the learner \(L\) which is equal to whether the learner was able to make
+the toy produce an effect.
 
 \[ P_O(c) \propto P_L(m | a)\]
 
 The learner thinks about how the observer infers the learner's
-competence, and his \emph{presentational} utility is based on maximizing
-the apparent competence inferred by the observer.
+competence, and his \emph{presentational} utility (\(U_{pres}\))is based
+on maximizing the apparent competence inferred by the observer.
 
-\[ U_{presentation} = P_O(c) \] Thus, when there is an observer present,
-the learner considers the tradeoff between the learning utility and
-presentational utility:
+\[ U_{pres} = P_O(c) \] When there is an observer present, the learner
+considers the tradeoff between all three utilities: the learning
+utility, performance utility and presentational utility:
 
-\[ U(m;a;\phi; obs = yes) = \phi \cdot U_{learning} + (1-\phi) \cdot U_{presentational}\]
+\[ U(m;a;\phi; obs = yes) = \phi_{learn} \cdot U_{learn} + \\ \phi_{perf} \cdot U_{perf} + \phi_{pres} \cdot U_{pres}\]
 Based on the utility functions above, the learner (\(L\)) chooses his
 action \(a\) approximately optimally (as per optimality parameter
 \(\lambda\)) given his goal weight and observer presence.

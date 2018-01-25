@@ -125,6 +125,17 @@ even stronger inferences if they believe that another person selected
 their actions with the goal of helping them learn (i.e., teaching)
 (Shafto, Goodman, \& Frank, 2012).
 
+\begin{CodeChunk}
+\begin{figure*}[tb]
+
+{\centering \includegraphics[width=1\linewidth]{figs/model_diagram-1} 
+
+}
+
+\caption[Diagram of the computational model]{Diagram of the computational model: The learner considers possible hypotheses and his contextual goals. When an observer is absent, he considers his learning goal (to maximize information gain) and performance goal (e.g. to play music) and decides on an action. When an observer is present, his decision for an action is based on his learning goal vs. presentational goal (to have the observer infer his competence).}\label{fig:model_diagram}
+\end{figure*}
+\end{CodeChunk}
+
 But how can we begin to understand the role of \emph{social} factors in
 self-directed learning contexts? Answering this question represents a
 significant step because explore-exploit decisions often unfold within
@@ -179,17 +190,6 @@ decision to act based on his desire to learn how a toy works
 function (\emph{performance utility}), or to present himself as a
 competent individual who knows how to make the toy work
 (\emph{presentational utility}; see the model diagram in Figure 1).
-
-\begin{CodeChunk}
-\captionsetup{width=0.8\textwidth}\begin{figure*}[h]
-
-{\centering \includegraphics{figs/model_diagram-1} 
-
-}
-
-\caption[Diagram of the computational model]{Diagram of the computational model: The learner considers possible hypotheses and his contextual goals. When an observer is absent, he considers his learning goal (to maximize information gain) and performance goal (e.g. to play music) and decides on an action. When an observer is present, his decision for an action is based on his learning goal vs. presentational goal (to have the observer infer his competence).}\label{fig:model_diagram}
-\end{figure*}
-\end{CodeChunk}
 
 First, the \emph{learning utility} symbolizes the goal to learn new
 information, which in our paradigm specifically is associated with
@@ -287,54 +287,78 @@ action \(a\) approximately optimally (as per optimality parameter
 
 \section{Experiment 1}\label{experiment-1}
 
+\begin{CodeChunk}
+\begin{figure*}[tb]
+
+{\centering \includegraphics[width=0.95\linewidth]{figs/e1_behav_results_plot-1} 
+
+}
+
+\caption[Behavioral results for E1]{Behavioral results for E1. Panel A shows the proportion of action decisions for each goal condition. Error bars represent 95\% binomial confidence intervals computed using Bayesian inference. Panel B shows violin plots of participants' response times on the action decisions. Each point represents a participant with the width of the violin representing the density of the data at that value. Panel C shows violin plots of participants' belief change (entropy) as a function of condition. Lower values represent higher certainty after selecting an action. Color in panels A and C represent the type of action participants selected.}\label{fig:e1_behav_results_plot}
+\end{figure*}
+\end{CodeChunk}
+
 In our experimental paradigms, we wanted to look at people's action
 choices in a minimalistic self-directed learning environment with
 varying goals and social contexts. The task would involve choosing
 between an action that is informative but potentially not immediately
 rewarding, and an action that is certainly immediately rewarding but not
-informative at all. In Experiment 1, we first wanted to confirm that
-participants would choose different actions depending on goals that we
-highlighted. We were also interested to see what people would choose to
-do when no goal is specified and they are free to explore. Importantly,
-participants were limited to making only a single action, which meant
-the opportunity cost for the alternative action was at its highest.
-Thus, participants were asked to imagine that they needed to act on a
-toy with an uncertain causal mechanism, and we assigned participants to
-different goal conditions: learning goal (i.e.~learn how the toy works);
-performance goal (e.g.~make the toy play music); presentation goal
-(i.e.~impress their boss); and no goal. We hypothesized that
-participants would choose an informative action more often in the
-following order of goal conditions (decreasing): learning, no goal,
-performance, and
+informative at all.
+
+In Experiment 1, we first wanted to confirm that participants would
+choose different actions depending on goals that we highlighted. We were
+also interested to see what people would choose to do when no goal is
+specified and they are free to explore. Importantly, participants were
+limited to making only a single action, which meant the opportunity cost
+for the alternative action was at its highest. Thus, participants were
+asked to imagine that they needed to act on a toy with an uncertain
+causal mechanism, and we assigned participants to different goal
+conditions: learning goal (i.e.~learn how the toy works); performance
+goal (e.g.~make the toy play music); presentation goal (i.e.~impress
+their boss); and no goal.
+
+We hypothesized that participants would choose an informative action
+more often in the following order of goal conditions (decreasing):
+learning, no goal, performance, and
 presentation\footnote{Our hypothesis and method were pre-registered prior to data collection on the Open Science Framework (https://osf.io/kcjau)}.
 
 \subsection{Method}\label{method}
 
 \subsubsection{Participants}\label{participants}
 
-FIXME participants with IP addresses in the United States were recruited
-on Amazon's Mechanical Turk. We excluded FIXME partcipants who failed to
-answer at least two out of three set of manipulation check questions
-correctly (See Procedure section for details on the manipulation check
-questions), and thus the remaining FIXME participants were included in
-our final analysis.
+We recruited 196 participants (roughly 50 for each condition) on
+Amazon's Mechanical Turk. To participate participants were required to
+have an IP addresses in the United States and a task approval rate above
+85\%. We excluded 7 participants who failed to answer at least two out
+of three manipulation check questions correctly (see Procedure section
+for details on the manipulation check), and thus the remaining 189
+participants were included in our final analysis.
 
 \subsubsection{Stimuli and Design}\label{stimuli-and-design}
 
 We presented images of three different toys that look very similar but
 each work in different ways, and provided instructions for them (see top
-of Fig. 1 for what the toys looked like). Toy 1 instructions were:
-\emph{``Pull the handle on the left to turn on the light. Press the
-button on the right to play music. Doing both produces both effects at
-the same time.''} Toy 2 instuctions were: \emph{``Pull the handle on the
-left to play music. Press the button on the right to turn on the light.
-Doing both produces both effects at the same time.''} Toy 3 instuctions
-were: \emph{``Pull the handle on the left AND press the button on the
-right to turn on the light and play music at the same time. The button
-press or handle pull on its own doesn't produce any effect.''} Thus,
-doing both button press and handle pull was immediately rewarding but
-uninformative (as it does not disambiguate the causal mechanism in any
-way), whereas either of the single actions was completely
+of Fig. 1 for what the toys looked like).
+
+\begin{itemize}
+\item
+  Toy 1 instructions were: \emph{``Pull the handle on the left to turn
+  on the light. Press the button on the right to play music. Doing both
+  produces both effects at the same time.''}
+\item
+  Toy 2 instuctions were: \emph{``Pull the handle on the left to play
+  music. Press the button on the right to turn on the light. Doing both
+  produces both effects at the same time.''}
+\item
+  Toy 3 instuctions were: \emph{``Pull the handle on the left AND press
+  the button on the right to turn on the light and play music at the
+  same time. The button press or handle pull on its own doesn't produce
+  any effect.''}
+\end{itemize}
+
+Thus, doing both button press and handle pull was immediately rewarding
+but uninformative (as it does not disambiguate the causal mechanism in
+any way), whereas either of the single actions was completely
 disambiguating, but was uncertain to produce an immediate outcome. Each
 toy had a label at the front, indicating which action(s) will make the
 toy operate, and with which outcome effect.
@@ -343,14 +367,14 @@ We asked participants to act on one of these toys; importantly, the
 given toy was missing its label, such that partcipants could not know
 whether the toy was Toy 1, 2 or 3. We assigned participants into four
 goal conditions. For participants in \emph{learning},
-\emph{performance}, and \emph{presentation} conditions, we asked them to
+\emph{performance}, and \emph{presentation} conditions,we asked them to
 imagine that they were children's toy developers and that one day their
 boss approached them. We then instructed participants to: figure out the
 correct label for the toy (\emph{learning} condition); make the toy play
 music (or turn the light on; \emph{performance} condition); or impress
 their boss and show that they are competent (\emph{presentation}
 condition). In \emph{no-goal} condition, participants were asked to
-select an actio We asked participants to select an action they would
+select an action. We asked participants to select an action they would
 like to try out on the toy in order to accomplish the specified goal,
 out of three possible actions: to ``press the button'', ``pull the
 handle'', or ``press the button and pull the handle.'' We randomly
@@ -376,28 +400,104 @@ the toy and seeing that the toy successfully played music, participants
 were asked again to rate the likelihood that the unlabeled toy was each
 of the three possible toys.
 
-\subsection{Results}\label{results}
+\subsection{Results and discussion}\label{results-and-discussion}
 
-\subsubsection{Behavioral results}\label{behavioral-results}
+\subsubsection{Analysis plan}\label{analysis-plan}
 
-\subsubsection{Model fitting}\label{model-fitting}
+First, we present behavioral analyses of participants' (1) action
+decisions, (2) action decision times, and (3) belief change (i.e.,
+learning).\footnote{See TODO for a pre-registration of the analysis
+  plan.} Decision times correspond to the latency to make an action
+selection as measured from the start of the action decision trial (all
+RTs were analyzed in log space). We quantified participants' beliefs
+about the possible toy designs using entropy, and belief change was
+measured as the difference in entropy before and after selecting an
+action.
 
-\subsection{Discussion}\label{discussion}
+We used the \texttt{rstanarm} (Gabry \& Goodrich, 2016) package to fit
+Bayesian regression models estimating the differences across conditions.
+We report the uncertainty in our point estimates using 95\% Highest
+Density Intervals (HDI). The HDI provides a range of credible values
+given the data and model. All analysis code for the statistical models
+can be found in the online repository for this project:
+\url{https://github.com/kemacdonald/soc-info/R/03_models.Rmd}.
+
+Next, we present a Bayesian Data Analysis of the correspondence between
+our computational model and participants action responses. {[}FIXME --
+say more about the BDA?{]}
+
+\subsubsection{Action decisions:}\label{action-decisions}
+
+We modeled action decisions using a logistic regression specified as
+\texttt{$action \sim goal\_condition$} with the No-Goal condition as the
+reference category. Participants' tendency to select a ``single'' action
+varied across conditions in the predicted pattern (see Panel A of Fig
+2), with the highest proportion occuring in the Learning context
+(\(M_{learn} =\) 32\%, {[}20\%, 45\%{]}), followed by the No Goal
+context (\(M_{noGoal} =\) 62\%, {[}48\%, 74\%{]}), then Performance
+(\(M_{perform} =\) 73\%, {[}59\%, 85\%{]}), and the fewest single
+actions in the Presentation condtion (\(M_{present} =\) 86\%, {[}76\%,
+95\%{]}).
+
+Compared the No-Goal condition, participants selected the single action
+at a greater rate in the Learning context (\(\beta\) = -1.27, {[}-2.08,
+-0.5{]}) and at lower rate in the Presentation context (\(\beta\) =
+1.43, {[}0.44, 2.52{]}), with the null value of zero difference
+condition falling well outside the 95\% HDI. In contrast, participants
+in the Performance condition selected actions at at similar rate
+(\(\beta\) = 0.53, {[}-0.33, 1.46{]}) with the 95\% HDI including the
+null value.
+
+\subsubsection{Action decision times:}\label{action-decision-times}
+
+We analyzed response times in log space using the same model
+specification. Panel A of Figure 2 shows the full RT data distribution.
+On average, participants took 27.82 seconds to generate a response in
+the No-goal condidition. Participants took on on average 1.48 seconds
+longer to generate a decision in the Learning condition (\(\beta\) =
+0.39, {[}1.15, 1.88{]}) but produced similar response times in the
+Performance (\(\beta\) = -0.15, {[}0.66, 1.11{]}) and Presentation
+(\(\beta\) = -0.11, {[}1.15, 1.14{]}) conditions.
+
+\subsubsection{Belief change}\label{belief-change}
+
+\subsubsection{BDA model-data fits}\label{bda-model-data-fits}
 
 \section{Experiment 2}\label{experiment-2}
 
+\begin{CodeChunk}
+\begin{figure*}[tb]
+
+{\centering \includegraphics[width=0.95\linewidth]{figs/e2_behav_results-1} 
+
+}
+
+\caption[Behavioral results for E2]{Behavioral results for E2. Panel A shows actions decisions with color representing social context. Panel B shows decision times. Panel C shows belief change. All other plotting conventions are the same as Figure 2.}\label{fig:e2_behav_results}
+\end{figure*}
+\end{CodeChunk}
+
 In Experiment 1, we saw that participants made different action choices
-depending on the goal conditions, as we previously predicted. In
+depending on the goal conditions, as we previously predicted.In
 Experiment 2, we manipulated goals as well as social contexts, fully
 crossing the different goal conditions with the presence/absence of the
 boss, to see whether the social context affects people's decision making
-differently in each goal condition. We hypothesized that social pressure
-should increase presentation-oriented, immediately-rewarding actions in
-the learning and no-goal conditions, but not in the performance
-condition in which they are already specified a goal in the same
-direction.
+differently in each goal condition.
+
+We hypothesized that social pressure should increase
+presentation-oriented, immediately-rewarding actions in the learning and
+no-goal conditions, but not in the performance condition in which they
+are already specified a goal in the same direction.
 
 \subsection{Method}\label{method-1}
+
+\subsubsection{Participants}\label{participants-1}
+
+We recruited 347 participants (roughly 50 for each condition) on
+Amazon's Mechanical Turk. To participate participants were required to
+have an IP addresses in the United States and a task approval rate above
+85\%. We excluded -129 participants who failed to answer at least two
+out of three manipulation check questions correctly, and thus the
+remaining 325 participants were included in our final analysis.
 
 \subsubsection{Stimuli and Design}\label{stimuli-and-design-1}
 
@@ -419,7 +519,7 @@ and impress another person.
 
 The procedure was identical to Experiment 1.
 
-\subsection{Results}\label{results-1}
+\subsection{Results and discussion}\label{results-and-discussion-1}
 
 \subsubsection{Action selections}\label{action-selections}
 
@@ -427,16 +527,14 @@ The procedure was identical to Experiment 1.
 
 \subsubsection{Entropy change}\label{entropy-change}
 
-\subsubsection{Model fitting}\label{model-fitting-1}
+\subsubsection{BDA model-data fits}\label{bda-model-data-fits-1}
 
-\subsection{Discussion}\label{discussion-1}
-
-\section{General discussion}\label{general-discussion}
+\section{General Discussion}\label{general-discussion}
 
 \section{Acknowledgements}\label{acknowledgements}
 
 This work was supported by NSERC postgraduate doctoral scholarship
-PGSD3-454094-2014 to EJY \ldots{} FIXME.
+PGSD3-454094-2014 to EJY and an NSF GRFP to KM {[}FIXME{]}.
 
 \section{References}\label{references}
 
@@ -466,6 +564,10 @@ motivation and personality. \emph{Psychological Review}, \emph{95}(2),
 Elliott, E. S., \& Dweck, C. S. (1988). Goals: An approach to motivation
 and achievement. \emph{Journal of Personality and Social Psychology},
 \emph{54}(1), 5.
+
+\hypertarget{ref-gabry2016rstanarm}{}
+Gabry, J., \& Goodrich, B. (2016). Rstanarm: Bayesian applied regression
+modeling via stan. r package version 2.10. 0.
 
 \hypertarget{ref-goodman2016}{}
 Goodman, N. D., \& Frank, M. C. (2016). Pragmatic language

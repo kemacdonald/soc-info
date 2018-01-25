@@ -7,7 +7,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 ```
 
-## Setup
+# Setup
 
 ```{r}
 library(magrittr); library(tidyverse); library(here); 
@@ -23,6 +23,8 @@ Read data.
 d_path <- "data/03_merged_data/"
 d <- read_csv(here(d_path, "goal_actions_master.csv")) 
 ```
+
+# Experiment 1 
 
 ## Model condition difference in action selection
 
@@ -44,7 +46,7 @@ d_model_e1 <- d %>%
                                             "performance")),
          action_response_fact = factor(action_response, 
                                        levels = c("button", "handle", "both")),
-         action_num = ifelse(action_r_collap == "both", 1, 0))
+         action_num = ifelse(action_r_collap == "both", 0, 1))
 ```
 
 ```{r action logit model}
@@ -55,9 +57,7 @@ m_act_logit <- stan_glm(action_num ~ condition_fact,
                         prior = t_prior, prior_intercept = t_prior)
 
 summary(m_act_logit)
-```
 
-```{r get samples}
 samples_logit_act_e1 <- m_act_logit %>% 
   as.data.frame() %>% 
   as_tibble() %>% 
@@ -81,7 +81,7 @@ summary(m_act_multi)
 
 Extract and clean up the posterior samples.
 
-```{r}
+```{r, eval = F}
 samples_multi_act_e1 <- posterior_samples(m_act, "b") %>% 
   mutate(sample_id = seq(1, n())) %>% 
   gather(key = param_name, value = estimate, -sample_id) %>% 
@@ -93,7 +93,7 @@ samples_multi_act_e1 <- posterior_samples(m_act, "b") %>%
 
 Plot posterior distributions over model params. 
 
-```{r}
+```{r, eval = F}
 samples_multi_act_e1 %>% 
   filter(model == "both") %>% 
   ggplot(aes(x = estimate)) + 
@@ -110,9 +110,8 @@ samples_multi_act_e1 %>%
 ```{r}
 d_rt_e1 <- d_model_e1 %>% 
   rename(rt = action_trial_time) %>% 
-  filter(rt <= mean(rt) + 3*sd(rt) & rt >= mean(rt) - 3*sd(rt)) %>% 
+  filter(rt <= 120) %>% 
   mutate(log_rt = log(rt))
-
 
 m_rt_e1 <- stan_lm(
   log_rt ~ condition_fact,
@@ -156,16 +155,58 @@ samples_rt_e1 %>%
 
 Model entropy change across conditions.
 
-```{r}
-m_entropy_e1 <- stan_lm(
+```{r explore entropy models}
+m_entropy_e1_act <- stan_lm(
+  entropy_change ~ condition_fact,
+  data = d_model_e1,
+  prior = R2(0.75)
+)
+
+m_entropy_e1_cond <- stan_lm(
+  entropy_change ~ condition_fact,
+  data = d_model_e1,
+  prior = R2(0.75)
+)
+
+m_entropy_e1_int <- stan_lm(
   entropy_change ~ condition_fact * action_r_collap,
   data = d_model_e1,
   prior = R2(0.75)
 )
+
+m_entropy_e1_add <- stan_lm(
+  entropy_change ~ condition_fact + action_r_collap,
+  data = d_model_e1,
+  prior = R2(0.75)
+)
+
+loo_act <- rstanarm::loo(m_entropy_e1_act)
+loo_cond <- rstanarm::loo(m_entropy_e1_cond)
+loo_int <- rstanarm::loo(m_entropy_e1_int)
+loo_add <- rstanarm::loo(m_entropy_e1_add)
+
+compare_models(loo_add, loo_int)
 ```
 
-```{r}
-samples_entropy_e1 <- m_entropy_e1 %>% 
+Additive model wins. 
+
+```{r e1 entropy additive model}
+samples_entropy_e1_add <- m_entropy_e1_add %>% 
+  as.data.frame() %>% 
+  as_tibble() %>% 
+  dplyr::rename(no_goal = `(Intercept)`,
+                learning_beta = condition_factlearning,
+                performance_beta = condition_factperformance,
+                presentation_beta = condition_factpresentation,
+                single_action_beta = action_r_collapsingle) %>% 
+  select(-sigma, -R2, -`log-fit_ratio`) %>% 
+  mutate(sample_id = 1:n()) %>% 
+  gather(key = effect, value = param_est, -sample_id) %>% 
+  mutate(eff_type = ifelse(str_detect(effect, "int"), "interaction", "main effect")) 
+```
+
+```{r, eval = F}
+samples_entropy_e1 <- m_entropy_e1_int %>% 
   as.data.frame() %>% 
   as_tibble() %>% 
   dplyr::rename(no_goal = `(Intercept)`,
@@ -185,7 +226,7 @@ samples_entropy_e1 <- m_entropy_e1 %>%
 Plot main effects and interaction betas
 
 ```{r}
-samples_entropy_e1 %>% 
+samples_entropy_e1_add %>% 
   filter(effect != "no_goal") %>% 
   ggplot(aes(x = param_est, color = effect)) + 
   ggthemes::scale_color_ptol() +
@@ -193,13 +234,12 @@ samples_entropy_e1 %>%
        subtitle = "reference group is the no-goal condition") + 
   geom_line(stat = "density", size = 1.5) +
   geom_vline(xintercept = 0, linetype = "dashed") +
-  theme(legend.position = "right") +
-  facet_wrap(~eff_type)
+  theme(legend.position = "right")
 ```
 
-## Experiment 2
+# Experiment 2
 
-```{r}
+```{r e2 filter}
 d_model_e2 <- d %>%
   filter(manip_check_score >= 2, str_detect(experiment, "e2")) %>% 
   distinct(id, condition, action_response, action_r_collap, action_trial_time, 
@@ -216,8 +256,38 @@ Action as a function of social context and goal manipulation.
 
 ```{r action logit model e2}
 t_prior <- student_t(df = 7, location = 0, scale = 2.5)
-m_act_logit_e2 <- stan_glm(action_num ~ condition_fact * social_condition, 
-                        data = d_model_e2,
+
+# remove the presentation condition because it does not have no-social context
+m_act_logit_e2_int <- d_model_e2 %>% 
+  filter(condition != "presentation") %>% 
+  stan_glm(action_num ~ condition_fact * social_condition, 
+                        data = .,
+                        family = binomial(link = "logit"),
+                        prior = t_prior, prior_intercept = t_prior)
+
+samples_logit_act_e2_int <- m_act_logit_e2_int %>% 
+  as.data.frame() %>% 
+  as_tibble() %>% 
+  dplyr::rename(no_goal = `(Intercept)`,
+                learning_beta = condition_factlearning,
+                performance_beta = condition_factperformance,
+                social_beta =  social_conditionsocial,
+                int_learn_social = `condition_factlearning:social_conditionsocial`,
+                int_perf_social = `condition_factperformance:social_conditionsocial`
+                ) %>% 
+  mutate(sample_id = 1:n()) %>% 
+  gather(key = effect, value = param_est, -sample_id) %>% 
+  mutate(eff_type = ifelse(str_detect(effect, "int"), "interaction", "main effect")) 
+```
+
+```{r}
+t_prior <- student_t(df = 7, location = 0, scale = 2.5)
+
+# remove the presentation condition because it does not have no-social context
+m_act_logit_e2 <- d_model_e2 %>% 
+  filter(social_condition == "social") %>% 
+  stan_glm(action_num ~ condition_fact, 
+                        data = .,
                         family = binomial(link = "logit"),
                         prior = t_prior, prior_intercept = t_prior)
 
@@ -227,23 +297,21 @@ samples_logit_act_e2 <- m_act_logit_e2 %>%
   dplyr::rename(no_goal = `(Intercept)`,
                 learning_beta = condition_factlearning,
                 performance_beta = condition_factperformance,
-                presentation_beta = condition_factpresentation,
-                social_beta =  social_conditionsocial,
-                int_learn_social = `condition_factlearning:social_conditionsocial`,
-                int_present_social = `condition_factpresentation:social_conditionsocial`,
-                int_perf_social = `condition_factperformance:social_conditionsocial`
+                presentation_beta = condition_factpresentation
                 ) %>% 
   mutate(sample_id = 1:n()) %>% 
-  gather(key = effect, value = param_est, -sample_id) %>% 
-  mutate(eff_type = ifelse(str_detect(effect, "int"), "interaction", "main effect")) 
+  gather(key = effect, value = param_est, -sample_id) 
 ```
+
+RT on decision trials as a function of condition and social context.
 
 ```{r rt model e2}
 d_rt_e2 <- d_model_e2 %>% 
   rename(rt = action_trial_time) %>% 
-  filter(rt <= mean(rt) + 3*sd(rt) & rt >= mean(rt) - 3*sd(rt)) %>% 
+  filter(rt > 0, rt <= 120) %>% 
   mutate(log_rt = log(rt))
 
+# only use condition
 m_rt_e2 <- stan_lm(
   log_rt ~ condition_fact,
   data = d_rt_e2,
@@ -251,6 +319,24 @@ m_rt_e2 <- stan_lm(
   adapt_delta = 0.99 # changed from 0.8 to 0.99 because of warning about divergent samples
 )
 
+# add social context as additive effect
+m_rt_e2_add <- stan_lm(
+  log_rt ~ condition_fact + social_condition,
+  data = d_rt_e2,
+  prior = R2(0.75)
+  #adapt_delta = 0.99 # changed from 0.8 to 0.99 because of warning about divergent samples
+)
+
+# add interaction term for goal prompt and social context
+m_rt_e2_int <- stan_lm(
+  log_rt ~ condition_fact * social_condition,
+  data = filter(d_rt_e2, condition != "presentation"),
+  prior = R2(0.75)
+  #adapt_delta = 0.99 # changed from 0.8 to 0.99 because of warning about divergent samples
+)
+```
+
+```{r extract rt samples e2}
 samples_rt_e2 <- m_rt_e2 %>% 
   as.data.frame() %>% 
   as_tibble() %>% 
@@ -268,7 +354,7 @@ Model entropy change across conditions.
 
 ```{r}
 m_entropy_e2 <- stan_lm(
-  entropy_change ~ condition_fact * action_r_collap,
+  entropy_change ~ condition_fact + action_r_collap,
   data = d_model_e2,
   prior = R2(0.75)
 )
@@ -280,26 +366,33 @@ samples_entropy_e2 <- m_entropy_e2 %>%
                 learning_beta = condition_factlearning,
                 performance_beta = condition_factperformance,
                 presentation_beta = condition_factpresentation,
-                single_action_beta = action_r_collapsingle,
-                int_present_single_act = `condition_factpresentation:action_r_collapsingle`,
-                int_learn_single_act = `condition_factlearning:action_r_collapsingle`,
-                int_perf_single_act = `condition_factperformance:action_r_collapsingle`) %>% 
+                single_action_beta = action_r_collapsingle) %>% 
   select(-sigma, -R2, -`log-fit_ratio`) %>% 
   mutate(sample_id = 1:n()) %>% 
-  gather(key = effect, value = param_est, -sample_id) %>% 
-  mutate(eff_type = ifelse(str_detect(effect, "int"), "interaction", "main effect")) 
+  gather(key = effect, value = param_est, -sample_id) 
 ```
-
 
 ## Save posterior samples 
 
 ```{r}
-posteriors <- list(action_logit_e1 = samples_logit_act_e1,
-                   rt_e1 = samples_rt_e1,
-                   ent_e1 = samples_entropy_e1,
-                   action_logit_e2 = samples_logit_act_e2,
-                   rt_e2 = samples_rt_e2,
-                   ent_e2 = samples_entropy_e2)
+models <- list(action_model_e1 = m_act_logit,
+               rt_model_e1 = m_rt_e1,
+               ent_model_e1 = m_entropy_e1_add,
+               action_model_e2 = m_act_logit_e2,
+               action_model_e2_int = m_act_logit_e2_int,
+               rt_model_e1 = m_rt_e2,
+               ent_model_e2 = m_entropy_e2
+               )
+
+posteriors <- list(action_logit_samples_e1 = samples_logit_act_e1,
+                   rt_samples_e1 = samples_rt_e1,
+                   ent_samples_e1 = samples_entropy_e1_add,
+                   action_logit_samples_e2 = samples_logit_act_e2,
+                   action_logit_samples_e2_int = samples_logit_act_e2_int,
+                   rt_samples_e2 = samples_rt_e2,
+                   ent_samples_e2 = samples_entropy_e2
+                   )
 
 saveRDS(posteriors, file = here("data/03_merged_data", "soc-info-posterior-samples.rds"))
+saveRDS(models, file = here("data/03_merged_data", "soc-info-models.rds"))
 ```

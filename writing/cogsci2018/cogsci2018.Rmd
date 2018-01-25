@@ -145,9 +145,7 @@ png::readPNG(here::here(image_path, "e1_plot.png")) %>%
   grid::grid.raster()
 ```
 
-In our experimental paradigms, we wanted to look at people's action choices 
-in a minimalistic self-directed learning environment with varying goals and social contexts. 
-The task would involve choosing between an action that is informative but potentially not immediately rewarding, and an action that is certainly immediately rewarding but not informative at all.
+In our experimental paradigms, we wanted to look at people's action choices in a minimalistic self-directed learning environment with varying goals and social contexts. The task would involve choosing between an action that is informative but potentially not immediately rewarding, and an action that is certainly immediately rewarding but not informative at all.
 
 In Experiment 1, we first wanted to confirm that participants would choose different actions 
 depending on goals that we highlighted. We were also interested to see what people would choose to do when no goal is specified and they are free to explore. Importantly, participants were limited to making only a single action, which meant the opportunity cost for the alternative action was at its highest. Thus, participants were asked to imagine that they needed to act on a toy with an uncertain causal mechanism, and we assigned participants to different goal conditions: learning goal (i.e. learn how the toy works); performance goal (e.g. make the toy play music); presentation goal (i.e. impress their boss); and no goal.
@@ -198,7 +196,7 @@ We first introduced participants to the task, and showed them a picture of a pos
 
 ### Analysis plan
 
-First, we present behavioral analyses of participants' (1) action decisions, (2) action decision times, and (3) belief change (i.e., learning) ^[See TODO for a pre-registration of the analysis plan.]. Decision times correspond to the latency to make an action selection as measured from the start of the action decision trial (all RTs were analyzed in log space). We quantified participants' beliefs about the possible toy designs using entropy, and belief change was measured as the difference in entropy before and after selecting an action.
+First, we present behavioral analyses of participants' (1) action decisions, (2) action decision times, and (3) belief change (i.e., learning) ^[See (https://osf.io/kcjau) for a pre-registration of the analysis plan.]. Decision times correspond to the latency to make an action selection as measured from the start of the action decision trial (all RTs were analyzed in log space). We quantified participants' beliefs about the possible toy designs using entropy, and belief change was measured as the difference in entropy before and after selecting an action.
 
 We used the `rstanarm` [@gabry2016rstanarm] package to fit Bayesian regression models estimating the differences across conditions. We report the uncertainty in our point estimates using 95% Highest Density Intervals (HDI). The HDI provides a range of credible values given the data and model. All analysis code for the statistical models can be found in the online repository for this project: https://github.com/kemacdonald/soc-info/R/03_models.Rmd. 
 
@@ -207,7 +205,7 @@ Next, we present a Bayesian Data Analysis of the correspondence between our comp
 ### Action decisions:
 
 ```{r actions summarize model contrasts}
-e1_contrasts_act <- d_models$action_logit_e1 %>% 
+e1_contrasts_act <- d_models$action_logit_samples_e1 %>% 
   group_by(effect) %>% 
   summarise(prop = mean(param_est),
             hdi_lower = quantile(param_est, probs = 0.025),
@@ -217,7 +215,7 @@ e1_contrasts_act <- d_models$action_logit_e1 %>%
 
 ```{r actions get condition betas}
 # no-goal is the intercept or reference group
-ms_act_e1 <- d_models$action_logit_e1 %>% 
+ms_act_e1 <- d_models$action_logit_samples_e1 %>% 
   spread(effect, param_est) %>% 
   mutate(performance = no_goal + performance_beta,
          learning = no_goal + learning_beta,
@@ -239,7 +237,7 @@ Compared to the No-Goal condition, participants selected the single action at a 
 ### Action decision times:
 
 ```{r rt contrasts e1}
-e1_contrasts_rt <- d_models$rt_e1 %>% 
+e1_contrasts_rt <- d_models$rt_samples_e1 %>% 
   group_by(condition) %>% 
   summarise(rt = median(rt_sec_scale),
             hdi_lower = quantile(rt_sec_scale, probs = 0.025),
@@ -251,7 +249,7 @@ e1_contrasts_rt <- d_models$rt_e1 %>%
 ```
 
 ```{r rt group means e1}
-ms_rt_e1 <- d_models$rt_e1 %>% 
+ms_rt_e1 <- d_models$rt_samples_e1 %>% 
   select(-param_est) %>% 
   spread(condition, rt_sec_scale) %>% 
   mutate(performance = no_goal + performance_beta,

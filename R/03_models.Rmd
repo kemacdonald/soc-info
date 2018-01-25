@@ -259,11 +259,12 @@ t_prior <- student_t(df = 7, location = 0, scale = 2.5)
 
 # remove the presentation condition because it does not have no-social context
 m_act_logit_e2_int <- d_model_e2 %>% 
-  filter(condition != "presentation") %>% 
-  stan_glm(action_num ~ condition_fact * social_condition, 
-                        data = .,
-                        family = binomial(link = "logit"),
-                        prior = t_prior, prior_intercept = t_prior)
+  stan_glm(
+    formula = action_num ~ condition_fact * social_condition, 
+    data = .,
+    family = binomial(link = "logit"),
+    prior = t_prior, prior_intercept = t_prior
+    )
 
 samples_logit_act_e2_int <- m_act_logit_e2_int %>% 
   as.data.frame() %>% 
@@ -280,13 +281,14 @@ samples_logit_act_e2_int <- m_act_logit_e2_int %>%
   mutate(eff_type = ifelse(str_detect(effect, "int"), "interaction", "main effect")) 
 ```
 
-```{r}
+Test main effects 
+
+```{r action logit e2}
 t_prior <- student_t(df = 7, location = 0, scale = 2.5)
 
 # remove the presentation condition because it does not have no-social context
 m_act_logit_e2 <- d_model_e2 %>% 
-  filter(social_condition == "social") %>% 
-  stan_glm(action_num ~ condition_fact, 
+  stan_glm(action_num ~ condition_fact + social_condition, 
                         data = .,
                         family = binomial(link = "logit"),
                         prior = t_prior, prior_intercept = t_prior)
@@ -303,7 +305,20 @@ samples_logit_act_e2 <- m_act_logit_e2 %>%
   gather(key = effect, value = param_est, -sample_id) 
 ```
 
-RT on decision trials as a function of condition and social context.
+Compare the interaction and additive models.
+
+```{r}
+loo_add_e2 <- rstanarm::loo(m_act_logit_e2)
+loo_int_e2 <- rstanarm::loo(m_act_logit_e2_int)
+
+compare_models(loo_add_e2, loo_int_e2)
+```
+
+The model with the interaction term is not doing much better
+
+### E2: RT on decision trials 
+
+Modeled as a function of condition and social context.
 
 ```{r rt model e2}
 d_rt_e2 <- d_model_e2 %>% 
@@ -336,6 +351,18 @@ m_rt_e2_int <- stan_lm(
 )
 ```
 
+Compare models.
+
+```{r}
+loo_rt_e2 <- rstanarm::loo(m_rt_e2)
+loo_rt_add_e2 <- rstanarm::loo(m_rt_e2_add)
+loo_rt_int_e2 <- rstanarm::loo(m_rt_e2_int)
+
+compare_models(loo_rt_e2, loo_rt_add_e2)
+```
+
+The model using just goal condition to predict response times does best. So we extract the posterior samples from that model.
+
 ```{r extract rt samples e2}
 samples_rt_e2 <- m_rt_e2 %>% 
   as.data.frame() %>% 
@@ -350,7 +377,7 @@ samples_rt_e2 <- m_rt_e2 %>%
   mutate(rt_sec_scale = exp(param_est))
 ```
 
-Model entropy change across conditions.
+### E2: entropy change across conditions.
 
 ```{r}
 m_entropy_e2 <- stan_lm(
@@ -374,7 +401,7 @@ samples_entropy_e2 <- m_entropy_e2 %>%
 
 ## Save posterior samples 
 
-```{r}
+```{r save models and samples}
 models <- list(action_model_e1 = m_act_logit,
                rt_model_e1 = m_rt_e1,
                ent_model_e1 = m_entropy_e1_add,

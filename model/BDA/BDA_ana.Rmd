@@ -13,6 +13,22 @@ library(here)
 library(jsonlite)
 library(langcog)
 library(ggthemes)
+library(coda)
+
+
+estimate_mode <- function(s) {
+  d <- density(s)
+  return(d$x[which.max(d$y)])
+}
+hdi_upper <- function(s){
+  m <- HPDinterval(mcmc(s))
+  return(m["var1","upper"])
+}
+hdi_lower <- function(s){
+  m <- HPDinterval(mcmc(s))
+  return(m["var1","lower"])
+}
+options("scipen"=10)   
 ```
 
 ```{r jsonToDataFrame}
@@ -72,6 +88,14 @@ d %>%
   ggplot(., aes(value)) +
   geom_density() +
   theme_few()
+
+optimality <- d %>% 
+  filter(grepl("optimal", parameter)) %>%
+  group_by(parameter) %>%
+  summarise(ci_lower = round(hdi_lower(value),2),
+            ci_upper = round(hdi_upper(value),2),
+            mean = round(mean(value),2))
+
 ```
 
 ```{r action}

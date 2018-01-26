@@ -26,15 +26,7 @@ d <- read_csv(here(d_path, "goal_actions_master.csv"))
 
 # Experiment 1 
 
-## Model condition difference in action selection
-
-Since there were three options, I think we need to use a softmax or multinomial regression. No repeated measurements, so we don't model random effects. From [this](https://www.analyticsvidhya.com/blog/2016/02/multinomial-ordinal-logistic-regression/) article:
-
-> The multinomial logistic regression estimates a separate binary logistic regression model for each dummy variables.  The result is M-1 binary logistic regression models.  Each model conveys the effect of predictors on the probability of success in that category, in comparison to the reference category.
-
-> Remember, multinomial logistic regression reports the odds of being in the different outcome categories in reference to some base group.
-
-> Because of the indeterminacy in the regression coe cients, we can interpret the regression coe cients only relative to the reference category. In softmax regression, the regression coeficients can be conceived in terms of the log odds of each outcome relative to the reference outcome:
+## E1: Logit model of action selections
 
 ```{r}
 d_model_e1 <- d %>%
@@ -56,8 +48,6 @@ m_act_logit <- stan_glm(action_num ~ condition_fact,
                         family = binomial(link = "logit"),
                         prior = t_prior, prior_intercept = t_prior)
 
-summary(m_act_logit)
-
 samples_logit_act_e1 <- m_act_logit %>% 
   as.data.frame() %>% 
   as_tibble() %>% 
@@ -69,61 +59,22 @@ samples_logit_act_e1 <- m_act_logit %>%
   gather(key = effect, value = param_est, -sample_id)
 ```
 
-```{r action multinomial model, eval = F}
-# fit model
-m_act_multi <- brm(action_response_fact ~ condition_fact,
-             data = d_model_e1,
-             family="categorical", 
-             prior=c(set_prior ("normal (0, 8)"))) # non-informative prior
+## E1: RT Model
 
-summary(m_act_multi)
-```
-
-Extract and clean up the posterior samples.
-
-```{r, eval = F}
-samples_multi_act_e1 <- posterior_samples(m_act, "b") %>% 
-  mutate(sample_id = seq(1, n())) %>% 
-  gather(key = param_name, value = estimate, -sample_id) %>% 
-  mutate(param_name = str_replace(param_name, "b_mu", ""),
-         param_name = str_replace(param_name, "condition_fact", ""),
-         estimate_prob = logit_to_prob(estimate)) %>% 
-  separate(param_name, into = c("model", "param_name")) 
-```
-
-Plot posterior distributions over model params. 
-
-```{r, eval = F}
-samples_multi_act_e1 %>% 
-  filter(model == "both") %>% 
-  ggplot(aes(x = estimate)) + 
-  geom_line(stat = "density", size = 1.5) +
-  geom_vline(xintercept = 0, linetype = "dashed") +
-  facet_grid(param_name~model, scales = "free_x") +
-  labs(title = "Posterior distribution over logit model predicting the 'both' action",
-       subtitle = "Reference group is the 'no-goal' condition and 'button' action",
-       x = "estimate (logit scale)")
-```
-
-## RT Model
-
-```{r}
+```{r rt model e1}
 d_rt_e1 <- d_model_e1 %>% 
   rename(rt = action_trial_time) %>% 
   filter(rt <= 120) %>% 
   mutate(log_rt = log(rt))
 
 m_rt_e1 <- stan_lm(
-  log_rt ~ condition_fact,
+  rt ~ condition_fact,
   data = d_rt_e1,
   prior = R2(0.75),
   adapt_delta = 0.99 # changed from 0.8 to 0.99 because of warning about divergent samples
 )
-```
 
-Extract posterior samples for RT differences.
-
-```{r}
+# Extract posterior samples for RT differences.
 samples_rt_e1 <- m_rt_e1 %>% 
   as.data.frame() %>% 
   as_tibble() %>% 
@@ -133,29 +84,14 @@ samples_rt_e1 <- m_rt_e1 %>%
                 presentation_beta = condition_factpresentation) %>% 
   select(-sigma, -R2, -`log-fit_ratio`) %>% 
   mutate(sample_id = 1:n()) %>% 
-  gather(key = condition, value = param_est, -sample_id) %>% 
-  mutate(rt_sec_scale = exp(param_est))
+  gather(key = condition, value = param_est, -sample_id) 
 ```
 
-Plot posterior distributions over model params. 
-
-```{r}
-samples_rt_e1 %>% 
-  filter(condition != "no_goal") %>% 
-  ggplot(aes(x = param_est, color = condition)) + 
-  ggthemes::scale_color_ptol() +
-  geom_line(stat = "density", size = 1.5) +
-  geom_vline(xintercept = 0, linetype = "dashed") +
-  labs(title = "Posterior distribution over linear model predicting RT on action trial",
-       subtitle = "Reference group is the 'no-goal' condition",
-       x = "rt estimate (log scale)")
-```
-
-## Entropy analysis
+## E1 entropy analysis
 
 Model entropy change across conditions.
 
-```{r explore entropy models}
+```{r explore entropy models, eval = F}
 m_entropy_e1_act <- stan_lm(
   entropy_change ~ condition_fact,
   data = d_model_e1,
@@ -188,9 +124,15 @@ loo_add <- rstanarm::loo(m_entropy_e1_add)
 compare_models(loo_add, loo_int)
 ```
 
-Additive model wins. 
+Additive model wins by the LOO procedure. So we fit this model and extract posteior samples
 
 ```{r e1 entropy additive model}
+m_entropy_e1_add <- stan_lm(
+  entropy_change ~ condition_fact + action_r_collap,
+  data = d_model_e1,
+  prior = R2(0.75)
+)
+
 samples_entropy_e1_add <- m_entropy_e1_add %>% 
   as.data.frame() %>% 
   as_tibble() %>% 
@@ -203,38 +145,6 @@ samples_entropy_e1_add <- m_entropy_e1_add %>%
   mutate(sample_id = 1:n()) %>% 
   gather(key = effect, value = param_est, -sample_id) %>% 
   mutate(eff_type = ifelse(str_detect(effect, "int"), "interaction", "main effect")) 
-```
-
-```{r, eval = F}
-samples_entropy_e1 <- m_entropy_e1_int %>% 
-  as.data.frame() %>% 
-  as_tibble() %>% 
-  dplyr::rename(no_goal = `(Intercept)`,
-                learning_beta = condition_factlearning,
-                performance_beta = condition_factperformance,
-                presentation_beta = condition_factpresentation,
-                single_action_beta = action_r_collapsingle,
-                int_present_single_act = `condition_factpresentation:action_r_collapsingle`,
-                int_learn_single_act = `condition_factlearning:action_r_collapsingle`,
-                int_perf_single_act = `condition_factperformance:action_r_collapsingle`) %>% 
-  select(-sigma, -R2, -`log-fit_ratio`) %>% 
-  mutate(sample_id = 1:n()) %>% 
-  gather(key = effect, value = param_est, -sample_id) %>% 
-  mutate(eff_type = ifelse(str_detect(effect, "int"), "interaction", "main effect")) 
-```
-
-Plot main effects and interaction betas
-
-```{r}
-samples_entropy_e1_add %>% 
-  filter(effect != "no_goal") %>% 
-  ggplot(aes(x = param_est, color = effect)) + 
-  ggthemes::scale_color_ptol() +
-  labs(title = "Posteriors over model betas", 
-       subtitle = "reference group is the no-goal condition") + 
-  geom_line(stat = "density", size = 1.5) +
-  geom_vline(xintercept = 0, linetype = "dashed") +
-  theme(legend.position = "right")
 ```
 
 # Experiment 2
@@ -252,7 +162,7 @@ d_model_e2 <- d %>%
          action_num = ifelse(action_r_collap == "both", 0, 1))
 ```
 
-Action as a function of social context and goal manipulation.
+## E2 actions decisions
 
 ```{r action logit model e2}
 t_prior <- student_t(df = 7, location = 0, scale = 2.5)
@@ -307,28 +217,30 @@ samples_logit_act_e2 <- m_act_logit_e2 %>%
 
 Compare the interaction and additive models.
 
-```{r}
+```{r compare action models e2, eval = F}
 loo_add_e2 <- rstanarm::loo(m_act_logit_e2)
 loo_int_e2 <- rstanarm::loo(m_act_logit_e2_int)
 
 compare_models(loo_add_e2, loo_int_e2)
 ```
 
-The model with the interaction term is not doing much better
+The model with the interaction term is not doing much better.
 
-### E2: RT on decision trials 
+## E2: RT on decision trials 
 
 Modeled as a function of condition and social context.
 
-```{r rt model e2}
+```{r filter rt data e2}
 d_rt_e2 <- d_model_e2 %>% 
   rename(rt = action_trial_time) %>% 
   filter(rt > 0, rt <= 120) %>% 
   mutate(log_rt = log(rt))
+```
 
-# only use condition
+```{r rt model e2, eval = F}
+# only use condition and keep rts in rt space
 m_rt_e2 <- stan_lm(
-  log_rt ~ condition_fact,
+  rt ~ condition_fact,
   data = d_rt_e2,
   prior = R2(0.75),
   adapt_delta = 0.99 # changed from 0.8 to 0.99 because of warning about divergent samples
@@ -351,19 +263,25 @@ m_rt_e2_int <- stan_lm(
 )
 ```
 
-Compare models.
+Compare RT models.
 
-```{r}
+```{r compare rt models e2, eval = F}
 loo_rt_e2 <- rstanarm::loo(m_rt_e2)
 loo_rt_add_e2 <- rstanarm::loo(m_rt_e2_add)
 loo_rt_int_e2 <- rstanarm::loo(m_rt_e2_int)
-
 compare_models(loo_rt_e2, loo_rt_add_e2)
 ```
 
 The model using just goal condition to predict response times does best. So we extract the posterior samples from that model.
 
 ```{r extract rt samples e2}
+m_rt_e2 <- stan_lm(
+  rt ~ condition_fact,
+  data = d_rt_e2,
+  prior = R2(0.75),
+  adapt_delta = 0.99 # changed from 0.8 to 0.99 because of warning about divergent samples
+)
+
 samples_rt_e2 <- m_rt_e2 %>% 
   as.data.frame() %>% 
   as_tibble() %>% 
@@ -373,33 +291,35 @@ samples_rt_e2 <- m_rt_e2 %>%
                 presentation_beta = condition_factpresentation) %>% 
   select(-sigma, -R2, -`log-fit_ratio`) %>% 
   mutate(sample_id = 1:n()) %>% 
-  gather(key = condition, value = param_est, -sample_id) %>% 
-  mutate(rt_sec_scale = exp(param_est))
+  gather(key = condition, value = param_est, -sample_id) 
 ```
 
-### E2: entropy change across conditions.
+## E2: entropy change across conditions.
 
-```{r}
-m_entropy_e2 <- stan_lm(
-  entropy_change ~ condition_fact + action_r_collap,
+Here we include the additive effects of action resopnse and social condition. Including the interaciton term did not improve model fit and we did not have predictions for any two or three-way interactions.
+
+```{r entropy model e2}
+m_entropy_act_e2 <- stan_lm(
+  entropy_change ~ condition_fact + action_r_collap + social_condition,
   data = d_model_e2,
   prior = R2(0.75)
 )
 
-samples_entropy_e2 <- m_entropy_e2 %>% 
+samples_entropy_e2 <- m_entropy_act_e2 %>% 
   as.data.frame() %>% 
   as_tibble() %>% 
   dplyr::rename(no_goal = `(Intercept)`,
                 learning_beta = condition_factlearning,
                 performance_beta = condition_factperformance,
                 presentation_beta = condition_factpresentation,
-                single_action_beta = action_r_collapsingle) %>% 
+                single_action_beta = action_r_collapsingle,
+                social_beta = social_conditionsocial) %>% 
   select(-sigma, -R2, -`log-fit_ratio`) %>% 
   mutate(sample_id = 1:n()) %>% 
   gather(key = effect, value = param_est, -sample_id) 
 ```
 
-## Save posterior samples 
+# Save posterior samples 
 
 ```{r save models and samples}
 models <- list(action_model_e1 = m_act_logit,
@@ -408,7 +328,7 @@ models <- list(action_model_e1 = m_act_logit,
                action_model_e2 = m_act_logit_e2,
                action_model_e2_int = m_act_logit_e2_int,
                rt_model_e1 = m_rt_e2,
-               ent_model_e2 = m_entropy_e2
+               ent_model_e2 = m_entropy_act_e2
                )
 
 posteriors <- list(action_logit_samples_e1 = samples_logit_act_e1,

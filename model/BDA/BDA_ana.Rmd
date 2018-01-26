@@ -14,6 +14,7 @@ library(jsonlite)
 library(langcog)
 library(ggthemes)
 library(coda)
+library(binom)
 
 
 estimate_mode <- function(s) {
@@ -31,41 +32,40 @@ hdi_lower <- function(s){
 options("scipen"=10)   
 ```
 
+# expt 1
+
 ```{r jsonToDataFrame}
-# bda1 <- fromJSON(here("model/BDA/results/soc-info-ver1-mcmc100000_burn50000_chain1.json"), flatten = TRUE, simplifyDataFrame = TRUE)
+bda1 <- fromJSON(here("model/BDA/e1/results/soc-info-ver1-mcmc10000_burn5000_chain1.json"), flatten = TRUE, simplifyDataFrame = TRUE)
 # bda2 <- fromJSON(here("model/BDA/results/soc-info-ver1-mcmc100000_burn50000_chain2.json"), flatten = TRUE, simplifyDataFrame = TRUE)
 # bda3 <- fromJSON(here("model/BDA/results/soc-info-ver1-mcmc100000_burn50000_chain3.json"), flatten = TRUE, simplifyDataFrame = TRUE)
 # bda4 <- fromJSON(here("model/BDA/results/soc-info-ver1-mcmc100000_burn50000_chain4.json"), flatten = TRUE, simplifyDataFrame = TRUE)
-# 
-# d <-
-#   rbind(bda1$support %>%
-#              mutate(chain = 1),
-#            bda2$support %>%
-#              mutate(chain = 2),
-#            bda3$support %>%
-#              mutate(chain = 3),
-#            bda4$support %>%
-#              mutate(chain = 4)
-#         ) %>%
-#   gather(parameter, value, -chain) %>%
-#   separate(parameter, c("parameter", "goal", "obsPres", "action")) %>%
-#   mutate(goal = fct_recode(goal,
-#                            "no goal" = "noGoal"),
-#          context = fct_recode(obsPres,
-#                               "social" = "1",
-#                               "no-social" = "0"
-#                               ))
-# 
+
+d <-
+  bda1$support %>%
+  # rbind(bda1$support %>%
+  #            mutate(chain = 1),
+  #          bda2$support %>%
+  #            mutate(chain = 2),
+  #          bda3$support %>%
+  #            mutate(chain = 3),
+  #          bda4$support %>%
+  #            mutate(chain = 4)
+  #       ) %>%
+  gather(parameter, value) %>%
+  # gather(parameter, value, -chain) %>%
+  separate(parameter, c("parameter", "goal", "action")) %>%
+  mutate(goal = fct_recode(goal,
+                           "no goal" = "noGoal"))
+
 # save(d, file=here("model/BDA/results/soc-info-ver1-mcmc100000_burn50000_4chains.RData"))
 
-load(here("model/BDA/results/soc-info-ver1-mcmc100000_burn50000_4chains.RData"))
+# load(here("model/BDA/results/soc-info-ver1-mcmc100000_burn50000_4chains.RData"))
 ```
 
 ```{r phi and beta}
 d %>%
   filter(grepl("phi", parameter)) %>%
-  filter(!(goal == "presentation" & context == "no-social")) %>%
-  group_by(parameter, goal, context) %>%
+  group_by(parameter, goal) %>%
   summarise(mean = mean(value)) %>%
   ungroup() %>%
   mutate(phi = fct_recode(parameter,
@@ -75,7 +75,7 @@ d %>%
                           )) %>%
   ggplot(., aes(x = goal, y = mean, fill = phi)) +
   geom_bar(position="dodge", stat="identity") +
-  facet_grid(.~context, labeller=label_both) +
+  # facet_grid(.~context, labeller=label_both) +
   ylim(0,1) +
   scale_fill_solarized() +
   ylab("phi value")
@@ -105,12 +105,234 @@ d %>%
                              "single" = "handle")) %>%
   filter(grepl("posterior", parameter),
          action != "both") %>%
+  group_by(goal, action) %>%
+  summarise(prob = mean(value)) %>%
+  ggplot(., aes(x = goal, y=prob)) +
+  geom_bar(stat="identity", position="dodge") +
+  theme_few() +
+  scale_fill_solarized() +
+  ylab("predicted likelihood of choosing 'single' action")
+```
+
+
+
+
+# expt 2
+
+```{r jsonToDataFrame}
+# bda1 <- fromJSON(here("model/BDA/e2/results/soc-info-ver1-mcmc100000_burn50000_chain1.json"), flatten = TRUE, simplifyDataFrame = TRUE)
+# bda2 <- fromJSON(here("model/BDA/e2/results/soc-info-ver1-mcmc100000_burn50000_chain2.json"), flatten = TRUE, simplifyDataFrame = TRUE)
+# bda3 <- fromJSON(here("model/BDA/e2/results/soc-info-ver1-mcmc100000_burn50000_chain3.json"), flatten = TRUE, simplifyDataFrame = TRUE)
+# bda4 <- fromJSON(here("model/BDA/e2/results/soc-info-ver1-mcmc100000_burn50000_chain4.json"), flatten = TRUE, simplifyDataFrame = TRUE)
+# 
+# d <-
+#   rbind(bda1$support %>%
+#              mutate(chain = 1),
+#            bda2$support %>%
+#              mutate(chain = 2),
+#            bda3$support %>%
+#              mutate(chain = 3),
+#            bda4$support %>%
+#              mutate(chain = 4)
+#         ) %>%
+#   gather(parameter, value, -chain) %>%
+#   separate(parameter, c("parameter", "goal", "obsPres", "action")) %>%
+#   mutate(goal = fct_recode(goal,
+#                            "no goal" = "noGoal"),
+#          context = fct_recode(obsPres,
+#                               "social" = "1",
+#                               "no-social" = "0"
+#                               ))
+# 
+# save(d, file=here("model/BDA/e2/results/soc-info-ver1-mcmc100000_burn50000_4chains.RData"))
+
+load(here("model/BDA/e2/results/soc-info-ver1-mcmc100000_burn50000_4chains.RData"))
+```
+
+```{r phi and beta}
+d_phi <- d %>%
+  filter(grepl("phi", parameter)) %>%
+  filter(!(goal == "presentation" & context == "no-social")) %>%
+  group_by(parameter, goal, context) %>%
+  summarise(mean = mean(value),
+            ci_lower = hdi_lower(value),
+            ci_upper = hdi_upper(value)) %>%
+  ungroup() %>%
+  mutate(phi = fct_recode(parameter,
+                          "learning" = "phiLearning",
+                          "performance" = "phiPerformance",
+                          "presentation" = "phiPresentation"
+                          )) %>%
+  mutate(priority = fct_recode(phi,
+                               "exploration" = "learning",
+                               "exploitation" = "performance", 
+                               "exploitation" = "presentation"
+                               ))
+
+d_phi_exploit <- d_phi %>%
+  mutate(mean = case_when(priority == "exploration" ~ "0", 
+                                               TRUE ~ as.character(as.numeric(mean)))) %>%
+    mutate(mean = as.numeric(as.character(mean)))
+
+d_phi_explore <- d_phi %>%
+  mutate(mean = case_when(priority == "exploitation" ~ "0", 
+                          TRUE ~ as.character(as.numeric(mean)))) %>%
+  mutate(mean = as.numeric(as.character(mean)))
+
+phi <- d_phi %>%
+  ggplot(., aes(x = interaction(context, goal), y = mean, fill = phi, group = phi, order=phi)) +
+  geom_bar(data=d_phi_exploit,
+ stat="identity", width=.3, position = position_stack(reverse = TRUE)) +
+  geom_bar(data=d_phi_explore,
+position=position_nudge(x=-.3), stat="identity", width=.3) +
+  # geom_linerange(aes(x = interaction(context, goal), ymin = ci_lower, ymax = ci_upper, 
+  #                    group = phi), inherit.aes = F,
+  #                color = "grey50", alpha = 0.6, size = .5,
+  #                position = position_dodge(width = 0.85),
+  #                data=mutate(d_phi_explore, 
+  #                            ci_lower = ifelse(phi == "presentation",NA,ci_lower))) +
+  ylim(0,1) +
+  ggthemes::scale_fill_ptol() +
+  ylab("phi value") +
+  xlab(NULL) +
+  theme_few() +
+  theme(axis.text.x = element_text(vjust=0.6, angle=-35),   axis.ticks = element_blank())
+
+phi
+```
+
+```{r optimality}
+d %>%
+  filter(grepl("optimal", parameter)) %>%
+  ggplot(., aes(value)) +
+  geom_density() +
+  theme_few()
+
+optimality <- d %>% 
+  filter(grepl("optimal", parameter)) %>%
+  group_by(parameter) %>%
+  summarise(ci_lower = round(hdi_lower(value),2),
+            ci_upper = round(hdi_upper(value),2),
+            mean = round(mean(value),2))
+
+```
+
+```{r action}
+postpred <- d %>% 
+  mutate(action = fct_recode(action, 
+                             "single" = "button",
+                             "single" = "handle")) %>%
+  filter(grepl("posterior", parameter),
+         action == "both") %>%
   filter(!(goal == "presentation" & obsPres == "0")) %>%
   group_by(goal, context, action) %>%
-  summarise(prob = mean(value)) %>%
+  summarise(prob = mean(1-value),
+            ci_lower = hdi_lower(1-value),
+            ci_upper = hdi_upper(1-value)
+            ) 
+
+postpred_plot <- postpred %>%
+  ggplot(., aes(x = goal, y=prob, fill=context)) +
+  geom_bar(stat="identity", position="dodge") +
+  theme_few() +
+  scale_fill_grey(start = 0.1, end = 0.6)+ 
+  geom_linerange(aes(x = goal, ymin = ci_lower, ymax = ci_upper, 
+                     group = context), inherit.aes = F,
+                 color = "grey50", alpha = 0.6, size = 1,
+                 position = position_dodge(width = 0.85)
+                 ) +
+
+  # scale_fill_solarized() +
+  ylab("model-predicted 'single' action choice")
+
+postpred_plot
+```
+
+```{r e2 combine plot}
+plot <- cowplot::plot_grid(postpred_plot, phi, labels = c("A", "B"),
+                   rel_widths = c(0.85, 1))
+```
+
+```{r e2 exp data}
+d_e2 <- fromJSON(here("model/BDA/e2/e2-actionData.json"))
+
+d_e2 %>% 
+  # mutate(action = fct_recode(action, 
+  #                            "single" = "button",
+  #                            "single" = "handle")) %>%
+  # filter(action != "both") %>%
+  mutate(context = fct_recode(factor(obsPres),
+                              "social" = "1",
+                              "no-social" = "0"
+                              )) %>%
+  group_by(goal,context, action) %>%
+  summarise(prob = n()) %>%
   ggplot(., aes(x = goal, y=prob, fill=context)) +
   geom_bar(stat="identity", position="dodge") +
   theme_few() +
   scale_fill_solarized() +
   ylab("predicted likelihood of choosing 'single' action")
+
+
+d_e2_pred <- d_e2 %>% 
+  # mutate(action = fct_recode(action, 
+  #                            "single" = "button",
+  #                            "single" = "handle")) %>%
+  # filter(action != "both") %>%
+  mutate(context = fct_recode(factor(obsPres),
+                              "social" = "1",
+                              "no-social" = "0"
+                              )) %>%  
+  mutate(goal = fct_recode(goal, "no goal" = "noGoal")) %>%
+  distinct(goal, context, action, id) %>%
+  count(action, goal, context) %>% 
+  group_by(goal, context) %>% 
+  mutate(data_prob = n / sum(n)) %>% 
+  mutate(data_ci_lower = binom.bayes(x = n, n = sum(n), conf.level = 0.95) %>% pull(lower),
+         data_ci_upper = binom.bayes(x = n, n = sum(n), conf.level = 0.95) %>% pull(upper)) %>% 
+  # filter(action == "single") %>%
+  select(-n)
+
+postpred <- d %>% 
+  # mutate(action = fct_recode(action, 
+  #                            "single" = "button",
+  #                            "single" = "handle")) %>%
+  filter(grepl("posterior", parameter)) %>%
+         # action == "both") %>%
+  filter(!(goal == "presentation" & obsPres == "0")) %>%
+  group_by(goal, context, action) %>%
+  summarise(prob = mean(value),
+            ci_lower = hdi_lower(value),
+            ci_upper = hdi_upper(value)
+            )
+
+data_mod <- left_join(postpred, d_e2_pred)
+
+ggplot(data_mod,
+       aes(x = prob, y = data_prob)) +
+  aes(shape = factor(context)) +
+  geom_point(aes(colour = factor(goal), fill = factor(goal)), size = 2) +
+  scale_shape(solid = FALSE) +
+  scale_shape_manual(name = "context", values = c(24, 25))+
+  theme_few()+
+  geom_abline(intercept = 0, slope = 1, linetype = 3) +
+  geom_errorbar(aes(ymin=data_ci_lower,ymax=data_ci_upper), alpha = 0.3) +
+  geom_errorbarh(aes(xmin=ci_lower,xmax=ci_upper), alpha = 0.3) +
+  xlab("Model posterior predictive") +
+  ylab("Human proportion responses") +
+  ylim(0,1) +
+  xlim(0,1) +
+  scale_y_continuous(breaks=c(0, 0.25, 0.5, 0.75, 1)) +
+  scale_x_continuous(breaks=c(0, .25, 0.5, 0.75, 1)) +
+  theme(axis.text.y = element_text(hjust = 0, angle = 0),
+        axis.text.x = element_text(vjust = 0, angle = 0),
+        legend.position = "bottom",
+        legend.direction = "horizontal") +
+  coord_fixed()+
+  scale_colour_solarized(name = "goal") +
+  scale_fill_solarized() +
+  guides(fill=FALSE)
+
+cor2 = with(data_mod, cor(data_prob, prob, use="na.or.complete"))^2
+
 ```

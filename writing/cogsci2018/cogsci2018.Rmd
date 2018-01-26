@@ -25,7 +25,8 @@ image_path <- "writing/cogsci2018/figs/"
 
 library(png); library(grid)
 library(gridExtra); library(xtable)
-library(tidyverse); library(here)
+library(tidyverse); library(here);
+library(jsonlite); library(binom)
 
 source(here("R/soc_info_helpers.R"))
 ```
@@ -60,7 +61,9 @@ grid.arrange(img1, img2, ncol = 2)
 
 But how can we begin to understand the role of *social* factors in self-directed learning contexts? Answering this question represents a significant step because explore-exploit decisions often unfold within fundamentally social contexts where people must integrate the value of social goals and information goals when deciding what to do next. Consider that actions that maximize learning are inherently risky -- leading to mistakes and struggles -- which could be difficult to undertake in with someone else present. Thus, a learner might prioritize actions that maintain their reputation: looking more attractive, knowledgeable, or competent to the observer. In this case, the learner is leveraging psychological reasoning processes to infer what the observer thinks based on their action (cook a meal) and its outcome (a delicious meal).  If the learner is worried about the observer’s beliefs, then the they might choose actions that maximize the probability of maintaining a favorable impression in the eyes of the observer ('That meal was delicious, so he must be a good cook!'). Indeed, when the value of self-presentation is highlighted, children avoid opportunities that will help them learn new things but pose risks for public mistakes [@elliott1988; @dweck1988]. 
 
-We present a computational model of the learning-performance tradeoff in a self-directed learning context with social factors. We model a learner who considers his learning goal versus performance goal, which may be influenced by the social context (e.g. the presence of another individual whom he wants to impress). We then look at adult participants’ action choices within a minimalistic self-directed learning task representing different goals and social contexts, and show that people's choices are consistent with predictions of our model.
+We present a computational model of the learning-performance tradeoff in a self-directed learning context with social factors. We model a learner who considers his learning goal versus performance goal, which may be influenced by the social context (e.g. the presence of another individual whom he wants to impress). 
+We look at adult participants’ action choices within a minimalistic self-directed learning task representing different goals and social contexts in two experiments,
+and show that people's choices are consistent with predictions of our model.
 
 # Computational model
 
@@ -200,7 +203,7 @@ We asked participants to act on one of these toys; importantly, the given toy wa
 
 ### Procedure
 
-We first introduced participants to the task, and showed them a picture of a possible toy with labels on its different parts. Then they read instructions for each of the three toy types. We presented Toy 1 and Toy 2 instructions in a randomized order first, and then Toy 3 instructions. Afterwards, they were asked what they would do to make the toy operate as manipulation check (e.g. "How would you make the toy play music?"). We asked participants to rate prior likelihood that an unknown toy is Toy 1, 2, or 3, to use as priors for our model. Participants then read a scenario for one of the three goal conditions, followed by the question: "If you only had one chance to try a SINGLE action to [pursue the specified goal], which action would you want to take? You will get a 10 cent bonus after submitting the HIT if you [achieve the given goal]." After selecting one of three possible actions to perform on the toy and seeing that the toy successfully played music, participants were asked again to rate the likelihood that the unlabeled toy was each of the three possible toys.
+We first introduced participants to the task, and showed them a picture of a possible toy with labels on its different parts. Then they read instructions for each of the three toy types. We presented Toy 1 and Toy 2 instructions in a randomized order first, and then Toy 3 instructions. Afterwards, they were asked what they would do to make the toy operate as manipulation check (e.g. "How would you make the toy play music?"). We asked participants to rate prior likelihood that an unknown toy is Toy 1, 2, or 3, to use as priors for our model. Participants then read a scenario for one of the three goal conditions, followed by the question: "If you only had one chance to try a SINGLE action to [pursue the specified goal], which action would you want to take? You will get a 10 cent bonus ... if you [achieve the given goal]." After selecting one of three possible actions to perform on the toy and seeing that the toy successfully played music, participants were asked again to rate the likelihood that the unlabeled toy was each of the three possible toys.
 
 ## Results and discussion
 
@@ -209,8 +212,6 @@ We first introduced participants to the task, and showed them a picture of a pos
 First, we present behavioral analyses of participants' (1) action decisions, (2) action decision times, and (3) belief change (i.e., learning) ^[See (https://osf.io/kcjau) for a pre-registration of the analysis plan.]. Decision times correspond to the latency to make an action selection as measured from the start of the action decision trial (all RTs were analyzed in log space). We quantified participants' beliefs about the possible toy designs using entropy, and belief change was measured as the difference in entropy before and after selecting an action.
 
 We used the `rstanarm` [@gabry2016rstanarm] package to fit Bayesian regression models estimating the differences across conditions. We report the uncertainty in our point estimates using 95% Highest Density Intervals (HDI). The HDI provides a range of credible values given the data and model. All analysis code for the statistical models can be found in the online repository for this project: https://github.com/kemacdonald/soc-info/R/03_models.Rmd. 
-
-Next, we present a Bayesian Data Analysis of the correspondence between our computational model and participants action responses. [FIXME -- say more about the BDA?]
 
 ### Action decisions:
 
@@ -312,12 +313,13 @@ We modeled change in entropy as a function of goal condition and participants' a
 d_e2 <- d %>% filter(str_detect(experiment, "e2"))
 ```
 
-```{r e2_behav_results, include = T, fig.env = "figure*", fig.pos = "tb", fig.width=5, fig.asp = 0.4, out.width= "95%", fig.align='center', fig.cap = "Behavioral results for E2. Panel A shows actions decisions with color representing social context. Panel B shows decision times. Panel C shows belief change. All other plotting conventions are the same as Figure 2."}
-png::readPNG(here::here(image_path, "e2_plot.png")) %>% 
+```{r e2_results, include = T, fig.env = "figure*", fig.pos = "tb", fig.width=5, fig.asp = 0.4, out.width= "95%", fig.align='center', fig.cap = "Behavioral and model fitting results for E2. Panel A shows actions decisions with color representing social context, from human data (top) and fitted model predictions (bottom). Panel B shows decision times. Panel C shows belief change. Panel D shows inferred phi values for each goal-context condition. All other plotting conventions are the same as Figure 2."}
+png::readPNG(here::here(image_path, "e2_plot_wBDA.png")) %>%
   grid::grid.raster()
 ```
 
-In Experiment 1, we saw that participants made different action choices depending on the goal conditions, as we previously predicted.In Experiment 2, we manipulated goals as well as social contexts, fully crossing the different goal conditions with the presence/absence of the boss, to see whether the social context affects people's decision making differently in each goal condition.
+
+In Experiment 1, we saw that participants made different action choices depending on the goal conditions, as we previously predicted. In Experiment 2, we manipulated goals as well as social contexts, fully crossing the different goal conditions with the presence/absence of the boss, to see whether the social context affects people's decision making differently in each goal condition.
 
 We hypothesized that social pressure should increase presentation-oriented, immediately-rewarding actions in the learning and no-goal conditions, but not in the performance condition in which they are already specified a goal in the same direction.
 
@@ -341,7 +343,7 @@ n_excluded_e2 <- n_run_e2 - sum(e2_excluded$n)
 n_analyzed_e2 <- sum(e2_excluded$n)
 ```
 
-We recruited `r n_run_e2` participants (roughly 50 for each condition) on Amazon’s Mechanical Turk. To participate participants were required to have an IP addresses in the United States and a task approval rate above 85%. We excluded `r n_excluded_e2` participants who failed to answer at least two out of three manipulation check questions correctly, and thus the remaining `r n_analyzed_e2` participants were included in our final analysis.
+We recruited `r n_run_e2` participants (~50 for each condition) on Amazon’s Mechanical Turk. To participate participants were required to have an IP addresses in the United States and a task approval rate above 85%. We excluded `r n_excluded_e2` participants who failed to answer at least two out of three manipulation check questions correctly, and thus the remaining `r n_analyzed_e2` participants were included in our final analysis.
 
 ### Stimuli and Design
 
@@ -460,12 +462,56 @@ Across all conditions, participants who selected the single action showed a grea
 
 ### BDA model-data fit:
 
-In this experiment, participants were instructed to choose an action based on a certain goal\footnote{A separate prior elicitation task, in which people indicated the likelihood for selecting an action without any background information about possible hypotheses or goals, did not suggest that any of the action choice priors differed from chance; we used mean likelihood for each action choice as the baseline prior in our model; see [FIXME]}. 
-We assume that the goal descriptions (e.g. figure out the correct label for the toy; "learning") conveyed to the participants a particular set of goal weights {$\phi_{learn}$, $\phi_{perf}$, $\phi_{pres}$} that they used to generate their action choice. We put uninformative priors on these weights ($\phi \sim Uniform(0,1)$) and inferred their credible values separately for each pair of different goal condition and social context, using Bayesian data analytic techniques [@lee2014bayesian]. 
+```{r bda load}
+load(here("model/BDA/e2/results/soc-info-ver1-mcmc100000_burn50000_4chains.RData"))
 
-The inferred goal weights were consistent with what we predicted (see Figure FIXME). 
+optimality <- d %>% 
+  filter(grepl("optimal", parameter)) %>%
+  group_by(parameter) %>%
+  summarise(ci_lower = round(hdi_lower(value),2),
+            ci_upper = round(hdi_upper(value),2),
+            mean = round(mean(value),2))
+
+postpred <- d %>%
+  filter(grepl("posterior", parameter)) %>%
+  filter(!(goal == "presentation" & obsPres == "0")) %>%
+  group_by(goal, context, action) %>%
+  summarise(prob = mean(value),
+            ci_lower = hdi_lower(value),
+            ci_upper = hdi_upper(value)
+            )
+```
+
+```{r bda cor2}
+d_e2 <- fromJSON(here("model/BDA/e2/e2-actionData.json"))
+
+d_e2_pred <- d_e2 %>%
+  mutate(context = fct_recode(factor(obsPres),
+                              "social" = "1",
+                              "no-social" = "0"
+                              )) %>%
+  mutate(goal = fct_recode(goal, "no goal" = "noGoal")) %>%
+  distinct(goal, context, action, id) %>%
+  count(action, goal, context) %>%
+  group_by(goal, context) %>%
+  mutate(data_prob = n / sum(n)) %>%
+  mutate(data_ci_lower = binom.bayes(x = n, n = sum(n), conf.level = 0.95) %>% pull(lower),
+         data_ci_upper = binom.bayes(x = n, n = sum(n), conf.level = 0.95) %>% pull(upper)) %>%
+  select(-n)
+
+data_mod <- left_join(postpred, d_e2_pred)
+
+cor2 = round(with(data_mod, cor(data_prob, prob, use="na.or.complete"))^2,3)
+```
+
+In this experiment, participants were instructed to choose an action\footnote{For action priors, we used a separate prior elicitation task, in which people indicated the likelihood for selecting an action without any background information about possible hypotheses or goals. The results suggested that none of the action choice priors differed from chance. We used mean likelihood for each action choice as baseline priors in our model; see [FIXME]} based on a certain goal. 
+We assumed that the goal descriptions (e.g. "figure out the correct label for the toy") conveyed to the participants a particular set of goal weights {$\phi_{learn}$, $\phi_{perf}$, $\phi_{pres}$} that they used to generate their action choices. We put uninformative priors on these weights ($\phi \sim Uniform(0,1)$) and inferred their credible values separately for each pair of different goal condition and social context, using Bayesian data analytic techniques [@lee2014bayesian]. 
+
+The inferred goal weights were consistent with what we predicted (see Figure 3, panel D). $\phi_{learn}$ was at its highest for no-social learning condition, in which the goal to learn was highlighted, and there was minimum social pressure. On the other hand, the $\phi_{perf}$ and $\phi_{pres}$ together make up the highest portion in the presentation condition, with high social pressure to present competence, compared to other conditions.
 
 We also inferred another parameter of the cognitive model, the optimality parameter $\lambda$. We put uninformative prior on the parameter ($\lambda \sim Uniform(0,10)$ and inferred its posterior credible value from the data. We ran 4 MCMC chains for 100,000 iterations, discarding the first 50,000 for burnin. The Maximum A- Posteriori (MAP) estimate and 95% Highest Probability Density Interval (HDI) for $\lambda$ was `r optimality$mean` [`r optimality$ci_lower`, `r optimality$ci_upper`]. 
+
+The predictions of the action choices according to the fitted learner model are shown in Figure 3, panel A (bottom). The model's expected posteriors over action choices capture key differences between conditions: the single action was more likely for no-social than social conditions overall, but not when the performance goal was highlighted. The model was able to predict the distribution of action responses with high accuracy $r^2(21)$ = `r cor2`.
 
 # General Discussion
 

@@ -133,7 +133,7 @@ their actions with the goal of helping them learn (i.e., teaching)
 (Shafto, Goodman, \& Frank, 2012).
 
 \begin{CodeChunk}
-\begin{figure*}[tb]
+\captionsetup{width=0.8\textwidth}\begin{figure*}[tb]
 
 {\centering \includegraphics[width=1\linewidth]{figs/model_diagram-1} 
 
@@ -167,10 +167,10 @@ We present a computational model of the learning-performance tradeoff in
 a self-directed learning context with social factors. We model a learner
 who considers his learning goal versus performance goal, which may be
 influenced by the social context (e.g.~the presence of another
-individual whom he wants to impress). We then look at adult
-participants' action choices within a minimalistic self-directed
-learning task representing different goals and social contexts, and show
-that people's choices are consistent with predictions of our model.
+individual whom he wants to impress). We look at adult participants'
+action choices within a minimalistic self-directed learning task
+representing different goals and social contexts in two experiments, and
+show that people's choices are consistent with predictions of our model.
 
 \section{Computational model}\label{computational-model}
 
@@ -411,11 +411,11 @@ Toy 1, 2, or 3, to use as priors for our model. Participants then read a
 scenario for one of the three goal conditions, followed by the question:
 ``If you only had one chance to try a SINGLE action to {[}pursue the
 specified goal{]}, which action would you want to take? You will get a
-10 cent bonus after submitting the HIT if you {[}achieve the given
-goal{]}.'' After selecting one of three possible actions to perform on
-the toy and seeing that the toy successfully played music, participants
-were asked again to rate the likelihood that the unlabeled toy was each
-of the three possible toys.
+10 cent bonus \ldots{} if you {[}achieve the given goal{]}.'' After
+selecting one of three possible actions to perform on the toy and seeing
+that the toy successfully played music, participants were asked again to
+rate the likelihood that the unlabeled toy was each of the three
+possible toys.
 
 \subsection{Results and discussion}\label{results-and-discussion}
 
@@ -438,10 +438,6 @@ Density Intervals (HDI). The HDI provides a range of credible values
 given the data and model. All analysis code for the statistical models
 can be found in the online repository for this project:
 \url{https://github.com/kemacdonald/soc-info/R/03_models.Rmd}.
-
-Next, we present a Bayesian Data Analysis of the correspondence between
-our computational model and participants action responses. {[}FIXME --
-say more about the BDA?{]}
 
 \subsubsection{Action decisions:}\label{action-decisions}
 
@@ -493,16 +489,16 @@ higher in this scenario.
 \begin{CodeChunk}
 \begin{figure*}[tb]
 
-{\centering \includegraphics[width=0.95\linewidth]{figs/e2_behav_results-1} 
+{\centering \includegraphics[width=0.95\linewidth]{figs/e2_results-1} 
 
 }
 
-\caption[Behavioral results for E2]{Behavioral results for E2. Panel A shows actions decisions with color representing social context. Panel B shows decision times. Panel C shows belief change. All other plotting conventions are the same as Figure 2.}\label{fig:e2_behav_results}
+\caption[Behavioral and model fitting results for E2]{Behavioral and model fitting results for E2. Panel A shows actions decisions with color representing social context, from human data (top) and fitted model predictions (bottom). Panel B shows decision times. Panel C shows belief change. Panel D shows inferred phi values for each goal-context condition. All other plotting conventions are the same as Figure 2.}\label{fig:e2_results}
 \end{figure*}
 \end{CodeChunk}
 
 In Experiment 1, we saw that participants made different action choices
-depending on the goal conditions, as we previously predicted.In
+depending on the goal conditions, as we previously predicted. In
 Experiment 2, we manipulated goals as well as social contexts, fully
 crossing the different goal conditions with the presence/absence of the
 boss, to see whether the social context affects people's decision making
@@ -517,12 +513,12 @@ are already specified a goal in the same direction.
 
 \subsubsection{Participants}\label{participants-1}
 
-We recruited 347 participants (roughly 50 for each condition) on
-Amazon's Mechanical Turk. To participate participants were required to
-have an IP addresses in the United States and a task approval rate above
-85\%. We excluded 22 participants who failed to answer at least two out
-of three manipulation check questions correctly, and thus the remaining
-325 participants were included in our final analysis.
+We recruited 347 participants (\textasciitilde{}50 for each condition)
+on Amazon's Mechanical Turk. To participate participants were required
+to have an IP addresses in the United States and a task approval rate
+above 85\%. We excluded 22 participants who failed to answer at least
+two out of three manipulation check questions correctly, and thus the
+remaining 325 participants were included in our final analysis.
 
 \subsubsection{Stimuli and Design}\label{stimuli-and-design-1}
 
@@ -553,19 +549,19 @@ We modeled action decisions using a logistic regression specified as
 No-Goal and No-Social condition as the reference category. We replicated
 the key finding from E1: participants tended to select the ``single''
 action more often when they were within a context that emphasized a
-learning goal (\(M_{learn} =\) 68\%, {[}57\%, 79\%{]}), followed by the
-No Goal context (\(M_{noGoal} =\) 52\%, {[}40\%, 63\%{]}), then
+learning goal (\(M_{learn} =\) 68\%, {[}57\%, 78\%{]}), followed by the
+No Goal context (\(M_{noGoal} =\) 52\%, {[}41\%, 63\%{]}), then
 Performance (\(M_{perform} =\) 37\%, {[}26\%, 48\%{]}), with the fewest
 single actions generated in the Presentation condtion (\(M_{present} =\)
 8\%, {[}2\%, 17\%{]}).
 
 There was a main efffect of social context, with participants being less
 likely to select the single action when their boss was present
-(\(\beta =\) -52.2\%, {[}-99.9\%, -4.8\%{]}). Finally, there was
+(\(\beta =\) -52.1\%, {[}-100.5\%, -5.3\%{]}). Finally, there was
 evidence for a reliable interaction between goal condition and social
 context such that the effect of social context was present in the
 Learning and No-Goal conditions, but not in the Performance condition
-(\(\beta\) \(_{int}\) = 1.127, {[}0.9\%, 225.3\%{]}).
+(\(\beta\) \(_{int}\) = 1.163, {[}1\%, 231.2\%{]}).
 
 \subsubsection{Action decision times:}\label{action-decision-times-1}
 
@@ -593,18 +589,24 @@ and type of action choice.
 
 \subsubsection{BDA model-data fit:}\label{bda-model-data-fit}
 
-In this experiment, participants were instructed to choose an action
-based on a certain goal. We assume that the goal descriptions
-(e.g.~figure out the correct label for the toy; ``learning'') conveyed
-to the participants a particular set of goal weights \{\(\phi_{learn}\),
+In this experiment, participants were instructed to choose an
+action\footnote{For action priors, we used a separate prior elicitation task, in which people indicated the likelihood for selecting an action without any background information about possible hypotheses or goals. The results suggested that none of the action choice priors differed from chance. We used mean likelihood for each action choice as baseline priors in our model; see [FIXME]}
+based on a certain goal. We assumed that the goal descriptions (e.g.
+``figure out the correct label for the toy'') conveyed to the
+participants a particular set of goal weights \{\(\phi_{learn}\),
 \(\phi_{perf}\), \(\phi_{pres}\)\} that they used to generate their
-action choice. We put uninformative priors on these weights
+action choices. We put uninformative priors on these weights
 (\(\phi \sim Uniform(0,1)\)) and inferred their credible values
 separately for each pair of different goal condition and social context,
 using Bayesian data analytic techniques (Lee \& Wagenmakers, 2014).
 
-The inferred goal weights were consistent with what we predicted
-\ldots{} {[}FIXME{]}
+The inferred goal weights were consistent with what we predicted (see
+Figure 3, panel D). \(\phi_{learn}\) was at its highest for no-social
+learning condition, in which the goal to learn was highlighted, and
+there was minimum social pressure. On the other hand, the
+\(\phi_{perf}\) and \(\phi_{pres}\) together make up the highest portion
+in the presentation condition, with high social pressure to present
+competence, compared to other conditions.
 
 We also inferred another parameter of the cognitive model, the
 optimality parameter \(\lambda\). We put uninformative prior on the
@@ -612,7 +614,15 @@ parameter (\(\lambda \sim Uniform(0,10)\) and inferred its posterior
 credible value from the data. We ran 4 MCMC chains for 100,000
 iterations, discarding the first 50,000 for burnin. The Maximum A-
 Posteriori (MAP) estimate and 95\% Highest Probability Density Interval
-(HDI) for \(\lambda\) was 5.76 {[}3.84, 7.14{]}.
+(HDI) for \(\lambda\) was 4.79 {[}3.96, 6.2{]}.
+
+The predictions of the action choices according to the fitted learner
+model are shown in Figure 3, panel A (bottom). The model's expected
+posteriors over action choices capture key differences between
+conditions: the single action was more likely for no-social than social
+conditions overall, but not when the performance goal was highlighted.
+The model was able to predict the distribution of action responses with
+high accuracy \(r^2(21)\) = 0.9.
 
 \section{General Discussion}\label{general-discussion}
 

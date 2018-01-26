@@ -27,3 +27,15 @@ logit_to_prob <- function(x) {
   prob <- odds / (1 + odds)
   prob
 }
+
+
+# HPDhi<- function(s){
+hdi_upper <- function(s){
+  m <- coda::HPDinterval(coda::mcmc(s))
+  return(m["var1","upper"])
+}
+# HPDlo<- function(s){
+hdi_lower <- function(s){
+  m <- coda::HPDinterval(coda::mcmc(s))
+  return(m["var1","lower"])
+}

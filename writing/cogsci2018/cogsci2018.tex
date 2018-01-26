@@ -49,7 +49,8 @@
 % \textwidth 16cm
 % \textheight 21cm
 
-\title{Learning versus performance in social contexts}
+\title{Should I learn or make it go? Balancing informational and social goals
+in active learning}
 
 
 \author{{\large \bf Erica J. Yoon*}, {\large \bf Kyle MacDonald*}, {\large \bf Mika Asaba}, {\large \bf Hyowon Gweon}, \and {\large \bf Michael C. Frank} \\ \{ejyoon, kylem4, masaba, hyo, mcfrank\} @stanford.edu \\ Department of Psychology, Stanford University \\ *These authors contributed equally to this work.}
@@ -59,11 +60,17 @@
 \maketitle
 
 \begin{abstract}
-\ldots{}
+The decisions we make shape what we learn. Much empirical and
+theoretical work shows that learners will make efficient decisions to
+maximize the utility of information. But how can we begin to understand
+the role of \emph{social} factors in self-directed learning? Here, we
+present a computaional model that integrates the value of social and
+information goals to predict the decisions people will make in a simple
+active causal learning task.
 
 \textbf{Keywords:}
-Learning; social context; information gain; OED; self-presentation; goal
-tradeoff
+active learning; social reasoning; information gain; OED;
+self-presentation; goal tradeoffs
 \end{abstract}
 
 \section{Introduction}\label{introduction}
@@ -156,11 +163,11 @@ of self-presentation is highlighted, children avoid opportunities that
 will help them learn new things but pose risks for public mistakes
 (Dweck \& Leggett, 1988; Elliott \& Dweck, 1988).
 
-We present the first computational model of the learning-performance
-tradeoff in a self-directed learning context with social factors. We
-model a learner who considers his learning goal versus performance goal,
-which may be influenced by the social context (e.g.~the presence of
-another individual whom he wants to impress). We then look at adult
+We present a computational model of the learning-performance tradeoff in
+a self-directed learning context with social factors. We model a learner
+who considers his learning goal versus performance goal, which may be
+influenced by the social context (e.g.~the presence of another
+individual whom he wants to impress). We then look at adult
 participants' action choices within a minimalistic self-directed
 learning task representing different goals and social contexts, and show
 that people's choices are consistent with predictions of our model.
@@ -313,10 +320,20 @@ limited to making only a single action, which meant the opportunity cost
 for the alternative action was at its highest. Thus, participants were
 asked to imagine that they needed to act on a toy with an uncertain
 causal mechanism, and we assigned participants to different goal
-conditions: learning goal (i.e.~learn how the toy works); performance
-goal (e.g.~make the toy play music); presentation goal (i.e.~impress
-their boss); and no goal.
+conditions:
 
+\begin{itemize}
+\item
+  learning goal (i.e.~learn how the toy works)
+\item
+  performance goal (e.g.~make the toy play music)
+\item
+  presentation goal (i.e.~impress their boss)
+\item
+  no goal specified
+\end{itemize}
+
+\noindent
 We hypothesized that participants would choose an informative action
 more often in the following order of goal conditions (decreasing):
 learning, no goal, performance, and
@@ -406,13 +423,13 @@ of the three possible toys.
 
 First, we present behavioral analyses of participants' (1) action
 decisions, (2) action decision times, and (3) belief change (i.e.,
-learning).\footnote{See TODO for a pre-registration of the analysis
-  plan.} Decision times correspond to the latency to make an action
-selection as measured from the start of the action decision trial (all
-RTs were analyzed in log space). We quantified participants' beliefs
-about the possible toy designs using entropy, and belief change was
-measured as the difference in entropy before and after selecting an
-action.
+learning).\footnote{See (\url{https://osf.io/kcjau}) for a
+  pre-registration of the analysis plan.} Decision times correspond to
+the latency to make an action selection as measured from the start of
+the action decision trial (all RTs were analyzed in log space). We
+quantified participants' beliefs about the possible toy designs using
+entropy, and belief change was measured as the difference in entropy
+before and after selecting an action.
 
 We used the \texttt{rstanarm} (Gabry \& Goodrich, 2016) package to fit
 Bayesian regression models estimating the differences across conditions.
@@ -433,35 +450,43 @@ We modeled action decisions using a logistic regression specified as
 reference category. Participants' tendency to select a ``single'' action
 varied across conditions in the predicted pattern (see Panel A of Fig
 2), with the highest proportion occuring in the Learning context
-(\(M_{learn} =\) 32\%, {[}20\%, 45\%{]}), followed by the No Goal
-context (\(M_{noGoal} =\) 62\%, {[}48\%, 74\%{]}), then Performance
-(\(M_{perform} =\) 73\%, {[}59\%, 85\%{]}), and the fewest single
-actions in the Presentation condtion (\(M_{present} =\) 86\%, {[}76\%,
-95\%{]}).
+(\(M_{learn} =\) 68\%, {[}55\%, 80\%{]}), followed by the No Goal
+context (\(M_{noGoal} =\) 38\%, {[}25\%, 52\%{]}), then Performance
+(\(M_{perform} =\) 27\%, {[}15\%, 40\%{]}), and the fewest single
+actions in the Presentation condtion (\(M_{present} =\) 14\%, {[}6\%,
+25\%{]}).
 
-Compared the No-Goal condition, participants selected the single action
-at a greater rate in the Learning context (\(\beta\) = -1.27, {[}-2.08,
--0.5{]}) and at lower rate in the Presentation context (\(\beta\) =
-1.43, {[}0.44, 2.52{]}), with the null value of zero difference
-condition falling well outside the 95\% HDI. In contrast, participants
-in the Performance condition selected actions at at similar rate
-(\(\beta\) = 0.53, {[}-0.33, 1.46{]}) with the 95\% HDI including the
-null value.
+Compared to the No-Goal condition, participants selected the single
+action at a greater rate in the Learning condition (\(\beta\) = 1.28,
+{[}0.5, 2.17{]}) and at lower rate in the Presentation context
+(\(\beta\) = -1.41, {[}-2.47, -0.4{]}), with the null value of zero
+difference condition falling well outside the 95\% HDI, and at similar
+rate in the Performance condition (\(\beta\) = -0.53, {[}-1.43, 0.35{]})
+with the 95\% HDI including the null.
 
 \subsubsection{Action decision times:}\label{action-decision-times}
 
 We analyzed response times in log space using the same model
 specification. Panel A of Figure 2 shows the full RT data distribution.
-On average, participants took 27.82 seconds to generate a response in
-the No-goal condidition. Participants took on on average 1.48 seconds
-longer to generate a decision in the Learning condition (\(\beta\) =
-0.39, {[}1.15, 1.88{]}) but produced similar response times in the
-Performance (\(\beta\) = -0.15, {[}0.66, 1.11{]}) and Presentation
-(\(\beta\) = -0.11, {[}1.15, 1.14{]}) conditions.
+On average, participants took 31 seconds to generate a response in the
+No-goal condidition. Participants took on on average 12.2 seconds
+{[}4.2, 20{]} longer to generate a decision in the Learning condition,
+but produced similar response times in the Performance (\(M_{perform}\)
+= 27.5, {[}21.9, 33.3{]}) and Presentation (\(M_{present}\) = 27.5,
+{[}37.9, 33.2{]}) conditions.
 
-\subsubsection{Belief change}\label{belief-change}
+\subsubsection{Belief change:}\label{belief-change}
 
-\subsubsection{BDA model-data fits}\label{bda-model-data-fits}
+We modeled change in entropy as a function of goal condition and
+participants' action selections:
+\texttt{$entropy\_change \sim goal\_condition + action\_response$} (see
+Panel C of Fig 2) . Across all conditions, people who selected the
+single action showed a greater reduction in entropy (\(\beta\) = -0.49,
+{[}-0.64, -0.33{]}, i.e., learned more from their action. We did not see
+evidence of an interaction between goal condition and action selection.
+However, recall that a larger proportion of participants selected the
+single action in the Learning context, so the probability of learning is
+higher in this scenario.
 
 \section{Experiment 2}\label{experiment-2}
 
@@ -495,9 +520,9 @@ are already specified a goal in the same direction.
 We recruited 347 participants (roughly 50 for each condition) on
 Amazon's Mechanical Turk. To participate participants were required to
 have an IP addresses in the United States and a task approval rate above
-85\%. We excluded -129 participants who failed to answer at least two
-out of three manipulation check questions correctly, and thus the
-remaining 325 participants were included in our final analysis.
+85\%. We excluded 22 participants who failed to answer at least two out
+of three manipulation check questions correctly, and thus the remaining
+325 participants were included in our final analysis.
 
 \subsubsection{Stimuli and Design}\label{stimuli-and-design-1}
 
@@ -505,15 +530,15 @@ The stimuli and design were identical to Experiment 1, except we had
 seven different goal \(\times\) social conditions. Goals remained
 identical to ones presented in Experiment 1; social conditions varied
 depending on whether the boss was present in the story (\emph{social})
-or she was absent (\emph{non-social}). Thus, the conditions from
+or she was absent (\emph{no-social}). Thus, the conditions from
 Experiment 1 were used as \emph{social-learning},
 \emph{social-performance}, \emph{social-presentation}, and
-\emph{non-social-no-goal} conditions in Experiment 2. We added three
-more conditions: \emph{non-social-learning},
-\emph{non-social-performance}, and \emph{social-no-goal}. Note that we
-did not have \emph{non-social-presentation} condition, because
-presentation goal by definition was to present oneself as competent to
-and impress another person.
+\emph{no-social-no-goal} conditions in Experiment 2. We added three more
+conditions: \emph{no-social-learning}, \emph{no-social-performance}, and
+\emph{social-no-goal}. Note that we did not have
+\emph{no-social-presentation} condition, because presentation goal by
+definition was to present oneself as competent to and impress another
+person.
 
 \subsubsection{Procedure}\label{procedure-1}
 
@@ -521,13 +546,73 @@ The procedure was identical to Experiment 1.
 
 \subsection{Results and discussion}\label{results-and-discussion-1}
 
-\subsubsection{Action selections}\label{action-selections}
+\subsubsection{Action decisions:}\label{action-decisions-1}
 
-\subsubsection{Response times}\label{response-times}
+We modeled action decisions using a logistic regression specified as
+\texttt{$action \sim goal\_condition * social\_context$} with the
+No-Goal and No-Social condition as the reference category. We replicated
+the key finding from E1: participants tended to select the ``single''
+action more often when they were within a context that emphasized a
+learning goal (\(M_{learn} =\) 68\%, {[}57\%, 79\%{]}), followed by the
+No Goal context (\(M_{noGoal} =\) 52\%, {[}40\%, 63\%{]}), then
+Performance (\(M_{perform} =\) 37\%, {[}26\%, 48\%{]}), with the fewest
+single actions generated in the Presentation condtion (\(M_{present} =\)
+8\%, {[}2\%, 17\%{]}).
 
-\subsubsection{Entropy change}\label{entropy-change}
+There was a main efffect of social context, with participants being less
+likely to select the single action when their boss was present
+(\(\beta =\) -52.2\%, {[}-99.9\%, -4.8\%{]}). Finally, there was
+evidence for a reliable interaction between goal condition and social
+context such that the effect of social context was present in the
+Learning and No-Goal conditions, but not in the Performance condition
+(\(\beta\) \(_{int}\) = 1.127, {[}0.9\%, 225.3\%{]}).
 
-\subsubsection{BDA model-data fits}\label{bda-model-data-fits-1}
+\subsubsection{Action decision times:}\label{action-decision-times-1}
+
+We replicated the key decision time finding from E1: slower decision
+times in the Learning context. On average, participants took seconds to
+generate a response in the No-goal condidition and seconds in the
+Learning condition. In contrast, decisions were faster in the
+Performance (\(\beta\) = -7.78 sec, {[}-14.01, -1.52{]}) and
+Presentation (-10.77 seconds, {[}-18.67, -2.73{]}) conditions, which
+were similar to one another (see Panel B of Fig 3). There was no
+evidence of a main effect of social context or an interaction between
+goal condition and social context. Note that we did not see a difference
+in decision times between the Learning and No-Goal conditions, which is
+different from the pattern in E1.
+
+\subsubsection{Belief change:}\label{belief-change-1}
+
+Across all conditions, participants who selected the single action
+showed a greater reduction in entropy (\(\beta\) = -0.35, {[}-0.45,
+-0.24{]}. There was some (weaker) evidence of greater reduction in
+entropy in the Learning goal condition (\(\beta\) = -0.12, {[}-0.25,
+0.01). There was no evidence of a main effect of social context and no
+two- or three-way interactions between social context, goal condition,
+and type of action choice.
+
+\subsubsection{BDA model-data fit:}\label{bda-model-data-fit}
+
+In this experiment, participants were instructed to choose an action
+based on a certain goal. We assume that the goal descriptions
+(e.g.~figure out the correct label for the toy; ``learning'') conveyed
+to the participants a particular set of goal weights \{\(\phi_{learn}\),
+\(\phi_{perf}\), \(\phi_{pres}\)\} that they used to generate their
+action choice. We put uninformative priors on these weights
+(\(\phi \sim Uniform(0,1)\)) and inferred their credible values
+separately for each pair of different goal condition and social context,
+using Bayesian data analytic techniques (Lee \& Wagenmakers, 2014).
+
+The inferred goal weights were consistent with what we predicted
+\ldots{} {[}FIXME{]}
+
+We also inferred another parameter of the cognitive model, the
+optimality parameter \(\lambda\). We put uninformative prior on the
+parameter (\(\lambda \sim Uniform(0,10)\) and inferred its posterior
+credible value from the data. We ran 4 MCMC chains for 100,000
+iterations, discarding the first 50,000 for burnin. The Maximum A-
+Posteriori (MAP) estimate and 95\% Highest Probability Density Interval
+(HDI) for \(\lambda\) was 5.76 {[}3.84, 7.14{]}.
 
 \section{General Discussion}\label{general-discussion}
 
@@ -583,6 +668,10 @@ Jara-Ettinger, J., Gweon, H., Schulz, L. E., \& Tenenbaum, J. B. (2016).
 The naïve utility calculus: Computational principles underlying
 commonsense psychology. \emph{Trends in Cognitive Sciences},
 \emph{20}(8), 589--604.
+
+\hypertarget{ref-lee2014bayesian}{}
+Lee, M. D., \& Wagenmakers, E.-J. (2014). \emph{Bayesian cognitive
+modeling: A practical course}. Cambridge university press.
 
 \hypertarget{ref-lindley1956}{}
 Lindley, D. V. (1956). On a measure of the information provided by an

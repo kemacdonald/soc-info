@@ -432,60 +432,10 @@ ms_rt_e2 <- d_models$rt_samples_e2 %>%
 
 ### BDA model-data fit:
 
-```{r bda load}
-load(here("model/BDA/results/soc-info-ver1-mcmc100000_burn50000_4chains.RData"))
-```
-
-```{r bda phi}
-d %>%
-  filter(grepl("phi", parameter)) %>%
-  filter(!(goal == "presentation" & context == "no-social")) %>%
-  group_by(parameter, goal, context) %>%
-  summarise(mean = mean(value)) %>%
-  ungroup() %>%
-  mutate(phi = fct_recode(parameter,
-                          "learning" = "phiLearning",
-                          "performance" = "phiPerformance",
-                          "presentation" = "phiPresentation"
-                          )) %>%
-  ggplot(., aes(x = goal, y = mean, fill = phi)) +
-  geom_bar(position="dodge", stat="identity") +
-  facet_grid(.~context, labeller=label_both) +
-  ylim(0,1) +
-  langcog::scale_fill_solarized() +
-  ylab("phi value")
-```
-
-```{r bda posterior predictives}
-d %>% 
-  mutate(action = fct_recode(action, 
-                             "single" = "button",
-                             "single" = "handle")) %>%
-  filter(grepl("posterior", parameter),
-         action != "both") %>%
-  filter(!(goal == "presentation" & obsPres == "0")) %>%
-  group_by(goal, context, action) %>%
-  summarise(prob = mean(value)) %>%
-  ggplot(., aes(x = goal, y=prob, fill=context)) +
-  geom_bar(stat="identity", position="dodge") +
-  ggthemes::theme_few() +
-  langcog::scale_fill_solarized() +
-  ylab("predicted likelihood of choosing 'single' action")
-```
-
-```{r bda optimality}
-optimality <- d %>% 
-  filter(grepl("optimal", parameter)) %>%
-  group_by(parameter) %>%
-  summarise(ci_lower = round(hdi_lower(value),2),
-            ci_upper = round(hdi_upper(value),2),
-            mean = round(mean(value),2))
-```
-
-In this experiment, participants were instructed to choose an action based on a certain goal. 
+In this experiment, participants were instructed to choose an action based on a certain goal\footnote{A separate prior elicitation task, in which people indicated the likelihood for selecting an action without any background information about possible hypotheses or goals, did not suggest that any of the action choice priors differed from chance; we used mean likelihood for each action choice as the baseline prior in our model; see [FIXME]}. 
 We assume that the goal descriptions (e.g. figure out the correct label for the toy; "learning") conveyed to the participants a particular set of goal weights {$\phi_{learn}$, $\phi_{perf}$, $\phi_{pres}$} that they used to generate their action choice. We put uninformative priors on these weights ($\phi \sim Uniform(0,1)$) and inferred their credible values separately for each pair of different goal condition and social context, using Bayesian data analytic techniques [@lee2014]. 
 
-The inferred goal weights were consistent with what we predicted ... [FIXME]
+The inferred goal weights were consistent with what we predicted (see Figure FIXME). 
 
 We also inferred another parameter of the cognitive model, the optimality parameter $\lambda$. We put uninformative prior on the parameter ($\lambda \sim Uniform(0,10)$ and inferred its posterior credible value from the data. We ran 4 MCMC chains for 100,000 iterations, discarding the first 50,000 for burnin. The Maximum A- Posteriori (MAP) estimate and 95% Highest Probability Density Interval (HDI) for $\lambda$ was `r optimality$mean` [`r optimality$ci_lower`, `r optimality$ci_upper`]. 
 

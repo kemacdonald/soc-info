@@ -382,7 +382,7 @@ ms_act_e2 <- d_models$action_logit_samples_e2 %>%
 
 We modeled action decisions using a logistic regression specified as \texttt{$action \sim goal\_condition * social\_context$} with the No-Goal and No-Social condition as the reference category. We replicated the key finding from E1: participants tended to select the "single" action more often when they were within a context that emphasized a learning goal ($M_{learn} =$ `r ms_act_e2$prop[1] * 100`%, [`r ms_act_e2$hdi_lower[1] * 100`%, `r ms_act_e2$hdi_upper[1] * 100`%]), followed by the No Goal context ($M_{noGoal} =$ `r ms_act_e2$prop[3] * 100`%, [`r ms_act_e2$hdi_lower[3] * 100`%, `r ms_act_e2$hdi_upper[3] * 100`%]), then Performance ($M_{perform} =$ `r ms_act_e2$prop[5] * 100`%, [`r ms_act_e2$hdi_lower[5] * 100`%, `r ms_act_e2$hdi_upper[5] * 100`%]), with the fewest single actions generated in the Presentation condtion ($M_{present} =$ `r ms_act_e2$prop[7] * 100`%, [`r ms_act_e2$hdi_lower[7] * 100`%, `r ms_act_e2$hdi_upper[7] * 100`%]). 
 
-There was a main efffect of social context, with participants being less likely to select the single action when their boss was present ($\beta =$ `r e2_contrasts_act_soc$prop[5] * 100`%, [`r e2_contrasts_act_soc$hdi_lower[5] * 100`%, `r e2_contrasts_act_soc$hdi_upper[5] * 100`%]). Finally, there was evidence for a reliable interaction between goal condition and social context such that the effect of social context was present in the Learning and No-Goal conditions, but not in the Performance condition ($\beta$ $_{int}$ = `r e2_contrasts_act$prop[4]`, [`r e2_contrasts_act$hdi_lower[4] * 100`%, `r e2_contrasts_act$hdi_upper[4] * 100`%]).
+There was a main efffect of social context, with participants being less likely to select the single action when their boss was present ($\beta =$ `r e2_contrasts_act_soc$prop[5]`, [`r e2_contrasts_act_soc$hdi_lower[5]`, `r e2_contrasts_act_soc$hdi_upper[5]`]). Finally, there was evidence for a reliable interaction between goal condition and social context such that the effect of social context was present in the Learning and No-Goal conditions, but not in the Performance condition ($\beta$ $_{int}$ = `r e2_contrasts_act$prop[4]`, [`r e2_contrasts_act$hdi_lower[4]`, `r e2_contrasts_act$hdi_upper[4]`]).
 
 ### Action decision times:
 
@@ -448,11 +448,15 @@ Across all conditions, participants who selected the single action showed a grea
 ### BDA model-data fit:
 
 In this experiment, participants were instructed to choose an action based on a certain goal\footnote{A separate prior elicitation task, in which people indicated the likelihood for selecting an action without any background information about possible hypotheses or goals, did not suggest that any of the action choice priors differed from chance; we used mean likelihood for each action choice as the baseline prior in our model; see [FIXME]}. 
+
 We assume that the goal descriptions (e.g. figure out the correct label for the toy; "learning") conveyed to the participants a particular set of goal weights {$\phi_{learn}$, $\phi_{perf}$, $\phi_{pres}$} that they used to generate their action choice. We put uninformative priors on these weights ($\phi \sim Uniform(0,1)$) and inferred their credible values separately for each pair of different goal condition and social context, using Bayesian data analytic techniques [@lee2014bayesian]. 
 
 The inferred goal weights were consistent with what we predicted (see Figure FIXME). 
 
+```{r, include = F, eval = F}
+# couldn't find optimality object
 We also inferred another parameter of the cognitive model, the optimality parameter $\lambda$. We put uninformative prior on the parameter ($\lambda \sim Uniform(0,10)$ and inferred its posterior credible value from the data. We ran 4 MCMC chains for 100,000 iterations, discarding the first 50,000 for burnin. The Maximum A- Posteriori (MAP) estimate and 95% Highest Probability Density Interval (HDI) for $\lambda$ was `r optimality$mean` [`r optimality$ci_lower`, `r optimality$ci_upper`]. 
+```
 
 # General Discussion
 

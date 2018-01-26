@@ -1,5 +1,5 @@
 ---
-title: "Should I learn or make it go? Balancing informational and social goals in active learning"
+title: "Should I learn or should I make it go? Balancing informational and social goals in active learning"
 bibliography: library.bib
 csl: apa6.csl
 document-params: "10pt, letterpaper"
@@ -8,7 +8,7 @@ author-information: >
     \author{{\large \bf Erica J. Yoon*}, {\large \bf Kyle MacDonald*}, {\large \bf Mika Asaba}, {\large \bf Hyowon Gweon}, \and {\large \bf Michael C. Frank} \\ \{ejyoon, kylem4, masaba, hyo, mcfrank\} @stanford.edu \\ Department of Psychology, Stanford University \\ *These authors contributed equally to this work.}
 
 abstract: 
-    "The decisions we make shape what we learn. Much empirical and theoretical work shows that learners will make efficient decisions to maximize the utility of information. But how can we begin to understand the role of *social* factors in self-directed learning? Here, we present a computaional model that integrates the value of social and information goals to predict the decisions people will make in a simple active causal learning task."
+    "The actions we take shape what we learn. Empirical and theoretical work shows that people are capable of efficient self-directed learning to maximize informational goals. But a fundamental feature of human learning is that it unfolds within a social context. How can we begin to understand the role of *social* factors in self-directed learning? Here, we present a computational model that integrates the value of social and information goals to predict the decisions that people will make in a simple active causal learning task. We show that emphasizing performance or self-presentation goals leads to actions that reduce the chances of learning (E1). Next, we show that the presence of an observer (i.e., a boss) pushes learners to emphasize performance/presentation actions even when emphasis is placed on a learning goal (E2). Finally, we present a Bayesian Data Analysis showing that the empirical results are consistent with predictions of our cognitive model of social-active learning. These results represent a first step towards integrating active learning with social reasoning."
     
 keywords:
     "active learning; social reasoning; information gain; OED; self-presentation; goal tradeoffs"
@@ -40,15 +40,13 @@ d_model_spec <- readRDS(here("data/03_merged_data/soc-info-models.rds"))
 
 # Introduction
 
-Imagine that you are a novice cook and you have to decide what meal to prepare for a first date. Should you choose a recipe that you have tried before or should you attempt to make something new? While the familiar recipe has a high chance of ensuring a good meal, you are less likely to discover a new, delicious dish. The new recipe might taste even better, but it has a higher chance of turning out awful since you have never made it before. Now, consider how your decision making might change if instead of making the meal for first date, you were preparing it for a charitable cooking teacher whom you trust.
+Imagine that you are a novice cook and you have to decide what meal to prepare for a first date. Should you choose an easy favorite or should you attempt to make something new? While the familiar recipe has a high chance of ensuring a good meal, you are less likely to discover a new, delicious dish. The new recipe might taste even better, but it has a higher chance of failure. But perhaps this decision would change if you were cooking for a friend or teacher who could help or give feedback.
 
-Scenarios like this, capture an "explore-exploit” dilemma [@sutton1998], in which we have to choose between actions that could (a) lead to an overt, readily accessible reward based on what we already know (*exploitation*) or (b) result in the discovery of new information (*exploration*). This decision of whether to explore or exploit is directly related to the relative strength of our goals within a particular context. In the cooking example, should I prioritize the goal of learning by cooking the new recipe, or should I emphasize the performance goal by preparing the tried and true meal? The key insight motivating the work reported here is that features of the social context play a fundamental role in the goals we consider and the relative weighting of each goal. And, in turn, the goals that we consider shape the actions take. We present a formal account to integrate social reasoning processes with decision making in the context of learning-performance tradeoff, as a case study of the explore-exploit dilemma.
+Scenarios like this one capture an "explore-exploit” dilemma [@sutton1998], in which we have to choose between actions that could (a) lead to an overt, readily accessible reward based on what we already know (*exploitation*) or (b) result in the discovery of new information (*exploration*). This decision of whether to explore or exploit is directly related to the relative strength of our goals within a particular context. In the cooking example, should I prioritize the goal of learning by cooking the new recipe, or should I emphasize the performance goal by preparing the tried and true meal? Here, we explore the idea that features of the social context affect the goals we consider, and hence can be translated into this same framework. We present a formal account integrating social reasoning processes with decision making in a simple explore-exploit dilemma.
 
-We situate our integrative account within two theoretical frameworks: *active learning* and *pragmatic social reasoning*. Active learning refers to situations where people are given control over the sequence of information in a learning context (e.g., verbal question asking to elicit informative responses). The key assumption is that learners will maximize the usefulness of their actions by gathering information that is especially helpful for their own learning. The effects of active learning have been the focus of much empirical work in education [@grabinger1995rich; @prince2004does], machine learning [@settles2012active; @ramirez2017active], and cognitive psychology [@castro2009human; @chi2009active], with the common finding that active contexts lead to more rapid learning when compared to passive contexts where people do not have control over the flow of information. 
+We situate our integrative account within two theoretical frameworks: *active learning* and *pragmatic social reasoning*. Active learning refers to situations where people are given control over the sequence of information in a learning context (e.g., verbal question asking to elicit informative responses). The key assumption is that learners will maximize the usefulness of their actions by gathering information that is especially helpful for their own learning. The effects of active learning have been the focus of much empirical work in education [@grabinger1995rich], machine learning [@settles2012active], and cognitive psychology [@castro2009human], with the common finding that active contexts lead to more rapid learning when compared to passive contexts where people do not have control over the flow of information. 
 
-Work on exploratory actions in active learning often isolates people’s information goals by removing the learner from any kind of social context. In contrast, real-world learning is characterized by contexts where there are teachers, peer learners, or other individuals who can directly influence the utility of information gathering actions. Consider that there is now a large body of evidence suggesting that social reasoning processes can change the computations (i.e., inferences) that support learning from evidence. For example, children learn at different rates after observing the same evidence depending on whether they thought the behavior was accidental (less informative) or intentional (more informative). Moreover, adults and children will make even stronger inferences if they believe that another person selected their actions with the goal of helping them learn (i.e., teaching) [@shafto2012learning]. 
-
-```{r model_diagram, fig.env = "figure*", fig.pos = "tb", fig.width=4, fig.asp = 0.7, out.width= "100%", fig.align = "center", set.cap.width=T, num.cols.cap=2, fig.cap = "Diagram of the computational model: The learner considers possible hypotheses and his contextual goals. When an observer is absent, he considers his learning goal (to maximize information gain) and performance goal (e.g. to play music) and decides on an action. When an observer is present, his decision for an action is based on his learning goal vs. presentational goal (to have the observer infer his competence)."}
+```{r model_diagram, fig.env = "figure*", fig.pos = "t", fig.width=4, fig.asp = 0.7, out.width= "100%", fig.align = "center", set.cap.width=T, num.cols.cap=2, fig.cap = "Diagram of the computational model: The learner considers possible hypotheses and his contextual goals. When an observer is absent, he considers his learning goal (to maximize information gain) and performance goal (e.g. to play music) and decides on an action. When an observer is present, his decision for an action is based on his learning goal vs. presentational goal (to have the observer infer his competence)."}
 
 img1 <- rasterGrob(as.raster(readPNG(here(image_path, "model-obsAbs.png"))), 
                     interpolate = FALSE)
@@ -59,11 +57,11 @@ img2 <- rasterGrob(as.raster(readPNG(here(image_path, "model-obsPres.png"))),
 grid.arrange(img1, img2, ncol = 2)
 ```
 
-But how can we begin to understand the role of *social* factors in self-directed learning contexts? Answering this question represents a significant step because explore-exploit decisions often unfold within fundamentally social contexts where people must integrate the value of social goals and information goals when deciding what to do next. Consider that actions that maximize learning are inherently risky -- leading to mistakes and struggles -- which could be difficult to undertake in with someone else present. Thus, a learner might prioritize actions that maintain their reputation: looking more attractive, knowledgeable, or competent to the observer. In this case, the learner is leveraging psychological reasoning processes to infer what the observer thinks based on their action (cook a meal) and its outcome (a delicious meal).  If the learner is worried about the observer’s beliefs, then the they might choose actions that maximize the probability of maintaining a favorable impression in the eyes of the observer ('That meal was delicious, so he must be a good cook!'). Indeed, when the value of self-presentation is highlighted, children avoid opportunities that will help them learn new things but pose risks for public mistakes [@elliott1988; @dweck1988]. 
+Work on exploratory actions in active learning often isolates information goals by removing the learner from any kind of social context. In contrast, real-world learning is characterized by situations where there are teachers, peer learners, or other individuals who can directly influence the utility of information gathering actions. In fact, a large body of evidence suggests that social reasoning processes shapes how we learn from evidence. For example, children learn faster when observing intentional (more informative) actions compared to accidental (less informative) actions. Moreover, adults and children will make even stronger inferences if they believe that another person selected their actions with the goal of helping them learn (i.e., teaching) [@shafto2012learning]. 
 
-We present a computational model of the learning-performance tradeoff in a self-directed learning context with social factors. We model a learner who considers his learning goal versus performance goal, which may be influenced by the social context (e.g. the presence of another individual whom he wants to impress). 
-We look at adult participants’ action choices within a minimalistic self-directed learning task representing different goals and social contexts in two experiments,
-and show that people's choices are consistent with predictions of our model.
+Models of active learning are not typically able to accommodate these richer inferences and richer utility structures where people must integrate the value of social goals -- looking competent or knowledgeable, for example -- and information goals when deciding what to do next. Moreover, actions that maximize learning are inherently risky, and thus are more difficult to undertake in with someone else present. How can active learning models be modified to accommodate this richer set of utilities? As a step towards answering this question, we model a learner who considers a mixture of learning and performance goals. We assume that these goals are triggered by features of the social context such as the presence of another individual whom we want to impress. 
+
+We instantiate the predictions of our model in a simple causal learning task and measure adults’ decisions about whether to take actions that support learning vs. social goals. We show that emphasizing performance or self-presentation goals leads to actions that reduce the chances of learning (E1). Next, we show that the presence of an observer (i.e., a boss) pushes learners to emphasize performance/presentation actions even when emphasis is placed on a learning goal (E2). Finally, we present Bayesian Data Analysis showing that the empirical results are consistent with predictions of our cognitive model of social-active learning.
 
 # Computational model
 
@@ -150,19 +148,8 @@ png::readPNG(here::here(image_path, "e1_plot.png")) %>%
   grid::grid.raster()
 ```
 
-In our experimental paradigms, we wanted to look at people's action choices in a minimalistic self-directed learning environment with varying goals and social contexts. The task would involve choosing between an action that is informative but potentially not immediately rewarding, and an action that is certainly immediately rewarding but not informative at all.
+In Experiment 1, we first wanted to confirm that participants would choose different actions depending on the kind of goal that was highlighted. We were also interested in how people would act when no goal was specified. Importantly, participants were limited to selecting a single action, which meant the opportunity cost for the alternative action was at its highest. Specifically, participants were asked to imagine that they needed to act on a toy with an uncertain causal mechanism, and we assigned them to different goal conditions: (1) learning ("learn how the toy works"), (2) performance ("make the toy play music"), (3) presentation ("impress their boss"), and (4) no goal specified. 
 
-In Experiment 1, we first wanted to confirm that participants would choose different actions depending on goals that we highlighted. We were also interested to see what people would choose to do when no goal is specified and they are free to explore. Importantly, participants were limited to making only a single action, which meant the opportunity cost for the alternative action was at its highest. Thus, participants were asked to imagine that they needed to act on a toy with an uncertain causal mechanism, and we assigned participants to different goal conditions: 
-
-- learning goal (i.e. learn how the toy works)
-
-- performance goal (e.g. make the toy play music)
-
-- presentation goal (i.e. impress their boss)
-
-- no goal specified
-
-\noindent
 We hypothesized that participants would choose an informative action more often in the following order of goal conditions (decreasing): learning, no goal, performance, and presentation\footnote{Our hypothesis and method were pre-registered prior to data collection on the Open Science Framework (https://osf.io/kcjau)}.
 
 ## Method
@@ -191,11 +178,11 @@ We recruited `r n_run` participants (roughly 50 for each condition) on Amazon’
 
 We presented images of three different toys that look very similar but each work in different ways, and provided instructions for them (see top of Fig. 1 for what the toys looked like).
 
-- Toy 1 instructions were: *"Pull the handle on the left to turn on the light. Press the button on the right to play music. Doing both produces both effects at the same time."*
+- Toy 1: *"Pull the handle on the left to turn on the light. Press the button on the right to play music. Doing both produces both effects at the same time."*
 
-- Toy 2 instuctions were: *"Pull the handle on the left to play music. Press the button on the right to turn on the light. Doing both produces both effects at the same time."* 
+- Toy 2: *"Pull the handle on the left to play music. Press the button on the right to turn on the light. Doing both produces both effects at the same time."* 
 
-- Toy 3 instuctions were: *"Pull the handle on the left AND press the button on the right to turn on the light and play music at the same time. The button press or handle pull on its own doesn’t produce any effect."* 
+- Toy 3: *"Pull the handle on the left AND press the button on the right to turn on the light and play music at the same time. The button press or handle pull on its own doesn’t produce any effect."* 
 
 Thus, doing both button press and handle pull was immediately rewarding but uninformative (as it does not disambiguate the causal mechanism in any way), whereas either of the single actions was completely disambiguating, but was uncertain to produce an immediate outcome. Each toy had a label at the front, indicating which action(s) will make the toy operate, and with which outcome effect.
 
@@ -318,7 +305,6 @@ png::readPNG(here::here(image_path, "e2_plot_wBDA.png")) %>%
   grid::grid.raster()
 ```
 
-
 In Experiment 1, we saw that participants made different action choices depending on the goal conditions, as we previously predicted. In Experiment 2, we manipulated goals as well as social contexts, fully crossing the different goal conditions with the presence/absence of the boss, to see whether the social context affects people's decision making differently in each goal condition.
 
 We hypothesized that social pressure should increase presentation-oriented, immediately-rewarding actions in the learning and no-goal conditions, but not in the performance condition in which they are already specified a goal in the same direction.
@@ -397,7 +383,7 @@ ms_act_e2 <- d_models$action_logit_samples_e2 %>%
 
 We modeled action decisions using a logistic regression specified as \texttt{$action \sim goal\_condition * social\_context$} with the No-Goal and No-Social condition as the reference category. We replicated the key finding from E1: participants tended to select the "single" action more often when they were within a context that emphasized a learning goal ($M_{learn} =$ `r ms_act_e2$prop[1] * 100`%, [`r ms_act_e2$hdi_lower[1] * 100`%, `r ms_act_e2$hdi_upper[1] * 100`%]), followed by the No Goal context ($M_{noGoal} =$ `r ms_act_e2$prop[3] * 100`%, [`r ms_act_e2$hdi_lower[3] * 100`%, `r ms_act_e2$hdi_upper[3] * 100`%]), then Performance ($M_{perform} =$ `r ms_act_e2$prop[5] * 100`%, [`r ms_act_e2$hdi_lower[5] * 100`%, `r ms_act_e2$hdi_upper[5] * 100`%]), with the fewest single actions generated in the Presentation condtion ($M_{present} =$ `r ms_act_e2$prop[7] * 100`%, [`r ms_act_e2$hdi_lower[7] * 100`%, `r ms_act_e2$hdi_upper[7] * 100`%]). 
 
-There was a main efffect of social context, with participants being less likely to select the single action when their boss was present ($\beta =$ `r e2_contrasts_act_soc$prop[5] * 100`%, [`r e2_contrasts_act_soc$hdi_lower[5] * 100`%, `r e2_contrasts_act_soc$hdi_upper[5] * 100`%]). Finally, there was evidence for a reliable interaction between goal condition and social context such that the effect of social context was present in the Learning and No-Goal conditions, but not in the Performance condition ($\beta$ $_{int}$ = `r e2_contrasts_act$prop[4]`, [`r e2_contrasts_act$hdi_lower[4] * 100`%, `r e2_contrasts_act$hdi_upper[4] * 100`%]).
+There was a main efffect of social context, with participants being less likely to select the single action when their boss was present ($\beta =$ `r e2_contrasts_act_soc$prop[5]`, [`r e2_contrasts_act_soc$hdi_lower[5]`, `r e2_contrasts_act_soc$hdi_upper[5]`]). Finally, there was evidence for a reliable interaction between goal condition and social context such that the effect of social context was present in the Learning and No-Goal conditions, but not in the Performance condition ($\beta$ $_{int}$ = `r e2_contrasts_act$prop[4]`, [`r e2_contrasts_act$hdi_lower[4]`, `r e2_contrasts_act$hdi_upper[4]`]).
 
 ### Action decision times:
 
@@ -509,7 +495,10 @@ We assumed that the goal descriptions (e.g. "figure out the correct label for th
 
 The inferred goal weights were consistent with what we predicted (see Figure 3, panel D). $\phi_{learn}$ was at its highest for no-social learning condition, in which the goal to learn was highlighted, and there was minimum social pressure. On the other hand, the $\phi_{perf}$ and $\phi_{pres}$ together make up the highest portion in the presentation condition, with high social pressure to present competence, compared to other conditions.
 
+```{r, include = F, eval = F}
+# couldn't find optimality object
 We also inferred another parameter of the cognitive model, the optimality parameter $\lambda$. We put uninformative prior on the parameter ($\lambda \sim Uniform(0,10)$ and inferred its posterior credible value from the data. We ran 4 MCMC chains for 100,000 iterations, discarding the first 50,000 for burnin. The Maximum A- Posteriori (MAP) estimate and 95% Highest Probability Density Interval (HDI) for $\lambda$ was `r optimality$mean` [`r optimality$ci_lower`, `r optimality$ci_upper`]. 
+```
 
 The predictions of the action choices according to the fitted learner model are shown in Figure 3, panel A (bottom). The model's expected posteriors over action choices capture key differences between conditions: the single action was more likely for no-social than social conditions overall, but not when the performance goal was highlighted. The model was able to predict the distribution of action responses with high accuracy $r^2(21)$ = `r cor2`.
 

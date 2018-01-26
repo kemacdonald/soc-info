@@ -1,5 +1,5 @@
 ---
-title: "Should I learn or should I make it go? Balancing informational and social goals in active learning"
+title: "Should I learn or should I make it go? \\ Balancing informational and social goals in active learning"
 bibliography: library.bib
 csl: apa6.csl
 document-params: "10pt, letterpaper"
@@ -8,7 +8,7 @@ author-information: >
     \author{{\large \bf Erica J. Yoon*}, {\large \bf Kyle MacDonald*}, {\large \bf Mika Asaba}, {\large \bf Hyowon Gweon}, \and {\large \bf Michael C. Frank} \\ \{ejyoon, kylem4, masaba, hyo, mcfrank\} @stanford.edu \\ Department of Psychology, Stanford University \\ *These authors contributed equally to this work.}
 
 abstract: 
-    "The actions we take shape what we learn. Empirical and theoretical work shows that people are capable of efficient self-directed learning to maximize informational goals. But a fundamental feature of human learning is that it unfolds within a social context. How can we begin to understand the role of *social* factors in self-directed learning? Here, we present a computational model that integrates the value of social and information goals to predict the decisions that people will make in a simple active causal learning task. We show that emphasizing performance or self-presentation goals leads to actions that reduce the chances of learning (E1). Next, we show that the presence of an observer (i.e., a boss) pushes learners to emphasize performance/presentation actions even when emphasis is placed on a learning goal (E2). Finally, we present a Bayesian Data Analysis showing that the empirical results are consistent with predictions of our cognitive model of social-active learning. These results represent a first step towards integrating active learning with social reasoning."
+    "Our actions shape what we learn. Empirical and theoretical work shows that people are capable of efficient self-directed learning to maximize informational goals. But a fundamental feature of human learning is that it unfolds within a social context. How can we begin to understand the role of social factors in self-directed learning? Here, we present a computational model that integrates the value of social and information goals to predict the decisions that people will make in a simple active causal learning task. We show that emphasizing performance or self-presentation goals leads to actions that reduce the chances of learning (E1). Next, we show that the presence of an observer (i.e., a boss) pushes learners to emphasize performance/presentation actions even when emphasis is placed on a learning goal (E2). Our formal model of social-active learning successfully captured key patterns in the empirical results. These findings represent an important first step towards integrating active learning with social reasoning."
     
 keywords:
     "active learning; social reasoning; information gain; OED; self-presentation; goal tradeoffs"
@@ -46,8 +46,7 @@ Scenarios like this one capture an "explore-exploit” dilemma [@sutton1998], in
 
 We situate our integrative account within two theoretical frameworks: *active learning* and *pragmatic social reasoning*. Active learning refers to situations where people are given control over the sequence of information in a learning context (e.g., verbal question asking to elicit informative responses). The key assumption is that learners will maximize the usefulness of their actions by gathering information that is especially helpful for their own learning. The effects of active learning have been the focus of much empirical work in education [@grabinger1995rich], machine learning [@settles2012active], and cognitive psychology [@castro2009human], with the common finding that active contexts lead to more rapid learning when compared to passive contexts where people do not have control over the flow of information. 
 
-```{r model_diagram, fig.env = "figure*", fig.pos = "t", fig.width=4, fig.asp = 0.7, out.width= "100%", fig.align = "center", set.cap.width=T, num.cols.cap=2, fig.cap = "Diagram of the computational model: The learner considers possible hypotheses and his contextual goals. When an observer is absent, he considers his learning goal (to maximize information gain) and performance goal (e.g. to play music) and decides on an action. When an observer is present, his decision for an action is based on his learning goal vs. presentational goal (to have the observer infer his competence)."}
-
+```{r model_diagram, include = T, fig.env = "figure*", fig.pos = "tb", fig.width=5, fig.asp = 0.7, out.width= "95%", fig.align='center', fig.cap = "Diagram of the computational model: The learner considers possible hypotheses and his contextual goals. When an observer is absent, he considers his learning goal (to maximize information gain) and performance goal (e.g. to play music) and decides on an action. When an observer is present, his decision for an action is based on his learning goal vs. presentational goal (to have the observer infer his competence)."}
 img1 <- rasterGrob(as.raster(readPNG(here(image_path, "model-obsAbs.png"))), 
                     interpolate = FALSE)
 
@@ -503,6 +502,22 @@ We also inferred another parameter of the cognitive model, the optimality parame
 The predictions of the action choices according to the fitted learner model are shown in Figure 3, panel A (bottom). The model's expected posteriors over action choices capture key differences between conditions: the single action was more likely for no-social than social conditions overall, but not when the performance goal was highlighted. The model was able to predict the distribution of action responses with high accuracy $r^2(21)$ = `r cor2`.
 
 # General Discussion
+
+How does the social context shape our decision making in an active learning environment? 
+We proposed that people make decisions based on a principled tradeoff between learning- and performance-oriented goals, 
+and that the social context influences the desire to present oneself as competent and knowledgeable, and may encourage pursuit of immediate effect outcome. 
+In two experiments, we confirmed that people's behaviors were in line with our hypothesis, 
+as they chose more informative actions when learning goals were highlighted with no boss present, while they chose more immediately rewarding actions when performance or presentational goals were highlighted, especially when the boss was present on scene. 
+When no goal was specified, people showed behavior that seemed to reflect a mix of the goals in tradeoff. 
+Our computational model successfully captured key patterns in these behavioral data. 
+
+Our model has implications for many interesting future directions. 
+For example, how might attitudes toward learning and social goals change at different time points? 
+How do people behave differently for verbal question-asking to seek knowledge; how would people decide whether or not to ask for new information, at the risk of appearing ignorant?
+How does the ability to balance between learning versus self-presentation goals emerge and develop?
+What is an "optimal" learning environment, that is, what balance of informational and social goals promote the most effective learning?
+Our work represents the first step to answering these questions 
+that ultimately seek to unify theories on active learning and social reasoning.
 
 # Acknowledgements
 

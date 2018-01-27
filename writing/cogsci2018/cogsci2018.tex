@@ -60,21 +60,21 @@ social goals in active learning}
 \maketitle
 
 \begin{abstract}
-Our actions shape what we learn. Empirical and theoretical work shows
-that people are capable of efficient self-directed learning to maximize
-informational goals. But a fundamental feature of human learning is that
-it unfolds within a social context. How can we begin to understand the
-role of social factors in self-directed learning? Here, we present a
+Our actions shape what we learn. Recent work suggests that people engage
+in efficient self-directed learning to maximize information gain.
+However, human learning often unfolds in social contexts where learners
+not only face informational goals (e.g.~learn how something works) but
+also social goals (e.g.~appear competent and impress others). How do
+these factors shape learners' decisions? Here, we present a
 computational model that integrates the value of social and information
 goals to predict the decisions that people will make in a simple active
-causal learning task. We show that emphasizing performance or
-self-presentation goals leads to actions that reduce the chances of
-learning (E1). Next, we show that the presence of an observer (i.e., a
-boss) pushes learners to emphasize performance/presentation actions even
-when emphasis is placed on a learning goal (E2). Our formal model of
-social-active learning successfully captured key patterns in the
-empirical results. These findings represent an important first step
-towards integrating active learning with social reasoning.
+causal learning task. We show that an emphasis on performance or
+self-presentation goals leads to reduced chances of learning (E1). Next,
+we show that social context can push learners to pursue
+performance-oriented actions even when the learning goal is highlighted
+(E2). Our formal model of social-active learning successfully captures
+the empirical results. These findings are the first steps towards
+understanding the role of social reasoning in active learning contexts.
 
 \textbf{Keywords:}
 active learning; social reasoning; information gain; OED;
@@ -91,25 +91,24 @@ delicious dish. The new recipe might taste even better, but it has a
 higher chance of failure. But perhaps this decision would change if you
 were cooking for a friend or teacher who could help or give feedback.
 
-Scenarios like this one capture an ``explore-exploit'' dilemma (Sutton
-\& Barto, 1998), in which we have to choose between actions that could
-(a) lead to an overt, readily accessible reward based on what we already
-know (\emph{exploitation}) or (b) result in the discovery of new
-information (\emph{exploration}). This decision of whether to explore or
-exploit is directly related to the relative strength of our goals within
-a particular context. In the cooking example, should I prioritize the
-goal of learning by cooking the new recipe, or should I emphasize the
-performance goal by preparing the tried and true meal? Here, we explore
-the idea that features of the social context affect the goals we
-consider, and hence can be translated into this same framework. We
-present a formal account integrating social reasoning processes with
-decision making in a simple explore-exploit dilemma.
+We often have to choose between \emph{exploration} and
+\emph{exploitation}: that is, actions that could (a) lead to an overt,
+readily accessible reward based on what we already know
+(\emph{exploitation}) or (b) result in the discovery of new information
+(\emph{exploration}; Sutton \& Barto (1998)). This decision of whether
+to explore or exploit is directly related to the relative strength of
+the goals within a particular context. In the cooking example, I can
+prioritize the goal of learning by cooking the new recipe, or I can
+instead emphasize the performance goal by preparing the tried and true
+meal. Here, we explore the idea of this goal tradeoff in a simple active
+learning context, where social factors may affect the goals we consider.
 
-We situate our integrative account within two theoretical frameworks:
-\emph{active learning} and \emph{pragmatic social reasoning}. Active
-learning refers to situations where people are given control over the
-sequence of information in a learning context (e.g., verbal question
-asking to elicit informative responses). The key assumption is that
+We present a formal account of social-active learning, and situate it
+within two theoretical frameworks: \emph{active learning} and
+\emph{pragmatic social reasoning}. Active learning refers to situations
+where people are given control over the sequence of information in a
+learning context (e.g.~try pressing different buttons on a toy, one by
+one, to see whether it produces an effect). The key assumption is that
 learners will maximize the usefulness of their actions by gathering
 information that is especially helpful for their own learning. The
 effects of active learning have been the focus of much empirical work in
@@ -130,41 +129,40 @@ information.
 \end{figure*}
 \end{CodeChunk}
 
-Work on exploratory actions in active learning often isolates
-information goals by removing the learner from any kind of social
-context. In contrast, real-world learning is characterized by situations
-where there are teachers, peer learners, or other individuals who can
-directly influence the utility of information gathering actions. In
-fact, a large body of evidence suggests that social reasoning processes
-shapes how we learn from evidence. For example, children learn faster
-when observing intentional (more informative) actions compared to
-accidental (less informative) actions. Moreover, adults and children
-will make even stronger inferences if they believe that another person
-selected their actions with the goal of helping them learn (i.e.,
-teaching) (Shafto, Goodman, \& Frank, 2012).
+Real-world learning is characterized by situations where there are
+teachers, peer learners, or other individuals who can directly influence
+the utility of information gathering actions. In fact, a large body of
+evidence suggests that social reasoning processes shapes how we learn
+from evidence. For example, children learn faster when observing
+intentional (more informative) actions compared to accidental (less
+informative) actions. Moreover, adults and children will make even
+stronger inferences if they believe that another person selected their
+actions with the goal of helping them learn (i.e., teaching) (Shafto,
+Goodman, \& Frank, 2012).
 
 Models of active learning are not typically able to accommodate these
 richer inferences and richer utility structures where people must
 integrate the value of social goals -- looking competent or
 knowledgeable, for example -- and information goals when deciding what
 to do next. Moreover, actions that maximize learning are inherently
-risky, and thus are more difficult to undertake in with someone else
+risky, and thus may be more difficult to undertake in with someone else
 present. How can active learning models be modified to accommodate this
 richer set of utilities? As a step towards answering this question, we
 model a learner who considers a mixture of learning and performance
-goals. We assume that these goals are triggered by features of the
-social context such as the presence of another individual whom we want
-to impress.
+goals. We assume that these goals result from features of the social
+context such as the presence of another individual whom we want to
+impress.
 
 We instantiate the predictions of our model in a simple causal learning
-task and measure adults' decisions about whether to take actions that
+task and measure people's decisions about whether to take actions that
 support learning vs.~social goals. We show that emphasizing performance
-or self-presentation goals leads to actions that reduce the chances of
-learning (E1). Next, we show that the presence of an observer (i.e., a
-boss) pushes learners to emphasize performance/presentation actions even
-when emphasis is placed on a learning goal (E2). Finally, we present
-Bayesian Data Analysis showing that the empirical results are consistent
-with predictions of our cognitive model of social-active learning.
+or self-presentation goals leads to actions that are not informative and
+thus reduce the chances of learning (E1). Next, we show that the
+presence of an observer (i.e., a boss) pushes learners to pursue
+performance/presentation actions even when the learning goal is
+highlighted (E2). Finally, we present a Bayesian Data Analysis showing
+that the empirical results are consistent with predictions of our
+cognitive model of social-active learning.
 
 \section{Computational model}\label{computational-model}
 

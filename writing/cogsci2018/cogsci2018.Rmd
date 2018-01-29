@@ -46,11 +46,11 @@ While the familiar recipe can ensure a good meal,
 you may miss out on a new, delicious dish. 
 The new recipe might taste even better, but it has a higher chance of failure. 
 
-We often have to choose between *exploration* and *exploitation*: 
+We often have to choose between *exploitation* and *exploration*: 
 that is, actions that could (a) lead to an overt, readily accessible reward based on what we already know (*exploitation*) or (b) result in the discovery of new information [*exploration*; @sutton1998]. 
 This decision of whether to explore or exploit is directly related to the relative strength of the goals within a particular context. 
-In the cooking example, I can prioritize the goal of learning by cooking the new recipe, 
-or I can instead focus on the performance goal by preparing the tried and true meal. 
+In the cooking example, I can prioritize the goal of learning (exploration) by cooking the new recipe, 
+or I can instead focus on the performance goal (exploitation) by preparing the tried and true meal. 
 Here, we explore the idea of this learning-performance goal tradeoff in a simple active learning context, 
 where social factors may shape the goals we consider.
 
@@ -304,7 +304,7 @@ png::readPNG(here::here(image_path, "e2_plot_wBDA.png")) %>%
 d_e2 <- d %>% filter(str_detect(experiment, "e2"))
 ```
 
-In E1, we confirmed that participants selected different actions depending on the type of goal emphasized by the social context. In E2, our goals were three-fold: (1) to replicate the results from E1; (2) to manipulate goals *and* the presence/absence of another person indepently, allowing us to measure the interaction between goals and social context; and (3) to compare empirical data with predictions of our computational model. Our key behavioral prediction was an interaction: that participants would be less likely to select the single (more informative) action in the Learning goal and No-Goal conditions when their boss was present. We also predicted a null result: that the presence of the boss should not affect action decisions in the Performance condition.
+In E1, we confirmed that participants selected different actions depending on the type of goal emphasized by the social context. In E2, our goals were three-fold: (1) to replicate the results from E1; (2) to manipulate goals *and* the presence/absence of another person (social/no-social) indepently, allowing us to measure the interaction between goals and social context; and (3) to compare empirical data with predictions of our computational model. Our key behavioral prediction was an interaction: that participants would be less likely to select the single (more informative) action in the Learning goal and No-Goal conditions when their boss was present . We also predicted a null result: that the presence of the boss should not affect action decisions in the Performance condition.
 
 ## Method
 

@@ -134,7 +134,7 @@ Goodman, \& Frank, 2017) in a social active learning context.
 
 We instantiate our model in a simple causal learning task and examine
 how people choose actions that support learning vs.~social goals. We
-present a toy with an uncertain causal mechanism (Figure \ref{fig:toy}),
+present a toy with an uncertain causal mechanism (Fig \ref{fig:toy}),
 for which doing only one of the two possible actions (handle pull or
 button press) is disambiguating but potentially risks no immediate
 effect (i.e.~neither sound nor light turning on), while doing both
@@ -184,7 +184,7 @@ We model a learner's action choice based on his goal to learn how a toy
 works (\emph{learning utility}), to make the toy perform a function
 (\emph{performance utility}), or to present himself as competent and
 knowledgeable about how the toy works (\emph{presentational utility};
-see Figure \ref{fig:model_diagram}).
+see Fig \ref{fig:model_diagram}).
 
 \subsubsection{Learning utility}\label{learning-utility}
 
@@ -226,19 +226,17 @@ he determines his action based on a weighted combination of the two
 utilities:
 \[ U(\phi; obs = no) = \phi_{learn} \cdot U_{learn} + \phi_{perf} \cdot U_{perf} ,\]
 \noindent
-where \(\phi\) is a parameter governing how much value the learner
-places on each goal.
+where \(\phi\) is how much value the learner places on each goal.
 
 \subsubsection{Presentation utility}\label{presentation-utility}
 
 When there is another person present to observe the learner's action,
-this observer \(O\) is expected to reason about the competence \(c\) of
-the learner \(L\) which is equal to whether the learner was able to make
-the toy produce an effect. The learner thinks about the observer's
-inferential process, and the expected \emph{presentational} utility
-(\(U_{pres}\)) is based on maximizing the apparent competence inferred
-by the observer. \[ P_O(c) \propto P_L(m | a)\] \[ U_{pres} = P_O(c)\]
-\noindent
+the observer \(O\) is expected to reason about the learner \(L\)'s
+competence \(c\), equal to whether the learner was able to make the toy
+produce an effect. The learner thinks about the observer's inferential
+process, and the expected \emph{presentational} utility (\(U_{pres}\))
+is based on maximizing the apparent competence inferred by the observer.
+\[ P_O(c) \propto P_L(m | a)\] \[ U_{pres} = P_O(c)\] \noindent
 
 When there is an observer present (\(obs = yes\)), the learner considers
 the tradeoff between all three utilities: the learning utility,
@@ -291,9 +289,9 @@ section for details on the manipulation check), and thus the remaining
 \subsubsection{Stimuli and Design}\label{stimuli-and-design}
 
 We presented images and instructions for three different toys that
-looked very similar but worked in different ways (see captions for
-Figure \ref{fig:model_diagram}). The instructions conveyed that pressing
-the button and pulling the handle was immediately rewarding but
+looked very similar but worked in different ways (see captions for Fig
+\ref{fig:model_diagram}). The instructions conveyed that pressing the
+button and pulling the handle was immediately rewarding but
 uninformative (fails to disambiguate the causal mechanism). In contrast,
 either of the single actions was completely disambiguating, but was
 uncertain to produce an immediate outcome. Each toy had a label at the
@@ -341,18 +339,14 @@ action and observing its effect.
 
 \subsubsection{Action decisions:}\label{action-decisions}
 
-We modeled action decisions using a logistic regression specified as
+We modeled action decisions using a logistic regression
 \texttt{$action \sim goal\_condition$} with the No-goal condition as the
-reference category\textbackslash{}footnote\{In all of the analyses for
-E1 and E2, we used the \texttt{rstanarm} (Gabry \& Goodrich, 2016)
-package to fit Bayesian regression models estimating the differences
-across conditions. We report the uncertainty in our point estimates
-using 95\% Highest Density Intervals (HDI). The HDI provides a range of
-credible values given the data and model. \}. Participants' tendency to
-select a ``single'' action varied across conditions as predicted (see
-Figure \ref{fig:e1_behav_results_plot}A), with the highest proportion
-occuring in the Learning condition, followed by No-goal, Performance,
-and Presentation.
+reference
+category.\footnote{In all of the analyses for E1 and E2, we used the {\fontfamily{qcr}\selectfont rstanarm} package to fit Bayesian regression models estimating the differences across conditions. We report the uncertainty in our point estimates using 95\% Highest Density Intervals (HDI). The HDI provides a range of credible values given the data and model.}
+Participants' tendency to select a ``single'' action varied across
+conditions as predicted (Fig \ref{fig:e1_behav_results_plot}A), with the
+highest proportion in the Learning condition, followed by No-goal,
+Performance, and Presentation.
 
 Compared to the No-goal condition, participants selected the single
 action at a greater rate in the Learning condition (\(\beta\) = 1.28,
@@ -370,8 +364,8 @@ performance/no-goal.
 We analyzed decision times, which were the latency to make an action
 selection as measured from the start of the action decision trial (all
 RTs were analyzed in log space), using the same model specification as
-action decisions. Figure \ref{fig:e1_behav_results_plot}A shows the full
-RT data distribution. Compared to the No-Goal condition (\(M\)= 31
+action decisions. Fig \ref{fig:e1_behav_results_plot}A shows the full RT
+data distribution. Compared to the No-Goal condition (\(M\)= 31
 seconds), participants took on on average 12.2 (4.2, 20) seconds longer
 to generate a decision in the Learning condition. In contrast,
 participants in the Performance and Presentation conditions produced
@@ -379,18 +373,18 @@ similar decision times.
 
 \subsubsection{Belief change:}\label{belief-change}
 
-We quantified participants' beliefs about the possible toy designs using
-entropy, and belief change was measured as the difference in entropy
-before and after selecting an action. We modeled change in entropy as a
-function of goal condition and participants' action choices:
-\texttt{$entropy\_change \sim goal\_condition + action\_response$} (see
-Figure \ref{fig:e1_behav_results_plot}C). Across all conditions, people
-who selected the single action showed a greater reduction in entropy
-(\(\beta\) = -0.49, {[}-0.64, -0.33{]}, i.e., learned more from their
-action. We did not see evidence of an interaction between goal condition
-and action selection. However, recall that a larger proportion of
-participants selected the single action in the Learning context, so the
-probability of learning is higher in this scenario.
+We quantified participants' beliefs about the toy using entropy, and
+belief change was measured as the difference in entropy before and after
+selecting an action. We modeled change in entropy as a function of goal
+condition and participants' action choices:
+\texttt{$entropy\_change \sim goal\_condition + action\_response$} (Fig
+\ref{fig:e1_behav_results_plot}C). Across all conditions, people who
+selected the single action showed a greater reduction in entropy
+(\(\beta\) = -0.49, {[}-0.64, -0.33{]}, i.e.~learned more from their
+action. We did not see evidence of an interaction between goal and
+action selection. However, a larger proportion of participants selected
+a single action in the Learning context, so learning was more likely in
+this scenario.
 
 \begin{CodeChunk}
 \begin{figure*}[tb]
@@ -429,16 +423,15 @@ included in our final analysis.
 \subsubsection{Stimuli and Design}\label{stimuli-and-design-1}
 
 The stimuli and design were identical to E1, except we had 7 different
-goal \(\times\) social conditions. Goals remained identical to E1;
-social context varied depending on whether the boss was present in the
-cover story (\emph{social}) or absent (\emph{no-social}). Thus, the
-seven conditions were: \emph{Social-learning},
-\emph{Social-performance}, \emph{Social-presentation},
-\emph{No-social-no-goal}, \emph{No-social-learning},
-\emph{No-social-performance}, and \emph{Social-no-goal}. Note that we
-did not have \emph{No-social-presentation} condition, because the
-presentation goal was defined by presenting oneself as competent to
-another person.
+goal \(\times\) social conditions. Goals were identical to E1; social
+context varied depending on whether the boss was present (\emph{social})
+or absent (\emph{no-social}) in the story. The conditions were:
+\emph{Social-learning}, \emph{Social-performance},
+\emph{Social-presentation}, \emph{No-social-no-goal},
+\emph{No-social-learning}, \emph{No-social-performance}, and
+\emph{Social-no-goal}. Note that we did not have
+\emph{No-social-presentation} condition, because the presentation goal
+was defined by presenting oneself as competent to another person.
 
 \subsubsection{Procedure}\label{procedure-1}
 
@@ -453,14 +446,14 @@ We modeled action decisions using a logistic regression specified as
 no-goal-no-social condition as the reference category. We replicated the
 key finding from E1: participants selected a ``single'' action more
 often when they were in a context that emphasized a learning goal,
-followed by the no-goal, performance, and presentation conditions (see
-Fig \ref{fig:e2_results}A). There was a main effect of social context,
-with participants being less likely to select the single action when
-their boss was present (\(\beta =\) -0.521, {[}-1.005, -0.053{]}).
-Finally, there was evidence for a reliable interaction between goal
-condition and social context such that the effect of social context was
-present in the Learning and No-Goal conditions, but not in the
-Performance condition (\(\beta\) \(_{int}\) = 1.163, {[}0.01, 2.312{]}).
+followed by the no-goal, performance, and presentation conditions (Fig
+\ref{fig:e2_results}A). There was a main effect of social context, with
+participants being less likely to select the single action when their
+boss was present (\(\beta =\) -0.521, {[}-1.005, -0.053{]}). Finally,
+there was evidence for a reliable interaction between goal condition and
+social context such that the effect of social context was present in the
+Learning and No-Goal conditions, but not in the Performance condition
+(\(\beta\) \(_{int}\) = 1.163, {[}0.01, 2.312{]}).
 
 \subsubsection{Action decision times:}\label{action-decision-times-1}
 
@@ -471,8 +464,8 @@ generate a response in the No-goal condidition and seconds in the
 Learning condition. In contrast, decisions were faster in the
 Performance (\(\beta\) = -7.78 sec, {[}-14.01, -1.52{]}) and
 Presentation (-10.77 seconds, {[}-18.67, -2.73{]}) conditions, which
-were similar to one another (see Fig \ref{fig:e2_results}B). There was
-no evidence of a main effect of social context or an interaction between
+were similar to one another (Fig \ref{fig:e2_results}B). There was no
+evidence of a main effect of social context or an interaction between
 goal condition and social context. Note that here we did not see a
 difference in decision times between the Learning and No-Goal
 conditions, which is different from the pattern in E1.
@@ -489,18 +482,18 @@ action choice.
 
 \subsubsection{BDA model-data fit:}\label{bda-model-data-fit}
 
-In our paradigm, participants were instructed to choose an
-action\footnote{For action priors, we used a separate prior elicitation task, in which people indicated the likelihood for selecting an action without any background information about possible hypotheses or goals. The results suggested that none of the action choice priors statistically differed from chance. We used mean likelihood for each action choice as baseline priors in our model.}
-based on a certain goal. We assumed that the goal descriptions (e.g.
-``impress your boss'') conveyed to the participants a particular set of
-goal weights \{\(\phi_{learn}\), \(\phi_{perf}\), \(\phi_{pres}\)\} used
-to generate action choices. We put uninformative priors on these weights
-(\(\phi \sim Unif(0,1)\)) and inferred their credible values separately
-for each social-goal condition, using Bayesian data analytic techniques
-(Lee \& Wagenmakers, 2014).
+In our paradigm, participants chose an action based on a certain
+goal.\footnote{For action priors, we used a separate prior elicitation task, in which people indicated the likelihood for selecting an action without any background information about possible hypotheses or goals. The results suggested that none of the action choice priors statistically differed from chance. We used mean likelihood for each action choice as baseline priors in our model.}
+We assumed that the goal descriptions (e.g. ``impress your boss'')
+conveyed to the participants a particular set of goal weights
+\{\(\phi_{learn}\), \(\phi_{perf}\), \(\phi_{pres}\)\} used to generate
+action choices. We put uninformative priors on these weights
+(\(\phi \sim Unif(0,1)\)) and inferred their credible values for each
+social-goal condition, using Bayesian data analytic techniques (Lee \&
+Wagenmakers, 2014).
 
-The inferred goal weights were consistent with what we predicted (see
-Figure \ref{fig:e2_results}D). \(\phi_{learn}\) was at its highest for
+The inferred goal weights were consistent with what we predicted (Figure
+\ref{fig:e2_results}D). \(\phi_{learn}\) was at its highest for
 no-social learning condition, in which the goal to learn was
 highlighted, and there was minimum social pressure. On the other hand,
 the \(\phi_{perf}\) and \(\phi_{pres}\) together make up the highest
@@ -515,13 +508,13 @@ iterations, discarding the first 50,000 for burnin. The Maximum A-
 Posteriori (MAP) estimate and 95\% Highest Probability Density Interval
 (HDI) for \(\lambda\) was 4.79 {[}3.96, 6.2{]}.
 
-The predictions of the action choices according to the fitted learner
-model are shown in Figure \ref{fig:e2_results}A (bottom). The model's
-expected posteriors over action choices capture key differences between
-conditions: the single action was more likely for no-social than social
-conditions overall, but not when the performance goal was highlighted.
-The model was able to predict the distribution of action responses with
-high accuracy \(r^2(21)\) = 0.9.
+The fitted model predictions of action choices are shown in Fig
+\ref{fig:e2_results}A (bottom). The model's expected posteriors over
+action choices capture key differences between conditions: the single
+action was more likely for no-social than social conditions overall, but
+not when the performance goal was highlighted. The model was able to
+predict the distribution of action responses with high accuracy
+\(r^2(21)\) = 0.9.
 
 \section{General Discussion}\label{general-discussion}
 
@@ -548,21 +541,19 @@ informational and social.
 
 There are limitations to this work that present opportunities for future
 work. First, we did not differentiate between performance and
-presentation goals in the current model/paradigm. That is, the choice of
-doing both actions satisfies both performance and presentational gaols.
-Our future work is aimed at enriching the space of actions that people
-could take, which can tease apart actions driven by self-presentation.
-Second, we used a very particular social context -- the presence of a
-boss -- to influence people's action choices. It remains an open
-question as to how these results would generalize to other kinds of
-observers that hold different goals. One particularly compelling
-contrast would be to a teacher who wants the learner to select actions
-that help her learn. Third, we limited people to a single action choice.
-While this allowed us to get a clean measurement of our goal and social
-context manipulations, real-world learning often involves a process of
-sequential decision-making that could cause learners to priortize
-different goals depending on their own prior actions and/or the
-probability of interacting with an observer in the future.
+presentation goals, since the choice of doing both actions satisfies
+both of these goals. Future work enriching the space of possible actions
+can tease apart actions driven by self-presentation. Second, we used a
+very particular social context (the presence of a boss) to influence
+people's action choices. It remains an open question as to how our
+results would generalize to other kinds of observers with different
+goals (e.g.~a teacher who wants the learner to select actions that help
+her learn). Third, we limited people to a single action choice. While
+this allowed a clean measurement of our condition manipulations,
+real-world learning often involves sequential decision-making that could
+cause learners to prioritize different goals depending on their prior
+actions or the probability of interacting with an observer in the
+future.
 
 Another interesting open question is how our model could be used to
 understand active learning over development. Our framework would in
@@ -581,12 +572,13 @@ social reasoning.
 
 \section{Acknowledgements}\label{acknowledgements}
 
-This work was supported by NSERC postgraduate doctoral scholarship
-PGSD3-454094-2014 to EJY and an NSF GRFP to KM.
+This work was supported by an NSERC postgraduate doctoral scholarship to
+EJY and an NSF GRFP to KM.
 
 \section{References}\label{references}
 
-\setlength{\parindent}{-0.1in} \setlength{\leftskip}{0.125in}
+\setstretch{1.5} \setlength{\parindent}{-0.1in}
+\setlength{\leftskip}{0.125in}
 
 \noindent
 
@@ -604,10 +596,6 @@ processing systems} (pp. 241--248).
 \hypertarget{ref-coenen2017}{}
 Coenen, A., Nelson, J. D., \& Gureckis, T. M. (2017). Asking the right
 questions about human inquiry.
-
-\hypertarget{ref-gabry2016rstanarm}{}
-Gabry, J., \& Goodrich, B. (2016). Rstanarm: Bayesian applied regression
-modeling via stan. r package version 2.10. 0.
 
 \hypertarget{ref-goodman2016}{}
 Goodman, N. D., \& Frank, M. C. (2016). Pragmatic language

@@ -7,9 +7,12 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+```
+
+
+```{r libraries}
 library(binom)
 library(knitr); library(magrittr); library(tidyverse); library(here); library(grid)
-
 source(here("R/soc_info_helpers.R"))
 ```
 

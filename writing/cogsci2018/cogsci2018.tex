@@ -59,18 +59,19 @@
 \maketitle
 
 \begin{abstract}
-Our actions shape what we learn, and learners are proficient at choosing
-their actions to maximize their information gain. But learning often
-unfolds in social contexts where learners have both informational goals
-(e.g., to learn how something works) but also social goals (e.g., to
-appear competent). How do these different factors shape learners'
-decisions? We present a computational model that integrates the value of
-social and informational goals to predict the decisions that people will
-make in a simple active causal learning task. We show that an emphasis
-on performance or self-presentation goals leads to reduced chances of
-learning (Exp 1) and that social context can push learners to pursue
+Our actions shape what we learn. Because of this dependency, learners
+are proficient at choosing their actions to maximize their information
+gain. But learning often unfolds in social contexts where learners have
+both informational goals (e.g., to learn how something works) but also
+social goals (e.g., to appear competent and impress others). How do
+these different factors shape learners' decisions? Here, we present a
+computational model that integrates the value of social and
+informational goals to predict the decisions that people will make in a
+simple active causal learning task. We show that an emphasis on
+performance or self-presentation goals leads to reduced chances of
+learning (Exp. 1) and that social context can push learners to pursue
 performance-oriented actions even when the learning goal is highlighted
-(Exp 2). Our formal model of social-active learning successfully
+(Exp. 2). Our formal model of social-active learning successfully
 captures the empirical results. These findings are first steps towards
 understanding the role of social reasoning in active learning contexts.
 
@@ -105,16 +106,19 @@ contexts lead to faster learning than passive contexts where people
 don't have control over the information flow.
 
 But real-world learning usually takes place in rich social contexts with
-teachers, peers, or others who can influence our learning. Indeed,
-adults and even young children modulate their inferences based on
-evidence that is generated and socially communicated by others (Shafto,
-Goodman, \& Frank, 2012; Xu \& Tenenbaum, 2007) But even when we learn
-from \emph{our} own actions instead of others', our social environment
-may affect our self-directed learning process. People must integrate the
-value of social goals (e.g., looking competent) and informational goals
-when deciding what to do. While previous models have captured how we
-optimize learning, they have been agnostic to other social factors in
-the environment.
+teachers, peers, or other people who can directly influence our
+learning. Indeed, adults and even preschool-aged children modulate their
+inferences depending on how others (e.g., teachers) select their actions
+(Shafto, Goodman, \& Frank, 2012), and understand that socially
+communicated information licenses different inferences than information
+generated on their own (e.g., Xu \& Tenenbaum, 2007). But even when we
+learn from \emph{our} own actions instead of others', our social
+environment may affect our self-directed learning process. While
+previous models have captured how we optimize learning, either from our
+own actions or from others, they have been agnostic to other social
+factors that are ubiquitous in a learner's environment. People must
+integrate the value of social goals (e.g., looking competent or
+knowledgeable) and informational goals when deciding what to do.
 
 How can active learning models accommodate this richer set of utilities?
 As a step towards answering this question, we model a learner who
@@ -128,7 +132,7 @@ a weighted combination of multiple goals (Yoon, Tessler, Goodman, \&
 Frank, 2017) in a social active learning context.\footnote{Such models
   are commonly used to approximate group-level behavior, without the
   strong assumption that individuals must be strictly optimal (e.g.,
-  Frank, 2013).}
+  Frank, 2013, Goodman et al. (2015)).}
 
 \begin{CodeChunk}
 \begin{figure}[b]
@@ -199,16 +203,16 @@ structure (see Fig.~\ref{fig:model_diagram} for the model schematic).
 The \emph{learning utility} captures the goal to learn new information,
 which in our paradigm is associated with figuring out how a given toy
 works. The learning utility is formally represented by an OED model
-(Lindley, 1956; ``Optimal Experiment Design''; Nelson, 2005), which
-quantifies the expected utility of different information seeking
-actions. The learner considers the hypothesis space \(H(t)\), and wants
-to determine the correct hypothesis for the toy's causal mechanism. He
-thinks about the utility of the outcome \(m\) (e.g., music playing) to
-each possible action (e.g., button press), which is equal to the
-\emph{information gain}: the change in the learner's overall uncertainty
-(difference in entropy) before and after seeing the outcome. This
-information gain is equal to the learning utility (\(U_{learn}\)), which
-is the expected utility of each action:
+(``Optimal Experiment Design''; Nelson, 2005), which quantifies the
+expected utility of different information seeking actions. The learner
+considers the hypothesis space \(H(t)\), and wants to determine the
+correct hypothesis for the toy's causal mechanism. He thinks about the
+utility of the outcome \(m\) (e.g., music playing) to each possible
+action (e.g., button press), which is equal to the \emph{information
+gain}: the change in the learner's overall uncertainty (difference in
+entropy) before and after seeing the outcome. This information gain is
+equal to the learning utility (\(U_{learn}\)), which is the expected
+utility of each action:
 \[ U_{learn}(a) \propto \sum_{\{m, \neg m\}}{P(m|a)}[{ent(H(t)) - ent(H(t)|m,a)}].\]
 \noindent
 where \(ent(H)\) is the Shannon entropy of \(H\), which provides a
@@ -258,17 +262,6 @@ informative action more often in the following order of goal conditions
 (decreasing): learning, no goal, performance, and
 presentation.\footnote{Our hypothesis, method, model and data analysis were pre-registered prior to data collection at \url{https://osf.io/kcjau}.}
 
-\begin{CodeChunk}
-\begin{figure*}[tb]
-
-{\centering \includegraphics[width=0.95\linewidth]{figs/e1_behav_results_plot-1} 
-
-}
-
-\caption[Behavioral results for Exp]{Behavioral results for Exp. 1. A: Proportion of action decisions for each goal condition. Error bars represent 95\% binomial CIs computed using a Bayesian beta-binomial model. B: Participants' response times on the action decisions. Each point represents a participant with the width of the violin representing the density of the data at that value. C: Participants' belief change (entropy in bits) as a function of condition. Lower values represent higher certainty after selecting an action.}\label{fig:e1_behav_results_plot}
-\end{figure*}
-\end{CodeChunk}
-
 \subsection{Method}\label{method}
 
 \subsubsection{Participants}\label{participants}
@@ -290,6 +283,17 @@ uninformative (fails to disambiguate the causal mechanism). In contrast,
 either of the single actions was completely disambiguating, but was
 uncertain to produce an immediate outcome. Each toy had a label at the
 front, indicating the correct action(s)--outcome link.
+
+\begin{CodeChunk}
+\begin{figure}[H]
+
+{\centering \includegraphics[width=0.95\linewidth]{figs/e1_behav_results_plot-1} 
+
+}
+
+\caption[Behavioral results for Exp]{Behavioral results for Exp. 1. A: Proportion of action decisions for each goal condition. Error bars are 95\% binomial CIs computed using a Bayesian beta-binomial model. B: Response times on the action decisions. Each point represents a participant with the width of the violin representing the density of the data at that value. C: Belief change (entropy in bits) as a function of condition. Lower values represent higher certainty after selecting an action.}\label{fig:e1_behav_results_plot}
+\end{figure}
+\end{CodeChunk}
 
 We asked participants to act on one of these toys; importantly, the
 given toy was missing its label, leading to uncertainty about its causal
@@ -375,17 +379,6 @@ action. We did not see evidence of an interaction between goal and
 action selection. However, a larger proportion of participants selected
 a single action in the Learning context, so learning was more likely in
 this scenario.
-
-\begin{CodeChunk}
-\begin{figure*}[tb]
-
-{\centering \includegraphics[width=0.95\linewidth]{figs/e2_results-1} 
-
-}
-
-\caption[Behavioral and model fitting results for Exp]{Behavioral and model fitting results for Exp. 2. A: Action decisions with color representing social context, from human data (top) and fitted model predictions (bottom). B: Decision times. C: Belief change. D: Inferred phi values for each goal-context condition. All other plotting conventions are the same as Fig. 3.}\label{fig:e2_results}
-\end{figure*}
-\end{CodeChunk}
 
 \section{Experiment 2}\label{experiment-2}
 
@@ -505,6 +498,17 @@ overall, but not when the performance goal was highlighted. The model
 was able to predict the distribution of action responses with high
 accuracy \(r^2(21)\) = 0.9.
 
+\begin{CodeChunk}
+\begin{figure}[H]
+
+{\centering \includegraphics[width=0.98\linewidth]{figs/e2_results-1} 
+
+}
+
+\caption[Behavioral and model fitting results for Exp]{Behavioral and model fitting results for Exp. 2. A: Action decisions with color representing social context, from human data (top) and fitted model predictions (bottom). B: Decision times. C: Belief change. D: Inferred phi values for each goal-context condition. All other plotting conventions are the same as Fig. 3.}\label{fig:e2_results}
+\end{figure}
+\end{CodeChunk}
+
 \section{General Discussion}\label{general-discussion}
 
 How do social contexts shape active learning? We proposed that people
@@ -562,7 +566,7 @@ questions that ultimately seek to unify theories on active learning and
 social reasoning.
 
 \vspace{1em}
-\fbox{\parbox[b][][c]{7.3cm}{\centering All data, model, and analysis codes are available at: \url{https://github.com/kemacdonald/soc-info}}}
+\fbox{\parbox[b][][c]{7.3cm}{\centering All experiments, data, model, and analysis codes are in the online repository for this project: \url{https://github.com/kemacdonald/soc-info}}}
 \vspace{1em} \noindent
 
 \section{Acknowledgements}\label{acknowledgements}
@@ -593,6 +597,12 @@ Goodman, N. D., \& Frank, M. C. (2016). Pragmatic language
 interpretation as probabilistic inference. \emph{Trends in Cognitive
 Sciences}, \emph{20}(11), 818--829.
 
+\hypertarget{ref-goodman2015relevant}{}
+Goodman, N. D., Frank, M. C., Griffiths, T. L., Tenenbaum, J. B.,
+Battaglia, P. W., \& Hamrick, J. B. (2015). Relevant and robust: A
+response to marcus and davis (2013). \emph{Psychological Science},
+\emph{26}(4), 539--541.
+
 \hypertarget{ref-grabinger1995rich}{}
 Grabinger, R. S., \& Dunlap, J. C. (1995). Rich environments for active
 learning: A definition. \emph{ALT-J}, \emph{3}(2), 5--34.
@@ -606,10 +616,6 @@ commonsense psychology. \emph{Trends in Cognitive Sciences},
 \hypertarget{ref-lee2014bayesian}{}
 Lee, M. D., \& Wagenmakers, E.-J. (2014). \emph{Bayesian cognitive
 modeling: A practical course}. Cambridge university press.
-
-\hypertarget{ref-lindley1956}{}
-Lindley, D. V. (1956). On a measure of the information provided by an
-experiment. \emph{The Annals of Mathematical Statistics}, 986--1005.
 
 \hypertarget{ref-mackay2003}{}
 MacKay, D. J. (2003). \emph{Information theory, inference and learning

@@ -51,26 +51,24 @@ d_entropy <- d %>%
   summarise(entropy_est = compute_entropy(slider_value_normalized)) %>% 
   spread(hypothesis_type, entropy_est) %>% 
   mutate(entropy_change = posterior - prior,
+         entropy_change_2prior = posterior - 2*prior,
          action_r_collap = ifelse(action_response == "both", "both", "single"))
 
 d %<>% left_join(., d_entropy)
+```
+
+Compute IG. Here, we use KL-divergence as our measure of entropy change computation that takes into account where the participant started (prior beliefs). 
+
+```{r score ig for each participant}
+d %<>%
+  mutate(master_id = str_c(id, experiment, sep = "_")) %>% 
+  split(.$master_id) %>%
+  map_df(ig)
 ```
 
 Write to disk.
 
 ```{r}
-# write_csv(d, path = here("/data/03_merged_data", "goal_actions_master.csv"))
+write_csv(d, path = here("/data/03_merged_data", "goal_actions_master.csv"))
 ```
 
-Compute entropy change. (second ver)
-
-```{r}
-d_entropy <- d %>% 
-  group_by(id, condition, social_condition, hypothesis_type, action_response) %>% 
-  summarise(entropy_est = compute_entropy(slider_value_normalized)) %>% 
-  spread(hypothesis_type, entropy_est) %>% 
-  mutate(entropy_change = posterior - 2*prior,
-         action_r_collap = ifelse(action_response == "both", "both", "single"))
-
-d %<>% left_join(., d_entropy)
-```

@@ -54,9 +54,12 @@ dkl <- function(t, p) {
   return(sum(et * log(et / ep)))
 }
 
+# ig function
+# note that the "correct" vector of button and handle are defined by position 
+# relative to the pd data frame
 ig <- function(pd) {
   pd <- arrange(pd, hypothesis_type, hypothesis)
-  handle <- c(1, 0, 0)
+  handle <- c(0, 0, 1) 
   button <- c(0, 1, 0)
   prior <- filter(pd, hypothesis_type == "prior") %>% pull(slider_value_normalized)
   posterior <- filter(pd, hypothesis_type == "posterior") %>% pull(slider_value_normalized)

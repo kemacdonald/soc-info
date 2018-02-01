@@ -174,7 +174,7 @@ We recruited `r n_run` participants (45-51 per condition) on Amazon’s Mechanic
 We presented images and instructions for three different toys that looked very similar but worked in different ways (see captions for Fig.\ \ref{fig:model_diagram}).
 The instructions conveyed that pressing the button and pulling the handle was immediately rewarding but uninformative (fails to disambiguate the causal mechanism). In contrast, either of the single actions was completely disambiguating, but was uncertain to produce an immediate outcome. Each toy had a label at the front, indicating the correct action(s)--outcome link.
 
-```{r e1_behav_results_plot, fig.env = "figure", fig.pos = "H", fig.align='center', fig.width=2, fig.height=6, num.cols.cap=1, out.width='95%', fig.cap = "Behavioral results for Exp.\ 1. A: Proportion of action decisions for each goal condition. Error bars are 95\\% binomial CIs computed using a Bayesian beta-binomial model. B: Response times on the action decisions, where each point represents a participant. FIXME C: Belief change (entropy in bits) as a function of condition. Lower values represent higher certainty after selecting an action. FIXME"}
+```{r e1_behav_results_plot, fig.env = "figure", fig.pos = "H", fig.align='center', fig.width=2, fig.height=6, num.cols.cap=1, out.width='95%', fig.cap = "Behavioral results for Exp.\ 1. A: Proportion of action decisions for each goal condition. Error bars are 95\\% binomial CIs computed using a Bayesian beta-binomial model. B: Response times on the action decisions. C: Belief change (information gain in bits) as a function of condition. Higher values represent more information gained from the action selection."}
 png::readPNG(here::here(image_path, "e1_plot.png")) %>% 
   grid::grid.raster()
 ```
@@ -253,6 +253,33 @@ We analyzed decision times, which were the latency to make an action selection a
 
 ### Belief change:
 
+```{r ig contrasts e1}
+e1_contrasts_ig <- d_models$ig_samples_e1 %>% 
+  group_by(effect) %>% 
+  summarise(ig = median(param_est),
+            hdi_lower = quantile(param_est, probs = 0.025),
+            hdi_upper = quantile(param_est, probs = 0.975)) %>% 
+  mutate_if(.predicate = is.numeric, .funs = round, digits = 2) 
+
+e1_ig_means <- d_models$ig_samples_e1 %>% 
+  spread(effect, param_est) %>% 
+  mutate(performance_both = no_goal + performance_beta,
+         learning_both = no_goal + learning_beta,
+         presentation_both = no_goal + presentation_beta,
+         no_goal_single = no_goal + single_action_beta,
+         performance_single = no_goal + performance_beta + single_action_beta,
+         learning_single = no_goal + learning_beta + single_action_beta,
+         presentation_single = no_goal + presentation_beta + single_action_beta) %>% 
+  rename(no_goal_both = no_goal) %>% 
+  select(-contains("beta")) %>% 
+  gather(key = condition, value = param_est, -sample_id) %>% 
+  group_by(condition) %>% 
+  summarise(ig = mean(param_est),
+            hdi_lower = quantile(param_est, probs = 0.025),
+            hdi_upper = quantile(param_est, probs = 0.975)) %>% 
+  mutate_if(.predicate = is.numeric, .funs = round, digits = 2) 
+```
+
 ```{r entropy contrasts e1}
 e1_contrasts_ent <- d_models$ent_samples_e1 %>% 
   group_by(effect) %>% 
@@ -283,8 +310,9 @@ e1_ent_means <- d_models$ent_samples_e1 %>%
   mutate_if(.predicate = is.numeric, .funs = round, digits = 2) 
 ```
 
-We quantified participants’ beliefs about the toy using entropy, and belief change was measured as the difference in entropy before and after selecting an action.
-We modeled change in entropy as a function of goal condition and participants' action choices: \texttt{$entropy\_change \sim goal\_condition + action\_response$} (Fig.\ \ref{fig:e1_behav_results_plot}C). Across all conditions, people who selected the single action showed a greater reduction in entropy ($\beta$ = `r e1_contrasts_ent$ent_change[5]`, [`r e1_contrasts_ent$hdi_lower[5]`, `r e1_contrasts_ent$hdi_upper[5]`], i.e., learned more from their action. We did not see evidence of an interaction between goal and action selection. However, a larger proportion of participants selected a single action in the Learning context, so learning was more likely in this scenario.
+We quantified participants’ change in beliefs about the toy using information gain. We followed @frank2014modeling and computed the Kullback-Leibler (KL) divergence both before and after participants' action selections. The KL divergence gives a measure of the distance between the correct ^[Note that since the action-effect link was deterministic, the correct belief distribution is a function of participant's action decision. For example, if a participant selected the button action, then $B_{correct}$ placed 100% of the probability mass on the button hypothesis.] probability distribution and the participant's beliefs about the identity of the unlabeled toy. We notate participants' belief distributions as $B_{prior}$ and $B_{prior+a}$ and the correct distribution as $B_{correct}$. The difference between these KL divergences provides the number of bits of information gained due to the action: $IG(a) = D_{KL} (  B_{correct}|| B_{prior} )  - D_{KL} (B_{correct} || B_{prior+a} )$.
+
+We modeled information gain as a function of goal condition and action choices: \texttt{$IG \sim goal\_condition + action\_response$} (Fig.\ \ref{fig:e1_behav_results_plot}C). Across all conditions, people who selected the single action showed a greater gain in bits of information ($\beta_{single}$ = `r e1_contrasts_ig$ig[5]`, [`r e1_contrasts_ig$hdi_lower[5]`, `r e1_contrasts_ig$hdi_upper[5]`], i.e., learned more from their action. We did not see evidence of an interaction between goal and action selection. However, a larger proportion of participants selected a single action in the Learning context, so learning was more likely in this condition.
 
 # Experiment 2
 
@@ -398,16 +426,41 @@ We replicated the key decision time finding from Exp.\ 1, with participants maki
 
 ### Belief change:
 
-```{r entropy contrasts e2}
+```{r ig e2}
+e2_contrasts_ig <- d_models$ig_samples_e2 %>% 
+  group_by(effect) %>% 
+  summarise(ig = mean(param_est),
+            hdi_lower = hdi_lower(param_est),
+            hdi_upper = hdi_upper(param_est)) %>% 
+  mutate_if(.predicate = is.numeric, .funs = round, digits = 2) 
+
+e2_ig_means <- d_models$ig_samples_e2 %>% 
+  spread(effect, param_est) %>% 
+  mutate(performance_both = no_goal + performance_beta,
+         learning_both = no_goal + learning_beta,
+         presentation_both = no_goal + presentation_beta,
+         no_goal_single = no_goal + single_action_beta,
+         performance_single = no_goal + performance_beta + single_action_beta,
+         learning_single = no_goal + learning_beta + single_action_beta,
+         presentation_single = no_goal + presentation_beta + single_action_beta) %>% 
+  rename(no_goal_both = no_goal) %>% 
+  select(-contains("beta")) %>% 
+  gather(key = condition, value = param_est, -sample_id) %>% 
+  group_by(condition) %>% 
+  summarise(ig = mean(param_est),
+            hdi_lower = quantile(param_est, probs = 0.025),
+            hdi_upper = quantile(param_est, probs = 0.975)) %>% 
+  mutate_if(.predicate = is.numeric, .funs = round, digits = 2) 
+```
+
+```{r entropy e2}
 e2_contrasts_ent <- d_models$ent_samples_e2 %>% 
   group_by(effect) %>% 
   summarise(ent_change = mean(param_est),
             hdi_lower = hdi_lower(param_est),
             hdi_upper = hdi_upper(param_est)) %>% 
   mutate_if(.predicate = is.numeric, .funs = round, digits = 2) 
-```
 
-```{r entropy group means e2}
 e2_ent_means <- d_models$ent_samples_e2 %>% 
   spread(effect, param_est) %>% 
   mutate(performance_both = no_goal + performance_beta,
@@ -427,7 +480,7 @@ e2_ent_means <- d_models$ent_samples_e2 %>%
   mutate_if(.predicate = is.numeric, .funs = round, digits = 2) 
 ```
 
-Across all conditions, participants who selected the single action showed a greater reduction in entropy ($\beta$ = `r e2_contrasts_ent$ent_change[5]`, [`r e2_contrasts_ent$hdi_lower[5]`, `r e2_contrasts_ent$hdi_upper[5]`]. There was weaker evidence of greater reduction in entropy in the Learning goal condition ($\beta$ = `r e2_contrasts_ent$ent_change[1]`, [`r e2_contrasts_ent$hdi_lower[1]`, `r e2_contrasts_ent$hdi_upper[1]`). There was no evidence of a main effect of social context and no two- or three-way interactions between social context, goal condition, and action choice.
+We replicate the information gain effect from E1: participants who selected the single action showed greater information gain across all conditions ($\beta_{single}$ = `r e2_contrasts_ig$ig[5]`, [`r e2_contrasts_ig$hdi_lower[5]`, `r e2_contrasts_ig$hdi_upper[5]`]. And there was no evidence of a main effect of social context and no two- or three-way interactions between social context, goal condition, and action choice. As in E1, a larger proportion of participants selected the single action in the Learning condition, especially in the No-socia context, meaning information again was most likely in this learning context.
 
 ### BDA model-data fit:
 

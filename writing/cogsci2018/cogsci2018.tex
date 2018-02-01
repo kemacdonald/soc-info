@@ -132,7 +132,7 @@ a weighted combination of multiple goals (Yoon, Tessler, Goodman, \&
 Frank, 2017) in a social active learning context.\footnote{Such models
   are commonly used to approximate group-level behavior, without the
   strong assumption that individuals must be strictly optimal (e.g.,
-  Frank, 2013, Goodman et al. (2015)).}
+  Frank, 2013; Goodman et al., 2015).}
 
 \begin{CodeChunk}
 \begin{figure}[b]
@@ -186,11 +186,11 @@ of social-active learning.
 We model a learner \(L\) who chooses his action \(a\) approximately
 optimally (as per optimality parameter \(\lambda\)) based on the
 expected total utility \(U_{t}\) given his action \(a\) and presence of
-an observer \(o\).
+an observer \(o\):
 
-\[ P_L(a | o) \propto \exp(\lambda \cdot \mathbb{E}[U_{t}(a,o)]),\]
+\[ P_L(a | o) \propto \exp(\lambda \cdot \mathbb{E}[U_{t}(a,o)]).\]
 \noindent
-where the total utility is defined as:
+The total utility is defined as:
 \[U_{t}(a,o) = \phi_{learn} \cdot U_{learn}(a) + \phi_{perf} \cdot U_{perf}(a) + \delta^o \cdot \phi_{pres} \cdot U_{pres}(a),\]
 \noindent
 where \(\phi\)s are weights that are inferred for each utility from data
@@ -203,7 +203,7 @@ structure (see Fig.~\ref{fig:model_diagram} for the model schematic).
 The \emph{learning utility} captures the goal to learn new information,
 which in our paradigm is associated with figuring out how a given toy
 works. The learning utility is formally represented by an OED model
-(``Optimal Experiment Design''; Nelson, 2005), which quantifies the
+(``Optimal Experiment Design''; e.g. Nelson, 2005), which quantifies the
 expected utility of different information seeking actions. The learner
 considers the hypothesis space \(H(t)\), and wants to determine the
 correct hypothesis for the toy's causal mechanism. He thinks about the
@@ -241,7 +241,7 @@ competence, equal to whether the learner was able to make the toy
 produce an effect. The learner thinks about the observer's inferential
 process, and the expected \emph{presentational} utility (\(U_{pres}\))
 is based on maximizing the apparent competence inferred by the observer:
-\[ U_{pres} = P_O(m | a)\]. \noindent
+\[ U_{pres} = P_O(m | a),\] \noindent
 where \(P_O(m | a)\) is the observer's own estimate of the likelihood of
 an effect given the learner's action.\footnote{We assume that the
   observer is naive about the toy's causal structure; otherwise, if the
@@ -291,7 +291,7 @@ front, indicating the correct action(s)--outcome link.
 
 }
 
-\caption[Behavioral results for Exp]{Behavioral results for Exp. 1. A: Proportion of action decisions for each goal condition. Error bars are 95\% binomial CIs computed using a Bayesian beta-binomial model. B: Response times on the action decisions. Each point represents a participant with the width of the violin representing the density of the data at that value. C: Belief change (entropy in bits) as a function of condition. Lower values represent higher certainty after selecting an action.}\label{fig:e1_behav_results_plot}
+\caption[Behavioral results for Exp]{Behavioral results for Exp. 1. A: Proportion of action decisions for each goal condition. Error bars are 95\% binomial CIs computed using a Bayesian beta-binomial model. B: Response times on the action decisions, where each point represents a participant. FIXME C: Belief change (entropy in bits) as a function of condition. Lower values represent higher certainty after selecting an action. FIXME}\label{fig:e1_behav_results_plot}
 \end{figure}
 \end{CodeChunk}
 
@@ -400,8 +400,8 @@ Performance condition.
 \subsubsection{Participants}\label{participants-1}
 
 Using the same recruitment and exclusion criteria as Exp.~1, we
-recruited 347 participants (42-51 per condition), and 325 participants
-were included in our final analysis.
+recruited 347 participants (42-51 per condition), and included 325
+participants in our final analysis.
 
 \subsubsection{Stimuli and Design}\label{stimuli-and-design-1}
 
@@ -428,15 +428,15 @@ We modeled action decisions using a logistic regression specified as
 \texttt{$action \sim goal\_condition * social\_context$} with the
 No-goal-no-social condition as the reference category. We replicated the
 key finding from Exp.~1: participants selected a ``single'' action more
-often when they were in a context that emphasized a learning goal,
-followed by the no-goal, performance, and presentation conditions
-(Fig.~\ref{fig:e2_results}A). There was a main effect of social context,
-with participants being less likely to select the single action when
-their boss was present (\(\beta =\) -0.521, {[}-1.005, -0.053{]}).
-Finally, there was evidence for a reliable interaction between goal
-condition and social context such that the effect of social context was
-present in the Learning and No-goal conditions, but not in the
-Performance condition (\(\beta\) \(_{int}\) = 1.163, {[}0.01, 2.312{]}).
+often in the Learning goal condition, followed by the No-goal,
+Performance, and Presentation conditions (Fig.~\ref{fig:e2_results}A).
+There was a main effect of social context, with participants being less
+likely to select the single action when their boss was present
+(\(\beta =\) -0.521, {[}-1.005, -0.053{]}). Finally, there was evidence
+for a reliable interaction between goal condition and social context
+such that the effect of social context was present in the Learning and
+No-goal conditions, but not in the Performance condition (\(\beta\)
+\(_{int}\) = 1.163, {[}0.01, 2.312{]}).
 
 \subsubsection{Action decision times:}\label{action-decision-times-1}
 
@@ -476,15 +476,14 @@ social-goal condition, using Bayesian data analytic techniques (Lee \&
 Wagenmakers, 2014).
 
 The inferred goal weights were consistent with what we predicted
-(Fig.~\ref{fig:e2_results}D). \(\phi_{learn}\) was at its highest for
-No-social learning condition. On the other hand, the \(\phi_{perf}\) and
-\(\phi_{pres}\) together make up the highest portion in the presentation
-condition, with high social pressure to present competence compared to
-other conditions.
+(Fig.~\ref{fig:e2_results}D). \(\phi_{learn}\) was highest for No-social
+learning condition, whereas the \(\phi_{perf}\) and \(\phi_{pres}\)
+together made up the highest portion in the presentation condition, with
+high social pressure to appear competent compared to other conditions.
 
 We also inferred another parameter of the cognitive model, the
 optimality parameter \(\lambda\). We put uninformative prior on the
-parameter (\(\lambda \sim Unif(0,10)\) and inferred its posterior
+parameter (\(\lambda \sim Unif(0,10)\)) and inferred its posterior
 credible value from the data. We ran 4 MCMC chains for 100,000
 iterations, discarding the first 50,000 for burnin. The Maximum A-
 Posteriori (MAP) estimate and 95\% Highest Probability Density Interval
@@ -501,7 +500,7 @@ accuracy \(r^2(21)\) = 0.9.
 \begin{CodeChunk}
 \begin{figure}[H]
 
-{\centering \includegraphics[width=0.98\linewidth]{figs/e2_results-1} 
+{\centering \includegraphics[width=0.9\linewidth]{figs/e2_results-1} 
 
 }
 
@@ -534,22 +533,22 @@ multiple goals -- informational and social.
 There are limitations to this work that present opportunities for future
 work. First, we did not differentiate between performance and
 presentation goals, since the choice of doing both actions satisfies
-both of these goals in our current paradigm. Future work enriching the
-space of possible actions can tease apart actions driven by
-self-presentation. Second, we used a very particular social context (the
-presence of a boss) to influence people's action choices. It remains an
-open question as to how our results would generalize to other kinds of
-observers with different goals (e.g., a teacher who wants the learner to
-select actions that help her learn). Second, we used a rather particular
-social context (presence of a boss) to maximize the emphasis on
-presentational goals. Our model can be extended to explain a richer set
-of social considerations, such as observers with different goals (e.g.,
-a teacher who wants the learner to select actions that help her learn).
-Third, we limited people to a single action choice. While this allowed a
-clean measurement of our condition manipulations, real-world learning
-often involves sequential decision-making that could cause learners to
-prioritize different goals depending on their prior actions or the
-probability of interacting with an observer in the future.
+both of these goals in our paradigm. Enriching the space of possible
+actions could tease apart actions driven by self-presentation. Second,
+we used a particular social context (the presence of a boss) to
+influence people's action choices. It remains an open question as to how
+our results would generalize to other kinds of observers with different
+goals (e.g., a teacher who wants the learner to select actions that help
+her learn). Second, we used a rather particular social context (the
+presence of a boss) to emphasize presentational goals. Our model can be
+extended to explain a richer set of social considerations, such as other
+kinds of observers (e.g., a teacher who wants the learner to select
+actions that help her learn). Third, we limited people to a single
+action choice. While this allowed a clean measurement of our condition
+manipulations, real-world learning often involves sequential
+decision-making that could cause learners to prioritize different goals
+depending on their prior actions or the probability of interacting with
+an observer in the future.
 
 Another interesting open question is how our model could be used to
 understand active learning over development. Our framework could allow
@@ -572,8 +571,8 @@ social reasoning.
 \section{Acknowledgements}\label{acknowledgements}
 
 This work was supported by an NSERC postgraduate doctoral scholarship to
-EJY, an NSF GRFP to KM, a Jacobs Foundation Fellowship to MCF, and NSF
-\#1456077.
+EJY, NSF GRFPs to KM and MA, a Jacobs Foundation Fellowship to MCF, and
+NSF \#1456077.
 
 \section{References}\label{references}
 

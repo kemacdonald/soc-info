@@ -47,7 +47,7 @@ Compute entropy change.
 
 ```{r}
 d_entropy <- d %>% 
-  group_by(id, condition, social_condition, hypothesis_type, action_response) %>% 
+  group_by(id, condition, social_condition, hypothesis_type, action_response, experiment) %>% 
   summarise(entropy_est = compute_entropy(slider_value_normalized)) %>% 
   spread(hypothesis_type, entropy_est) %>% 
   mutate(entropy_change = posterior - prior,

@@ -32,7 +32,7 @@ d <- read_csv(here(d_path, "goal_actions_master.csv"))
 d_model_e1 <- d %>%
   filter(manip_check_score >= 2, str_detect(experiment, "e1")) %>% 
   distinct(id, condition, action_response, action_r_collap, action_trial_time, 
-           entropy_change) %>% 
+           entropy_change, prior, posterior, slider_value_normalized, hypothesis_type) %>% 
   mutate(condition_fact = factor(condition, 
                                  levels = c("nogoal", "learning", "presentation",
                                             "performance")),

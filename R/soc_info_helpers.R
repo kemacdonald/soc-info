@@ -39,3 +39,39 @@ hdi_lower <- function(s){
   m <- coda::HPDinterval(coda::mcmc(s))
   return(m["var1","lower"])
 }
+
+
+# normalize with small smoothing factor
+eps_normalize <- function(x, eps = .0001 ) {
+  return((x + eps) / (sum(x+eps)))
+}
+
+# calc KL: sum p log (p / q)
+dkl <- function(t, p) {
+  et <- eps_normalize(t)
+  ep <- eps_normalize(p)
+  
+  return(sum(et * log(et / ep)))
+}
+
+ig <- function(pd) {
+  pd <- arrange(pd, hypothesis_type, hypothesis)
+  handle <- c(1, 0, 0)
+  button <- c(0, 1, 0)
+  prior <- filter(pd, hypothesis_type == "prior") %>% pull(slider_value_normalized)
+  posterior <- filter(pd, hypothesis_type == "posterior") %>% pull(slider_value_normalized)
+  
+  ig <- case_when(
+    pd$action_response[1] == "handle" ~ dkl(handle, prior) - dkl(handle, posterior),
+    pd$action_response[1] == "button" ~ dkl(button, prior) - dkl(button, posterior),
+    pd$action_response[1] == "both" ~ if (prior[1] > prior[2]) {
+      dkl(handle, prior) - dkl(handle, posterior)
+    } else {
+      dkl(button, prior) - dkl(button, posterior)
+    }
+  )
+  
+  pd$ig <- ig
+  
+  return(pd)
+}

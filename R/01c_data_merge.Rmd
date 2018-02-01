@@ -59,6 +59,18 @@ d %<>% left_join(., d_entropy)
 Write to disk.
 
 ```{r}
-write_csv(d, path = here("/data/03_merged_data", "goal_actions_master.csv"))
+# write_csv(d, path = here("/data/03_merged_data", "goal_actions_master.csv"))
 ```
 
+Compute entropy change. (second ver)
+
+```{r}
+d_entropy <- d %>% 
+  group_by(id, condition, social_condition, hypothesis_type, action_response) %>% 
+  summarise(entropy_est = compute_entropy(slider_value_normalized)) %>% 
+  spread(hypothesis_type, entropy_est) %>% 
+  mutate(entropy_change = posterior - 2*prior,
+         action_r_collap = ifelse(action_response == "both", "both", "single"))
+
+d %<>% left_join(., d_entropy)
+```

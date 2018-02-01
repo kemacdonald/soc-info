@@ -8,7 +8,8 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 library(binom)
-library(knitr); library(magrittr); library(tidyverse); library(here); library(grid)
+library(knitr); library(magrittr); library(tidyverse); library(here); 
+library(grid); library(jsonlite); library(ggthemes)
 
 source(here("R/soc_info_helpers.R"))
 ```
@@ -23,10 +24,10 @@ d <- read_csv(here(d_path, "goal_actions_master.csv"))
 d %<>% mutate(hypothesis_type = factor(hypothesis_type) %>% fct_rev(),
               hypothesis = factor(hypothesis) %>% fct_rev(),
               condition = fct_recode(condition,
-                         "No goal" = "nogoal",
-                         "Learning" = "learning",
-                         "Performance" = "performance",
-                         "Presentation" = "presentation"))
+                         "No goal \n(Ref)" = "nogoal",
+                         "Learning\n" = "learning",
+                         "Performance\n" = "performance",
+                         "Presentation\n" = "presentation"))
 ```
 
 ## Table of comments
@@ -157,7 +158,9 @@ action_plot_e1 <- d_e1 %>%
   count(action_r_collap, condition) %>% 
   group_by(condition) %>% 
   mutate(prop = n / sum(n)) %>% 
-  ggplot(aes(x = condition, y = prop, fill = action_r_collap, alpha = action_r_collap)) +
+  filter(action_r_collap == "single") %>%
+  # ggplot(aes(x = condition, y = prop, fill = action_r_collap, alpha = action_r_collap)) +
+  ggplot(aes(x = condition, y = prop)) +
   geom_bar(stat = "identity", width = 0.4) +
   geom_linerange(aes(x = condition, ymin = lower, ymax = upper), inherit.aes = F,
                  color = "black", alpha = 0.6, size = 1,
@@ -165,13 +168,17 @@ action_plot_e1 <- d_e1 %>%
   lims(y = c(0,1)) +
   guides(alpha = F) +
   scale_alpha_discrete(range = c(0.6, 1)) +
-  ggthemes::scale_fill_ptol() +
-  labs(x = NULL, y = "Prop. Participants", fill = "action response:") +
+  scale_fill_grey(start = 0.1, end = 0.6)+ 
+  # ggthemes::scale_fill_ptol() +
+  labs(x = NULL, y = "Prop. participants choosing single action", fill = "action response:") +
   theme(panel.border = element_rect(fill=NA, size=0.5, color = "grey"),
         panel.grid.minor = element_blank(),
         panel.grid.major = element_blank(),
         plot.margin=unit(c(0.5,1,0.5,1),"cm"),
-        text = element_text(size = 12)) 
+        text = element_text(size = 12),
+        axis.text.x.top = element_text(vjust = -0.5)) 
+
+action_plot_e1
 ```
 
 Make a table of the raw counts.
@@ -250,17 +257,19 @@ Plot entropy change as a function of condition.
 
 ```{r}
 entropy_plot <- d_e1 %>% 
+  mutate(action_r_collap = fct_relevel(action_r_collap, "single")) %>%
   distinct(id, condition, social_condition, entropy_change, action_r_collap) %>% 
   ggplot(aes(x = condition, y = entropy_change, color = action_r_collap,
              fill = action_r_collap)) +
-  geom_hline(yintercept = 0, linetype = "solid", color = "grey20") +
+  # geom_hline(yintercept = 0, linetype = "solid", color = "grey20") +
+  geom_hline(yintercept = -1.5, linetype = "solid", color = "grey20") +
   geom_violin(position = position_dodge(width = 1), scale = "width", size = 1,
               draw_quantiles = c(0.5), alpha = 0.3) +
   geom_jitter(alpha = 1, shape = 21, size = 1, 
               position = position_jitterdodge(dodge.width = 1, jitter.width = .05)) +
   ggthemes::scale_color_ptol() +
   ggthemes::scale_fill_ptol() +
-  lims(y = c(-1.5, 1.5)) +
+  # lims(y = c(-1.5, 1.5)) +
   guides(fill = F) + 
   labs(x = NULL, y = "entropy change", color = "action response: ") +
   theme(panel.border = element_rect(fill=NA, size=0.5, color = "grey"),
@@ -323,12 +332,14 @@ action_plot_e2 <- d_e2 %>%
                  position = position_dodge(width = 0.6),
                  data = hpd_e2) +
   lims(y = c(0,1)) +
-  labs(x = NULL, y = "Prop. Participants", fill = "context:") +
+  labs(x = NULL, y = "Prop. participants choosing single action", fill = "context:") +
   scale_fill_grey(start = 0.1, end = 0.6)+ 
   theme(panel.border = element_rect(fill=NA, size=0.5, color = "grey"),
         panel.grid.minor = element_blank(),
         panel.grid.major = element_blank(),
         plot.margin=unit(c(0.5,1.2,0.5,1),"cm"))
+
+action_plot_e2
 ```
 
 ```{r bda}
@@ -357,7 +368,28 @@ d_e2_pred <- d_e2_temp %>%
   filter(action == "single") %>%
   select(-n)
 
-data_mod <- rbind(postpred %>% mutate(source = "model"), d_e2_pred %>% mutate(source = "data"))
+postpred <- d %>% 
+  mutate(action = fct_recode(action, 
+                             "single" = "button",
+                             "single" = "handle")) %>%
+  filter(grepl("posterior", parameter),
+         action == "both") %>%
+  filter(!(goal == "presentation" & obsPres == "0")) %>%
+  group_by(goal, context, action) %>%
+  summarise(prob = mean(1-value),
+            ci_lower = hdi_lower(1-value),
+            ci_upper = hdi_upper(1-value)
+            ) 
+
+data_mod <- rbind(postpred %>% mutate(source = "model"), 
+                  d_e2_pred %>% mutate(source = "data")) %>%
+  ungroup() %>%
+  mutate(goal = fct_recode(goal,
+                           "Learning\n" = "learning",
+                           "No goal \n(Ref)" = "no goal",
+                           "Performance\n" = "performance",
+                           "Presentation\n" = "presentation"
+                           ))
 
 data_mod_comp <- ggplot(data_mod, aes(x = goal, y = prob, fill = context)) +
   geom_bar(stat = "identity", width = 0.6, position = position_dodge()) +
@@ -366,7 +398,7 @@ data_mod_comp <- ggplot(data_mod, aes(x = goal, y = prob, fill = context)) +
                  color = "grey50", alpha = 0.6, size = 1,
                  position = position_dodge(width = 0.6)) +
   lims(y = c(0,1)) +
-  labs(x = NULL, y = "Prop. Participants", fill = "context:") +
+  labs(x = NULL, y = "Prop. participants choosing single action", fill = "context:") +
   scale_fill_grey(start = 0.1, end = 0.6)+ 
   theme(panel.border = element_rect(fill=NA, size=0.5, color = "grey"),
         panel.grid.minor = element_blank(),
@@ -464,7 +496,7 @@ position=position_nudge(x=-.3), stat="identity", width=.3) +
                               "no-social\nno-goal", "social\nno-goal",
                               "no-social\nperformance", "social\nperformance",
                               "social\npresentation")) +
-  labs(x = NULL, y = "entropy change", color = "action response: ") +
+  labs(x = NULL, y = "phi value", color = "action response: ") +
   theme(
     axis.text.x = element_text(vjust=1, hjust=0.8, angle=35, size=8),
         # axis.text.x = element_blank(),

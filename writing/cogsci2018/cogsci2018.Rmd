@@ -174,7 +174,7 @@ We recruited `r n_run` participants (45-51 per condition) on Amazon’s Mechanic
 We presented images and instructions for three different toys that looked very similar but worked in different ways (see captions for Fig.\ \ref{fig:model_diagram}).
 The instructions conveyed that pressing the button and pulling the handle was immediately rewarding but uninformative (fails to disambiguate the causal mechanism). In contrast, either of the single actions was completely disambiguating, but was uncertain to produce an immediate outcome. Each toy had a label at the front, indicating the correct action(s)--outcome link.
 
-```{r e1_behav_results_plot, fig.env = "figure", fig.pos = "H", fig.align='center', fig.width=2, fig.height=6, num.cols.cap=1, out.width='95%', fig.cap = "Behavioral results for Exp.\ 1. A: Proportion of action decisions for each goal condition. Error bars are 95\\% binomial CIs computed using a Bayesian beta-binomial model. B: Response times on the action decisions. C: Belief change (information gain in bits) as a function of condition. Higher values represent more information gained from the action selection."}
+```{r e1_behav_results_plot, fig.env = "figure", fig.pos = "H", fig.align='center', fig.width=2, fig.height=6, num.cols.cap=1, out.width='85%', fig.cap = "Behavioral results for Exp.\ 1. A: Proportion of action decisions for each goal condition. Error bars are 95\\% binomial CIs computed using a Bayesian beta-binomial model. B: Response times on the action decisions. C: Belief change (information gain in bits) as a function of condition. Higher values represent more information gained from the action selection."}
 png::readPNG(here::here(image_path, "e1_plot.png")) %>% 
   grid::grid.raster()
 ```
@@ -533,13 +533,13 @@ The inferred goal weights were consistent with what we predicted (Fig.\ \ref{fig
 
 We also inferred another parameter of the cognitive model, the optimality parameter $\lambda$. We put uninformative prior on the parameter ($\lambda \sim Unif(0,10)$) and inferred its posterior credible value from the data. We ran 4 MCMC chains for 100,000 iterations, discarding the first 50,000 for burnin. The Maximum A- Posteriori (MAP) estimate and 95% Highest Probability Density Interval (HDI) for $\lambda$ was `r optimality$mean` [`r optimality$ci_lower`, `r optimality$ci_upper`]. 
 
-The fitted model predictions of action choices are shown in Fig.\ \ref{fig:e2_results}A (bottom). The model's expected posteriors over action choices capture key differences between conditions: the single action was more likely for no-social than social conditions overall, but not when the performance goal was highlighted. The model was able to predict the distribution of action responses with high accuracy $r^2(21)$ = `r cor2`.
-
 ```{r e2_results, fig.env = "figure", num.cols.cap=1, fig.pos = "H", fig.width=1.5, fig.height=5.5, out.width= "90%", fig.align='center', fig.cap = "Behavioral and model fitting results for Exp.\ 2. A: Action decisions with color representing social context, from human data (top) and fitted model predictions (bottom). B: Decision times. C: Belief change. D: Inferred phi values for each goal-context condition. All other plotting conventions are the same as Fig.\ 3."}
 
 png::readPNG(here::here(image_path, "e2_plot.png")) %>%
   grid::grid.raster()
 ```
+
+The fitted model predictions of action choices are shown in Fig.\ \ref{fig:e2_results}A (bottom). The model's expected posteriors over action choices capture key differences between conditions: the single action was more likely for no-social than social conditions overall, but not when the performance goal was highlighted. The model was able to predict the distribution of action responses with high accuracy $r^2(21)$ = `r cor2`.
 
 # General Discussion
 

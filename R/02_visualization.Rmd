@@ -167,13 +167,13 @@ action_plot_e1 <- d_e1 %>%
   geom_linerange(aes(x = condition, ymin = lower, ymax = upper), inherit.aes = F,
                  color = "black", alpha = 0.6, size = 1,
                  data = hpd_final) +
-  annotate("text", x = 3.5, y = 0.8, label = "Single action choices") +
+  # annotate("text", x = 3.5, y = 0.8, label = "Single action choices") +
   lims(y = c(0,1)) +
   guides(alpha = F) +
   scale_alpha_discrete(range = c(0.6, 1)) +
   scale_fill_grey(start = 0.1, end = 0.6)+ 
   # ggthemes::scale_fill_ptol() +
-  labs(x = NULL, y = "Prop. participants", fill = "action response:") +
+  labs(x = NULL, y = "Prop. participants \nchoosing single action", fill = "action response:") +
   theme(panel.border = element_rect(fill=NA, size=0.5, color = "grey"),
         panel.grid.minor = element_blank(),
         panel.grid.major = element_blank(),
@@ -270,13 +270,13 @@ ig_plot <- d_e1 %>%
 ```{r e1 plot grid}
 e1_plot <- cowplot::plot_grid(action_plot_e1, rt_plot, ig_plot, labels = c("A", "B", "C"),
                                 ncol = 1,
-                                rel_heights = c(1, 1, 1))
+                                rel_heights = c(1, 1, 1.2))
 ```
 
 ### Save figure.
 
 ```{r save e1 plot}
-ggsave("e1_plot.png", plot = e1_plot, width = 5, height = 10,
+ggsave("e1_plot.png", plot = e1_plot, width = 5, height = 8,
         path = here::here("writing/cogsci2018/figs"))
 ```
 
@@ -314,9 +314,9 @@ action_plot_e2 <- d_e2 %>%
                  color = "grey50", alpha = 0.6, size = 1,
                  position = position_dodge(width = 0.6),
                  data = hpd_e2) +
-  annotate("text", x = 3.5, y = 0.8, label = "Single action choices") +
+  # annotate("text", x = 3.5, y = 0.8, label = "Single action choices") +
   lims(y = c(0,1)) +
-  labs(x = NULL, y = "Prop. participants", fill = "context:") +
+  labs(x = NULL, y = "Prop. participants \nchoosing single action", fill = "context:") +
   scale_fill_grey(start = 0.1, end = 0.6)+ 
   theme(panel.border = element_rect(fill=NA, size=0.5, color = "grey"),
         panel.grid.minor = element_blank(),
@@ -384,8 +384,8 @@ data_mod_comp <- ggplot(data_mod, aes(x = goal, y = prob, fill = context)) +
                  color = "grey50", alpha = 0.6, size = 1,
                  position = position_dodge(width = 0.6)) +
   lims(y = c(0,1)) +
-  annotate("text", x = 3.5, y = 0.8, label = "Single action choices") +
-  labs(x = NULL, y = "Prop. participants", fill = "context:") +
+  # annotate("text", x = 3.5, y = 0.8, label = "Single action choices") +
+  labs(x = NULL, y = "Prop. participants \nchoosing single action", fill = "context:") +
   scale_fill_grey(start = 0.1, end = 0.6)+ 
   theme(panel.border = element_rect(fill=NA, size=0.5, color = "grey"),
         panel.grid.minor = element_blank(),
@@ -536,7 +536,7 @@ e2_plot <- cowplot::plot_grid(data_mod_comp, e2_rt_plot, e2_ig_plot, phi,
                                    labels = c("A", "B", "C", "D"), 
                                    label_x = 0.03,
                                    ncol = 1,
-                                   rel_heights = c(1.3, 0.7,0.8, 1))
+                                   rel_heights = c(1.3, 0.7,1, 1))
 ```
 
 ### Save figure

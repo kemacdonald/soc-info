@@ -368,7 +368,7 @@ load(here("model/BDA/e2/results/soc-info-ver1-mcmc100000_burn50000_4chains.RData
 ```
 
 ```{r make action plot e2 w bda}
-d_e2_temp <- fromJSON(here("model/BDA/e2/e2-actionData.json"))
+d_e2_temp <- jsonlite::fromJSON(here::here("model/BDA/e2/e2-actionData.json"))
 
 d_e2_pred <- d_e2_temp %>% 
   mutate(action = fct_recode(action, 
@@ -409,7 +409,7 @@ data_mod_comp <- ggplot(data_mod, aes(x = goal, y = prob, fill = context)) +
 
 RT plot
 
-```{r}
+```{r rt plot e2}
 e2_rt_plot <- d_e2 %>% 
   distinct(id, action_trial_time, condition, social_condition) %>% 
   filter(action_trial_time < mean(action_trial_time) + 2 * sd(action_trial_time),

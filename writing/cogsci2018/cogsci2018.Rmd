@@ -8,7 +8,7 @@ author-information: >
     \author{{\large \bf Erica J. Yoon*}, {\large \bf Kyle MacDonald*}, {\large \bf Mika Asaba}, {\large \bf Hyowon Gweon}, \and {\large \bf Michael C. Frank} \\ \{ejyoon, kylem4, masaba, hyo, mcfrank\} @stanford.edu \\ Department of Psychology, Stanford University \\ *These authors contributed equally to this work.}
 
 abstract: 
-    "Our actions shape what we learn. Recent work suggests that people engage in efficient self-directed learning to maximize information gain. However, human learning often unfolds in social contexts where learners not only face informational goals (e.g., learn how something works) but also social goals (e.g., appear competent and impress others). How do these factors shape learners' decisions? Here, we present a computational model that integrates the value of social and information goals to predict the decisions that people will make in a simple active causal learning task. We show that an emphasis on performance or self-presentation goals leads to reduced chances of learning (E1) and that social context can push learners to pursue performance-oriented actions even when the learning goal is highlighted (E2). Our formal model of social-active learning successfully captures the empirical results. These findings are the first steps towards understanding the role of social reasoning in active learning contexts."
+    "Our actions shape what we learn. Because of this dependency, learners are proficient at choosing their actions to maximize their information gain. But learning often unfolds in social contexts where learners have both informational goals (e.g., to learn how something works) but also social goals (e.g., to appear competent and impress others). How do these different factors shape learners' decisions? Here, we present a computational model that integrates the value of social and informational goals to predict the decisions that people will make in a simple active causal learning task. We show that an emphasis on performance or self-presentation goals leads to reduced chances of learning (Exp.1) and that social context can push learners to pursue performance-oriented actions even when the learning goal is highlighted (Exp.2). Our formal model of social-active learning successfully captures the empirical results. These findings are first steps towards understanding the role of social reasoning in active learning contexts."
     
 keywords:
     "active learning; social reasoning; information gain; OED; self-presentation; goal tradeoffs"
@@ -45,36 +45,36 @@ Should you choose an easy favorite or should you attempt to make something new?
 While the familiar recipe can ensure a good meal, 
 you may miss out on a new, delicious dish. 
 The new recipe might taste even better, but it has a higher chance of failure. 
-In such *explore-exploit* dilemma [@sutton1998], you can choose between 
+In this type of *explore-exploit* dilemma [@sutton1998], you can choose between 
 *exploring* the new recipe that may or may not result in a more delicious dish (*learning* goal),
 or *exploiting* your previous experience and knowledge to ensure a good meal (*performance* goal).
 Here, we explore the idea of formalizing the learning-performance goal tradeoff using a simple active learning context, 
 where social factors may shape the goals we consider.
 
-Active learning occurs when people have control over the sequence of information in a learning context (e.g., try pressing buttons on a toy, one by one, to see their effect). The key assumption is learners will maximize the usefulness of their actions by gathering information that is especially helpful for their own learning. 
-Active contexts lead to faster learning than passive contexts where people don't have control over the information flow, as suggested by empirical work in education [@grabinger1995rich], machine learning [@settles2012active], and cognitive psychology [@castro2009human]. 
+Active learning occurs when people have control over the sequence of information in a learning context (e.g., try pressing buttons on a toy, one by one, to see their effect). The key assumption is that learners will maximize the utility of their actions by gathering information that is especially helpful for their own learning. 
+Empirical work in education [@grabinger1995rich], machine learning [@settles2012active], and cognitive psychology [@castro2009human] suggests that active contexts lead to faster learning than passive contexts where people don't have control over the information flow. 
 
 But real-world learning usually takes place in rich social contexts 
 with teachers, peers, or other people who can directly influence our learning. 
-Indeed, children and adults seem to modulate their inferences 
-depending on whether evidence is generated on their own or by others [e.g., @xu2007]; 
-whether they observe intentional versus accidental actions [@carpenter1998fourteen]; and whether they believe another person selected their actions with the goal of helping them learn [i.e., teaching; @shafto2012learning]. 
+Indeed, adults and even preschool-aged children modulate their inferences 
+depending on how others (e.g., teachers) select their actions [@shafto2012learning], 
+and understand that socially communicated information licenses different inferences than information generated on their own [e.g., @xu2007]. 
 But even when we learn from *our* own actions instead of others', our social environment may affect our self-directed learning process.
 While previous models have captured how we optimize learning, either from our own actions or from others, they have been agnostic to other social factors that are ubiquitous in a learner's environment. 
-People must integrate the value of social goals (e.g., looking competent or knowledgeable) and information goals when deciding what to do next. 
+People must integrate the value of social goals (e.g., looking competent or knowledgeable) and informational goals when deciding what to do next. 
 
 How can active learning models accommodate this richer set of utilities? 
 As a step towards answering this question, we model a learner who considers a mixture of learning and performance goals. 
 A key assumption underlying recent Bayesian models of human social cognition is that 
 people expect others to act approximately optimally given a utility function [e.g., @goodman2016; @jara2016]. 
-Our model adopts the same utility-theoretic approach, and assumes an agent who reasons about the utility function that represents a weighted combination of multiple goals [@yoon2017] in a social active learning context. 
+Our model adopts this utility-theoretic approach, and assumes an agent who reasons about the utility function that represents a weighted combination of multiple goals [@yoon2017] in a social active learning context.^[Such models are commonly used to approximate group-level behavior, without the strong assumption that individuals must be strictly optimal [e.g., @frank2013throwing].]
 
 ```{r toy, fig.env = "figure", fig.pos = "b", fig.align='center', fig.width=2, fig.height=1.5, num.cols.cap=1, out.width='65%', fig.cap = "An example of the toy used in our paradigm."}
-img <- png::readPNG("figs/toywlabel.png")
+img <- png::readPNG("figs/toywolabel.png")
 grid::grid.raster(img)
 ```
 
-```{r model_diagram, include = T, fig.env = "figure*", fig.pos = "tb", fig.width=5, fig.asp = 0.7, out.width= "95%", fig.align='center', fig.cap = "Diagram of the computational model. The learner considers possible hypotheses: Toy 1 (handle pull turns on the light, button press turns on music, both actions cause both effects); Toy 2 (handle pull turns on music, button press turns on the light, both actions cause both effects); and Toy 3 (both actions cause both effects, but each action on its own does not produce any effect). The learner also considers his goals. When an observer is absent, he considers his learning goal and performance goal and chooses an action. The learning goal favors a single action (e.g., pull the handle only) that can fully disambiguate, whereas the performance goal favors the both action (pull the handle AND push the button) that guarantees the most salient reward. When an observer is present, the learner considers the learning, performance (not shown), and presentational goal."}
+```{r model_diagram, include = T, fig.env = "figure*", fig.pos = "tb", fig.width=5, fig.asp = 0.7, out.width= "95%", fig.align='center', fig.cap = "Model schematic for the learner's inference. The learner considers possible hypotheses: Toy 1 (handle pull turns on the light, button press turns on music, both actions cause both effects); Toy 2 (handle pull turns on music, button press turns on the light, both actions cause both effects); and Toy 3 (both actions cause both effects, but each action on its own does not produce any effect). The learner also considers his goals. When an observer is absent, he considers his learning goal and performance goal and chooses an action. The learning goal favors a single action (e.g., pull the handle only) that can fully disambiguate, whereas the performance goal favors the both action (pull the handle AND push the button) that guarantees the most salient reward. When an observer is present, the learner considers the learning, performance (not shown), and presentational goal."}
 img1 <- rasterGrob(as.raster(readPNG(here(image_path, "model-obsAbs.png"))), 
                     interpolate = FALSE)
 
@@ -86,53 +86,58 @@ grid.arrange(img1, img2, ncol = 2)
 
 We instantiate our model in a simple causal learning task and 
 examine how people choose actions that support learning vs. performance goals in different social contexts. 
-We present a toy with an uncertain causal mechanism (Fig \ref{fig:toy}). 
+We present a toy with an ambiguous causal mechanism (Fig. \ref{fig:toy}). 
 For this toy, doing only one of the two possible actions (handle pull or button press) disambiguates its causal mechanism but potentially risks no immediate effect (i.e., neither sound nor light turning on),
 while doing both actions at the same time is immediately rewarding but is not informative for learning the toy's causal mechanism. 
 Thus, the learner can choose between the two actions
-that will each lead to one outcome (new discovery; learning) or the other (immediate reward; performance).
-The learner's action rests on relative utilities he assigns to exploration versus exploitation, 
+that will each lead to one outcome (new discovery; exploration; learning) or the other (immediate reward; exploitation; performance).
+The learner's action rests on relative utilities he assigns to learning versus performance, 
 which in turn are determined in part by the social context (e.g., the presence or absence of his boss).\footnote{From here on, we use a male pronoun for Bob, the learner, and female pronoun for Ann, the boss and observer.} 
 
-In two experiments, we show that emphasizing performance or self-presentation (social) goals leads to actions that are not informative and thus reduce the chances of learning (E1). Next, we show that the presence of an observer (i.e., a boss) pushes learners to pursue performance/presentation-oriented actions even when the learning goal is highlighted (E2). Finally, we show that the empirical results are consistent with predictions of our cognitive model of social-active learning.
+In two experiments, we show that emphasizing performance or self-presentation (social) goals leads to actions that are not informative and thus reduces the chances of learning (Exp.1). Next, we show that the mere presence of an observer (i.e., a boss) pushes learners to consider performance/presentation-oriented actions even when the learning goal is highlighted (Exp.2). Finally, we show that the empirical results are consistent with predictions of our cognitive model of social-active learning.
 
 # Computational model
 
-We model a learner $L$ who chooses his action $a$ approximately optimally (as per optimality $\lambda$) based on the expected total utility $U_{t}$ given his action and observer presence.
-$$ P_L(a | o) \propto \exp(\lambda \cdot \mathbb{E}[U_{total}(a,o)])$$ 
-$$U_{t}(a,o) = \phi_{learn} \cdot U_{learn}(a) + \phi_{perf} \cdot U_{perf}(a) + \delta^o \cdot \phi_{pres} \cdot U_{pres}(a)$$
+We model a learner $L$ who chooses his action $a$ approximately optimally (as per optimality parameter $\lambda$) based on the expected total utility $U_{t}$ given his action $a$ and presence of an observer $o$.
+
+$$ P_L(a | o) \propto \exp(\lambda \cdot \mathbb{E}[U_{t}(a,o)])$$, 
+\noindent
+where the total utility is defined as:
+$$U_{t}(a,o) = \phi_{learn} \cdot U_{learn}(a) + \phi_{perf} \cdot U_{perf}(a) + \delta^o \cdot \phi_{pres} \cdot U_{pres}(a)$$,
 \noindent
 where $\phi$s are weights that are inferred for each utility from data and
-$\delta^o$ a dirac function that is 1 if there is an observer, and 0 if there is no observer.
-Below we describe each utility structure (see Fig \ref{fig:model_diagram} for a visual schematic of the model).
+$\delta^o$ is a Dirac delta function that is 1 if there is an observer, and 0 if there is no observer.
+Below we describe each utility structure (see Fig. \ref{fig:model_diagram} for a visual schematic of the model).
 
 ### Learning utility
 
-The *learning utility* symbolizes the goal to learn new information, which in our paradigm is associated with figuring out how a given toy works. The learning utility is formally represented by an OED model ["Optimal Experiment Design"; @nelson2005; @lindley1956], which quantifies the expected utility of different information seeking actions. 
-The learner considers the hypothesis space $H$, and wants to determine the correct hypothesis. He thinks about the utility of the outcome $m$ to each possible action, which is equal to the *information gain*: the change in the learner's overall uncertainty (difference in entropy) before and after seeing the outcome. 
+The *learning utility* captures the goal to learn new information, which in our paradigm is associated with figuring out how a given toy works. The learning utility is formally represented by an OED model ["Optimal Experiment Design"; @nelson2005; @lindley1956], which quantifies the expected utility of different information seeking actions. 
+The learner considers the hypothesis space $H(t)$, and wants to determine the correct hypothesis for the toy's causal mechanism. 
+He thinks about the utility of the outcome $m$ (e.g., music playing) to each possible action (e.g., button press), which is equal to the *information gain*: 
+the change in the learner's overall uncertainty (difference in entropy) before and after seeing the outcome. 
 This information gain is equal to the learning utility ($U_{learn}$), which is the expected utility of each action:
-$$ U_{learn}(a) = \sum_{\{m, \neg m\}}{P(m|a)}[{ent(H) - ent(H|m,a)}]$$
+$$ U_{learn}(a) \propto \sum_{\{m, \neg m\}}{P(m|a)}[{ent(H(t)) - ent(H(t)|m,a)}]$$.
 \noindent
 where $ent(H)$ is the Shannon entropy of $H$, which provides a measure of the overall amount of uncertainty in the learner's beliefs about the candidate hypothesis [@mackay2003].
 Once the learner chooses an action $a$, which yields an effect $m$ (or no effect $\neg m$), 
 then he updates his beliefs about each hypothesis via standard Bayesian updating. 
-Finally, we scale the utility by $log_2n$, where $n$ is the number of possible actions, to convert the entropy to a value between 0 and 1.
+Finally, we scale the utility by $log_2n$, where $n$ is the number of possible actions, to convert the utility to a value between 0 and 1.
 
 ### Performance utility
 
 The *performance utility* is the utility of achieving an immediate rewarding outcome. 
 Within our paradigm, the learner gains utility from an immediate effect of music or light turning on. 
-The expected performance utility ($U_{perf}$) before the learner chooses an action is the likelihood of an effect $m$ given the action $a$.
-$$ U_{perf} = P_L(m | a) $$
+The expected performance utility ($U_{perf}$) before the learner chooses an action is the likelihood of an effect $m$ given the action $a$:
+$$ U_{perf} = P_L(m | a) $$.
 \noindent
 
 ### Presentation utility
 
 When there is another person present to observe the learner's action, the observer $O$ is expected to reason about the learner $L$'s competence, equal to whether the learner was able to make the toy produce an effect.
-The learner thinks about the observer's inferential process, and the expected *presentational* utility ($U_{pres}$) is based on maximizing the apparent competence inferred by the observer.
-$$ U_{pres} = P_O(m | a)$$
+The learner thinks about the observer's inferential process, and the expected *presentational* utility ($U_{pres}$) is based on maximizing the apparent competence inferred by the observer:
+$$ U_{pres} = P_O(m | a)$$.
 \noindent
-where $P_O(m | a)$ is the observer's own estimate of the likelihood of an effect given the learner's action.
+where $P_O(m | a)$ is the observer's own estimate of the likelihood of an effect given the learner's action.^[We assume that the observer is naive about the toy's causal structure; otherwise, if the observer is knowledgeable, $U_{perf}$ and $U_{pres}$ will diverge, which is an important consideration for future work.] 
 
 # Experiment 1
 
@@ -140,9 +145,9 @@ where $P_O(m | a)$ is the observer's own estimate of the likelihood of an effect
 d_e1 <- d %>% filter(str_detect(experiment, "e1"))
 ```
 
-In Experiment 1 (E1), we first wanted to confirm that participants would choose different actions depending on what goal was highlighted. We were also interested in how people would act when no explicit goal was specified within the task. Participants were asked to act on a toy with an uncertain causal mechanism, and were assigned to different goal conditions: (1) learning (learn how the toy works), (2) performance (make the toy play music), (3) presentation (impress their boss), and (4) no goal specified. We hypothesized that participants would choose an informative action more often in the following order of goal conditions (decreasing): learning, no goal, performance, and presentation.\footnote{Our hypothesis, method, model and data analysis were pre-registered prior to data collection at \url{https://osf.io/kcjau}.}
+In Experiment 1 (Exp.1), we first wanted to confirm that participants would choose different actions depending on what goal was highlighted. We were also interested in how people would act when no explicit goal was specified within the task. Participants were asked to act on a toy with an uncertain causal mechanism, and were assigned to different goal conditions: (1) learning (learn how the toy works), (2) performance (make the toy play music), (3) presentation (impress their boss), and (4) no goal specified. We hypothesized that participants would choose an informative action more often in the following order of goal conditions (decreasing): learning, no goal, performance, and presentation.\footnote{Our hypothesis, method, model and data analysis were pre-registered prior to data collection at \url{https://osf.io/kcjau}.}
 
-```{r e1_behav_results_plot, include = T, fig.env = "figure*", fig.pos = "tb", fig.width=5, fig.asp = 0.7, out.width= "95%", fig.align='center', fig.cap = "Behavioral results for E1. A: Proportion of action decisions for each goal condition. Error bars represent 95\\% binomial CIs computed using a Bayesian beta-binomial model. B: Participants' response times on the action decisions. Each point represents a participant with the width of the violin representing the density of the data at that value. C: Participants' belief change (entropy in bits) as a function of condition. Lower values represent higher certainty after selecting an action."}
+```{r e1_behav_results_plot, include = T, fig.env = "figure*", fig.pos = "tb", fig.width=5, fig.asp = 0.7, out.width= "95%", fig.align='center', fig.cap = "Behavioral results for Exp.1. A: Proportion of action decisions for each goal condition. Error bars represent 95\\% binomial CIs computed using a Bayesian beta-binomial model. B: Participants' response times on the action decisions. Each point represents a participant with the width of the violin representing the density of the data at that value. C: Participants' belief change (entropy in bits) as a function of condition. Lower values represent higher certainty after selecting an action."}
 png::readPNG(here::here(image_path, "e1_plot.png")) %>% 
   grid::grid.raster()
 ```
@@ -171,7 +176,7 @@ We recruited `r n_run` participants (45-51 per condition) on Amazon’s Mechanic
 
 ### Stimuli and Design
 
-We presented images and instructions for three different toys that looked very similar but worked in different ways (see captions for Fig \ref{fig:model_diagram}).
+We presented images and instructions for three different toys that looked very similar but worked in different ways (see captions for Fig. \ref{fig:model_diagram}).
 The instructions conveyed that pressing the button and pulling the handle was immediately rewarding but uninformative (fails to disambiguate the causal mechanism). In contrast, either of the single actions was completely disambiguating, but was uncertain to produce an immediate outcome. Each toy had a label at the front, indicating the correct action(s)--outcome link.
 
 We asked participants to act on one of these toys; importantly, the given toy was missing its label, leading to uncertainty about its causal structure. We randomly assigned participants into four goal conditions. In the *No-Goal* condition we did not specify any goal for participants. In the *Learning*, *Performance*, and *Presentation* conditions, we asked participants to imagine they were toy developers and one day their boss approached them. We instructed participants to: figure out the correct label for the toy (*Learning*); make the toy play music (or turn the light on; *Performance*); or impress their boss and show that they are competent (*Presentation*). We asked participants to select an action out of the following set: "press the button", "pull the handle", or "press the button and pull the handle." The order of actions was randomized.
@@ -214,7 +219,7 @@ ms_act_e1 <- d_models$action_logit_samples_e1 %>%
   mutate_if(.predicate = is.numeric, .funs = round, digits = 2) 
 ```
 
-We modeled action decisions using a logistic regression \texttt{$action \sim goal\_condition$} with the No-goal condition as the reference category.\footnote{In all of the analyses for E1 and E2, we used the {\fontfamily{qcr}\selectfont rstanarm} package to fit Bayesian regression models estimating the differences across conditions. We report the uncertainty in our point estimates using 95\% Highest Density Intervals (HDI). The HDI provides a range of credible values given the data and model.} Participants' tendency to select a "single" action varied across conditions as predicted (Fig \ref{fig:e1_behav_results_plot}A), with the highest proportion in the Learning condition, followed by No-goal, Performance, and Presentation. 
+We modeled action decisions using a logistic regression \texttt{$action \sim goal\_condition$} with the No-goal condition as the reference category.\footnote{In all of the analyses for Exp.1 and Exp.2, we used the {\fontfamily{qcr}\selectfont rstanarm} package to fit Bayesian regression models estimating the differences across conditions. We report the uncertainty in our point estimates using 95\% Highest Density Intervals (HDI). The HDI provides a range of credible values given the data and model.} Participants' tendency to select a "single" action varied across conditions as predicted (Fig. \ref{fig:e1_behav_results_plot}A), with the highest proportion in the Learning condition, followed by No-goal, Performance, and Presentation. 
 
 Compared to the No-goal condition, participants selected the single action at a greater rate in the Learning condition ($\beta$ = `r e1_contrasts_act$prop[1]`, [`r e1_contrasts_act$hdi_lower[1]`, `r e1_contrasts_act$hdi_upper[1]`]) and at lower rate in the Presentation context ($\beta$ = `r e1_contrasts_act$prop[4]`, [`r e1_contrasts_act$hdi_lower[4]`, `r e1_contrasts_act$hdi_upper[4]`]), with the null value of zero difference condition falling well outside the 95% HDI, and at similar rate in the Performance condition ($\beta$ = `r e1_contrasts_act$prop[3]`, [`r e1_contrasts_act$hdi_lower[3]`, `r e1_contrasts_act$hdi_upper[3]`]) with the 95% HDI including the null.
 
@@ -244,7 +249,7 @@ ms_rt_e1 <- d_models$rt_samples_e1 %>%
   mutate_if(.predicate = is.numeric, .funs = round, digits = 1) 
 ```
 
-We analyzed decision times, which were the latency to make an action selection as measured from the start of the action decision trial (all RTs were analyzed in log space), using the same model specification as action decisions. Fig \ref{fig:e1_behav_results_plot}A shows the full RT data distribution. Compared to the No-Goal condition ($M$= `r e1_contrasts_rt$rt[2]` seconds), participants took on on average `r e1_contrasts_rt$rt[1]` (`r e1_contrasts_rt$hdi_lower[1]`, `r e1_contrasts_rt$hdi_upper[1]`) seconds longer to generate a decision in the Learning condition. In contrast, participants in the Performance and Presentation conditions produced similar decision times. 
+We analyzed decision times, which were the latency to make an action selection as measured from the start of the action decision trial (all RTs were analyzed in log space), using the same model specification as action decisions. Fig. \ref{fig:e1_behav_results_plot}A shows the full RT data distribution. Compared to the No-Goal condition ($M$= `r e1_contrasts_rt$rt[2]` seconds), participants took on on average `r e1_contrasts_rt$rt[1]` (`r e1_contrasts_rt$hdi_lower[1]`, `r e1_contrasts_rt$hdi_upper[1]`) seconds longer to generate a decision in the Learning condition. In contrast, participants in the Performance and Presentation conditions produced similar decision times. 
 
 ### Belief change:
 
@@ -279,9 +284,9 @@ e1_ent_means <- d_models$ent_samples_e1 %>%
 ```
 
 We quantified participants’ beliefs about the toy using entropy, and belief change was measured as the difference in entropy before and after selecting an action.
-We modeled change in entropy as a function of goal condition and participants' action choices: \texttt{$entropy\_change \sim goal\_condition + action\_response$} (Fig \ref{fig:e1_behav_results_plot}C). Across all conditions, people who selected the single action showed a greater reduction in entropy ($\beta$ = `r e1_contrasts_ent$ent_change[5]`, [`r e1_contrasts_ent$hdi_lower[5]`, `r e1_contrasts_ent$hdi_upper[5]`], i.e., learned more from their action. We did not see evidence of an interaction between goal and action selection. However, a larger proportion of participants selected a single action in the Learning context, so learning was more likely in this scenario.
+We modeled change in entropy as a function of goal condition and participants' action choices: \texttt{$entropy\_change \sim goal\_condition + action\_response$} (Fig. \ref{fig:e1_behav_results_plot}C). Across all conditions, people who selected the single action showed a greater reduction in entropy ($\beta$ = `r e1_contrasts_ent$ent_change[5]`, [`r e1_contrasts_ent$hdi_lower[5]`, `r e1_contrasts_ent$hdi_upper[5]`], i.e., learned more from their action. We did not see evidence of an interaction between goal and action selection. However, a larger proportion of participants selected a single action in the Learning context, so learning was more likely in this scenario.
 
-```{r e2_results, include = T, fig.env = "figure*", fig.pos = "tb", fig.width=5, fig.asp = 0.4, out.width= "95%", fig.align='center', fig.cap = "Behavioral and model fitting results for E2. A: Action decisions with color representing social context, from human data (top) and fitted model predictions (bottom). B: Decision times. C: Belief change. D: Inferred phi values for each goal-context condition. All other plotting conventions are the same as Fig 3."}
+```{r e2_results, include = T, fig.env = "figure*", fig.pos = "tb", fig.width=5, fig.asp = 0.4, out.width= "95%", fig.align='center', fig.cap = "Behavioral and model fitting results for Exp.2. A: Action decisions with color representing social context, from human data (top) and fitted model predictions (bottom). B: Decision times. C: Belief change. D: Inferred phi values for each goal-context condition. All other plotting conventions are the same as Fig. 3."}
 png::readPNG(here::here(image_path, "e2_plot_wBDA.png")) %>%
   grid::grid.raster()
 ```
@@ -292,7 +297,7 @@ png::readPNG(here::here(image_path, "e2_plot_wBDA.png")) %>%
 d_e2 <- d %>% filter(str_detect(experiment, "e2"))
 ```
 
-In E1, we confirmed that participants selected different actions depending on the type of goal emphasized. In E2, our goals were three-fold: (1) to replicate the results from E1; (2) to manipulate goals *and* the presence/absence of another person (social/no-social) independently, allowing us to measure the interaction between goals and social context; and (3) to compare empirical data with predictions of our computational model. Our key behavioral prediction was an interaction: that participants would be less likely to select a single (more informative) action in the Learning goal and No-goal conditions when their boss was present. We also predicted a null result: that the presence of the boss should not affect action decisions in the Performance condition.
+In Exp.1, we confirmed that participants selected different actions depending on the type of goal emphasized. In Exp.2, our goals were three-fold: (1) to replicate the results from Exp.1; (2) to manipulate goals *and* the presence/absence of another person (social/no-social) independently, allowing us to measure the interaction between goals and social context; and (3) to compare empirical data with predictions of our computational model. Our key behavioral prediction was an interaction: that participants would be less likely to select a single (more informative) action in the Learning goal and No-goal conditions when their boss was present. We also predicted a null result: that the presence of the boss should not affect action decisions in the Performance condition.
 
 ## Method
 
@@ -314,15 +319,15 @@ n_excluded_e2 <- n_run_e2 - sum(e2_excluded$n)
 n_analyzed_e2 <- sum(e2_excluded$n)
 ```
 
-Using the same recruitment and exclusion criteria as E1, we recruited `r n_run_e2` participants (42-51 per condition), and `r n_analyzed_e2` participants were included in our final analysis.
+Using the same recruitment and exclusion criteria as Exp.1, we recruited `r n_run_e2` participants (42-51 per condition), and `r n_analyzed_e2` participants were included in our final analysis.
 
 ### Stimuli and Design
 
-The stimuli and design were identical to E1, except we had 7 different goal $\times$ social conditions. Goals were identical to E1; social context varied depending on whether the boss was present (*social*) or absent (*no-social*) in the story. The conditions were: *Social-learning*, *Social-performance*, *Social-presentation*, *No-social-no-goal*, *No-social-learning*, *No-social-performance*, and *Social-no-goal*. Note that we did not have *No-social-presentation* condition, because the presentation goal was defined by presenting oneself as competent to another person.  
+The stimuli and design were identical to Exp.1, except we had 7 different goal $\times$ social conditions. Goals were identical to Exp.1; social context varied depending on whether the boss was present (*social*) or absent (*no-social*) in the story. The conditions were: *Social-learning*, *Social-performance*, *Social-presentation*, *No-social-no-goal*, *No-social-learning*, *No-social-performance*, and *Social-no-goal*. Note that we did not have *No-social-presentation* condition, because the presentation goal was defined by presenting oneself as competent to another person.  
 
 ### Procedure
 
-The procedure was identical to E1.
+The procedure was identical to Exp.1.
 
 ## Results and discussion
 
@@ -366,7 +371,7 @@ ms_act_e2 <- d_models$action_logit_samples_e2 %>%
   mutate_if(.predicate = is.numeric, .funs = round, digits = 2) 
 ```
 
-We modeled action decisions using a logistic regression specified as \texttt{$action \sim goal\_condition * social\_context$} with the no-goal-no-social condition as the reference category. We replicated the key finding from E1: participants selected a "single" action more often when they were in a context that emphasized a learning goal, followed by the no-goal, performance, and presentation conditions (Fig \ref{fig:e2_results}A). There was a main effect of social context, with participants being less likely to select the single action when their boss was present ($\beta =$ `r e2_contrasts_act_soc$prop[5]`, [`r e2_contrasts_act_soc$hdi_lower[5]`, `r e2_contrasts_act_soc$hdi_upper[5]`]). Finally, there was evidence for a reliable interaction between goal condition and social context such that the effect of social context was present in the Learning and No-Goal conditions, but not in the Performance condition ($\beta$ $_{int}$ = `r e2_contrasts_act$prop[4]`, [`r e2_contrasts_act$hdi_lower[4]`, `r e2_contrasts_act$hdi_upper[4]`]).
+We modeled action decisions using a logistic regression specified as \texttt{$action \sim goal\_condition * social\_context$} with the no-goal-no-social condition as the reference category. We replicated the key finding from Exp.1: participants selected a "single" action more often when they were in a context that emphasized a learning goal, followed by the no-goal, performance, and presentation conditions (Fig. \ref{fig:e2_results}A). There was a main effect of social context, with participants being less likely to select the single action when their boss was present ($\beta =$ `r e2_contrasts_act_soc$prop[5]`, [`r e2_contrasts_act_soc$hdi_lower[5]`, `r e2_contrasts_act_soc$hdi_upper[5]`]). Finally, there was evidence for a reliable interaction between goal condition and social context such that the effect of social context was present in the Learning and No-Goal conditions, but not in the Performance condition ($\beta$ $_{int}$ = `r e2_contrasts_act$prop[4]`, [`r e2_contrasts_act$hdi_lower[4]`, `r e2_contrasts_act$hdi_upper[4]`]).
 
 ### Action decision times:
 
@@ -394,7 +399,7 @@ ms_rt_e2 <- d_models$rt_samples_e2 %>%
   mutate_if(.predicate = is.numeric, .funs = round, digits = 3) 
 ```
 
-We replicated the key decision time finding from E1, with participants making slower decisions in the Learning context as compared to Performance/Presentation. On average, participants took `r ms_rt_e2$m[2]` seconds to generate a response in the No-goal condidition and `r ms_rt_e2$m[1]` seconds in the Learning condition. In contrast, decisions were faster in the Performance ($\beta$ = `r e2_contrasts_rt$rt[3]` sec, [`r e2_contrasts_rt$hdi_lower[3]`, `r e2_contrasts_rt$hdi_upper[3]`]) and Presentation (`r e2_contrasts_rt$rt[4]` seconds, [`r e2_contrasts_rt$hdi_lower[4]`, `r e2_contrasts_rt$hdi_upper[4]`]) conditions, which were similar to one another (Fig \ref{fig:e2_results}B). There was no evidence of a main effect of social context or an interaction between goal condition and social context. Note that here we did not see a difference in decision times between the Learning and No-Goal conditions, which is different from the pattern in E1.
+We replicated the key decision time finding from Exp.1, with participants making slower decisions in the Learning context as compared to Performance/Presentation. On average, participants took `r ms_rt_e2$m[2]` seconds to generate a response in the No-goal condidition and `r ms_rt_e2$m[1]` seconds in the Learning condition. In contrast, decisions were faster in the Performance ($\beta$ = `r e2_contrasts_rt$rt[3]` sec, [`r e2_contrasts_rt$hdi_lower[3]`, `r e2_contrasts_rt$hdi_upper[3]`]) and Presentation (`r e2_contrasts_rt$rt[4]` seconds, [`r e2_contrasts_rt$hdi_lower[4]`, `r e2_contrasts_rt$hdi_upper[4]`]) conditions, which were similar to one another (Fig. \ref{fig:e2_results}B). There was no evidence of a main effect of social context or an interaction between goal condition and social context. Note that here we did not see a difference in decision times between the Learning and No-Goal conditions, which is different from the pattern in Exp.1.
 
 ### Belief change:
 
@@ -476,21 +481,22 @@ cor2 = round(with(data_mod, cor(data_prob, prob, use="na.or.complete"))^2,3)
 In our paradigm, participants chose an action based on a certain goal.\footnote{For action priors, we used a separate prior elicitation task, in which people indicated the likelihood for selecting an action without any background information about possible hypotheses or goals. We used mean likelihood for each action choice as baseline priors in our model.}
 We assumed that the goal descriptions (e.g., "impress your boss") conveyed to the participants a particular set of goal weights {$\phi_{learn}$, $\phi_{perf}$, $\phi_{pres}$} used to generate action choices. We put uninformative priors on these weights ($\phi \sim Unif(0,1)$) and inferred their credible values for each social-goal condition, using Bayesian data analytic techniques [@lee2014bayesian]. 
 
-The inferred goal weights were consistent with what we predicted (Fig \ref{fig:e2_results}D). $\phi_{learn}$ was at its highest for No-social learning condition. On the other hand, the $\phi_{perf}$ and $\phi_{pres}$ together make up the highest portion in the presentation condition, with high social pressure to present competence compared to other conditions.
+The inferred goal weights were consistent with what we predicted (Fig. \ref{fig:e2_results}D). $\phi_{learn}$ was at its highest for No-social learning condition. On the other hand, the $\phi_{perf}$ and $\phi_{pres}$ together make up the highest portion in the presentation condition, with high social pressure to present competence compared to other conditions.
 
 We also inferred another parameter of the cognitive model, the optimality parameter $\lambda$. We put uninformative prior on the parameter ($\lambda \sim Unif(0,10)$ and inferred its posterior credible value from the data. We ran 4 MCMC chains for 100,000 iterations, discarding the first 50,000 for burnin. The Maximum A- Posteriori (MAP) estimate and 95% Highest Probability Density Interval (HDI) for $\lambda$ was `r optimality$mean` [`r optimality$ci_lower`, `r optimality$ci_upper`]. 
 
-The fitted model predictions of action choices are shown in Fig \ref{fig:e2_results}A (bottom). The model's expected posteriors over action choices capture key differences between conditions: the single action was more likely for no-social than social conditions overall, but not when the performance goal was highlighted. The model was able to predict the distribution of action responses with high accuracy $r^2(21)$ = `r cor2`.
+The fitted model predictions of action choices are shown in Fig. \ref{fig:e2_results}A (bottom). The model's expected posteriors over action choices capture key differences between conditions: the single action was more likely for no-social than social conditions overall, but not when the performance goal was highlighted. The model was able to predict the distribution of action responses with high accuracy $r^2(21)$ = `r cor2`.
 
 # General Discussion
 
-How do social contexts shape active learning? We proposed that people integrate learning-, performance-, and presentation-oriented goals when deciding what to do. In two experiments, we showed that people chose more informative actions, when learning goals were highlighted and in the absence of a relevant social context (no boss present), while they chose more immediately rewarding actions when performance or presentational goals were highlighted, especially when a boss was present. When no explicit goal was specified, people showed behavior that seemed to reflect a mixture of goals. Our model of social-active learning successfully captured key patterns in the participants' action decisions.  
+How do social contexts shape active learning? We proposed that people integrate informational vs. social goals when deciding what to do. In two experiments, we showed that people chose more informative actions, when learning goals were highlighted and in the absence of a relevant social context (no boss present), while they chose more immediately rewarding actions when performance or presentational goals were highlighted, especially when a boss was present. When no explicit goal was specified, people showed behavior that seemed to reflect a mixture of goals. Our model of social-active learning successfully captured key patterns in the participants' action decisions.  
 
-This work brought active learning accounts into contact with social learning theories. We used ideas from Optimal Experiment Design, which models active learning as a process of rational choice that maximizes information gain, and Bayesian modeling framework, which formalizes a process of recursive social reasoning. Thereby we could include social information within a formal utility-theoretic framework, building a richer utility function that represented a weighted combination of multiple goals -- informational and social. 
+This work brought active learning accounts into contact with social learning theories. We used ideas from Optimal Experiment Design, which models active learning as a process of rational choice that maximizes information gain, and Bayesian modeling framework, which formalizes a process of recursive social reasoning. Thus, we included social information within a formal utility-theoretic framework, building a richer utility function that represented a weighted combination of multiple goals -- informational and social. 
 
 There are limitations to this work that present opportunities for future work. 
-First, we did not differentiate between performance and presentation goals, since the choice of doing both actions satisfies both of these goals. Future work enriching the space of possible actions can tease apart actions driven by self-presentation. 
+First, we did not differentiate between performance and presentation goals, since the choice of doing both actions satisfies both of these goals in our current paradigm. Future work enriching the space of possible actions can tease apart actions driven by self-presentation. 
 Second, we used a very particular social context (the presence of a boss) to influence people’s action choices. It remains an open question as to how our results would generalize to other kinds of observers with different goals (e.g., a teacher who wants the learner to select actions that help her learn). 
+Second, we used a rather particular social context (presence of a boss) to maximize the emphasis on presentational goals. Our model can be extended to explain a richer set of social considerations, such as observers with different goals (e.g., a teacher who wants the learner to select actions that help her learn). 
 Third, we limited people to a single action choice. While this allowed a clean measurement of our condition manipulations, real-world learning often involves sequential decision-making that could cause learners to prioritize different goals depending on their prior actions or the probability of interacting with an observer in the future.
 
 Another interesting open question is how our model could be used to understand active learning over development. Our framework could allow us to measure changes in children's goal preferences as they develop better social reasoning and meta-cognitive abilities. One prediction is that young children focus on learning goals earlier on when they are surrounded by familiar caregivers who scaffold learning-relevant actions. But as their social reasoning abilities mature and their social environments become more complex, children may start to emphasize performance or presentation goals.
@@ -503,7 +509,7 @@ ultimately seek to unify theories on active learning and social reasoning.
 
 # Acknowledgements
 
-This work was supported by an NSERC postgraduate doctoral scholarship to EJY and an NSF GRFP to KM.
+This work was supported by an NSERC postgraduate doctoral scholarship to EJY, an NSF GRFP to KM, a Jacobs Foundation Fellowship to MCF, and NSF #1456077.
 
 # References 
 

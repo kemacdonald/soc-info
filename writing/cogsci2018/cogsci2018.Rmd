@@ -112,12 +112,12 @@ Below we describe the structure of each utility (see Fig.\ \ref{fig:model_diagra
 ### Learning utility
 
 The *learning utility* captures the goal to learn new information, which in our paradigm is associated with figuring out how a given toy works. 
-The learning utility in our model is derived from Optimal Experiment Design models [OED; @nelson2005], 
+The learning utility ($U_{learn}$) in our model is derived from Optimal Experiment Design models [OED; @nelson2005], 
 which quantify the expected utility of different information seeking actions. 
 The learner is uncertain about the mechanism of toy $t$ and wants to decrease his uncertainty by taking an action. 
-This decrease is captured by *information gain* due to an action, the change in the learner’s entropy (uncertainty) before and after seeing an outcome. 
+This decrease is captured by *information gain* due to an action, the change in the learner’s entropy (uncertainty) before and after seeing an outcome of the action. 
 To maximize information gain, the learner sums the information gain due to each outcome $m$ in the set of possible outcomes $M$ (e.g., music playing), weighted by the probability of that outcome given the action. Thus,
-$$ U_{learn}(a) \propto \sum_{\{m \in M\}}{P(m|a)}[{H(t) - H(t | m,a)}],$$
+$$ U_{learn}(a) \propto \sum_{m \in M}{P(m|a)}[{H(t) - H(t | m,a)}],$$
 \noindent
 where $H(t)$ is the Shannon entropy of the learner's guess about the toy [@mackay2003].
 Once the learner chooses an action and observes an outcome, 
@@ -129,14 +129,14 @@ Finally, we scale the utility by $log_2n$, where $n$ is the number of possible a
 The *performance utility* is the utility of achieving an immediate rewarding outcome. 
 Within our paradigm, the learner gains utility from an immediate effect of music or light turning on. 
 The expected performance utility ($U_{perf}$) before the learner chooses an action is the likelihood of an effect $m$ given the action $a$:
-$$ U_{perf} = P_L(m | a).$$
+$$ U_{perf}(a) = P_L(m | a).$$
 \noindent
 
 ### Presentation utility
 
 When there is another person present to observe the learner's action, the observer $O$ is expected to reason about the learner $L$'s competence, equal to whether the learner was able to make the toy produce an effect.
 The learner thinks about the observer's inferential process, and the expected *presentation* utility ($U_{pres}$) is based on maximizing the apparent competence inferred by the observer:
-$$ U_{pres} = P_O(m | a),$$
+$$ U_{pres}(a) = P_O(m | a),$$
 \noindent
 where $P_O(m | a)$ is the observer's own estimate of the likelihood of an effect given the learner's action.^[We assume that the observer is naive about the toy's causal structure; if the observer is knowledgeable, $U_{perf}$ and $U_{pres}$ will diverge, which is an important consideration for future work.] 
 
@@ -534,7 +534,7 @@ The inferred goal weights were consistent with what we predicted (Fig.\ \ref{fig
 
 We also inferred another parameter of the cognitive model, the optimality parameter $\lambda$. We put uninformative prior on the parameter ($\lambda \sim Unif(0,10)$) and inferred its posterior credible value from the data. We ran 4 MCMC chains for 100,000 iterations, discarding the first 50,000 for burnin. The Maximum A- Posteriori (MAP) estimate and 95% Highest Probability Density Interval (HDI) for $\lambda$ was `r optimality$mean` [`r optimality$ci_lower`, `r optimality$ci_upper`]. 
 
-```{r e2_results, fig.env = "figure", num.cols.cap=1, fig.pos = "H", fig.width=1.5, fig.height=5.5, out.width= "90%", fig.align='center', fig.cap = "Behavioral and model results for Exp.\ 2. A: Action decisions from human data (top) and fitted model predictions (bottom). Color represents social context. B and C: Decision times and belief change respectively, collapsing across social contexts. D: Inferred phi values for each condition. All other plotting conventions are the same as Fig.\ 3."}
+```{r e2_results, fig.env = "figure", num.cols.cap=1, fig.pos = "H", fig.width=1.5, fig.height=5.5, out.width= "95%", fig.align='center', fig.cap = "Behavioral and model results for Exp.\ 2. A: Action decisions from human data (top) and fitted model predictions (bottom). Color represents social context. B and C: Decision times and belief change respectively, collapsing across social contexts. D: Inferred phi values for each condition. All other plotting conventions are the same as Fig.\ 3."}
 
 png::readPNG(here::here(image_path, "e2_plot.png")) %>%
   grid::grid.raster()
@@ -546,7 +546,7 @@ The fitted model predictions of action choices are shown in Fig.\ \ref{fig:e2_re
 
 How do social contexts shape active learning? We proposed that people integrate informational vs. social goals when deciding what to do. In two experiments, we showed that people chose more informative actions when learning goals were highlighted and in the absence of a relevant social context (no boss present), while they chose more immediately rewarding actions when performance/presentational goals were highlighted, especially when a boss was present. When no goal was specified, people's behavior seemed to reflect a mixture of goals. Our model of social-active learning successfully captured key patterns in the people's action decisions.  
 
-This work begins to bring active learning accounts into contact with social learning theories. We used ideas from Optimal Experiment Design, which models active learning as a process of rational choice that maximizes information gain, and Rational Speech Act models, which formalize recursive social reasoning within a Bayesian modeling framework. Thus, we included social information within a formal utility-theoretic framework, building a richer utility function that represented a weighted combination of multiple goals -- informational and social. 
+This work begins to bring active learning accounts into contact with social learning theories. We used ideas from Optimal Experiment Design, which models active learning as a process of rational choice to maximize information gain, and Rational Speech Act models, which formalize recursive social reasoning within a Bayesian framework. We included social information within a formal utility-theoretic framework, building a richer utility function that represented a weighted combination of multiple goals -- informational and social. 
 
 There are limitations to this work that present opportunities for future work. 
 First, we did not differentiate between performance and presentation goals, since the choice of doing both actions satisfies both of these goals in our paradigm. Enriching the space of possible actions could tease apart actions driven by self-presentation. 

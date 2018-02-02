@@ -203,18 +203,18 @@ schematic).
 
 The \emph{learning utility} captures the goal to learn new information,
 which in our paradigm is associated with figuring out how a given toy
-works. The learning utility in our model is derived from Optimal
-Experiment Design models (OED; Nelson, 2005), which quantify the
+works. The learning utility (\(U_{learn}\)) in our model is derived from
+Optimal Experiment Design models (OED; Nelson, 2005), which quantify the
 expected utility of different information seeking actions. The learner
 is uncertain about the mechanism of toy \(t\) and wants to decrease his
 uncertainty by taking an action. This decrease is captured by
 \emph{information gain} due to an action, the change in the learner's
-entropy (uncertainty) before and after seeing an outcome. To maximize
-information gain, the learner sums the information gain due to each
-outcome \(m\) in the set of possible outcomes \(M\) (e.g., music
+entropy (uncertainty) before and after seeing an outcome of the action.
+To maximize information gain, the learner sums the information gain due
+to each outcome \(m\) in the set of possible outcomes \(M\) (e.g., music
 playing), weighted by the probability of that outcome given the action.
 Thus,
-\[ U_{learn}(a) \propto \sum_{\{m \in M\}}{P(m|a)}[{H(t) - H(t | m,a)}],\]
+\[ U_{learn}(a) \propto \sum_{m \in M}{P(m|a)}[{H(t) - H(t | m,a)}],\]
 \noindent
 where \(H(t)\) is the Shannon entropy of the learner's guess about the
 toy (MacKay, 2003). Once the learner chooses an action and observes an
@@ -230,7 +230,7 @@ rewarding outcome. Within our paradigm, the learner gains utility from
 an immediate effect of music or light turning on. The expected
 performance utility (\(U_{perf}\)) before the learner chooses an action
 is the likelihood of an effect \(m\) given the action \(a\):
-\[ U_{perf} = P_L(m | a).\] \noindent
+\[ U_{perf}(a) = P_L(m | a).\] \noindent
 
 \subsubsection{Presentation utility}\label{presentation-utility}
 
@@ -240,7 +240,7 @@ competence, equal to whether the learner was able to make the toy
 produce an effect. The learner thinks about the observer's inferential
 process, and the expected \emph{presentation} utility (\(U_{pres}\)) is
 based on maximizing the apparent competence inferred by the observer:
-\[ U_{pres} = P_O(m | a),\] \noindent
+\[ U_{pres}(a) = P_O(m | a),\] \noindent
 where \(P_O(m | a)\) is the observer's own estimate of the likelihood of
 an effect given the learner's action.\footnote{We assume that the
   observer is naive about the toy's causal structure; if the observer is
@@ -506,7 +506,7 @@ Posteriori (MAP) estimate and 95\% Highest Probability Density Interval
 \begin{CodeChunk}
 \begin{figure}[H]
 
-{\centering \includegraphics[width=0.9\linewidth]{figs/e2_results-1} 
+{\centering \includegraphics[width=0.95\linewidth]{figs/e2_results-1} 
 
 }
 
@@ -537,13 +537,12 @@ the people's action decisions.
 
 This work begins to bring active learning accounts into contact with
 social learning theories. We used ideas from Optimal Experiment Design,
-which models active learning as a process of rational choice that
-maximizes information gain, and Rational Speech Act models, which
-formalize recursive social reasoning within a Bayesian modeling
-framework. Thus, we included social information within a formal
-utility-theoretic framework, building a richer utility function that
-represented a weighted combination of multiple goals -- informational
-and social.
+which models active learning as a process of rational choice to maximize
+information gain, and Rational Speech Act models, which formalize
+recursive social reasoning within a Bayesian framework. We included
+social information within a formal utility-theoretic framework, building
+a richer utility function that represented a weighted combination of
+multiple goals -- informational and social.
 
 There are limitations to this work that present opportunities for future
 work. First, we did not differentiate between performance and

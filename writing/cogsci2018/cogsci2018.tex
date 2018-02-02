@@ -96,10 +96,10 @@ learning-performance goal tradeoff using a simple active learning
 context, where social factors may shape the goals we consider.
 
 Active learning occurs when people have control over the sequence of
-information in a learning context (e.g., try pressing buttons on a toy,
-one by one, to see their effect). The key assumption is that learners
-will maximize the utility of their actions by gathering information that
-is especially helpful for their own learning. Empirical work in
+information in a learning context (e.g., press buttons on a toy, one by
+one, to see their effect). The key assumption of this framework is that
+learners maximize the utility of their actions by gathering information
+that is especially helpful for their own learning. Empirical work in
 education (Grabinger \& Dunlap, 1995), machine learning (Settles, 2012),
 and cognitive psychology (Castro et al., 2009) suggests that active
 contexts lead to faster learning than passive contexts where people
@@ -152,7 +152,7 @@ Frank, 2017) in a social active learning context.\footnote{Such models
 
 }
 
-\caption[Model schematic for the learner's inference]{Model schematic for the learner's inference. The learner considers possible hypotheses: Toy 1 (handle pull turns on the light, button press turns on music, both actions cause both effects); Toy 2 (handle pull turns on music, button press turns on the light, both actions cause both effects); and Toy 3 (both actions cause both effects, but each action on its own does not produce any effect). The learner also considers his goals. When an observer is absent, he considers his learning goal and performance goal and chooses an action. The learning goal favors a single action (e.g., pull the handle only) that can fully disambiguate, whereas the performance goal favors the both action (pull the handle AND push the button) that guarantees the most salient reward. When an observer is present, the learner considers the learning, performance (not shown), and presentational goal.}\label{fig:model_diagram}
+\caption[Model schematic for the learner's inference]{Model schematic for the learner's inference. The learner considers possible hypotheses: Toy 1 (handle pull turns on the light, button press turns on music, both actions cause both effects); Toy 2 (handle pull turns on music, button press turns on the light, both actions cause both effects); and Toy 3 (both actions cause both effects, but each action on its own does not produce any effect). The learner also considers his goals. When an observer is absent, he considers his learning goal and performance goal and chooses an action. The learning goal favors a single action (e.g., pull the handle only) that can fully disambiguate, whereas the performance goal favors the both action (pull the handle AND push the button) that guarantees the most salient reward. When an observer is present, the learner considers the learning, performance (not shown), and self-presentational goal.}\label{fig:model_diagram}
 \end{figure*}
 \end{CodeChunk}
 
@@ -163,13 +163,13 @@ mechanism (Fig.~\ref{fig:toy}). For this toy, doing only one of the two
 possible actions (handle pull or button press) disambiguates its causal
 mechanism but potentially risks no immediate effect (i.e., neither sound
 nor light turning on), while doing both actions at the same time is
-immediately rewarding but is not informative for learning the toy's
-causal mechanism. Thus, the learner can choose between the two actions
-that will each lead to one outcome (new discovery; exploration;
-learning) or the other (immediate reward; exploitation; performance).
-The learner's action rests on relative utilities he assigns to learning
-versus performance, which in turn are determined in part by the social
-context (e.g., the presence or absence of his
+immediately rewarding (both music and light on) but is not informative
+for learning the toy's causal mechanism. Thus, the learner can choose
+between the two actions that will each lead to either a new discovery
+(exploration; learning) or an immediate reward (exploitation;
+performance). The learner's action rests on relative utilities he
+assigns to learning versus performance, which in turn are determined in
+part by the social context (e.g., the presence or absence of his
 boss).\footnote{From here on, we use a male pronoun for Bob, the learner, and female pronoun for Ann, the boss and observer.}
 
 In two experiments, we show that emphasizing performance or
@@ -185,8 +185,8 @@ of social-active learning.
 
 We model a learner \(L\) who chooses his action \(a\) approximately
 optimally (as per optimality parameter \(\lambda\)) based on the
-expected total utility \(U_{t}\) given his action \(a\) and presence of
-an observer \(o\):
+expected total utility \(U_{t}\) given his action and presence of an
+observer \(o\):
 
 \[ P_L(a | o) \propto \exp(\lambda \cdot \mathbb{E}[U_{t}(a,o)]).\]
 \noindent
@@ -195,34 +195,33 @@ The total utility is defined as:
 \noindent
 where \(\phi\)s are weights that are inferred for each utility from data
 and \(\delta^o\) is a Dirac delta function that is 1 if there is an
-observer, and 0 if there is no observer. Below we describe each utility
-structure (see Fig.~\ref{fig:model_diagram} for the model schematic).
+observer, and 0 if there is no observer. Below we describe the structure
+of each utility (see Fig.~\ref{fig:model_diagram} for the model
+schematic).
 
 \subsubsection{Learning utility}\label{learning-utility}
 
 The \emph{learning utility} captures the goal to learn new information,
 which in our paradigm is associated with figuring out how a given toy
-works. The learning utility is formally represented by an OED model
-(``Optimal Experiment Design''; e.g. Nelson, 2005), which quantifies the
+works. The learning utility in our model is derived from Optimal
+Experiment Design models (OED; Nelson, 2005), which quantify the
 expected utility of different information seeking actions. The learner
-considers the hypothesis space \(H(t)\), and wants to determine the
-correct hypothesis for the toy's causal mechanism. He thinks about the
-utility of the outcome \(m\) (e.g., music playing) to each possible
-action (e.g., button press), which is equal to the \emph{information
-gain}: the change in the learner's overall uncertainty (difference in
-entropy) before and after seeing the outcome. This information gain is
-equal to the learning utility (\(U_{learn}\)), which is the expected
-utility of each action:
-\[ U_{learn}(a) \propto \sum_{\{m, \neg m\}}{P(m|a)}[{ent(H(t)) - ent(H(t)|m,a)}].\]
+is uncertain about the mechanism of toy \(t\) and wants to decrease his
+uncertainty by taking an action. This decrease is captured by
+\emph{information gain} due to an action, the change in the learner's
+entropy (uncertainty) before and after seeing an outcome. To maximize
+information gain, the learner sums the information gain due to each
+outcome \(m\) in the set of possible outcomes \(M\) (e.g., music
+playing), weighted by the probability of that outcome given the action.
+Thus,
+\[ U_{learn}(a) \propto \sum_{\{m \in M\}}{P(m|a)}[{H(t) - H(t | m,a)}],\]
 \noindent
-where \(ent(H)\) is the Shannon entropy of \(H\), which provides a
-measure of the overall amount of uncertainty in the learner's beliefs
-about the candidate hypothesis (MacKay, 2003). Once the learner chooses
-an action \(a\), which yields an effect \(m\) (or no effect \(\neg m\)),
-then he updates his beliefs about each hypothesis via standard Bayesian
-updating. Finally, we scale the utility by \(log_2n\), where \(n\) is
-the number of possible actions, to convert the utility to a value
-between 0 and 1.
+where \(H(t)\) is the Shannon entropy of the learner's guess about the
+toy (MacKay, 2003). Once the learner chooses an action and observes an
+outcome, then he updates his beliefs about each hypothesis via standard
+Bayesian updating. Finally, we scale the utility by \(log_2n\), where
+\(n\) is the number of possible actions, to convert the utility to a
+value between 0 and 1.
 
 \subsubsection{Performance utility}\label{performance-utility}
 
@@ -239,14 +238,14 @@ When there is another person present to observe the learner's action,
 the observer \(O\) is expected to reason about the learner \(L\)'s
 competence, equal to whether the learner was able to make the toy
 produce an effect. The learner thinks about the observer's inferential
-process, and the expected \emph{presentational} utility (\(U_{pres}\))
-is based on maximizing the apparent competence inferred by the observer:
+process, and the expected \emph{presentation} utility (\(U_{pres}\)) is
+based on maximizing the apparent competence inferred by the observer:
 \[ U_{pres} = P_O(m | a),\] \noindent
 where \(P_O(m | a)\) is the observer's own estimate of the likelihood of
 an effect given the learner's action.\footnote{We assume that the
-  observer is naive about the toy's causal structure; otherwise, if the
-  observer is knowledgeable, \(U_{perf}\) and \(U_{pres}\) will diverge,
-  which is an important consideration for future work.}
+  observer is naive about the toy's causal structure; if the observer is
+  knowledgeable, \(U_{perf}\) and \(U_{pres}\) will diverge, which is an
+  important consideration for future work.}
 
 \section{Experiment 1}\label{experiment-1}
 
@@ -287,11 +286,11 @@ front, indicating the correct action(s)--outcome link.
 \begin{CodeChunk}
 \begin{figure}[H]
 
-{\centering \includegraphics[width=0.85\linewidth]{figs/e1_behav_results_plot-1} 
+{\centering \includegraphics[width=0.86\linewidth]{figs/e1_behav_results_plot-1} 
 
 }
 
-\caption[Behavioral results for Exp]{Behavioral results for Exp. 1. A: Proportion of action decisions for each goal condition. Error bars are 95\% binomial CIs computed using a Bayesian beta-binomial model. B: Response times on the action decisions. C: Belief change (information gain in bits) as a function of condition. Higher values represent more information gained from the action selection.}\label{fig:e1_behav_results_plot}
+\caption[Behavioral results for Exp]{Behavioral results for Exp. 1. A: Proportion of action decisions for each goal condition. Error bars are 95\% binomial CIs based on a Bayesian beta-binomial model. B: Distribution of response times on the action decisions. C: Distribution of participants' belief change (information gain in bits) as a function of condition. Higher values represent more information gained from the action selection.}\label{fig:e1_behav_results_plot}
 \end{figure}
 \end{CodeChunk}
 
@@ -368,19 +367,19 @@ produced similar decision times.
 \subsubsection{Belief change:}\label{belief-change}
 
 We quantified participants' change in beliefs about the toy using
-information gain. We followed M. Frank (2014) and computed the
-Kullback-Leibler (KL) divergence both before and after participants'
-action selections. The KL divergence gives a measure of the distance
-between the correct\footnote{Note that since the action-effect link was
-  deterministic, the correct belief distribution is a function of
-  participant's action decision. For example, if a participant selected
-  the button action, then \(B_{correct}\) placed 100\% of the
-  probability mass on the button hypothesis.} probability distribution
-and the participant's beliefs about the identity of the unlabeled toy.
-We notate participants' belief distributions as \(B_{prior}\) and
-\(B_{prior+a}\) and the correct distribution as \(B_{correct}\). The
-difference between these KL divergences provides the number of bits of
-information gained due to the action:
+information gain. We computed the Kullback-Leibler (KL) divergence both
+before and after participants' action selections. The KL divergence
+gives a measure of the distance between the correct\footnote{Note that
+  since the action-effect link was deterministic, the correct belief
+  distribution is a function of participant's action decision. For
+  example, if a participant selected the button action, then
+  \(B_{correct}\) placed 100\% of the probability mass on the button
+  hypothesis.} probability distribution and the participant's beliefs
+about the identity of the unlabeled toy. We notate participants' belief
+distributions as \(B_{prior}\) and \(B_{prior+a}\) and the correct
+distribution as \(B_{correct}\). The difference between these KL
+divergences provides the number of bits of information gained due to the
+action:
 \(IG(a) = D_{KL} ( B_{correct}|| B_{prior} ) - D_{KL} (B_{correct} || B_{prior+a} )\).
 
 We modeled information gain as a function of goal condition and action
@@ -421,7 +420,7 @@ participants in our final analysis.
 The stimuli and design were identical to Exp.~1, except we had 7
 different goal \(\times\) social conditions. Goals were identical to
 Exp.~1; social context varied depending on whether the boss was present
-(\emph{social}) or absent (\emph{no-social}) in the story. The
+(\emph{Social}) or absent (\emph{No-social}) in the story. The
 conditions were: \emph{Social-learning}, \emph{Social-performance},
 \emph{Social-presentation}, \emph{No-social-no-goal},
 \emph{No-social-learning}, \emph{No-social-performance}, and
@@ -468,32 +467,33 @@ conditions, which is different from the pattern in Exp.~1.
 
 \subsubsection{Belief change:}\label{belief-change-1}
 
-We replicate the information gain effect from E1: participants who
-selected the single action showed greater information gain across all
-conditions (\(\beta_{single}\) = 0.63, {[}0.4, 0.86{]}. And there was no
-evidence of a main effect of social context and no two- or three-way
-interactions between social context, goal condition, and action choice.
-As in E1, a larger proportion of participants selected the single action
-in the Learning condition, especially in the No-socia context, meaning
-information again was most likely in this learning context.
+We replicated the information gain effect from Exp.~1: Participants who
+selected a single action showed greater information gain across all
+conditions (\(\beta_{single}\) = 0.63, {[}0.4, 0.86{]}. There was no
+evidence of a main effect of social context or two-/three-way
+interactions between social context, goal, and action choice. As in
+Exp.~1, more participants selected the single action in the Learning
+condition, especially in the No-social context, meaning information gain
+was most likely in this learning context.
 
 \subsubsection{BDA model-data fit:}\label{bda-model-data-fit}
 
 In our paradigm, participants chose an action based on a certain
-goal.\footnote{For action priors, we used a separate prior elicitation task, in which people indicated the likelihood for selecting an action without any background information about possible hypotheses or goals. We used mean likelihood for each action choice as baseline priors in our model.}
+goal.\footnote{For action priors, we used a separate task in which people indicated the likelihood for selecting an action without any information about possible hypotheses or goals. We used the mean likelihood for each action choice as baseline priors in our model.}
 We assumed that the goal descriptions (e.g., ``impress your boss'')
 conveyed to the participants a particular set of goal weights
 \{\(\phi_{learn}\), \(\phi_{perf}\), \(\phi_{pres}\)\} used to generate
 action choices. We put uninformative priors on these weights
 (\(\phi \sim Unif(0,1)\)) and inferred their credible values for each
-social-goal condition, using Bayesian data analytic techniques (Lee \&
+Social-goal condition, using Bayesian data analytic techniques (Lee \&
 Wagenmakers, 2014).
 
 The inferred goal weights were consistent with what we predicted
-(Fig.~\ref{fig:e2_results}D). \(\phi_{learn}\) was highest for No-social
-learning condition, whereas the \(\phi_{perf}\) and \(\phi_{pres}\)
-together made up the highest portion in the presentation condition, with
-high social pressure to appear competent compared to other conditions.
+(Fig.~\ref{fig:e2_results}D). \(\phi_{learn}\) was highest for the
+No-social learning condition, whereas the \(\phi_{perf}\) and
+\(\phi_{pres}\) together made up the highest portion in the Presentation
+condition, with high social pressure to appear competent compared to
+other conditions.
 
 We also inferred another parameter of the cognitive model, the
 optimality parameter \(\lambda\). We put uninformative prior on the
@@ -510,14 +510,14 @@ Posteriori (MAP) estimate and 95\% Highest Probability Density Interval
 
 }
 
-\caption[Behavioral and model fitting results for Exp]{Behavioral and model fitting results for Exp. 2. A: Action decisions with color representing social context, from human data (top) and fitted model predictions (bottom). B: Decision times. C: Belief change. D: Inferred phi values for each goal-context condition. All other plotting conventions are the same as Fig. 3.}\label{fig:e2_results}
+\caption[Behavioral and model results for Exp]{Behavioral and model results for Exp. 2. A: Action decisions from human data (top) and fitted model predictions (bottom). Color represents social context. B and C: Decision times and belief change respectively, collapsing across social contexts. D: Inferred phi values for each condition. All other plotting conventions are the same as Fig. 3.}\label{fig:e2_results}
 \end{figure}
 \end{CodeChunk}
 
 The fitted model predictions of action choices are shown in
 Fig.~\ref{fig:e2_results}A (bottom). The model's expected posteriors
 over action choices capture key differences between conditions: the
-single action was more likely for no-social than social conditions
+single action was more likely for No-social than Social conditions
 overall, but not when the performance goal was highlighted. The model
 was able to predict the distribution of action responses with high
 accuracy \(r^2(21)\) = 0.9.
@@ -535,14 +535,15 @@ specified, people's behavior seemed to reflect a mixture of goals. Our
 model of social-active learning successfully captured key patterns in
 the people's action decisions.
 
-This work brought active learning accounts into contact with social
-learning theories. We used ideas from Optimal Experiment Design, which
-models active learning as a process of rational choice that maximizes
-information gain, and Bayesian modeling framework, which formalizes a
-process of recursive social reasoning. Thus, we included social
-information within a formal utility-theoretic framework, building a
-richer utility function that represented a weighted combination of
-multiple goals -- informational and social.
+This work begins to bring active learning accounts into contact with
+social learning theories. We used ideas from Optimal Experiment Design,
+which models active learning as a process of rational choice that
+maximizes information gain, and Rational Speech Act models, which
+formalize recursive social reasoning within a Bayesian modeling
+framework. Thus, we included social information within a formal
+utility-theoretic framework, building a richer utility function that
+represented a weighted combination of multiple goals -- informational
+and social.
 
 There are limitations to this work that present opportunities for future
 work. First, we did not differentiate between performance and
@@ -550,19 +551,14 @@ presentation goals, since the choice of doing both actions satisfies
 both of these goals in our paradigm. Enriching the space of possible
 actions could tease apart actions driven by self-presentation. Second,
 we used a particular social context (the presence of a boss) to
-influence people's action choices. It remains an open question as to how
-our results would generalize to other kinds of observers with different
-goals (e.g., a teacher who wants the learner to select actions that help
-her learn). Second, we used a rather particular social context (the
-presence of a boss) to emphasize presentational goals. Our model can be
-extended to explain a richer set of social considerations, such as other
-kinds of observers (e.g., a teacher who wants the learner to select
-actions that help her learn). Third, we limited people to a single
-action choice. While this allowed a clean measurement of our condition
-manipulations, real-world learning often involves sequential
-decision-making that could cause learners to prioritize different goals
-depending on their prior actions or the probability of interacting with
-an observer in the future.
+emphasize presentational goals. Our model can be extended to explain a
+richer set of social considerations, such as other kinds of observers
+(e.g., a teacher who wants the learner to select actions that help her
+learn). Third, we limited people to a single action choice. While this
+allowed a clean measurement of our condition manipulations, real-world
+learning often involves sequential decision-making that could cause
+learners to prioritize different goals depending on their prior actions
+or the probability of interacting with an observer in the future.
 
 Another interesting open question is how our model could be used to
 understand active learning over development. Our framework could allow
@@ -579,7 +575,7 @@ questions that ultimately seek to unify theories on active learning and
 social reasoning.
 
 \vspace{1em}
-\fbox{\parbox[b][][c]{7.3cm}{\centering All experiments, data, model, and analysis codes are in the online repository for this project: \url{https://github.com/kemacdonald/soc-info}}}
+\fbox{\parbox[b][][c]{7.3cm}{\centering All experiments, data, model, and analysis codes are available in the public repository for the project: \url{https://github.com/kemacdonald/soc-info}}}
 \vspace{1em} \noindent
 
 \section{Acknowledgements}\label{acknowledgements}
@@ -599,11 +595,6 @@ NSF \#1456077.
 Castro, R. M., Kalish, C., Nowak, R., Qian, R., Rogers, T., \& Zhu, X.
 (2009). Human active learning. In \emph{Advances in neural information
 processing systems} (pp. 241--248).
-
-\hypertarget{ref-frank2014modeling}{}
-Frank, M. (2014). Modeling the dynamics of classroom education using
-teaching games. In \emph{Proceedings of the annual meeting of the
-cognitive science society} (Vol. 36).
 
 \hypertarget{ref-frank2013throwing}{}
 Frank, M. C. (2013). Throwing out the bayesian baby with the optimal

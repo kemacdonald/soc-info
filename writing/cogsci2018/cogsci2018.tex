@@ -152,7 +152,7 @@ Frank, 2017) in a social active learning context.\footnote{Such models
 
 }
 
-\caption[Model schematic for the learner's inference]{Model schematic for the learner's inference. The learner considers possible hypotheses: Toy 1 (handle pull turns on the light, button press turns on music, both actions cause both effects); Toy 2 (handle pull turns on music, button press turns on the light, both actions cause both effects); and Toy 3 (both actions cause both effects, but each action on its own does not produce any effect). The learner also considers his goals. When an observer is absent, he considers his learning goal and performance goal and chooses an action. The learning goal favors a single action (e.g., pull the handle only) that can fully disambiguate, whereas the performance goal favors the both action (pull the handle AND push the button) that guarantees the most salient reward. When an observer is present, the learner considers the learning, performance (not shown), and self-presentational goal.}\label{fig:model_diagram}
+\caption[Model schematic for the learner's inference]{Model schematic for the learner's inference. The learner considers possible hypotheses: Toy 1 (handle pull turns on the light, button press turns on music, both actions cause both effects); Toy 2 (handle pull turns on music, button press turns on the light, both actions cause both effects); and Toy 3 (both actions cause both effects, but each action on its own does not produce any effect). The learner also considers his goals. When an observer is absent, he considers his learning goal and performance goal and chooses an action. The learning goal favors a ``single" action (e.g., pull the handle only) that can fully disambiguate, whereas the performance goal favors the ``both" action (pull the handle AND push the button) that guarantees the most salient reward. When an observer is present, the learner considers the learning, performance (not shown), and self-presentation goal.}\label{fig:model_diagram}
 \end{figure*}
 \end{CodeChunk}
 
@@ -238,7 +238,7 @@ When there is another person present to observe the learner's action,
 the observer \(O\) is expected to reason about the learner \(L\)'s
 competence, equal to whether the learner was able to make the toy
 produce an effect. The learner thinks about the observer's inferential
-process, and the expected \emph{presentation} utility (\(U_{pres}\)) is
+process, and the expected \emph{presentation utility} (\(U_{pres}\)) is
 based on maximizing the apparent competence inferred by the observer:
 \[ U_{pres}(a) = P_O(m | a),\] \noindent
 where \(P_O(m | a)\) is the observer's own estimate of the likelihood of
@@ -253,13 +253,14 @@ In Experiment 1 (Exp.~1), we first wanted to confirm that participants
 would choose different actions depending on what goal was highlighted.
 We were also interested in how people would act when no explicit goal
 was specified within the task. Participants were asked to act on a toy
-with an uncertain causal mechanism, and were assigned to different goal
-conditions: (1) learning (learn how the toy works), (2) performance
-(make the toy play music), (3) presentation (impress their boss), and
-(4) no goal specified. We hypothesized that participants would choose an
-informative action more often in the following order of goal conditions
-(decreasing): learning, no goal, performance, and
-presentation.\footnote{Our hypothesis, method, model and data analysis were pre-registered prior to data collection at \url{https://osf.io/kcjau}.}
+with an ambiguous causal structure, and were assigned to different goal
+conditions: (1) Learning (i.e., learn how the toy works), (2)
+Performance (e.g., make the toy play music), (3) Presentation (i.e.,
+impress their boss), and (4) No goal specified. We hypothesized that
+participants would choose an informative action more often in the
+following order of goal conditions (decreasing): Learning, No-goal,
+Performance, and
+Presentation.\footnote{Our hypothesis, method, model and data analysis were pre-registered prior to data collection at \url{https://osf.io/kcjau}.}
 
 \subsection{Method}\label{method}
 
@@ -277,11 +278,12 @@ section for details on the manipulation check), and thus the remaining
 We presented images and instructions for three different toys that
 looked very similar but worked in different ways (see captions for
 Fig.~\ref{fig:model_diagram}). The instructions conveyed that pressing
-the button and pulling the handle was immediately rewarding but
-uninformative (fails to disambiguate the causal mechanism). In contrast,
-either of the single actions was completely disambiguating, but was
-uncertain to produce an immediate outcome. Each toy had a label at the
-front, indicating the correct action(s)--outcome link.
+the button and pulling the handle at the same time was immediately
+rewarding but uninformative (fails to disambiguate the causal
+mechanism). In contrast, either of the single actions was completely
+disambiguating, but was uncertain to produce an immediate outcome. Each
+toy had a label at the front, indicating the correct action(s)--outcome
+link.
 
 \begin{CodeChunk}
 \begin{figure}[H]
@@ -340,10 +342,11 @@ We modeled action decisions using a logistic regression
 \texttt{$action \sim goal\_condition$} with the No-goal condition as the
 reference
 category.\footnote{In all of the analyses for Exp.\ 1 and Exp.\ 2, we used the {\fontfamily{qcr}\selectfont rstanarm} package to fit Bayesian regression models estimating the differences across conditions. We report the uncertainty in our point estimates using 95\% Highest Density Intervals (HDI). The HDI provides a range of credible values given the data and model.}
-Participants' tendency to select a ``single'' action varied across
-conditions as predicted (Fig.~\ref{fig:e1_behav_results_plot}A), with
-the highest proportion in the Learning condition, followed by No-goal,
-Performance, and Presentation.
+Participants' tendency to select a ``single'' action (button press or
+handle pull, each on its own) varied across conditions as predicted
+(Fig.~\ref{fig:e1_behav_results_plot}A), with the highest proportion in
+the Learning condition, followed by No-goal, Performance, and
+Presentation.
 
 Compared to the No-goal condition, participants selected the single
 action at a greater rate in the Learning condition (\(\beta\) = 1.18,
@@ -438,7 +441,7 @@ The procedure was identical to Exp.~1.
 
 We modeled action decisions using a logistic regression specified as
 \texttt{$action \sim goal\_condition * social\_context$} with the
-No-goal-no-social condition as the reference category. We replicated the
+No-social-no-goal condition as the reference category. We replicated the
 key finding from Exp.~1: participants selected a ``single'' action more
 often in the Learning goal condition, followed by the No-goal,
 Performance, and Presentation conditions (Fig.~\ref{fig:e2_results}A).
@@ -454,15 +457,15 @@ No-goal conditions, but not in the Performance condition (\(\beta\)
 
 We replicated the key decision time finding from Exp.~1, with
 participants making slower decisions in the Learning context as compared
-to Performance/Presentation. On average, participants took seconds to
-generate a response in the No-goal condidition and seconds in the
+to Performance/Presentation. On average, participants took 39.32 seconds
+to generate a response in the No-goal condition and 40.72 seconds in the
 Learning condition. In contrast, decisions were faster in the
 Performance (\(\beta\) = -7.67 sec, {[}-14.01, -1.25{]}) and
 Presentation (-10.66 seconds, {[}-18.37, -3.36{]}) conditions, which
 were similar to one another (Fig.~\ref{fig:e2_results}B). There was no
 evidence of a main effect of social context or an interaction between
 goal condition and social context. Note that here we did not see a
-difference in decision times between the Learning and No-Goal
+difference in decision times between the Learning and No-goal
 conditions, which is different from the pattern in Exp.~1.
 
 \subsubsection{Belief change:}\label{belief-change-1}
@@ -485,7 +488,7 @@ conveyed to the participants a particular set of goal weights
 \{\(\phi_{learn}\), \(\phi_{perf}\), \(\phi_{pres}\)\} used to generate
 action choices. We put uninformative priors on these weights
 (\(\phi \sim Unif(0,1)\)) and inferred their credible values for each
-Social-goal condition, using Bayesian data analytic techniques (Lee \&
+social-goal condition, using Bayesian data analytic techniques (Lee \&
 Wagenmakers, 2014).
 
 The inferred goal weights were consistent with what we predicted

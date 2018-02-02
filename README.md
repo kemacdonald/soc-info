@@ -1,13 +1,11 @@
 # soc-info
-Project looking at learning versus performing in social contexts.
+Project looking at learning-performance tradeoff in social active learning contexts.
 
 Model, experiments, data, analyses and paper draft for Yoon*, MacDonald*, Asaba, Gweon and Frank (in prep).
 
 ## project summary
-We are interested in predicting people's action choices based on learning-performing tradeoff in social contexts.
-How do people choose between an action that maximizes learning (gaining new information or improving one's skills), 
-and an action that maximizes performing (making an overt, rewarding outcome occur)? 
-How will their choices change based on their social context, e.g. whether or not there is a person to impress? 
+Our actions shape what we learn. Because of this dependency, learners are proficient at choosing their actions to maximize their information gain. But learning often unfolds in social contexts where learners have both informational goals (e.g., to learn how something works) but also social goals (e.g., to appear competent and impress others). How do these different factors shape learners' decisions?  
 
 * [draft for submission to cogsci 2018)](writing/cogsci2018/cogsci2018.Rmd)
 
+* Experiment 2: https://web.stanford.edu/group/langcog/cgi-bin/KM/soc-info-expts/03_goal_actions_no_social/soc_info_goals.html

@@ -120,8 +120,7 @@ Finally, we scale the utility by $log_2n$, where $n$ is the number of possible a
 
 ### Performance utility
 
-The *performance utility* is the utility of achieving an immediate rewarding outcome. 
-Within our paradigm, the learner gains utility from an immediate effect of music or light turning on. 
+The *performance utility* is the utility of achieving an immediate reward outcome. Within our paradigm, the learner gains utility from an immediate effect of music or light turning on. 
 The expected performance utility ($U_{perf}$) before the learner chooses an action is the likelihood of an effect $m$ given the action $a$:
 $$ U_{perf}(a) = P_L(m | a).$$
 \noindent
@@ -166,10 +165,10 @@ We recruited `r n_run` participants (45-51 per condition) on Amazon’s Mechanic
 
 ### Stimuli and Design
 
-We presented instructions for three different toys that looked very similar but worked in different ways in a deterministic world (see captions for Fig.\ \ref{fig:model_diagram}).
-The instructions conveyed that pressing the button and pulling the handle at the same time was immediately rewarding but uninformative (fails to disambiguate the causal mechanism). In contrast, either of the single actions was completely disambiguating, but was uncertain to produce an immediate outcome. Each toy had a label at the front, indicating the correct action(s)--outcome link.
+We presented instructions for 3 toys that looked very similar but worked in different ways in a deterministic world (see captions for Fig.\ \ref{fig:model_diagram}).
+The instructions conveyed that simultaneously pressing the button and pulling the handle was immediately rewarding but uninformative (fails to disambiguate the causal mechanism). In contrast, either of the single actions was completely disambiguating, but was uncertain to produce an immediate outcome. The front of each toy labeled the correct action(s)--outcome link.
 
-```{r e1_behav_results_plot, fig.env = "figure", fig.pos = "H", fig.align='center', fig.width=2, fig.height=6, num.cols.cap=1, out.width='86%', fig.cap = "Behavioral results for Exp.\ 1. A: Proportion of action decisions for each goal condition. Error bars are 95\\% binomial CIs based on a Bayesian beta-binomial model. Dashed line represents chance level at 66.7\\% (two single actions out of three action choices). B: Distribution of response times on the action decisions. C: Distribution of participants' belief change (information gain in bits) as a function of condition. Higher values represent more information gained from the action selection."}
+```{r e1_behav_results_plot, fig.env = "figure", fig.pos = "H", fig.align='center', fig.width=2, fig.height=6, num.cols.cap=1, out.width='86%', fig.cap = "Behavioral results for Exp.\ 1. A: Proportion of action decisions for each condition. Error bars are 95\\% binomial CIs based on a Bayesian beta-binomial model. Dashed line represents chance level (66.7\\%; two single actions out of three action choices). B: Distribution of response times on the action decisions. C: Distribution of participants' belief change (information gain in bits) by condition. Higher values represent more information gained from the action selection."}
 png::readPNG(here::here(image_path, "e1_plot.png")) %>% 
   grid::grid.raster()
 ```

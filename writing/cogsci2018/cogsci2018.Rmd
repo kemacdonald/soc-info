@@ -42,22 +42,15 @@ d_model_spec <- readRDS(here("data/03_merged_data/soc-info-models.rds"))
 
 # Introduction
 
-Imagine you are a novice cook and you have to decide what meal to prepare for a first date. 
-Should you choose an easy favorite or attempt to make something new? 
-While the familiar recipe can ensure a good meal, 
-you may miss out on a new, delicious dish. 
-The new recipe might taste even better, but it has a higher chance of failure. 
-In this type of *explore-exploit* dilemma [@sutton1998], you can choose between 
-*exploring* the new recipe that may or may not result in a more delicious dish (*learning* goal),
-or *exploiting* your previous experience and knowledge to ensure a good meal (*performance* goal).
-Here, we explore the idea of formalizing the learning-performance goal tradeoff using a simple active learning context, 
-where social factors may shape the goals we consider.
+Imagine you are a novice cook and have to decide what meal to prepare for a first date. 
+Should you choose an easy favorite or attempt a new dish?
+The familiar recipe can ensure a good meal, but the new recipe could be even more delicions, although it has a higher chance of failure. In this type of *explore-exploit* dilemma [@sutton1998], you can either *explore* the new recipe that might result in a more delicious dish (*learning* goal), or *exploit* your previous experience and knowledge to ensure a good meal (*performance* goal). Here, we explore the idea that social factors shape the goals we consider by formalizing the learning-performance goal tradeoff using a simple active learning context.
 
 Active learning occurs when people have control over the sequence of information in a learning context (e.g., press buttons on a toy, one by one, to see their effect). The key assumption of this framework is that learners maximize the utility of their actions by gathering information that is especially helpful for their own learning. 
-Empirical work in education [@grabinger1995rich], machine learning [@settles2012active], and cognitive psychology [@castro2009human] suggests that active contexts lead to faster learning than passive contexts where people don't have control over the information flow. 
+Empirical work in education [@grabinger1995rich], machine learning [@settles2012active], and cognitive psychology [@castro2009human] suggests that active contexts lead to faster learning than passive contexts where people do not have control over the information flow. 
 
-But real-world learning usually takes place in rich social contexts 
-with teachers, peers, or other people who can directly influence our learning. 
+Real-world learning, however, usually takes place in rich social contexts 
+with teachers, peers, or others who can directly influence our learning. 
 Indeed, adults and even preschool-aged children modulate their inferences 
 depending on how others (e.g., teachers) select their actions [@shafto2012learning], 
 and understand that socially communicated information licenses different inferences than information generated on their own [e.g., @xu2007]. 

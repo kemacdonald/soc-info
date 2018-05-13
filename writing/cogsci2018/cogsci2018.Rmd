@@ -8,7 +8,7 @@ author-information: >
     \author{{\large \bf Erica J. Yoon*}, {\large \bf Kyle MacDonald*}, {\large \bf Mika Asaba}, {\large \bf Hyowon Gweon}, \and {\large \bf Michael C. Frank} \\ \{ejyoon, kylem4, masaba, hyo, mcfrank\} @stanford.edu \\ Department of Psychology, Stanford University \\ *These authors contributed equally to this work.}
 
 abstract: 
-    "Our actions shape what we learn. Because of this dependency, learners are proficient at choosing their actions to maximize their information gain. But learning often unfolds in social contexts where learners have both informational goals (e.g., to learn how something works) but also social goals (e.g., to appear competent and impress others). How do these different factors shape learners' decisions? Here, we present a computational model that integrates the value of social and informational goals to predict the decisions that people will make in a simple active causal learning task. We show that, in a context where the informational and social goals are in conflict, an emphasis on performance or self-presentation goals leads to reduced chances of learning (Exp. 1) and that social context can push learners to pursue performance-oriented actions even when the learning goal is highlighted (Exp. 2). Our formal model of social-active learning successfully captures the empirical results. These findings are first steps towards understanding the role of social reasoning in active learning contexts."
+    "Our actions shape what we learn. Because of this dependency, learners are proficient at choosing their actions to maximize their information gain. However, learning often unfolds in social contexts where learners have both informational goals (e.g., to learn how something works) but also social goals (e.g., to appear competent and impress others). How do these goals shape learners' decisions? Here, we present a computational model that integrates the value of social and informational goals to predict the decisions that people will make in a simple active causal learning task. We show that, in a context where the informational and social goals are in conflict, an emphasis on performance or self-presentation goals leads to reduced chances of learning (Exp. 1) and that social context can push learners to pursue performance-oriented actions even when the learning goal is highlighted (Exp. 2). Our formal model of social-active learning successfully captures the empirical results. These findings are first steps towards understanding the role of social reasoning in active learning contexts."
     
 keywords:
     "active learning; social reasoning; information gain; OED; self-presentation; goal tradeoffs"
@@ -26,7 +26,9 @@ image_path <- "writing/cogsci2018/figs/"
 library(png); library(grid)
 library(gridExtra); library(xtable)
 library(tidyverse); library(here);
-library(jsonlite); library(binom)
+library(jsonlite); library(binom);
+library(stringr); library(coda);
+library(forcats)
 
 source(here("R/soc_info_helpers.R"))
 ```

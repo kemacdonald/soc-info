@@ -1,0 +1,72 @@
+---
+title: "Csv-to-json processing"
+author: "Erica Yoon"
+date: "1/24/2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+library(knitr); library(magrittr); library(tidyverse); library(here); library(jsonlite)
+source(here("R/soc_info_helpers.R"))
+```
+
+Read data. 
+
+```{r}
+d_path <- "data/03_merged_data"
+d_prior <- read_csv(here("data/02_tidy_data/goal_actions_prior_tidy.csv"))
+d <- read_csv(here(d_path, "goal_actions_master.csv"))
+```
+
+expt 1.
+
+change data structure.
+
+```{r}
+d_e1 <- d %>%
+  filter(str_detect(experiment, "e1")) %>%
+  mutate(hypothesis_type = factor(hypothesis_type) %>% fct_rev(),
+              hypothesis = factor(hypothesis) %>% fct_rev(),
+              condition = fct_recode(condition,
+                         "noGoal" = "nogoal")) %>%
+  select(id, condition, action_response) %>%
+  mutate(goal = condition,
+         action = action_response) %>%
+  select(id, goal, action)
+```
+
+write data to json.
+```{r}
+write_json(d_e1, path=here("model/BDA/e1/e1-actionData.json"))
+```
+
+
+
+
+expt 2.
+
+change data structure.
+
+```{r}
+d_e2 <- d %>% 
+  filter(str_detect(experiment, "e2")) %>%
+  mutate(hypothesis_type = factor(hypothesis_type) %>% fct_rev(),
+              hypothesis = factor(hypothesis) %>% fct_rev(),
+              condition = fct_recode(condition,
+                         "noGoal" = "nogoal")) %>%
+  select(id, social_condition, condition, action_response) %>%
+  mutate(obsPres = as.numeric(as.character(fct_recode(social_condition,
+                              "0" = "no-social",
+                              "1" = "social"))),
+         goal = condition,
+         action = action_response) %>%
+  select(id, obsPres, goal, action)
+```
+
+write data to json.
+```{r}
+write_json(d_e2, path=here("model/BDA/e2/e2-actionData.json"))
+```
+
+

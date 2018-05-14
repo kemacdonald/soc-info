@@ -179,8 +179,8 @@ action_plot_e1 <- d_e1 %>%
         panel.grid.major = element_blank(),
         plot.margin=unit(c(0.5,1,0.5,1),"cm"),
         text = element_text(size = 12),
-        axis.text.x.top = element_text(vjust = -0.5)) +
-  geom_hline(yintercept=.666, lty=2)
+        axis.text.x.top = element_text(vjust = -0.5))
+  # geom_hline(yintercept=.666, lty=2)
 ```
 
 Make a table of the raw counts.
@@ -322,8 +322,8 @@ action_plot_e2 <- d_e2 %>%
   theme(panel.border = element_rect(fill=NA, size=0.5, color = "grey"),
         panel.grid.minor = element_blank(),
         panel.grid.major = element_blank(),
-        plot.margin=unit(c(0.5,1.2,0.5,1),"cm")) +
-  geom_hline(yintercept=.666, lty=2)
+        plot.margin=unit(c(0.5,1.2,0.5,1),"cm"))
+  # geom_hline(yintercept=.666, lty=2)
 ```
 
 ```{r bda}
@@ -393,8 +393,8 @@ data_mod_comp <- ggplot(data_mod, aes(x = goal, y = prob, fill = context)) +
         panel.grid.minor = element_blank(),
         panel.grid.major = element_blank(),
         plot.margin=unit(c(0.5,1.2,0.5,1),"cm")) +
-  facet_grid(source~.) +
-  geom_hline(yintercept=.666, lty=2)
+  facet_grid(source~.)
+  # geom_hline(yintercept=.666, lty=2)
 
 ```
 

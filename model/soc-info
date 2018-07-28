@@ -1,0 +1,172 @@
+//////////////////
+// utils
+////////////////
+
+
+var rawProb = function(dist, val) {
+  Math.pow(Math.E, dist.score(val))
+};
+           
+var getSymbolEnt = function(prob) {
+  prob == 0 ? 0 : prob*Math.log2(prob)* -1
+};
+
+var computeEntropy = function(probsVect) {
+  var entropyEach = map(function(x) { return getSymbolEnt(x) }, probsVect);  
+  var entropyTotal = sum(entropyEach);
+  return entropyTotal;
+};
+
+var bayesFun = function(A, B, BGivenA) {
+  (A * BGivenA) / B
+}
+
+var infoGainAnswer = function(priorEnt, condProbs) {
+  var posteriorEnt = computeEntropy(condProbs);
+  return priorEnt - posteriorEnt;
+}
+
+var infoGainQuestion = function(infoGainAnswerVect, probAnswerVect) {
+  var multiply = function(x, y) { return x * y; };
+  var posteriorEnt = sum(map2(multiply, infoGainAnswerVect, probAnswerVect));
+  return posteriorEnt
+}
+
+var round = function(x){
+  return Math.round(x * 100) / 100
+}
+
+// goal weights
+var weightBins = map(round, _.range(0,1, 0.1))
+var phiWeights = repeat(weightBins.length, function(){1})
+var goalWeightPrior = Infer({model: function(){
+  return uniformDraw(weightBins)
+}})
+
+var nBins = weightBins.length;
+var kernelWidth = weightBins.length / 4;
+// var kernelWidth = 10 / 4; // FIXME: hacky
+var kernelFn = function(prevVal){
+  var i = weightBins.indexOf(prevVal);
+  var upper = (i + kernelWidth) > nBins ? nBins : i + kernelWidth;
+  var lower = (i - kernelWidth) < 0 ? 0 : i - kernelWidth;
+  return Categorical({vs: weightBins.slice(lower,upper),
+                      ps: phiWeights.slice(lower,upper)})
+}
+
+//////////////////
+// define
+////////////////
+
+var goals = ["learn", "perform", "present", "no-goal"];
+var obsPres = [0, 1];
+
+var machineTypes = ["button", "handle", "both"];
+
+// p(machine)
+var machineTypePrior = Categorical({vs: machineTypes,
+                                    ps: [.4, .4, .2]});
+
+// p(buttonPress)
+var actions = ["button", "handle", "both"];
+var actionPrior = Categorical({vs: actions,
+                                    ps: [.4, .3, .3]}); 
+
+// p(music | action)
+var playMusic = function(action) {
+  (action == "button") ? .4:
+  (action == "handle") ? .4:
+  (action == "both") ? 1:
+  0
+}
+
+// p(machine identity | action & music)
+var testMachine = function(state, action) {
+  return (action == "button" ? 
+          Categorical({vs: machineTypes, 
+                       ps: [1, 0, 0]}) :
+          action == "handle" ? 
+          Categorical({vs: machineTypes, 
+                       ps: [0, 1, 0]}) :
+          action == "both" ? 
+          Categorical({vs: machineTypes, 
+                       ps: [0.4, 0.4, 0.2]}) :
+          "nothing");
+}
+
+// compute info gain for question involving a particular button press (A, B, or A&B)
+var igQuestion = function(action) {
+  var priorEntLearner = computeEntropy(
+    map (function (x) { return Math.pow(Math.E, machineTypePrior.score(x))}, 
+         machineTypes));
+
+  var igAnswerYes = infoGainAnswer(priorEntLearner, 
+                                    map(function(x) 
+                                        {return rawProb(testMachine("state", action),x)}, 
+                                        machineTypes))
+  var igAnswerNo = infoGainAnswer(priorEntLearner, 
+                                    map(function(x) {return 1-rawProb(testMachine("state", action),x)}, 
+                                        machineTypes))
+
+  return infoGainQuestion(
+                 [igAnswerYes, igAnswerNo],
+                 [playMusic(action), 
+                  1-playMusic(action)])
+};
+
+
+//////////////////
+// model
+////////////////
+
+// var optimality = 1.7;
+var parameter = {
+	optimality: uniformDrift({a: 0, b: 10, width:0.1})
+};
+
+var observer1 = cache(function(action) {
+   return Infer({method: "enumerate"}, 
+function() {
+     var competence = playMusic(action);
+     return competence;
+  }); 
+}, 10000)
+
+var learner1 = cache(function(phi_learning, phi_perf, phi_pres, observerPresent) {
+   return Infer({method: "enumerate"}, function() {
+     var action = sample(actionPrior);
+     var competence = uniformDraw([0,1]);
+
+var O1 = observer1(action);
+
+    var learningUtility = phi_learning*igQuestion(action)/Math.log2(actions.length)
+    var presentationUtility = observerPresent*phi_pres*rawProb(O1,competence)
+   var performanceUtility = phi_perf*playMusic(action)
+   
+    var learnerUtility = observerPresent == 1 ? 
+    learningUtility + presentationUtility + performanceUtility :
+    learningUtility + performanceUtility
+
+    factor(parameter.optimality*learnerUtility)
+    return action;  
+   
+  });   
+}, 10000)
+
+// _.flattenDeep(
+// map(function(phi_learning){
+// map(function(phi_perf){
+// map(function(phi_pres){
+//     map(function(observerPresent){
+//       var actionProbs = learner1(phi_learning, phi_perf, phi_pres, observerPresent)
+//       var actObj = _.fromPairs(map(function(a){
+//         [a, Math.exp(actionProbs.score(a))]
+//       }, actions))
+//        return extend(actObj,{ phi_learning: phi_learning, phi_perf: phi_perf, phi_pres: phi_pres, obsPres: observerPresent})
+//     }, obsPres)
+// }, weightBins)
+// }, weightBins)
+// }, weightBins)
+// )
+
+learner1(0.5, 0.5, 0.5, 0)

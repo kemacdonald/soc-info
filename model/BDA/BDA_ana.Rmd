@@ -35,37 +35,37 @@ options("scipen"=10)
 # expt 1
 
 ```{r jsonToDataFrame}
-bda1 <- fromJSON(here("model/BDA/e1/results/soc-info-ver1-mcmc10000_burn5000_chain1.json"), flatten = TRUE, simplifyDataFrame = TRUE)
-# bda2 <- fromJSON(here("model/BDA/results/soc-info-ver1-mcmc100000_burn50000_chain2.json"), flatten = TRUE, simplifyDataFrame = TRUE)
-# bda3 <- fromJSON(here("model/BDA/results/soc-info-ver1-mcmc100000_burn50000_chain3.json"), flatten = TRUE, simplifyDataFrame = TRUE)
-# bda4 <- fromJSON(here("model/BDA/results/soc-info-ver1-mcmc100000_burn50000_chain4.json"), flatten = TRUE, simplifyDataFrame = TRUE)
-
-d <-
-  bda1$support %>%
-  # rbind(bda1$support %>%
-  #            mutate(chain = 1),
-  #          bda2$support %>%
-  #            mutate(chain = 2),
-  #          bda3$support %>%
-  #            mutate(chain = 3),
-  #          bda4$support %>%
-  #            mutate(chain = 4)
-  #       ) %>%
-  gather(parameter, value) %>%
-  # gather(parameter, value, -chain) %>%
-  separate(parameter, c("parameter", "goal", "action")) %>%
-  mutate(goal = fct_recode(goal,
-                           "no goal" = "noGoal"))
-
+# bda1 <- fromJSON(here("model/BDA/e1/results/soc-info-ver1-mcmc10000_burn5000_chain1.json"), flatten = TRUE, simplifyDataFrame = TRUE)
+# # bda2 <- fromJSON(here("model/BDA/results/soc-info-ver1-mcmc100000_burn50000_chain2.json"), flatten = TRUE, simplifyDataFrame = TRUE)
+# # bda3 <- fromJSON(here("model/BDA/results/soc-info-ver1-mcmc100000_burn50000_chain3.json"), flatten = TRUE, simplifyDataFrame = TRUE)
+# # bda4 <- fromJSON(here("model/BDA/results/soc-info-ver1-mcmc100000_burn50000_chain4.json"), flatten = TRUE, simplifyDataFrame = TRUE)
+# 
+# d <-
+#   bda1$support %>%
+#   # rbind(bda1$support %>%
+#   #            mutate(chain = 1),
+#   #          bda2$support %>%
+#   #            mutate(chain = 2),
+#   #          bda3$support %>%
+#   #            mutate(chain = 3),
+#   #          bda4$support %>%
+#   #            mutate(chain = 4)
+#   #       ) %>%
+#   gather(parameter, value) %>%
+#   # gather(parameter, value, -chain) %>%
+#   separate(parameter, c("parameter", "goal", "action")) %>%
+#   mutate(goal = fct_recode(goal,
+#                            "no goal" = "noGoal"))
+# 
 # save(d, file=here("model/BDA/results/soc-info-ver1-mcmc100000_burn50000_4chains.RData"))
 
-# load(here("model/BDA/results/soc-info-ver1-mcmc100000_burn50000_4chains.RData"))
+load(here("model/BDA/e2/results/soc-info-ver1-mcmc100000_burn50000_4chains.RData"))
 ```
 
 ```{r phi and beta}
 d %>%
   filter(grepl("phi", parameter)) %>%
-  group_by(parameter, goal) %>%
+  group_by(parameter, goal, obsPres) %>%
   summarise(mean = mean(value)) %>%
   ungroup() %>%
   mutate(phi = fct_recode(parameter,
@@ -78,7 +78,49 @@ d %>%
   # facet_grid(.~context, labeller=label_both) +
   ylim(0,1) +
   scale_fill_solarized() +
-  ylab("phi value")
+  ylab("phi value") +
+  facet_grid(.~obsPres)
+
+d %>%
+  filter(grepl("phi", parameter)) %>%
+  group_by(parameter, goal, obsPres) %>%
+  summarise(mean = mean(value)) %>%
+  ungroup() %>%
+  mutate(phi = fct_recode(parameter,
+                          "learning" = "phiLearning",
+                          "performance" = "phiPerformance",
+                          "presentation" = "phiPresentation"
+                          )) %>%
+  ggplot(., aes(x = interaction(context, goal), y = mean, fill = phi, 
+                group = phi, order=phi)) +
+  geom_bar(data=d_phi_exploit,
+           stat="identity", width=.3, position = position_stack(reverse = TRUE)) +
+  geom_bar(data=d_phi_explore,
+           position=position_nudge(x=-.3), stat="identity", width=.3) +
+  ylim(0,1) +
+  # annotate(geom = "text", label = d_phi$context) +
+  # annotate(geom = "text", label = unique(d_phi$goal)) +
+  ggthemes::scale_fill_ptol() +
+  ylab("phi value") +
+  xlab(NULL) +
+  theme_few() +
+  scale_x_discrete(position = "bottom", 
+                   labels = c("no-social\nlearning", "social\nlearning", 
+                              "no-social\nno-goal", "social\nno-goal",
+                              "no-social\nperformance", "social\nperformance",
+                              "social\npresentation")) +
+  labs(x = NULL, y = "phi value", color = "action response: ") +
+  theme(
+    axis.text.x = element_text(vjust=1, hjust=0.8, angle=35, size=8),
+    # axis.text.x = element_blank(),
+    axis.ticks = element_blank(),
+    panel.border = element_rect(fill=NA, size=0.5, color = "grey"),
+    panel.grid.minor = element_blank(),
+    panel.grid.major = element_blank(),
+    plot.margin=unit(c(0.5,1,0.5,1.2),"cm"),
+    legend.position = "top",
+    legend.direction = "horizontal",
+    legend.text=element_text(size=8))
 
 ```
 

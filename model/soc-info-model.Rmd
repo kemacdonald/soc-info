@@ -16,6 +16,7 @@ library(gganimate)
 library(RColorBrewer)
 library(cowplot)
 library(here)
+library(langcog)
 
 ```
 
@@ -50,14 +51,36 @@ var infoGainQuestion = function(infoGainAnswerVect, probAnswerVect) {
   var posteriorEnt = sum(map2(multiply, infoGainAnswerVect, probAnswerVect));
   return posteriorEnt
 }
+
+var round = function(x){
+  return Math.round(x * 100) / 100
+}
+
+// goal weights
+var weightBins = map(round, _.range(0,1, 0.1))
+var phiWeights = repeat(weightBins.length, function(){1})
+var goalWeightPrior = Infer({model: function(){
+  return uniformDraw(weightBins)
+}})
+
+var nBins = weightBins.length;
+var kernelWidth = weightBins.length / 4;
+// var kernelWidth = 10 / 4; // FIXME: hacky
+var kernelFn = function(prevVal){
+  var i = weightBins.indexOf(prevVal);
+  var upper = (i + kernelWidth) > nBins ? nBins : i + kernelWidth;
+  var lower = (i - kernelWidth) < 0 ? 0 : i - kernelWidth;
+  return Categorical({vs: weightBins.slice(lower,upper),
+                      ps: phiWeights.slice(lower,upper)})
+}
+
 '
 ```
 
 ```{r define}
 define <- '
-var obsPres = [1, 0];
-//var weightBins = [0.1, 0.3, 0.5, 0.7, 0.9]
-var weightBins = [0.9, 0.3, 0.5, 0.7, 0.1]
+var goals = ["learn", "perform", "present", "no-goal"];
+var obsPres = [0, 1];
 
 var machineTypes = ["button", "handle", "both"];
 
@@ -110,9 +133,8 @@ var igQuestion = function(action) {
                  [igAnswerYes, igAnswerNo],
                  [playMusic(action), 
                   1-playMusic(action)])
-}
+};
 
-var optimality = 1.7;
 '
 ```
 
@@ -120,6 +142,11 @@ var optimality = 1.7;
 
 ```{r soc-info}
 socInfo <-'
+// var optimality = 1.7;
+var parameter = {
+	optimality: uniformDrift({a: 0, b: 10, width:0.1})
+};
+
 var observer1 = cache(function(action) {
    return Infer({method: "enumerate"}, 
 function() {
@@ -128,44 +155,46 @@ function() {
   }); 
 }, 10000)
 
-var learner1 = cache(function(phi, beta_pres, observerPresent) {
+var learner1 = cache(function(phi_learning, phi_perf, phi_pres, observerPresent) {
    return Infer({method: "enumerate"}, function() {
      var action = sample(actionPrior);
      var competence = uniformDraw([0,1]);
+
 var O1 = observer1(action);
 
-    var learningUtility = phi*igQuestion(action)
-    var presentationUtility = observerPresent*beta_pres*rawProb(O1,competence)
-   var performanceUtility = (1-phi)*playMusic(action)
+    var learningUtility = phi_learning*igQuestion(action)/Math.log2(actions.length)
+    var presentationUtility = observerPresent*phi_pres*rawProb(O1,competence)
+   var performanceUtility = phi_perf*playMusic(action)
+   
+    var learnerUtility = observerPresent == 1 ? 
+    learningUtility + presentationUtility + performanceUtility :
+    learningUtility + performanceUtility
 
-    var learnerUtility = learningUtility + presentationUtility + performanceUtility;
-
-    factor(optimality*learnerUtility)
+    factor(parameter.optimality*learnerUtility)
     return action;  
    
   });   
 }, 10000)
-
-
-
-//learner1(0.5, 0.6, 1)
 '
 ```
 
 ```{r}
 learnerCall <- '
 _.flattenDeep(
-map(function(phi){
-map(function(beta_pres){
+map(function(phi_learning){
+map(function(phi_perf){
+map(function(phi_pres){
     map(function(observerPresent){
-      var actionProbs = learner1(phi, beta_pres, observerPresent)
+      var actionProbs = learner1(phi_learning, phi_perf, phi_pres, observerPresent)
       var actObj = _.fromPairs(map(function(a){
         [a, Math.exp(actionProbs.score(a))]
       }, actions))
-       return extend(actObj,{ phi: phi, beta_pres: beta_pres, obsPres: observerPresent})
+       return extend(actObj,{ phi_learning: phi_learning, phi_perf: phi_perf, phi_pres: phi_pres, obsPres: observerPresent})
     }, obsPres)
 }, weightBins)
-}, weightBins))
+}, weightBins)
+}, weightBins)
+)
 '
 ```
 
@@ -176,19 +205,30 @@ rs.l1 <- webppl(paste(utils, define, socInfo, learnerCall,  sep = '\n'))
 
 
 rs.l1.tidy <- data.frame(rs.l1) %>% 
-  gather(key=action, value=prob, -phi, -obsPres, -beta_pres)
+  gather(key=action, value=prob, -phi_learning, -phi_perf, -phi_pres, -obsPres)
 ```
 
 ```{r}
+rs.l1.tidy %<>%
+  mutate(goal = factor(case_when(
+    phi_learning > .6 & phi_perf < .4 & phi_pres < .4 ~ "learning",
+    phi_learning < .4 & phi_perf > .6 & phi_pres < .4 ~ "performance",
+    phi_learning < .4 & phi_perf < .4 & phi_pres > .6 ~ "presentation",
+    TRUE ~ "NA"
+  )))
+
 fig.l1 <- ggplot(rs.l1.tidy %>%
-                   filter(beta_pres == "0.7") %>%
-                   mutate(action = relevel(factor(action), ref="both")),
+                   filter(goal!="NA") %>%
+                   mutate(action = relevel(factor(action), ref="both")) %>%
+                   group_by(goal, obsPres, action) %>%
+                   multi_boot_standard(col="prob") %>%
+                   mutate(prob = mean) %>%
+                   select(-mean),
        aes( x = action, y = prob, group = action, fill = action) )+
   geom_bar(position = position_dodge(), stat = 'identity', color = 'black')+
   scale_y_continuous(limits = c(0, 0.9), breaks = c(0, 0.25, 0.5, 0.75))+
-  facet_grid(obsPres~phi, labeller=label_both)+
-  # scale_fill_manual(values =  rev(brewer.pal(5,"RdBu")))+
-  # scale_fill_manual(values =  brewer.pal(4,"RdBu"))+
+  facet_grid(obsPres~goal, labeller=label_both)+
+  geom_errorbar(aes(ymin = ci_lower, ymax = ci_upper, position="dodge")) +
   scale_fill_solarized()+
   guides(fill = F)+
   theme_few()+

@@ -170,6 +170,8 @@ var O1 = observer1(action);
     learningUtility + presentationUtility + performanceUtility :
     learningUtility + performanceUtility
 
+// 	var learnerUtility = learningUtility + performanceUtility
+
     factor(parameter.optimality*learnerUtility)
     return action;  
    
@@ -190,6 +192,7 @@ beta: sample(goalWeightPrior)
 }
 
     var normalized_goalWeights = normalize([phiLearnPerf.phi, 1-phiLearnPerf.phi, betaPres.beta])
+//     var normalized_goalWeights = normalize([phiLearnPerf.phi, 1-phiLearnPerf.phi])
     
 	var actionData = _.filter(data, {obsPres: observerPresent, goal: goal});
 	var exptConditionInfo = {
@@ -249,7 +252,7 @@ var method = "MCMC";
 var samples = numSamples;
 var burn = numSamples / 2;
 var posterior = Infer({model, method, samples, burn, verbose: true})
-var filename = 'results/soc-info-ver1-mcmc'+
+var filename = 'results/soc-info-ver2-2utilities-mcmc'+
 numSamples+'_burn'+burn+'_chain'+index+'.json'
 
 json.write(filename, posterior)

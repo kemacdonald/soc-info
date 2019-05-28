@@ -10,4 +10,5 @@ packrat/lib*/
 auth.json
 /data/01_raw_data/
 .Rproj.user
-.DS_Store
+*.DS_Store
+*.icloud

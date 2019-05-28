@@ -1,0 +1,187 @@
+body {
+	margin:0 0 0 0; /*squish slide into mturk window*/
+}
+
+table {
+	/* center all tables by default */
+	margin: auto;
+}
+
+/*the experiment happens in "slides"*/
+.slide {
+	/*pad the inside of the slide*/
+	padding-top: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+
+    /*center slide within the window*/
+	margin: auto auto;
+	margin-top: 0px;
+
+	/*all elements in a slide will be centered by default*/
+    text-align: center;
+
+    border: 1px solid #04abe3;
+    width: 800px;
+    height: 600px;
+
+    /*could explicitly set the following, but these are the defaults for me (chrome, linux)*/
+    font-size: 20px;
+    background-color: rgb(255,255,255);
+}
+
+/* start slide */
+
+#langcoglab {
+	font-weight: bold;
+}
+
+#legal {
+	font-size: 0.8em;
+	text-align: justify;
+	padding-top: 20px;
+}
+
+/*make the subj_info slide prettier*/
+
+.subj_info_title {
+	color:#036;
+	background:transparent;
+	font-size:25;
+	font-weight:bold;
+}
+
+div.long_form {
+	font-size: 15px;
+}
+
+fieldset {
+	border: none;
+	border-top: solid 1px #ccc;
+}
+
+div.long_form p {
+    color:#036;
+    margin: 20px 0 0 0;
+}
+
+div.long_form p.info {
+    margin:0 0 40px 0;
+    padding:0;
+    color:black;
+}
+
+div.long_form label {
+	padding: .5em .5em;
+}
+
+textarea {
+	border: 2px inset;
+}
+
+/* make buttons prettier */
+
+button {
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f9f9f9), color-stop(1, #e9e9e9));
+	background:-moz-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
+	background:-webkit-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
+	background:-o-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
+	background:-ms-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
+	background:linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9', endColorstr='#e9e9e9',GradientType=0);
+	background-color:#f9f9f9;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+button:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #e9e9e9), color-stop(1, #f9f9f9));
+	background:-moz-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+	background:-webkit-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+	background:-o-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+	background:-ms-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+	background:linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e9e9e9', endColorstr='#f9f9f9',GradientType=0);
+	background-color:#e9e9e9;
+}
+button:active {
+	position:relative;
+	top:1px;
+}
+
+/* sliders */
+
+
+/*align the left and right labels for the sliders properly*/
+.slider_table .left {
+	display: inline;
+	text-align: left;
+	float: left;
+}
+
+.slider_table .right {
+	display: inline;
+	text-align: right;
+	float: right;
+}
+
+.slider_target {
+	text-align: right;
+}
+
+.ui-slider-range {
+	/* you could have a "range" which makes the slider to the left of the handle a different color from the background */
+	background: transparent;
+}
+
+#logo {
+    width: 300px;
+    margin: 10px;
+}
+
+.slider {
+	width: 400;
+	margin: 10px;
+}
+
+/* Progress Bar */
+.progress{
+  position: absolute;
+  right: 200px;
+  top: 575px;
+}
+
+.progress span{
+  position:relative;
+  top: -6px;
+}
+
+.bar-wrapper{
+    height:20px;
+    width:200px;
+    border:1px solid #000000;
+    display:inline-block;
+}
+
+.bar{
+    position:relative;
+    height:100%;
+    width:0px;
+    background-color:#000000
+}

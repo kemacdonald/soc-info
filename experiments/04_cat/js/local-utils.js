@@ -26,16 +26,28 @@ const build_radio_html = (img_name, div_id) => {
   $(`#${div_id}`).html(html)
 }
 
-const build_final_prompt = (condition) => {
-  switch (condition) {
+const build_final_prompt = (goal_condition, social_condition) => {
+
+  if (social_condition == "social" ) {
+    $("#final_toy_prompt").html("Bob came back from making lunch, <br> but you only have time to play with one more toy.");
+    $("#bob_test").css('visibility', 'visible')
+  } else {
+    $("#final_toy_prompt").html("Bob is still in the kitchen making lunch, <br> but you only have time to play with one more toy.");
+    $("#bob_test").css('visibility', 'hidden')
+  }
+
+  switch (goal_condition) {
+    case "no-goal":
+      $(".display_condition").html(`You will receive a ${exp.bonus_amt} cent bonus <br> if you pay attention.`)
+      break;
     case "activation":
-      $(".display_condition").html("and you want to hear music.")
+      $(".display_condition").html(`Imagine you want to hear music. You will receive a ${exp.bonus_amt} cent bonus <br> if you are able to play music.`)
       break;
     case "learning":
-      $(".display_condition").html("and you want to learn about these toys.")
+      $(".display_condition").html(`Imagine you want to learn about these toys. You will receive a ${exp.bonus_amt} cent bonus <br>if you are able to learn about the toys.`)
       break;
     case "presentation":
-      $(".display_condition").html("and you want to impress Bob.")
+      $(".display_condition").html(`Imagine you want to impress Bob. You will receive a ${exp.bonus_amt} cent bonus <br> if you are able to impress him.`)
       break;
     default:
   }
@@ -57,7 +69,7 @@ const update_toy_set = (selected_img) => {
 const handle_img_click = (slide_name) => {
   $("img").one("click", function() {
     const selected_img = $(this).attr('src').replace("media/", "");
-    if (selected_img != "bob.png") {
+    if ( _.contains(exp.img_keys, selected_img) ) {
       $(this).css('border', "solid 4px green");
       update_toy_set(selected_img);
       if (slide_name == "toy_training_trial") {
@@ -78,6 +90,7 @@ const clear_training_slide = () => {
   $('#action_prompt').hide()
   $("#submit_action").hide()
   $("#error_msg").hide()
+  $("#notes_gif_actions").css('visibility', 'hidden');
 }
 
 const show_select_prompt = (img_array) => {
@@ -86,7 +99,7 @@ const show_select_prompt = (img_array) => {
       $("#toy_select_prompt").html("Which one of Bob's toys do you want to play with first?")
       break;
     case 2:
-      $("#toy_select_prompt").html("Bob is still making food in the kitchen. Which toy do you want to play with next?")
+      $("#toy_select_prompt").html("Bob is still making food in the kitchen and can't see or hear you. Which toy do you want to play with next?")
       break;
     default:
   }
@@ -144,10 +157,16 @@ const enable_button = (button_id) => {
 
 const show_failure_msg = () => {
 	$("#error_msg").hide()
+  $("#submit_action").html("Try Again")
   $("#action_prompt").css('visibility', 'hidden');
-  $("#submit_action").css('visibility', 'hidden');
+  //$("#submit_action").css('visibility', 'hidden');
   $("#error_msg").css('color', 'red');
-  $("#error_msg").html("Oh no, that didn't work! You couldn't make the toy play music. <br> <font color='black'> Click <font color = 'blue'>[here]</font> to try again.</font>")
+  if ( check_bob_present() ) {
+    $("#error_msg").html(`Bob says, "Hmm, that didn't work! You couldn't make this toy play music."`)
+  } else {
+    $("#error_msg").html(`That didn't work! You couldn't make this toy play music.`)
+  }
+
   $("#error_msg").show()
 }
 
@@ -169,13 +188,8 @@ const show_success_msg = (n_successes) => {
   $("#error_msg").show()
 }
 
-
-const handle_failure = (curr_toy) => {
-  disable_radios("action_select");
-	disable_button("submit_action");
-  show_failure_msg();
-
-  $("#error_msg").one("click", function() {
+const init_try_again = (curr_toy) => {
+    disable_button("submiit_action")
     const fade_duration = 2000;
     const fade_opacity = 0;
     const is_bob_present = check_bob_present();
@@ -183,7 +197,6 @@ const handle_failure = (curr_toy) => {
     if (is_bob_present) {
       show_leave_msg();
       $("img#bob").fadeTo(fade_duration, fade_opacity)
-
       setTimeout(function() {
         $("#error_msg").hide()
         _s.build_action_selection(curr_toy);
@@ -191,15 +204,22 @@ const handle_failure = (curr_toy) => {
     } else {
       exp.slides.toy_training_trial.build_action_selection(curr_toy);
     }
-  });
 }
 
+const get_music = (music_path) => {
+  $("#sound_player").attr("src", `media/${music_path}`);
+}
+
+
+const handle_failure = () => {
+  disable_radios("action_select");
+  show_failure_msg();
+}
 
 const handle_success = (n_successes, curr_toy) => {
 	disable_radios("action_select");
 	disable_button("submit_action");
-  show_success_msg(n_successes);
-
+  $("#notes_gif_actions").css('visibility', 'visible');
   const myAudio = $('#sound_player')[0];
   myAudio.play();
 
@@ -208,7 +228,7 @@ const handle_success = (n_successes, curr_toy) => {
       $('#sound_player').off('ended') // remove event listener
       exp.go()
     } else {
-      console.log()
+      show_success_msg(n_successes);
       exp.slides.toy_training_trial.build_action_selection(curr_toy);
     }
   });

@@ -21,8 +21,8 @@ function make_slides(f) {
   slides.toy_training_trial = slide({
     name: "toy_training_trial",
     start: function() {
-      this.action_counter = 1;
-      this.success_counter = 0;
+      this.action_counter = 1; this.success_counter = 0;
+      get_music( exp.music_keys.pop() );
       clear_training_slide();
       show_select_prompt(exp.img_keys);
       build_img_html(exp.img_keys, "toy_imgs_train");
@@ -31,47 +31,48 @@ function make_slides(f) {
     build_action_selection: function(curr_img) {
       build_radio_html(curr_img, "toy_action_radios");
       show_action_prompts();
+      $("#notes_gif_actions").css('visibility', 'hidden');
       enable_radios("action_select");
+      $("#submit_action").html("Submit Action");
       enable_button("submit_action");
       $("#play_music").prop('disabled', true); // disable the music button so participant can only play once
       this.toy = curr_img;
       this.start_time = Date.now();
     },
     submit_action: function() {
-
-      if (check_radio_buttons("action_select")) {
-
-        const curr_action = $(`input[name='action_select']:checked`).val();
-        if (this.action_counter == 1) {
-          this.toy_type = get_toy_type(curr_action)
-        };
-        const curr_success = curr_action == this.toy_type
-
-        exp.data_trials.push({
-          "trial_type": this.name,
-          "toy": this.toy,
-          "toy_type": this.toy_type,
-          "action_number": this.action_counter,
-          "action": curr_action,
-          "success": curr_success,
-          "rt": Date.now() - this.start_time
-        });
-
-        // change slide state
-        this.action_counter++
-
-        if (curr_success) {
-          this.success_counter++
-          handle_success(this.success_counter, this.toy);
-        } else {
-          handle_failure(this.toy)
-        }
-
+      if ($("#submit_action").html() == "Try Again") {
+        init_try_again(this.toy);
       } else {
-        show_error_msg();
+        if (check_radio_buttons("action_select")) {
+          const curr_action = $(`input[name='action_select']:checked`).val();
+          if (this.action_counter == 1) {
+            this.toy_type = get_toy_type(curr_action)
+          };
+          const curr_success = curr_action == this.toy_type
+
+          exp.data_trials.push({
+            "trial_type": this.name,
+            "toy": this.toy,
+            "toy_type": this.toy_type,
+            "action_number": this.action_counter,
+            "action": curr_action,
+            "success": curr_success,
+            "rt": Date.now() - this.start_time
+          });
+
+          this.action_counter++
+
+          if (curr_success) {
+            this.success_counter++
+            handle_success(this.success_counter, this.toy);
+          } else {
+            handle_failure(this.toy)
+          }
+        } else {
+          show_error_msg();
+        }
       }
     }
-
   });
 
   slides.final_toy_choice = slide({
@@ -80,11 +81,10 @@ function make_slides(f) {
       this.start_time = Date.now();
       $(".err").hide();
       build_img_html(exp.img_keys, "toy_imgs_test");
-      build_final_prompt(exp.condition);
+      build_final_prompt(exp.goal_condition, exp.social_condition);
       handle_img_click(this.name);
     },
     log_toy_choice: function(toy_selection) {
-      console.log(toy_selection)
       exp.data_trials.push({
         "trial_type": this.name,
         "toy": toy_selection,
@@ -120,7 +120,8 @@ function make_slides(f) {
       exp.data = {
         "trials": exp.data_trials,
         "system": exp.system,
-        "condition": exp.condition,
+        "goal_condition": exp.goal_condition,
+        "social_condition": exp.social_condition,
         "subject_information": exp.subj_data,
         "time_in_minutes": (Date.now() - exp.startT) / 60000
       };

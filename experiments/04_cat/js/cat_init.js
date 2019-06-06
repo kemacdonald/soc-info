@@ -1,10 +1,13 @@
 /// init ///
 function init() {
   exp.action_options = ["left", "right"];
-  exp.condition = _.sample(["learning", "activation", "presentation"]);
+  exp.goal_condition = _.sample(["learning", "activation", "presentation", "no-goal"]);
+  exp.social_condition = _.sample(["social", "no-social"]);
   exp.img_keys = _.shuffle(["cube-spinner.png", "cyl-lever.png", "tri-button.png"]);
+  exp.music_keys = _.shuffle(["song1_trim.mp3", "song2_trim.mp3", "song3_trim.mp3"]);
   exp.data_trials = [];
   exp.selected_toys = [];
+  exp.bonus_amt = 10;
   exp.system = {
     Browser: BrowserDetect.browser,
     OS: BrowserDetect.OS,

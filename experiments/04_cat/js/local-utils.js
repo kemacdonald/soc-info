@@ -37,17 +37,17 @@ const build_final_prompt = (goal_condition, social_condition) => {
   }
 
   switch (goal_condition) {
-    case "no-goal":
+    case "no_goal":
       $(".display_condition").html(`You will receive a ${exp.bonus_amt} cent bonus <br> if you pay attention.`)
       break;
     case "activation":
-      $(".display_condition").html(`Imagine you want to hear music. You will receive a ${exp.bonus_amt} cent bonus <br> if you are able to play music.`)
+      $(".display_condition").html(`Imagine you want to hear a toy make music. <br> You will receive a ${exp.bonus_amt} cent bonus if you are able to play music.`)
       break;
     case "learning":
-      $(".display_condition").html(`Imagine you want to learn about these toys. You will receive a ${exp.bonus_amt} cent bonus <br>if you are able to learn about the toys.`)
+      $(".display_condition").html(`Imagine you want to learn how each toy works. <br> You will receive a ${exp.bonus_amt} cent bonus if you are able to learn about the toys.`)
       break;
     case "presentation":
-      $(".display_condition").html(`Imagine you want to impress Bob. You will receive a ${exp.bonus_amt} cent bonus <br> if you are able to impress him.`)
+      $(".display_condition").html(`Imagine you want to show Bob that you are competent. <br> You will receive a ${exp.bonus_amt} cent bonus if you are able to show Bob you are competent.`)
       break;
     default:
   }
@@ -72,15 +72,17 @@ const handle_img_click = (slide_name) => {
     if ( _.contains(exp.img_keys, selected_img) ) {
       $(this).css('border', "solid 4px green");
       update_toy_set(selected_img);
+
       if (slide_name == "toy_training_trial") {
         $('#action_prompt').show()
         $('#toy_select_prompt').css('visibility', 'hidden')
         exp.slides.toy_training_trial.build_action_selection(selected_img)
       } else if (slide_name == "final_toy_choice") {
-        setTimeout(function() {
-          exp.slides.final_toy_choice.log_toy_choice(selected_img)
-        }, 2000);
+        exp.slides.final_toy_choice.toy_selection = selected_img; // stores toy selection with slide info
+        $("#adv_qa").show();
+        $("#why_prompt").show()
       }
+
     }
   });
 }
@@ -173,7 +175,7 @@ const show_failure_msg = () => {
 const show_leave_msg = () => {
 	$("#error_msg").hide()
   $("#error_msg").css('color', 'black');
-  $("#error_msg").html("Bob just left to make lunch in the kitchen and <br> won’t be able to see or hear you.")
+  $("#error_msg").html("Bob just left to make lunch in the kitchen and <br> won't be able to see or hear you.")
   $("#error_msg").show()
 }
 
@@ -231,5 +233,20 @@ const handle_success = (n_successes, curr_toy) => {
       show_success_msg(n_successes);
       exp.slides.toy_training_trial.build_action_selection(curr_toy);
     }
+  });
+}
+
+const extract_goal_condition = (cond) => {
+  return cond.split("-")[0]
+}
+
+const extract_soc_condition = (cond) => {
+  return cond.split("-")[1]
+}
+
+const get_ip = () => {
+  $.getJSON('https://ipapi.co/json/', function(data) {
+    const ip_data = JSON.stringify(data, null, 2);
+    return ip_data
   });
 }

@@ -4,6 +4,10 @@
   margin: 10px;
 }
 
+.display_condition {
+  font-weight: bold;
+}
+
 #bob_toys {
   width: 300px;
   margin: auto;
@@ -28,7 +32,6 @@
   padding: 5px;
 }
 
-/* Clear floats after image containers */
 .row::after {
   content: "";
   clear: both;

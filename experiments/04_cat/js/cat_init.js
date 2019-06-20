@@ -1,8 +1,12 @@
 /// init ///
 function init() {
   exp.action_options = ["left", "right"];
-  exp.goal_condition = _.sample(["learning", "activation", "presentation", "no-goal"]);
-  exp.social_condition = _.sample(["social", "no-social"]);
+  exp.condition = _.sample(["learning-social","learning-no_social",
+                            "activation-social", "activation-no_social",
+                            "presentation-social",
+                            "no_goal-social", "no_goal-no_social"]);
+  exp.goal_condition = extract_goal_condition(exp.condition);
+  exp.social_condition = extract_soc_condition(exp.condition);
   exp.img_keys = _.shuffle(["cube-spinner.png", "cyl-lever.png", "tri-button.png"]);
   exp.music_keys = _.shuffle(["song1_trim.mp3", "song2_trim.mp3", "song3_trim.mp3"]);
   exp.data_trials = [];
@@ -15,12 +19,18 @@ function init() {
     screenW: screen.width,
   };
   //blocks of the experiment
-  exp.structure = ["i0", "instructions", "toy_training_trial", "toy_training_trial", "final_toy_choice", "subj_info", "thanks"];
+  exp.structure = ["i0", "sound_test", "instructions", "toy_training_trial", "toy_training_trial", "final_toy_choice", "subj_info", "thanks"];
 
   //make corresponding slides:
   exp.slides = make_slides(exp);
 
-  $('.slide').hide(); //hide everything
+  // hide everything
+  $('.slide').hide();
+
+  // get client ip address and store in exp object
+  $.getJSON('https://ipapi.co/json/', function(data) {
+    exp.system.ip_data = data;
+  });
 
   //make sure turkers have accepted HIT (or you're not in mturk)
   $("#start_button").click(function() {

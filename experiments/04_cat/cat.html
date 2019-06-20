@@ -87,21 +87,38 @@
     </p>
   </div>
 
+  <div class="slide" id="sound_test">
+    <audio id="sound_player_check"><source src="media/shoe_find.mp3" type="audio/mpeg"></audio>
+    <p>We will first begin with a sound test to confirm working audio.</p>
+    <p><b>Please make sure that your computer's sound is at an appropriate volume.</b></p>
+    <p>To play the sound, press the button below.</p>
+    <br>
+    <button type="button" onClick="this.blur(); _s.play_test()">Test Sound</button>
+    <br><br>
+    <p>Please type in the name of the obect you were asked to find:</p>
+    <br>
+    <input type="text" id="soundtest_input" name="soundtest_input" size="30">
+    <br><br>
+    <button type="button" id="soundSubmit" onClick="_s.check_sound_test()">Submit</button>
+    <br><br>
+    <p class="err" id="soundtest_wrong"></p>
+  </div>
+
   <div class="slide" id="instructions">
     <h3>Instructions</h3>
-    <p>Imagine that you and your friend Bob are hanging out at Bob’s house,
-      and you see some of his favorite toys that you can try out.
-    </p>
-    <br>
-    <p> There are three toys that you can play with.</p>
+    <p>Imagine that you and your friend Bob are hanging out at Bob's house,
+      and you see some of his favorite toys that you can try.
+      There are three toys that you can play with.</p>
     <br>
     <div id="toy_imgs_intro"></div>
     <br>
-    <p>The toys were designed to work in different ways, but if you
-      choose the correct action, each toy will play music!</p>
-
-    <br><br>
-
+    <p>Each toy was built with two possible actions (left vs. right) and
+      designed so that when you perform the correct action, it will play music!
+    </p>
+    <br>
+    <p>But each toy was designed differently and you don't know which action (left vs. right)
+      will make that toy play music.</p>
+    <br>
     <button onclick="_s.button()">Continue</button>
   </div>
 
@@ -124,15 +141,24 @@
 
   <div class="slide" id="final_toy_choice">
     <p id="final_toy_prompt"></p>
-    <br>
     <p class="display_condition">{{}}</p>
     <br>
     <p>Which toy do you want to select?</p>
     <br>
     <div class="row">
-      <div class="test_column"><div id="toy_imgs_test"></div></div>
+      <div class="test_column">
+        <div id="toy_imgs_test"></div>
+        <div id="why_prompt">
+          <br>
+          <p>Why did you choose this toy?</p>
+          <textarea id="why_toy" rows="2" cols="40"></textarea>
+        </div>
+      </div>
       <div class="test_column" id="bob_test"><img src="media/bob.png" id="bob_test" style="width:40%" height="225px"></div>
     </div>
+
+    <button id="adv_qa" onclick="_s.log_toy_choice()">Click to Finish</button>
+    <p class="err" id="error_msg_toy_choice"></p>
 
   </div>
 

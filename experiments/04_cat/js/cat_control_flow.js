@@ -8,6 +8,28 @@ function make_slides(f) {
     }
   });
 
+  slides.sound_test = slide({
+    name: "sound_test",
+    start: function() {
+      $("#soundtest_wrong").hide();
+    },
+    play_test: function() {
+      $("#sound_player_check")[0].play();
+    },
+    check_sound_test: function() {
+      const user_input_word = $("#soundtest_input").val().trim().toLowerCase();
+      if ( user_input_word.length == 0 ) {
+        $("#soundtest_wrong").html("Please type in the object you were asked to find.")
+        $("#soundtest_wrong").show();
+      } else if ( user_input_word != "shoe" ) {
+        $("#soundtest_wrong").html("Hmm, that's the incorrect word. Please make sure your sound is on.")
+        $("#soundtest_wrong").show();
+      } else {
+        exp.go()
+      }
+    }
+  });
+
   slides.instructions = slide({
     name: "instructions",
     start: function() {
@@ -80,21 +102,31 @@ function make_slides(f) {
     start: function() {
       this.start_time = Date.now();
       $(".err").hide();
+      $("#why_prompt").hide()
+      $("#adv_qa").hide();
       build_img_html(exp.img_keys, "toy_imgs_test");
       build_final_prompt(exp.goal_condition, exp.social_condition);
       handle_img_click(this.name);
     },
     log_toy_choice: function(toy_selection) {
-      exp.data_trials.push({
-        "trial_type": this.name,
-        "toy": toy_selection,
-        "toy_type": "NA",
-        "action_number": "NA",
-        "action": "NA",
-        "success": "NA",
-        "rt": Date.now() - this.start_time
-      });
-      exp.go()
+      if ( $("#why_toy").val().trim().length > 0 ) { // checks if there is text
+        exp.data_trials.push({
+          "trial_type": this.name,
+          "toy": this.toy_selection,
+          "toy_type": "NA",
+          "action_number": "NA",
+          "action": "NA",
+          "success": "NA",
+          "rt": Date.now() - this.start_time,
+          "why_toy": $("#why_toy").val()
+        });
+        setTimeout(function() {
+          exp.go();
+        }, 500);
+      } else {
+        $('#error_msg_toy_choice').html("Please enter a response before advancing")
+        $('#error_msg_toy_choice').show()
+      };
     }
   });
 

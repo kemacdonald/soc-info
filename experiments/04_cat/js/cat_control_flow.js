@@ -104,6 +104,12 @@ function make_slides(f) {
       $(".err").hide();
       $("#why_prompt").hide()
       $("#adv_qa").hide();
+
+      if (exp.social_condition == "no_social") {
+        $("#bob_test").remove()
+        $( "div.test_column" ).removeClass()
+      }
+
       build_img_html(exp.img_keys, "toy_imgs_test");
       build_final_prompt(exp.goal_condition, exp.social_condition);
       handle_img_click(this.name);

@@ -26,23 +26,25 @@ function init() {
 
   // hide everything
   $('.slide').hide();
+  $('#').hide();
 
   // get client ip address and store in exp object
   $.getJSON('https://ipapi.co/json/', function(data) {
     exp.system.ip_data = data;
   });
 
-  //make sure turkers have accepted HIT (or you're not in mturk)
-  $("#start_button").click(function() {
-    if (turk.previewMode) {
-      $("#mustaccept").show();
-    } else {
-      $("#start_button").click(function() {
-        $("#mustaccept").show();
-      });
+  if ( !(["chrome", "firefox"].includes(exp.system.Browser.toLowerCase())) ) {
+    $("#start_button").attr('disabled', true);
+    $("#init_msg").html(`This HIT only works with the Chrome or Firefox browsers. <br> Please switch browsers to complete the HIT, thank you.`)
+    $("#init_msg").show();
+  } else if (turk.previewMode) {
+    $("#start_button").attr('disabled', true);
+    $("#init_msg").html(`Note that this HIT is too short to preview. Please accept the HIT first, thank you.`)
+    $("#init_msg").show();
+  } else  {
+    $("#start_button").click(function() {
       exp.go();
-    }
-  });
-
+    });
+  }
   exp.go(); //show first slide
 }

@@ -29,10 +29,10 @@ const build_radio_html = (img_name, div_id) => {
 const build_final_prompt = (goal_condition, social_condition) => {
 
   if (social_condition == "social" ) {
-    $("#final_toy_prompt").html("Bob came back from making lunch, <br> but you only have time to play with one more toy.");
+    $("#final_toy_prompt").html("Bob came back from making lunch, <br> but you only have time to play with ONE more toy.");
     $("#bob_test").css('visibility', 'visible')
   } else {
-    $("#final_toy_prompt").html("Bob is still in the kitchen making lunch, <br> but you only have time to play with one more toy.");
+    $("#final_toy_prompt").html("Bob is still in the kitchen making lunch, <br> but you only have time to play with ONE more toy.");
     $("#bob_test").css('visibility', 'hidden')
   }
 

@@ -4,6 +4,12 @@
   margin: 10px;
 }
 
+#init_msg {
+  color: red;
+  font-weight: bold;
+  display: none;
+}
+
 .display_condition {
   font-weight: bold;
 }

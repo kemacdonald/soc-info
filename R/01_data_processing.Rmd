@@ -8,60 +8,12 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ```{r}
-library(lubridate); library(magrittr); library(jsonlite); 
-library(tidyverse); library(here)
-source(here("R/soc_info_helpers.R"))
-```
-
-```{r}
+source(here::here("R/soc_info_helpers.R"))
 #d_path <- "data/01_raw_data/goal_actions_ver3/full_sample/sandbox-results"
 d_path <- "data/01_raw_data/goal_actions_ver4/production-results"
 ```
 
 ## Load raw json data
-
-Write a function that reads the raw json, extacts the information we care about, and builds a tidy data frame
-
-```{r}
-# takes a list and extracts the information we care about
-json_to_df <- function(data_path, file) {
-  d <- read_json(path = here(data_path, file))
-  tibble(
-    workerid = d$WorkerId, 
-    condition = d$answers$goal_condition,
-    social_condition = d$answers$social_condition,
-    outcome = d$answers$outcome,
-    music_check_response = d$answers$manip_check_music_response %>% unlist(),
-    light_check_response = d$answers$manip_check_light_response %>% unlist(),
-    manip_check_order = d$answers$manip_check_order %>% unlist(),
-    action_response = d$answers$action_response,
-    prior_hypothesis = d$answers$hypotheses_slider_order_prior %>% unlist(),
-    prior_beliefs = d$answers$prior_beliefs %>% unlist(),
-    posterior_hypothesis = d$answers$hypotheses_slider_order_posterior %>% unlist(),
-    posterior_beliefs = d$answers$posterior_beliefs %>% unlist(),
-    browser = d$answers$browser,
-    browser_width = d$answers$browser_width,
-    browser_height = d$answers$browser_height,
-    screen_width = d$answers$screen_width,
-    screen_height = d$answers$screen_height,
-    mobile_device = d$answers$mobile_device,
-    about = d$answers$about,
-    why_action = d$answers$why_action,
-    comment = d$answers$comment,
-    age = d$answers$age,
-    gender = d$answers$gender,
-    first_language = d$answers$language,
-    experiment_time = d$answers$experiment_completion_time / 1000,
-    action_trial_time = d$answers$action_trial_time / 1000
-  )
-}
-```
-
-Use purrr's safely function to catch any errors.
-
-```{r}
-safe_json_to_df <- safely(json_to_df)
-```
 
 Use purrr to map our read json function over all files in the raw data directory
 
@@ -70,16 +22,11 @@ files <- dir(here(d_path))
 df_list <- files %>% purrr::map(~ safe_json_to_df(data_path = d_path, .)) 
 ```
 
-Look at output to see where errors occurred.
+Look at output to see where errors occurred and then convert to data frame only keeping successful function calls.
 
 ```{r}
 results <- df_list %>% transpose() 
 ok <- results$error %>% map_lgl(is_null)
-```
-
-Convert to data frame only keeping succssful function calls.
-
-```{r}
 df <- results$result %>% keep(ok) %>%  map_df(bind_rows)
 ```
 
@@ -202,7 +149,6 @@ d_final %<>%
                               start = 1, 
                               end = str_locate(hypothesis, outcome)[1] - 1))
 ```
-
 
 ## Write to disk
 

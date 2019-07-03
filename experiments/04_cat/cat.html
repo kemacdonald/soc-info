@@ -130,7 +130,7 @@
     <div class="row">
       <div class="column" id="toy_imgs_activation"></div>
       <div class="column" id="notes_gif_activation"><img id="notes_gif_actions_activation" src="media/music_notes.gif" style="width:160px;height:80px; visibility: hidden;"></div>
-      <div class="column" id="bob_activation"><img src="media/bob.png" id="bob_activation" style="width:50%" height="225px"></div>
+      <div class="column" id="bob_activation_col"><img src="media/bob.png" id="bob_activation" style="width:50%" height="225px"></div>
     </div>
     <br>
     <p id="action_prompt_activation">Which action would you like to try to make this toy play music?</p>
@@ -141,21 +141,21 @@
   </div>
 
   <div class="slide" id="presentation">
-    <audio id="sound_player">
+    <audio id="sound_player_presentation">
       <source src="media/song1_trim.mp3" type="audio/mpeg"></audio>
-    <p id="toy_select_prompt"></p>
+    <p id="toy_select_prompt_presentation"></p>
     <br>
     <div class="row">
-      <div class="column" id="toy_imgs_present"></div>
-      <div class="column" id="notes_gif"><img id="notes_gif_actions" src="media/music_notes.gif" style="width:160px;height:80px; visibility: hidden;"></div>
-      <div class="column" id="bob"><img src="media/bob.png" id="bob" style="width:50%" height="225px"></div>
+      <div class="column" id="toy_imgs_presentation"></div>
+      <div class="column" id="notes_gif_presentation"><img id="notes_gif_actions_presentation" src="media/music_notes.gif" style="width:160px;height:80px; visibility: hidden;"></div>
+      <div class="column" id="bob_presentation_col"><img src="media/bob.png" id="bob_presentation" style="width:50%" height="225px"></div>
     </div>
     <br>
-    <p id="action_prompt">Which action would you like to try to make this toy play music?</p>
-    <div class="radio" id="toy_action_radios"></div>
-    <button id="submit_action" onclick="_s.submit_action()">Submit action</button>
+    <p id="action_prompt_presentation">Which action would you like to try to make this toy play music?</p>
+    <div class="radio" id="toy_action_radios_presentation"></div>
+    <button id="submit_action_presentation" onclick="_s.submit_action()">Submit action</button>
     <br><br>
-    <p class="err" id="error_msg"></p>
+    <p class="err" id="error_msg_presentation"></p>
   </div>
 
   <div class="slide" id="final_toy_choice">

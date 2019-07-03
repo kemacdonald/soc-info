@@ -91,39 +91,39 @@ function make_slides(f) {
             handle_failure(this.name)
           }
         } else {
-          show_error_msg();
+          show_error_msg(this.name);
         }
       }
     }
   });
 
-  slides.presentation_trial = slide({
+  slides.presentation = slide({
     name: "presentation",
     start: function() {
       this.action_counter = 1; this.success_counter = 0;
       clear_training_slide(this.name);
       get_music( exp.music_keys.pop() );
-      show_select_prompt(exp.img_keys);
-      build_img_html(exp.img_keys, "toy_imgs_present", this.name);
+      show_select_prompt(exp.img_keys, this.name);
+      build_img_html(exp.img_keys, "toy_imgs_presentation", this.name);
       handle_img_click(this.name);
     },
     build_action_selection: function(curr_img) {
-      build_radio_html(curr_img, "toy_action_radios");
-      show_action_prompts();
-      enable_radios("action_select");
-      enable_button("submit_action");
-      $("#notes_gif_actions").css('visibility', 'hidden');
-      $("#submit_action").html("Submit Action");
-      $("#play_music").prop('disabled', true); // disable the music button so participant can only play once
+      build_radio_html(curr_img, "toy_action_radios_presentation", this.name);
+      show_action_prompts(this.name);
+      enable_radios("action_select_presentation");
+      enable_button("submit_action_presentation");
+      $("#notes_gif_actions_presentation").css('visibility', 'hidden');
+      $("#submit_action_presentation").html("Submit Action");
+      $("#play_music_presentation").prop('disabled', true); // disable the music button so participant can only play once
       this.toy = curr_img;
       this.start_time = Date.now();
     },
     submit_action: function() {
-      if ($("#submit_action").html() == "Try Again") {
+      if ($("#submit_action_presentation").html() == "Try Again") {
         init_try_again(this.toy, this.name);
       } else {
-        if (check_radio_buttons("action_select")) {
-          const curr_action = $(`input[name='action_select']:checked`).val();
+        if (check_radio_buttons("action_select_presentation")) {
+          const curr_action = $(`input[name='action_select_presentation']:checked`).val();
           if (this.action_counter == 1) {
             this.toy_type = get_toy_type(curr_action)
           };
@@ -145,10 +145,10 @@ function make_slides(f) {
             this.success_counter++
             handle_success(this.success_counter, this.toy, this.name);
           } else {
-            handle_failure(this.toy)
+            handle_failure(this.name)
           }
         } else {
-          show_error_msg();
+          show_error_msg(this.name);
         }
       }
     }

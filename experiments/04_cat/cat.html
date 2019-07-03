@@ -122,13 +122,31 @@
     <button onclick="_s.button()">Continue</button>
   </div>
 
-  <div class="slide" id="toy_training_trial">
+  <div class="slide" id="activation">
+    <audio id="sound_player_activation">
+      <source src="media/song1_trim.mp3" type="audio/mpeg"></audio>
+    <p id="toy_select_prompt_activation"></p>
+    <br>
+    <div class="row">
+      <div class="column" id="toy_imgs_activation"></div>
+      <div class="column" id="notes_gif_activation"><img id="notes_gif_actions_activation" src="media/music_notes.gif" style="width:160px;height:80px; visibility: hidden;"></div>
+      <div class="column" id="bob_activation"><img src="media/bob.png" id="bob_activation" style="width:50%" height="225px"></div>
+    </div>
+    <br>
+    <p id="action_prompt_activation">Which action would you like to try to make this toy play music?</p>
+    <div class="radio" id="toy_action_radios_activation"></div>
+    <button id="submit_action_activation" onclick="_s.submit_action()">Submit action</button>
+    <br><br>
+    <p class="err" id="error_msg_activation"></p>
+  </div>
+
+  <div class="slide" id="presentation">
     <audio id="sound_player">
       <source src="media/song1_trim.mp3" type="audio/mpeg"></audio>
     <p id="toy_select_prompt"></p>
     <br>
     <div class="row">
-      <div class="column" id="toy_imgs_train"></div>
+      <div class="column" id="toy_imgs_present"></div>
       <div class="column" id="notes_gif"><img id="notes_gif_actions" src="media/music_notes.gif" style="width:160px;height:80px; visibility: hidden;"></div>
       <div class="column" id="bob"><img src="media/bob.png" id="bob" style="width:50%" height="225px"></div>
     </div>

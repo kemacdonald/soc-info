@@ -19,7 +19,7 @@ function init() {
     screenW: screen.width,
   };
   //blocks of the experiment
-  exp.structure = ["i0", "sound_test", "instructions", "toy_training_trial", "toy_training_trial", "final_toy_choice", "subj_info", "thanks"];
+  exp.structure = ["i0", "sound_test", "instructions", "activation", "presentation", "final_toy_choice", "subj_info", "thanks"];
 
   //make corresponding slides:
   exp.slides = make_slides(exp);

@@ -1,5 +1,5 @@
 ---
-title: "SOC-INFO Visualization"
+title: "SOC-INFO Data Visualization"
 output: html_document
 ---
 
@@ -14,14 +14,15 @@ library(binom)
 library(knitr); library(magrittr); library(tidyverse); library(here); 
 library(grid); library(jsonlite); library(ggthemes)
 source(here("R/soc_info_helpers.R"))
+data_path <- "data/03_merged_data"
 ```
 
-Read data. 
+Read data from all experiments.
 
 ```{r read data}
-d_path <- "data/03_merged_data"
 d_prior <- read_csv(here("data/02_tidy_data/goal_actions_prior_tidy.csv"))
-d_data <- read_csv(here(d_path, "goal_actions_master.csv"))
+d_cat <- read_csv(here("data/02_tidy_data/soc-info-cat-tidy.csv"))
+d_data <- read_csv(here(data_path, "goal_actions_master.csv"))
 
 d_data %<>% mutate(hypothesis_type = factor(hypothesis_type) %>% fct_rev(),
               hypothesis = factor(hypothesis) %>% fct_rev(),
@@ -549,4 +550,25 @@ e2_plot <- cowplot::plot_grid(data_mod_comp, e2_rt_plot, e2_ig_plot, phi,
 ggsave("e2_plot.png", plot = e2_plot, width = 4.8, height = 11,
        path = here::here("writing/cogsci2018/figs"))
 ```
+
+
+
+## Experiment 3
+
+### Toy choice plot
+
+Plot the porportion of participants choosing each toy type (activation, presentation, learning) as a function of the goal and social conditions.
+
+```{r}
+
+```
+
+### RT on toy choice plot
+
+Plot the response time on final toy choice as a function of condition.
+
+```{r}
+
+```
+
 

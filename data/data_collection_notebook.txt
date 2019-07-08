@@ -1,0 +1,56 @@
+Goals Action Version 1:
+
+    KM: 1/14/18
+
+    These data are from the first round of piloting for Soc-Info. We ran a small
+    "Pilot A" with n=9 turkers to make sure nothing was broken.
+
+    Then, we ran a larger "Pilot B" with 25 Turkers in each condition to see if
+    we could detect any evidence of a condition effect.
+
+    We did not see any evidence of the effect and after getting feedback from
+    the LangCog lab on 1/8, we decided to make substantive changes to the
+    experiment, which can be found in the directory labeled ver2.
+
+
+Goals Action Version 2:
+
+    Note that we cannot analyze the action responses for PilotA because there was
+    a bug in the regular expression that we used to assign value labels to each
+    radio button.
+
+    to detect the "both actions" button, we tested whether "and" was in button label.
+    this worked fine. however, the string "and" is also present in the "Pull the handle"
+    label. So this action response was incorrectly being labeled "both".
+
+    KM caught and fixed the bug on 1/14/18 after collecting 30 participants on MTurk.
+
+Goals Action Version 3:
+
+    Pilot run on 1/16/18 by KM. We added the no-goal condition to get a baseline
+    distribution over actions when participants did not have an explicit goal.
+
+    Full sample with n=50 in each condition collected on 1/18/18
+
+Goals Action Prior Elicitation:
+
+    Run on 1/16/18. The goal with this task is to measure what action participants prefer
+    without any hypotheses or goal prompts.
+
+
+Goals Action Version 4:
+
+    We added no-social versions of the learning, performance, and no-goal conditions.
+    We also decided to internally replicate the findings from Goal-Actions Version 3.
+    Finally, km made minor changes to JS to standardize the cover story text across conditions.
+
+    Full sample with n=50 in each condition collected on 1/18/18
+
+CAT Version  1:
+
+    We created a new experiment to tease apart decisions that achieve presentation
+    vs. activation  goals, which were confounded in earlier experiments.
+
+    EJY collected pilot sample of 10 turkers on ???
+
+    EJY collected full, planned sample of ??? turkers on ???

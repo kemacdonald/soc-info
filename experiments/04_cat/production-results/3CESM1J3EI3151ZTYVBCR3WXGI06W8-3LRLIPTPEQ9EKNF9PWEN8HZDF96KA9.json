@@ -1,0 +1,115 @@
+{
+ "AssignmentId": "3LRLIPTPEQ9EKNF9PWEN8HZDF96KA9",
+ "WorkerId": "1d088b6f6eadea371f6fb9fa8055a1a9",
+ "HITId": "3CESM1J3EI3151ZTYVBCR3WXGI06W8",
+ "AssignmentStatus": "Submitted",
+ "AutoApprovalTime": "2019-07-11T19:21:29.000Z",
+ "AcceptTime": "2019-07-11T17:15:20.000Z",
+ "SubmitTime": "2019-07-11T17:21:29.000Z",
+ "answers": {
+  "trials": [
+   {
+    "trial_type": "activation",
+    "toy": "tri-button.png",
+    "toy_type": "left-button",
+    "action_number": 1,
+    "action": "right-button",
+    "success": false,
+    "rt": 7319
+   },
+   {
+    "trial_type": "activation",
+    "toy": "tri-button.png",
+    "toy_type": "left-button",
+    "action_number": 2,
+    "action": "left-button",
+    "success": true,
+    "rt": 7112
+   },
+   {
+    "trial_type": "activation",
+    "toy": "tri-button.png",
+    "toy_type": "left-button",
+    "action_number": 3,
+    "action": "left-button",
+    "success": true,
+    "rt": 5545
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "left-spinner",
+    "action_number": 1,
+    "action": "right-spinner",
+    "success": false,
+    "rt": 4790
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "left-spinner",
+    "action_number": 2,
+    "action": "left-spinner",
+    "success": true,
+    "rt": 2491
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "left-spinner",
+    "action_number": 3,
+    "action": "left-spinner",
+    "success": true,
+    "rt": 3565
+   },
+   {
+    "trial_type": "final_toy_choice",
+    "toy": "tri-button.png",
+    "toy_type": "NA",
+    "action_number": "NA",
+    "action": "NA",
+    "success": "NA",
+    "rt": 62565,
+    "why_toy": "Because I know which side plays the music already."
+   }
+  ],
+  "system": {
+   "Browser": "Chrome",
+   "OS": "Windows",
+   "screenH": 864,
+   "screenW": 1536,
+   "ip_data": {
+    "ip": "103.66.79.128",
+    "city": "Chennai",
+    "region": "Tamil Nadu",
+    "region_code": "TN",
+    "country": "IN",
+    "country_name": "India",
+    "continent_code": "AS",
+    "in_eu": false,
+    "postal": "600001",
+    "latitude": 13.0843,
+    "longitude": 80.2805,
+    "timezone": "Asia/Kolkata",
+    "utc_offset": "+0530",
+    "country_calling_code": "+91",
+    "currency": "INR",
+    "languages": "en-IN,hi,bn,te,mr,ta,ur,gu,kn,ml,or,pa,as,bh,sat,ks,ne,sd,kok,doi,mni,sit,sa,fr,lus,inc",
+    "asn": "AS24186",
+    "org": "RailTel Corporation of India Ltd., Internet Service Provider, New Delhi"
+   }
+  },
+  "goal_condition": "no_goal",
+  "social_condition": "social",
+  "subject_information": {
+   "language": "",
+   "enjoyment": "Average",
+   "asses": "Yes",
+   "age": "33",
+   "gender": "Male",
+   "education": "Graduated College",
+   "comments": ""
+  },
+  "time_in_minutes": 5.57645
+ }
+}

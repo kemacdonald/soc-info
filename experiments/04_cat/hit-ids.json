@@ -1,0 +1,72 @@
+{
+ "sandbox": [
+  {
+   "HIT": {
+    "HITId": "3NBFJK3IOHIVXLFXJMRVIBM8W0OGOT",
+    "HITTypeId": "3J1X5UP4FVWYHPDHYQMSRD71C2X5K7",
+    "HITGroupId": "3Q4WZ5V3LM1SFQX5XDEERZ0KDI8GUZ",
+    "CreationTime": "2019-07-10T22:25:57.000Z",
+    "Title": "Toy Game",
+    "Description": "We're interested in your decision making when you come across some new toys.",
+    "Question": "<ExternalQuestion xmlns=\"http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2006-07-14/ExternalQuestion.xsd\">\n  <ExternalURL>https://langcog.stanford.edu/expts/EJY/soc-info/cat/cat.html</ExternalURL>\n  <FrameHeight>650</FrameHeight>\n</ExternalQuestion>",
+    "Keywords": "toy, game, fun, short",
+    "HITStatus": "Assignable",
+    "MaxAssignments": 3,
+    "Reward": "1.00",
+    "AutoApprovalDelayInSeconds": 7200,
+    "Expiration": "2019-07-17T22:25:57.000Z",
+    "AssignmentDurationInSeconds": 1800,
+    "QualificationRequirements": [
+     {
+      "QualificationTypeId": "000000000000000000L0",
+      "Comparator": "GreaterThan",
+      "IntegerValues": [
+       95
+      ],
+      "RequiredToPreview": false,
+      "ActionsGuarded": "Accept"
+     }
+    ],
+    "HITReviewStatus": "NotReviewed",
+    "NumberOfAssignmentsPending": 0,
+    "NumberOfAssignmentsAvailable": 3,
+    "NumberOfAssignmentsCompleted": 0
+   }
+  }
+ ],
+ "production": [
+  {
+   "HIT": {
+    "HITId": "3CESM1J3EI3151ZTYVBCR3WXGI06W8",
+    "HITTypeId": "3J1X5UP4FVWYHPDHYQOLW2HSDYEK5V",
+    "HITGroupId": "3KHO6UOMI8QJW4HY05OZL8VBSUBBPA",
+    "CreationTime": "2019-07-10T22:30:14.000Z",
+    "Title": "Toy Game (Chrome/Firefox only)",
+    "Description": "We're interested in your decision making when you come across some new toys. Please use a Chrome or Firefox browser!",
+    "Question": "<ExternalQuestion xmlns=\"http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2006-07-14/ExternalQuestion.xsd\">\n  <ExternalURL>https://langcog.stanford.edu/expts/EJY/soc-info/cat/cat.html</ExternalURL>\n  <FrameHeight>650</FrameHeight>\n</ExternalQuestion>",
+    "Keywords": "toy, game, fun, short",
+    "HITStatus": "Assignable",
+    "MaxAssignments": 9,
+    "Reward": "1.00",
+    "AutoApprovalDelayInSeconds": 7200,
+    "Expiration": "2019-07-17T22:30:14.000Z",
+    "AssignmentDurationInSeconds": 1800,
+    "QualificationRequirements": [
+     {
+      "QualificationTypeId": "000000000000000000L0",
+      "Comparator": "GreaterThan",
+      "IntegerValues": [
+       95
+      ],
+      "RequiredToPreview": false,
+      "ActionsGuarded": "Accept"
+     }
+    ],
+    "HITReviewStatus": "NotReviewed",
+    "NumberOfAssignmentsPending": 0,
+    "NumberOfAssignmentsAvailable": 7,
+    "NumberOfAssignmentsCompleted": 2
+   }
+  }
+ ]
+}

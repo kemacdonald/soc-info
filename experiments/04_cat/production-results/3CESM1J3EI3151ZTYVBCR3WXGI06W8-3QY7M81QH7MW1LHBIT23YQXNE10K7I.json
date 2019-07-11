@@ -1,0 +1,115 @@
+{
+ "AssignmentId": "3QY7M81QH7MW1LHBIT23YQXNE10K7I",
+ "WorkerId": "602b24d6a1d637c64df40b6c67744395",
+ "HITId": "3CESM1J3EI3151ZTYVBCR3WXGI06W8",
+ "AssignmentStatus": "Submitted",
+ "AutoApprovalTime": "2019-07-11T18:53:55.000Z",
+ "AcceptTime": "2019-07-11T16:46:45.000Z",
+ "SubmitTime": "2019-07-11T16:53:55.000Z",
+ "answers": {
+  "trials": [
+   {
+    "trial_type": "activation",
+    "toy": "tri-button.png",
+    "toy_type": "left-button",
+    "action_number": 1,
+    "action": "right-button",
+    "success": false,
+    "rt": 8331
+   },
+   {
+    "trial_type": "activation",
+    "toy": "tri-button.png",
+    "toy_type": "left-button",
+    "action_number": 2,
+    "action": "left-button",
+    "success": true,
+    "rt": 6898
+   },
+   {
+    "trial_type": "activation",
+    "toy": "tri-button.png",
+    "toy_type": "left-button",
+    "action_number": 3,
+    "action": "left-button",
+    "success": true,
+    "rt": 4386
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "left-spinner",
+    "action_number": 1,
+    "action": "right-spinner",
+    "success": false,
+    "rt": 5501
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "left-spinner",
+    "action_number": 2,
+    "action": "left-spinner",
+    "success": true,
+    "rt": 3518
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "left-spinner",
+    "action_number": 3,
+    "action": "left-spinner",
+    "success": true,
+    "rt": 2717
+   },
+   {
+    "trial_type": "final_toy_choice",
+    "toy": "tri-button.png",
+    "toy_type": "NA",
+    "action_number": "NA",
+    "action": "NA",
+    "success": "NA",
+    "rt": 42901,
+    "why_toy": "because I've already used it"
+   }
+  ],
+  "system": {
+   "Browser": "Chrome",
+   "OS": "Windows",
+   "screenH": 1080,
+   "screenW": 1920,
+   "ip_data": {
+    "ip": "87.220.178.235",
+    "city": "Madrid",
+    "region": "Madrid",
+    "region_code": "MD",
+    "country": "ES",
+    "country_name": "Spain",
+    "continent_code": "EU",
+    "in_eu": true,
+    "postal": "28005",
+    "latitude": 40.4143,
+    "longitude": -3.7016,
+    "timezone": "Europe/Madrid",
+    "utc_offset": "+0200",
+    "country_calling_code": "+34",
+    "currency": "EUR",
+    "languages": "es-ES,ca,gl,eu,oc",
+    "asn": "AS12479",
+    "org": "Orange Espagne SA"
+   }
+  },
+  "goal_condition": "learning",
+  "social_condition": "social",
+  "subject_information": {
+   "language": "Spanish",
+   "enjoyment": "Better than average",
+   "asses": "Yes",
+   "age": "30",
+   "gender": "Male",
+   "education": "Graduated High School",
+   "comments": ""
+  },
+  "time_in_minutes": 4.074333333333334
+ }
+}

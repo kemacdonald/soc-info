@@ -16,6 +16,15 @@
    "IntegerValues": [
     95
    ]
+  },
+  {
+   "Name": "Worker_Locale",
+   "Comparator": "EqualTo",
+   "LocaleValues": [
+    {
+     "Country": "US"
+    }
+   ]
   }
  ]
 }

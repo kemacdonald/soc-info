@@ -1,0 +1,90 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_order": [
+            "HandleLight",
+            "ButtonLight",
+            "BothLightMusic"
+        ],
+        "manip_check_effect_order": [
+            "turn on the light",
+            "play music",
+            "turn on the light AND play music"
+        ],
+        "outcome": "light",
+        "action_response": "both",
+        "goal_condition": "presentation",
+        "music_box": [
+            "HandleLight.jpeg",
+            "BothLightMusic.jpeg",
+            "ButtonLight.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "HandleLight",
+            "BothLightMusic",
+            "ButtonLight"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "ButtonLight",
+            "BothLightMusic",
+            "HandleLight"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 812,
+        "browser_width": 1098,
+        "screen_width": 1280,
+        "screen_height": 1024,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "65",
+            "1",
+            "91"
+        ],
+        "posterior_beliefs": [
+            "51",
+            "100",
+            "50"
+        ],
+        "about": "I have no idea. Would we pick the unlikely but creative toy",
+        "comment": "no it was fun thanks",
+        "age": "36",
+        "gender": "f",
+        "language": "english",
+        "exp_start_time": "2018-01-16T05:37:04.071Z",
+        "exp_end_time": "2018-01-16T05:41:55.186Z",
+        "action_trial_start_time": "2018-01-16T05:39:45.600Z",
+        "action_trial_end_time": "2018-01-16T05:40:50.613Z",
+        "experiment_completion_time": 291115,
+        "action_trial_time": 65013,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "HandleLight",
+            "ButtonLight",
+            "BothLightMusic"
+        ],
+        "rand_action_labels": [
+            "Press the button on its own",
+            "Press the button and pull the handle<br>at the same time",
+            "Pull the handle on its own"
+        ]
+    },
+    "AssignmentId": "3K4J6M3CXET9I1JQZ5T8AP7JSK2GAH",
+    "WorkerId": "A1MNJ1VJEZE8NY",
+    "HITId": "35XW21VSVGEQH5LR1U7DJXB9NPJSLE",
+    "AssignmentStatus": "Submitted",
+    "AutoApprovalTime": "2018-01-16T05:46:57Z",
+    "AcceptTime": "2018-01-16T05:35:32Z",
+    "SubmitTime": "2018-01-16T05:41:57Z",
+    "Assignment": ""
+}

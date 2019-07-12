@@ -1,0 +1,61 @@
+{
+    "answers": {
+        "manip_check_music_response": [],
+        "manip_check_light_response": [],
+        "manip_check_order": [],
+        "manip_check_effect_order": [
+            "play music",
+            "turn on the light",
+            "play music AND turn on the light"
+        ],
+        "action_response": "handle",
+        "goal_condition": "noGoal",
+        "music_box": [
+            "HandleMusic.jpeg",
+            "BothMusicLight.jpeg",
+            "ButtonMusic.jpeg"
+        ],
+        "hypotheses_slider_order_prior": "",
+        "hypotheses_slider_order_posterior": "",
+        "actions_buttons_order": "",
+        "toy_inst_num": 0,
+        "browser": "Firefox",
+        "browser_height": 600,
+        "browser_width": 1205,
+        "screen_width": 960,
+        "screen_height": 540,
+        "mobile_device": false,
+        "prior_beliefs": [],
+        "posterior_beliefs": [],
+        "about": "not sure",
+        "why_action": "handle seemed more fun",
+        "age": "35",
+        "gender": "f",
+        "language": "spanish",
+        "exp_start_time": "",
+        "exp_end_time": "2018-01-16T23:37:22.180Z",
+        "action_trial_start_time": "2018-01-16T23:37:06.229Z",
+        "action_trial_end_time": "2018-01-16T23:37:08.844Z",
+        "experiment_completion_time": "",
+        "action_trial_time": "",
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "HandleMusic",
+            "ButtonMusic",
+            "BothMusicLight"
+        ],
+        "rand_action_labels": [
+            "Pull the handle on its own",
+            "Press the button on its own",
+            "Press the button and pull the handle<br>at the same time"
+        ]
+    },
+    "AssignmentId": "3GS6S824SQXCZ63FNE02D9374EXNWD",
+    "WorkerId": "A17RRO4CXGCWT0",
+    "HITId": "31S7M7DAGGQRW5Y6QUAAPDX3KQ3LTX",
+    "AssignmentStatus": "Submitted",
+    "AutoApprovalTime": "2018-01-16T23:42:23Z",
+    "AcceptTime": "2018-01-16T23:37:00Z",
+    "SubmitTime": "2018-01-16T23:37:23Z",
+    "Assignment": ""
+}

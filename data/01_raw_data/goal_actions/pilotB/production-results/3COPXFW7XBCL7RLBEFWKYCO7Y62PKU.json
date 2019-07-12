@@ -1,0 +1,59 @@
+{
+    "answers": {
+        "action_response": "orange",
+        "goal_condition": "performance",
+        "music_box": "music_box_right.jpeg",
+        "hypotheses_slider_order_prior": [
+            "Orange",
+            "Purple and Orange",
+            "Purple"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "Orange",
+            "Purple",
+            "Purple and Orange"
+        ],
+        "actions_buttons_order": [
+            "Purple and Orange",
+            "Orange",
+            "Purple"
+        ],
+        "browser": "Chrome",
+        "browser_height": 600,
+        "browser_width": 1230,
+        "screen_width": 1920,
+        "screen_height": 1080,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "100",
+            "50",
+            "1"
+        ],
+        "posterior_beliefs": [
+            "100",
+            "1",
+            "1"
+        ],
+        "about": "To study how colors affect choices.",
+        "comment": "Thank you!",
+        "age": "33",
+        "gender": "m",
+        "language": "English",
+        "exp_start_time": "2018-01-05T21:36:50.284Z",
+        "exp_end_time": "2018-01-05T21:38:40.382Z",
+        "action_trial_start_time": "2018-01-05T21:37:56.489Z",
+        "action_trial_end_time": "2018-01-05T21:38:04.778Z",
+        "experiment_completion_time": 110098,
+        "action_trial_time": 8289,
+        "hyp_type": "posterior"
+    },
+    "AssignmentId": "3COPXFW7XBCL7RLBEFWKYCO7Y62PKU",
+    "WorkerId": "A3QUGJF2AN8TF2",
+    "HITId": "3FCO4VKOZ4DQS1R7W5MYBBPTRCQ7E0",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-05T21:43:42Z",
+    "AcceptTime": "2018-01-05T21:35:47Z",
+    "SubmitTime": "2018-01-05T21:38:42Z",
+    "ApprovalTime": "2018-01-05T21:44:37Z",
+    "Assignment": ""
+}

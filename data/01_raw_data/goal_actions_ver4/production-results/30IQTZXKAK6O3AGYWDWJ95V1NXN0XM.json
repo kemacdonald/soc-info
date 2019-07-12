@@ -1,0 +1,93 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_order": [
+            "ButtonMusic",
+            "HandleMusic",
+            "BothMusicLight"
+        ],
+        "manip_check_effect_order": [
+            "play music",
+            "turn on the light",
+            "play music AND turn on the light"
+        ],
+        "outcome": "music",
+        "action_response": "both",
+        "goal_condition": "performance",
+        "social_condition": "no-social",
+        "music_box": [
+            "HandleMusic.jpeg",
+            "ButtonMusic.jpeg",
+            "BothMusicLight.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "ButtonMusic",
+            "BothMusicLight",
+            "HandleMusic"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "BothMusicLight",
+            "ButtonMusic",
+            "HandleMusic"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 590,
+        "browser_width": 1213,
+        "screen_width": 1280,
+        "screen_height": 720,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "29",
+            "34",
+            "17"
+        ],
+        "posterior_beliefs": [
+            "75",
+            "78",
+            "23"
+        ],
+        "about": "Deducing instructions",
+        "why_action": "Decided what option would produce the most amount of results",
+        "comment": "It seemed to me that one screen jumped ahead",
+        "age": "60",
+        "gender": "f",
+        "language": "English",
+        "exp_start_time": "2018-01-22T19:49:22.067Z",
+        "exp_end_time": "2018-01-22T19:53:39.382Z",
+        "action_trial_start_time": "2018-01-22T19:51:39.978Z",
+        "action_trial_end_time": "2018-01-22T19:51:58.162Z",
+        "experiment_completion_time": 257315,
+        "action_trial_time": 18184,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "ButtonMusic",
+            "BothMusicLight",
+            "HandleMusic"
+        ],
+        "rand_action_labels": [
+            "Pull the handle on its own",
+            "Press the button on its own",
+            "Press the button and pull the handle<br>at the same time"
+        ]
+    },
+    "AssignmentId": "30IQTZXKAK6O3AGYWDWJ95V1NXN0XM",
+    "WorkerId": "ANT979UZZF7N0",
+    "HITId": "302OLP89DZ7TE55R7HSNVERG7C2CAU",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-22T19:58:39Z",
+    "AcceptTime": "2018-01-22T19:43:57Z",
+    "SubmitTime": "2018-01-22T19:53:39Z",
+    "ApprovalTime": "2018-01-22T19:59:37Z",
+    "Assignment": ""
+}

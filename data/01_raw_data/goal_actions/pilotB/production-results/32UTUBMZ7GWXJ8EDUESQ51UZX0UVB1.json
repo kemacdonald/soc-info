@@ -1,0 +1,59 @@
+{
+    "answers": {
+        "action_response": "orange",
+        "goal_condition": "performance",
+        "music_box": "music_box_right.jpeg",
+        "hypotheses_slider_order_prior": [
+            "Orange",
+            "Purple and Orange",
+            "Purple"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "Purple",
+            "Purple and Orange",
+            "Orange"
+        ],
+        "actions_buttons_order": [
+            "Orange",
+            "Purple",
+            "Purple and Orange"
+        ],
+        "browser": "Chrome",
+        "browser_height": 600,
+        "browser_width": 1229,
+        "screen_width": 1280,
+        "screen_height": 800,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "100",
+            "19",
+            "100"
+        ],
+        "posterior_beliefs": [
+            "80",
+            "25",
+            "100"
+        ],
+        "about": "how people make the toy work",
+        "comment": "none cool hit",
+        "age": "33",
+        "gender": "male",
+        "language": "english",
+        "exp_start_time": "2018-01-05T21:36:24.628Z",
+        "exp_end_time": "2018-01-05T21:37:55.214Z",
+        "action_trial_start_time": "2018-01-05T21:37:06.049Z",
+        "action_trial_end_time": "2018-01-05T21:37:21.163Z",
+        "experiment_completion_time": 90586,
+        "action_trial_time": 15114,
+        "hyp_type": "posterior"
+    },
+    "AssignmentId": "32UTUBMZ7GWXJ8EDUESQ51UZX0UVB1",
+    "WorkerId": "A5ET25WTBJC0J",
+    "HITId": "3FCO4VKOZ4DQS1R7W5MYBBPTRCQ7E0",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-05T21:42:58Z",
+    "AcceptTime": "2018-01-05T21:35:45Z",
+    "SubmitTime": "2018-01-05T21:37:58Z",
+    "ApprovalTime": "2018-01-05T21:43:37Z",
+    "Assignment": ""
+}

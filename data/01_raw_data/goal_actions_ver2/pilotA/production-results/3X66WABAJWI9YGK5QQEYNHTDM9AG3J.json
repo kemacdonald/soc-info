@@ -1,0 +1,89 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_order": [
+            "ButtonMusic",
+            "HandleMusic",
+            "BothMusicLight"
+        ],
+        "manip_check_effect_order": [
+            "play music",
+            "turn on the light"
+        ],
+        "action_response": "both",
+        "goal_condition": "presentation",
+        "music_box": [
+            "BothMusicLight.jpeg",
+            "ButtonMusic.jpeg",
+            "HandleMusic.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "ButtonMusic",
+            "BothMusicLight",
+            "HandleMusic"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "ButtonMusic",
+            "BothMusicLight",
+            "HandleMusic"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 883,
+        "browser_width": 1749,
+        "screen_width": 1366,
+        "screen_height": 768,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "93",
+            "8",
+            "39"
+        ],
+        "posterior_beliefs": [
+            "60",
+            "59",
+            "62"
+        ],
+        "about": "Layout of functionalities on toys",
+        "comment": "No",
+        "age": "29",
+        "gender": "m",
+        "language": "English",
+        "exp_start_time": "2018-01-14T20:13:50.961Z",
+        "exp_end_time": "2018-01-14T20:16:23.734Z",
+        "action_trial_start_time": "2018-01-14T20:15:21.456Z",
+        "action_trial_end_time": "2018-01-14T20:15:41.086Z",
+        "experiment_completion_time": 152773,
+        "action_trial_time": 19630,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "BothMusicLight",
+            "ButtonMusic",
+            "HandleMusic"
+        ],
+        "rand_action_labels": [
+            "Press the button",
+            "Pull the handle",
+            "Press the button and pull the handle"
+        ]
+    },
+    "AssignmentId": "3X66WABAJWI9YGK5QQEYNHTDM9AG3J",
+    "WorkerId": "A39ZYRK3XFFUBJ",
+    "HITId": "3XT3KXP24ZYJ46FO9E7XQCNPOWMI6Y",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-14T20:21:24Z",
+    "AcceptTime": "2018-01-14T20:13:32Z",
+    "SubmitTime": "2018-01-14T20:16:24Z",
+    "ApprovalTime": "2018-01-14T20:21:37Z",
+    "Assignment": ""
+}

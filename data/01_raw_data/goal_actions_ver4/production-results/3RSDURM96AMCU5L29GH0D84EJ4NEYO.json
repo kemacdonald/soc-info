@@ -1,0 +1,93 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_order": [
+            "HandleLight",
+            "ButtonLight",
+            "BothLightMusic"
+        ],
+        "manip_check_effect_order": [
+            "turn on the light",
+            "play music",
+            "turn on the light AND play music"
+        ],
+        "outcome": "light",
+        "action_response": "button",
+        "goal_condition": "learning",
+        "social_condition": "social",
+        "music_box": [
+            "HandleLight.jpeg",
+            "BothLightMusic.jpeg",
+            "ButtonLight.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "ButtonLight",
+            "HandleLight",
+            "BothLightMusic"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "ButtonLight",
+            "BothLightMusic",
+            "HandleLight"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Firefox",
+        "browser_height": 976,
+        "browser_width": 1853,
+        "screen_width": 1920,
+        "screen_height": 1080,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "50",
+            "49",
+            "100"
+        ],
+        "posterior_beliefs": [
+            "51",
+            "100",
+            "52"
+        ],
+        "about": "Weird toys.",
+        "why_action": "I didn't see anything that could definitively say what the toy did. After deciding what action to perform, the result was not stated.",
+        "comment": "Depend on whether or not the lacking result was in error.",
+        "age": "35",
+        "gender": "m",
+        "language": "English",
+        "exp_start_time": "2018-01-22T19:06:11.346Z",
+        "exp_end_time": "2018-01-22T19:11:37.849Z",
+        "action_trial_start_time": "2018-01-22T19:08:19.812Z",
+        "action_trial_end_time": "2018-01-22T19:09:07.644Z",
+        "experiment_completion_time": 326503,
+        "action_trial_time": 47832,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "BothLightMusic",
+            "HandleLight",
+            "ButtonLight"
+        ],
+        "rand_action_labels": [
+            "Press the button on its own",
+            "Press the button and pull the handle<br>at the same time",
+            "Pull the handle on its own"
+        ]
+    },
+    "AssignmentId": "3RSDURM96AMCU5L29GH0D84EJ4NEYO",
+    "WorkerId": "A6G30K3SIWKZ9",
+    "HITId": "302OLP89DZ7TE55R7HSNVERG7C2CAU",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-22T19:16:37Z",
+    "AcceptTime": "2018-01-22T19:04:22Z",
+    "SubmitTime": "2018-01-22T19:11:37Z",
+    "ApprovalTime": "2018-01-22T19:17:37Z",
+    "Assignment": ""
+}

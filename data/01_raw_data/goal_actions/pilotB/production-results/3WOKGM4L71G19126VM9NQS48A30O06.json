@@ -1,0 +1,59 @@
+{
+    "answers": {
+        "action_response": "orange_and_purple",
+        "goal_condition": "learning",
+        "music_box": "music_box_left.jpeg",
+        "hypotheses_slider_order_prior": [
+            "Orange",
+            "Purple",
+            "Purple and Orange"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "Orange",
+            "Purple",
+            "Purple and Orange"
+        ],
+        "actions_buttons_order": [
+            "Orange",
+            "Purple and Orange",
+            "Purple"
+        ],
+        "browser": "Chrome",
+        "browser_height": 929,
+        "browser_width": 983,
+        "screen_width": 1920,
+        "screen_height": 1080,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "84",
+            "83",
+            "83"
+        ],
+        "posterior_beliefs": [
+            "1",
+            "1",
+            "100"
+        ],
+        "about": "Guessing how the toy works",
+        "comment": "Nope.",
+        "age": "21",
+        "gender": "f",
+        "language": "English",
+        "exp_start_time": "2018-01-05T21:55:44.696Z",
+        "exp_end_time": "2018-01-05T21:58:40.902Z",
+        "action_trial_start_time": "2018-01-05T21:57:22.558Z",
+        "action_trial_end_time": "2018-01-05T21:57:47.103Z",
+        "experiment_completion_time": 176206,
+        "action_trial_time": 24545,
+        "hyp_type": "posterior"
+    },
+    "AssignmentId": "3WOKGM4L71G19126VM9NQS48A30O06",
+    "WorkerId": "A3QL8ZAD9BKWUF",
+    "HITId": "3FCO4VKOZ4DQS1R7W5MYBBPTRCQ7E0",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-05T22:03:42Z",
+    "AcceptTime": "2018-01-05T21:50:45Z",
+    "SubmitTime": "2018-01-05T21:58:42Z",
+    "ApprovalTime": "2018-01-05T22:04:37Z",
+    "Assignment": ""
+}

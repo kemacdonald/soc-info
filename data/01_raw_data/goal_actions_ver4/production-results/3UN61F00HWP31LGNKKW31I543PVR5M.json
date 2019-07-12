@@ -1,0 +1,93 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_order": [
+            "ButtonLight",
+            "HandleLight",
+            "BothLightMusic"
+        ],
+        "manip_check_effect_order": [
+            "turn on the light",
+            "play music",
+            "turn on the light AND play music"
+        ],
+        "outcome": "light",
+        "action_response": "both",
+        "goal_condition": "performance",
+        "social_condition": "social",
+        "music_box": [
+            "BothLightMusic.jpeg",
+            "HandleLight.jpeg",
+            "ButtonLight.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "BothLightMusic",
+            "ButtonLight",
+            "HandleLight"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "HandleLight",
+            "ButtonLight",
+            "BothLightMusic"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 637,
+        "browser_width": 1299,
+        "screen_width": 1366,
+        "screen_height": 768,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "70",
+            "45",
+            "53"
+        ],
+        "posterior_beliefs": [
+            "65",
+            "50",
+            "50"
+        ],
+        "about": "chances& decisions",
+        "why_action": "I wanted to have a chance at all the 3 equallly",
+        "comment": "",
+        "age": "35",
+        "gender": "f",
+        "language": "Tamil",
+        "exp_start_time": "2018-01-23T00:31:06.499Z",
+        "exp_end_time": "2018-01-23T00:47:59.130Z",
+        "action_trial_start_time": "2018-01-23T00:33:05.170Z",
+        "action_trial_end_time": "2018-01-23T00:45:28.748Z",
+        "experiment_completion_time": 1012631,
+        "action_trial_time": 743578,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "BothLightMusic",
+            "ButtonLight",
+            "HandleLight"
+        ],
+        "rand_action_labels": [
+            "Press the button on its own",
+            "Pull the handle on its own",
+            "Press the button and pull the handle<br>at the same time"
+        ]
+    },
+    "AssignmentId": "3UN61F00HWP31LGNKKW31I543PVR5M",
+    "WorkerId": "A1QHJGHKDIG3T5",
+    "HITId": "302OLP89DZ7TE55R7HSNVERG7C2CAU",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-23T00:53:01Z",
+    "AcceptTime": "2018-01-23T00:30:46Z",
+    "SubmitTime": "2018-01-23T00:48:01Z",
+    "ApprovalTime": "2018-01-23T00:53:37Z",
+    "Assignment": ""
+}

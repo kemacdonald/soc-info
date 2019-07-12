@@ -1,0 +1,93 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_order": [
+            "ButtonMusic",
+            "HandleMusic",
+            "BothMusicLight"
+        ],
+        "manip_check_effect_order": [
+            "play music",
+            "turn on the light",
+            "play music AND turn on the light"
+        ],
+        "outcome": "music",
+        "action_response": "button",
+        "goal_condition": "noGoal",
+        "social_condition": "social",
+        "music_box": [
+            "ButtonMusic.jpeg",
+            "BothMusicLight.jpeg",
+            "HandleMusic.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "ButtonMusic",
+            "HandleMusic",
+            "BothMusicLight"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "HandleMusic",
+            "ButtonMusic",
+            "BothMusicLight"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 600,
+        "browser_width": 1533,
+        "screen_width": 1600,
+        "screen_height": 900,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "76",
+            "77",
+            "78"
+        ],
+        "posterior_beliefs": [
+            "1",
+            "100",
+            "1"
+        ],
+        "about": "Determine how people make decisions based on a scenario that has many different outcomes.",
+        "why_action": "If I pressed the button then the toy would either play music, turn on the light, or do nothing. It would be easy to identify which toy it is based on these three possible actions.",
+        "comment": "Everything worked well.",
+        "age": "24",
+        "gender": "m",
+        "language": "English",
+        "exp_start_time": "2018-01-22T21:57:49.973Z",
+        "exp_end_time": "2018-01-22T22:02:44.176Z",
+        "action_trial_start_time": "2018-01-22T21:59:37.859Z",
+        "action_trial_end_time": "2018-01-22T22:00:25.475Z",
+        "experiment_completion_time": 294203,
+        "action_trial_time": 47616,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "BothMusicLight",
+            "ButtonMusic",
+            "HandleMusic"
+        ],
+        "rand_action_labels": [
+            "Press the button on its own",
+            "Press the button and pull the handle<br>at the same time",
+            "Pull the handle on its own"
+        ]
+    },
+    "AssignmentId": "3RGU30DZTA8KB4IG4E4GGTUZF3GJM1",
+    "WorkerId": "A1H2RMKU5AIXK2",
+    "HITId": "302OLP89DZ7TE55R7HSNVERG7C2CAU",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-22T22:07:48Z",
+    "AcceptTime": "2018-01-22T21:57:19Z",
+    "SubmitTime": "2018-01-22T22:02:48Z",
+    "ApprovalTime": "2018-01-22T22:08:37Z",
+    "Assignment": ""
+}

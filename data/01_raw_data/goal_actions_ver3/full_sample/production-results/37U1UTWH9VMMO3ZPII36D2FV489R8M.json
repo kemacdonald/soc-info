@@ -1,0 +1,91 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "button",
+            "handle",
+            "handle"
+        ],
+        "manip_check_light_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_order": [
+            "ButtonLight",
+            "HandleLight",
+            "BothLightMusic"
+        ],
+        "manip_check_effect_order": [
+            "turn on the light",
+            "play music",
+            "turn on the light AND play music"
+        ],
+        "outcome": "light",
+        "action_response": "both",
+        "goal_condition": "presentation",
+        "music_box": [
+            "ButtonLight.jpeg",
+            "BothLightMusic.jpeg",
+            "HandleLight.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "HandleLight",
+            "BothLightMusic",
+            "ButtonLight"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "HandleLight",
+            "BothLightMusic",
+            "ButtonLight"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 769,
+        "browser_width": 1373,
+        "screen_width": 1440,
+        "screen_height": 900,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "9",
+            "6",
+            "100"
+        ],
+        "posterior_beliefs": [
+            "8",
+            "95",
+            "38"
+        ],
+        "about": "Understanding how toys operate?",
+        "why_action": "I wanted both the light and the music to play at once. ",
+        "comment": "No",
+        "age": "28",
+        "gender": "F",
+        "language": "English",
+        "exp_start_time": "2018-01-18T21:15:39.497Z",
+        "exp_end_time": "2018-01-18T21:19:34.366Z",
+        "action_trial_start_time": "2018-01-18T21:18:04.545Z",
+        "action_trial_end_time": "2018-01-18T21:18:28.005Z",
+        "experiment_completion_time": 234869,
+        "action_trial_time": 23460,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "BothLightMusic",
+            "ButtonLight",
+            "HandleLight"
+        ],
+        "rand_action_labels": [
+            "Press the button and pull the handle<br>at the same time",
+            "Pull the handle on its own",
+            "Press the button on its own"
+        ]
+    },
+    "AssignmentId": "37U1UTWH9VMMO3ZPII36D2FV489R8M",
+    "WorkerId": "ATSZCAVI441RM",
+    "HITId": "3NFWQRSHVEE1R824KJAYZ6NM2JOFGZ",
+    "AssignmentStatus": "Submitted",
+    "AutoApprovalTime": "2018-01-18T21:26:59Z",
+    "AcceptTime": "2018-01-18T21:11:46Z",
+    "SubmitTime": "2018-01-18T21:21:59Z",
+    "Assignment": ""
+}

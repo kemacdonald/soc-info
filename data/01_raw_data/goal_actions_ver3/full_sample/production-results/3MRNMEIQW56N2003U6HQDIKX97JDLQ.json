@@ -1,0 +1,92 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_order": [
+            "ButtonMusic",
+            "HandleMusic",
+            "BothMusicLight"
+        ],
+        "manip_check_effect_order": [
+            "play music",
+            "turn on the light",
+            "play music AND turn on the light"
+        ],
+        "outcome": "music",
+        "action_response": "handle",
+        "goal_condition": "learning",
+        "music_box": [
+            "HandleMusic.jpeg",
+            "BothMusicLight.jpeg",
+            "ButtonMusic.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "ButtonMusic",
+            "HandleMusic",
+            "BothMusicLight"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "HandleMusic",
+            "ButtonMusic",
+            "BothMusicLight"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 913,
+        "browser_width": 1756,
+        "screen_width": 1920,
+        "screen_height": 1080,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "80",
+            "78",
+            "15"
+        ],
+        "posterior_beliefs": [
+            "80",
+            "78",
+            "32"
+        ],
+        "about": "See if you could figure out which box did what",
+        "why_action": "Randomly picked one",
+        "comment": "This task was pretty fun",
+        "age": "34",
+        "gender": "f",
+        "language": "english",
+        "exp_start_time": "2018-01-18T22:21:30.329Z",
+        "exp_end_time": "2018-01-18T22:31:21.865Z",
+        "action_trial_start_time": "2018-01-18T22:27:25.600Z",
+        "action_trial_end_time": "2018-01-18T22:29:32.745Z",
+        "experiment_completion_time": 591536,
+        "action_trial_time": 127145,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "ButtonMusic",
+            "HandleMusic",
+            "BothMusicLight"
+        ],
+        "rand_action_labels": [
+            "Pull the handle on its own",
+            "Press the button and pull the handle<br>at the same time",
+            "Press the button on its own"
+        ]
+    },
+    "AssignmentId": "3MRNMEIQW56N2003U6HQDIKX97JDLQ",
+    "WorkerId": "A2TQNX64349OZ9",
+    "HITId": "3NFWQRSHVEE1R824KJAYZ6NM2JOFGZ",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-18T22:36:23Z",
+    "AcceptTime": "2018-01-18T22:01:17Z",
+    "SubmitTime": "2018-01-18T22:31:23Z",
+    "ApprovalTime": "2018-01-18T22:36:37Z",
+    "Assignment": ""
+}

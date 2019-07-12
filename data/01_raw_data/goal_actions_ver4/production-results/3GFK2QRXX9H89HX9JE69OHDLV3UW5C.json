@@ -1,0 +1,93 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_order": [
+            "HandleMusic",
+            "ButtonMusic",
+            "BothMusicLight"
+        ],
+        "manip_check_effect_order": [
+            "play music",
+            "turn on the light",
+            "play music AND turn on the light"
+        ],
+        "outcome": "music",
+        "action_response": "handle",
+        "goal_condition": "noGoal",
+        "social_condition": "no-social",
+        "music_box": [
+            "BothMusicLight.jpeg",
+            "ButtonMusic.jpeg",
+            "HandleMusic.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "ButtonMusic",
+            "HandleMusic",
+            "BothMusicLight"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "HandleMusic",
+            "ButtonMusic",
+            "BothMusicLight"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 600,
+        "browser_width": 1299,
+        "screen_width": 1366,
+        "screen_height": 768,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "59",
+            "82",
+            "14"
+        ],
+        "posterior_beliefs": [
+            "100",
+            "1",
+            "1"
+        ],
+        "about": "decision making",
+        "why_action": "to check the single action.  testing both actions at the same time would not narrow down the options",
+        "comment": "everything worked great",
+        "age": "38",
+        "gender": "m",
+        "language": "english",
+        "exp_start_time": "2018-01-22T20:31:13.273Z",
+        "exp_end_time": "2018-01-22T20:37:22.047Z",
+        "action_trial_start_time": "2018-01-22T20:33:39.370Z",
+        "action_trial_end_time": "2018-01-22T20:35:10.265Z",
+        "experiment_completion_time": 368774,
+        "action_trial_time": 90895,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "BothMusicLight",
+            "HandleMusic",
+            "ButtonMusic"
+        ],
+        "rand_action_labels": [
+            "Pull the handle on its own",
+            "Press the button and pull the handle<br>at the same time",
+            "Press the button on its own"
+        ]
+    },
+    "AssignmentId": "3GFK2QRXX9H89HX9JE69OHDLV3UW5C",
+    "WorkerId": "A3H4B9BMSFGXWG",
+    "HITId": "302OLP89DZ7TE55R7HSNVERG7C2CAU",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-22T20:42:22Z",
+    "AcceptTime": "2018-01-22T20:30:56Z",
+    "SubmitTime": "2018-01-22T20:37:22Z",
+    "ApprovalTime": "2018-01-22T20:42:37Z",
+    "Assignment": ""
+}

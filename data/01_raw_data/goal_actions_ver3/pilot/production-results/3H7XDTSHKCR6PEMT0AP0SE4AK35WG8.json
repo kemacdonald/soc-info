@@ -1,0 +1,91 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "both",
+            "handle",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_order": [
+            "ButtonMusic",
+            "HandleMusic",
+            "BothMusicLight"
+        ],
+        "manip_check_effect_order": [
+            "play music",
+            "turn on the light",
+            "play music AND turn on the light"
+        ],
+        "outcome": "music",
+        "action_response": "handle",
+        "goal_condition": "learning",
+        "music_box": [
+            "BothMusicLight.jpeg",
+            "HandleMusic.jpeg",
+            "ButtonMusic.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "HandleMusic",
+            "BothMusicLight",
+            "ButtonMusic"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "ButtonMusic",
+            "HandleMusic",
+            "BothMusicLight"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 974,
+        "browser_width": 1853,
+        "screen_width": 1920,
+        "screen_height": 1080,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "7",
+            "71",
+            "44"
+        ],
+        "posterior_beliefs": [
+            "29",
+            "63",
+            "15"
+        ],
+        "about": "How language effects our logic skills.",
+        "comment": "",
+        "age": "33",
+        "gender": "m",
+        "language": "English",
+        "exp_start_time": "2018-01-16T05:54:12.480Z",
+        "exp_end_time": "2018-01-16T05:58:25.097Z",
+        "action_trial_start_time": "2018-01-16T05:56:20.956Z",
+        "action_trial_end_time": "2018-01-16T05:57:23.912Z",
+        "experiment_completion_time": 252617,
+        "action_trial_time": 62956,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "BothMusicLight",
+            "ButtonMusic",
+            "HandleMusic"
+        ],
+        "rand_action_labels": [
+            "Press the button and pull the handle<br>at the same time",
+            "Pull the handle on its own",
+            "Press the button on its own"
+        ]
+    },
+    "AssignmentId": "3H7XDTSHKCR6PEMT0AP0SE4AK35WG8",
+    "WorkerId": "AK81F0NOBFJS3",
+    "HITId": "35XW21VSVGEQH5LR1U7DJXB9NPJSLE",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-16T06:03:26Z",
+    "AcceptTime": "2018-01-16T05:54:03Z",
+    "SubmitTime": "2018-01-16T05:58:26Z",
+    "ApprovalTime": "2018-01-16T06:03:37Z",
+    "Assignment": ""
+}

@@ -1,0 +1,59 @@
+{
+    "answers": {
+        "action_response": "orange_and_purple",
+        "goal_condition": "performance",
+        "music_box": "music_box_left.jpeg",
+        "hypotheses_slider_order_prior": [
+            "Orange",
+            "Purple",
+            "Purple and Orange"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "Purple",
+            "Orange",
+            "Purple and Orange"
+        ],
+        "actions_buttons_order": [
+            "Orange",
+            "Purple and Orange",
+            "Purple"
+        ],
+        "browser": "Firefox",
+        "browser_height": 600,
+        "browser_width": 908,
+        "screen_width": 1920,
+        "screen_height": 1080,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "74",
+            "76",
+            "100"
+        ],
+        "posterior_beliefs": [
+            "68",
+            "70",
+            "91"
+        ],
+        "about": "Seeing what people's first reactions are to something",
+        "comment": "No",
+        "age": "22",
+        "gender": "f",
+        "language": "English",
+        "exp_start_time": "2018-01-05T22:01:55.954Z",
+        "exp_end_time": "2018-01-05T22:03:18.610Z",
+        "action_trial_start_time": "2018-01-05T22:02:31.411Z",
+        "action_trial_end_time": "2018-01-05T22:02:36.766Z",
+        "experiment_completion_time": 82656,
+        "action_trial_time": 5355,
+        "hyp_type": "posterior"
+    },
+    "AssignmentId": "39LOEL67OS5U51EN7S2AV4CFYAH38E",
+    "WorkerId": "AE60SK1Y79RGK",
+    "HITId": "3FCO4VKOZ4DQS1R7W5MYBBPTRCQ7E0",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-05T22:08:22Z",
+    "AcceptTime": "2018-01-05T21:57:47Z",
+    "SubmitTime": "2018-01-05T22:03:22Z",
+    "ApprovalTime": "2018-01-05T22:08:37Z",
+    "Assignment": ""
+}

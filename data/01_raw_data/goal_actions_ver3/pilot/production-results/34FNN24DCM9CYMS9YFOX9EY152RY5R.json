@@ -1,0 +1,91 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "handle",
+            "handle",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "button",
+            "button",
+            "both"
+        ],
+        "manip_check_order": [
+            "HandleMusic",
+            "ButtonMusic",
+            "BothMusicLight"
+        ],
+        "manip_check_effect_order": [
+            "play music",
+            "turn on the light",
+            "play music AND turn on the light"
+        ],
+        "outcome": "music",
+        "action_response": "both",
+        "goal_condition": "learning",
+        "music_box": [
+            "ButtonMusic.jpeg",
+            "BothMusicLight.jpeg",
+            "HandleMusic.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "HandleMusic",
+            "BothMusicLight",
+            "ButtonMusic"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "BothMusicLight",
+            "ButtonMusic",
+            "HandleMusic"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 844,
+        "browser_width": 1638,
+        "screen_width": 1536,
+        "screen_height": 864,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "92",
+            "95",
+            "3"
+        ],
+        "posterior_beliefs": [
+            "90",
+            "1",
+            "56"
+        ],
+        "about": "How individual would choose to label a toy",
+        "comment": "The first 2 questions asked how to make the components work INDIVIDUALLY, not at the same time.",
+        "age": "37",
+        "gender": "f",
+        "language": "English",
+        "exp_start_time": "2018-01-16T05:54:58.641Z",
+        "exp_end_time": "2018-01-16T05:59:00.308Z",
+        "action_trial_start_time": "2018-01-16T05:56:50.320Z",
+        "action_trial_end_time": "2018-01-16T05:57:19.333Z",
+        "experiment_completion_time": 241667,
+        "action_trial_time": 29013,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "BothMusicLight",
+            "HandleMusic",
+            "ButtonMusic"
+        ],
+        "rand_action_labels": [
+            "Press the button on its own",
+            "Press the button and pull the handle<br>at the same time",
+            "Pull the handle on its own"
+        ]
+    },
+    "AssignmentId": "34FNN24DCM9CYMS9YFOX9EY152RY5R",
+    "WorkerId": "A2V6W655RENYIE",
+    "HITId": "35XW21VSVGEQH5LR1U7DJXB9NPJSLE",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-16T06:04:04Z",
+    "AcceptTime": "2018-01-16T05:44:15Z",
+    "SubmitTime": "2018-01-16T05:59:04Z",
+    "ApprovalTime": "2018-01-16T06:04:37Z",
+    "Assignment": ""
+}

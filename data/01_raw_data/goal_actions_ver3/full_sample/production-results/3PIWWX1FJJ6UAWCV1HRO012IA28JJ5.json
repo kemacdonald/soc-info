@@ -1,0 +1,91 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "handle",
+            "handle",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "button",
+            "button",
+            "both"
+        ],
+        "manip_check_order": [
+            "HandleMusic",
+            "ButtonMusic",
+            "BothMusicLight"
+        ],
+        "manip_check_effect_order": [
+            "play music",
+            "turn on the light",
+            "play music AND turn on the light"
+        ],
+        "outcome": "music",
+        "action_response": "button",
+        "goal_condition": "noGoal",
+        "music_box": [
+            "ButtonMusic.jpeg",
+            "HandleMusic.jpeg",
+            "BothMusicLight.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "BothMusicLight",
+            "ButtonMusic",
+            "HandleMusic"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "BothMusicLight",
+            "ButtonMusic",
+            "HandleMusic"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 794,
+        "browser_width": 1533,
+        "screen_width": 1600,
+        "screen_height": 900,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "31",
+            "77",
+            "34"
+        ],
+        "posterior_beliefs": [
+            "35",
+            "68",
+            "37"
+        ],
+        "about": "Attention?",
+        "why_action": "Because the screen with the music distracted me and changed before I could read it.",
+        "comment": "The actual music startled me. I went to turn up the volume to hear if it was an important part of the task, but the page changed before I could read anything. ",
+        "age": "33",
+        "gender": "f",
+        "language": "English",
+        "exp_start_time": "2018-01-18T20:48:07.741Z",
+        "exp_end_time": "2018-01-18T20:52:42.530Z",
+        "action_trial_start_time": "2018-01-18T20:49:47.551Z",
+        "action_trial_end_time": "2018-01-18T20:50:33.413Z",
+        "experiment_completion_time": 274789,
+        "action_trial_time": 45862,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "HandleMusic",
+            "BothMusicLight",
+            "ButtonMusic"
+        ],
+        "rand_action_labels": [
+            "Press the button on its own",
+            "Press the button and pull the handle<br>at the same time",
+            "Pull the handle on its own"
+        ]
+    },
+    "AssignmentId": "3PIWWX1FJJ6UAWCV1HRO012IA28JJ5",
+    "WorkerId": "A1Z9FI2VLIC954",
+    "HITId": "3NFWQRSHVEE1R824KJAYZ6NM2JOFGZ",
+    "AssignmentStatus": "Submitted",
+    "AutoApprovalTime": "2018-01-18T20:57:45Z",
+    "AcceptTime": "2018-01-18T20:47:29Z",
+    "SubmitTime": "2018-01-18T20:52:45Z",
+    "Assignment": ""
+}

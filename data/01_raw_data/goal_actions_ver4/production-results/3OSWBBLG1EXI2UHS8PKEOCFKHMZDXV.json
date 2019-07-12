@@ -1,0 +1,92 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_order": [
+            "HandleMusic",
+            "ButtonMusic",
+            "BothMusicLight"
+        ],
+        "manip_check_effect_order": [
+            "play music",
+            "turn on the light",
+            "play music AND turn on the light"
+        ],
+        "outcome": "music",
+        "action_response": "both",
+        "goal_condition": "performance",
+        "social_condition": "social",
+        "music_box": [
+            "BothMusicLight.jpeg",
+            "ButtonMusic.jpeg",
+            "HandleMusic.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "HandleMusic",
+            "ButtonMusic",
+            "BothMusicLight"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "HandleMusic",
+            "ButtonMusic",
+            "BothMusicLight"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 600,
+        "browser_width": 1533,
+        "screen_width": 1600,
+        "screen_height": 900,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "49",
+            "50",
+            "50"
+        ],
+        "posterior_beliefs": [
+            "49",
+            "50",
+            "50"
+        ],
+        "about": "I have no idea what the task was about.",
+        "why_action": "pulling the lever and pushing the button turns everything on",
+        "comment": "There was one part where I was sent back to the page with the sliders.",
+        "age": "55",
+        "gender": "m",
+        "language": "English",
+        "exp_start_time": "2018-01-22T20:56:44.462Z",
+        "exp_end_time": "2018-01-22T21:01:54.509Z",
+        "action_trial_start_time": "2018-01-22T20:59:26.327Z",
+        "action_trial_end_time": "2018-01-22T20:59:53.349Z",
+        "experiment_completion_time": 310047,
+        "action_trial_time": 27022,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "BothMusicLight",
+            "HandleMusic",
+            "ButtonMusic"
+        ],
+        "rand_action_labels": [
+            "Pull the handle on its own",
+            "Press the button and pull the handle<br>at the same time",
+            "Press the button on its own"
+        ]
+    },
+    "AssignmentId": "3OSWBBLG1EXI2UHS8PKEOCFKHMZDXV",
+    "WorkerId": "A31WTERLIX9YJP",
+    "HITId": "302OLP89DZ7TE55R7HSNVERG7C2CAU",
+    "AssignmentStatus": "Submitted",
+    "AutoApprovalTime": "2018-01-22T21:06:56Z",
+    "AcceptTime": "2018-01-22T20:56:32Z",
+    "SubmitTime": "2018-01-22T21:01:56Z",
+    "Assignment": ""
+}

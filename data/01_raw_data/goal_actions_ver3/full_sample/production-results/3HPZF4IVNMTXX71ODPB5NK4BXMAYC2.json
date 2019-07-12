@@ -1,0 +1,91 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_order": [
+            "HandleLight",
+            "ButtonLight",
+            "BothLightMusic"
+        ],
+        "manip_check_effect_order": [
+            "turn on the light",
+            "play music",
+            "turn on the light AND play music"
+        ],
+        "outcome": "light",
+        "action_response": "both",
+        "goal_condition": "performance",
+        "music_box": [
+            "HandleLight.jpeg",
+            "BothLightMusic.jpeg",
+            "ButtonLight.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "HandleLight",
+            "BothLightMusic",
+            "ButtonLight"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "BothLightMusic",
+            "ButtonLight",
+            "HandleLight"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 642,
+        "browser_width": 644,
+        "screen_width": 1366,
+        "screen_height": 768,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "81",
+            "87",
+            "79"
+        ],
+        "posterior_beliefs": [
+            "100",
+            "49",
+            "54"
+        ],
+        "about": "unsure",
+        "why_action": "because all of them turn the lights and music on if they are both pulled at the same time",
+        "comment": "no",
+        "age": "25",
+        "gender": "female",
+        "language": "English",
+        "exp_start_time": "2018-01-18T22:14:14.776Z",
+        "exp_end_time": "2018-01-18T22:17:23.193Z",
+        "action_trial_start_time": "2018-01-18T22:16:04.108Z",
+        "action_trial_end_time": "2018-01-18T22:16:19.700Z",
+        "experiment_completion_time": 188417,
+        "action_trial_time": 15592,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "BothLightMusic",
+            "HandleLight",
+            "ButtonLight"
+        ],
+        "rand_action_labels": [
+            "Pull the handle on its own",
+            "Press the button and pull the handle<br>at the same time",
+            "Press the button on its own"
+        ]
+    },
+    "AssignmentId": "3HPZF4IVNMTXX71ODPB5NK4BXMAYC2",
+    "WorkerId": "A12723JDRPT207",
+    "HITId": "3NFWQRSHVEE1R824KJAYZ6NM2JOFGZ",
+    "AssignmentStatus": "Submitted",
+    "AutoApprovalTime": "2018-01-18T22:22:23Z",
+    "AcceptTime": "2018-01-18T21:31:10Z",
+    "SubmitTime": "2018-01-18T22:17:23Z",
+    "Assignment": ""
+}

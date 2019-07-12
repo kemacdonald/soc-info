@@ -1,0 +1,91 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_order": [
+            "HandleMusic",
+            "ButtonMusic",
+            "BothMusicLight"
+        ],
+        "manip_check_effect_order": [
+            "play music",
+            "turn on the light",
+            "play music AND turn on the light"
+        ],
+        "outcome": "music",
+        "action_response": "button",
+        "goal_condition": "learning",
+        "music_box": [
+            "ButtonMusic.jpeg",
+            "HandleMusic.jpeg",
+            "BothMusicLight.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "BothMusicLight",
+            "HandleMusic",
+            "ButtonMusic"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "ButtonMusic",
+            "HandleMusic",
+            "BothMusicLight"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 737,
+        "browser_width": 709,
+        "screen_width": 1600,
+        "screen_height": 900,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "17",
+            "83",
+            "56"
+        ],
+        "posterior_beliefs": [
+            "82",
+            "84",
+            "20"
+        ],
+        "about": "What makes sense in how the toys work?",
+        "why_action": "",
+        "comment": "no",
+        "age": "47",
+        "gender": "f",
+        "language": "English",
+        "exp_start_time": "2018-01-18T22:20:24.036Z",
+        "exp_end_time": "2018-01-18T22:25:35.440Z",
+        "action_trial_start_time": "2018-01-18T22:23:33.510Z",
+        "action_trial_end_time": "2018-01-18T22:24:08.731Z",
+        "experiment_completion_time": 311404,
+        "action_trial_time": 35221,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "HandleMusic",
+            "BothMusicLight",
+            "ButtonMusic"
+        ],
+        "rand_action_labels": [
+            "Press the button and pull the handle<br>at the same time",
+            "Press the button on its own",
+            "Pull the handle on its own"
+        ]
+    },
+    "AssignmentId": "3HHRAGRYX85J5VQJVISGJ351DR9O91",
+    "WorkerId": "A2VR9O234UCT9T",
+    "HITId": "3NFWQRSHVEE1R824KJAYZ6NM2JOFGZ",
+    "AssignmentStatus": "Submitted",
+    "AutoApprovalTime": "2018-01-18T22:30:46Z",
+    "AcceptTime": "2018-01-18T21:59:02Z",
+    "SubmitTime": "2018-01-18T22:25:46Z",
+    "Assignment": ""
+}

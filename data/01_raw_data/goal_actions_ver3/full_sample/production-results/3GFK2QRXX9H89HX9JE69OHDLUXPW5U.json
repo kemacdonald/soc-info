@@ -1,0 +1,92 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_order": [
+            "HandleMusic",
+            "ButtonMusic",
+            "BothMusicLight"
+        ],
+        "manip_check_effect_order": [
+            "play music",
+            "turn on the light",
+            "play music AND turn on the light"
+        ],
+        "outcome": "music",
+        "action_response": "handle",
+        "goal_condition": "presentation",
+        "music_box": [
+            "BothMusicLight.jpeg",
+            "ButtonMusic.jpeg",
+            "HandleMusic.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "HandleMusic",
+            "BothMusicLight",
+            "ButtonMusic"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "ButtonMusic",
+            "HandleMusic",
+            "BothMusicLight"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 654,
+        "browser_width": 1316,
+        "screen_width": 1366,
+        "screen_height": 768,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "64",
+            "63",
+            "90"
+        ],
+        "posterior_beliefs": [
+            "16",
+            "95",
+            "23"
+        ],
+        "about": "to see how people make decisions ",
+        "why_action": "To me it seemed easier",
+        "comment": "",
+        "age": "26",
+        "gender": "f",
+        "language": "english",
+        "exp_start_time": "2018-01-18T22:09:46.381Z",
+        "exp_end_time": "2018-01-18T22:14:26.522Z",
+        "action_trial_start_time": "2018-01-18T22:12:02.317Z",
+        "action_trial_end_time": "2018-01-18T22:12:43.545Z",
+        "experiment_completion_time": 280141,
+        "action_trial_time": 41228,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "BothMusicLight",
+            "HandleMusic",
+            "ButtonMusic"
+        ],
+        "rand_action_labels": [
+            "Pull the handle on its own",
+            "Press the button and pull the handle<br>at the same time",
+            "Press the button on its own"
+        ]
+    },
+    "AssignmentId": "3GFK2QRXX9H89HX9JE69OHDLUXPW5U",
+    "WorkerId": "ABEYNW9IH10RQ",
+    "HITId": "3NFWQRSHVEE1R824KJAYZ6NM2JOFGZ",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-18T22:19:29Z",
+    "AcceptTime": "2018-01-18T22:09:37Z",
+    "SubmitTime": "2018-01-18T22:14:29Z",
+    "ApprovalTime": "2018-01-18T22:19:37Z",
+    "Assignment": ""
+}

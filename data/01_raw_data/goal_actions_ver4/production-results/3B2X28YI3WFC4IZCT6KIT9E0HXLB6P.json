@@ -1,0 +1,92 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_order": [
+            "ButtonLight",
+            "HandleLight",
+            "BothLightMusic"
+        ],
+        "manip_check_effect_order": [
+            "turn on the light",
+            "play music",
+            "turn on the light AND play music"
+        ],
+        "outcome": "light",
+        "action_response": "button",
+        "goal_condition": "performance",
+        "social_condition": "social",
+        "music_box": [
+            "BothLightMusic.jpeg",
+            "ButtonLight.jpeg",
+            "HandleLight.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "ButtonLight",
+            "HandleLight",
+            "BothLightMusic"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "ButtonLight",
+            "HandleLight",
+            "BothLightMusic"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 600,
+        "browser_width": 1230,
+        "screen_width": 1280,
+        "screen_height": 1024,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "100",
+            "49",
+            "1"
+        ],
+        "posterior_beliefs": [
+            "100",
+            "1",
+            "1"
+        ],
+        "about": "It was to determine if the actions by a toy should be performed either by the press of a button, a pull, or both. ",
+        "why_action": "I think technology is advancing and people are turning on lights at the press of a button. ",
+        "comment": "No",
+        "age": "35",
+        "gender": "female",
+        "language": "English",
+        "exp_start_time": "2018-01-22T20:17:24.091Z",
+        "exp_end_time": "2018-01-22T20:26:42.996Z",
+        "action_trial_start_time": "2018-01-22T20:21:50.231Z",
+        "action_trial_end_time": "2018-01-22T20:23:44.300Z",
+        "experiment_completion_time": 558905,
+        "action_trial_time": 114069,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "ButtonLight",
+            "HandleLight",
+            "BothLightMusic"
+        ],
+        "rand_action_labels": [
+            "Pull the handle on its own",
+            "Press the button on its own",
+            "Press the button and pull the handle<br>at the same time"
+        ]
+    },
+    "AssignmentId": "3B2X28YI3WFC4IZCT6KIT9E0HXLB6P",
+    "WorkerId": "A1IIF95II8FISQ",
+    "HITId": "302OLP89DZ7TE55R7HSNVERG7C2CAU",
+    "AssignmentStatus": "Submitted",
+    "AutoApprovalTime": "2018-01-22T20:31:45Z",
+    "AcceptTime": "2018-01-22T19:43:51Z",
+    "SubmitTime": "2018-01-22T20:26:45Z",
+    "Assignment": ""
+}

@@ -1,0 +1,88 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_order": [
+            "ButtonMusic",
+            "HandleMusic",
+            "BothMusicLight"
+        ],
+        "manip_check_effect_order": [
+            "play music",
+            "turn on the light"
+        ],
+        "action_response": "handle",
+        "goal_condition": "presentation",
+        "music_box": [
+            "BothMusicLight.jpeg",
+            "HandleMusic.jpeg",
+            "ButtonMusic.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "ButtonMusic",
+            "HandleMusic",
+            "BothMusicLight"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "BothMusicLight",
+            "ButtonMusic",
+            "HandleMusic"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 763,
+        "browser_width": 1134,
+        "screen_width": 1280,
+        "screen_height": 768,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "69",
+            "31",
+            "82"
+        ],
+        "posterior_beliefs": [
+            "69",
+            "32",
+            "83"
+        ],
+        "about": "I'm unsure. My thought process wasn't really logical in selecting which one option would tell me what the toy did - it was more like a gratification thing. Pulling the handle seems like the first activity a person would do on that toy.",
+        "comment": "everything was fine, thanks.",
+        "age": "50",
+        "gender": "f",
+        "language": "English",
+        "exp_start_time": "2018-01-14T23:58:24.853Z",
+        "exp_end_time": "2018-01-15T00:01:23.859Z",
+        "action_trial_start_time": "2018-01-14T23:59:01.517Z",
+        "action_trial_end_time": "2018-01-14T23:59:11.195Z",
+        "experiment_completion_time": 179006,
+        "action_trial_time": 9678,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "BothMusicLight",
+            "ButtonMusic",
+            "HandleMusic"
+        ],
+        "rand_action_labels": [
+            "Pull the handle",
+            "Press the button",
+            "Press the button and pull the handle"
+        ]
+    },
+    "AssignmentId": "3OVR4I9USPJLT1XNT0OTR0PL6WI4QQ",
+    "WorkerId": "A22DDO8NILSX6O",
+    "HITId": "3KVQ0UJWPXL5MXZFTC17ZXIX7C95WC",
+    "AssignmentStatus": "Submitted",
+    "AutoApprovalTime": "2018-01-15T00:06:28Z",
+    "AcceptTime": "2018-01-14T23:48:56Z",
+    "SubmitTime": "2018-01-15T00:01:28Z",
+    "Assignment": ""
+}

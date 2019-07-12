@@ -1,0 +1,62 @@
+{
+    "answers": {
+        "manip_check_music_response": [],
+        "manip_check_light_response": [],
+        "manip_check_order": [],
+        "manip_check_effect_order": [
+            "play music",
+            "turn on the light",
+            "play music AND turn on the light"
+        ],
+        "action_response": "button",
+        "goal_condition": "noGoal",
+        "music_box": [
+            "HandleMusic.jpeg",
+            "ButtonMusic.jpeg",
+            "BothMusicLight.jpeg"
+        ],
+        "hypotheses_slider_order_prior": "",
+        "hypotheses_slider_order_posterior": "",
+        "actions_buttons_order": "",
+        "toy_inst_num": 0,
+        "browser": "Chrome",
+        "browser_height": 949,
+        "browser_width": 1853,
+        "screen_width": 1920,
+        "screen_height": 1080,
+        "mobile_device": false,
+        "prior_beliefs": [],
+        "posterior_beliefs": [],
+        "about": "See if, when presented multiple choices, what our minds will lead us to do first",
+        "why_action": "I think the button will do a more exciting action than the other",
+        "age": "25",
+        "gender": "m",
+        "language": "English",
+        "exp_start_time": "",
+        "exp_end_time": "2018-01-18T23:31:19.276Z",
+        "action_trial_start_time": "2018-01-18T23:30:36.029Z",
+        "action_trial_end_time": "2018-01-18T23:30:48.723Z",
+        "experiment_completion_time": "",
+        "action_trial_time": "",
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "HandleMusic",
+            "ButtonMusic",
+            "BothMusicLight"
+        ],
+        "rand_action_labels": [
+            "Pull the handle on its own",
+            "Press the button and pull the handle<br>at the same time",
+            "Press the button on its own"
+        ]
+    },
+    "AssignmentId": "3U5NZHP4LR2U51K38UTNLK8F69JPHF",
+    "WorkerId": "A2GV9WSNSPX53",
+    "HITId": "36818Z1KV3D51598EOHM2BNM1XTA3U",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-18T23:36:20Z",
+    "AcceptTime": "2018-01-18T23:30:31Z",
+    "SubmitTime": "2018-01-18T23:31:20Z",
+    "ApprovalTime": "2018-01-18T23:36:37Z",
+    "Assignment": ""
+}

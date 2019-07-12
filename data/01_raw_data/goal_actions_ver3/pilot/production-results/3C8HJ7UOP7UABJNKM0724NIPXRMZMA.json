@@ -1,0 +1,91 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_order": [
+            "HandleLight",
+            "ButtonLight",
+            "BothLightMusic"
+        ],
+        "manip_check_effect_order": [
+            "turn on the light",
+            "play music",
+            "turn on the light AND play music"
+        ],
+        "outcome": "light",
+        "action_response": "handle",
+        "goal_condition": "learning",
+        "music_box": [
+            "HandleLight.jpeg",
+            "BothLightMusic.jpeg",
+            "ButtonLight.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "BothLightMusic",
+            "HandleLight",
+            "ButtonLight"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "BothLightMusic",
+            "ButtonLight",
+            "HandleLight"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 974,
+        "browser_width": 1853,
+        "screen_width": 1920,
+        "screen_height": 1080,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "4",
+            "15",
+            "86"
+        ],
+        "posterior_beliefs": [
+            "31",
+            "33",
+            "34"
+        ],
+        "about": "Maybe to see what method we naturally resort to when thinking about it?",
+        "comment": "",
+        "age": "34",
+        "gender": "m",
+        "language": "English",
+        "exp_start_time": "2018-01-16T06:24:33.206Z",
+        "exp_end_time": "2018-01-16T06:28:18.712Z",
+        "action_trial_start_time": "2018-01-16T06:26:38.131Z",
+        "action_trial_end_time": "2018-01-16T06:27:20.492Z",
+        "experiment_completion_time": 225506,
+        "action_trial_time": 42361,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "HandleLight",
+            "BothLightMusic",
+            "ButtonLight"
+        ],
+        "rand_action_labels": [
+            "Press the button and pull the handle<br>at the same time",
+            "Pull the handle on its own",
+            "Press the button on its own"
+        ]
+    },
+    "AssignmentId": "3C8HJ7UOP7UABJNKM0724NIPXRMZMA",
+    "WorkerId": "A3AUYTM38ALODI",
+    "HITId": "35XW21VSVGEQH5LR1U7DJXB9NPJSLE",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-16T06:33:22Z",
+    "AcceptTime": "2018-01-16T06:19:59Z",
+    "SubmitTime": "2018-01-16T06:28:22Z",
+    "ApprovalTime": "2018-01-16T06:33:37Z",
+    "Assignment": ""
+}

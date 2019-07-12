@@ -1,0 +1,93 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_order": [
+            "HandleMusic",
+            "ButtonMusic",
+            "BothMusicLight"
+        ],
+        "manip_check_effect_order": [
+            "play music",
+            "turn on the light",
+            "play music AND turn on the light"
+        ],
+        "outcome": "music",
+        "action_response": "handle",
+        "goal_condition": "performance",
+        "social_condition": "no-social",
+        "music_box": [
+            "HandleMusic.jpeg",
+            "ButtonMusic.jpeg",
+            "BothMusicLight.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "BothMusicLight",
+            "HandleMusic",
+            "ButtonMusic"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "HandleMusic",
+            "BothMusicLight",
+            "ButtonMusic"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Safari",
+        "browser_height": 600,
+        "browser_width": 1390,
+        "screen_width": 1440,
+        "screen_height": 900,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "54",
+            "84",
+            "14"
+        ],
+        "posterior_beliefs": [
+            "100",
+            "1",
+            "50"
+        ],
+        "about": "To see how intuitive an audience is when presented an unknown item.",
+        "why_action": "It made more sense for the handle to be associated with music. ",
+        "comment": "N/A",
+        "age": "25",
+        "gender": "f",
+        "language": "English",
+        "exp_start_time": "2018-01-23T06:05:25.008Z",
+        "exp_end_time": "2018-01-23T06:09:23.074Z",
+        "action_trial_start_time": "2018-01-23T06:06:51.356Z",
+        "action_trial_end_time": "2018-01-23T06:07:11.064Z",
+        "experiment_completion_time": 238066,
+        "action_trial_time": 19708,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "HandleMusic",
+            "ButtonMusic",
+            "BothMusicLight"
+        ],
+        "rand_action_labels": [
+            "Press the button and pull the handle<br>at the same time",
+            "Press the button on its own",
+            "Pull the handle on its own"
+        ]
+    },
+    "AssignmentId": "3L2IS5HSFAIZ72EASENU0ASA1AQUNC",
+    "WorkerId": "A2I66F57DCSAGJ",
+    "HITId": "302OLP89DZ7TE55R7HSNVERG7C2CAU",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-23T06:14:24Z",
+    "AcceptTime": "2018-01-23T06:05:19Z",
+    "SubmitTime": "2018-01-23T06:09:24Z",
+    "ApprovalTime": "2018-01-23T06:14:39Z",
+    "Assignment": ""
+}

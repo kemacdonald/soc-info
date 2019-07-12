@@ -1,0 +1,92 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_order": [
+            "ButtonMusic",
+            "HandleMusic",
+            "BothMusicLight"
+        ],
+        "manip_check_effect_order": [
+            "play music",
+            "turn on the light",
+            "play music AND turn on the light"
+        ],
+        "outcome": "music",
+        "action_response": "both",
+        "goal_condition": "presentation",
+        "social_condition": "social",
+        "music_box": [
+            "HandleMusic.jpeg",
+            "BothMusicLight.jpeg",
+            "ButtonMusic.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "ButtonMusic",
+            "BothMusicLight",
+            "HandleMusic"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "BothMusicLight",
+            "ButtonMusic",
+            "HandleMusic"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Firefox",
+        "browser_height": 600,
+        "browser_width": 1299,
+        "screen_width": 1366,
+        "screen_height": 768,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "83",
+            "91",
+            "98"
+        ],
+        "posterior_beliefs": [
+            "87",
+            "19",
+            "23"
+        ],
+        "about": "What route people would do to impress someone",
+        "why_action": "I want to do what I felt would impress my boss",
+        "comment": "nope",
+        "age": "34",
+        "gender": "f",
+        "language": "english",
+        "exp_start_time": "2018-01-22T18:05:39.671Z",
+        "exp_end_time": "2018-01-22T18:12:37.476Z",
+        "action_trial_start_time": "2018-01-22T18:09:47.261Z",
+        "action_trial_end_time": "2018-01-22T18:11:28.042Z",
+        "experiment_completion_time": 417805,
+        "action_trial_time": 100781,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "ButtonMusic",
+            "HandleMusic",
+            "BothMusicLight"
+        ],
+        "rand_action_labels": [
+            "Pull the handle on its own",
+            "Press the button on its own",
+            "Press the button and pull the handle<br>at the same time"
+        ]
+    },
+    "AssignmentId": "3KAKFY4PGU2NU7Q0GEE18T6T2WW3ID",
+    "WorkerId": "A1QGG767E07WBA",
+    "HITId": "302OLP89DZ7TE55R7HSNVERG7C2CAU",
+    "AssignmentStatus": "Submitted",
+    "AutoApprovalTime": "2018-01-22T18:17:37Z",
+    "AcceptTime": "2018-01-22T18:05:08Z",
+    "SubmitTime": "2018-01-22T18:12:37Z",
+    "Assignment": ""
+}

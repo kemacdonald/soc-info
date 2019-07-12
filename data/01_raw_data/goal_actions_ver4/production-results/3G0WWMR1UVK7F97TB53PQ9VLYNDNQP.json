@@ -1,0 +1,93 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_order": [
+            "HandleMusic",
+            "ButtonMusic",
+            "BothMusicLight"
+        ],
+        "manip_check_effect_order": [
+            "play music",
+            "turn on the light",
+            "play music AND turn on the light"
+        ],
+        "outcome": "music",
+        "action_response": "both",
+        "goal_condition": "learning",
+        "social_condition": "social",
+        "music_box": [
+            "BothMusicLight.jpeg",
+            "ButtonMusic.jpeg",
+            "HandleMusic.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "BothMusicLight",
+            "ButtonMusic",
+            "HandleMusic"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "BothMusicLight",
+            "ButtonMusic",
+            "HandleMusic"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 600,
+        "browser_width": 992,
+        "screen_width": 1920,
+        "screen_height": 1080,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "94",
+            "50",
+            "51"
+        ],
+        "posterior_beliefs": [
+            "100",
+            "50",
+            "47"
+        ],
+        "about": "Probability of how a toy works",
+        "why_action": "Because there was a very high chance the label would be correct",
+        "comment": "No",
+        "age": "38",
+        "gender": "F",
+        "language": "English",
+        "exp_start_time": "2018-01-22T20:40:46.288Z",
+        "exp_end_time": "2018-01-22T20:44:02.463Z",
+        "action_trial_start_time": "2018-01-22T20:42:36.183Z",
+        "action_trial_end_time": "2018-01-22T20:43:01.514Z",
+        "experiment_completion_time": 196175,
+        "action_trial_time": 25331,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "BothMusicLight",
+            "HandleMusic",
+            "ButtonMusic"
+        ],
+        "rand_action_labels": [
+            "Press the button on its own",
+            "Press the button and pull the handle<br>at the same time",
+            "Pull the handle on its own"
+        ]
+    },
+    "AssignmentId": "3G0WWMR1UVK7F97TB53PQ9VLYNDNQP",
+    "WorkerId": "A3KIBR0RYVLOJF",
+    "HITId": "302OLP89DZ7TE55R7HSNVERG7C2CAU",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-22T20:49:03Z",
+    "AcceptTime": "2018-01-22T20:29:09Z",
+    "SubmitTime": "2018-01-22T20:44:03Z",
+    "ApprovalTime": "2018-01-22T20:49:37Z",
+    "Assignment": ""
+}

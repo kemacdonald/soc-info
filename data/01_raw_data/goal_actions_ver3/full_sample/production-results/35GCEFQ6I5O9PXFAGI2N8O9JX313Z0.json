@@ -1,0 +1,91 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_order": [
+            "HandleLight",
+            "ButtonLight",
+            "BothLightMusic"
+        ],
+        "manip_check_effect_order": [
+            "turn on the light",
+            "play music",
+            "turn on the light AND play music"
+        ],
+        "outcome": "light",
+        "action_response": "button",
+        "goal_condition": "learning",
+        "music_box": [
+            "BothLightMusic.jpeg",
+            "ButtonLight.jpeg",
+            "HandleLight.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "HandleLight",
+            "BothLightMusic",
+            "ButtonLight"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "ButtonLight",
+            "HandleLight",
+            "BothLightMusic"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 600,
+        "browser_width": 1533,
+        "screen_width": 1600,
+        "screen_height": 900,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "50",
+            "49",
+            "51"
+        ],
+        "posterior_beliefs": [
+            "100",
+            "1",
+            "1"
+        ],
+        "about": "How people solve the previous problem.",
+        "why_action": "Because it would narrow the selection down to either being the toy that has music turn on, or the light turn on when the button is pressed, and if nothing happened it is the one that requires both the button and the lever to be pulled to do anything.",
+        "comment": "",
+        "age": "21",
+        "gender": "m",
+        "language": "English",
+        "exp_start_time": "2018-01-18T21:13:26.663Z",
+        "exp_end_time": "2018-01-18T21:18:00.661Z",
+        "action_trial_start_time": "2018-01-18T21:15:09.863Z",
+        "action_trial_end_time": "2018-01-18T21:16:09.902Z",
+        "experiment_completion_time": 273998,
+        "action_trial_time": 60039,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "HandleLight",
+            "BothLightMusic",
+            "ButtonLight"
+        ],
+        "rand_action_labels": [
+            "Press the button on its own",
+            "Pull the handle on its own",
+            "Press the button and pull the handle<br>at the same time"
+        ]
+    },
+    "AssignmentId": "35GCEFQ6I5O9PXFAGI2N8O9JX313Z0",
+    "WorkerId": "A3AEFCFAVPNFOH",
+    "HITId": "3NFWQRSHVEE1R824KJAYZ6NM2JOFGZ",
+    "AssignmentStatus": "Submitted",
+    "AutoApprovalTime": "2018-01-18T21:23:03Z",
+    "AcceptTime": "2018-01-18T21:11:49Z",
+    "SubmitTime": "2018-01-18T21:18:03Z",
+    "Assignment": ""
+}

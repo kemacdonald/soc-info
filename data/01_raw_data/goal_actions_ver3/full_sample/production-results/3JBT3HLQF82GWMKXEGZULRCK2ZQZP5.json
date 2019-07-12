@@ -1,0 +1,91 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_order": [
+            "ButtonLight",
+            "HandleLight",
+            "BothLightMusic"
+        ],
+        "manip_check_effect_order": [
+            "turn on the light",
+            "play music",
+            "turn on the light AND play music"
+        ],
+        "outcome": "light",
+        "action_response": "handle",
+        "goal_condition": "learning",
+        "music_box": [
+            "BothLightMusic.jpeg",
+            "ButtonLight.jpeg",
+            "HandleLight.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "ButtonLight",
+            "HandleLight",
+            "BothLightMusic"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "HandleLight",
+            "BothLightMusic",
+            "ButtonLight"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 600,
+        "browser_width": 925,
+        "screen_width": 1600,
+        "screen_height": 900,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "51",
+            "54",
+            "54"
+        ],
+        "posterior_beliefs": [
+            "52",
+            "52",
+            "55"
+        ],
+        "about": "To see how intuitive a  toy is.",
+        "why_action": "If I pull the handle it'll either produce a sound, a light, or nothing at all. If it produces nothing, then I know the button needs to be pressed so something can happen. If I pull the handle and I get either a sound or light, then obviously I know which is which.",
+        "comment": "None.",
+        "age": "28",
+        "gender": "m",
+        "language": "English",
+        "exp_start_time": "2018-01-18T20:35:09.378Z",
+        "exp_end_time": "2018-01-18T20:44:27.629Z",
+        "action_trial_start_time": "2018-01-18T20:37:47.559Z",
+        "action_trial_end_time": "2018-01-18T20:38:52.111Z",
+        "experiment_completion_time": 558251,
+        "action_trial_time": 64552,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "ButtonLight",
+            "BothLightMusic",
+            "HandleLight"
+        ],
+        "rand_action_labels": [
+            "Press the button on its own",
+            "Pull the handle on its own",
+            "Press the button and pull the handle<br>at the same time"
+        ]
+    },
+    "AssignmentId": "3JBT3HLQF82GWMKXEGZULRCK2ZQZP5",
+    "WorkerId": "AAE6DGZOC9EWQ",
+    "HITId": "3NFWQRSHVEE1R824KJAYZ6NM2JOFGZ",
+    "AssignmentStatus": "Submitted",
+    "AutoApprovalTime": "2018-01-18T20:49:28Z",
+    "AcceptTime": "2018-01-18T20:34:52Z",
+    "SubmitTime": "2018-01-18T20:44:28Z",
+    "Assignment": ""
+}

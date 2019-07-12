@@ -1,0 +1,93 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_order": [
+            "HandleMusic",
+            "ButtonMusic",
+            "BothMusicLight"
+        ],
+        "manip_check_effect_order": [
+            "play music",
+            "turn on the light",
+            "play music AND turn on the light"
+        ],
+        "outcome": "music",
+        "action_response": "both",
+        "goal_condition": "learning",
+        "social_condition": "no-social",
+        "music_box": [
+            "HandleMusic.jpeg",
+            "BothMusicLight.jpeg",
+            "ButtonMusic.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "BothMusicLight",
+            "ButtonMusic",
+            "HandleMusic"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "HandleMusic",
+            "BothMusicLight",
+            "ButtonMusic"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Firefox",
+        "browser_height": 600,
+        "browser_width": 1074,
+        "screen_width": 1138,
+        "screen_height": 640,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "96",
+            "97",
+            "98"
+        ],
+        "posterior_beliefs": [
+            "58",
+            "100",
+            "59"
+        ],
+        "about": "I don't know.  Maybe to test deductive reasoning.",
+        "why_action": "Choosing only one option might not tell me what mechanism did what.  But in all three toys, pressing both mechanisms at the same time produced music and light.  ",
+        "comment": "no",
+        "age": "39",
+        "gender": "female",
+        "language": "English",
+        "exp_start_time": "2018-01-22T21:36:43.680Z",
+        "exp_end_time": "2018-01-22T21:43:11.620Z",
+        "action_trial_start_time": "2018-01-22T21:39:32.670Z",
+        "action_trial_end_time": "2018-01-22T21:40:48.618Z",
+        "experiment_completion_time": 387940,
+        "action_trial_time": 75948,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "BothMusicLight",
+            "HandleMusic",
+            "ButtonMusic"
+        ],
+        "rand_action_labels": [
+            "Press the button and pull the handle<br>at the same time",
+            "Pull the handle on its own",
+            "Press the button on its own"
+        ]
+    },
+    "AssignmentId": "3MB8LZR5BFTVG66DMN3DHVFNUNPKLY",
+    "WorkerId": "A2T5M93NYLSGRY",
+    "HITId": "302OLP89DZ7TE55R7HSNVERG7C2CAU",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-22T21:48:16Z",
+    "AcceptTime": "2018-01-22T21:36:16Z",
+    "SubmitTime": "2018-01-22T21:43:16Z",
+    "ApprovalTime": "2018-01-22T21:48:37Z",
+    "Assignment": ""
+}

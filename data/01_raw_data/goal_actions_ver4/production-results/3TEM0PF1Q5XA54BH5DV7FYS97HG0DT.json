@@ -1,0 +1,94 @@
+{
+    "answers": {
+        "doNotRedirect": true,
+        "manip_check_music_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_order": [
+            "HandleLight",
+            "ButtonLight",
+            "BothLightMusic"
+        ],
+        "manip_check_effect_order": [
+            "turn on the light",
+            "play music",
+            "turn on the light AND play music"
+        ],
+        "outcome": "light",
+        "action_response": "both",
+        "goal_condition": "performance",
+        "social_condition": "no-social",
+        "music_box": [
+            "ButtonLight.jpeg",
+            "HandleLight.jpeg",
+            "BothLightMusic.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "HandleLight",
+            "BothLightMusic",
+            "ButtonLight"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "BothLightMusic",
+            "HandleLight",
+            "ButtonLight"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 579,
+        "browser_width": 1176,
+        "screen_width": 1366,
+        "screen_height": 768,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "67",
+            "65",
+            "68"
+        ],
+        "posterior_beliefs": [
+            "69",
+            "73",
+            "77"
+        ],
+        "about": "I'm not sure. It looks like it would be aimed at children but I didn't get it.",
+        "why_action": "I wantedto choose the middle option but it didn't let me. It wanted me to choose something else so I did.",
+        "comment": "It seems that there was a screen that went too fast. I couldn't read anything and then it asked me to move sliders.",
+        "age": "48",
+        "gender": "female",
+        "language": "English",
+        "exp_start_time": "2018-01-23T04:31:59.057Z",
+        "exp_end_time": "2018-01-23T04:36:30.342Z",
+        "action_trial_start_time": "2018-01-23T04:34:18.285Z",
+        "action_trial_end_time": "2018-01-23T04:34:44.357Z",
+        "experiment_completion_time": 271285,
+        "action_trial_time": 26072,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "BothLightMusic",
+            "HandleLight",
+            "ButtonLight"
+        ],
+        "rand_action_labels": [
+            "Press the button on its own",
+            "Press the button and pull the handle<br>at the same time",
+            "Pull the handle on its own"
+        ]
+    },
+    "AssignmentId": "3TEM0PF1Q5XA54BH5DV7FYS97HG0DT",
+    "WorkerId": "AEF94JKX6FG92",
+    "HITId": "302OLP89DZ7TE55R7HSNVERG7C2CAU",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-23T04:41:33Z",
+    "AcceptTime": "2018-01-23T04:31:45Z",
+    "SubmitTime": "2018-01-23T04:36:33Z",
+    "ApprovalTime": "2018-01-23T04:41:38Z",
+    "Assignment": ""
+}

@@ -1,0 +1,93 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "button",
+            "button",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "handle",
+            "handle",
+            "both"
+        ],
+        "manip_check_order": [
+            "HandleLight",
+            "ButtonLight",
+            "BothLightMusic"
+        ],
+        "manip_check_effect_order": [
+            "turn on the light",
+            "play music",
+            "turn on the light AND play music"
+        ],
+        "outcome": "light",
+        "action_response": "handle",
+        "goal_condition": "noGoal",
+        "social_condition": "no-social",
+        "music_box": [
+            "HandleLight.jpeg",
+            "ButtonLight.jpeg",
+            "BothLightMusic.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "ButtonLight",
+            "BothLightMusic",
+            "HandleLight"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "HandleLight",
+            "BothLightMusic",
+            "ButtonLight"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 734,
+        "browser_width": 1390,
+        "screen_width": 1440,
+        "screen_height": 900,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "66",
+            "68",
+            "78"
+        ],
+        "posterior_beliefs": [
+            "63",
+            "68",
+            "75"
+        ],
+        "about": "General cognitive ability. ",
+        "why_action": "",
+        "comment": "There could be more emphasis on the idea that there are different types of boxes. Like bold underlined words etc. ",
+        "age": "46",
+        "gender": "male",
+        "language": "English",
+        "exp_start_time": "2018-01-22T20:29:54.342Z",
+        "exp_end_time": "2018-01-22T20:33:52.688Z",
+        "action_trial_start_time": "2018-01-22T20:31:48.959Z",
+        "action_trial_end_time": "2018-01-22T20:32:16.080Z",
+        "experiment_completion_time": 238346,
+        "action_trial_time": 27121,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "HandleLight",
+            "BothLightMusic",
+            "ButtonLight"
+        ],
+        "rand_action_labels": [
+            "Pull the handle on its own",
+            "Press the button and pull the handle<br>at the same time",
+            "Press the button on its own"
+        ]
+    },
+    "AssignmentId": "3FK0YFF9PZGCSMCJZVJQ6DO61IUVV8",
+    "WorkerId": "A3PENQIO0WNLJN",
+    "HITId": "302OLP89DZ7TE55R7HSNVERG7C2CAU",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-22T20:38:55Z",
+    "AcceptTime": "2018-01-22T20:29:37Z",
+    "SubmitTime": "2018-01-22T20:33:55Z",
+    "ApprovalTime": "2018-01-22T20:39:37Z",
+    "Assignment": ""
+}

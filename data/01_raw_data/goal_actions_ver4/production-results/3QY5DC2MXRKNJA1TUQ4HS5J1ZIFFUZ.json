@@ -1,0 +1,93 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_order": [
+            "ButtonMusic",
+            "HandleMusic",
+            "BothMusicLight"
+        ],
+        "manip_check_effect_order": [
+            "play music",
+            "turn on the light",
+            "play music AND turn on the light"
+        ],
+        "outcome": "music",
+        "action_response": "both",
+        "goal_condition": "performance",
+        "social_condition": "no-social",
+        "music_box": [
+            "ButtonMusic.jpeg",
+            "BothMusicLight.jpeg",
+            "HandleMusic.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "ButtonMusic",
+            "HandleMusic",
+            "BothMusicLight"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "BothMusicLight",
+            "ButtonMusic",
+            "HandleMusic"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 600,
+        "browser_width": 1383,
+        "screen_width": 1680,
+        "screen_height": 1050,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "27",
+            "28",
+            "29"
+        ],
+        "posterior_beliefs": [
+            "26",
+            "28",
+            "27"
+        ],
+        "about": "To see what risk people will take",
+        "why_action": "Because it would guarantee I got the outcome I wanted",
+        "comment": "No",
+        "age": "22",
+        "gender": "M",
+        "language": "English",
+        "exp_start_time": "2018-01-23T00:45:23.169Z",
+        "exp_end_time": "2018-01-23T00:49:33.417Z",
+        "action_trial_start_time": "2018-01-23T00:47:46.138Z",
+        "action_trial_end_time": "2018-01-23T00:48:22.070Z",
+        "experiment_completion_time": 250248,
+        "action_trial_time": 35932,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "ButtonMusic",
+            "BothMusicLight",
+            "HandleMusic"
+        ],
+        "rand_action_labels": [
+            "Pull the handle on its own",
+            "Press the button and pull the handle<br>at the same time",
+            "Press the button on its own"
+        ]
+    },
+    "AssignmentId": "3QY5DC2MXRKNJA1TUQ4HS5J1ZIFFUZ",
+    "WorkerId": "A2NGG3KW6YTS1G",
+    "HITId": "302OLP89DZ7TE55R7HSNVERG7C2CAU",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-23T00:54:34Z",
+    "AcceptTime": "2018-01-23T00:45:18Z",
+    "SubmitTime": "2018-01-23T00:49:34Z",
+    "ApprovalTime": "2018-01-23T00:54:39Z",
+    "Assignment": ""
+}

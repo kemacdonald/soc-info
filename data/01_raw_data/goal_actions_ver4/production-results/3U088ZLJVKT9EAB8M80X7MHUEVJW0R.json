@@ -1,0 +1,93 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_order": [
+            "HandleMusic",
+            "ButtonMusic",
+            "BothMusicLight"
+        ],
+        "manip_check_effect_order": [
+            "play music",
+            "turn on the light",
+            "play music AND turn on the light"
+        ],
+        "outcome": "music",
+        "action_response": "handle",
+        "goal_condition": "noGoal",
+        "social_condition": "no-social",
+        "music_box": [
+            "HandleMusic.jpeg",
+            "ButtonMusic.jpeg",
+            "BothMusicLight.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "HandleMusic",
+            "BothMusicLight",
+            "ButtonMusic"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "ButtonMusic",
+            "BothMusicLight",
+            "HandleMusic"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 600,
+        "browser_width": 1630,
+        "screen_width": 1680,
+        "screen_height": 1050,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "86",
+            "67",
+            "84"
+        ],
+        "posterior_beliefs": [
+            "6",
+            "6",
+            "100"
+        ],
+        "about": "Trying to determine if people can use deductive reasoning in a decision",
+        "why_action": "I pulled the lever and it played music",
+        "comment": "No comments",
+        "age": "30",
+        "gender": "male",
+        "language": "english",
+        "exp_start_time": "2018-01-22T20:30:18.674Z",
+        "exp_end_time": "2018-01-22T20:33:19.552Z",
+        "action_trial_start_time": "2018-01-22T20:32:03.526Z",
+        "action_trial_end_time": "2018-01-22T20:32:26.381Z",
+        "experiment_completion_time": 180878,
+        "action_trial_time": 22855,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "BothMusicLight",
+            "HandleMusic",
+            "ButtonMusic"
+        ],
+        "rand_action_labels": [
+            "Press the button and pull the handle<br>at the same time",
+            "Pull the handle on its own",
+            "Press the button on its own"
+        ]
+    },
+    "AssignmentId": "3U088ZLJVKT9EAB8M80X7MHUEVJW0R",
+    "WorkerId": "A3QDBNW2H8EMFW",
+    "HITId": "302OLP89DZ7TE55R7HSNVERG7C2CAU",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-22T20:38:20Z",
+    "AcceptTime": "2018-01-22T20:30:12Z",
+    "SubmitTime": "2018-01-22T20:33:20Z",
+    "ApprovalTime": "2018-01-22T20:38:37Z",
+    "Assignment": ""
+}

@@ -1,0 +1,92 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_order": [
+            "ButtonLight",
+            "HandleLight",
+            "BothLightMusic"
+        ],
+        "manip_check_effect_order": [
+            "turn on the light",
+            "play music",
+            "turn on the light AND play music"
+        ],
+        "outcome": "light",
+        "action_response": "both",
+        "goal_condition": "performance",
+        "social_condition": "no-social",
+        "music_box": [
+            "BothLightMusic.jpeg",
+            "HandleLight.jpeg",
+            "ButtonLight.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "ButtonLight",
+            "BothLightMusic",
+            "HandleLight"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "BothLightMusic",
+            "ButtonLight",
+            "HandleLight"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 944,
+        "browser_width": 1613,
+        "screen_width": 1680,
+        "screen_height": 1050,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "37",
+            "38",
+            "38"
+        ],
+        "posterior_beliefs": [
+            "37",
+            "37",
+            "37"
+        ],
+        "about": "Deductive reasoning/logic",
+        "why_action": "It was guaranteed to turn on the light.",
+        "comment": "Nothing broken. It was surprising when the music played.",
+        "age": "42",
+        "gender": "m",
+        "language": "English",
+        "exp_start_time": "2018-01-23T00:46:03.901Z",
+        "exp_end_time": "2018-01-23T00:51:43.281Z",
+        "action_trial_start_time": "2018-01-23T00:48:38.402Z",
+        "action_trial_end_time": "2018-01-23T00:49:59.512Z",
+        "experiment_completion_time": 339380,
+        "action_trial_time": 81110,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "BothLightMusic",
+            "ButtonLight",
+            "HandleLight"
+        ],
+        "rand_action_labels": [
+            "Press the button and pull the handle<br>at the same time",
+            "Press the button on its own",
+            "Pull the handle on its own"
+        ]
+    },
+    "AssignmentId": "3AZHRG4CU4KCNC9KCOPV2P6XG37039",
+    "WorkerId": "A37O2Z8CDBNUXO",
+    "HITId": "302OLP89DZ7TE55R7HSNVERG7C2CAU",
+    "AssignmentStatus": "Submitted",
+    "AutoApprovalTime": "2018-01-23T00:56:46Z",
+    "AcceptTime": "2018-01-23T00:45:21Z",
+    "SubmitTime": "2018-01-23T00:51:46Z",
+    "Assignment": ""
+}

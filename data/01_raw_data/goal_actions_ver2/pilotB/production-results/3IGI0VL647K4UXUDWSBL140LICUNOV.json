@@ -1,0 +1,88 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_order": [
+            "HandleMusic",
+            "ButtonMusic",
+            "BothMusicLight"
+        ],
+        "manip_check_effect_order": [
+            "play music",
+            "turn on the light"
+        ],
+        "action_response": "both",
+        "goal_condition": "learning",
+        "music_box": [
+            "ButtonMusic.jpeg",
+            "BothMusicLight.jpeg",
+            "HandleMusic.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "BothMusicLight",
+            "HandleMusic",
+            "ButtonMusic"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "HandleMusic",
+            "BothMusicLight",
+            "ButtonMusic"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 675,
+        "browser_width": 1299,
+        "screen_width": 1366,
+        "screen_height": 768,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "100",
+            "1",
+            "1"
+        ],
+        "posterior_beliefs": [
+            "100",
+            "100",
+            "100"
+        ],
+        "about": "figuring out a music box toy",
+        "comment": "everything worked great",
+        "age": "37",
+        "gender": "f",
+        "language": "English",
+        "exp_start_time": "2018-01-15T00:11:16.627Z",
+        "exp_end_time": "2018-01-15T00:15:06.040Z",
+        "action_trial_start_time": "2018-01-15T00:13:34.063Z",
+        "action_trial_end_time": "2018-01-15T00:14:09.036Z",
+        "experiment_completion_time": 229413,
+        "action_trial_time": 34973,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "HandleMusic",
+            "BothMusicLight",
+            "ButtonMusic"
+        ],
+        "rand_action_labels": [
+            "Press the button and pull the handle",
+            "Pull the handle",
+            "Press the button"
+        ]
+    },
+    "AssignmentId": "3IGI0VL647K4UXUDWSBL140LICUNOV",
+    "WorkerId": "A3DFMWYTKJ57L",
+    "HITId": "3KVQ0UJWPXL5MXZFTC17ZXIX7C95WC",
+    "AssignmentStatus": "Submitted",
+    "AutoApprovalTime": "2018-01-15T00:20:13Z",
+    "AcceptTime": "2018-01-15T00:03:09Z",
+    "SubmitTime": "2018-01-15T00:15:13Z",
+    "Assignment": ""
+}

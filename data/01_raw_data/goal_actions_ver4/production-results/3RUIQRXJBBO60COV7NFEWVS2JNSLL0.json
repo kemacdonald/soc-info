@@ -1,0 +1,92 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_order": [
+            "ButtonLight",
+            "HandleLight",
+            "BothLightMusic"
+        ],
+        "manip_check_effect_order": [
+            "turn on the light",
+            "play music",
+            "turn on the light AND play music"
+        ],
+        "outcome": "light",
+        "action_response": "handle",
+        "goal_condition": "learning",
+        "social_condition": "social",
+        "music_box": [
+            "HandleLight.jpeg",
+            "ButtonLight.jpeg",
+            "BothLightMusic.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "HandleLight",
+            "ButtonLight",
+            "BothLightMusic"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "BothLightMusic",
+            "HandleLight",
+            "ButtonLight"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 736,
+        "browser_width": 1449,
+        "screen_width": 1366,
+        "screen_height": 768,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "72",
+            "75",
+            "25"
+        ],
+        "posterior_beliefs": [
+            "22",
+            "78",
+            "70"
+        ],
+        "about": "deduction",
+        "why_action": "I'm not sure. I figured I could at least eliminate one toy design that way.",
+        "comment": "The images are hard to read in the 'likely/unlikely' pages. Needs clearer definitions there.",
+        "age": "31",
+        "gender": "f",
+        "language": "English",
+        "exp_start_time": "2018-01-22T21:11:23.164Z",
+        "exp_end_time": "2018-01-22T21:17:20.295Z",
+        "action_trial_start_time": "2018-01-22T21:14:02.153Z",
+        "action_trial_end_time": "2018-01-22T21:15:42.948Z",
+        "experiment_completion_time": 357131,
+        "action_trial_time": 100795,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "BothLightMusic",
+            "ButtonLight",
+            "HandleLight"
+        ],
+        "rand_action_labels": [
+            "Press the button on its own",
+            "Pull the handle on its own",
+            "Press the button and pull the handle<br>at the same time"
+        ]
+    },
+    "AssignmentId": "3RUIQRXJBBO60COV7NFEWVS2JNSLL0",
+    "WorkerId": "A3USP1ZP069KCK",
+    "HITId": "302OLP89DZ7TE55R7HSNVERG7C2CAU",
+    "AssignmentStatus": "Submitted",
+    "AutoApprovalTime": "2018-01-22T21:22:45Z",
+    "AcceptTime": "2018-01-22T21:11:44Z",
+    "SubmitTime": "2018-01-22T21:17:45Z",
+    "Assignment": ""
+}

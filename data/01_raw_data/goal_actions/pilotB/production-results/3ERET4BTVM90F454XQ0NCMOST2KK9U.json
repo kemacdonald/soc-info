@@ -1,0 +1,59 @@
+{
+    "answers": {
+        "action_response": "orange_and_purple",
+        "goal_condition": "performance",
+        "music_box": "music_box_left.jpeg",
+        "hypotheses_slider_order_prior": [
+            "Orange",
+            "Purple and Orange",
+            "Purple"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "Orange",
+            "Purple",
+            "Purple and Orange"
+        ],
+        "actions_buttons_order": [
+            "Orange",
+            "Purple and Orange",
+            "Purple"
+        ],
+        "browser": "Firefox",
+        "browser_height": 720,
+        "browser_width": 1456,
+        "screen_width": 1525,
+        "screen_height": 858,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "69",
+            "84",
+            "68"
+        ],
+        "posterior_beliefs": [
+            "1",
+            "1",
+            "100"
+        ],
+        "about": "how an adult conceptualizes a child's problem solving skills?",
+        "comment": "",
+        "age": "41",
+        "gender": "male",
+        "language": "english",
+        "exp_start_time": "2018-01-05T21:36:26.526Z",
+        "exp_end_time": "2018-01-05T21:40:23.870Z",
+        "action_trial_start_time": "2018-01-05T21:37:28.056Z",
+        "action_trial_end_time": "2018-01-05T21:37:45.656Z",
+        "experiment_completion_time": 237344,
+        "action_trial_time": 17600,
+        "hyp_type": "posterior"
+    },
+    "AssignmentId": "3ERET4BTVM90F454XQ0NCMOST2KK9U",
+    "WorkerId": "A2V3ECGQQYNO85",
+    "HITId": "3FCO4VKOZ4DQS1R7W5MYBBPTRCQ7E0",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-05T21:45:25Z",
+    "AcceptTime": "2018-01-05T21:35:45Z",
+    "SubmitTime": "2018-01-05T21:40:25Z",
+    "ApprovalTime": "2018-01-05T21:45:37Z",
+    "Assignment": ""
+}

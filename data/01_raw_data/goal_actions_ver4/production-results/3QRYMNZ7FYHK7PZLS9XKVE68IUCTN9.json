@@ -1,0 +1,93 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "handle",
+            "handle",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "button",
+            "button",
+            "both"
+        ],
+        "manip_check_order": [
+            "HandleMusic",
+            "ButtonMusic",
+            "BothMusicLight"
+        ],
+        "manip_check_effect_order": [
+            "play music",
+            "turn on the light",
+            "play music AND turn on the light"
+        ],
+        "outcome": "music",
+        "action_response": "handle",
+        "goal_condition": "noGoal",
+        "social_condition": "no-social",
+        "music_box": [
+            "BothMusicLight.jpeg",
+            "HandleMusic.jpeg",
+            "ButtonMusic.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "HandleMusic",
+            "BothMusicLight",
+            "ButtonMusic"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "ButtonMusic",
+            "BothMusicLight",
+            "HandleMusic"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Firefox",
+        "browser_height": 600,
+        "browser_width": 1213,
+        "screen_width": 1280,
+        "screen_height": 720,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "71",
+            "30",
+            "15"
+        ],
+        "posterior_beliefs": [
+            "1",
+            "1",
+            "99"
+        ],
+        "about": "logical thinking",
+        "why_action": "If you pressed both button and lever it could still be a lever>music box",
+        "comment": "",
+        "age": "29",
+        "gender": "m",
+        "language": "English",
+        "exp_start_time": "2018-01-22T20:31:00.742Z",
+        "exp_end_time": "2018-01-22T20:36:28.874Z",
+        "action_trial_start_time": "2018-01-22T20:33:50.881Z",
+        "action_trial_end_time": "2018-01-22T20:34:41.501Z",
+        "experiment_completion_time": 328132,
+        "action_trial_time": 50620,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "HandleMusic",
+            "BothMusicLight",
+            "ButtonMusic"
+        ],
+        "rand_action_labels": [
+            "Pull the handle on its own",
+            "Press the button on its own",
+            "Press the button and pull the handle<br>at the same time"
+        ]
+    },
+    "AssignmentId": "3QRYMNZ7FYHK7PZLS9XKVE68IUCTN9",
+    "WorkerId": "A1USSY591MAMA4",
+    "HITId": "302OLP89DZ7TE55R7HSNVERG7C2CAU",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-22T20:41:33Z",
+    "AcceptTime": "2018-01-22T20:30:47Z",
+    "SubmitTime": "2018-01-22T20:36:33Z",
+    "ApprovalTime": "2018-01-22T20:41:37Z",
+    "Assignment": ""
+}

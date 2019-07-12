@@ -1,0 +1,92 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_order": [
+            "HandleLight",
+            "ButtonLight",
+            "BothLightMusic"
+        ],
+        "manip_check_effect_order": [
+            "turn on the light",
+            "play music",
+            "turn on the light AND play music"
+        ],
+        "outcome": "light",
+        "action_response": "both",
+        "goal_condition": "presentation",
+        "social_condition": "social",
+        "music_box": [
+            "HandleLight.jpeg",
+            "BothLightMusic.jpeg",
+            "ButtonLight.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "BothLightMusic",
+            "HandleLight",
+            "ButtonLight"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "HandleLight",
+            "ButtonLight",
+            "BothLightMusic"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Firefox",
+        "browser_height": 600,
+        "browser_width": 1335,
+        "screen_width": 1920,
+        "screen_height": 1080,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "100",
+            "100",
+            "1"
+        ],
+        "posterior_beliefs": [
+            "100",
+            "50",
+            "100"
+        ],
+        "about": "Judging risk",
+        "why_action": "100% chance of it working -easy to impress",
+        "comment": "",
+        "age": "50",
+        "gender": "m",
+        "language": "English",
+        "exp_start_time": "2018-01-22T16:30:31.758Z",
+        "exp_end_time": "2018-01-22T16:36:45.701Z",
+        "action_trial_start_time": "2018-01-22T16:34:06.846Z",
+        "action_trial_end_time": "2018-01-22T16:34:35.536Z",
+        "experiment_completion_time": 373943,
+        "action_trial_time": 28690,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "HandleLight",
+            "BothLightMusic",
+            "ButtonLight"
+        ],
+        "rand_action_labels": [
+            "Press the button and pull the handle<br>at the same time",
+            "Press the button on its own",
+            "Pull the handle on its own"
+        ]
+    },
+    "AssignmentId": "3WQ3B2KGE8GHXWYFN081YDNJ9MS1B4",
+    "WorkerId": "AZNIEFUIVB2H0",
+    "HITId": "302OLP89DZ7TE55R7HSNVERG7C2CAU",
+    "AssignmentStatus": "Submitted",
+    "AutoApprovalTime": "2018-01-22T16:41:47Z",
+    "AcceptTime": "2018-01-22T16:29:43Z",
+    "SubmitTime": "2018-01-22T16:36:47Z",
+    "Assignment": ""
+}

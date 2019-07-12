@@ -1,0 +1,91 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_order": [
+            "ButtonLight",
+            "HandleLight",
+            "BothLightMusic"
+        ],
+        "manip_check_effect_order": [
+            "turn on the light",
+            "play music",
+            "turn on the light AND play music"
+        ],
+        "outcome": "light",
+        "action_response": "both",
+        "goal_condition": "performance",
+        "music_box": [
+            "HandleLight.jpeg",
+            "BothLightMusic.jpeg",
+            "ButtonLight.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "ButtonLight",
+            "BothLightMusic",
+            "HandleLight"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "ButtonLight",
+            "HandleLight",
+            "BothLightMusic"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Firefox",
+        "browser_height": 607,
+        "browser_width": 1299,
+        "screen_width": 1366,
+        "screen_height": 768,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "4",
+            "97",
+            "1"
+        ],
+        "posterior_beliefs": [
+            "30",
+            "29",
+            "88"
+        ],
+        "about": "Informational reasoning.",
+        "why_action": "Guaranteed light to turn on.",
+        "comment": "Random sound clip played and survey advanced oddly at one point.",
+        "age": "27",
+        "gender": "m",
+        "language": "English",
+        "exp_start_time": "2018-01-18T22:14:18.131Z",
+        "exp_end_time": "2018-01-18T22:17:15.005Z",
+        "action_trial_start_time": "2018-01-18T22:15:35.433Z",
+        "action_trial_end_time": "2018-01-18T22:16:00.422Z",
+        "experiment_completion_time": 176874,
+        "action_trial_time": 24989,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "BothLightMusic",
+            "ButtonLight",
+            "HandleLight"
+        ],
+        "rand_action_labels": [
+            "Pull the handle on its own",
+            "Press the button on its own",
+            "Press the button and pull the handle<br>at the same time"
+        ]
+    },
+    "AssignmentId": "3L2IS5HSFAIZ72EASENU0ASA02EUNJ",
+    "WorkerId": "A1P47Q6LZPLQ6P",
+    "HITId": "3NFWQRSHVEE1R824KJAYZ6NM2JOFGZ",
+    "AssignmentStatus": "Submitted",
+    "AutoApprovalTime": "2018-01-18T22:22:16Z",
+    "AcceptTime": "2018-01-18T22:12:48Z",
+    "SubmitTime": "2018-01-18T22:17:16Z",
+    "Assignment": ""
+}

@@ -1,0 +1,62 @@
+{
+    "answers": {
+        "manip_check_music_response": [],
+        "manip_check_light_response": [],
+        "manip_check_order": [],
+        "manip_check_effect_order": [
+            "play music",
+            "turn on the light",
+            "play music AND turn on the light"
+        ],
+        "action_response": "button",
+        "goal_condition": "noGoal",
+        "music_box": [
+            "HandleMusic.jpeg",
+            "BothMusicLight.jpeg",
+            "ButtonMusic.jpeg"
+        ],
+        "hypotheses_slider_order_prior": "",
+        "hypotheses_slider_order_posterior": "",
+        "actions_buttons_order": "",
+        "toy_inst_num": 0,
+        "browser": "Chrome",
+        "browser_height": 600,
+        "browser_width": 1222,
+        "screen_width": 1280,
+        "screen_height": 800,
+        "mobile_device": false,
+        "prior_beliefs": [],
+        "posterior_beliefs": [],
+        "about": "To see the rationale of individuals when utilizing a multi-faceted foreign object for the first time.",
+        "why_action": "I pushed the button because I think buttons require so little effort and are so easily pushed compared to the lever that requires a little bit more work to pull, so the button must be the obvious choice to utilize.",
+        "age": "20",
+        "gender": "m",
+        "language": "English",
+        "exp_start_time": "",
+        "exp_end_time": "2018-01-18T23:23:18.738Z",
+        "action_trial_start_time": "2018-01-18T23:21:27.913Z",
+        "action_trial_end_time": "2018-01-18T23:21:39.661Z",
+        "experiment_completion_time": "",
+        "action_trial_time": "",
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "BothMusicLight",
+            "HandleMusic",
+            "ButtonMusic"
+        ],
+        "rand_action_labels": [
+            "Pull the handle on its own",
+            "Press the button and pull the handle<br>at the same time",
+            "Press the button on its own"
+        ]
+    },
+    "AssignmentId": "3K5TEWLKGVB76GSJ0OK7ROYCSAYVIY",
+    "WorkerId": "AOB6ZJTDB416G",
+    "HITId": "36818Z1KV3D51598EOHM2BNM1XTA3U",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-18T23:28:19Z",
+    "AcceptTime": "2018-01-18T23:21:23Z",
+    "SubmitTime": "2018-01-18T23:23:19Z",
+    "ApprovalTime": "2018-01-18T23:28:37Z",
+    "Assignment": ""
+}

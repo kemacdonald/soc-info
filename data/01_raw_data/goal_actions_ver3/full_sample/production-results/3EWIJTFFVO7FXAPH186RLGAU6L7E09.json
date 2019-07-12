@@ -1,0 +1,91 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_order": [
+            "ButtonMusic",
+            "HandleMusic",
+            "BothMusicLight"
+        ],
+        "manip_check_effect_order": [
+            "play music",
+            "turn on the light",
+            "play music AND turn on the light"
+        ],
+        "outcome": "music",
+        "action_response": "both",
+        "goal_condition": "presentation",
+        "music_box": [
+            "HandleMusic.jpeg",
+            "ButtonMusic.jpeg",
+            "BothMusicLight.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "ButtonMusic",
+            "HandleMusic",
+            "BothMusicLight"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "BothMusicLight",
+            "HandleMusic",
+            "ButtonMusic"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 772,
+        "browser_width": 1470,
+        "screen_width": 1536,
+        "screen_height": 864,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "68",
+            "69",
+            "69"
+        ],
+        "posterior_beliefs": [
+            "67",
+            "69",
+            "72"
+        ],
+        "about": "i am not sure",
+        "why_action": "to make sure both the light came on and music played",
+        "comment": "the missing label part was a bit confusing and could use more explanation",
+        "age": "59",
+        "gender": "male",
+        "language": "english",
+        "exp_start_time": "2018-01-18T21:06:34.847Z",
+        "exp_end_time": "2018-01-18T21:10:36.120Z",
+        "action_trial_start_time": "2018-01-18T21:08:51.005Z",
+        "action_trial_end_time": "2018-01-18T21:09:22.876Z",
+        "experiment_completion_time": 241273,
+        "action_trial_time": 31871,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "ButtonMusic",
+            "BothMusicLight",
+            "HandleMusic"
+        ],
+        "rand_action_labels": [
+            "Press the button on its own",
+            "Pull the handle on its own",
+            "Press the button and pull the handle<br>at the same time"
+        ]
+    },
+    "AssignmentId": "3EWIJTFFVO7FXAPH186RLGAU6L7E09",
+    "WorkerId": "A2M72F8KER9L71",
+    "HITId": "3NFWQRSHVEE1R824KJAYZ6NM2JOFGZ",
+    "AssignmentStatus": "Submitted",
+    "AutoApprovalTime": "2018-01-18T21:15:37Z",
+    "AcceptTime": "2018-01-18T21:05:47Z",
+    "SubmitTime": "2018-01-18T21:10:37Z",
+    "Assignment": ""
+}

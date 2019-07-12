@@ -1,0 +1,92 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_order": [
+            "HandleLight",
+            "ButtonLight",
+            "BothLightMusic"
+        ],
+        "manip_check_effect_order": [
+            "turn on the light",
+            "play music",
+            "turn on the light AND play music"
+        ],
+        "outcome": "light",
+        "action_response": "button",
+        "goal_condition": "performance",
+        "social_condition": "social",
+        "music_box": [
+            "HandleLight.jpeg",
+            "BothLightMusic.jpeg",
+            "ButtonLight.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "ButtonLight",
+            "HandleLight",
+            "BothLightMusic"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "ButtonLight",
+            "HandleLight",
+            "BothLightMusic"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 600,
+        "browser_width": 1375,
+        "screen_width": 1440,
+        "screen_height": 900,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "72",
+            "65",
+            "23"
+        ],
+        "posterior_beliefs": [
+            "78",
+            "84",
+            "30"
+        ],
+        "about": "unsure",
+        "why_action": "It's more likely its a button because of how humans are.",
+        "comment": "the last scenario loaded too fast",
+        "age": "23",
+        "gender": "m",
+        "language": "english",
+        "exp_start_time": "2018-01-23T04:20:33.813Z",
+        "exp_end_time": "2018-01-23T04:23:00.318Z",
+        "action_trial_start_time": "2018-01-23T04:22:13.182Z",
+        "action_trial_end_time": "2018-01-23T04:22:27.679Z",
+        "experiment_completion_time": 146505,
+        "action_trial_time": 14497,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "BothLightMusic",
+            "HandleLight",
+            "ButtonLight"
+        ],
+        "rand_action_labels": [
+            "Press the button and pull the handle<br>at the same time",
+            "Press the button on its own",
+            "Pull the handle on its own"
+        ]
+    },
+    "AssignmentId": "32N49TQG3GIS0Y9LO0SUAQATGAVAVS",
+    "WorkerId": "A1XLGIFFGB01EU",
+    "HITId": "302OLP89DZ7TE55R7HSNVERG7C2CAU",
+    "AssignmentStatus": "Submitted",
+    "AutoApprovalTime": "2018-01-23T04:28:03Z",
+    "AcceptTime": "2018-01-23T04:20:27Z",
+    "SubmitTime": "2018-01-23T04:23:03Z",
+    "Assignment": ""
+}

@@ -1,0 +1,14 @@
+{
+    "title":               "Toy Box Game",
+    "description":         "A simple game about decision making (3-5 minutes)",
+    "keywords":            "decision making, toy",
+    "url":                 "https://web.stanford.edu/group/langcog/cgi-bin/KM/soc-info-expts/03_goal_actions_no_social/soc_info_goals.html",
+    "frame_height":         600,
+    "assignment_duration":  "1 hour",
+    "auto_approval_delay":  "5 minutes",
+    "reward":               0.45,
+    "qualifications": {
+        "location": "US",
+        "approval_percentage": 85
+    }
+}

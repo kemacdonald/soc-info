@@ -1,0 +1,92 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_order": [
+            "ButtonMusic",
+            "HandleMusic",
+            "BothMusicLight"
+        ],
+        "manip_check_effect_order": [
+            "play music",
+            "turn on the light",
+            "play music AND turn on the light"
+        ],
+        "outcome": "music",
+        "action_response": "both",
+        "goal_condition": "noGoal",
+        "social_condition": "no-social",
+        "music_box": [
+            "BothMusicLight.jpeg",
+            "ButtonMusic.jpeg",
+            "HandleMusic.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "BothMusicLight",
+            "HandleMusic",
+            "ButtonMusic"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "ButtonMusic",
+            "BothMusicLight",
+            "HandleMusic"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Firefox",
+        "browser_height": 600,
+        "browser_width": 1658,
+        "screen_width": 1708,
+        "screen_height": 960,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "59",
+            "61",
+            "71"
+        ],
+        "posterior_beliefs": [
+            "65",
+            "75",
+            "80"
+        ],
+        "about": "I'm not sure",
+        "why_action": "Because pulling and pushing would result in something.",
+        "comment": "n/a",
+        "age": "32",
+        "gender": "f",
+        "language": "English",
+        "exp_start_time": "2018-01-23T00:49:55.260Z",
+        "exp_end_time": "2018-01-23T00:52:56.815Z",
+        "action_trial_start_time": "2018-01-23T00:51:19.044Z",
+        "action_trial_end_time": "2018-01-23T00:51:43.194Z",
+        "experiment_completion_time": 181555,
+        "action_trial_time": 24150,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "BothMusicLight",
+            "ButtonMusic",
+            "HandleMusic"
+        ],
+        "rand_action_labels": [
+            "Pull the handle on its own",
+            "Press the button on its own",
+            "Press the button and pull the handle<br>at the same time"
+        ]
+    },
+    "AssignmentId": "33M4IA01QG1C340XQQFYT1WOWO8RXZ",
+    "WorkerId": "A2AU2E2E9A0I1",
+    "HITId": "302OLP89DZ7TE55R7HSNVERG7C2CAU",
+    "AssignmentStatus": "Submitted",
+    "AutoApprovalTime": "2018-01-23T00:57:56Z",
+    "AcceptTime": "2018-01-23T00:49:41Z",
+    "SubmitTime": "2018-01-23T00:52:56Z",
+    "Assignment": ""
+}

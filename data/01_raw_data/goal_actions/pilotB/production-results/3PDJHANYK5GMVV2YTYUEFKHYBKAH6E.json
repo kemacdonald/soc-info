@@ -1,0 +1,59 @@
+{
+    "answers": {
+        "action_response": "orange",
+        "goal_condition": "performance",
+        "music_box": "music_box_left.jpeg",
+        "hypotheses_slider_order_prior": [
+            "Purple",
+            "Purple and Orange",
+            "Orange"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "Orange",
+            "Purple and Orange",
+            "Purple"
+        ],
+        "actions_buttons_order": [
+            "Purple and Orange",
+            "Purple",
+            "Orange"
+        ],
+        "browser": "Chrome",
+        "browser_height": 702,
+        "browser_width": 1237,
+        "screen_width": 1366,
+        "screen_height": 768,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "57",
+            "15",
+            "90"
+        ],
+        "posterior_beliefs": [
+            "87",
+            "1",
+            "1"
+        ],
+        "about": "how people get things to work?",
+        "comment": "no",
+        "age": "42",
+        "gender": "f",
+        "language": "english",
+        "exp_start_time": "2018-01-05T22:41:40.426Z",
+        "exp_end_time": "2018-01-05T22:43:53.971Z",
+        "action_trial_start_time": "2018-01-05T22:42:57.880Z",
+        "action_trial_end_time": "2018-01-05T22:43:17.121Z",
+        "experiment_completion_time": 133545,
+        "action_trial_time": 19241,
+        "hyp_type": "posterior"
+    },
+    "AssignmentId": "3PDJHANYK5GMVV2YTYUEFKHYBKAH6E",
+    "WorkerId": "AY9ZVK32I1P1L",
+    "HITId": "3FCO4VKOZ4DQS1R7W5MYBBPTRCQ7E0",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-05T22:48:59Z",
+    "AcceptTime": "2018-01-05T22:07:39Z",
+    "SubmitTime": "2018-01-05T22:43:59Z",
+    "ApprovalTime": "2018-01-05T22:49:37Z",
+    "Assignment": ""
+}

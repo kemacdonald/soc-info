@@ -1,0 +1,93 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_order": [
+            "HandleMusic",
+            "ButtonMusic",
+            "BothMusicLight"
+        ],
+        "manip_check_effect_order": [
+            "play music",
+            "turn on the light",
+            "play music AND turn on the light"
+        ],
+        "outcome": "music",
+        "action_response": "both",
+        "goal_condition": "noGoal",
+        "social_condition": "social",
+        "music_box": [
+            "ButtonMusic.jpeg",
+            "BothMusicLight.jpeg",
+            "HandleMusic.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "BothMusicLight",
+            "ButtonMusic",
+            "HandleMusic"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "HandleMusic",
+            "ButtonMusic",
+            "BothMusicLight"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 600,
+        "browser_width": 1375,
+        "screen_width": 1440,
+        "screen_height": 900,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "98",
+            "100",
+            "100"
+        ],
+        "posterior_beliefs": [
+            "33",
+            "32",
+            "100"
+        ],
+        "about": "memorization",
+        "why_action": "Just in case i was being  tested by my boss, i would have a result no matter what. ",
+        "comment": "",
+        "age": "38",
+        "gender": "m",
+        "language": "english",
+        "exp_start_time": "2018-01-22T23:55:45.219Z",
+        "exp_end_time": "2018-01-23T00:00:09.115Z",
+        "action_trial_start_time": "2018-01-22T23:58:12.201Z",
+        "action_trial_end_time": "2018-01-22T23:58:50.185Z",
+        "experiment_completion_time": 263896,
+        "action_trial_time": 37984,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "HandleMusic",
+            "BothMusicLight",
+            "ButtonMusic"
+        ],
+        "rand_action_labels": [
+            "Pull the handle on its own",
+            "Press the button on its own",
+            "Press the button and pull the handle<br>at the same time"
+        ]
+    },
+    "AssignmentId": "3MX2NQ3YC9UNYH2ZTJ2VQ0RS46C5XS",
+    "WorkerId": "A1XDMS0KFSF5JW",
+    "HITId": "302OLP89DZ7TE55R7HSNVERG7C2CAU",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-23T00:05:11Z",
+    "AcceptTime": "2018-01-22T23:53:13Z",
+    "SubmitTime": "2018-01-23T00:00:11Z",
+    "ApprovalTime": "2018-01-23T00:05:37Z",
+    "Assignment": ""
+}

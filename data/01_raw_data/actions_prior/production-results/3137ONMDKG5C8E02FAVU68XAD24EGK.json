@@ -1,0 +1,61 @@
+{
+    "answers": {
+        "manip_check_music_response": [],
+        "manip_check_light_response": [],
+        "manip_check_order": [],
+        "manip_check_effect_order": [
+            "play music",
+            "turn on the light",
+            "play music AND turn on the light"
+        ],
+        "action_response": "handle",
+        "goal_condition": "noGoal",
+        "music_box": [
+            "HandleMusic.jpeg",
+            "ButtonMusic.jpeg",
+            "BothMusicLight.jpeg"
+        ],
+        "hypotheses_slider_order_prior": "",
+        "hypotheses_slider_order_posterior": "",
+        "actions_buttons_order": "",
+        "toy_inst_num": 0,
+        "browser": "Chrome",
+        "browser_height": 600,
+        "browser_width": 1695,
+        "screen_width": 1920,
+        "screen_height": 1080,
+        "mobile_device": false,
+        "prior_beliefs": [],
+        "posterior_beliefs": [],
+        "about": "Whether the general public likes shiny red candy-like buttons or manual levers/handles, or want it all and choose both",
+        "why_action": "Pull the handle down",
+        "age": "48",
+        "gender": "f",
+        "language": "English",
+        "exp_start_time": "",
+        "exp_end_time": "2018-01-18T23:27:44.758Z",
+        "action_trial_start_time": "2018-01-18T23:25:35.964Z",
+        "action_trial_end_time": "2018-01-18T23:26:14.041Z",
+        "experiment_completion_time": "",
+        "action_trial_time": "",
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "BothMusicLight",
+            "HandleMusic",
+            "ButtonMusic"
+        ],
+        "rand_action_labels": [
+            "Pull the handle on its own",
+            "Press the button on its own",
+            "Press the button and pull the handle<br>at the same time"
+        ]
+    },
+    "AssignmentId": "3137ONMDKG5C8E02FAVU68XAD24EGK",
+    "WorkerId": "A29N66WIWNN8JK",
+    "HITId": "36818Z1KV3D51598EOHM2BNM1XTA3U",
+    "AssignmentStatus": "Submitted",
+    "AutoApprovalTime": "2018-01-18T23:32:46Z",
+    "AcceptTime": "2018-01-18T23:23:33Z",
+    "SubmitTime": "2018-01-18T23:27:46Z",
+    "Assignment": ""
+}

@@ -1,0 +1,91 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_order": [
+            "ButtonMusic",
+            "HandleMusic",
+            "BothMusicLight"
+        ],
+        "manip_check_effect_order": [
+            "play music",
+            "turn on the light",
+            "play music AND turn on the light"
+        ],
+        "outcome": "music",
+        "action_response": "both",
+        "goal_condition": "performance",
+        "music_box": [
+            "HandleMusic.jpeg",
+            "BothMusicLight.jpeg",
+            "ButtonMusic.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "ButtonMusic",
+            "BothMusicLight",
+            "HandleMusic"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "ButtonMusic",
+            "HandleMusic",
+            "BothMusicLight"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 600,
+        "browser_width": 932,
+        "screen_width": 1080,
+        "screen_height": 1920,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "33",
+            "32",
+            "33"
+        ],
+        "posterior_beliefs": [
+            "25",
+            "28",
+            "31"
+        ],
+        "about": "To see if people figured out that the percentages didn't change",
+        "why_action": "Because I knew it would do the action no matter what if I did both",
+        "comment": "no",
+        "age": "39",
+        "gender": "f",
+        "language": "english",
+        "exp_start_time": "2018-01-18T20:28:03.908Z",
+        "exp_end_time": "2018-01-18T20:30:37.959Z",
+        "action_trial_start_time": "2018-01-18T20:29:28.234Z",
+        "action_trial_end_time": "2018-01-18T20:29:46.635Z",
+        "experiment_completion_time": 154051,
+        "action_trial_time": 18401,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "BothMusicLight",
+            "ButtonMusic",
+            "HandleMusic"
+        ],
+        "rand_action_labels": [
+            "Press the button and pull the handle<br>at the same time",
+            "Press the button on its own",
+            "Pull the handle on its own"
+        ]
+    },
+    "AssignmentId": "3B837J3LDOW47NEYWG9BUTFWG2ESRL",
+    "WorkerId": "A2HC9549CZAKNN",
+    "HITId": "3NFWQRSHVEE1R824KJAYZ6NM2JOFGZ",
+    "AssignmentStatus": "Submitted",
+    "AutoApprovalTime": "2018-01-18T20:35:40Z",
+    "AcceptTime": "2018-01-18T20:26:28Z",
+    "SubmitTime": "2018-01-18T20:30:40Z",
+    "Assignment": ""
+}

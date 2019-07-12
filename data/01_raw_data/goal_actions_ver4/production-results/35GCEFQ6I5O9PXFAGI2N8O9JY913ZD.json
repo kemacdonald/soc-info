@@ -1,0 +1,93 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_order": [
+            "HandleMusic",
+            "ButtonMusic",
+            "BothMusicLight"
+        ],
+        "manip_check_effect_order": [
+            "play music",
+            "turn on the light",
+            "play music AND turn on the light"
+        ],
+        "outcome": "music",
+        "action_response": "handle",
+        "goal_condition": "noGoal",
+        "social_condition": "social",
+        "music_box": [
+            "ButtonMusic.jpeg",
+            "HandleMusic.jpeg",
+            "BothMusicLight.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "ButtonMusic",
+            "HandleMusic",
+            "BothMusicLight"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "BothMusicLight",
+            "ButtonMusic",
+            "HandleMusic"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 600,
+        "browser_width": 1176,
+        "screen_width": 1366,
+        "screen_height": 768,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "100",
+            "93",
+            "10"
+        ],
+        "posterior_beliefs": [
+            "1",
+            "1",
+            "100"
+        ],
+        "about": "Attention and reasoning.",
+        "why_action": "I figured if nothing happens I can eliminate two options and depending on the if music or sound is produce I could find out the function.",
+        "comment": "none",
+        "age": "29",
+        "gender": "f",
+        "language": "English",
+        "exp_start_time": "2018-01-22T18:56:09.489Z",
+        "exp_end_time": "2018-01-22T19:00:25.006Z",
+        "action_trial_start_time": "2018-01-22T18:57:58.672Z",
+        "action_trial_end_time": "2018-01-22T18:58:32.825Z",
+        "experiment_completion_time": 255517,
+        "action_trial_time": 34153,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "BothMusicLight",
+            "HandleMusic",
+            "ButtonMusic"
+        ],
+        "rand_action_labels": [
+            "Pull the handle on its own",
+            "Press the button and pull the handle<br>at the same time",
+            "Press the button on its own"
+        ]
+    },
+    "AssignmentId": "35GCEFQ6I5O9PXFAGI2N8O9JY913ZD",
+    "WorkerId": "A26S0UWFOU2RTE",
+    "HITId": "302OLP89DZ7TE55R7HSNVERG7C2CAU",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-22T19:05:34Z",
+    "AcceptTime": "2018-01-22T18:56:00Z",
+    "SubmitTime": "2018-01-22T19:00:34Z",
+    "ApprovalTime": "2018-01-22T19:05:37Z",
+    "Assignment": ""
+}

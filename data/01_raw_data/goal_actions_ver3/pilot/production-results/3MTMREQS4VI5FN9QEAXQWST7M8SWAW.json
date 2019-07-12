@@ -1,0 +1,91 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "button",
+            "button",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "handle",
+            "handle",
+            "both"
+        ],
+        "manip_check_order": [
+            "ButtonLight",
+            "HandleLight",
+            "BothLightMusic"
+        ],
+        "manip_check_effect_order": [
+            "turn on the light",
+            "play music",
+            "turn on the light AND play music"
+        ],
+        "outcome": "light",
+        "action_response": "both",
+        "goal_condition": "noGoal",
+        "music_box": [
+            "BothLightMusic.jpeg",
+            "ButtonLight.jpeg",
+            "HandleLight.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "ButtonLight",
+            "BothLightMusic",
+            "HandleLight"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "ButtonLight",
+            "BothLightMusic",
+            "HandleLight"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 637,
+        "browser_width": 1299,
+        "screen_width": 1366,
+        "screen_height": 768,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "94",
+            "5",
+            "1"
+        ],
+        "posterior_beliefs": [
+            "100",
+            "1",
+            "1"
+        ],
+        "about": "I believe this task was to ensure to read the directions before playing this game and understanding the type of result that you want to have.",
+        "comment": "Everything ran smooth.",
+        "age": "69",
+        "gender": "m",
+        "language": "english",
+        "exp_start_time": "2018-01-16T05:49:39.778Z",
+        "exp_end_time": "2018-01-16T05:55:26.900Z",
+        "action_trial_start_time": "2018-01-16T05:53:44.913Z",
+        "action_trial_end_time": "2018-01-16T05:54:10.831Z",
+        "experiment_completion_time": 347122,
+        "action_trial_time": 25918,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "ButtonLight",
+            "HandleLight",
+            "BothLightMusic"
+        ],
+        "rand_action_labels": [
+            "Pull the handle on its own",
+            "Press the button and pull the handle<br>at the same time",
+            "Press the button on its own"
+        ]
+    },
+    "AssignmentId": "3MTMREQS4VI5FN9QEAXQWST7M8SWAW",
+    "WorkerId": "A2N9AKAOR17XB3",
+    "HITId": "35XW21VSVGEQH5LR1U7DJXB9NPJSLE",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-16T06:00:28Z",
+    "AcceptTime": "2018-01-16T05:49:19Z",
+    "SubmitTime": "2018-01-16T05:55:28Z",
+    "ApprovalTime": "2018-01-16T06:00:37Z",
+    "Assignment": ""
+}

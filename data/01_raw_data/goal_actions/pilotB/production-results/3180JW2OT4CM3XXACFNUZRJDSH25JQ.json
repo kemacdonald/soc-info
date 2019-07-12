@@ -1,0 +1,59 @@
+{
+    "answers": {
+        "action_response": "orange",
+        "goal_condition": "learning",
+        "music_box": "music_box_left.jpeg",
+        "hypotheses_slider_order_prior": [
+            "Purple and Orange",
+            "Purple",
+            "Orange"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "Purple and Orange",
+            "Orange",
+            "Purple"
+        ],
+        "actions_buttons_order": [
+            "Orange",
+            "Purple and Orange",
+            "Purple"
+        ],
+        "browser": "Chrome",
+        "browser_height": 575,
+        "browser_width": 1147,
+        "screen_width": 1093,
+        "screen_height": 615,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "12",
+            "87",
+            "66"
+        ],
+        "posterior_beliefs": [
+            "1",
+            "100",
+            "20"
+        ],
+        "about": "I am not sure what the task was about, but perhaps it was to see how likely it was that I would believe the brightest button would make the music play.",
+        "comment": "Nothing was broken.",
+        "age": "43",
+        "gender": "f",
+        "language": "English",
+        "exp_start_time": "2018-01-05T21:55:26.577Z",
+        "exp_end_time": "2018-01-05T21:58:17.136Z",
+        "action_trial_start_time": "2018-01-05T21:56:23.193Z",
+        "action_trial_end_time": "2018-01-05T21:56:35.993Z",
+        "experiment_completion_time": 170559,
+        "action_trial_time": 12800,
+        "hyp_type": "posterior"
+    },
+    "AssignmentId": "3180JW2OT4CM3XXACFNUZRJDSH25JQ",
+    "WorkerId": "A2GOYSTIL3LOV1",
+    "HITId": "3FCO4VKOZ4DQS1R7W5MYBBPTRCQ7E0",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-05T22:03:20Z",
+    "AcceptTime": "2018-01-05T21:50:41Z",
+    "SubmitTime": "2018-01-05T21:58:20Z",
+    "ApprovalTime": "2018-01-05T22:03:37Z",
+    "Assignment": ""
+}

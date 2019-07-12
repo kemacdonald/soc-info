@@ -1,0 +1,93 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_order": [
+            "HandleLight",
+            "ButtonLight",
+            "BothLightMusic"
+        ],
+        "manip_check_effect_order": [
+            "turn on the light",
+            "play music",
+            "turn on the light AND play music"
+        ],
+        "outcome": "light",
+        "action_response": "handle",
+        "goal_condition": "performance",
+        "social_condition": "social",
+        "music_box": [
+            "HandleLight.jpeg",
+            "BothLightMusic.jpeg",
+            "ButtonLight.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "HandleLight",
+            "ButtonLight",
+            "BothLightMusic"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "HandleLight",
+            "BothLightMusic",
+            "ButtonLight"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Firefox",
+        "browser_height": 600,
+        "browser_width": 1028,
+        "screen_width": 1920,
+        "screen_height": 1080,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "28",
+            "30",
+            "32"
+        ],
+        "posterior_beliefs": [
+            "100",
+            "1",
+            "1"
+        ],
+        "about": "I'm really not sure",
+        "why_action": "Sheer guess",
+        "comment": "I had problems with the questions loading at times.",
+        "age": "33",
+        "gender": "f",
+        "language": "English",
+        "exp_start_time": "2018-01-23T05:15:41.510Z",
+        "exp_end_time": "2018-01-23T05:18:09.594Z",
+        "action_trial_start_time": "2018-01-23T05:16:42.853Z",
+        "action_trial_end_time": "2018-01-23T05:17:11.126Z",
+        "experiment_completion_time": 148084,
+        "action_trial_time": 28273,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "HandleLight",
+            "ButtonLight",
+            "BothLightMusic"
+        ],
+        "rand_action_labels": [
+            "Pull the handle on its own",
+            "Press the button and pull the handle<br>at the same time",
+            "Press the button on its own"
+        ]
+    },
+    "AssignmentId": "3BEFOD78W6TU8MZV17HCAR5GX7Q4MX",
+    "WorkerId": "A21HZ7Z9934ZNF",
+    "HITId": "302OLP89DZ7TE55R7HSNVERG7C2CAU",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-23T05:23:11Z",
+    "AcceptTime": "2018-01-23T05:11:17Z",
+    "SubmitTime": "2018-01-23T05:18:11Z",
+    "ApprovalTime": "2018-01-23T05:23:37Z",
+    "Assignment": ""
+}

@@ -1,0 +1,59 @@
+{
+    "answers": {
+        "action_response": "orange_and_purple",
+        "goal_condition": "learning",
+        "music_box": "music_box_left.jpeg",
+        "hypotheses_slider_order_prior": [
+            "Purple and Orange",
+            "Purple",
+            "Orange"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "Orange",
+            "Purple",
+            "Purple and Orange"
+        ],
+        "actions_buttons_order": [
+            "Purple",
+            "Orange",
+            "Purple and Orange"
+        ],
+        "browser": "Chrome",
+        "browser_height": 918,
+        "browser_width": 977,
+        "screen_width": 1920,
+        "screen_height": 1080,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "100",
+            "1",
+            "1"
+        ],
+        "posterior_beliefs": [
+            "14",
+            "10",
+            "100"
+        ],
+        "about": "how to get a toy to play music",
+        "comment": "nope",
+        "age": "24",
+        "gender": "f",
+        "language": "english",
+        "exp_start_time": "2018-01-05T21:45:29.239Z",
+        "exp_end_time": "2018-01-05T21:48:12.824Z",
+        "action_trial_start_time": "2018-01-05T21:47:44.083Z",
+        "action_trial_end_time": "2018-01-05T21:47:49.347Z",
+        "experiment_completion_time": 163585,
+        "action_trial_time": 5264,
+        "hyp_type": "posterior"
+    },
+    "AssignmentId": "354P56DE9K3UP4UJN2B5PCOWF69S77",
+    "WorkerId": "A2Z7SWO6HS5OOI",
+    "HITId": "3FCO4VKOZ4DQS1R7W5MYBBPTRCQ7E0",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-05T21:53:13Z",
+    "AcceptTime": "2018-01-05T21:35:43Z",
+    "SubmitTime": "2018-01-05T21:48:13Z",
+    "ApprovalTime": "2018-01-05T21:53:37Z",
+    "Assignment": ""
+}

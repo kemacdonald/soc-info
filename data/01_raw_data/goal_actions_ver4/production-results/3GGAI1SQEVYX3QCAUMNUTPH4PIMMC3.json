@@ -1,0 +1,92 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_order": [
+            "HandleLight",
+            "ButtonLight",
+            "BothLightMusic"
+        ],
+        "manip_check_effect_order": [
+            "turn on the light",
+            "play music",
+            "turn on the light AND play music"
+        ],
+        "outcome": "light",
+        "action_response": "both",
+        "goal_condition": "presentation",
+        "social_condition": "social",
+        "music_box": [
+            "BothLightMusic.jpeg",
+            "ButtonLight.jpeg",
+            "HandleLight.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "HandleLight",
+            "BothLightMusic",
+            "ButtonLight"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "ButtonLight",
+            "HandleLight",
+            "BothLightMusic"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 600,
+        "browser_width": 1299,
+        "screen_width": 1366,
+        "screen_height": 768,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "90",
+            "12",
+            "58"
+        ],
+        "posterior_beliefs": [
+            "71",
+            "67",
+            "88"
+        ],
+        "about": "unsure",
+        "why_action": "It seems like having them both happen at once would be most impressive sensory wise.",
+        "comment": "no",
+        "age": "40",
+        "gender": "female",
+        "language": "english",
+        "exp_start_time": "2018-01-22T16:38:56.322Z",
+        "exp_end_time": "2018-01-22T16:42:53.930Z",
+        "action_trial_start_time": "2018-01-22T16:41:16.242Z",
+        "action_trial_end_time": "2018-01-22T16:41:53.620Z",
+        "experiment_completion_time": 237608,
+        "action_trial_time": 37378,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "HandleLight",
+            "BothLightMusic",
+            "ButtonLight"
+        ],
+        "rand_action_labels": [
+            "Press the button on its own",
+            "Press the button and pull the handle<br>at the same time",
+            "Pull the handle on its own"
+        ]
+    },
+    "AssignmentId": "3GGAI1SQEVYX3QCAUMNUTPH4PIMMC3",
+    "WorkerId": "A3BPRPN10HJD4B",
+    "HITId": "302OLP89DZ7TE55R7HSNVERG7C2CAU",
+    "AssignmentStatus": "Submitted",
+    "AutoApprovalTime": "2018-01-22T16:47:55Z",
+    "AcceptTime": "2018-01-22T16:29:41Z",
+    "SubmitTime": "2018-01-22T16:42:55Z",
+    "Assignment": ""
+}

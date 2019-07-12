@@ -1,0 +1,59 @@
+{
+    "answers": {
+        "action_response": "orange",
+        "goal_condition": "learning",
+        "music_box": "music_box_right.jpeg",
+        "hypotheses_slider_order_prior": [
+            "Purple and Orange",
+            "Orange",
+            "Purple"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "Purple and Orange",
+            "Orange",
+            "Purple"
+        ],
+        "actions_buttons_order": [
+            "Purple and Orange",
+            "Orange",
+            "Purple"
+        ],
+        "browser": "Chrome",
+        "browser_height": 600,
+        "browser_width": 707,
+        "screen_width": 1680,
+        "screen_height": 1050,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "100",
+            "78",
+            "78"
+        ],
+        "posterior_beliefs": [
+            "23",
+            "100",
+            "40"
+        ],
+        "about": "I think this task was looking to see how perceptive we are in identifying what children are more likely to be drawn to.",
+        "comment": "No problems. Thank you!",
+        "age": "41",
+        "gender": "m",
+        "language": "English",
+        "exp_start_time": "2018-01-03T20:07:35.598Z",
+        "exp_end_time": "2018-01-03T20:10:24.733Z",
+        "action_trial_start_time": "2018-01-03T20:08:39.180Z",
+        "action_trial_end_time": "2018-01-03T20:09:20.369Z",
+        "experiment_completion_time": 169135,
+        "action_trial_time": 41189,
+        "hyp_type": "posterior"
+    },
+    "AssignmentId": "3CFVK00FWLLOHRLOKJ9C7CA5S0A6LZ",
+    "WorkerId": "A1HKCTDOTL6C9I",
+    "HITId": "3JUDR1D0D6R833K6ZK0391XZZYJQ24",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-03T20:15:27Z",
+    "AcceptTime": "2018-01-03T20:07:12Z",
+    "SubmitTime": "2018-01-03T20:10:27Z",
+    "ApprovalTime": "2018-01-03T20:15:37Z",
+    "Assignment": ""
+}

@@ -1,0 +1,91 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_order": [
+            "ButtonMusic",
+            "HandleMusic",
+            "BothMusicLight"
+        ],
+        "manip_check_effect_order": [
+            "play music",
+            "turn on the light",
+            "play music AND turn on the light"
+        ],
+        "outcome": "music",
+        "action_response": "button",
+        "goal_condition": "noGoal",
+        "music_box": [
+            "BothMusicLight.jpeg",
+            "ButtonMusic.jpeg",
+            "HandleMusic.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "BothMusicLight",
+            "ButtonMusic",
+            "HandleMusic"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "BothMusicLight",
+            "HandleMusic",
+            "ButtonMusic"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 959,
+        "browser_width": 1853,
+        "screen_width": 1920,
+        "screen_height": 1080,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "2",
+            "100",
+            "22"
+        ],
+        "posterior_beliefs": [
+            "7",
+            "92",
+            "15"
+        ],
+        "about": "how intuitive we are?",
+        "why_action": "It seemed intuitive",
+        "comment": "",
+        "age": "40",
+        "gender": "male",
+        "language": "english",
+        "exp_start_time": "2018-01-18T21:16:18.686Z",
+        "exp_end_time": "2018-01-18T21:23:33.546Z",
+        "action_trial_start_time": "2018-01-18T21:21:10.906Z",
+        "action_trial_end_time": "2018-01-18T21:21:58.087Z",
+        "experiment_completion_time": 434860,
+        "action_trial_time": 47181,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "ButtonMusic",
+            "HandleMusic",
+            "BothMusicLight"
+        ],
+        "rand_action_labels": [
+            "Press the button and pull the handle<br>at the same time",
+            "Press the button on its own",
+            "Pull the handle on its own"
+        ]
+    },
+    "AssignmentId": "3DYGAII7PL87IUJ6RKGHUY0GXW5QP2",
+    "WorkerId": "A147F5PJTHOB8A",
+    "HITId": "3NFWQRSHVEE1R824KJAYZ6NM2JOFGZ",
+    "AssignmentStatus": "Submitted",
+    "AutoApprovalTime": "2018-01-18T21:27:14Z",
+    "AcceptTime": "2018-01-18T20:28:10Z",
+    "SubmitTime": "2018-01-18T21:22:14Z",
+    "Assignment": ""
+}

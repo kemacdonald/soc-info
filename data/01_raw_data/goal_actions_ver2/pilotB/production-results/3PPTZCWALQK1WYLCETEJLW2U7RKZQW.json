@@ -1,0 +1,88 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_order": [
+            "ButtonMusic",
+            "HandleMusic",
+            "BothMusicLight"
+        ],
+        "manip_check_effect_order": [
+            "play music",
+            "turn on the light"
+        ],
+        "action_response": "both",
+        "goal_condition": "performance",
+        "music_box": [
+            "ButtonMusic.jpeg",
+            "BothMusicLight.jpeg",
+            "HandleMusic.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "HandleMusic",
+            "BothMusicLight",
+            "ButtonMusic"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "BothMusicLight",
+            "ButtonMusic",
+            "HandleMusic"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 1211,
+        "browser_width": 923,
+        "screen_width": 1707,
+        "screen_height": 960,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "16",
+            "80",
+            "50"
+        ],
+        "posterior_beliefs": [
+            "71",
+            "70",
+            "55"
+        ],
+        "about": "see how people decide how to make sure something will work",
+        "comment": "no",
+        "age": "34",
+        "gender": "m",
+        "language": "english",
+        "exp_start_time": "2018-01-14T23:49:11.025Z",
+        "exp_end_time": "2018-01-14T23:52:04.480Z",
+        "action_trial_start_time": "2018-01-14T23:50:56.529Z",
+        "action_trial_end_time": "2018-01-14T23:51:20.116Z",
+        "experiment_completion_time": 173455,
+        "action_trial_time": 23587,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "ButtonMusic",
+            "BothMusicLight",
+            "HandleMusic"
+        ],
+        "rand_action_labels": [
+            "Pull the handle",
+            "Press the button and pull the handle",
+            "Press the button"
+        ]
+    },
+    "AssignmentId": "3PPTZCWALQK1WYLCETEJLW2U7RKZQW",
+    "WorkerId": "A1YSYI926BBOHW",
+    "HITId": "3KVQ0UJWPXL5MXZFTC17ZXIX7C95WC",
+    "AssignmentStatus": "Submitted",
+    "AutoApprovalTime": "2018-01-14T23:57:03Z",
+    "AcceptTime": "2018-01-14T23:48:56Z",
+    "SubmitTime": "2018-01-14T23:52:03Z",
+    "Assignment": ""
+}

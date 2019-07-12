@@ -1,0 +1,91 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "button",
+            "button",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "handle",
+            "handle",
+            "both"
+        ],
+        "manip_check_order": [
+            "ButtonMusic",
+            "HandleMusic",
+            "BothMusicLight"
+        ],
+        "manip_check_effect_order": [
+            "play music",
+            "turn on the light",
+            "play music AND turn on the light"
+        ],
+        "outcome": "music",
+        "action_response": "button",
+        "goal_condition": "learning",
+        "music_box": [
+            "ButtonMusic.jpeg",
+            "HandleMusic.jpeg",
+            "BothMusicLight.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "ButtonMusic",
+            "HandleMusic",
+            "BothMusicLight"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "HandleMusic",
+            "BothMusicLight",
+            "ButtonMusic"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 600,
+        "browser_width": 957,
+        "screen_width": 1024,
+        "screen_height": 768,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "100",
+            "100",
+            "1"
+        ],
+        "posterior_beliefs": [
+            "93",
+            "30",
+            "100"
+        ],
+        "about": "I think this task might have been to see how many people chose which options to see how they are psychologically. Could be to examine first responses, potential personality traits, or maybe just to see what the majority choice was.",
+        "why_action": "I chose my action because pressing a button would be more convenient and slightly less effort, so I believe for this option to be the most popular response psychologically.",
+        "comment": "I screen went to a random screen that I don't was supposed to and then went to the screen that it was supposed to be on a few seconds later. I also feel like I did the same screen twice so check to make sure no pages were left unanswered or accidentally wrongly answered. If so I apologize and it was beyond my control. I however did the study in what I believe to be it's full entirety and I answered everything to the best of my capability.",
+        "age": "23",
+        "gender": "m",
+        "language": "English",
+        "exp_start_time": "2018-01-18T21:36:00.124Z",
+        "exp_end_time": "2018-01-18T21:50:09.609Z",
+        "action_trial_start_time": "2018-01-18T21:39:00.849Z",
+        "action_trial_end_time": "2018-01-18T21:42:21.282Z",
+        "experiment_completion_time": 849485,
+        "action_trial_time": 200433,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "BothMusicLight",
+            "ButtonMusic",
+            "HandleMusic"
+        ],
+        "rand_action_labels": [
+            "Press the button and pull the handle<br>at the same time",
+            "Pull the handle on its own",
+            "Press the button on its own"
+        ]
+    },
+    "AssignmentId": "3J4Q2Z4UTY3X23G736UCMS8CQTBQW0",
+    "WorkerId": "ASO1MSJTQIUST",
+    "HITId": "3NFWQRSHVEE1R824KJAYZ6NM2JOFGZ",
+    "AssignmentStatus": "Submitted",
+    "AutoApprovalTime": "2018-01-18T21:56:05Z",
+    "AcceptTime": "2018-01-18T21:35:46Z",
+    "SubmitTime": "2018-01-18T21:51:05Z",
+    "Assignment": ""
+}

@@ -1,0 +1,59 @@
+{
+    "answers": {
+        "action_response": "orange_and_purple",
+        "goal_condition": "learning",
+        "music_box": "music_box_left.jpeg",
+        "hypotheses_slider_order_prior": [
+            "Purple and Orange",
+            "Purple",
+            "Orange"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "Purple",
+            "Purple and Orange",
+            "Orange"
+        ],
+        "actions_buttons_order": [
+            "Orange",
+            "Purple and Orange",
+            "Purple"
+        ],
+        "browser": "Chrome",
+        "browser_height": 662,
+        "browser_width": 1299,
+        "screen_width": 1366,
+        "screen_height": 768,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "100",
+            "81",
+            "79"
+        ],
+        "posterior_beliefs": [
+            "79",
+            "100",
+            "79"
+        ],
+        "about": "analyzing humans",
+        "comment": "no",
+        "age": "42",
+        "gender": "m",
+        "language": "english",
+        "exp_start_time": "2018-01-05T21:59:33.511Z",
+        "exp_end_time": "2018-01-05T22:01:45.364Z",
+        "action_trial_start_time": "2018-01-05T22:00:38.594Z",
+        "action_trial_end_time": "2018-01-05T22:01:07.803Z",
+        "experiment_completion_time": 131853,
+        "action_trial_time": 29209,
+        "hyp_type": "posterior"
+    },
+    "AssignmentId": "33LK57MYLT5D9E0P6X3OGWHVPZMSZZ",
+    "WorkerId": "A2KBZ75HMJ7KVX",
+    "HITId": "3FCO4VKOZ4DQS1R7W5MYBBPTRCQ7E0",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-05T22:06:47Z",
+    "AcceptTime": "2018-01-05T21:50:42Z",
+    "SubmitTime": "2018-01-05T22:01:47Z",
+    "ApprovalTime": "2018-01-05T22:07:37Z",
+    "Assignment": ""
+}

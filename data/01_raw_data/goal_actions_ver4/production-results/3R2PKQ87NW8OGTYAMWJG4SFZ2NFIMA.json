@@ -1,0 +1,93 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_order": [
+            "ButtonLight",
+            "HandleLight",
+            "BothLightMusic"
+        ],
+        "manip_check_effect_order": [
+            "turn on the light",
+            "play music",
+            "turn on the light AND play music"
+        ],
+        "outcome": "light",
+        "action_response": "button",
+        "goal_condition": "performance",
+        "social_condition": "social",
+        "music_box": [
+            "HandleLight.jpeg",
+            "BothLightMusic.jpeg",
+            "ButtonLight.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "HandleLight",
+            "BothLightMusic",
+            "ButtonLight"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "BothLightMusic",
+            "HandleLight",
+            "ButtonLight"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 600,
+        "browser_width": 1870,
+        "screen_width": 1920,
+        "screen_height": 1080,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "81",
+            "83",
+            "20"
+        ],
+        "posterior_beliefs": [
+            "30",
+            "81",
+            "78"
+        ],
+        "about": "Choosing options.",
+        "why_action": "Because the light turns on.",
+        "comment": "The pay could be improved. Too much grinding. Try $0.65.",
+        "age": "26",
+        "gender": "m",
+        "language": "English",
+        "exp_start_time": "2018-01-22T19:09:54.844Z",
+        "exp_end_time": "2018-01-22T19:13:48.826Z",
+        "action_trial_start_time": "2018-01-22T19:12:25.588Z",
+        "action_trial_end_time": "2018-01-22T19:12:43.171Z",
+        "experiment_completion_time": 233982,
+        "action_trial_time": 17583,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "BothLightMusic",
+            "ButtonLight",
+            "HandleLight"
+        ],
+        "rand_action_labels": [
+            "Pull the handle on its own",
+            "Press the button on its own",
+            "Press the button and pull the handle<br>at the same time"
+        ]
+    },
+    "AssignmentId": "3R2PKQ87NW8OGTYAMWJG4SFZ2NFIMA",
+    "WorkerId": "A3S0INU046UTYK",
+    "HITId": "302OLP89DZ7TE55R7HSNVERG7C2CAU",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-22T19:18:50Z",
+    "AcceptTime": "2018-01-22T18:43:10Z",
+    "SubmitTime": "2018-01-22T19:13:50Z",
+    "ApprovalTime": "2018-01-22T19:19:37Z",
+    "Assignment": ""
+}

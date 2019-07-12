@@ -1,0 +1,93 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_order": [
+            "ButtonLight",
+            "HandleLight",
+            "BothLightMusic"
+        ],
+        "manip_check_effect_order": [
+            "turn on the light",
+            "play music",
+            "turn on the light AND play music"
+        ],
+        "outcome": "light",
+        "action_response": "both",
+        "goal_condition": "performance",
+        "social_condition": "social",
+        "music_box": [
+            "BothLightMusic.jpeg",
+            "ButtonLight.jpeg",
+            "HandleLight.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "ButtonLight",
+            "BothLightMusic",
+            "HandleLight"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "BothLightMusic",
+            "ButtonLight",
+            "HandleLight"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Safari",
+        "browser_height": 600,
+        "browser_width": 963,
+        "screen_width": 1280,
+        "screen_height": 800,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "41",
+            "39",
+            "40"
+        ],
+        "posterior_beliefs": [
+            "39",
+            "40",
+            "40"
+        ],
+        "about": "Probability problem solving.",
+        "why_action": "Because doing both actions simultaneously guarantees a result.",
+        "comment": "",
+        "age": "28",
+        "gender": "m",
+        "language": "English",
+        "exp_start_time": "2018-01-23T04:31:02.757Z",
+        "exp_end_time": "2018-01-23T04:36:47.069Z",
+        "action_trial_start_time": "2018-01-23T04:34:18.458Z",
+        "action_trial_end_time": "2018-01-23T04:34:53.596Z",
+        "experiment_completion_time": 344312,
+        "action_trial_time": 35138,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "BothLightMusic",
+            "ButtonLight",
+            "HandleLight"
+        ],
+        "rand_action_labels": [
+            "Press the button and pull the handle<br>at the same time",
+            "Pull the handle on its own",
+            "Press the button on its own"
+        ]
+    },
+    "AssignmentId": "3RSDURM96AMCU5L29GH0D84EJ6VYEK",
+    "WorkerId": "A1ZWQFURT54M34",
+    "HITId": "302OLP89DZ7TE55R7HSNVERG7C2CAU",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-23T04:41:52Z",
+    "AcceptTime": "2018-01-23T04:30:56Z",
+    "SubmitTime": "2018-01-23T04:36:52Z",
+    "ApprovalTime": "2018-01-23T04:42:37Z",
+    "Assignment": ""
+}

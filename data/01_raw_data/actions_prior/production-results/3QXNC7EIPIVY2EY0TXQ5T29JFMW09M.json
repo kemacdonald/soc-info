@@ -1,0 +1,62 @@
+{
+    "answers": {
+        "manip_check_music_response": [],
+        "manip_check_light_response": [],
+        "manip_check_order": [],
+        "manip_check_effect_order": [
+            "play music",
+            "turn on the light",
+            "play music AND turn on the light"
+        ],
+        "action_response": "both",
+        "goal_condition": "noGoal",
+        "music_box": [
+            "HandleMusic.jpeg",
+            "BothMusicLight.jpeg",
+            "ButtonMusic.jpeg"
+        ],
+        "hypotheses_slider_order_prior": "",
+        "hypotheses_slider_order_posterior": "",
+        "actions_buttons_order": "",
+        "toy_inst_num": 0,
+        "browser": "Chrome",
+        "browser_height": 148,
+        "browser_width": 806,
+        "screen_width": 1920,
+        "screen_height": 1080,
+        "mobile_device": false,
+        "prior_beliefs": [],
+        "posterior_beliefs": [],
+        "about": "I don't know",
+        "why_action": "Because it would be the most interesting",
+        "age": "23",
+        "gender": "m",
+        "language": "English",
+        "exp_start_time": "",
+        "exp_end_time": "2018-01-17T00:03:00.675Z",
+        "action_trial_start_time": "2018-01-17T00:02:05.022Z",
+        "action_trial_end_time": "2018-01-17T00:02:27.048Z",
+        "experiment_completion_time": "",
+        "action_trial_time": "",
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "ButtonMusic",
+            "HandleMusic",
+            "BothMusicLight"
+        ],
+        "rand_action_labels": [
+            "Pull the handle on its own",
+            "Press the button on its own",
+            "Press the button and pull the handle<br>at the same time"
+        ]
+    },
+    "AssignmentId": "3QXNC7EIPIVY2EY0TXQ5T29JFMW09M",
+    "WorkerId": "A17PAQSQ74L915",
+    "HITId": "36818Z1KV3D51598EOHM2BNM1XTA3U",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-17T00:08:00Z",
+    "AcceptTime": "2018-01-17T00:01:39Z",
+    "SubmitTime": "2018-01-17T00:03:00Z",
+    "ApprovalTime": "2018-01-17T00:08:37Z",
+    "Assignment": ""
+}

@@ -1,0 +1,59 @@
+{
+    "answers": {
+        "action_response": "orange_and_purple",
+        "goal_condition": "learning",
+        "music_box": "music_box_right.jpeg",
+        "hypotheses_slider_order_prior": [
+            "Purple and Orange",
+            "Orange",
+            "Purple"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "Purple and Orange",
+            "Orange",
+            "Purple"
+        ],
+        "actions_buttons_order": [
+            "Purple and Orange",
+            "Orange",
+            "Purple"
+        ],
+        "browser": "Chrome",
+        "browser_height": 961,
+        "browser_width": 1031,
+        "screen_width": 1920,
+        "screen_height": 1080,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "89",
+            "24",
+            "23"
+        ],
+        "posterior_beliefs": [
+            "100",
+            "1",
+            "1"
+        ],
+        "about": "To see how many people would pick each choice.",
+        "comment": "No comments",
+        "age": "33",
+        "gender": "f",
+        "language": "English",
+        "exp_start_time": "2018-01-05T21:48:20.842Z",
+        "exp_end_time": "2018-01-05T21:50:51.699Z",
+        "action_trial_start_time": "2018-01-05T21:49:32.373Z",
+        "action_trial_end_time": "2018-01-05T21:49:44.751Z",
+        "experiment_completion_time": 150857,
+        "action_trial_time": 12378,
+        "hyp_type": "posterior"
+    },
+    "AssignmentId": "36NEMU28XFD6HOIFBDNV5JO7G80MWR",
+    "WorkerId": "A3KH1OG87C8DCM",
+    "HITId": "3FCO4VKOZ4DQS1R7W5MYBBPTRCQ7E0",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-05T21:55:52Z",
+    "AcceptTime": "2018-01-05T21:47:21Z",
+    "SubmitTime": "2018-01-05T21:50:52Z",
+    "ApprovalTime": "2018-01-05T21:56:37Z",
+    "Assignment": ""
+}

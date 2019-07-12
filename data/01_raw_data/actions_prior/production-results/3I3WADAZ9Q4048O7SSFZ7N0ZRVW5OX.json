@@ -1,0 +1,61 @@
+{
+    "answers": {
+        "manip_check_music_response": [],
+        "manip_check_light_response": [],
+        "manip_check_order": [],
+        "manip_check_effect_order": [
+            "play music",
+            "turn on the light",
+            "play music AND turn on the light"
+        ],
+        "action_response": "button",
+        "goal_condition": "noGoal",
+        "music_box": [
+            "ButtonMusic.jpeg",
+            "BothMusicLight.jpeg",
+            "HandleMusic.jpeg"
+        ],
+        "hypotheses_slider_order_prior": "",
+        "hypotheses_slider_order_posterior": "",
+        "actions_buttons_order": "",
+        "toy_inst_num": 0,
+        "browser": "Chrome",
+        "browser_height": 944,
+        "browser_width": 827,
+        "screen_width": 1920,
+        "screen_height": 1080,
+        "mobile_device": false,
+        "prior_beliefs": [],
+        "posterior_beliefs": [],
+        "about": "I really have no idea",
+        "why_action": "I wanted to see what the button would do",
+        "age": "39",
+        "gender": "F",
+        "language": "English",
+        "exp_start_time": "",
+        "exp_end_time": "2018-01-19T00:02:45.221Z",
+        "action_trial_start_time": "2018-01-19T00:02:06.183Z",
+        "action_trial_end_time": "2018-01-19T00:02:26.702Z",
+        "experiment_completion_time": "",
+        "action_trial_time": "",
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "BothMusicLight",
+            "ButtonMusic",
+            "HandleMusic"
+        ],
+        "rand_action_labels": [
+            "Pull the handle on its own",
+            "Press the button and pull the handle<br>at the same time",
+            "Press the button on its own"
+        ]
+    },
+    "AssignmentId": "3I3WADAZ9Q4048O7SSFZ7N0ZRVW5OX",
+    "WorkerId": "A3LFVI65XV1T46",
+    "HITId": "36818Z1KV3D51598EOHM2BNM1XTA3U",
+    "AssignmentStatus": "Submitted",
+    "AutoApprovalTime": "2018-01-19T00:07:47Z",
+    "AcceptTime": "2018-01-18T23:20:50Z",
+    "SubmitTime": "2018-01-19T00:02:47Z",
+    "Assignment": ""
+}

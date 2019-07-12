@@ -1,4 +1,5 @@
 library(lubridate); library(magrittr); library(jsonlite); 
+library(binom); library(knitr); library(grid); library(ggthemes)
 library(here); library(tidyverse) 
 
 # reads the raw json from CAT experiment, extacts the information we care about, 
@@ -56,7 +57,7 @@ json_to_df_cat <- function(file, data_path) {
 }
 
 tidy_cat_data <- function(d) {
-  d %>% 
+  d$data %>% 
     anonymize_ids() %>% 
     score_test_trials()
 }
@@ -70,30 +71,24 @@ score_test_trials <- function(d) {
 }
 
 code_test_trial <- function(d_sub) {
-  toy_choice_order <- d_sub %>% 
+  final_toy_choice <- d_sub %>% 
     distinct(trial_type, toy) %>% 
+    filter(trial_type == "final_toy_choice") %>% 
     pull(toy)
   
-  # learning if final is not first or second choice
-  # presentation if same as first choice
-  # activation if same as second choice
-  if ( toy_choice_order[3] == toy_choice_order[1] ) {
-    choice_type <- "presentation" 
-  } else if ( toy_choice_order[3] == toy_choice_order[2] ) {
-    choice_type  <- "activation"
-  } else if ( !( toy_choice_order[3] %in% toy_choice_order[1:2] ) ) {
-    choice_type <- "learning"
+  training_toys_chosen <- d_sub %>% 
+    distinct(trial_type, toy) %>% 
+    filter(trial_type != "final_toy_choice")
+  
+  if (final_toy_choice %in% training_toys_chosen$toy) {
+    training_toys_chosen %>% filter(toy == final_toy_choice) %>% pull(trial_type)
+  } else if ( !(final_toy_choice %in% training_toys_chosen$toy) ) {
+    "learning"
   } else {
-    NA
+    "error - toy choice not coded"
   }
   
-  choice_type
-  
 }
-
-
-
-
 
 anonymize_ids <- function(d) {
   df_anonymized <- d %>%

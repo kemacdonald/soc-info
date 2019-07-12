@@ -1,0 +1,88 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_order": [
+            "HandleMusic",
+            "ButtonMusic",
+            "BothMusicLight"
+        ],
+        "manip_check_effect_order": [
+            "play music",
+            "turn on the light"
+        ],
+        "action_response": "button",
+        "goal_condition": "learning",
+        "music_box": [
+            "HandleMusic.jpeg",
+            "BothMusicLight.jpeg",
+            "ButtonMusic.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "HandleMusic",
+            "BothMusicLight",
+            "ButtonMusic"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "HandleMusic",
+            "BothMusicLight",
+            "ButtonMusic"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 1228,
+        "browser_width": 996,
+        "screen_width": 1080,
+        "screen_height": 1920,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "100",
+            "100",
+            "100"
+        ],
+        "posterior_beliefs": [
+            "1",
+            "1",
+            "100"
+        ],
+        "about": "Using logic and process of elimination to predict outcome",
+        "comment": "No comments",
+        "age": "64",
+        "gender": "f",
+        "language": "English",
+        "exp_start_time": "2018-01-14T23:32:34.237Z",
+        "exp_end_time": "2018-01-14T23:39:21.834Z",
+        "action_trial_start_time": "2018-01-14T23:35:25.000Z",
+        "action_trial_end_time": "2018-01-14T23:36:37.927Z",
+        "experiment_completion_time": 407597,
+        "action_trial_time": 72927,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "HandleMusic",
+            "ButtonMusic",
+            "BothMusicLight"
+        ],
+        "rand_action_labels": [
+            "Pull the handle",
+            "Press the button",
+            "Press the button and pull the handle"
+        ]
+    },
+    "AssignmentId": "3AAPLD8UCCHSXTDAPB27QU9CV82HT2",
+    "WorkerId": "AKA9XW7UANMPJ",
+    "HITId": "3KVQ0UJWPXL5MXZFTC17ZXIX7C95WC",
+    "AssignmentStatus": "Submitted",
+    "AutoApprovalTime": "2018-01-14T23:44:22Z",
+    "AcceptTime": "2018-01-14T23:30:42Z",
+    "SubmitTime": "2018-01-14T23:39:22Z",
+    "Assignment": ""
+}

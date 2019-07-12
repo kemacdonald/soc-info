@@ -1,0 +1,93 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_order": [
+            "ButtonMusic",
+            "HandleMusic",
+            "BothMusicLight"
+        ],
+        "manip_check_effect_order": [
+            "play music",
+            "turn on the light",
+            "play music AND turn on the light"
+        ],
+        "outcome": "music",
+        "action_response": "both",
+        "goal_condition": "performance",
+        "social_condition": "social",
+        "music_box": [
+            "BothMusicLight.jpeg",
+            "ButtonMusic.jpeg",
+            "HandleMusic.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "ButtonMusic",
+            "HandleMusic",
+            "BothMusicLight"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "BothMusicLight",
+            "ButtonMusic",
+            "HandleMusic"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 600,
+        "browser_width": 1870,
+        "screen_width": 1920,
+        "screen_height": 1080,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "32",
+            "35",
+            "100"
+        ],
+        "posterior_beliefs": [
+            "100",
+            "33",
+            "32"
+        ],
+        "about": "I think it was about how people comprehend instructions.",
+        "why_action": "I knew that all three toys would have both functions happen if I pressed the button and pulled the lever at once, but I couldn't guarantee anything would happen or the correct function would happen if I only used one of the lever or button.",
+        "comment": "No.",
+        "age": "23",
+        "gender": "f",
+        "language": "English",
+        "exp_start_time": "2018-01-22T22:05:32.746Z",
+        "exp_end_time": "2018-01-22T22:08:21.827Z",
+        "action_trial_start_time": "2018-01-22T22:06:32.778Z",
+        "action_trial_end_time": "2018-01-22T22:06:47.317Z",
+        "experiment_completion_time": 169081,
+        "action_trial_time": 14539,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "ButtonMusic",
+            "HandleMusic",
+            "BothMusicLight"
+        ],
+        "rand_action_labels": [
+            "Press the button on its own",
+            "Press the button and pull the handle<br>at the same time",
+            "Pull the handle on its own"
+        ]
+    },
+    "AssignmentId": "378XPAWRUCDNESPLPTTBV1KZ871AIV",
+    "WorkerId": "A224B7BAQ0MZSN",
+    "HITId": "302OLP89DZ7TE55R7HSNVERG7C2CAU",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-22T22:13:23Z",
+    "AcceptTime": "2018-01-22T21:35:13Z",
+    "SubmitTime": "2018-01-22T22:08:23Z",
+    "ApprovalTime": "2018-01-22T22:13:37Z",
+    "Assignment": ""
+}

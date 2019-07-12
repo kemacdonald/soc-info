@@ -1,0 +1,59 @@
+{
+    "answers": {
+        "action_response": "orange",
+        "goal_condition": "performance",
+        "music_box": "music_box_left.jpeg",
+        "hypotheses_slider_order_prior": [
+            "Purple",
+            "Purple and Orange",
+            "Orange"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "Purple and Orange",
+            "Orange",
+            "Purple"
+        ],
+        "actions_buttons_order": [
+            "Purple and Orange",
+            "Orange",
+            "Purple"
+        ],
+        "browser": "Chrome",
+        "browser_height": 600,
+        "browser_width": 1870,
+        "screen_width": 1920,
+        "screen_height": 1080,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "1",
+            "1",
+            "100"
+        ],
+        "posterior_beliefs": [
+            "1",
+            "100",
+            "1"
+        ],
+        "about": "If I had to guess, I would say it had something to do with how intuitive the controls looked to be, without any explicit instructions (i.e. can someone figure out how to use it just by looking at it).",
+        "comment": "Everything worked perfectly.",
+        "age": "34",
+        "gender": "m",
+        "language": "English",
+        "exp_start_time": "2018-01-04T18:22:50.361Z",
+        "exp_end_time": "2018-01-04T18:35:44.091Z",
+        "action_trial_start_time": "2018-01-04T18:33:08.829Z",
+        "action_trial_end_time": "2018-01-04T18:33:25.637Z",
+        "experiment_completion_time": 773730,
+        "action_trial_time": 16808,
+        "hyp_type": "posterior"
+    },
+    "AssignmentId": "33L7PJKHCGYZ4ICHM781DHGDS8YT8N",
+    "WorkerId": "A1DKVUTOBPQH11",
+    "HITId": "3JUDR1D0D6R833K6ZK0391XZZYJQ24",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-04T18:40:43Z",
+    "AcceptTime": "2018-01-04T18:13:38Z",
+    "SubmitTime": "2018-01-04T18:35:43Z",
+    "ApprovalTime": "2018-01-04T18:41:37Z",
+    "Assignment": ""
+}

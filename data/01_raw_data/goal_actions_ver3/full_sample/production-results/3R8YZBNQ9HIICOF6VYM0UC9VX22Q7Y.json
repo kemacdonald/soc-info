@@ -1,0 +1,91 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_order": [
+            "HandleMusic",
+            "ButtonMusic",
+            "BothMusicLight"
+        ],
+        "manip_check_effect_order": [
+            "play music",
+            "turn on the light",
+            "play music AND turn on the light"
+        ],
+        "outcome": "music",
+        "action_response": "both",
+        "goal_condition": "performance",
+        "music_box": [
+            "BothMusicLight.jpeg",
+            "HandleMusic.jpeg",
+            "ButtonMusic.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "ButtonMusic",
+            "HandleMusic",
+            "BothMusicLight"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "BothMusicLight",
+            "ButtonMusic",
+            "HandleMusic"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 769,
+        "browser_width": 1373,
+        "screen_width": 1440,
+        "screen_height": 900,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "79",
+            "74",
+            "25"
+        ],
+        "posterior_beliefs": [
+            "78",
+            "76",
+            "83"
+        ],
+        "about": "deductive reasoning",
+        "why_action": "It was the one that was guaranteed to cause music to play no matter what",
+        "comment": "n/a",
+        "age": "30",
+        "gender": "f",
+        "language": "English",
+        "exp_start_time": "2018-01-18T21:39:25.298Z",
+        "exp_end_time": "2018-01-18T21:43:23.049Z",
+        "action_trial_start_time": "2018-01-18T21:42:29.897Z",
+        "action_trial_end_time": "2018-01-18T21:42:41.265Z",
+        "experiment_completion_time": 237751,
+        "action_trial_time": 11368,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "BothMusicLight",
+            "HandleMusic",
+            "ButtonMusic"
+        ],
+        "rand_action_labels": [
+            "Press the button and pull the handle<br>at the same time",
+            "Press the button on its own",
+            "Pull the handle on its own"
+        ]
+    },
+    "AssignmentId": "3R8YZBNQ9HIICOF6VYM0UC9VX22Q7Y",
+    "WorkerId": "A1M9EZFKE40SEU",
+    "HITId": "3NFWQRSHVEE1R824KJAYZ6NM2JOFGZ",
+    "AssignmentStatus": "Submitted",
+    "AutoApprovalTime": "2018-01-18T21:48:27Z",
+    "AcceptTime": "2018-01-18T21:30:35Z",
+    "SubmitTime": "2018-01-18T21:43:27Z",
+    "Assignment": ""
+}

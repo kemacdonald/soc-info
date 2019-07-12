@@ -1,0 +1,92 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "button",
+            "button",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "handle",
+            "handle",
+            "both"
+        ],
+        "manip_check_order": [
+            "ButtonLight",
+            "HandleLight",
+            "BothLightMusic"
+        ],
+        "manip_check_effect_order": [
+            "turn on the light",
+            "play music",
+            "turn on the light AND play music"
+        ],
+        "outcome": "light",
+        "action_response": "both",
+        "goal_condition": "learning",
+        "music_box": [
+            "BothLightMusic.jpeg",
+            "HandleLight.jpeg",
+            "ButtonLight.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "HandleLight",
+            "ButtonLight",
+            "BothLightMusic"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "ButtonLight",
+            "BothLightMusic",
+            "HandleLight"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 600,
+        "browser_width": 1870,
+        "screen_width": 1920,
+        "screen_height": 1080,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "88",
+            "78",
+            "36"
+        ],
+        "posterior_beliefs": [
+            "63",
+            "73",
+            "45"
+        ],
+        "about": "I think it was about testing memory through repetitive tasks. ",
+        "why_action": "Pressing the button and pulling the handle at the same time would make it easier to see how the buttons should be labeled, if I got both music and lights or nothing, then it's easier to figure out what does what.",
+        "comment": "",
+        "age": "30",
+        "gender": "m",
+        "language": "English",
+        "exp_start_time": "2018-01-18T22:26:07.966Z",
+        "exp_end_time": "2018-01-18T22:37:11.946Z",
+        "action_trial_start_time": "2018-01-18T22:27:57.221Z",
+        "action_trial_end_time": "2018-01-18T22:29:43.540Z",
+        "experiment_completion_time": 663980,
+        "action_trial_time": 106319,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "BothLightMusic",
+            "ButtonLight",
+            "HandleLight"
+        ],
+        "rand_action_labels": [
+            "Press the button and pull the handle<br>at the same time",
+            "Press the button on its own",
+            "Pull the handle on its own"
+        ]
+    },
+    "AssignmentId": "31HQ4X3T3SAT4PJLRWCF8H6XAAVLSU",
+    "WorkerId": "A8Q0NE53HW9O6",
+    "HITId": "3NFWQRSHVEE1R824KJAYZ6NM2JOFGZ",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-18T22:42:19Z",
+    "AcceptTime": "2018-01-18T22:25:09Z",
+    "SubmitTime": "2018-01-18T22:37:19Z",
+    "ApprovalTime": "2018-01-18T22:42:37Z",
+    "Assignment": ""
+}

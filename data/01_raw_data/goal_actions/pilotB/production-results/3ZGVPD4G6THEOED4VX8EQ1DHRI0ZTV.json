@@ -1,0 +1,59 @@
+{
+    "answers": {
+        "action_response": "purple",
+        "goal_condition": "performance",
+        "music_box": "music_box_left.jpeg",
+        "hypotheses_slider_order_prior": [
+            "Purple and Orange",
+            "Purple",
+            "Orange"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "Purple",
+            "Purple and Orange",
+            "Orange"
+        ],
+        "actions_buttons_order": [
+            "Purple",
+            "Purple and Orange",
+            "Orange"
+        ],
+        "browser": "Chrome",
+        "browser_height": 590,
+        "browser_width": 1213,
+        "screen_width": 1280,
+        "screen_height": 720,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "100",
+            "100",
+            "100"
+        ],
+        "posterior_beliefs": [
+            "100",
+            "70",
+            "36"
+        ],
+        "about": "Which button(s) people would choose.",
+        "comment": "",
+        "age": "36",
+        "gender": "f",
+        "language": "English",
+        "exp_start_time": "2018-01-05T21:35:55.077Z",
+        "exp_end_time": "2018-01-05T21:37:09.313Z",
+        "action_trial_start_time": "2018-01-05T21:36:20.387Z",
+        "action_trial_end_time": "2018-01-05T21:36:27.016Z",
+        "experiment_completion_time": 74236,
+        "action_trial_time": 6629,
+        "hyp_type": "posterior"
+    },
+    "AssignmentId": "3ZGVPD4G6THEOED4VX8EQ1DHRI0ZTV",
+    "WorkerId": "A3TQD8CNO16IZK",
+    "HITId": "3FCO4VKOZ4DQS1R7W5MYBBPTRCQ7E0",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-05T21:42:13Z",
+    "AcceptTime": "2018-01-05T21:35:45Z",
+    "SubmitTime": "2018-01-05T21:37:13Z",
+    "ApprovalTime": "2018-01-05T21:42:37Z",
+    "Assignment": ""
+}

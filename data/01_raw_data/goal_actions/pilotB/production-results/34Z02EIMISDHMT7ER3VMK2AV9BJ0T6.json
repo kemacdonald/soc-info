@@ -1,0 +1,59 @@
+{
+    "answers": {
+        "action_response": "orange",
+        "goal_condition": "performance",
+        "music_box": "music_box_right.jpeg",
+        "hypotheses_slider_order_prior": [
+            "Purple",
+            "Purple and Orange",
+            "Orange"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "Purple",
+            "Orange",
+            "Purple and Orange"
+        ],
+        "actions_buttons_order": [
+            "Purple",
+            "Purple and Orange",
+            "Orange"
+        ],
+        "browser": "Chrome",
+        "browser_height": 769,
+        "browser_width": 1373,
+        "screen_width": 1440,
+        "screen_height": 900,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "100",
+            "1",
+            "100"
+        ],
+        "posterior_beliefs": [
+            "73",
+            "100",
+            "1"
+        ],
+        "about": "Baby toys",
+        "comment": "Nothing was broken for me.",
+        "age": "38",
+        "gender": "f",
+        "language": "English",
+        "exp_start_time": "2018-01-05T22:07:47.538Z",
+        "exp_end_time": "2018-01-05T22:09:42.560Z",
+        "action_trial_start_time": "2018-01-05T22:08:28.985Z",
+        "action_trial_end_time": "2018-01-05T22:08:39.993Z",
+        "experiment_completion_time": 115022,
+        "action_trial_time": 11008,
+        "hyp_type": "posterior"
+    },
+    "AssignmentId": "34Z02EIMISDHMT7ER3VMK2AV9BJ0T6",
+    "WorkerId": "A2Z6NL0CTXY0ZB",
+    "HITId": "3FCO4VKOZ4DQS1R7W5MYBBPTRCQ7E0",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-05T22:14:50Z",
+    "AcceptTime": "2018-01-05T22:04:14Z",
+    "SubmitTime": "2018-01-05T22:09:50Z",
+    "ApprovalTime": "2018-01-05T22:15:37Z",
+    "Assignment": ""
+}

@@ -1,0 +1,91 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_order": [
+            "ButtonLight",
+            "HandleLight",
+            "BothLightMusic"
+        ],
+        "manip_check_effect_order": [
+            "turn on the light",
+            "play music",
+            "turn on the light AND play music"
+        ],
+        "outcome": "light",
+        "action_response": "both",
+        "goal_condition": "performance",
+        "music_box": [
+            "ButtonLight.jpeg",
+            "HandleLight.jpeg",
+            "BothLightMusic.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "HandleLight",
+            "BothLightMusic",
+            "ButtonLight"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "BothLightMusic",
+            "ButtonLight",
+            "HandleLight"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Firefox",
+        "browser_height": 615,
+        "browser_width": 1299,
+        "screen_width": 1366,
+        "screen_height": 768,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "50",
+            "72",
+            "49"
+        ],
+        "posterior_beliefs": [
+            "94",
+            "50",
+            "50"
+        ],
+        "about": "Cognitive abilities and risk taking.",
+        "why_action": "I knew that no matter which toy it was, if I did the combination of pulling the lever and pressing the button, that it would at least turn the light on. It was the no fail option.",
+        "comment": "No. ",
+        "age": "31",
+        "gender": "f",
+        "language": "English",
+        "exp_start_time": "2018-01-18T21:26:58.137Z",
+        "exp_end_time": "2018-01-18T21:31:41.481Z",
+        "action_trial_start_time": "2018-01-18T21:28:55.762Z",
+        "action_trial_end_time": "2018-01-18T21:29:18.400Z",
+        "experiment_completion_time": 283344,
+        "action_trial_time": 22638,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "ButtonLight",
+            "HandleLight",
+            "BothLightMusic"
+        ],
+        "rand_action_labels": [
+            "Pull the handle on its own",
+            "Press the button and pull the handle<br>at the same time",
+            "Press the button on its own"
+        ]
+    },
+    "AssignmentId": "3EJJQNKU9R5FHE0ILMXCQF8U7R0HRS",
+    "WorkerId": "A1ZVTAK0GLO959",
+    "HITId": "3NFWQRSHVEE1R824KJAYZ6NM2JOFGZ",
+    "AssignmentStatus": "Submitted",
+    "AutoApprovalTime": "2018-01-18T21:36:42Z",
+    "AcceptTime": "2018-01-18T21:26:28Z",
+    "SubmitTime": "2018-01-18T21:31:42Z",
+    "Assignment": ""
+}

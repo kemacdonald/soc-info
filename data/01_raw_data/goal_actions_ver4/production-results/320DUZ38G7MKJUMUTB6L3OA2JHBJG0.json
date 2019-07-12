@@ -1,0 +1,93 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_order": [
+            "ButtonLight",
+            "HandleLight",
+            "BothLightMusic"
+        ],
+        "manip_check_effect_order": [
+            "turn on the light",
+            "play music",
+            "turn on the light AND play music"
+        ],
+        "outcome": "light",
+        "action_response": "both",
+        "goal_condition": "noGoal",
+        "social_condition": "social",
+        "music_box": [
+            "HandleLight.jpeg",
+            "ButtonLight.jpeg",
+            "BothLightMusic.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "HandleLight",
+            "ButtonLight",
+            "BothLightMusic"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "ButtonLight",
+            "BothLightMusic",
+            "HandleLight"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Firefox",
+        "browser_height": 576,
+        "browser_width": 1186,
+        "screen_width": 1252,
+        "screen_height": 704,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "30",
+            "32",
+            "34"
+        ],
+        "posterior_beliefs": [
+            "29",
+            "30",
+            "30"
+        ],
+        "about": "inference",
+        "why_action": "I wanted to make sure it did something when my boss was there",
+        "comment": "I think I got confused during the first two examples because I thought some of the text was the same, I wish there been something to indicate that the text was different, because sometimes when you do these tests they keep the text at the top of the page the same on multiple pages",
+        "age": "37",
+        "gender": "male",
+        "language": "English",
+        "exp_start_time": "2018-01-23T00:18:00.898Z",
+        "exp_end_time": "2018-01-23T00:25:22.995Z",
+        "action_trial_start_time": "2018-01-23T00:21:55.255Z",
+        "action_trial_end_time": "2018-01-23T00:22:34.603Z",
+        "experiment_completion_time": 442097,
+        "action_trial_time": 39348,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "BothLightMusic",
+            "ButtonLight",
+            "HandleLight"
+        ],
+        "rand_action_labels": [
+            "Pull the handle on its own",
+            "Press the button and pull the handle<br>at the same time",
+            "Press the button on its own"
+        ]
+    },
+    "AssignmentId": "320DUZ38G7MKJUMUTB6L3OA2JHBJG0",
+    "WorkerId": "A1FG4M4370KNFI",
+    "HITId": "302OLP89DZ7TE55R7HSNVERG7C2CAU",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-23T00:30:25Z",
+    "AcceptTime": "2018-01-22T23:54:49Z",
+    "SubmitTime": "2018-01-23T00:25:25Z",
+    "ApprovalTime": "2018-01-23T00:30:37Z",
+    "Assignment": ""
+}

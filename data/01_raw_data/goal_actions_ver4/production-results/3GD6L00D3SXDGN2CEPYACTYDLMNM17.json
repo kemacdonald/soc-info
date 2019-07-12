@@ -1,0 +1,93 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_order": [
+            "HandleLight",
+            "ButtonLight",
+            "BothLightMusic"
+        ],
+        "manip_check_effect_order": [
+            "turn on the light",
+            "play music",
+            "turn on the light AND play music"
+        ],
+        "outcome": "light",
+        "action_response": "handle",
+        "goal_condition": "performance",
+        "social_condition": "no-social",
+        "music_box": [
+            "HandleLight.jpeg",
+            "ButtonLight.jpeg",
+            "BothLightMusic.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "HandleLight",
+            "ButtonLight",
+            "BothLightMusic"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "BothLightMusic",
+            "ButtonLight",
+            "HandleLight"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 987,
+        "browser_width": 1853,
+        "screen_width": 1920,
+        "screen_height": 1080,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "79",
+            "83",
+            "75"
+        ],
+        "posterior_beliefs": [
+            "20",
+            "84",
+            "86"
+        ],
+        "about": "not sure",
+        "why_action": "Pull the handle or pushing the button would determine which toy it was.",
+        "comment": "no",
+        "age": "33",
+        "gender": "f",
+        "language": "English",
+        "exp_start_time": "2018-01-22T23:53:51.364Z",
+        "exp_end_time": "2018-01-22T23:56:41.823Z",
+        "action_trial_start_time": "2018-01-22T23:55:21.121Z",
+        "action_trial_end_time": "2018-01-22T23:55:54.742Z",
+        "experiment_completion_time": 170459,
+        "action_trial_time": 33621,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "HandleLight",
+            "BothLightMusic",
+            "ButtonLight"
+        ],
+        "rand_action_labels": [
+            "Press the button on its own",
+            "Pull the handle on its own",
+            "Press the button and pull the handle<br>at the same time"
+        ]
+    },
+    "AssignmentId": "3GD6L00D3SXDGN2CEPYACTYDLMNM17",
+    "WorkerId": "A3GRV5A91OW2BV",
+    "HITId": "302OLP89DZ7TE55R7HSNVERG7C2CAU",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-23T00:01:43Z",
+    "AcceptTime": "2018-01-22T23:53:45Z",
+    "SubmitTime": "2018-01-22T23:56:43Z",
+    "ApprovalTime": "2018-01-23T00:02:37Z",
+    "Assignment": ""
+}

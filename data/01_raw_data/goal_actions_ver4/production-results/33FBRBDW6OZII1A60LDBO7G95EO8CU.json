@@ -1,0 +1,93 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_order": [
+            "HandleLight",
+            "ButtonLight",
+            "BothLightMusic"
+        ],
+        "manip_check_effect_order": [
+            "turn on the light",
+            "play music",
+            "turn on the light AND play music"
+        ],
+        "outcome": "light",
+        "action_response": "handle",
+        "goal_condition": "learning",
+        "social_condition": "no-social",
+        "music_box": [
+            "ButtonLight.jpeg",
+            "HandleLight.jpeg",
+            "BothLightMusic.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "BothLightMusic",
+            "HandleLight",
+            "ButtonLight"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "BothLightMusic",
+            "ButtonLight",
+            "HandleLight"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 743,
+        "browser_width": 1222,
+        "screen_width": 1536,
+        "screen_height": 864,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "11",
+            "28",
+            "100"
+        ],
+        "posterior_beliefs": [
+            "1",
+            "100",
+            "8"
+        ],
+        "about": "Figuring out how people make decisions",
+        "why_action": "Because that's what seemed like the most likely ",
+        "comment": "",
+        "age": "27",
+        "gender": "F",
+        "language": "English",
+        "exp_start_time": "2018-01-22T23:32:57.307Z",
+        "exp_end_time": "2018-01-22T23:35:58.373Z",
+        "action_trial_start_time": "2018-01-22T23:34:30.685Z",
+        "action_trial_end_time": "2018-01-22T23:34:56.684Z",
+        "experiment_completion_time": 181066,
+        "action_trial_time": 25999,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "HandleLight",
+            "BothLightMusic",
+            "ButtonLight"
+        ],
+        "rand_action_labels": [
+            "Pull the handle on its own",
+            "Press the button on its own",
+            "Press the button and pull the handle<br>at the same time"
+        ]
+    },
+    "AssignmentId": "33FBRBDW6OZII1A60LDBO7G95EO8CU",
+    "WorkerId": "AJ5FWZJS4V0HM",
+    "HITId": "302OLP89DZ7TE55R7HSNVERG7C2CAU",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-22T23:41:00Z",
+    "AcceptTime": "2018-01-22T23:32:31Z",
+    "SubmitTime": "2018-01-22T23:36:00Z",
+    "ApprovalTime": "2018-01-22T23:41:37Z",
+    "Assignment": ""
+}

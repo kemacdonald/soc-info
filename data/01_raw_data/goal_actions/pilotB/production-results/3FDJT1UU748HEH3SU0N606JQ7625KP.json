@@ -1,0 +1,60 @@
+{
+    "answers": {
+        "doNotRedirect": true,
+        "action_response": "orange_and_purple",
+        "goal_condition": "learning",
+        "music_box": "music_box_right.jpeg",
+        "hypotheses_slider_order_prior": [
+            "Orange",
+            "Purple and Orange",
+            "Purple"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "Orange",
+            "Purple",
+            "Purple and Orange"
+        ],
+        "actions_buttons_order": [
+            "Purple and Orange",
+            "Purple",
+            "Orange"
+        ],
+        "browser": "Chrome",
+        "browser_height": 983,
+        "browser_width": 994,
+        "screen_width": 1920,
+        "screen_height": 1080,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "1",
+            "100",
+            "1"
+        ],
+        "posterior_beliefs": [
+            "1",
+            "1",
+            "100"
+        ],
+        "about": "reasoning and deduction",
+        "comment": "Everything was clear and worked properly. Thanks for the opportunity to participate; I wish you success with your research! Also, please note that on December 15th, 2017 amazon forced all users to begin using the new worker site. One of the many changes is the inability for workers to see the \"Auto Approval\" time set by requesters. Many workers use this information to aid in deciding whether or not to do a HIT. Please consider including the Auto Approval time in your HIT descriptions.",
+        "age": "45",
+        "gender": "m",
+        "language": "English",
+        "exp_start_time": "2018-01-05T21:54:25.456Z",
+        "exp_end_time": "2018-01-05T21:57:16.941Z",
+        "action_trial_start_time": "2018-01-05T21:55:16.194Z",
+        "action_trial_end_time": "2018-01-05T21:55:28.545Z",
+        "experiment_completion_time": 171485,
+        "action_trial_time": 12351,
+        "hyp_type": "posterior"
+    },
+    "AssignmentId": "3FDJT1UU748HEH3SU0N606JQ7625KP",
+    "WorkerId": "A11O504U2EJUGU",
+    "HITId": "3FCO4VKOZ4DQS1R7W5MYBBPTRCQ7E0",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-05T22:02:17Z",
+    "AcceptTime": "2018-01-05T21:50:42Z",
+    "SubmitTime": "2018-01-05T21:57:17Z",
+    "ApprovalTime": "2018-01-05T22:02:37Z",
+    "Assignment": ""
+}

@@ -1,0 +1,92 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_order": [
+            "HandleMusic",
+            "ButtonMusic",
+            "BothMusicLight"
+        ],
+        "manip_check_effect_order": [
+            "play music",
+            "turn on the light",
+            "play music AND turn on the light"
+        ],
+        "outcome": "music",
+        "action_response": "both",
+        "goal_condition": "presentation",
+        "social_condition": "social",
+        "music_box": [
+            "HandleMusic.jpeg",
+            "ButtonMusic.jpeg",
+            "BothMusicLight.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "ButtonMusic",
+            "BothMusicLight",
+            "HandleMusic"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "HandleMusic",
+            "ButtonMusic",
+            "BothMusicLight"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 1094,
+        "browser_width": 1853,
+        "screen_width": 1920,
+        "screen_height": 1200,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "32",
+            "33",
+            "34"
+        ],
+        "posterior_beliefs": [
+            "30",
+            "29",
+            "34"
+        ],
+        "about": "People's ability to make the best decision when there is an unknown variable.",
+        "why_action": "Because having the music and lights both working would impress the boss and all the toys would have done both if I used the button and lever.",
+        "comment": "No.",
+        "age": "37",
+        "gender": "f",
+        "language": "English",
+        "exp_start_time": "2018-01-22T16:50:26.297Z",
+        "exp_end_time": "2018-01-22T16:55:46.380Z",
+        "action_trial_start_time": "2018-01-22T16:52:28.969Z",
+        "action_trial_end_time": "2018-01-22T16:52:54.604Z",
+        "experiment_completion_time": 320083,
+        "action_trial_time": 25635,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "BothMusicLight",
+            "HandleMusic",
+            "ButtonMusic"
+        ],
+        "rand_action_labels": [
+            "Press the button and pull the handle<br>at the same time",
+            "Press the button on its own",
+            "Pull the handle on its own"
+        ]
+    },
+    "AssignmentId": "3WJEQKOXA82CEMTNHM85323DR471A9",
+    "WorkerId": "A12HZGOZQD5YK7",
+    "HITId": "302OLP89DZ7TE55R7HSNVERG7C2CAU",
+    "AssignmentStatus": "Submitted",
+    "AutoApprovalTime": "2018-01-22T17:00:47Z",
+    "AcceptTime": "2018-01-22T16:29:41Z",
+    "SubmitTime": "2018-01-22T16:55:47Z",
+    "Assignment": ""
+}

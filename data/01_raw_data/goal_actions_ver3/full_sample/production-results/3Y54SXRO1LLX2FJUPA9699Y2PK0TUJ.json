@@ -1,0 +1,92 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_order": [
+            "HandleLight",
+            "ButtonLight",
+            "BothLightMusic"
+        ],
+        "manip_check_effect_order": [
+            "turn on the light",
+            "play music",
+            "turn on the light AND play music"
+        ],
+        "outcome": "light",
+        "action_response": "both",
+        "goal_condition": "presentation",
+        "music_box": [
+            "HandleLight.jpeg",
+            "BothLightMusic.jpeg",
+            "ButtonLight.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "HandleLight",
+            "ButtonLight",
+            "BothLightMusic"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "HandleLight",
+            "BothLightMusic",
+            "ButtonLight"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 600,
+        "browser_width": 1028,
+        "screen_width": 1093,
+        "screen_height": 615,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "49",
+            "84",
+            "24"
+        ],
+        "posterior_beliefs": [
+            "52",
+            "16",
+            "89"
+        ],
+        "about": "What I would do to impress my boss.",
+        "why_action": "Because I knew it would make the toy do something, and I wanted to impress my boss. It would have been embarrassing to have it just sit there.",
+        "comment": "No.",
+        "age": "47",
+        "gender": "m",
+        "language": "english",
+        "exp_start_time": "2018-01-18T22:58:16.290Z",
+        "exp_end_time": "2018-01-18T23:02:46.478Z",
+        "action_trial_start_time": "2018-01-18T23:00:26.814Z",
+        "action_trial_end_time": "2018-01-18T23:01:25.163Z",
+        "experiment_completion_time": 270188,
+        "action_trial_time": 58349,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "BothLightMusic",
+            "HandleLight",
+            "ButtonLight"
+        ],
+        "rand_action_labels": [
+            "Press the button on its own",
+            "Press the button and pull the handle<br>at the same time",
+            "Pull the handle on its own"
+        ]
+    },
+    "AssignmentId": "3Y54SXRO1LLX2FJUPA9699Y2PK0TUJ",
+    "WorkerId": "A2WGW5Y3ZFBDEC",
+    "HITId": "3NFWQRSHVEE1R824KJAYZ6NM2JOFGZ",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-18T23:08:07Z",
+    "AcceptTime": "2018-01-18T22:09:29Z",
+    "SubmitTime": "2018-01-18T23:03:07Z",
+    "ApprovalTime": "2018-01-18T23:08:37Z",
+    "Assignment": ""
+}

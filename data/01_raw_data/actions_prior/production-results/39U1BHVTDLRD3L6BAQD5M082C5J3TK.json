@@ -1,0 +1,62 @@
+{
+    "answers": {
+        "doNotRedirect": true,
+        "manip_check_music_response": [],
+        "manip_check_light_response": [],
+        "manip_check_order": [],
+        "manip_check_effect_order": [
+            "play music",
+            "turn on the light",
+            "play music AND turn on the light"
+        ],
+        "action_response": "handle",
+        "goal_condition": "noGoal",
+        "music_box": [
+            "HandleMusic.jpeg",
+            "ButtonMusic.jpeg",
+            "BothMusicLight.jpeg"
+        ],
+        "hypotheses_slider_order_prior": "",
+        "hypotheses_slider_order_posterior": "",
+        "actions_buttons_order": "",
+        "toy_inst_num": 0,
+        "browser": "Chrome",
+        "browser_height": 699,
+        "browser_width": 1225,
+        "screen_width": 1440,
+        "screen_height": 900,
+        "mobile_device": false,
+        "prior_beliefs": [],
+        "posterior_beliefs": [],
+        "about": "Not sure - potentially how we perceive cause and effect?",
+        "why_action": "I think that pulling the handle would feel fun.",
+        "age": "29",
+        "gender": "f",
+        "language": "English",
+        "exp_start_time": "",
+        "exp_end_time": "2018-01-17T00:14:20.706Z",
+        "action_trial_start_time": "2018-01-17T00:13:17.116Z",
+        "action_trial_end_time": "2018-01-17T00:13:32.604Z",
+        "experiment_completion_time": "",
+        "action_trial_time": "",
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "ButtonMusic",
+            "BothMusicLight",
+            "HandleMusic"
+        ],
+        "rand_action_labels": [
+            "Press the button on its own",
+            "Press the button and pull the handle<br>at the same time",
+            "Pull the handle on its own"
+        ]
+    },
+    "AssignmentId": "39U1BHVTDLRD3L6BAQD5M082C5J3TK",
+    "WorkerId": "A2YQBBAK7NBZHU",
+    "HITId": "36818Z1KV3D51598EOHM2BNM1XTA3U",
+    "AssignmentStatus": "Submitted",
+    "AutoApprovalTime": "2018-01-17T00:19:22Z",
+    "AcceptTime": "2018-01-17T00:10:16Z",
+    "SubmitTime": "2018-01-17T00:14:22Z",
+    "Assignment": ""
+}

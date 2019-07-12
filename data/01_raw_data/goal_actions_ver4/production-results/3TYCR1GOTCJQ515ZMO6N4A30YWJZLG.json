@@ -1,0 +1,93 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "handle",
+            "handle",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "button",
+            "button",
+            "both"
+        ],
+        "manip_check_order": [
+            "HandleLight",
+            "ButtonLight",
+            "BothLightMusic"
+        ],
+        "manip_check_effect_order": [
+            "turn on the light",
+            "play music",
+            "turn on the light AND play music"
+        ],
+        "outcome": "light",
+        "action_response": "handle",
+        "goal_condition": "learning",
+        "social_condition": "no-social",
+        "music_box": [
+            "ButtonLight.jpeg",
+            "BothLightMusic.jpeg",
+            "HandleLight.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "HandleLight",
+            "BothLightMusic",
+            "ButtonLight"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "HandleLight",
+            "BothLightMusic",
+            "ButtonLight"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Safari",
+        "browser_height": 600,
+        "browser_width": 510,
+        "screen_width": 414,
+        "screen_height": 736,
+        "mobile_device": true,
+        "prior_beliefs": [
+            "1",
+            "100",
+            "50"
+        ],
+        "posterior_beliefs": [
+            "100",
+            "1",
+            "100"
+        ],
+        "about": "Logic",
+        "why_action": "I thought the second toy screen was a glitch, so I missed some of the info",
+        "comment": "I don\u2019t think the scale options displayed as intended",
+        "age": "38",
+        "gender": "F",
+        "language": "English",
+        "exp_start_time": "2018-01-23T01:05:54.002Z",
+        "exp_end_time": "2018-01-23T01:12:47.387Z",
+        "action_trial_start_time": "2018-01-23T01:09:08.480Z",
+        "action_trial_end_time": "2018-01-23T01:10:17.728Z",
+        "experiment_completion_time": 413385,
+        "action_trial_time": 69248,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "HandleLight",
+            "ButtonLight",
+            "BothLightMusic"
+        ],
+        "rand_action_labels": [
+            "Pull the handle on its own",
+            "Press the button and pull the handle<br>at the same time",
+            "Press the button on its own"
+        ]
+    },
+    "AssignmentId": "3TYCR1GOTCJQ515ZMO6N4A30YWJZLG",
+    "WorkerId": "A3BF8Z6UHZXHNU",
+    "HITId": "302OLP89DZ7TE55R7HSNVERG7C2CAU",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-23T01:17:50Z",
+    "AcceptTime": "2018-01-23T01:05:11Z",
+    "SubmitTime": "2018-01-23T01:12:50Z",
+    "ApprovalTime": "2018-01-23T01:18:37Z",
+    "Assignment": ""
+}

@@ -1,0 +1,93 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_order": [
+            "HandleLight",
+            "ButtonLight",
+            "BothLightMusic"
+        ],
+        "manip_check_effect_order": [
+            "turn on the light",
+            "play music",
+            "turn on the light AND play music"
+        ],
+        "outcome": "light",
+        "action_response": "handle",
+        "goal_condition": "performance",
+        "social_condition": "no-social",
+        "music_box": [
+            "ButtonLight.jpeg",
+            "HandleLight.jpeg",
+            "BothLightMusic.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "BothLightMusic",
+            "ButtonLight",
+            "HandleLight"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "HandleLight",
+            "ButtonLight",
+            "BothLightMusic"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Firefox",
+        "browser_height": 600,
+        "browser_width": 1299,
+        "screen_width": 1366,
+        "screen_height": 768,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "55",
+            "32",
+            "12"
+        ],
+        "posterior_beliefs": [
+            "67",
+            "1",
+            "38"
+        ],
+        "about": "To see how people would reason about a dilemma.",
+        "why_action": "It would let me isolate the feature of the handle. If it did nothing, it was the third. If it lit up, it was the first.",
+        "comment": "",
+        "age": "30",
+        "gender": "m",
+        "language": "English",
+        "exp_start_time": "2018-01-22T23:51:45.115Z",
+        "exp_end_time": "2018-01-22T23:55:57.744Z",
+        "action_trial_start_time": "2018-01-22T23:53:59.262Z",
+        "action_trial_end_time": "2018-01-22T23:54:27.603Z",
+        "experiment_completion_time": 252629,
+        "action_trial_time": 28341,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "HandleLight",
+            "ButtonLight",
+            "BothLightMusic"
+        ],
+        "rand_action_labels": [
+            "Press the button and pull the handle<br>at the same time",
+            "Press the button on its own",
+            "Pull the handle on its own"
+        ]
+    },
+    "AssignmentId": "3MRNMEIQW56N2003U6HQDIKXAE0LDU",
+    "WorkerId": "AXO22N46CSNVT",
+    "HITId": "302OLP89DZ7TE55R7HSNVERG7C2CAU",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-23T00:00:57Z",
+    "AcceptTime": "2018-01-22T23:51:26Z",
+    "SubmitTime": "2018-01-22T23:55:57Z",
+    "ApprovalTime": "2018-01-23T00:01:37Z",
+    "Assignment": ""
+}

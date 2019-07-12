@@ -1,0 +1,92 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "button",
+            "button",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "handle",
+            "handle",
+            "both"
+        ],
+        "manip_check_order": [
+            "ButtonLight",
+            "HandleLight",
+            "BothLightMusic"
+        ],
+        "manip_check_effect_order": [
+            "turn on the light",
+            "play music",
+            "turn on the light AND play music"
+        ],
+        "outcome": "light",
+        "action_response": "button",
+        "goal_condition": "noGoal",
+        "music_box": [
+            "HandleLight.jpeg",
+            "ButtonLight.jpeg",
+            "BothLightMusic.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "ButtonLight",
+            "BothLightMusic",
+            "HandleLight"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "ButtonLight",
+            "BothLightMusic",
+            "HandleLight"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 949,
+        "browser_width": 1853,
+        "screen_width": 1920,
+        "screen_height": 1080,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "40",
+            "1",
+            "33"
+        ],
+        "posterior_beliefs": [
+            "10",
+            "63",
+            "42"
+        ],
+        "about": "Logical deduction?",
+        "why_action": "I actually think I made have had it wrong, because the image didn't load properly until after I hit submit. I think I was SUPPOSE to see the light already lit up?",
+        "comment": "When deciding on an action to determine which of the three toys I had, I think the image loaded wasn't the correct image; when I hit submit, the image quickly changed before the page loaded (to an image where the light was already on).",
+        "age": "29",
+        "gender": "m",
+        "language": "English",
+        "exp_start_time": "2018-01-18T20:50:28.077Z",
+        "exp_end_time": "2018-01-18T20:55:30.333Z",
+        "action_trial_start_time": "2018-01-18T20:52:34.661Z",
+        "action_trial_end_time": "2018-01-18T20:53:14.203Z",
+        "experiment_completion_time": 302256,
+        "action_trial_time": 39542,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "BothLightMusic",
+            "ButtonLight",
+            "HandleLight"
+        ],
+        "rand_action_labels": [
+            "Press the button on its own",
+            "Press the button and pull the handle<br>at the same time",
+            "Pull the handle on its own"
+        ]
+    },
+    "AssignmentId": "3X4JMASXCM9HQ7DXRH41K8493OU0BV",
+    "WorkerId": "A2INXY39KBM92F",
+    "HITId": "3NFWQRSHVEE1R824KJAYZ6NM2JOFGZ",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-18T21:00:32Z",
+    "AcceptTime": "2018-01-18T20:47:36Z",
+    "SubmitTime": "2018-01-18T20:55:32Z",
+    "ApprovalTime": "2018-01-18T21:00:37Z",
+    "Assignment": ""
+}

@@ -1,0 +1,89 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "handle",
+            "both",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "button",
+            "both",
+            "both"
+        ],
+        "manip_check_order": [
+            "HandleMusic",
+            "ButtonMusic",
+            "BothMusicLight"
+        ],
+        "manip_check_effect_order": [
+            "play music",
+            "turn on the light"
+        ],
+        "action_response": "both",
+        "goal_condition": "presentation",
+        "music_box": [
+            "HandleMusic.jpeg",
+            "BothMusicLight.jpeg",
+            "ButtonMusic.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "ButtonMusic",
+            "BothMusicLight",
+            "HandleMusic"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "ButtonMusic",
+            "HandleMusic",
+            "BothMusicLight"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 697,
+        "browser_width": 1461,
+        "screen_width": 1376,
+        "screen_height": 860,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "98",
+            "79",
+            "65"
+        ],
+        "posterior_beliefs": [
+            "97",
+            "93",
+            "88"
+        ],
+        "about": "Something to do with logic and what we would choose to almost for sure make something happen for the boss.",
+        "comment": "All fine, thank you",
+        "age": "60",
+        "gender": "m",
+        "language": "English",
+        "exp_start_time": "2018-01-14T20:22:55.952Z",
+        "exp_end_time": "2018-01-14T20:29:40.900Z",
+        "action_trial_start_time": "2018-01-14T20:26:37.031Z",
+        "action_trial_end_time": "2018-01-14T20:27:14.045Z",
+        "experiment_completion_time": 404948,
+        "action_trial_time": 37014,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "HandleMusic",
+            "BothMusicLight",
+            "ButtonMusic"
+        ],
+        "rand_action_labels": [
+            "Pull the handle",
+            "Press the button",
+            "Press the button and pull the handle"
+        ]
+    },
+    "AssignmentId": "3UWN2HHPUY5JSPM639SUL9AMF1VNSQ",
+    "WorkerId": "A3LT7W355XOAKF",
+    "HITId": "3XT3KXP24ZYJ46FO9E7XQCNPOWMI6Y",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-14T20:34:42Z",
+    "AcceptTime": "2018-01-14T20:13:28Z",
+    "SubmitTime": "2018-01-14T20:29:42Z",
+    "ApprovalTime": "2018-01-14T20:35:37Z",
+    "Assignment": ""
+}

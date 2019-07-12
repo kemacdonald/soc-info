@@ -1,0 +1,58 @@
+{
+    "answers": {
+        "action_response": "purple",
+        "goal_condition": "learning",
+        "music_box": "music_box_right.jpeg",
+        "hypotheses_slider_order_prior": [
+            "Purple and Orange",
+            "Orange",
+            "Purple"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "Purple",
+            "Purple and Orange",
+            "Orange"
+        ],
+        "actions_buttons_order": [
+            "Purple and Orange",
+            "Purple",
+            "Orange"
+        ],
+        "browser": "Chrome",
+        "browser_height": 600,
+        "browser_width": 1344,
+        "screen_width": 1280,
+        "screen_height": 800,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "34",
+            "65",
+            "65"
+        ],
+        "posterior_beliefs": [
+            "50",
+            "7",
+            "67"
+        ],
+        "about": "learning about a toy",
+        "comment": "all good",
+        "age": "29",
+        "gender": "m",
+        "language": "english",
+        "exp_start_time": "2018-01-03T18:57:14.848Z",
+        "exp_end_time": "2018-01-03T18:58:27.269Z",
+        "action_trial_start_time": "2018-01-03T18:57:46.183Z",
+        "action_trial_end_time": "2018-01-03T18:57:58.146Z",
+        "experiment_completion_time": 72421,
+        "action_trial_time": 11963,
+        "hyp_type": "posterior"
+    },
+    "AssignmentId": "3Y54SXRO1LLX2FJUPA7D4KO28F8TUJ",
+    "WorkerId": "A1XUBU5CS5SFRV",
+    "HITId": "3N5YJ55YXG3C592IW7Z870B01T3ANI",
+    "AssignmentStatus": "Submitted",
+    "AutoApprovalTime": "2018-01-03T19:03:28Z",
+    "AcceptTime": "2018-01-03T18:57:04Z",
+    "SubmitTime": "2018-01-03T18:58:28Z",
+    "Assignment": ""
+}

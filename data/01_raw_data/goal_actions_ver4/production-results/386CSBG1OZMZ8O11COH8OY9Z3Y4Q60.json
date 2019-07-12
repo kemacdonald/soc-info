@@ -1,0 +1,93 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_order": [
+            "ButtonLight",
+            "HandleLight",
+            "BothLightMusic"
+        ],
+        "manip_check_effect_order": [
+            "turn on the light",
+            "play music",
+            "turn on the light AND play music"
+        ],
+        "outcome": "light",
+        "action_response": "both",
+        "goal_condition": "performance",
+        "social_condition": "social",
+        "music_box": [
+            "BothLightMusic.jpeg",
+            "HandleLight.jpeg",
+            "ButtonLight.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "HandleLight",
+            "BothLightMusic",
+            "ButtonLight"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "BothLightMusic",
+            "HandleLight",
+            "ButtonLight"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 600,
+        "browser_width": 1470,
+        "screen_width": 1536,
+        "screen_height": 864,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "73",
+            "68",
+            "60"
+        ],
+        "posterior_beliefs": [
+            "76",
+            "67",
+            "67"
+        ],
+        "about": "Logical reasoning",
+        "why_action": "Using both the handle and the button at the same time always turns on the light",
+        "comment": "",
+        "age": "30",
+        "gender": "f",
+        "language": "English",
+        "exp_start_time": "2018-01-23T00:33:31.559Z",
+        "exp_end_time": "2018-01-23T00:45:31.871Z",
+        "action_trial_start_time": "2018-01-23T00:42:17.700Z",
+        "action_trial_end_time": "2018-01-23T00:43:20.168Z",
+        "experiment_completion_time": 720312,
+        "action_trial_time": 62468,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "ButtonLight",
+            "BothLightMusic",
+            "HandleLight"
+        ],
+        "rand_action_labels": [
+            "Press the button on its own",
+            "Press the button and pull the handle<br>at the same time",
+            "Pull the handle on its own"
+        ]
+    },
+    "AssignmentId": "386CSBG1OZMZ8O11COH8OY9Z3Y4Q60",
+    "WorkerId": "A1S9EY8YUIGDYV",
+    "HITId": "302OLP89DZ7TE55R7HSNVERG7C2CAU",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-23T00:50:32Z",
+    "AcceptTime": "2018-01-23T00:33:13Z",
+    "SubmitTime": "2018-01-23T00:45:32Z",
+    "ApprovalTime": "2018-01-23T00:50:38Z",
+    "Assignment": ""
+}

@@ -1,0 +1,59 @@
+{
+    "answers": {
+        "action_response": "orange",
+        "goal_condition": "performance",
+        "music_box": "music_box_right.jpeg",
+        "hypotheses_slider_order_prior": [
+            "Purple",
+            "Orange",
+            "Purple and Orange"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "Purple",
+            "Purple and Orange",
+            "Orange"
+        ],
+        "actions_buttons_order": [
+            "Purple and Orange",
+            "Purple",
+            "Orange"
+        ],
+        "browser": "Chrome",
+        "browser_height": 600,
+        "browser_width": 1145,
+        "screen_width": 1280,
+        "screen_height": 800,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "60",
+            "87",
+            "38"
+        ],
+        "posterior_beliefs": [
+            "1",
+            "1",
+            "100"
+        ],
+        "about": "which button makes the music play!",
+        "comment": "no but this was fun.",
+        "age": "24",
+        "gender": "f",
+        "language": "english",
+        "exp_start_time": "2018-01-05T21:35:54.100Z",
+        "exp_end_time": "2018-01-05T21:37:01.788Z",
+        "action_trial_start_time": "2018-01-05T21:36:23.793Z",
+        "action_trial_end_time": "2018-01-05T21:36:31.255Z",
+        "experiment_completion_time": 67688,
+        "action_trial_time": 7462,
+        "hyp_type": "posterior"
+    },
+    "AssignmentId": "3SKEMFQBZ3501ZMUSYU9CQTH9W2K85",
+    "WorkerId": "A8O08TS7KKY24",
+    "HITId": "3FCO4VKOZ4DQS1R7W5MYBBPTRCQ7E0",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-05T21:42:03Z",
+    "AcceptTime": "2018-01-05T21:35:42Z",
+    "SubmitTime": "2018-01-05T21:37:03Z",
+    "ApprovalTime": "2018-01-05T21:42:37Z",
+    "Assignment": ""
+}

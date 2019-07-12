@@ -1,0 +1,93 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "button",
+            "button",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "handle",
+            "handle",
+            "both"
+        ],
+        "manip_check_order": [
+            "ButtonMusic",
+            "HandleMusic",
+            "BothMusicLight"
+        ],
+        "manip_check_effect_order": [
+            "play music",
+            "turn on the light",
+            "play music AND turn on the light"
+        ],
+        "outcome": "music",
+        "action_response": "both",
+        "goal_condition": "noGoal",
+        "social_condition": "no-social",
+        "music_box": [
+            "ButtonMusic.jpeg",
+            "HandleMusic.jpeg",
+            "BothMusicLight.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "ButtonMusic",
+            "HandleMusic",
+            "BothMusicLight"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "ButtonMusic",
+            "HandleMusic",
+            "BothMusicLight"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 600,
+        "browser_width": 1289,
+        "screen_width": 1366,
+        "screen_height": 768,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "50",
+            "50",
+            "49"
+        ],
+        "posterior_beliefs": [
+            "48",
+            "50",
+            "51"
+        ],
+        "about": "Making logical choices.",
+        "why_action": "I knew that selecting both would work no matter which toy it was.",
+        "comment": "No",
+        "age": "45",
+        "gender": "female",
+        "language": "english",
+        "exp_start_time": "2018-01-23T00:00:00.495Z",
+        "exp_end_time": "2018-01-23T00:05:58.775Z",
+        "action_trial_start_time": "2018-01-23T00:03:18.808Z",
+        "action_trial_end_time": "2018-01-23T00:03:44.144Z",
+        "experiment_completion_time": 358280,
+        "action_trial_time": 25336,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "BothMusicLight",
+            "ButtonMusic",
+            "HandleMusic"
+        ],
+        "rand_action_labels": [
+            "Pull the handle on its own",
+            "Press the button on its own",
+            "Press the button and pull the handle<br>at the same time"
+        ]
+    },
+    "AssignmentId": "3PW9OPU9PQKN9JYJ47FQXKKFFH721X",
+    "WorkerId": "A1GZAHNN3T1AOJ",
+    "HITId": "302OLP89DZ7TE55R7HSNVERG7C2CAU",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-23T00:10:58Z",
+    "AcceptTime": "2018-01-22T23:59:14Z",
+    "SubmitTime": "2018-01-23T00:05:58Z",
+    "ApprovalTime": "2018-01-23T00:11:37Z",
+    "Assignment": ""
+}

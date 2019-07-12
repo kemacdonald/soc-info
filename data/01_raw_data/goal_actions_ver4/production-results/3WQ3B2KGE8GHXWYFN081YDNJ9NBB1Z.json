@@ -1,0 +1,93 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "button",
+            "button",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "handle",
+            "handle",
+            "both"
+        ],
+        "manip_check_order": [
+            "ButtonLight",
+            "HandleLight",
+            "BothLightMusic"
+        ],
+        "manip_check_effect_order": [
+            "turn on the light",
+            "play music",
+            "turn on the light AND play music"
+        ],
+        "outcome": "light",
+        "action_response": "handle",
+        "goal_condition": "learning",
+        "social_condition": "no-social",
+        "music_box": [
+            "BothLightMusic.jpeg",
+            "HandleLight.jpeg",
+            "ButtonLight.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "HandleLight",
+            "ButtonLight",
+            "BothLightMusic"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "BothLightMusic",
+            "HandleLight",
+            "ButtonLight"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 600,
+        "browser_width": 1411,
+        "screen_width": 1920,
+        "screen_height": 1080,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "93",
+            "92",
+            "25"
+        ],
+        "posterior_beliefs": [
+            "1",
+            "100",
+            "1"
+        ],
+        "about": "Not entirely sure.",
+        "why_action": "Pulling the lever or pushing the button would give me one state of the box to base inferences on.",
+        "comment": "Nope!",
+        "age": "30",
+        "gender": "m",
+        "language": "English",
+        "exp_start_time": "2018-01-22T21:37:52.483Z",
+        "exp_end_time": "2018-01-22T21:40:05.314Z",
+        "action_trial_start_time": "2018-01-22T21:39:07.557Z",
+        "action_trial_end_time": "2018-01-22T21:39:23.024Z",
+        "experiment_completion_time": 132831,
+        "action_trial_time": 15467,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "BothLightMusic",
+            "ButtonLight",
+            "HandleLight"
+        ],
+        "rand_action_labels": [
+            "Pull the handle on its own",
+            "Press the button and pull the handle<br>at the same time",
+            "Press the button on its own"
+        ]
+    },
+    "AssignmentId": "3WQ3B2KGE8GHXWYFN081YDNJ9NBB1Z",
+    "WorkerId": "A2JIRC73O88L0U",
+    "HITId": "302OLP89DZ7TE55R7HSNVERG7C2CAU",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-22T21:45:02Z",
+    "AcceptTime": "2018-01-22T21:37:46Z",
+    "SubmitTime": "2018-01-22T21:40:02Z",
+    "ApprovalTime": "2018-01-22T21:45:37Z",
+    "Assignment": ""
+}

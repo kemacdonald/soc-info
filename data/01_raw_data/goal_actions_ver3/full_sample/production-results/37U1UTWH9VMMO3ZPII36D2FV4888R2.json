@@ -1,0 +1,91 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_order": [
+            "HandleMusic",
+            "ButtonMusic",
+            "BothMusicLight"
+        ],
+        "manip_check_effect_order": [
+            "play music",
+            "turn on the light",
+            "play music AND turn on the light"
+        ],
+        "outcome": "music",
+        "action_response": "button",
+        "goal_condition": "performance",
+        "music_box": [
+            "ButtonMusic.jpeg",
+            "HandleMusic.jpeg",
+            "BothMusicLight.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "HandleMusic",
+            "BothMusicLight",
+            "ButtonMusic"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "ButtonMusic",
+            "BothMusicLight",
+            "HandleMusic"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 888,
+        "browser_width": 980,
+        "screen_width": 1920,
+        "screen_height": 1080,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "72",
+            "38",
+            "62"
+        ],
+        "posterior_beliefs": [
+            "100",
+            "1",
+            "1"
+        ],
+        "about": "figuring out what to pull or push",
+        "why_action": "By pushing one button it would tell me exactly which ones it wasn't",
+        "comment": "nothing",
+        "age": "31",
+        "gender": "m",
+        "language": "english",
+        "exp_start_time": "2018-01-18T21:23:02.925Z",
+        "exp_end_time": "2018-01-18T21:24:31.813Z",
+        "action_trial_start_time": "2018-01-18T21:23:32.709Z",
+        "action_trial_end_time": "2018-01-18T21:23:40.740Z",
+        "experiment_completion_time": 88888,
+        "action_trial_time": 8031,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "HandleMusic",
+            "BothMusicLight",
+            "ButtonMusic"
+        ],
+        "rand_action_labels": [
+            "Pull the handle on its own",
+            "Press the button on its own",
+            "Press the button and pull the handle<br>at the same time"
+        ]
+    },
+    "AssignmentId": "37U1UTWH9VMMO3ZPII36D2FV4888R2",
+    "WorkerId": "A3I1W58P6SIV26",
+    "HITId": "3NFWQRSHVEE1R824KJAYZ6NM2JOFGZ",
+    "AssignmentStatus": "Submitted",
+    "AutoApprovalTime": "2018-01-18T21:29:33Z",
+    "AcceptTime": "2018-01-18T20:31:09Z",
+    "SubmitTime": "2018-01-18T21:24:33Z",
+    "Assignment": ""
+}

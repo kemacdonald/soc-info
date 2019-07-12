@@ -1,0 +1,59 @@
+{
+    "answers": {
+        "action_response": "orange_and_purple",
+        "goal_condition": "learning",
+        "music_box": "music_box_right.jpeg",
+        "hypotheses_slider_order_prior": [
+            "Purple and Orange",
+            "Purple",
+            "Orange"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "Purple and Orange",
+            "Purple",
+            "Orange"
+        ],
+        "actions_buttons_order": [
+            "Purple and Orange",
+            "Orange",
+            "Purple"
+        ],
+        "browser": "Chrome",
+        "browser_height": 949,
+        "browser_width": 1853,
+        "screen_width": 1920,
+        "screen_height": 1080,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "50",
+            "98",
+            "100"
+        ],
+        "posterior_beliefs": [
+            "100",
+            "15",
+            "15"
+        ],
+        "about": "To see how people made decisions when given a scenario",
+        "comment": "none",
+        "age": "23",
+        "gender": "m",
+        "language": "English",
+        "exp_start_time": "2018-01-05T22:25:37.043Z",
+        "exp_end_time": "2018-01-05T22:30:36.897Z",
+        "action_trial_start_time": "2018-01-05T22:27:03.145Z",
+        "action_trial_end_time": "2018-01-05T22:27:16.793Z",
+        "experiment_completion_time": 299854,
+        "action_trial_time": 13648,
+        "hyp_type": "posterior"
+    },
+    "AssignmentId": "3HMIGG0U4L6VL4BBWDV0LY8S7BBY8E",
+    "WorkerId": "A2CTA782EBXUCT",
+    "HITId": "3FCO4VKOZ4DQS1R7W5MYBBPTRCQ7E0",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-05T22:35:38Z",
+    "AcceptTime": "2018-01-05T21:57:46Z",
+    "SubmitTime": "2018-01-05T22:30:38Z",
+    "ApprovalTime": "2018-01-05T22:36:37Z",
+    "Assignment": ""
+}

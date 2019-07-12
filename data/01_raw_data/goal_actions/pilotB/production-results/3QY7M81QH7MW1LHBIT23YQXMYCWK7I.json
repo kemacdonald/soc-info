@@ -1,0 +1,59 @@
+{
+    "answers": {
+        "action_response": "orange_and_purple",
+        "goal_condition": "learning",
+        "music_box": "music_box_left.jpeg",
+        "hypotheses_slider_order_prior": [
+            "Purple",
+            "Orange",
+            "Purple and Orange"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "Purple and Orange",
+            "Purple",
+            "Orange"
+        ],
+        "actions_buttons_order": [
+            "Orange",
+            "Purple",
+            "Purple and Orange"
+        ],
+        "browser": "Chrome",
+        "browser_height": 887,
+        "browser_width": 966,
+        "screen_width": 1920,
+        "screen_height": 1080,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "25",
+            "14",
+            "100"
+        ],
+        "posterior_beliefs": [
+            "100",
+            "1",
+            "1"
+        ],
+        "about": "figuring out how toys work",
+        "comment": "no",
+        "age": "35",
+        "gender": "f",
+        "language": "english",
+        "exp_start_time": "2018-01-05T21:45:38.071Z",
+        "exp_end_time": "2018-01-05T21:46:49.680Z",
+        "action_trial_start_time": "2018-01-05T21:46:03.632Z",
+        "action_trial_end_time": "2018-01-05T21:46:16.125Z",
+        "experiment_completion_time": 71609,
+        "action_trial_time": 12493,
+        "hyp_type": "posterior"
+    },
+    "AssignmentId": "3QY7M81QH7MW1LHBIT23YQXMYCWK7I",
+    "WorkerId": "A2V9WQ4ZG1NUNP",
+    "HITId": "3FCO4VKOZ4DQS1R7W5MYBBPTRCQ7E0",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-05T21:51:51Z",
+    "AcceptTime": "2018-01-05T21:35:41Z",
+    "SubmitTime": "2018-01-05T21:46:51Z",
+    "ApprovalTime": "2018-01-05T21:52:37Z",
+    "Assignment": ""
+}

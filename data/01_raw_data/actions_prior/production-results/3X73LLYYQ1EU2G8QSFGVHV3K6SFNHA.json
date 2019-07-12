@@ -1,0 +1,61 @@
+{
+    "answers": {
+        "manip_check_music_response": [],
+        "manip_check_light_response": [],
+        "manip_check_order": [],
+        "manip_check_effect_order": [
+            "play music",
+            "turn on the light",
+            "play music AND turn on the light"
+        ],
+        "action_response": "both",
+        "goal_condition": "noGoal",
+        "music_box": [
+            "BothMusicLight.jpeg",
+            "HandleMusic.jpeg",
+            "ButtonMusic.jpeg"
+        ],
+        "hypotheses_slider_order_prior": "",
+        "hypotheses_slider_order_posterior": "",
+        "actions_buttons_order": "",
+        "toy_inst_num": 0,
+        "browser": "Firefox",
+        "browser_height": 600,
+        "browser_width": 1299,
+        "screen_width": 1366,
+        "screen_height": 768,
+        "mobile_device": false,
+        "prior_beliefs": [],
+        "posterior_beliefs": [],
+        "about": "interacting with new things",
+        "why_action": "I wanted to get the most out of the toy and they seemed like they work together.",
+        "age": "30",
+        "gender": "f",
+        "language": "English",
+        "exp_start_time": "",
+        "exp_end_time": "2018-01-17T00:17:18.678Z",
+        "action_trial_start_time": "2018-01-17T00:13:31.447Z",
+        "action_trial_end_time": "2018-01-17T00:14:10.619Z",
+        "experiment_completion_time": "",
+        "action_trial_time": "",
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "HandleMusic",
+            "BothMusicLight",
+            "ButtonMusic"
+        ],
+        "rand_action_labels": [
+            "Press the button on its own",
+            "Press the button and pull the handle<br>at the same time",
+            "Pull the handle on its own"
+        ]
+    },
+    "AssignmentId": "3X73LLYYQ1EU2G8QSFGVHV3K6SFNHA",
+    "WorkerId": "A3A5A9IS2UQD6T",
+    "HITId": "36818Z1KV3D51598EOHM2BNM1XTA3U",
+    "AssignmentStatus": "Submitted",
+    "AutoApprovalTime": "2018-01-17T00:22:18Z",
+    "AcceptTime": "2018-01-17T00:11:13Z",
+    "SubmitTime": "2018-01-17T00:17:18Z",
+    "Assignment": ""
+}

@@ -1,0 +1,90 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_order": [
+            "HandleMusic",
+            "ButtonMusic",
+            "BothMusicLight"
+        ],
+        "manip_check_effect_order": [
+            "play music",
+            "turn on the light",
+            "play music AND turn on the light"
+        ],
+        "outcome": "music",
+        "action_response": "both",
+        "goal_condition": "presentation",
+        "music_box": [
+            "HandleMusic.jpeg",
+            "BothMusicLight.jpeg",
+            "ButtonMusic.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "HandleMusic",
+            "BothMusicLight",
+            "ButtonMusic"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "BothMusicLight",
+            "HandleMusic",
+            "ButtonMusic"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 826,
+        "browser_width": 1390,
+        "screen_width": 1440,
+        "screen_height": 900,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "94",
+            "17",
+            "91"
+        ],
+        "posterior_beliefs": [
+            "83",
+            "97",
+            "97"
+        ],
+        "about": "I think this task examines perceptions of logic statements using the example of a toy.",
+        "comment": "instructions were clear.",
+        "age": "32",
+        "gender": "m",
+        "language": "english",
+        "exp_start_time": "2018-01-16T05:24:14.282Z",
+        "exp_end_time": "2018-01-16T05:28:08.059Z",
+        "action_trial_start_time": "2018-01-16T05:26:16.434Z",
+        "action_trial_end_time": "2018-01-16T05:26:40.707Z",
+        "experiment_completion_time": 233777,
+        "action_trial_time": 24273,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "HandleMusic",
+            "BothMusicLight",
+            "ButtonMusic"
+        ],
+        "rand_action_labels": [
+            "Press the button on its own",
+            "Press the button and pull the handle<br>at the same time",
+            "Pull the handle on its own"
+        ]
+    },
+    "AssignmentId": "3TE3O857308B2OX021U53B2SI5KR2G",
+    "WorkerId": "A3NMU6AVMQ0QDB",
+    "HITId": "35XW21VSVGEQH5LR1U7DJXB9NPJSLE",
+    "AssignmentStatus": "Submitted",
+    "AutoApprovalTime": "2018-01-16T05:33:09Z",
+    "AcceptTime": "2018-01-16T05:20:30Z",
+    "SubmitTime": "2018-01-16T05:28:09Z",
+    "Assignment": ""
+}

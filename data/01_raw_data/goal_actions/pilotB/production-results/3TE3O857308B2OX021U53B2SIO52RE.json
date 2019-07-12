@@ -1,0 +1,59 @@
+{
+    "answers": {
+        "action_response": "orange",
+        "goal_condition": "learning",
+        "music_box": "music_box_right.jpeg",
+        "hypotheses_slider_order_prior": [
+            "Purple and Orange",
+            "Orange",
+            "Purple"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "Orange",
+            "Purple",
+            "Purple and Orange"
+        ],
+        "actions_buttons_order": [
+            "Purple",
+            "Purple and Orange",
+            "Orange"
+        ],
+        "browser": "Chrome",
+        "browser_height": 637,
+        "browser_width": 1299,
+        "screen_width": 1366,
+        "screen_height": 768,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "21",
+            "71",
+            "69"
+        ],
+        "posterior_beliefs": [
+            "100",
+            "23",
+            "32"
+        ],
+        "about": "Learning about which choice makes something work.",
+        "comment": "It all worked fine for me.",
+        "age": "20",
+        "gender": "m",
+        "language": "English",
+        "exp_start_time": "2018-01-05T21:51:29.911Z",
+        "exp_end_time": "2018-01-05T21:53:50.892Z",
+        "action_trial_start_time": "2018-01-05T21:51:59.654Z",
+        "action_trial_end_time": "2018-01-05T21:52:11.378Z",
+        "experiment_completion_time": 140981,
+        "action_trial_time": 11724,
+        "hyp_type": "posterior"
+    },
+    "AssignmentId": "3TE3O857308B2OX021U53B2SIO52RE",
+    "WorkerId": "AD72VY8GLM8E2",
+    "HITId": "3FCO4VKOZ4DQS1R7W5MYBBPTRCQ7E0",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-05T21:58:54Z",
+    "AcceptTime": "2018-01-05T21:50:43Z",
+    "SubmitTime": "2018-01-05T21:53:54Z",
+    "ApprovalTime": "2018-01-05T21:59:37Z",
+    "Assignment": ""
+}

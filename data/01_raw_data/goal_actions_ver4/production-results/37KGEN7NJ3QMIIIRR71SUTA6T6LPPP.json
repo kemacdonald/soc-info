@@ -1,0 +1,93 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "button",
+            "handle",
+            "handle"
+        ],
+        "manip_check_light_response": [
+            "handle",
+            "button",
+            "button"
+        ],
+        "manip_check_order": [
+            "ButtonLight",
+            "HandleLight",
+            "BothLightMusic"
+        ],
+        "manip_check_effect_order": [
+            "turn on the light",
+            "play music",
+            "turn on the light AND play music"
+        ],
+        "outcome": "light",
+        "action_response": "button",
+        "goal_condition": "noGoal",
+        "social_condition": "social",
+        "music_box": [
+            "ButtonLight.jpeg",
+            "BothLightMusic.jpeg",
+            "HandleLight.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "HandleLight",
+            "ButtonLight",
+            "BothLightMusic"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "HandleLight",
+            "ButtonLight",
+            "BothLightMusic"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 987,
+        "browser_width": 1853,
+        "screen_width": 1920,
+        "screen_height": 1080,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "59",
+            "42",
+            "1"
+        ],
+        "posterior_beliefs": [
+            "59",
+            "58",
+            "58"
+        ],
+        "about": "associating labels",
+        "why_action": "If you press one thing you can find out what it is based on what happens.",
+        "comment": "",
+        "age": "21",
+        "gender": "m",
+        "language": "english",
+        "exp_start_time": "2018-01-22T18:52:55.511Z",
+        "exp_end_time": "2018-01-22T18:56:07.660Z",
+        "action_trial_start_time": "2018-01-22T18:54:31.829Z",
+        "action_trial_end_time": "2018-01-22T18:55:27.328Z",
+        "experiment_completion_time": 192149,
+        "action_trial_time": 55499,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "ButtonLight",
+            "BothLightMusic",
+            "HandleLight"
+        ],
+        "rand_action_labels": [
+            "Pull the handle on its own",
+            "Press the button on its own",
+            "Press the button and pull the handle<br>at the same time"
+        ]
+    },
+    "AssignmentId": "37KGEN7NJ3QMIIIRR71SUTA6T6LPPP",
+    "WorkerId": "A12E4Z8DBFUL29",
+    "HITId": "302OLP89DZ7TE55R7HSNVERG7C2CAU",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-22T19:01:11Z",
+    "AcceptTime": "2018-01-22T18:43:08Z",
+    "SubmitTime": "2018-01-22T18:56:11Z",
+    "ApprovalTime": "2018-01-22T19:01:37Z",
+    "Assignment": ""
+}

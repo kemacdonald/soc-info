@@ -1,0 +1,59 @@
+{
+    "answers": {
+        "action_response": "orange_and_purple",
+        "goal_condition": "learning",
+        "music_box": "music_box_left.jpeg",
+        "hypotheses_slider_order_prior": [
+            "Purple",
+            "Purple and Orange",
+            "Orange"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "Purple and Orange",
+            "Orange",
+            "Purple"
+        ],
+        "actions_buttons_order": [
+            "Purple",
+            "Purple and Orange",
+            "Orange"
+        ],
+        "browser": "Chrome",
+        "browser_height": 974,
+        "browser_width": 1853,
+        "screen_width": 1920,
+        "screen_height": 1080,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "36",
+            "88",
+            "37"
+        ],
+        "posterior_beliefs": [
+            "100",
+            "20",
+            "20"
+        ],
+        "about": "Trying to see how quickly children can learn to play the music.",
+        "comment": "No",
+        "age": "39",
+        "gender": "f",
+        "language": "English",
+        "exp_start_time": "2018-01-05T21:56:40.453Z",
+        "exp_end_time": "2018-01-05T21:59:04.816Z",
+        "action_trial_start_time": "2018-01-05T21:57:46.913Z",
+        "action_trial_end_time": "2018-01-05T21:57:54.565Z",
+        "experiment_completion_time": 144363,
+        "action_trial_time": 7652,
+        "hyp_type": "posterior"
+    },
+    "AssignmentId": "3I2PTA7R3TU673MQESB9YHEH32OQKM",
+    "WorkerId": "A32QWM7BWCSPTS",
+    "HITId": "3FCO4VKOZ4DQS1R7W5MYBBPTRCQ7E0",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-05T22:04:04Z",
+    "AcceptTime": "2018-01-05T21:50:40Z",
+    "SubmitTime": "2018-01-05T21:59:04Z",
+    "ApprovalTime": "2018-01-05T22:04:37Z",
+    "Assignment": ""
+}

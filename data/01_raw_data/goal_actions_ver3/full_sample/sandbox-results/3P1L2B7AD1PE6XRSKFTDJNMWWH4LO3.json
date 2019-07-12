@@ -1,0 +1,91 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_order": [
+            "ButtonMusic",
+            "HandleMusic",
+            "BothMusicLight"
+        ],
+        "manip_check_effect_order": [
+            "play music",
+            "turn on the light",
+            "play music AND turn on the light"
+        ],
+        "outcome": "music",
+        "action_response": "button",
+        "goal_condition": "learning",
+        "music_box": [
+            "BothMusicLight.jpeg",
+            "ButtonMusic.jpeg",
+            "HandleMusic.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "ButtonMusic",
+            "BothMusicLight",
+            "HandleMusic"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "BothMusicLight",
+            "HandleMusic",
+            "ButtonMusic"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 600,
+        "browser_width": 1205,
+        "screen_width": 1280,
+        "screen_height": 800,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "38",
+            "37",
+            "38"
+        ],
+        "posterior_beliefs": [
+            "22",
+            "22",
+            "93"
+        ],
+        "about": "learning",
+        "why_action": "wanted to figure out if it was a button music toy",
+        "comment": "nope",
+        "age": "29",
+        "gender": "m",
+        "language": "english",
+        "exp_start_time": "2018-01-18T20:17:00.610Z",
+        "exp_end_time": "2018-01-18T20:18:36.345Z",
+        "action_trial_start_time": "2018-01-18T20:17:43.694Z",
+        "action_trial_end_time": "2018-01-18T20:18:04.491Z",
+        "experiment_completion_time": 95735,
+        "action_trial_time": 20797,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "BothMusicLight",
+            "ButtonMusic",
+            "HandleMusic"
+        ],
+        "rand_action_labels": [
+            "Press the button and pull the handle<br>at the same time",
+            "Press the button on its own",
+            "Pull the handle on its own"
+        ]
+    },
+    "AssignmentId": "3P1L2B7AD1PE6XRSKFTDJNMWWH4LO3",
+    "WorkerId": "A1XUBU5CS5SFRV",
+    "HITId": "32TMVRKDGNYC0DZXH40YC0Z5KSA48N",
+    "AssignmentStatus": "Submitted",
+    "AutoApprovalTime": "2018-01-18T20:23:37Z",
+    "AcceptTime": "2018-01-18T20:16:56Z",
+    "SubmitTime": "2018-01-18T20:18:37Z",
+    "Assignment": ""
+}

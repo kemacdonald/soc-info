@@ -1,0 +1,93 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "button",
+            "button",
+            "handle"
+        ],
+        "manip_check_light_response": [
+            "handle",
+            "handle",
+            "button"
+        ],
+        "manip_check_order": [
+            "HandleMusic",
+            "ButtonMusic",
+            "BothMusicLight"
+        ],
+        "manip_check_effect_order": [
+            "play music",
+            "turn on the light",
+            "play music AND turn on the light"
+        ],
+        "outcome": "music",
+        "action_response": "both",
+        "goal_condition": "learning",
+        "social_condition": "no-social",
+        "music_box": [
+            "HandleMusic.jpeg",
+            "BothMusicLight.jpeg",
+            "ButtonMusic.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "HandleMusic",
+            "BothMusicLight",
+            "ButtonMusic"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "BothMusicLight",
+            "ButtonMusic",
+            "HandleMusic"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 600,
+        "browser_width": 1043,
+        "screen_width": 1366,
+        "screen_height": 768,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "10",
+            "13",
+            "1"
+        ],
+        "posterior_beliefs": [
+            "8",
+            "4",
+            "1"
+        ],
+        "about": "something psychological",
+        "why_action": "i like the tactile experience of using both hands",
+        "comment": "best to you",
+        "age": "51",
+        "gender": "f",
+        "language": "english",
+        "exp_start_time": "2018-01-23T01:01:58.944Z",
+        "exp_end_time": "2018-01-23T01:09:04.508Z",
+        "action_trial_start_time": "2018-01-23T01:06:00.036Z",
+        "action_trial_end_time": "2018-01-23T01:06:31.985Z",
+        "experiment_completion_time": 425564,
+        "action_trial_time": 31949,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "HandleMusic",
+            "BothMusicLight",
+            "ButtonMusic"
+        ],
+        "rand_action_labels": [
+            "Press the button and pull the handle<br>at the same time",
+            "Press the button on its own",
+            "Pull the handle on its own"
+        ]
+    },
+    "AssignmentId": "30X31N5D63QC86SHU5NPZ3QMH5KSAM",
+    "WorkerId": "A2MTG9A2XFYFN3",
+    "HITId": "302OLP89DZ7TE55R7HSNVERG7C2CAU",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-23T01:14:05Z",
+    "AcceptTime": "2018-01-23T01:01:41Z",
+    "SubmitTime": "2018-01-23T01:09:05Z",
+    "ApprovalTime": "2018-01-23T01:14:37Z",
+    "Assignment": ""
+}

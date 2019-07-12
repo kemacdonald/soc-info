@@ -1,0 +1,59 @@
+{
+    "answers": {
+        "action_response": "orange_and_purple",
+        "goal_condition": "learning",
+        "music_box": "music_box_right.jpeg",
+        "hypotheses_slider_order_prior": [
+            "Orange",
+            "Purple",
+            "Purple and Orange"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "Purple and Orange",
+            "Purple",
+            "Orange"
+        ],
+        "actions_buttons_order": [
+            "Purple and Orange",
+            "Purple",
+            "Orange"
+        ],
+        "browser": "Chrome",
+        "browser_height": 637,
+        "browser_width": 1299,
+        "screen_width": 1366,
+        "screen_height": 768,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "30",
+            "31",
+            "86"
+        ],
+        "posterior_beliefs": [
+            "93",
+            "14",
+            "15"
+        ],
+        "about": "To see if respondents felt two actions were needed in place of one",
+        "comment": "Very straightforward - thank you",
+        "age": "42",
+        "gender": "m",
+        "language": "English",
+        "exp_start_time": "2018-01-03T20:53:37.389Z",
+        "exp_end_time": "2018-01-03T20:55:32.866Z",
+        "action_trial_start_time": "2018-01-03T20:54:30.162Z",
+        "action_trial_end_time": "2018-01-03T20:54:40.539Z",
+        "experiment_completion_time": 115477,
+        "action_trial_time": 10377,
+        "hyp_type": "posterior"
+    },
+    "AssignmentId": "3KXIR214I4G41IV2RPYSVIRIQ9D42N",
+    "WorkerId": "A24F1UPER626KR",
+    "HITId": "3JUDR1D0D6R833K6ZK0391XZZYJQ24",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-03T21:00:37Z",
+    "AcceptTime": "2018-01-03T20:07:14Z",
+    "SubmitTime": "2018-01-03T20:55:37Z",
+    "ApprovalTime": "2018-01-03T21:01:37Z",
+    "Assignment": ""
+}

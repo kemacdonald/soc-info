@@ -1,0 +1,59 @@
+{
+    "answers": {
+        "action_response": "orange",
+        "goal_condition": "performance",
+        "music_box": "music_box_left.jpeg",
+        "hypotheses_slider_order_prior": [
+            "Purple",
+            "Purple and Orange",
+            "Orange"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "Purple and Orange",
+            "Orange",
+            "Purple"
+        ],
+        "actions_buttons_order": [
+            "Orange",
+            "Purple",
+            "Purple and Orange"
+        ],
+        "browser": "Chrome",
+        "browser_height": 702,
+        "browser_width": 1297,
+        "screen_width": 1366,
+        "screen_height": 768,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "28",
+            "91",
+            "92"
+        ],
+        "posterior_beliefs": [
+            "1",
+            "100",
+            "5"
+        ],
+        "about": "no idea",
+        "comment": "no",
+        "age": "56",
+        "gender": "m",
+        "language": "english",
+        "exp_start_time": "2018-01-05T22:04:33.517Z",
+        "exp_end_time": "2018-01-05T22:05:58.586Z",
+        "action_trial_start_time": "2018-01-05T22:05:15.194Z",
+        "action_trial_end_time": "2018-01-05T22:05:26.163Z",
+        "experiment_completion_time": 85069,
+        "action_trial_time": 10969,
+        "hyp_type": "posterior"
+    },
+    "AssignmentId": "3VP0C6EFSGW8N939KVAR7PPUS696MC",
+    "WorkerId": "A3OB6REG5CGHK1",
+    "HITId": "3FCO4VKOZ4DQS1R7W5MYBBPTRCQ7E0",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-05T22:11:01Z",
+    "AcceptTime": "2018-01-05T22:04:11Z",
+    "SubmitTime": "2018-01-05T22:06:01Z",
+    "ApprovalTime": "2018-01-05T22:11:37Z",
+    "Assignment": ""
+}

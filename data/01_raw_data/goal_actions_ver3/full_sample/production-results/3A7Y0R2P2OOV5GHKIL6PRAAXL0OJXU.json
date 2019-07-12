@@ -1,0 +1,91 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "button",
+            "button",
+            "handle"
+        ],
+        "manip_check_light_response": [
+            "handle",
+            "handle",
+            "handle"
+        ],
+        "manip_check_order": [
+            "ButtonMusic",
+            "HandleMusic",
+            "BothMusicLight"
+        ],
+        "manip_check_effect_order": [
+            "play music",
+            "turn on the light",
+            "play music AND turn on the light"
+        ],
+        "outcome": "music",
+        "action_response": "button",
+        "goal_condition": "learning",
+        "music_box": [
+            "ButtonMusic.jpeg",
+            "HandleMusic.jpeg",
+            "BothMusicLight.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "HandleMusic",
+            "BothMusicLight",
+            "ButtonMusic"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "HandleMusic",
+            "BothMusicLight",
+            "ButtonMusic"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 949,
+        "browser_width": 1853,
+        "screen_width": 1920,
+        "screen_height": 1080,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "50",
+            "72",
+            "100"
+        ],
+        "posterior_beliefs": [
+            "19",
+            "50",
+            "100"
+        ],
+        "about": "Figuring out if a lever is more common for a light over a button. Basically avoiding confusion while making a toy.",
+        "why_action": "Almost all speakers require a button to turned on",
+        "comment": "Make an actual diagram of a toy. It looked liked a cave man bop it prototype",
+        "age": "23",
+        "gender": "male",
+        "language": "English",
+        "exp_start_time": "2018-01-18T20:58:52.941Z",
+        "exp_end_time": "2018-01-18T21:11:27.667Z",
+        "action_trial_start_time": "2018-01-18T21:02:37.299Z",
+        "action_trial_end_time": "2018-01-18T21:03:54.828Z",
+        "experiment_completion_time": 754726,
+        "action_trial_time": 77529,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "BothMusicLight",
+            "ButtonMusic",
+            "HandleMusic"
+        ],
+        "rand_action_labels": [
+            "Press the button and pull the handle<br>at the same time",
+            "Pull the handle on its own",
+            "Press the button on its own"
+        ]
+    },
+    "AssignmentId": "3A7Y0R2P2OOV5GHKIL6PRAAXL0OJXU",
+    "WorkerId": "A22730SIGH56JU",
+    "HITId": "3NFWQRSHVEE1R824KJAYZ6NM2JOFGZ",
+    "AssignmentStatus": "Submitted",
+    "AutoApprovalTime": "2018-01-18T21:16:29Z",
+    "AcceptTime": "2018-01-18T20:56:52Z",
+    "SubmitTime": "2018-01-18T21:11:29Z",
+    "Assignment": ""
+}

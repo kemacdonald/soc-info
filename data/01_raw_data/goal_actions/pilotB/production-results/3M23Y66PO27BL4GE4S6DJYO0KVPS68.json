@@ -1,0 +1,59 @@
+{
+    "answers": {
+        "action_response": "orange_and_purple",
+        "goal_condition": "performance",
+        "music_box": "music_box_right.jpeg",
+        "hypotheses_slider_order_prior": [
+            "Orange",
+            "Purple and Orange",
+            "Purple"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "Purple and Orange",
+            "Orange",
+            "Purple"
+        ],
+        "actions_buttons_order": [
+            "Orange",
+            "Purple and Orange",
+            "Purple"
+        ],
+        "browser": "Chrome",
+        "browser_height": 780,
+        "browser_width": 730,
+        "screen_width": 1440,
+        "screen_height": 900,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "50",
+            "67",
+            "50"
+        ],
+        "posterior_beliefs": [
+            "88",
+            "30",
+            "28"
+        ],
+        "about": "Determining how something works",
+        "comment": "No",
+        "age": "24",
+        "gender": "F",
+        "language": "English",
+        "exp_start_time": "2018-01-05T22:02:27.358Z",
+        "exp_end_time": "2018-01-05T22:04:48.070Z",
+        "action_trial_start_time": "2018-01-05T22:03:45.890Z",
+        "action_trial_end_time": "2018-01-05T22:03:50.519Z",
+        "experiment_completion_time": 140712,
+        "action_trial_time": 4629,
+        "hyp_type": "posterior"
+    },
+    "AssignmentId": "3M23Y66PO27BL4GE4S6DJYO0KVPS68",
+    "WorkerId": "APGX2WZ59OWDN",
+    "HITId": "3FCO4VKOZ4DQS1R7W5MYBBPTRCQ7E0",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-05T22:09:50Z",
+    "AcceptTime": "2018-01-05T21:35:40Z",
+    "SubmitTime": "2018-01-05T22:04:50Z",
+    "ApprovalTime": "2018-01-05T22:10:37Z",
+    "Assignment": ""
+}

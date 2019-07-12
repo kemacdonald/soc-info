@@ -1,0 +1,93 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_order": [
+            "ButtonLight",
+            "HandleLight",
+            "BothLightMusic"
+        ],
+        "manip_check_effect_order": [
+            "turn on the light",
+            "play music",
+            "turn on the light AND play music"
+        ],
+        "outcome": "light",
+        "action_response": "both",
+        "goal_condition": "noGoal",
+        "social_condition": "no-social",
+        "music_box": [
+            "HandleLight.jpeg",
+            "BothLightMusic.jpeg",
+            "ButtonLight.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "HandleLight",
+            "BothLightMusic",
+            "ButtonLight"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "ButtonLight",
+            "BothLightMusic",
+            "HandleLight"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Firefox",
+        "browser_height": 600,
+        "browser_width": 1870,
+        "screen_width": 1920,
+        "screen_height": 1080,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "62",
+            "58",
+            "55"
+        ],
+        "posterior_beliefs": [
+            "63",
+            "56",
+            "56"
+        ],
+        "about": "psychology",
+        "why_action": "Pressing mutiple buttons sometimes does mutiple things",
+        "comment": "",
+        "age": "21",
+        "gender": "m",
+        "language": "english",
+        "exp_start_time": "2018-01-22T20:32:35.087Z",
+        "exp_end_time": "2018-01-22T20:36:08.187Z",
+        "action_trial_start_time": "2018-01-22T20:34:26.157Z",
+        "action_trial_end_time": "2018-01-22T20:34:58.195Z",
+        "experiment_completion_time": 213100,
+        "action_trial_time": 32038,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "BothLightMusic",
+            "ButtonLight",
+            "HandleLight"
+        ],
+        "rand_action_labels": [
+            "Pull the handle on its own",
+            "Press the button on its own",
+            "Press the button and pull the handle<br>at the same time"
+        ]
+    },
+    "AssignmentId": "37WLF8U1WPQDXL36ZJXBSCXQ4RX6K7",
+    "WorkerId": "A8BKY741WZZSN",
+    "HITId": "302OLP89DZ7TE55R7HSNVERG7C2CAU",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-22T20:41:13Z",
+    "AcceptTime": "2018-01-22T20:32:27Z",
+    "SubmitTime": "2018-01-22T20:36:13Z",
+    "ApprovalTime": "2018-01-22T20:41:37Z",
+    "Assignment": ""
+}

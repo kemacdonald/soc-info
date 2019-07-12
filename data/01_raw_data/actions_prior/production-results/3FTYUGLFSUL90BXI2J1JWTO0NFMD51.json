@@ -1,0 +1,62 @@
+{
+    "answers": {
+        "manip_check_music_response": [],
+        "manip_check_light_response": [],
+        "manip_check_order": [],
+        "manip_check_effect_order": [
+            "play music",
+            "turn on the light",
+            "play music AND turn on the light"
+        ],
+        "action_response": "button",
+        "goal_condition": "noGoal",
+        "music_box": [
+            "ButtonMusic.jpeg",
+            "BothMusicLight.jpeg",
+            "HandleMusic.jpeg"
+        ],
+        "hypotheses_slider_order_prior": "",
+        "hypotheses_slider_order_posterior": "",
+        "actions_buttons_order": "",
+        "toy_inst_num": 0,
+        "browser": "Chrome",
+        "browser_height": 974,
+        "browser_width": 1853,
+        "screen_width": 1920,
+        "screen_height": 1080,
+        "mobile_device": false,
+        "prior_beliefs": [],
+        "posterior_beliefs": [],
+        "about": "Decision making in spontaneous one time events. ",
+        "why_action": "I felt pressing the button or pulling the lever was most likely to cause the object to do something. I felt that the button was a quick way to test the device.",
+        "age": "22",
+        "gender": "f",
+        "language": "English",
+        "exp_start_time": "",
+        "exp_end_time": "2018-01-17T00:13:17.525Z",
+        "action_trial_start_time": "2018-01-17T00:11:04.893Z",
+        "action_trial_end_time": "2018-01-17T00:11:32.189Z",
+        "experiment_completion_time": "",
+        "action_trial_time": "",
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "ButtonMusic",
+            "BothMusicLight",
+            "HandleMusic"
+        ],
+        "rand_action_labels": [
+            "Pull the handle on its own",
+            "Press the button and pull the handle<br>at the same time",
+            "Press the button on its own"
+        ]
+    },
+    "AssignmentId": "3FTYUGLFSUL90BXI2J1JWTO0NFMD51",
+    "WorkerId": "A1BT7OV8BFVJJQ",
+    "HITId": "36818Z1KV3D51598EOHM2BNM1XTA3U",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-17T00:18:18Z",
+    "AcceptTime": "2018-01-17T00:10:29Z",
+    "SubmitTime": "2018-01-17T00:13:18Z",
+    "ApprovalTime": "2018-01-17T00:18:37Z",
+    "Assignment": ""
+}

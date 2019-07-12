@@ -1,0 +1,93 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "button",
+            "button",
+            "handle"
+        ],
+        "manip_check_light_response": [
+            "button",
+            "handle",
+            "button"
+        ],
+        "manip_check_order": [
+            "HandleMusic",
+            "ButtonMusic",
+            "BothMusicLight"
+        ],
+        "manip_check_effect_order": [
+            "play music",
+            "turn on the light",
+            "play music AND turn on the light"
+        ],
+        "outcome": "music",
+        "action_response": "handle",
+        "goal_condition": "noGoal",
+        "social_condition": "no-social",
+        "music_box": [
+            "ButtonMusic.jpeg",
+            "HandleMusic.jpeg",
+            "BothMusicLight.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "HandleMusic",
+            "BothMusicLight",
+            "ButtonMusic"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "BothMusicLight",
+            "HandleMusic",
+            "ButtonMusic"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 871,
+        "browser_width": 1197,
+        "screen_width": 1280,
+        "screen_height": 1024,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "1",
+            "66",
+            "11"
+        ],
+        "posterior_beliefs": [
+            "84",
+            "1",
+            "71"
+        ],
+        "about": "understanding reasons behind actions",
+        "why_action": "Based on the labels",
+        "comment": "none",
+        "age": "27",
+        "gender": "Male",
+        "language": "Cantonese",
+        "exp_start_time": "2018-01-22T19:32:04.044Z",
+        "exp_end_time": "2018-01-22T19:46:54.067Z",
+        "action_trial_start_time": "2018-01-22T19:33:27.067Z",
+        "action_trial_end_time": "2018-01-22T19:45:51.378Z",
+        "experiment_completion_time": 890023,
+        "action_trial_time": 744311,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "HandleMusic",
+            "ButtonMusic",
+            "BothMusicLight"
+        ],
+        "rand_action_labels": [
+            "Pull the handle on its own",
+            "Press the button and pull the handle<br>at the same time",
+            "Press the button on its own"
+        ]
+    },
+    "AssignmentId": "38YMOXR4MUZ4SLXNOXGEGNRLRYYW6L",
+    "WorkerId": "A2E5PZUD6W4OA1",
+    "HITId": "302OLP89DZ7TE55R7HSNVERG7C2CAU",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-22T19:51:55Z",
+    "AcceptTime": "2018-01-22T18:54:01Z",
+    "SubmitTime": "2018-01-22T19:46:55Z",
+    "ApprovalTime": "2018-01-22T19:52:37Z",
+    "Assignment": ""
+}

@@ -1,0 +1,59 @@
+{
+    "answers": {
+        "action_response": "purple",
+        "goal_condition": "performance",
+        "music_box": "music_box_right.jpeg",
+        "hypotheses_slider_order_prior": [
+            "Orange",
+            "Purple",
+            "Purple and Orange"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "Purple",
+            "Orange",
+            "Purple and Orange"
+        ],
+        "actions_buttons_order": [
+            "Orange",
+            "Purple",
+            "Purple and Orange"
+        ],
+        "browser": "Chrome",
+        "browser_height": 600,
+        "browser_width": 1099,
+        "screen_width": 1920,
+        "screen_height": 1080,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "1",
+            "100",
+            "1"
+        ],
+        "posterior_beliefs": [
+            "100",
+            "1",
+            "1"
+        ],
+        "about": "It was about perceptions.",
+        "comment": "No",
+        "age": "25",
+        "gender": "m",
+        "language": "English",
+        "exp_start_time": "2018-01-05T23:11:08.642Z",
+        "exp_end_time": "2018-01-05T23:11:54.030Z",
+        "action_trial_start_time": "2018-01-05T23:11:22.719Z",
+        "action_trial_end_time": "2018-01-05T23:11:28.351Z",
+        "experiment_completion_time": 45388,
+        "action_trial_time": 5632,
+        "hyp_type": "posterior"
+    },
+    "AssignmentId": "3RXPCZQMQPBDOD6Q3M0FZOEGO9HG1G",
+    "WorkerId": "A4J4GGMKJ68L0",
+    "HITId": "3FCO4VKOZ4DQS1R7W5MYBBPTRCQ7E0",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-05T23:16:56Z",
+    "AcceptTime": "2018-01-05T22:36:40Z",
+    "SubmitTime": "2018-01-05T23:11:56Z",
+    "ApprovalTime": "2018-01-05T23:17:37Z",
+    "Assignment": ""
+}

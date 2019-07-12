@@ -1,0 +1,93 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_order": [
+            "HandleLight",
+            "ButtonLight",
+            "BothLightMusic"
+        ],
+        "manip_check_effect_order": [
+            "turn on the light",
+            "play music",
+            "turn on the light AND play music"
+        ],
+        "outcome": "light",
+        "action_response": "handle",
+        "goal_condition": "performance",
+        "social_condition": "social",
+        "music_box": [
+            "HandleLight.jpeg",
+            "BothLightMusic.jpeg",
+            "ButtonLight.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "HandleLight",
+            "ButtonLight",
+            "BothLightMusic"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "HandleLight",
+            "BothLightMusic",
+            "ButtonLight"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 606,
+        "browser_width": 792,
+        "screen_width": 1280,
+        "screen_height": 1024,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "23",
+            "23",
+            "81"
+        ],
+        "posterior_beliefs": [
+            "54",
+            "54",
+            "54"
+        ],
+        "about": "Assumptions between shapes and functions?",
+        "why_action": "After care thought, I chose randomly",
+        "comment": "Thank you and be well",
+        "age": "47",
+        "gender": "f",
+        "language": "English",
+        "exp_start_time": "2018-01-23T02:42:23.955Z",
+        "exp_end_time": "2018-01-23T02:48:04.331Z",
+        "action_trial_start_time": "2018-01-23T02:45:25.886Z",
+        "action_trial_end_time": "2018-01-23T02:46:42.972Z",
+        "experiment_completion_time": 340376,
+        "action_trial_time": 77086,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "BothLightMusic",
+            "HandleLight",
+            "ButtonLight"
+        ],
+        "rand_action_labels": [
+            "Press the button and pull the handle<br>at the same time",
+            "Press the button on its own",
+            "Pull the handle on its own"
+        ]
+    },
+    "AssignmentId": "3LRKMWOKB5HK4FJRCIOIPE4RSW0Z2Z",
+    "WorkerId": "A15VRRHQCLJHC8",
+    "HITId": "302OLP89DZ7TE55R7HSNVERG7C2CAU",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-23T02:52:59Z",
+    "AcceptTime": "2018-01-23T02:41:53Z",
+    "SubmitTime": "2018-01-23T02:47:59Z",
+    "ApprovalTime": "2018-01-23T02:53:37Z",
+    "Assignment": ""
+}

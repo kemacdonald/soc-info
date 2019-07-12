@@ -1,0 +1,59 @@
+{
+    "answers": {
+        "action_response": "purple",
+        "goal_condition": "performance",
+        "music_box": "music_box_left.jpeg",
+        "hypotheses_slider_order_prior": [
+            "Orange",
+            "Purple",
+            "Purple and Orange"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "Orange",
+            "Purple",
+            "Purple and Orange"
+        ],
+        "actions_buttons_order": [
+            "Purple and Orange",
+            "Purple",
+            "Orange"
+        ],
+        "browser": "Chrome",
+        "browser_height": 600,
+        "browser_width": 1299,
+        "screen_width": 1366,
+        "screen_height": 768,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "100",
+            "100",
+            "1"
+        ],
+        "posterior_beliefs": [
+            "50",
+            "100",
+            "1"
+        ],
+        "about": "Looking at what and how people assume things",
+        "comment": "no",
+        "age": "24",
+        "gender": "m",
+        "language": "English",
+        "exp_start_time": "2018-01-05T21:36:03.152Z",
+        "exp_end_time": "2018-01-05T21:38:08.058Z",
+        "action_trial_start_time": "2018-01-05T21:37:00.393Z",
+        "action_trial_end_time": "2018-01-05T21:37:09.962Z",
+        "experiment_completion_time": 124906,
+        "action_trial_time": 9569,
+        "hyp_type": "posterior"
+    },
+    "AssignmentId": "308Q0PEVB8D999FGXNFBZ69F1YVI9H",
+    "WorkerId": "A165QRANNVPG0P",
+    "HITId": "3FCO4VKOZ4DQS1R7W5MYBBPTRCQ7E0",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-05T21:43:08Z",
+    "AcceptTime": "2018-01-05T21:35:42Z",
+    "SubmitTime": "2018-01-05T21:38:08Z",
+    "ApprovalTime": "2018-01-05T21:43:37Z",
+    "Assignment": ""
+}

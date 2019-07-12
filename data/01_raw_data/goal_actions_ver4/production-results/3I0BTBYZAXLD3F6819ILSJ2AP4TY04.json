@@ -1,0 +1,93 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_order": [
+            "HandleLight",
+            "ButtonLight",
+            "BothLightMusic"
+        ],
+        "manip_check_effect_order": [
+            "turn on the light",
+            "play music",
+            "turn on the light AND play music"
+        ],
+        "outcome": "light",
+        "action_response": "button",
+        "goal_condition": "learning",
+        "social_condition": "no-social",
+        "music_box": [
+            "HandleLight.jpeg",
+            "ButtonLight.jpeg",
+            "BothLightMusic.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "ButtonLight",
+            "HandleLight",
+            "BothLightMusic"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "HandleLight",
+            "BothLightMusic",
+            "ButtonLight"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 600,
+        "browser_width": 908,
+        "screen_width": 1920,
+        "screen_height": 1080,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "94",
+            "14",
+            "1"
+        ],
+        "posterior_beliefs": [
+            "14",
+            "1",
+            "88"
+        ],
+        "about": "Intuition and function of levers and buttons",
+        "why_action": "I think its more intuitive to press a button to turn on the light.",
+        "comment": "no",
+        "age": "30",
+        "gender": "m",
+        "language": "english",
+        "exp_start_time": "2018-01-22T23:34:39.040Z",
+        "exp_end_time": "2018-01-22T23:38:22.544Z",
+        "action_trial_start_time": "2018-01-22T23:36:27.731Z",
+        "action_trial_end_time": "2018-01-22T23:37:17.726Z",
+        "experiment_completion_time": 223504,
+        "action_trial_time": 49995,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "HandleLight",
+            "ButtonLight",
+            "BothLightMusic"
+        ],
+        "rand_action_labels": [
+            "Press the button on its own",
+            "Pull the handle on its own",
+            "Press the button and pull the handle<br>at the same time"
+        ]
+    },
+    "AssignmentId": "3I0BTBYZAXLD3F6819ILSJ2AP4TY04",
+    "WorkerId": "A1DBQJRBP7P9RX",
+    "HITId": "302OLP89DZ7TE55R7HSNVERG7C2CAU",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-22T23:43:32Z",
+    "AcceptTime": "2018-01-22T23:26:56Z",
+    "SubmitTime": "2018-01-22T23:38:32Z",
+    "ApprovalTime": "2018-01-22T23:43:37Z",
+    "Assignment": ""
+}

@@ -1,10 +1,13 @@
 /// init ///
 function init() {
   exp.action_options = ["left", "right"];
-  exp.condition = _.sample(["learning-social","learning-no_social",
-                            "activation-social", "activation-no_social",
-                            "presentation-social",
-                            "no_goal-social", "no_goal-no_social"]);
+  // exp.condition = _.sample(["learning-social","learning-no_social",
+  //                           "activation-social", "activation-no_social",
+  //                           "presentation-social",
+  //                           "no_goal-social", "no_goal-no_social"]);
+  exp.condition = _.sample(["learning-no_social",
+                            "activation-no_social",
+                            "presentation-social"]);
   exp.goal_condition = extract_goal_condition(exp.condition);
   exp.social_condition = extract_soc_condition(exp.condition);
   exp.img_keys = _.shuffle(["cube-spinner.png", "cyl-lever.png", "tri-button.png"]);

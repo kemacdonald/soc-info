@@ -1,0 +1,61 @@
+{
+    "answers": {
+        "manip_check_music_response": [],
+        "manip_check_light_response": [],
+        "manip_check_order": [],
+        "manip_check_effect_order": [
+            "play music",
+            "turn on the light",
+            "play music AND turn on the light"
+        ],
+        "action_response": "handle",
+        "goal_condition": "noGoal",
+        "music_box": [
+            "BothMusicLight.jpeg",
+            "HandleMusic.jpeg",
+            "ButtonMusic.jpeg"
+        ],
+        "hypotheses_slider_order_prior": "",
+        "hypotheses_slider_order_posterior": "",
+        "actions_buttons_order": "",
+        "toy_inst_num": 0,
+        "browser": "Chrome",
+        "browser_height": 510,
+        "browser_width": 1010,
+        "screen_width": 1093,
+        "screen_height": 615,
+        "mobile_device": false,
+        "prior_beliefs": [],
+        "posterior_beliefs": [],
+        "about": "unclear",
+        "why_action": "it seemed the easiest",
+        "age": "62",
+        "gender": "m",
+        "language": "english",
+        "exp_start_time": "",
+        "exp_end_time": "2018-01-17T00:23:41.125Z",
+        "action_trial_start_time": "2018-01-17T00:22:40.925Z",
+        "action_trial_end_time": "2018-01-17T00:23:06.478Z",
+        "experiment_completion_time": "",
+        "action_trial_time": "",
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "BothMusicLight",
+            "HandleMusic",
+            "ButtonMusic"
+        ],
+        "rand_action_labels": [
+            "Pull the handle on its own",
+            "Press the button and pull the handle<br>at the same time",
+            "Press the button on its own"
+        ]
+    },
+    "AssignmentId": "3D3VGR7TA0F0N6TJ618AML7KOKM3R7",
+    "WorkerId": "A2TDGWWPX6IMIZ",
+    "HITId": "36818Z1KV3D51598EOHM2BNM1XTA3U",
+    "AssignmentStatus": "Submitted",
+    "AutoApprovalTime": "2018-01-17T00:28:40Z",
+    "AcceptTime": "2018-01-17T00:10:14Z",
+    "SubmitTime": "2018-01-17T00:23:40Z",
+    "Assignment": ""
+}

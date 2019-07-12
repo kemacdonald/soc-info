@@ -1,0 +1,92 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "button",
+            "handle",
+            "handle"
+        ],
+        "manip_check_light_response": [
+            "handle",
+            "button",
+            "button"
+        ],
+        "manip_check_order": [
+            "ButtonLight",
+            "HandleLight",
+            "BothLightMusic"
+        ],
+        "manip_check_effect_order": [
+            "turn on the light",
+            "play music",
+            "turn on the light AND play music"
+        ],
+        "outcome": "light",
+        "action_response": "both",
+        "goal_condition": "presentation",
+        "music_box": [
+            "BothLightMusic.jpeg",
+            "ButtonLight.jpeg",
+            "HandleLight.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "BothLightMusic",
+            "HandleLight",
+            "ButtonLight"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "BothLightMusic",
+            "HandleLight",
+            "ButtonLight"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 662,
+        "browser_width": 1299,
+        "screen_width": 1366,
+        "screen_height": 768,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "10",
+            "40",
+            "92"
+        ],
+        "posterior_beliefs": [
+            "92",
+            "23",
+            "79"
+        ],
+        "about": "How people work under pressure.",
+        "why_action": "So I wouldn't have to guess and make a good impression.",
+        "comment": "Great  Study.",
+        "age": "27",
+        "gender": "m",
+        "language": "English",
+        "exp_start_time": "2018-01-18T21:48:12.577Z",
+        "exp_end_time": "2018-01-18T22:12:11.747Z",
+        "action_trial_start_time": "2018-01-18T22:10:14.632Z",
+        "action_trial_end_time": "2018-01-18T22:10:52.622Z",
+        "experiment_completion_time": 1439170,
+        "action_trial_time": 37990,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "ButtonLight",
+            "BothLightMusic",
+            "HandleLight"
+        ],
+        "rand_action_labels": [
+            "Pull the handle on its own",
+            "Press the button on its own",
+            "Press the button and pull the handle<br>at the same time"
+        ]
+    },
+    "AssignmentId": "3A4NIXBJ76ZQ6U6G7ZGTW87RILALMF",
+    "WorkerId": "AG7C4X3WKKBV",
+    "HITId": "3NFWQRSHVEE1R824KJAYZ6NM2JOFGZ",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-18T22:17:13Z",
+    "AcceptTime": "2018-01-18T21:31:20Z",
+    "SubmitTime": "2018-01-18T22:12:13Z",
+    "ApprovalTime": "2018-01-18T22:17:37Z",
+    "Assignment": ""
+}

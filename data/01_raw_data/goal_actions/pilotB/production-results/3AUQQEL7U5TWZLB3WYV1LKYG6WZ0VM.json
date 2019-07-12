@@ -1,0 +1,59 @@
+{
+    "answers": {
+        "action_response": "orange",
+        "goal_condition": "performance",
+        "music_box": "music_box_right.jpeg",
+        "hypotheses_slider_order_prior": [
+            "Orange",
+            "Purple and Orange",
+            "Purple"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "Purple",
+            "Purple and Orange",
+            "Orange"
+        ],
+        "actions_buttons_order": [
+            "Purple and Orange",
+            "Purple",
+            "Orange"
+        ],
+        "browser": "Chrome",
+        "browser_height": 930,
+        "browser_width": 1061,
+        "screen_width": 1680,
+        "screen_height": 1050,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "82",
+            "1",
+            "85"
+        ],
+        "posterior_beliefs": [
+            "1",
+            "1",
+            "100"
+        ],
+        "about": "How we process information and find solution for a problem",
+        "comment": "no",
+        "age": "29",
+        "gender": "mal",
+        "language": "english",
+        "exp_start_time": "2018-01-05T22:08:10.337Z",
+        "exp_end_time": "2018-01-05T22:09:39.621Z",
+        "action_trial_start_time": "2018-01-05T22:08:44.950Z",
+        "action_trial_end_time": "2018-01-05T22:08:57.305Z",
+        "experiment_completion_time": 89284,
+        "action_trial_time": 12355,
+        "hyp_type": "posterior"
+    },
+    "AssignmentId": "3AUQQEL7U5TWZLB3WYV1LKYG6WZ0VM",
+    "WorkerId": "A2ETY1O927Z1IF",
+    "HITId": "3FCO4VKOZ4DQS1R7W5MYBBPTRCQ7E0",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-05T22:14:41Z",
+    "AcceptTime": "2018-01-05T22:04:18Z",
+    "SubmitTime": "2018-01-05T22:09:41Z",
+    "ApprovalTime": "2018-01-05T22:15:37Z",
+    "Assignment": ""
+}

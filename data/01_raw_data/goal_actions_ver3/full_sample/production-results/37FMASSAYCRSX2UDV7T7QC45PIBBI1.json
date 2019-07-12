@@ -1,0 +1,91 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "button",
+            "button",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "handle",
+            "handle",
+            "both"
+        ],
+        "manip_check_order": [
+            "ButtonLight",
+            "HandleLight",
+            "BothLightMusic"
+        ],
+        "manip_check_effect_order": [
+            "turn on the light",
+            "play music",
+            "turn on the light AND play music"
+        ],
+        "outcome": "light",
+        "action_response": "button",
+        "goal_condition": "noGoal",
+        "music_box": [
+            "ButtonLight.jpeg",
+            "HandleLight.jpeg",
+            "BothLightMusic.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "ButtonLight",
+            "BothLightMusic",
+            "HandleLight"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "BothLightMusic",
+            "HandleLight",
+            "ButtonLight"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 600,
+        "browser_width": 1299,
+        "screen_width": 1366,
+        "screen_height": 768,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "31",
+            "79",
+            "30"
+        ],
+        "posterior_beliefs": [
+            "89",
+            "17",
+            "17"
+        ],
+        "about": "unsure",
+        "why_action": "If the light didnt turn on when the button was pushed, it had to be the one that needed both to turn it on.",
+        "comment": "nothing",
+        "age": "24",
+        "gender": "m",
+        "language": "English",
+        "exp_start_time": "2018-01-18T20:51:30.802Z",
+        "exp_end_time": "2018-01-18T20:54:41.807Z",
+        "action_trial_start_time": "2018-01-18T20:53:07.241Z",
+        "action_trial_end_time": "2018-01-18T20:53:34.120Z",
+        "experiment_completion_time": 191005,
+        "action_trial_time": 26879,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "ButtonLight",
+            "HandleLight",
+            "BothLightMusic"
+        ],
+        "rand_action_labels": [
+            "Press the button on its own",
+            "Press the button and pull the handle<br>at the same time",
+            "Pull the handle on its own"
+        ]
+    },
+    "AssignmentId": "37FMASSAYCRSX2UDV7T7QC45PIBBI1",
+    "WorkerId": "A21P1T8EW4NHOU",
+    "HITId": "3NFWQRSHVEE1R824KJAYZ6NM2JOFGZ",
+    "AssignmentStatus": "Submitted",
+    "AutoApprovalTime": "2018-01-18T20:59:42Z",
+    "AcceptTime": "2018-01-18T20:51:27Z",
+    "SubmitTime": "2018-01-18T20:54:42Z",
+    "Assignment": ""
+}

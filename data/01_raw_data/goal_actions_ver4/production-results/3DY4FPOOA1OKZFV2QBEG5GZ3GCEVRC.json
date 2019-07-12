@@ -1,0 +1,92 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_order": [
+            "HandleMusic",
+            "ButtonMusic",
+            "BothMusicLight"
+        ],
+        "manip_check_effect_order": [
+            "play music",
+            "turn on the light",
+            "play music AND turn on the light"
+        ],
+        "outcome": "music",
+        "action_response": "button",
+        "goal_condition": "performance",
+        "social_condition": "social",
+        "music_box": [
+            "ButtonMusic.jpeg",
+            "BothMusicLight.jpeg",
+            "HandleMusic.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "BothMusicLight",
+            "HandleMusic",
+            "ButtonMusic"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "ButtonMusic",
+            "HandleMusic",
+            "BothMusicLight"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 637,
+        "browser_width": 1299,
+        "screen_width": 1366,
+        "screen_height": 768,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "51",
+            "50",
+            "50"
+        ],
+        "posterior_beliefs": [
+            "71",
+            "38",
+            "46"
+        ],
+        "about": "How people relate functions on machines",
+        "why_action": "It just seemed likely.",
+        "comment": "",
+        "age": "35",
+        "gender": "f",
+        "language": "english",
+        "exp_start_time": "2018-01-22T20:23:57.654Z",
+        "exp_end_time": "2018-01-22T20:30:03.035Z",
+        "action_trial_start_time": "2018-01-22T20:26:21.444Z",
+        "action_trial_end_time": "2018-01-22T20:29:00.458Z",
+        "experiment_completion_time": 365381,
+        "action_trial_time": 159014,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "HandleMusic",
+            "ButtonMusic",
+            "BothMusicLight"
+        ],
+        "rand_action_labels": [
+            "Press the button and pull the handle<br>at the same time",
+            "Pull the handle on its own",
+            "Press the button on its own"
+        ]
+    },
+    "AssignmentId": "3DY4FPOOA1OKZFV2QBEG5GZ3GCEVRC",
+    "WorkerId": "AQXRHIMQ7UK7O",
+    "HITId": "302OLP89DZ7TE55R7HSNVERG7C2CAU",
+    "AssignmentStatus": "Submitted",
+    "AutoApprovalTime": "2018-01-22T20:35:05Z",
+    "AcceptTime": "2018-01-22T19:44:31Z",
+    "SubmitTime": "2018-01-22T20:30:05Z",
+    "Assignment": ""
+}

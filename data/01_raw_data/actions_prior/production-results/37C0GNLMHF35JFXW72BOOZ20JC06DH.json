@@ -1,0 +1,62 @@
+{
+    "answers": {
+        "doNotRedirect": true,
+        "manip_check_music_response": [],
+        "manip_check_light_response": [],
+        "manip_check_order": [],
+        "manip_check_effect_order": [
+            "play music",
+            "turn on the light",
+            "play music AND turn on the light"
+        ],
+        "action_response": "button",
+        "goal_condition": "noGoal",
+        "music_box": [
+            "ButtonMusic.jpeg",
+            "HandleMusic.jpeg",
+            "BothMusicLight.jpeg"
+        ],
+        "hypotheses_slider_order_prior": "",
+        "hypotheses_slider_order_posterior": "",
+        "actions_buttons_order": "",
+        "toy_inst_num": 0,
+        "browser": "Firefox",
+        "browser_height": 600,
+        "browser_width": 1464,
+        "screen_width": 1536,
+        "screen_height": 864,
+        "mobile_device": false,
+        "prior_beliefs": [],
+        "posterior_beliefs": [],
+        "about": "I don't really have a clue on this one.",
+        "why_action": "To be honest, I'm not sure.  It was just a kneejerk reaction I think.",
+        "age": "54",
+        "gender": "m",
+        "language": "English",
+        "exp_start_time": "",
+        "exp_end_time": "2018-01-18T23:24:35.689Z",
+        "action_trial_start_time": "2018-01-18T23:23:10.811Z",
+        "action_trial_end_time": "2018-01-18T23:23:37.823Z",
+        "experiment_completion_time": "",
+        "action_trial_time": "",
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "BothMusicLight",
+            "ButtonMusic",
+            "HandleMusic"
+        ],
+        "rand_action_labels": [
+            "Press the button on its own",
+            "Press the button and pull the handle<br>at the same time",
+            "Pull the handle on its own"
+        ]
+    },
+    "AssignmentId": "37C0GNLMHF35JFXW72BOOZ20JC06DH",
+    "WorkerId": "A1OZPLHNIU1519",
+    "HITId": "36818Z1KV3D51598EOHM2BNM1XTA3U",
+    "AssignmentStatus": "Submitted",
+    "AutoApprovalTime": "2018-01-18T23:29:37Z",
+    "AcceptTime": "2018-01-18T23:22:54Z",
+    "SubmitTime": "2018-01-18T23:24:37Z",
+    "Assignment": ""
+}

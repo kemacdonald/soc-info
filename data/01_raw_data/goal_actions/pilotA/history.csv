@@ -1,0 +1,8 @@
+Time,Action,Data
+2018/01/03 10:56:15,Create,"{'title': 'Music Box Game', 'description': 'A simple game about decision making (5 minutes)', 'keywords': 'decision making, toy', 'url': 'https://web.stanford.edu/group/langcog/cgi-bin/KM/soc-info-expts/goal_actions/soc_info_goals.html', 'frame_height': 600, 'assignment_duration': '1 hour', 'auto_approval_delay': '5 minutes', 'reward': 0.65, 'qualifications': {'location': 'US', 'approval_percentage': 85}}"
+2018/01/03 11:15:44,Expire,
+2018/01/03 12:05:30,Create,"{'title': 'Music Box Game', 'description': 'A simple game about decision making (5 minutes)', 'keywords': 'decision making, toy', 'url': 'https://web.stanford.edu/group/langcog/cgi-bin/KM/soc-info-expts/goal_actions/soc_info_goals.html', 'frame_height': 600, 'assignment_duration': '1 hour', 'auto_approval_delay': '5 minutes', 'reward': 0.65, 'qualifications': {'location': 'US', 'approval_percentage': 85}}"
+2018/01/04 10:11:38,Add,1 day
+2018/01/04 10:11:46,Expire,
+2018/01/04 10:11:51,Add,1 day
+2018/01/04 10:13:27,Add,4 assignments

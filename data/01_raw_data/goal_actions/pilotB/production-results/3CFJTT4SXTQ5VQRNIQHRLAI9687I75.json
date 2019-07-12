@@ -1,0 +1,59 @@
+{
+    "answers": {
+        "action_response": "orange",
+        "goal_condition": "learning",
+        "music_box": "music_box_right.jpeg",
+        "hypotheses_slider_order_prior": [
+            "Orange",
+            "Purple and Orange",
+            "Purple"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "Purple and Orange",
+            "Orange",
+            "Purple"
+        ],
+        "actions_buttons_order": [
+            "Purple",
+            "Purple and Orange",
+            "Orange"
+        ],
+        "browser": "Chrome",
+        "browser_height": 600,
+        "browser_width": 1165,
+        "screen_width": 1536,
+        "screen_height": 864,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "83",
+            "15",
+            "66"
+        ],
+        "posterior_beliefs": [
+            "1",
+            "100",
+            "1"
+        ],
+        "about": "HUMAN PERCEPTION",
+        "comment": "NO",
+        "age": "33",
+        "gender": "MALE",
+        "language": "ENGLISH",
+        "exp_start_time": "2018-01-05T22:23:55.539Z",
+        "exp_end_time": "2018-01-05T22:26:28.766Z",
+        "action_trial_start_time": "2018-01-05T22:25:41.449Z",
+        "action_trial_end_time": "2018-01-05T22:25:52.867Z",
+        "experiment_completion_time": 153227,
+        "action_trial_time": 11418,
+        "hyp_type": "posterior"
+    },
+    "AssignmentId": "3CFJTT4SXTQ5VQRNIQHRLAI9687I75",
+    "WorkerId": "APO6KZZ79PO9Q",
+    "HITId": "3FCO4VKOZ4DQS1R7W5MYBBPTRCQ7E0",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-05T22:31:34Z",
+    "AcceptTime": "2018-01-05T21:35:39Z",
+    "SubmitTime": "2018-01-05T22:26:34Z",
+    "ApprovalTime": "2018-01-05T22:31:37Z",
+    "Assignment": ""
+}

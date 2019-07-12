@@ -1,0 +1,92 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_order": [
+            "ButtonLight",
+            "HandleLight",
+            "BothLightMusic"
+        ],
+        "manip_check_effect_order": [
+            "turn on the light",
+            "play music",
+            "turn on the light AND play music"
+        ],
+        "outcome": "light",
+        "action_response": "both",
+        "goal_condition": "performance",
+        "social_condition": "no-social",
+        "music_box": [
+            "BothLightMusic.jpeg",
+            "ButtonLight.jpeg",
+            "HandleLight.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "HandleLight",
+            "BothLightMusic",
+            "ButtonLight"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "BothLightMusic",
+            "ButtonLight",
+            "HandleLight"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Firefox",
+        "browser_height": 695,
+        "browser_width": 1299,
+        "screen_width": 1366,
+        "screen_height": 768,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "50",
+            "50",
+            "48"
+        ],
+        "posterior_beliefs": [
+            "90",
+            "15",
+            "14"
+        ],
+        "about": "To see how a person follows and comprehends instructions",
+        "why_action": "I simply went with my gutt instinct",
+        "comment": "Simple study",
+        "age": "34",
+        "gender": "m",
+        "language": "English",
+        "exp_start_time": "2018-01-22T21:05:06.756Z",
+        "exp_end_time": "2018-01-22T21:09:20.547Z",
+        "action_trial_start_time": "2018-01-22T21:07:31.436Z",
+        "action_trial_end_time": "2018-01-22T21:07:56.899Z",
+        "experiment_completion_time": 253791,
+        "action_trial_time": 25463,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "BothLightMusic",
+            "ButtonLight",
+            "HandleLight"
+        ],
+        "rand_action_labels": [
+            "Press the button on its own",
+            "Pull the handle on its own",
+            "Press the button and pull the handle<br>at the same time"
+        ]
+    },
+    "AssignmentId": "38JBBYETQOAWWY7IK9TTXJ07O4W4E3",
+    "WorkerId": "A3MZE4FJ658B79",
+    "HITId": "302OLP89DZ7TE55R7HSNVERG7C2CAU",
+    "AssignmentStatus": "Submitted",
+    "AutoApprovalTime": "2018-01-22T21:14:20Z",
+    "AcceptTime": "2018-01-22T21:04:40Z",
+    "SubmitTime": "2018-01-22T21:09:20Z",
+    "Assignment": ""
+}

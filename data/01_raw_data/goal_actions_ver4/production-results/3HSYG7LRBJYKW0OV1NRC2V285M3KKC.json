@@ -1,0 +1,92 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_order": [
+            "HandleLight",
+            "ButtonLight",
+            "BothLightMusic"
+        ],
+        "manip_check_effect_order": [
+            "turn on the light",
+            "play music",
+            "turn on the light AND play music"
+        ],
+        "outcome": "light",
+        "action_response": "handle",
+        "goal_condition": "noGoal",
+        "social_condition": "social",
+        "music_box": [
+            "HandleLight.jpeg",
+            "ButtonLight.jpeg",
+            "BothLightMusic.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "ButtonLight",
+            "HandleLight",
+            "BothLightMusic"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "ButtonLight",
+            "HandleLight",
+            "BothLightMusic"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 734,
+        "browser_width": 1470,
+        "screen_width": 1536,
+        "screen_height": 864,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "24",
+            "89",
+            "42"
+        ],
+        "posterior_beliefs": [
+            "68",
+            "89",
+            "61"
+        ],
+        "about": "Remembering things ",
+        "why_action": "The light switch was usually the lever on the left ",
+        "comment": "no, but thank you so much for allowing me to participate!",
+        "age": "33",
+        "gender": "f",
+        "language": "english",
+        "exp_start_time": "2018-01-22T17:33:15.156Z",
+        "exp_end_time": "2018-01-22T17:38:11.234Z",
+        "action_trial_start_time": "2018-01-22T17:35:14.375Z",
+        "action_trial_end_time": "2018-01-22T17:35:47.901Z",
+        "experiment_completion_time": 296078,
+        "action_trial_time": 33526,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "BothLightMusic",
+            "HandleLight",
+            "ButtonLight"
+        ],
+        "rand_action_labels": [
+            "Pull the handle on its own",
+            "Press the button and pull the handle<br>at the same time",
+            "Press the button on its own"
+        ]
+    },
+    "AssignmentId": "3HSYG7LRBJYKW0OV1NRC2V285M3KKC",
+    "WorkerId": "ACJTRTT2SO4E0",
+    "HITId": "302OLP89DZ7TE55R7HSNVERG7C2CAU",
+    "AssignmentStatus": "Submitted",
+    "AutoApprovalTime": "2018-01-22T17:43:15Z",
+    "AcceptTime": "2018-01-22T17:13:15Z",
+    "SubmitTime": "2018-01-22T17:38:15Z",
+    "Assignment": ""
+}

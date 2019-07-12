@@ -1,0 +1,59 @@
+{
+    "answers": {
+        "action_response": "orange_and_purple",
+        "goal_condition": "performance",
+        "music_box": "music_box_right.jpeg",
+        "hypotheses_slider_order_prior": [
+            "Orange",
+            "Purple and Orange",
+            "Purple"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "Orange",
+            "Purple",
+            "Purple and Orange"
+        ],
+        "actions_buttons_order": [
+            "Purple and Orange",
+            "Purple",
+            "Orange"
+        ],
+        "browser": "Chrome",
+        "browser_height": 779,
+        "browser_width": 1473,
+        "screen_width": 1920,
+        "screen_height": 1080,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "51",
+            "52",
+            "54"
+        ],
+        "posterior_beliefs": [
+            "52",
+            "52",
+            "100"
+        ],
+        "about": "to see how we think and ratinalize",
+        "comment": "no",
+        "age": "54",
+        "gender": "f",
+        "language": "English",
+        "exp_start_time": "2018-01-05T22:03:03.722Z",
+        "exp_end_time": "2018-01-05T22:04:24.874Z",
+        "action_trial_start_time": "2018-01-05T22:03:35.625Z",
+        "action_trial_end_time": "2018-01-05T22:03:48.666Z",
+        "experiment_completion_time": 81152,
+        "action_trial_time": 13041,
+        "hyp_type": "posterior"
+    },
+    "AssignmentId": "3F0BG9B9MPNRLQ6SM83U7YCXWR67Y1",
+    "WorkerId": "A2SJC9VRBGNC58",
+    "HITId": "3FCO4VKOZ4DQS1R7W5MYBBPTRCQ7E0",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-05T22:09:54Z",
+    "AcceptTime": "2018-01-05T21:57:55Z",
+    "SubmitTime": "2018-01-05T22:04:54Z",
+    "ApprovalTime": "2018-01-05T22:10:37Z",
+    "Assignment": ""
+}

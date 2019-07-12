@@ -1,0 +1,88 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_order": [
+            "ButtonMusic",
+            "HandleMusic",
+            "BothMusicLight"
+        ],
+        "manip_check_effect_order": [
+            "play music",
+            "turn on the light"
+        ],
+        "action_response": "both",
+        "goal_condition": "presentation",
+        "music_box": [
+            "HandleMusic.jpeg",
+            "ButtonMusic.jpeg",
+            "BothMusicLight.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "HandleMusic",
+            "BothMusicLight",
+            "ButtonMusic"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "ButtonMusic",
+            "HandleMusic",
+            "BothMusicLight"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 637,
+        "browser_width": 1299,
+        "screen_width": 1366,
+        "screen_height": 768,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "100",
+            "100",
+            "100"
+        ],
+        "posterior_beliefs": [
+            "59",
+            "65",
+            "100"
+        ],
+        "about": "If we could figure out the type of toy.",
+        "comment": "No comments",
+        "age": "39",
+        "gender": "f",
+        "language": "english",
+        "exp_start_time": "2018-01-15T00:24:46.396Z",
+        "exp_end_time": "2018-01-15T00:27:43.370Z",
+        "action_trial_start_time": "2018-01-15T00:26:34.245Z",
+        "action_trial_end_time": "2018-01-15T00:26:54.296Z",
+        "experiment_completion_time": 176974,
+        "action_trial_time": 20051,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "BothMusicLight",
+            "ButtonMusic",
+            "HandleMusic"
+        ],
+        "rand_action_labels": [
+            "Press the button and pull the handle",
+            "Pull the handle",
+            "Press the button"
+        ]
+    },
+    "AssignmentId": "3S3AMIZX3U5UZW6XHTORAZUAFUADC7",
+    "WorkerId": "A370SFHTRCD230",
+    "HITId": "3KVQ0UJWPXL5MXZFTC17ZXIX7C95WC",
+    "AssignmentStatus": "Submitted",
+    "AutoApprovalTime": "2018-01-15T00:31:21Z",
+    "AcceptTime": "2018-01-15T00:18:23Z",
+    "SubmitTime": "2018-01-15T00:26:21Z",
+    "Assignment": ""
+}

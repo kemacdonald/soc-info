@@ -1,0 +1,93 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_order": [
+            "ButtonLight",
+            "HandleLight",
+            "BothLightMusic"
+        ],
+        "manip_check_effect_order": [
+            "turn on the light",
+            "play music",
+            "turn on the light AND play music"
+        ],
+        "outcome": "light",
+        "action_response": "both",
+        "goal_condition": "noGoal",
+        "social_condition": "social",
+        "music_box": [
+            "HandleLight.jpeg",
+            "BothLightMusic.jpeg",
+            "ButtonLight.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "ButtonLight",
+            "HandleLight",
+            "BothLightMusic"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "ButtonLight",
+            "BothLightMusic",
+            "HandleLight"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 600,
+        "browser_width": 1299,
+        "screen_width": 1366,
+        "screen_height": 768,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "66",
+            "65",
+            "29"
+        ],
+        "posterior_beliefs": [
+            "65",
+            "62",
+            "41"
+        ],
+        "about": "perceptions of functionality",
+        "why_action": "It would be able to do both actions.",
+        "comment": "no",
+        "age": "33",
+        "gender": "F",
+        "language": "English",
+        "exp_start_time": "2018-01-22T18:56:11.696Z",
+        "exp_end_time": "2018-01-22T18:58:35.475Z",
+        "action_trial_start_time": "2018-01-22T18:57:19.041Z",
+        "action_trial_end_time": "2018-01-22T18:57:45.601Z",
+        "experiment_completion_time": 143779,
+        "action_trial_time": 26560,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "ButtonLight",
+            "HandleLight",
+            "BothLightMusic"
+        ],
+        "rand_action_labels": [
+            "Press the button on its own",
+            "Press the button and pull the handle<br>at the same time",
+            "Pull the handle on its own"
+        ]
+    },
+    "AssignmentId": "34BBWHLWHABKL5SOQYP3DQHQ0PTWIF",
+    "WorkerId": "A2J5N770I859WE",
+    "HITId": "302OLP89DZ7TE55R7HSNVERG7C2CAU",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-22T19:03:40Z",
+    "AcceptTime": "2018-01-22T18:56:04Z",
+    "SubmitTime": "2018-01-22T18:58:40Z",
+    "ApprovalTime": "2018-01-22T19:04:37Z",
+    "Assignment": ""
+}

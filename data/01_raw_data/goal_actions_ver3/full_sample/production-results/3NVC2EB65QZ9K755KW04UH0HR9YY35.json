@@ -1,0 +1,91 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_order": [
+            "ButtonMusic",
+            "HandleMusic",
+            "BothMusicLight"
+        ],
+        "manip_check_effect_order": [
+            "play music",
+            "turn on the light",
+            "play music AND turn on the light"
+        ],
+        "outcome": "music",
+        "action_response": "handle",
+        "goal_condition": "presentation",
+        "music_box": [
+            "HandleMusic.jpeg",
+            "BothMusicLight.jpeg",
+            "ButtonMusic.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "BothMusicLight",
+            "ButtonMusic",
+            "HandleMusic"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "BothMusicLight",
+            "HandleMusic",
+            "ButtonMusic"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 600,
+        "browser_width": 1870,
+        "screen_width": 1920,
+        "screen_height": 1080,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "21",
+            "76",
+            "70"
+        ],
+        "posterior_beliefs": [
+            "1",
+            "100",
+            "1"
+        ],
+        "about": "I have no idea.",
+        "why_action": "It was a toss up between button and lever.",
+        "comment": "Everything worked well, except one page seemed to flash by rather quickly.",
+        "age": "28",
+        "gender": "m",
+        "language": "English",
+        "exp_start_time": "2018-01-18T22:11:58.952Z",
+        "exp_end_time": "2018-01-18T22:19:07.390Z",
+        "action_trial_start_time": "2018-01-18T22:15:13.015Z",
+        "action_trial_end_time": "2018-01-18T22:16:36.167Z",
+        "experiment_completion_time": 428438,
+        "action_trial_time": 83152,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "ButtonMusic",
+            "HandleMusic",
+            "BothMusicLight"
+        ],
+        "rand_action_labels": [
+            "Pull the handle on its own",
+            "Press the button on its own",
+            "Press the button and pull the handle<br>at the same time"
+        ]
+    },
+    "AssignmentId": "3NVC2EB65QZ9K755KW04UH0HR9YY35",
+    "WorkerId": "A3S5I1Q30NFPOP",
+    "HITId": "3NFWQRSHVEE1R824KJAYZ6NM2JOFGZ",
+    "AssignmentStatus": "Submitted",
+    "AutoApprovalTime": "2018-01-18T22:24:09Z",
+    "AcceptTime": "2018-01-18T22:08:42Z",
+    "SubmitTime": "2018-01-18T22:19:09Z",
+    "Assignment": ""
+}

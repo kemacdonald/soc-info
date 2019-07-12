@@ -1,0 +1,93 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_order": [
+            "HandleMusic",
+            "ButtonMusic",
+            "BothMusicLight"
+        ],
+        "manip_check_effect_order": [
+            "play music",
+            "turn on the light",
+            "play music AND turn on the light"
+        ],
+        "outcome": "music",
+        "action_response": "button",
+        "goal_condition": "learning",
+        "social_condition": "no-social",
+        "music_box": [
+            "ButtonMusic.jpeg",
+            "BothMusicLight.jpeg",
+            "HandleMusic.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "BothMusicLight",
+            "ButtonMusic",
+            "HandleMusic"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "HandleMusic",
+            "BothMusicLight",
+            "ButtonMusic"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Firefox",
+        "browser_height": 600,
+        "browser_width": 1533,
+        "screen_width": 1600,
+        "screen_height": 900,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "26",
+            "27",
+            "27"
+        ],
+        "posterior_beliefs": [
+            "1",
+            "3",
+            "100"
+        ],
+        "about": "don't know but it sure is easier to chose the action than to explain why in words",
+        "why_action": "pushing button alone plays music on just one of the toys (assuming it's working right)  and, in addition, if pushing button alone did nothing then toy would likely be the one where button lights light but only if handle also pulled at same time to play music",
+        "comment": "no",
+        "age": "62",
+        "gender": "f",
+        "language": "English",
+        "exp_start_time": "2018-01-23T01:01:34.814Z",
+        "exp_end_time": "2018-01-23T01:09:52.908Z",
+        "action_trial_start_time": "2018-01-23T01:03:43.430Z",
+        "action_trial_end_time": "2018-01-23T01:05:00.281Z",
+        "experiment_completion_time": 498094,
+        "action_trial_time": 76851,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "BothMusicLight",
+            "HandleMusic",
+            "ButtonMusic"
+        ],
+        "rand_action_labels": [
+            "Press the button and pull the handle<br>at the same time",
+            "Pull the handle on its own",
+            "Press the button on its own"
+        ]
+    },
+    "AssignmentId": "31EUONYN2V3H223MYJXCBLUY5QIOVM",
+    "WorkerId": "AOIK8K4X34LGR",
+    "HITId": "302OLP89DZ7TE55R7HSNVERG7C2CAU",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-23T01:14:54Z",
+    "AcceptTime": "2018-01-23T01:00:34Z",
+    "SubmitTime": "2018-01-23T01:09:54Z",
+    "ApprovalTime": "2018-01-23T01:15:37Z",
+    "Assignment": ""
+}

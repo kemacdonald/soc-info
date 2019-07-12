@@ -1,0 +1,93 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_order": [
+            "ButtonLight",
+            "HandleLight",
+            "BothLightMusic"
+        ],
+        "manip_check_effect_order": [
+            "turn on the light",
+            "play music",
+            "turn on the light AND play music"
+        ],
+        "outcome": "light",
+        "action_response": "both",
+        "goal_condition": "performance",
+        "social_condition": "no-social",
+        "music_box": [
+            "BothLightMusic.jpeg",
+            "HandleLight.jpeg",
+            "ButtonLight.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "ButtonLight",
+            "HandleLight",
+            "BothLightMusic"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "BothLightMusic",
+            "ButtonLight",
+            "HandleLight"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 637,
+        "browser_width": 1299,
+        "screen_width": 1366,
+        "screen_height": 768,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "100",
+            "1",
+            "67"
+        ],
+        "posterior_beliefs": [
+            "100",
+            "67",
+            "79"
+        ],
+        "about": "I think this task was looking at logical thinking. ",
+        "why_action": "If you pressed the button and pulled the lever the light is going to turn on. ",
+        "comment": "The page that told me that the light turned on advanced on its own so I only read that the light came on. I didn't see the bottom instructions. ",
+        "age": "28",
+        "gender": "F",
+        "language": "English",
+        "exp_start_time": "2018-01-23T02:24:20.721Z",
+        "exp_end_time": "2018-01-23T02:29:37.070Z",
+        "action_trial_start_time": "2018-01-23T02:26:42.522Z",
+        "action_trial_end_time": "2018-01-23T02:27:09.302Z",
+        "experiment_completion_time": 316349,
+        "action_trial_time": 26780,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "ButtonLight",
+            "HandleLight",
+            "BothLightMusic"
+        ],
+        "rand_action_labels": [
+            "Press the button on its own",
+            "Press the button and pull the handle<br>at the same time",
+            "Pull the handle on its own"
+        ]
+    },
+    "AssignmentId": "3KXIR214I4G41IV2RPYSVIRIR1T24M",
+    "WorkerId": "A1MRBBA2OLM223",
+    "HITId": "302OLP89DZ7TE55R7HSNVERG7C2CAU",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-23T02:34:40Z",
+    "AcceptTime": "2018-01-23T01:41:16Z",
+    "SubmitTime": "2018-01-23T02:29:40Z",
+    "ApprovalTime": "2018-01-23T02:35:37Z",
+    "Assignment": ""
+}

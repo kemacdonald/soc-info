@@ -1,0 +1,59 @@
+{
+    "answers": {
+        "action_response": "orange",
+        "goal_condition": "learning",
+        "music_box": "music_box_left.jpeg",
+        "hypotheses_slider_order_prior": [
+            "Purple",
+            "Orange",
+            "Purple and Orange"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "Purple",
+            "Purple and Orange",
+            "Orange"
+        ],
+        "actions_buttons_order": [
+            "Purple and Orange",
+            "Orange",
+            "Purple"
+        ],
+        "browser": "Chrome",
+        "browser_height": 600,
+        "browser_width": 1230,
+        "screen_width": 1280,
+        "screen_height": 800,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "33",
+            "92",
+            "14"
+        ],
+        "posterior_beliefs": [
+            "6",
+            "25",
+            "100"
+        ],
+        "about": "design",
+        "comment": "the product design was bad the orange should have been furthest from the person and the purple closest",
+        "age": "21",
+        "gender": "m",
+        "language": "English",
+        "exp_start_time": "2018-01-05T21:58:41.812Z",
+        "exp_end_time": "2018-01-05T22:00:29.839Z",
+        "action_trial_start_time": "2018-01-05T21:59:19.975Z",
+        "action_trial_end_time": "2018-01-05T21:59:36.025Z",
+        "experiment_completion_time": 108027,
+        "action_trial_time": 16050,
+        "hyp_type": "posterior"
+    },
+    "AssignmentId": "3JPSL1DZ5SZFST0CM96309GGTF8AN5",
+    "WorkerId": "A2NG2CCBMVEBIA",
+    "HITId": "3FCO4VKOZ4DQS1R7W5MYBBPTRCQ7E0",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-05T22:05:36Z",
+    "AcceptTime": "2018-01-05T21:57:46Z",
+    "SubmitTime": "2018-01-05T22:00:36Z",
+    "ApprovalTime": "2018-01-05T22:05:37Z",
+    "Assignment": ""
+}

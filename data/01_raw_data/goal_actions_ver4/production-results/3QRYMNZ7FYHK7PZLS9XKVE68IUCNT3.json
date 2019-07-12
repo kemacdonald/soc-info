@@ -1,0 +1,93 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_order": [
+            "ButtonLight",
+            "HandleLight",
+            "BothLightMusic"
+        ],
+        "manip_check_effect_order": [
+            "turn on the light",
+            "play music",
+            "turn on the light AND play music"
+        ],
+        "outcome": "light",
+        "action_response": "button",
+        "goal_condition": "noGoal",
+        "social_condition": "no-social",
+        "music_box": [
+            "ButtonLight.jpeg",
+            "BothLightMusic.jpeg",
+            "HandleLight.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "ButtonLight",
+            "BothLightMusic",
+            "HandleLight"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "BothLightMusic",
+            "HandleLight",
+            "ButtonLight"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 799,
+        "browser_width": 1300,
+        "screen_width": 1440,
+        "screen_height": 900,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "59",
+            "59",
+            "50"
+        ],
+        "posterior_beliefs": [
+            "34",
+            "77",
+            "50"
+        ],
+        "about": "How to narrow down informtion to make decisions",
+        "why_action": "Because doing both actions wouldn't give you unequivocal feedback, whereas only pushing a button or pulling a handle would definitely tell you it's not/is one of the three.",
+        "comment": "",
+        "age": "43",
+        "gender": "f",
+        "language": "english",
+        "exp_start_time": "2018-01-22T20:37:48.010Z",
+        "exp_end_time": "2018-01-22T20:42:33.261Z",
+        "action_trial_start_time": "2018-01-22T20:40:18.760Z",
+        "action_trial_end_time": "2018-01-22T20:41:09.393Z",
+        "experiment_completion_time": 285251,
+        "action_trial_time": 50633,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "BothLightMusic",
+            "ButtonLight",
+            "HandleLight"
+        ],
+        "rand_action_labels": [
+            "Press the button and pull the handle<br>at the same time",
+            "Press the button on its own",
+            "Pull the handle on its own"
+        ]
+    },
+    "AssignmentId": "3QRYMNZ7FYHK7PZLS9XKVE68IUCNT3",
+    "WorkerId": "AVBRJBJONL47I",
+    "HITId": "302OLP89DZ7TE55R7HSNVERG7C2CAU",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-22T20:47:34Z",
+    "AcceptTime": "2018-01-22T20:29:47Z",
+    "SubmitTime": "2018-01-22T20:42:34Z",
+    "ApprovalTime": "2018-01-22T20:47:37Z",
+    "Assignment": ""
+}

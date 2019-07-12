@@ -1,0 +1,59 @@
+{
+    "answers": {
+        "action_response": "orange_and_purple",
+        "goal_condition": "learning",
+        "music_box": "music_box_left.jpeg",
+        "hypotheses_slider_order_prior": [
+            "Purple",
+            "Purple and Orange",
+            "Orange"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "Purple",
+            "Orange",
+            "Purple and Orange"
+        ],
+        "actions_buttons_order": [
+            "Purple and Orange",
+            "Orange",
+            "Purple"
+        ],
+        "browser": "Chrome",
+        "browser_height": 600,
+        "browser_width": 1299,
+        "screen_width": 1366,
+        "screen_height": 768,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "100",
+            "27",
+            "100"
+        ],
+        "posterior_beliefs": [
+            "100",
+            "100",
+            "100"
+        ],
+        "about": "Problem solving and logic.",
+        "comment": "No",
+        "age": "38",
+        "gender": "f",
+        "language": "English",
+        "exp_start_time": "2018-01-05T21:51:11.252Z",
+        "exp_end_time": "2018-01-05T21:55:03.708Z",
+        "action_trial_start_time": "2018-01-05T21:52:46.467Z",
+        "action_trial_end_time": "2018-01-05T21:53:45.308Z",
+        "experiment_completion_time": 232456,
+        "action_trial_time": 58841,
+        "hyp_type": "posterior"
+    },
+    "AssignmentId": "3HMVI3QICJSDA4RQXSML6OLKT55Y1U",
+    "WorkerId": "A31K4ASJODLAFM",
+    "HITId": "3FCO4VKOZ4DQS1R7W5MYBBPTRCQ7E0",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-05T22:00:00Z",
+    "AcceptTime": "2018-01-05T21:50:41Z",
+    "SubmitTime": "2018-01-05T21:55:00Z",
+    "ApprovalTime": "2018-01-05T22:00:37Z",
+    "Assignment": ""
+}

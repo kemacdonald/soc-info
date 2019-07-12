@@ -1,0 +1,93 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_order": [
+            "HandleMusic",
+            "ButtonMusic",
+            "BothMusicLight"
+        ],
+        "manip_check_effect_order": [
+            "play music",
+            "turn on the light",
+            "play music AND turn on the light"
+        ],
+        "outcome": "music",
+        "action_response": "button",
+        "goal_condition": "performance",
+        "social_condition": "social",
+        "music_box": [
+            "HandleMusic.jpeg",
+            "BothMusicLight.jpeg",
+            "ButtonMusic.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "BothMusicLight",
+            "ButtonMusic",
+            "HandleMusic"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "BothMusicLight",
+            "HandleMusic",
+            "ButtonMusic"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Firefox",
+        "browser_height": 600,
+        "browser_width": 1299,
+        "screen_width": 1366,
+        "screen_height": 768,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "21",
+            "64",
+            "42"
+        ],
+        "posterior_beliefs": [
+            "29",
+            "7",
+            "91"
+        ],
+        "about": "To gauge how people process performing mechanical actions in order to get a desired result.",
+        "why_action": "It seems more natural to press a button to turn on music.",
+        "comment": "Nope, all clear.",
+        "age": "32",
+        "gender": "m",
+        "language": "english",
+        "exp_start_time": "2018-01-22T23:50:26.375Z",
+        "exp_end_time": "2018-01-22T23:54:33.922Z",
+        "action_trial_start_time": "2018-01-22T23:52:34.431Z",
+        "action_trial_end_time": "2018-01-22T23:53:17.188Z",
+        "experiment_completion_time": 247547,
+        "action_trial_time": 42757,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "HandleMusic",
+            "ButtonMusic",
+            "BothMusicLight"
+        ],
+        "rand_action_labels": [
+            "Press the button on its own",
+            "Press the button and pull the handle<br>at the same time",
+            "Pull the handle on its own"
+        ]
+    },
+    "AssignmentId": "358010RM5ET4WBHEZAK8UYLRHUDXVQ",
+    "WorkerId": "A24EYMUIGY8M5O",
+    "HITId": "302OLP89DZ7TE55R7HSNVERG7C2CAU",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-22T23:59:35Z",
+    "AcceptTime": "2018-01-22T23:47:51Z",
+    "SubmitTime": "2018-01-22T23:54:35Z",
+    "ApprovalTime": "2018-01-22T23:59:37Z",
+    "Assignment": ""
+}

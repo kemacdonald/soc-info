@@ -1,0 +1,93 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_order": [
+            "ButtonLight",
+            "HandleLight",
+            "BothLightMusic"
+        ],
+        "manip_check_effect_order": [
+            "turn on the light",
+            "play music",
+            "turn on the light AND play music"
+        ],
+        "outcome": "light",
+        "action_response": "handle",
+        "goal_condition": "learning",
+        "social_condition": "social",
+        "music_box": [
+            "HandleLight.jpeg",
+            "BothLightMusic.jpeg",
+            "ButtonLight.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "ButtonLight",
+            "BothLightMusic",
+            "HandleLight"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "HandleLight",
+            "BothLightMusic",
+            "ButtonLight"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 732,
+        "browser_width": 1469,
+        "screen_width": 1536,
+        "screen_height": 864,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "82",
+            "25",
+            "82"
+        ],
+        "posterior_beliefs": [
+            "90",
+            "1",
+            "48"
+        ],
+        "about": "how people interpret determine the correct answer given vague details",
+        "why_action": "I chose one randomly. I didn't know how to determine which would be the correct answer ",
+        "comment": "",
+        "age": "22",
+        "gender": "m",
+        "language": "English",
+        "exp_start_time": "2018-01-23T05:21:19.522Z",
+        "exp_end_time": "2018-01-23T05:31:21.201Z",
+        "action_trial_start_time": "2018-01-23T05:26:35.367Z",
+        "action_trial_end_time": "2018-01-23T05:29:01.063Z",
+        "experiment_completion_time": 601679,
+        "action_trial_time": 145696,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "ButtonLight",
+            "BothLightMusic",
+            "HandleLight"
+        ],
+        "rand_action_labels": [
+            "Pull the handle on its own",
+            "Press the button on its own",
+            "Press the button and pull the handle<br>at the same time"
+        ]
+    },
+    "AssignmentId": "3D3VGR7TA0F0N6TJ618AML7KPUS3RY",
+    "WorkerId": "AK8UFPN8QOSK5",
+    "HITId": "302OLP89DZ7TE55R7HSNVERG7C2CAU",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-23T05:36:24Z",
+    "AcceptTime": "2018-01-23T05:03:32Z",
+    "SubmitTime": "2018-01-23T05:31:24Z",
+    "ApprovalTime": "2018-01-23T05:36:38Z",
+    "Assignment": ""
+}

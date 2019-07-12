@@ -1,0 +1,88 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "button",
+            "handle",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "handle",
+            "button",
+            "both"
+        ],
+        "manip_check_order": [
+            "ButtonMusic",
+            "HandleMusic",
+            "BothMusicLight"
+        ],
+        "manip_check_effect_order": [
+            "play music",
+            "turn on the light"
+        ],
+        "action_response": "both",
+        "goal_condition": "presentation",
+        "music_box": [
+            "ButtonMusic.jpeg",
+            "BothMusicLight.jpeg",
+            "HandleMusic.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "HandleMusic",
+            "ButtonMusic",
+            "BothMusicLight"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "BothMusicLight",
+            "ButtonMusic",
+            "HandleMusic"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 787,
+        "browser_width": 1635,
+        "screen_width": 1280,
+        "screen_height": 720,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "70",
+            "74",
+            "62"
+        ],
+        "posterior_beliefs": [
+            "65",
+            "62",
+            "92"
+        ],
+        "about": "not really sure",
+        "comment": "no",
+        "age": "46",
+        "gender": "f",
+        "language": "English",
+        "exp_start_time": "2018-01-15T00:03:53.992Z",
+        "exp_end_time": "2018-01-15T00:07:39.087Z",
+        "action_trial_start_time": "2018-01-15T00:06:28.297Z",
+        "action_trial_end_time": "2018-01-15T00:06:54.867Z",
+        "experiment_completion_time": 225095,
+        "action_trial_time": 26570,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "ButtonMusic",
+            "BothMusicLight",
+            "HandleMusic"
+        ],
+        "rand_action_labels": [
+            "Pull the handle",
+            "Press the button and pull the handle",
+            "Press the button"
+        ]
+    },
+    "AssignmentId": "3AUQQEL7U5TWZLB3WYV1LKYG6CH0V0",
+    "WorkerId": "AA4O2W236E3FW",
+    "HITId": "3KVQ0UJWPXL5MXZFTC17ZXIX7C95WC",
+    "AssignmentStatus": "Submitted",
+    "AutoApprovalTime": "2018-01-15T00:12:39Z",
+    "AcceptTime": "2018-01-15T00:03:21Z",
+    "SubmitTime": "2018-01-15T00:07:39Z",
+    "Assignment": ""
+}

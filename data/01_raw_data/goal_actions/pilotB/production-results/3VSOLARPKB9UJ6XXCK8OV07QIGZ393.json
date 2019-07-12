@@ -1,0 +1,59 @@
+{
+    "answers": {
+        "action_response": "orange",
+        "goal_condition": "learning",
+        "music_box": "music_box_left.jpeg",
+        "hypotheses_slider_order_prior": [
+            "Purple and Orange",
+            "Purple",
+            "Orange"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "Orange",
+            "Purple and Orange",
+            "Purple"
+        ],
+        "actions_buttons_order": [
+            "Purple and Orange",
+            "Orange",
+            "Purple"
+        ],
+        "browser": "Chrome",
+        "browser_height": 600,
+        "browser_width": 1176,
+        "screen_width": 1366,
+        "screen_height": 768,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "1",
+            "100",
+            "100"
+        ],
+        "posterior_beliefs": [
+            "100",
+            "68",
+            "100"
+        ],
+        "about": "Seeing how people make choices",
+        "comment": "",
+        "age": "32",
+        "gender": "f",
+        "language": "English",
+        "exp_start_time": "2018-01-05T21:58:26.765Z",
+        "exp_end_time": "2018-01-05T21:59:55.846Z",
+        "action_trial_start_time": "2018-01-05T21:59:00.253Z",
+        "action_trial_end_time": "2018-01-05T21:59:15.401Z",
+        "experiment_completion_time": 89081,
+        "action_trial_time": 15148,
+        "hyp_type": "posterior"
+    },
+    "AssignmentId": "3VSOLARPKB9UJ6XXCK8OV07QIGZ393",
+    "WorkerId": "A2LGSV2MKHWA49",
+    "HITId": "3FCO4VKOZ4DQS1R7W5MYBBPTRCQ7E0",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-05T22:04:56Z",
+    "AcceptTime": "2018-01-05T21:57:49Z",
+    "SubmitTime": "2018-01-05T21:59:56Z",
+    "ApprovalTime": "2018-01-05T22:05:37Z",
+    "Assignment": ""
+}

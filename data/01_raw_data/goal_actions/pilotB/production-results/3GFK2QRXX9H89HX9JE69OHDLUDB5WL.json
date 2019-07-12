@@ -1,0 +1,59 @@
+{
+    "answers": {
+        "action_response": "purple",
+        "goal_condition": "learning",
+        "music_box": "music_box_right.jpeg",
+        "hypotheses_slider_order_prior": [
+            "Purple",
+            "Purple and Orange",
+            "Orange"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "Purple and Orange",
+            "Purple",
+            "Orange"
+        ],
+        "actions_buttons_order": [
+            "Purple and Orange",
+            "Purple",
+            "Orange"
+        ],
+        "browser": "Chrome",
+        "browser_height": 984,
+        "browser_width": 1853,
+        "screen_width": 1920,
+        "screen_height": 1080,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "80",
+            "57",
+            "81"
+        ],
+        "posterior_beliefs": [
+            "45",
+            "95",
+            "76"
+        ],
+        "about": "A childrens toy.",
+        "comment": "Nothing.",
+        "age": "25",
+        "gender": "m",
+        "language": "English",
+        "exp_start_time": "2018-01-05T22:01:10.931Z",
+        "exp_end_time": "2018-01-05T22:02:19.354Z",
+        "action_trial_start_time": "2018-01-05T22:01:41.878Z",
+        "action_trial_end_time": "2018-01-05T22:01:49.909Z",
+        "experiment_completion_time": 68423,
+        "action_trial_time": 8031,
+        "hyp_type": "posterior"
+    },
+    "AssignmentId": "3GFK2QRXX9H89HX9JE69OHDLUDB5WL",
+    "WorkerId": "A3FABY0Q6234WK",
+    "HITId": "3FCO4VKOZ4DQS1R7W5MYBBPTRCQ7E0",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-05T22:07:18Z",
+    "AcceptTime": "2018-01-05T21:57:53Z",
+    "SubmitTime": "2018-01-05T22:02:18Z",
+    "ApprovalTime": "2018-01-05T22:07:37Z",
+    "Assignment": ""
+}

@@ -1,0 +1,93 @@
+{
+    "answers": {
+        "manip_check_music_response": [
+            "handle",
+            "handle",
+            "both"
+        ],
+        "manip_check_light_response": [
+            "button",
+            "button",
+            "both"
+        ],
+        "manip_check_order": [
+            "HandleLight",
+            "ButtonLight",
+            "BothLightMusic"
+        ],
+        "manip_check_effect_order": [
+            "turn on the light",
+            "play music",
+            "turn on the light AND play music"
+        ],
+        "outcome": "light",
+        "action_response": "both",
+        "goal_condition": "presentation",
+        "social_condition": "social",
+        "music_box": [
+            "BothLightMusic.jpeg",
+            "HandleLight.jpeg",
+            "ButtonLight.jpeg"
+        ],
+        "hypotheses_slider_order_prior": [
+            "HandleLight",
+            "ButtonLight",
+            "BothLightMusic"
+        ],
+        "hypotheses_slider_order_posterior": [
+            "HandleLight",
+            "BothLightMusic",
+            "ButtonLight"
+        ],
+        "actions_buttons_order": "",
+        "toy_inst_num": 3,
+        "browser": "Chrome",
+        "browser_height": 600,
+        "browser_width": 1213,
+        "screen_width": 1280,
+        "screen_height": 768,
+        "mobile_device": false,
+        "prior_beliefs": [
+            "92",
+            "9",
+            "90"
+        ],
+        "posterior_beliefs": [
+            "81",
+            "92",
+            "26"
+        ],
+        "about": "I think this task was about figuring out how things work and what your natural assumption is when seeing something operate. ",
+        "why_action": "I selected the action I did because I felt that it was more impressive to have the light and music on at the same time.",
+        "comment": "Thank you!",
+        "age": "31",
+        "gender": "m",
+        "language": "english",
+        "exp_start_time": "2018-01-22T19:46:16.922Z",
+        "exp_end_time": "2018-01-22T19:49:32.664Z",
+        "action_trial_start_time": "2018-01-22T19:47:33.427Z",
+        "action_trial_end_time": "2018-01-22T19:47:55.929Z",
+        "experiment_completion_time": 195742,
+        "action_trial_time": 22502,
+        "hyp_type": "posterior",
+        "rand_slider_labels": [
+            "HandleLight",
+            "BothLightMusic",
+            "ButtonLight"
+        ],
+        "rand_action_labels": [
+            "Press the button and pull the handle<br>at the same time",
+            "Pull the handle on its own",
+            "Press the button on its own"
+        ]
+    },
+    "AssignmentId": "3VA45EW49NN1GQNOR5DN4XNIGLO1OL",
+    "WorkerId": "A1ZKNQJO513B3W",
+    "HITId": "302OLP89DZ7TE55R7HSNVERG7C2CAU",
+    "AssignmentStatus": "Approved",
+    "AutoApprovalTime": "2018-01-22T19:54:32Z",
+    "AcceptTime": "2018-01-22T19:45:53Z",
+    "SubmitTime": "2018-01-22T19:49:32Z",
+    "ApprovalTime": "2018-01-22T19:54:37Z",
+    "Assignment": ""
+}

@@ -7,18 +7,16 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
-```
-
-```{r libraries}
 source(here::here("R/soc_info_helpers.R"))
-data_path <- "data/03_merged_data"
 ```
 
 Read data from all experiments.
 
 ```{r read data}
+data_path <- "data/03_merged_data"
+
 d_prior <- read_csv(here("data/02_tidy_data/goal_actions_prior_tidy.csv"))
-d_cat <- read_csv(here("data/02_tidy_data/soc-info-cat-pilot1-tidy.csv"))
+d_cat <- read_csv(here("data/02_tidy_data/soc-info-cat-pilot2-tidy.csv"))
 d_data <- read_csv(here(data_path, "goal_actions_master.csv"))
 
 d_data %<>% mutate(hypothesis_type = factor(hypothesis_type) %>% fct_rev(),
@@ -571,13 +569,14 @@ d_cat_analysis <- d_cat %>%
   separate(condition, "-", 
            into = c("social_condition", "goal_condition"), remove = F)
 
-# get 95% CIs 
-cat_hpd <- d_cat_analysis %>% 
-  split(.$condition) %>%
-  map_df(~ binom.bayes(x = .$n_choices, n = .$n_participants, conf.level = 0.95)) %>% 
-  select(mean, lower, upper)
 
-d_cat_analysis %<>% bind_cols(cat_hpd)
+#  TODO: figure out how to get 95% CIs for multinomial (probably just fit model and get HPD)
+# cat_hpd <- d_cat_analysis %>% 
+#   split(.$condition) %>%
+#   map_df(~ binom.bayes(x = .$n_choices, n = .$n_participants, conf.level = 0.95)) %>% 
+#   select(mean, lower, upper)
+# 
+# d_cat_analysis %<>% bind_cols(cat_hpd)
 ```
 
 ### Time to complete
@@ -588,7 +587,7 @@ d_cat %>% distinct(id, complete_time_min) %>% pull(complete_time_min) %>% mean()
 
 ### Toy choice plot
 
-Plot the porportion of participants choosing each toy type (activation, presentation, learning) as a function of the goal and social conditions.
+Plot the proportion of participants choosing each toy type (activation, presentation, learning) as a function of the goal and social conditions.
 
 ```{r}
 d_cat_analysis %>% 
@@ -607,7 +606,9 @@ d_cat_analysis %>%
 d_cat %>% 
   filter(trial_type == "final_toy_choice") %>% 
   select(id, social_condition, goal_condition, final_toy_type, why_toy) %>% 
-  rename(final_toy_choice_type = final_toy_type) 
+  rename(final_toy_choice_type = final_toy_type) %>% 
+  arrange(goal_condition) %>% 
+  knitr::kable()
 ```
 
 ### RT on toy choice plot

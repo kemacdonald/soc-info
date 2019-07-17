@@ -1,0 +1,30 @@
+{
+ "_cosubSpecVersion": 2,
+ "Url": "https://langcog.stanford.edu/expts/EJY/soc-info/cat/cat.html",
+ "Title": "Toy Game (Chrome/Firefox only)",
+ "Description": "We're interested in your decision making when you come across some new toys. Please use a Chrome or Firefox browser!",
+ "Keywords": "toy, game, fun, short",
+ "Batch": false,
+ "FrameHeight": 650,
+ "AssignmentDuration": "30 minutes",
+ "AutoApprovalDelay": "5 minutes",
+ "Reward": "0.9",
+ "QualificationRequirements": [
+  {
+   "Name": "Worker_PercentAssignmentsApproved",
+   "Comparator": "GreaterThanOrEqualTo",
+   "IntegerValues": [
+    95
+   ]
+  },
+  {
+   "Name": "Worker_Locale",
+   "Comparator": "EqualTo",
+   "LocaleValues": [
+    {
+     "Country": "US"
+    }
+   ]
+  }
+ ]
+}

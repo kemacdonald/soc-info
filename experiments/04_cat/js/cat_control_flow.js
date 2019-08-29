@@ -53,8 +53,10 @@ function make_slides(f) {
     build_action_selection: function(curr_img) {
       build_radio_html(curr_img, "toy_action_radios_activation", this.name);
       show_action_prompts(this.name);
+      $(`#error_msg_${this.name}`).hide() // make sure error message is hidden
+      $('.radio').show() // make sure action choice radio buttons are on screen
       enable_radios("action_select_activation");
-      enable_button("submit_action_activation");
+      show_button("submit_action_activation");
       $("#notes_gif_actions_activation").css('visibility', 'hidden');
       $("#submit_action_activation").html("Submit Action");
       $("#play_music_activation").prop('disabled', true); // disable the music button so participant can only play once
@@ -66,6 +68,8 @@ function make_slides(f) {
         init_try_again(this.toy, this.name);
       } else {
         if (check_radio_buttons("action_select_activation")) {
+          $('.radio').hide() // hide action choice radio buttons
+
           const curr_action = $(`input[name='action_select_activation']:checked`).val();
           if (this.action_counter == 1) {
             this.toy_type = get_toy_type(curr_action)
@@ -110,8 +114,10 @@ function make_slides(f) {
     build_action_selection: function(curr_img) {
       build_radio_html(curr_img, "toy_action_radios_presentation", this.name);
       show_action_prompts(this.name);
+      $(`#error_msg_${this.name}`).hide() // make sure any error message is hidden
+      $('.radio').show() // make sure action choice radio buttons are on screen
       enable_radios("action_select_presentation");
-      enable_button("submit_action_presentation");
+      show_button("submit_action_presentation");
       $("#notes_gif_actions_presentation").css('visibility', 'hidden');
       $("#submit_action_presentation").html("Submit Action");
       $("#play_music_presentation").prop('disabled', true); // disable the music button so participant can only play once
@@ -123,6 +129,7 @@ function make_slides(f) {
         init_try_again(this.toy, this.name);
       } else {
         if (check_radio_buttons("action_select_presentation")) {
+          $('.radio').hide() // hide radios
           const curr_action = $(`input[name='action_select_presentation']:checked`).val();
           if (this.action_counter == 1) {
             this.toy_type = get_toy_type(curr_action)

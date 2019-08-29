@@ -156,6 +156,16 @@ const enable_button = (button_id) => {
   $(`#${button_id}`).attr('disabled', false);
 }
 
+const hide_button = (button_id) => {
+  $(`#${button_id}`).hide()
+}
+
+const show_button = (button_id) => {
+  $(`#${button_id}`).show()
+}
+
+
+
 const show_failure_msg = (trial_type) => {
   $(`#error_msg_${trial_type}`).hide()
   $(`#submit_action_${trial_type}`).html("Try Again")
@@ -186,10 +196,18 @@ const show_leave_msg = (trial_type) => {
 const show_success_msg = (n_successes, trial_type) => {
   $(`#error_msg_${trial_type}`).hide()
   $(`#error_msg_${trial_type}`).css('color', 'green');
-  if (n_successes < 2) {
-    $(`#error_msg_${trial_type}`).html("That worked! Can you make it play music again?");
+  if (n_successes == 1) {
+    if ( check_bob_present(trial_type) ) {
+      $(`#error_msg_${trial_type}`).html('Bob says, "Wow, that worked! You made the toy play music. Can you do it again?"');
+    } else {
+      $(`#error_msg_${trial_type}`).html("That worked! Can you make it play music again?");
+    }
   } else {
-    $(`#error_msg_${trial_type}`).html("That worked again!");
+    if (check_bob_present(trial_type) ) {
+      $(`#error_msg_${trial_type}`).html('Bob says, "Nice, that worked again!"');
+    } else {
+      $(`#error_msg_${trial_type}`).html("Nice, that worked again!");
+    }
   }
   $(`#error_msg_${trial_type}`).show()
 }
@@ -197,11 +215,11 @@ const show_success_msg = (n_successes, trial_type) => {
 const init_try_again = (curr_toy, trial_type) => {
   const fade_duration = 2000;
   const fade_opacity = 0;
-  disable_button(`submit_action_${trial_type}`)
+  hide_button(`submit_action_${trial_type}`)
 
   if (trial_type == "activation") {
     $("#error_msg_activation").hide()
-    // if bob is  present then he has seen the success and we advance to  next slide
+    // if bob is  present then he has seen the success and we advance to next slide
     // otherwise he needs  to show up and see the success
     if ( check_bob_present(trial_type) ) {
       _s.build_action_selection(curr_toy);
@@ -239,9 +257,11 @@ const handle_failure = (trial_type) => {
 }
 
 const handle_success = (n_successes, curr_toy, trial_type) => {
+  show_success_msg(n_successes, trial_type);
+
   if (trial_type == "activation") {
     disable_radios("action_select_activation");
-    disable_button("submit_action_activation");
+    hide_button("submit_action_activation");
     $("#notes_gif_actions_activation").css('visibility', 'visible');
     const myAudio = $('#sound_player_activation')[0];
     myAudio.play();
@@ -250,15 +270,12 @@ const handle_success = (n_successes, curr_toy, trial_type) => {
         $('#sound_player_presentation').off('ended') // remove event listener
         exp.go()
       } else {
-        show_success_msg(n_successes, trial_type);
         _s.build_action_selection(curr_toy);
       }
-      // $('#sound_player_activation').off('ended') // remove event listener
-      // exp.go()
     });
   } else if (trial_type == "presentation") {
     disable_radios("action_select_presentation");
-    disable_button("submit_action_presentation");
+    hide_button("submit_action_presentation");
     $("#notes_gif_actions_presentation").css('visibility', 'visible');
     const myAudio = $('#sound_player_presentation')[0];
     myAudio.play();
@@ -267,7 +284,6 @@ const handle_success = (n_successes, curr_toy, trial_type) => {
         $('#sound_player_presentation').off('ended') // remove event listener
         exp.go()
       } else {
-        show_success_msg(n_successes, trial_type);
         _s.build_action_selection(curr_toy);
       }
     });

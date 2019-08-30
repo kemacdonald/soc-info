@@ -582,7 +582,10 @@ d_cat_analysis <- d_cat %>%
 ### Time to complete
 
 ```{r}
-d_cat %>% distinct(id, complete_time_min) %>% pull(complete_time_min) %>% mean()
+d_cat %>% 
+  distinct(id, complete_time_min) %>% 
+  pull(complete_time_min) %>% 
+  mean()
 ```
 
 ### Toy choice plot

@@ -11,8 +11,8 @@ knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 
 ```{r libraries}
 library(magrittr); library(tidyverse); library(here); 
-library(rstanarm); library(brms)
-source(here("R/soc_info_helpers.R"))
+library(rstanarm); library(brms); library(tidybayes)
+source("R/soc_info_helpers.R")
 options(mc.cores=parallel::detectCores())
 set.seed (3875)
 ```
@@ -22,6 +22,7 @@ Read data.
 ```{r read data}
 d_path <- "data/03_merged_data/"
 d <- read_csv(here(d_path, "goal_actions_master.csv")) 
+d_cat <- read_csv("data/02_tidy_data/soc-info-cat-pilot2-tidy.csv")
 ```
 
 # Experiment 1 
@@ -365,6 +366,37 @@ samples_ig_e2 <- m_ig_act_e2 %>%
   gather(key = effect, value = param_est, -sample_id) 
 ```
 
+# Experiment 3
+
+```{r}
+d_cat_analysis <- d_cat %>% 
+  filter(trial_type == "final_toy_choice") %>% 
+  select(id, final_toy_type, toy, condition, goal_condition, social_condition) %>% 
+  separate(condition, "-", 
+           into = c("social_condition", "goal_condition"), remove = F)
+```
+
+Fit multinomial model. From McElreath's Statistical Rethinking book:
+
+> When more than two types of unordered events are possible, and the probability of each type of event is constant across trials, then the maximum entropy distribution is the multinomial distribution
+
+We use the multinomail logit link function:
+
+$\text{Pr} (k |s_1, s_2, ..., s_K) = \frac{\text{exp} (s_k)}{\sum_{i = 1}^K \text{exp} (s_i)}$
+
+```{r}
+e3_m <- brm(data = d_cat, 
+      family = categorical(link = logit),
+      final_toy_type ~ social_condition * goal_condition,
+      iter = 2000, warmup = 500, cores = 4, chains = 4,
+      seed = 10)
+```
+
+```{r}
+get_variables(e3_m)
+summary(e3_m)
+```
+
 # Save posterior samples 
 
 ```{r save models and samples}
@@ -376,7 +408,8 @@ models <- list(action_model_e1 = m_act_logit,
                action_model_e2_int = m_act_logit_e2_int,
                rt_model_e1 = m_rt_e2,
                ent_model_e2 = m_entropy_act_e2,
-               ig_model_e1 = m_ig_act_e2)
+               ig_model_e1 = m_ig_act_e2,
+               cat_multinomial_e3 = e3_m)
 
 posteriors <- list(action_logit_samples_e1 = samples_logit_act_e1,
                    rt_samples_e1 = samples_rt_e1,

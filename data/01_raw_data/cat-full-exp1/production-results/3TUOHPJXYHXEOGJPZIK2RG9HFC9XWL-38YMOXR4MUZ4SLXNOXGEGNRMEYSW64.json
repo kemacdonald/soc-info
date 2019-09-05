@@ -1,0 +1,116 @@
+{
+ "AssignmentId": "38YMOXR4MUZ4SLXNOXGEGNRMEYSW64",
+ "WorkerId": "ac04493c01cc72f7a12a2be9ce885def",
+ "HITId": "3TUOHPJXYHXEOGJPZIK2RG9HFC9XWL",
+ "AssignmentStatus": "Approved",
+ "AutoApprovalTime": "2019-09-04T19:26:41.000Z",
+ "AcceptTime": "2019-09-04T19:18:18.000Z",
+ "SubmitTime": "2019-09-04T19:25:41.000Z",
+ "ApprovalTime": "2019-09-04T19:26:56.000Z",
+ "answers": {
+  "trials": [
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "right-lever",
+    "action_number": 1,
+    "action": "left-lever",
+    "success": false,
+    "rt": 5035
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "right-lever",
+    "action_number": 2,
+    "action": "right-lever",
+    "success": true,
+    "rt": 3227
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "right-lever",
+    "action_number": 3,
+    "action": "right-lever",
+    "success": true,
+    "rt": 4650
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 1,
+    "action": "left-spinner",
+    "success": false,
+    "rt": 3613
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 2,
+    "action": "right-spinner",
+    "success": true,
+    "rt": 2551
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 3,
+    "action": "right-spinner",
+    "success": true,
+    "rt": 2058
+   },
+   {
+    "trial_type": "final_toy_choice",
+    "toy": "cube-spinner.png",
+    "toy_type": "NA",
+    "action_number": "NA",
+    "action": "NA",
+    "success": "NA",
+    "rt": 22818,
+    "why_toy": "I know which lever to pull to make it make music"
+   }
+  ],
+  "system": {
+   "Browser": "Chrome",
+   "OS": "Mac",
+   "screenH": 800,
+   "screenW": 1280,
+   "ip_data": {
+    "ip": "2601:345:8300:4290:c96e:ecf9:1899:2e1c",
+    "city": "Ponte Vedra Beach",
+    "region": "Florida",
+    "region_code": "FL",
+    "country": "US",
+    "country_name": "United States",
+    "continent_code": "NA",
+    "in_eu": false,
+    "postal": "32082",
+    "latitude": 30.1223,
+    "longitude": -81.3627,
+    "timezone": "America/New_York",
+    "utc_offset": "-0400",
+    "country_calling_code": "+1",
+    "currency": "USD",
+    "languages": "en-US,es-US,haw,fr",
+    "asn": "AS7922",
+    "org": "Comcast Cable Communications, LLC"
+   }
+  },
+  "goal_condition": "activation",
+  "social_condition": "no_social",
+  "subject_information": {
+   "language": "english",
+   "enjoyment": "Average",
+   "asses": "Yes",
+   "age": "23",
+   "gender": "Female",
+   "education": "Graduated College",
+   "comments": ""
+  },
+  "time_in_minutes": 2.6235666666666666
+ }
+}

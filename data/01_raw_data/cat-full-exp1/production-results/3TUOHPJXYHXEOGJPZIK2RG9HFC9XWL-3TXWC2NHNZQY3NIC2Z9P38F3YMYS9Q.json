@@ -1,0 +1,116 @@
+{
+ "AssignmentId": "3TXWC2NHNZQY3NIC2Z9P38F3YMYS9Q",
+ "WorkerId": "9e57783d41df0895ab9e4400cb3934d2",
+ "HITId": "3TUOHPJXYHXEOGJPZIK2RG9HFC9XWL",
+ "AssignmentStatus": "Approved",
+ "AutoApprovalTime": "2019-09-04T18:58:37.000Z",
+ "AcceptTime": "2019-09-04T18:48:39.000Z",
+ "SubmitTime": "2019-09-04T18:57:37.000Z",
+ "ApprovalTime": "2019-09-04T18:58:56.000Z",
+ "answers": {
+  "trials": [
+   {
+    "trial_type": "activation",
+    "toy": "cube-spinner.png",
+    "toy_type": "left-spinner",
+    "action_number": 1,
+    "action": "right-spinner",
+    "success": false,
+    "rt": 6691
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cube-spinner.png",
+    "toy_type": "left-spinner",
+    "action_number": 2,
+    "action": "left-spinner",
+    "success": true,
+    "rt": 3061
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cube-spinner.png",
+    "toy_type": "left-spinner",
+    "action_number": 3,
+    "action": "left-spinner",
+    "success": true,
+    "rt": 3394
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 1,
+    "action": "left-button",
+    "success": false,
+    "rt": 1719
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 2,
+    "action": "right-button",
+    "success": true,
+    "rt": 1457
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 3,
+    "action": "right-button",
+    "success": true,
+    "rt": 1520
+   },
+   {
+    "trial_type": "final_toy_choice",
+    "toy": "tri-button.png",
+    "toy_type": "NA",
+    "action_number": "NA",
+    "action": "NA",
+    "success": "NA",
+    "rt": 21761,
+    "why_toy": "It most recently worked for me"
+   }
+  ],
+  "system": {
+   "Browser": "Chrome",
+   "OS": "Windows",
+   "screenH": 1080,
+   "screenW": 1920,
+   "ip_data": {
+    "ip": "2601:640:c600:9a76:91b9:ba34:cc:9c38",
+    "city": "Vallejo",
+    "region": "California",
+    "region_code": "CA",
+    "country": "US",
+    "country_name": "United States",
+    "continent_code": "NA",
+    "in_eu": false,
+    "postal": "94591",
+    "latitude": 38.1025,
+    "longitude": -122.2132,
+    "timezone": "America/Los_Angeles",
+    "utc_offset": "-0700",
+    "country_calling_code": "+1",
+    "currency": "USD",
+    "languages": "en-US,es-US,haw,fr",
+    "asn": "AS7922",
+    "org": "Comcast Cable Communications, LLC"
+   }
+  },
+  "goal_condition": "activation",
+  "social_condition": "no_social",
+  "subject_information": {
+   "language": "English",
+   "enjoyment": "Average",
+   "asses": "Yes",
+   "age": "45",
+   "gender": "Male",
+   "education": "Graduated High School",
+   "comments": "thank you have a fantastic day!"
+  },
+  "time_in_minutes": 2.0795666666666666
+ }
+}

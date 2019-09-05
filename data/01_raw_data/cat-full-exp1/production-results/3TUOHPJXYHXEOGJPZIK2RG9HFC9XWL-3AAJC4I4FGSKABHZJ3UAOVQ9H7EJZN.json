@@ -1,0 +1,116 @@
+{
+ "AssignmentId": "3AAJC4I4FGSKABHZJ3UAOVQ9H7EJZN",
+ "WorkerId": "8362eae2c31fa58dabd3ff6a0e8886f6",
+ "HITId": "3TUOHPJXYHXEOGJPZIK2RG9HFC9XWL",
+ "AssignmentStatus": "Approved",
+ "AutoApprovalTime": "2019-09-05T00:00:57.000Z",
+ "AcceptTime": "2019-09-04T23:55:22.000Z",
+ "SubmitTime": "2019-09-04T23:59:57.000Z",
+ "ApprovalTime": "2019-09-05T00:01:56.000Z",
+ "answers": {
+  "trials": [
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "left-lever",
+    "action_number": 1,
+    "action": "right-lever",
+    "success": false,
+    "rt": 3657
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "left-lever",
+    "action_number": 2,
+    "action": "left-lever",
+    "success": true,
+    "rt": 1740
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "left-lever",
+    "action_number": 3,
+    "action": "left-lever",
+    "success": true,
+    "rt": 1813
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 1,
+    "action": "left-spinner",
+    "success": false,
+    "rt": 1726
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 2,
+    "action": "right-spinner",
+    "success": true,
+    "rt": 1869
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 3,
+    "action": "right-spinner",
+    "success": true,
+    "rt": 1580
+   },
+   {
+    "trial_type": "final_toy_choice",
+    "toy": "cyl-lever.png",
+    "toy_type": "NA",
+    "action_number": "NA",
+    "action": "NA",
+    "success": "NA",
+    "rt": 11182,
+    "why_toy": "I know I can use the left lever"
+   }
+  ],
+  "system": {
+   "Browser": "Chrome",
+   "OS": "Mac",
+   "screenH": 800,
+   "screenW": 1280,
+   "ip_data": {
+    "ip": "2604:6000:1003:4350:f44e:6552:eb4a:cde6",
+    "city": "Rochester",
+    "region": "New York",
+    "region_code": "NY",
+    "country": "US",
+    "country_name": "United States",
+    "continent_code": "NA",
+    "in_eu": false,
+    "postal": "14618",
+    "latitude": 43.114,
+    "longitude": -77.5689,
+    "timezone": "America/New_York",
+    "utc_offset": "-0400",
+    "country_calling_code": "+1",
+    "currency": "USD",
+    "languages": "en-US,es-US,haw,fr",
+    "asn": "AS11351",
+    "org": "Charter Communications Inc"
+   }
+  },
+  "goal_condition": "activation",
+  "social_condition": "social",
+  "subject_information": {
+   "language": "english",
+   "enjoyment": "Average",
+   "asses": "Yes",
+   "age": "31",
+   "gender": "Female",
+   "education": "Hold a higher degree",
+   "comments": ""
+  },
+  "time_in_minutes": 3.255133333333333
+ }
+}

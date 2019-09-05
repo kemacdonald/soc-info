@@ -1,0 +1,116 @@
+{
+ "AssignmentId": "3TE3O857308B2OX021U53B2T6GQ2R9",
+ "WorkerId": "728550848bf99380943d42d8f64e5b2d",
+ "HITId": "3TUOHPJXYHXEOGJPZIK2RG9HFC9XWL",
+ "AssignmentStatus": "Approved",
+ "AutoApprovalTime": "2019-09-05T04:45:25.000Z",
+ "AcceptTime": "2019-09-05T04:40:08.000Z",
+ "SubmitTime": "2019-09-05T04:44:25.000Z",
+ "ApprovalTime": "2019-09-05T04:45:56.000Z",
+ "answers": {
+  "trials": [
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "right-lever",
+    "action_number": 1,
+    "action": "left-lever",
+    "success": false,
+    "rt": 6987
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "right-lever",
+    "action_number": 2,
+    "action": "right-lever",
+    "success": true,
+    "rt": 2934
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "right-lever",
+    "action_number": 3,
+    "action": "right-lever",
+    "success": true,
+    "rt": 2673
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "left-button",
+    "action_number": 1,
+    "action": "right-button",
+    "success": false,
+    "rt": 2327
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "left-button",
+    "action_number": 2,
+    "action": "left-button",
+    "success": true,
+    "rt": 1418
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "left-button",
+    "action_number": 3,
+    "action": "left-button",
+    "success": true,
+    "rt": 1322
+   },
+   {
+    "trial_type": "final_toy_choice",
+    "toy": "cyl-lever.png",
+    "toy_type": "NA",
+    "action_number": "NA",
+    "action": "NA",
+    "success": "NA",
+    "rt": 29137,
+    "why_toy": "I selected this toy because it has a good design and for sure Bob will like it."
+   }
+  ],
+  "system": {
+   "Browser": "Chrome",
+   "OS": "Windows",
+   "screenH": 900,
+   "screenW": 1600,
+   "ip_data": {
+    "ip": "139.59.106.252",
+    "city": "Singapore",
+    "region": null,
+    "region_code": null,
+    "country": "SG",
+    "country_name": "Singapore",
+    "continent_code": "AS",
+    "in_eu": false,
+    "postal": null,
+    "latitude": null,
+    "longitude": null,
+    "timezone": null,
+    "utc_offset": null,
+    "country_calling_code": "+65",
+    "currency": "SGD",
+    "languages": "cmn,en-SG,ms-SG,ta-SG,zh-SG",
+    "asn": "AS14061",
+    "org": "DigitalOcean, LLC"
+   }
+  },
+  "goal_condition": "no_goal",
+  "social_condition": "no_social",
+  "subject_information": {
+   "language": "english",
+   "enjoyment": "Better than average",
+   "asses": "Yes",
+   "age": "29",
+   "gender": "Male",
+   "education": "Graduated College",
+   "comments": "None so far."
+  },
+  "time_in_minutes": 4.22375
+ }
+}

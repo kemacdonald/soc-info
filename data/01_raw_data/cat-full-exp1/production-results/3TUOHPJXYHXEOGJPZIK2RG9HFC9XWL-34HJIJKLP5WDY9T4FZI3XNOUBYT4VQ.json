@@ -1,0 +1,96 @@
+{
+ "AssignmentId": "34HJIJKLP5WDY9T4FZI3XNOUBYT4VQ",
+ "WorkerId": "9b6a46ca175855c6f5236130590bccdc",
+ "HITId": "3TUOHPJXYHXEOGJPZIK2RG9HFC9XWL",
+ "AssignmentStatus": "Approved",
+ "AutoApprovalTime": "2019-09-04T20:23:13.000Z",
+ "AcceptTime": "2019-09-04T20:08:12.000Z",
+ "SubmitTime": "2019-09-04T20:22:13.000Z",
+ "ApprovalTime": "2019-09-04T20:23:56.000Z",
+ "answers": {
+  "trials": [
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "left-lever",
+    "action_number": 1,
+    "action": "right-lever",
+    "success": false,
+    "rt": 4061
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "left-lever",
+    "action_number": 2,
+    "action": "left-lever",
+    "success": true,
+    "rt": 3220
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "left-lever",
+    "action_number": 3,
+    "action": "left-lever",
+    "success": true,
+    "rt": 1343
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "left-button",
+    "action_number": 1,
+    "action": "right-button",
+    "success": false,
+    "rt": 1753
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "left-button",
+    "action_number": 2,
+    "action": "left-button",
+    "success": true,
+    "rt": 1457
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "left-button",
+    "action_number": 3,
+    "action": "left-button",
+    "success": true,
+    "rt": 1067
+   },
+   {
+    "trial_type": "final_toy_choice",
+    "toy": "cube-spinner.png",
+    "toy_type": "NA",
+    "action_number": "NA",
+    "action": "NA",
+    "success": "NA",
+    "rt": 26014,
+    "why_toy": "I didn't get to use it yet"
+   }
+  ],
+  "system": {
+   "Browser": "Chrome",
+   "OS": "Windows",
+   "screenH": 1440,
+   "screenW": 2560
+  },
+  "goal_condition": "learning",
+  "social_condition": "social",
+  "subject_information": {
+   "language": "English",
+   "enjoyment": "Better than average",
+   "asses": "Yes",
+   "age": "28",
+   "gender": "Male",
+   "education": "Some College",
+   "comments": "none"
+  },
+  "time_in_minutes": 2.07435
+ }
+}

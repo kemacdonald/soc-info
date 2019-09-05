@@ -1,0 +1,116 @@
+{
+ "AssignmentId": "3PWWM24LHSY5KJI43SO5CU7OGMT28K",
+ "WorkerId": "6e961f6eb4ff0864f8f78098aebf4612",
+ "HITId": "3TUOHPJXYHXEOGJPZIK2RG9HFC9XWL",
+ "AssignmentStatus": "Approved",
+ "AutoApprovalTime": "2019-09-04T19:55:32.000Z",
+ "AcceptTime": "2019-09-04T19:49:26.000Z",
+ "SubmitTime": "2019-09-04T19:54:32.000Z",
+ "ApprovalTime": "2019-09-04T19:55:56.000Z",
+ "answers": {
+  "trials": [
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "left-lever",
+    "action_number": 1,
+    "action": "right-lever",
+    "success": false,
+    "rt": 5632
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "left-lever",
+    "action_number": 2,
+    "action": "left-lever",
+    "success": true,
+    "rt": 4709
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "left-lever",
+    "action_number": 3,
+    "action": "left-lever",
+    "success": true,
+    "rt": 4456
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 1,
+    "action": "left-spinner",
+    "success": false,
+    "rt": 3950
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 2,
+    "action": "right-spinner",
+    "success": true,
+    "rt": 4061
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 3,
+    "action": "right-spinner",
+    "success": true,
+    "rt": 2485
+   },
+   {
+    "trial_type": "final_toy_choice",
+    "toy": "cyl-lever.png",
+    "toy_type": "NA",
+    "action_number": "NA",
+    "action": "NA",
+    "success": "NA",
+    "rt": 33111,
+    "why_toy": "because it worked for him before he left"
+   }
+  ],
+  "system": {
+   "Browser": "Chrome",
+   "OS": "Windows",
+   "screenH": 768,
+   "screenW": 1366,
+   "ip_data": {
+    "ip": "208.104.51.96",
+    "city": "Fort Mill",
+    "region": "South Carolina",
+    "region_code": "SC",
+    "country": "US",
+    "country_name": "United States",
+    "continent_code": "NA",
+    "in_eu": false,
+    "postal": "29708",
+    "latitude": 35.0502,
+    "longitude": -80.9908,
+    "timezone": "America/New_York",
+    "utc_offset": "-0400",
+    "country_calling_code": "+1",
+    "currency": "USD",
+    "languages": "en-US,es-US,haw,fr",
+    "asn": "AS14615",
+    "org": "Comporium, Inc"
+   }
+  },
+  "goal_condition": "presentation",
+  "social_condition": "social",
+  "subject_information": {
+   "language": "english",
+   "enjoyment": "Better than average",
+   "asses": "Yes",
+   "age": "42",
+   "gender": "Male",
+   "education": "Graduated College",
+   "comments": ""
+  },
+  "time_in_minutes": 4.16855
+ }
+}

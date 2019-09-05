@@ -1,0 +1,116 @@
+{
+ "AssignmentId": "3ZY8KE4ISJ3KNEG2DWPG0QPZ7QWQVF",
+ "WorkerId": "09e2fb6081c2113b0b273cf38837e733",
+ "HITId": "3TUOHPJXYHXEOGJPZIK2RG9HFC9XWL",
+ "AssignmentStatus": "Approved",
+ "AutoApprovalTime": "2019-09-04T18:55:21.000Z",
+ "AcceptTime": "2019-09-04T18:49:01.000Z",
+ "SubmitTime": "2019-09-04T18:54:21.000Z",
+ "ApprovalTime": "2019-09-04T18:55:56.000Z",
+ "answers": {
+  "trials": [
+   {
+    "trial_type": "activation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 1,
+    "action": "left-spinner",
+    "success": false,
+    "rt": 2321
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 2,
+    "action": "right-spinner",
+    "success": true,
+    "rt": 3614
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 3,
+    "action": "right-spinner",
+    "success": true,
+    "rt": 12128
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cyl-lever.png",
+    "toy_type": "left-lever",
+    "action_number": 1,
+    "action": "right-lever",
+    "success": false,
+    "rt": 1493
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cyl-lever.png",
+    "toy_type": "left-lever",
+    "action_number": 2,
+    "action": "left-lever",
+    "success": true,
+    "rt": 1600
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cyl-lever.png",
+    "toy_type": "left-lever",
+    "action_number": 3,
+    "action": "left-lever",
+    "success": true,
+    "rt": 3637
+   },
+   {
+    "trial_type": "final_toy_choice",
+    "toy": "cube-spinner.png",
+    "toy_type": "NA",
+    "action_number": "NA",
+    "action": "NA",
+    "success": "NA",
+    "rt": 11240,
+    "why_toy": "I like it because of the color"
+   }
+  ],
+  "system": {
+   "Browser": "Chrome",
+   "OS": "Windows",
+   "screenH": 864,
+   "screenW": 1536,
+   "ip_data": {
+    "ip": "157.131.123.139",
+    "city": "San Francisco",
+    "region": "California",
+    "region_code": "CA",
+    "country": "US",
+    "country_name": "United States",
+    "continent_code": "NA",
+    "in_eu": false,
+    "postal": "94115",
+    "latitude": 37.7825,
+    "longitude": -122.435,
+    "timezone": "America/Los_Angeles",
+    "utc_offset": "-0700",
+    "country_calling_code": "+1",
+    "currency": "USD",
+    "languages": "en-US,es-US,haw,fr",
+    "asn": "AS46375",
+    "org": "Sonic Telecom LLC"
+   }
+  },
+  "goal_condition": "activation",
+  "social_condition": "no_social",
+  "subject_information": {
+   "language": "English",
+   "enjoyment": "Average",
+   "asses": "Yes",
+   "age": "30",
+   "gender": "Male",
+   "education": "Graduated College",
+   "comments": ""
+  },
+  "time_in_minutes": 1.6222666666666667
+ }
+}

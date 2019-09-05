@@ -1,0 +1,116 @@
+{
+ "AssignmentId": "3ZOTGHDK5IB1AAMI4OS70YASTLKSO4",
+ "WorkerId": "8f0c9e1077aa1c75f43126a687ff8bec",
+ "HITId": "3TUOHPJXYHXEOGJPZIK2RG9HFC9XWL",
+ "AssignmentStatus": "Approved",
+ "AutoApprovalTime": "2019-09-04T19:44:14.000Z",
+ "AcceptTime": "2019-09-04T19:19:23.000Z",
+ "SubmitTime": "2019-09-04T19:43:14.000Z",
+ "ApprovalTime": "2019-09-04T19:44:56.000Z",
+ "answers": {
+  "trials": [
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "right-lever",
+    "action_number": 1,
+    "action": "left-lever",
+    "success": false,
+    "rt": 2523
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "right-lever",
+    "action_number": 2,
+    "action": "right-lever",
+    "success": true,
+    "rt": 1975
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "right-lever",
+    "action_number": 3,
+    "action": "right-lever",
+    "success": true,
+    "rt": 1783
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 1,
+    "action": "left-spinner",
+    "success": false,
+    "rt": 1943
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 2,
+    "action": "right-spinner",
+    "success": true,
+    "rt": 1033
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 3,
+    "action": "right-spinner",
+    "success": true,
+    "rt": 874
+   },
+   {
+    "trial_type": "final_toy_choice",
+    "toy": "cyl-lever.png",
+    "toy_type": "NA",
+    "action_number": "NA",
+    "action": "NA",
+    "success": "NA",
+    "rt": 24205,
+    "why_toy": "I know it most likely is always the right lever."
+   }
+  ],
+  "system": {
+   "Browser": "Chrome",
+   "OS": "Windows",
+   "screenH": 1080,
+   "screenW": 1920,
+   "ip_data": {
+    "ip": "2603:900b:a07:df30:101:4a6b:e56c:5121",
+    "city": "Land O' Lakes",
+    "region": "Florida",
+    "region_code": "FL",
+    "country": "US",
+    "country_name": "United States",
+    "continent_code": "NA",
+    "in_eu": false,
+    "postal": "34638",
+    "latitude": 28.2478,
+    "longitude": -82.4962,
+    "timezone": "America/New_York",
+    "utc_offset": "-0400",
+    "country_calling_code": "+1",
+    "currency": "USD",
+    "languages": "en-US,es-US,haw,fr",
+    "asn": "AS33363",
+    "org": "Charter Communications, Inc"
+   }
+  },
+  "goal_condition": "presentation",
+  "social_condition": "social",
+  "subject_information": {
+   "language": "English",
+   "enjoyment": "Average",
+   "asses": "Yes",
+   "age": "28",
+   "gender": "",
+   "education": "Graduated College",
+   "comments": "None, have a nice day!"
+  },
+  "time_in_minutes": 1.60255
+ }
+}

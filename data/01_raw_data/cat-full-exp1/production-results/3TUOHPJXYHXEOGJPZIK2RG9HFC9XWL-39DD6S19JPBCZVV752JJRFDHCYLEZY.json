@@ -1,0 +1,125 @@
+{
+ "AssignmentId": "39DD6S19JPBCZVV752JJRFDHCYLEZY",
+ "WorkerId": "9b91a47078990dd944ed439a1ac777bd",
+ "HITId": "3TUOHPJXYHXEOGJPZIK2RG9HFC9XWL",
+ "AssignmentStatus": "Approved",
+ "AutoApprovalTime": "2019-09-04T19:25:52.000Z",
+ "AcceptTime": "2019-09-04T19:19:56.000Z",
+ "SubmitTime": "2019-09-04T19:24:52.000Z",
+ "ApprovalTime": "2019-09-04T19:25:56.000Z",
+ "answers": {
+  "trials": [
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "right-lever",
+    "action_number": 1,
+    "action": "left-lever",
+    "success": false,
+    "rt": 3144
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "right-lever",
+    "action_number": 2,
+    "action": "right-lever",
+    "success": true,
+    "rt": 3412
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "right-lever",
+    "action_number": 3,
+    "action": "left-lever",
+    "success": false,
+    "rt": 2639
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "right-lever",
+    "action_number": 4,
+    "action": "right-lever",
+    "success": true,
+    "rt": 2005
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "left-spinner",
+    "action_number": 1,
+    "action": "right-spinner",
+    "success": false,
+    "rt": 2671
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "left-spinner",
+    "action_number": 2,
+    "action": "left-spinner",
+    "success": true,
+    "rt": 2111
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "left-spinner",
+    "action_number": 3,
+    "action": "left-spinner",
+    "success": true,
+    "rt": 2503
+   },
+   {
+    "trial_type": "final_toy_choice",
+    "toy": "tri-button.png",
+    "toy_type": "NA",
+    "action_number": "NA",
+    "action": "NA",
+    "success": "NA",
+    "rt": 10922,
+    "why_toy": "It's new"
+   }
+  ],
+  "system": {
+   "Browser": "Chrome",
+   "OS": "Windows",
+   "screenH": 768,
+   "screenW": 1360,
+   "ip_data": {
+    "ip": "208.118.194.225",
+    "city": "Smithville",
+    "region": "Tennessee",
+    "region_code": "TN",
+    "country": "US",
+    "country_name": "United States",
+    "continent_code": "NA",
+    "in_eu": false,
+    "postal": "37166",
+    "latitude": 35.9299,
+    "longitude": -85.8046,
+    "timezone": "America/Chicago",
+    "utc_offset": "-0500",
+    "country_calling_code": "+1",
+    "currency": "USD",
+    "languages": "en-US,es-US,haw,fr",
+    "asn": "AS12261",
+    "org": "DTC Communications, Inc."
+   }
+  },
+  "goal_condition": "activation",
+  "social_condition": "no_social",
+  "subject_information": {
+   "language": "English",
+   "enjoyment": "Average",
+   "asses": "Yes",
+   "age": "36",
+   "gender": "Female",
+   "education": "Some College",
+   "comments": ""
+  },
+  "time_in_minutes": 2.361466666666667
+ }
+}

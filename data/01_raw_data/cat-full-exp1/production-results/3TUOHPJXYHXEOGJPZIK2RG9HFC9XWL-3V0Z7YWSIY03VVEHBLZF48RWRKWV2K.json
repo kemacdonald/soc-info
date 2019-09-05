@@ -1,0 +1,96 @@
+{
+ "AssignmentId": "3V0Z7YWSIY03VVEHBLZF48RWRKWV2K",
+ "WorkerId": "5c8fe202d679eab4a50a4119a3fd7f97",
+ "HITId": "3TUOHPJXYHXEOGJPZIK2RG9HFC9XWL",
+ "AssignmentStatus": "Approved",
+ "AutoApprovalTime": "2019-09-04T20:48:26.000Z",
+ "AcceptTime": "2019-09-04T20:38:26.000Z",
+ "SubmitTime": "2019-09-04T20:47:26.000Z",
+ "ApprovalTime": "2019-09-04T20:48:56.000Z",
+ "answers": {
+  "trials": [
+   {
+    "trial_type": "activation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 1,
+    "action": "left-button",
+    "success": false,
+    "rt": 4109
+   },
+   {
+    "trial_type": "activation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 2,
+    "action": "right-button",
+    "success": true,
+    "rt": 13814
+   },
+   {
+    "trial_type": "activation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 3,
+    "action": "right-button",
+    "success": true,
+    "rt": 3105
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cyl-lever.png",
+    "toy_type": "left-lever",
+    "action_number": 1,
+    "action": "right-lever",
+    "success": false,
+    "rt": 1619
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cyl-lever.png",
+    "toy_type": "left-lever",
+    "action_number": 2,
+    "action": "left-lever",
+    "success": true,
+    "rt": 1624
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cyl-lever.png",
+    "toy_type": "left-lever",
+    "action_number": 3,
+    "action": "left-lever",
+    "success": true,
+    "rt": 9441
+   },
+   {
+    "trial_type": "final_toy_choice",
+    "toy": "cube-spinner.png",
+    "toy_type": "NA",
+    "action_number": "NA",
+    "action": "NA",
+    "success": "NA",
+    "rt": 15870,
+    "why_toy": "Its the best."
+   }
+  ],
+  "system": {
+   "Browser": "Chrome",
+   "OS": "Windows",
+   "screenH": 1080,
+   "screenW": 1920
+  },
+  "goal_condition": "learning",
+  "social_condition": "no_social",
+  "subject_information": {
+   "language": "English",
+   "enjoyment": "Average",
+   "asses": "No",
+   "age": "40",
+   "gender": "Female",
+   "education": "Graduated College",
+   "comments": ""
+  },
+  "time_in_minutes": 6.6806833333333335
+ }
+}

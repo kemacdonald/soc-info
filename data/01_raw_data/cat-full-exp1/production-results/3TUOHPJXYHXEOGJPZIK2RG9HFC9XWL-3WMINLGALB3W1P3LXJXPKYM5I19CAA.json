@@ -1,0 +1,116 @@
+{
+ "AssignmentId": "3WMINLGALB3W1P3LXJXPKYM5I19CAA",
+ "WorkerId": "4333c2be87c1c6c1f036314f81f43f38",
+ "HITId": "3TUOHPJXYHXEOGJPZIK2RG9HFC9XWL",
+ "AssignmentStatus": "Approved",
+ "AutoApprovalTime": "2019-09-04T20:21:36.000Z",
+ "AcceptTime": "2019-09-04T20:08:29.000Z",
+ "SubmitTime": "2019-09-04T20:20:36.000Z",
+ "ApprovalTime": "2019-09-04T20:21:56.000Z",
+ "answers": {
+  "trials": [
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "right-lever",
+    "action_number": 1,
+    "action": "left-lever",
+    "success": false,
+    "rt": 3718
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "right-lever",
+    "action_number": 2,
+    "action": "right-lever",
+    "success": true,
+    "rt": 3438
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "right-lever",
+    "action_number": 3,
+    "action": "right-lever",
+    "success": true,
+    "rt": 1769
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "left-button",
+    "action_number": 1,
+    "action": "right-button",
+    "success": false,
+    "rt": 1938
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "left-button",
+    "action_number": 2,
+    "action": "left-button",
+    "success": true,
+    "rt": 1847
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "left-button",
+    "action_number": 3,
+    "action": "left-button",
+    "success": true,
+    "rt": 1448
+   },
+   {
+    "trial_type": "final_toy_choice",
+    "toy": "tri-button.png",
+    "toy_type": "NA",
+    "action_number": "NA",
+    "action": "NA",
+    "success": "NA",
+    "rt": 34033,
+    "why_toy": "I know which side to use, and I know Bob hasn't seen me use it yet"
+   }
+  ],
+  "system": {
+   "Browser": "Chrome",
+   "OS": "Windows",
+   "screenH": 1080,
+   "screenW": 1920,
+   "ip_data": {
+    "ip": "108.51.169.16",
+    "city": "College Park",
+    "region": "Maryland",
+    "region_code": "MD",
+    "country": "US",
+    "country_name": "United States",
+    "continent_code": "NA",
+    "in_eu": false,
+    "postal": "20740",
+    "latitude": 38.9965,
+    "longitude": -76.934,
+    "timezone": "America/New_York",
+    "utc_offset": "-0400",
+    "country_calling_code": "+1",
+    "currency": "USD",
+    "languages": "en-US,es-US,haw,fr",
+    "asn": "AS701",
+    "org": "MCI Communications Services, Inc. d/b/a Verizon Business"
+   }
+  },
+  "goal_condition": "presentation",
+  "social_condition": "no_social",
+  "subject_information": {
+   "language": "English",
+   "enjoyment": "Average",
+   "asses": "Yes",
+   "age": "28",
+   "gender": "Male",
+   "education": "Some College",
+   "comments": ""
+  },
+  "time_in_minutes": 3.209033333333333
+ }
+}

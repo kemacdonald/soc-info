@@ -1,0 +1,116 @@
+{
+ "AssignmentId": "3YDGXNSEOZUFNXXR767T594M00K48D",
+ "WorkerId": "a083c421c0ec54c742739f9b71e61554",
+ "HITId": "3TUOHPJXYHXEOGJPZIK2RG9HFC9XWL",
+ "AssignmentStatus": "Approved",
+ "AutoApprovalTime": "2019-09-04T19:27:36.000Z",
+ "AcceptTime": "2019-09-04T19:18:20.000Z",
+ "SubmitTime": "2019-09-04T19:26:36.000Z",
+ "ApprovalTime": "2019-09-04T19:27:56.000Z",
+ "answers": {
+  "trials": [
+   {
+    "trial_type": "activation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 1,
+    "action": "left-spinner",
+    "success": false,
+    "rt": 4766
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 2,
+    "action": "right-spinner",
+    "success": true,
+    "rt": 2750
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 3,
+    "action": "right-spinner",
+    "success": true,
+    "rt": 5036
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 1,
+    "action": "left-button",
+    "success": false,
+    "rt": 4157
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 2,
+    "action": "right-button",
+    "success": true,
+    "rt": 2381
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 3,
+    "action": "right-button",
+    "success": true,
+    "rt": 3327
+   },
+   {
+    "trial_type": "final_toy_choice",
+    "toy": "cube-spinner.png",
+    "toy_type": "NA",
+    "action_number": "NA",
+    "action": "NA",
+    "success": "NA",
+    "rt": 40358,
+    "why_toy": "I like this toy color"
+   }
+  ],
+  "system": {
+   "Browser": "Chrome",
+   "OS": "Windows",
+   "screenH": 768,
+   "screenW": 1364,
+   "ip_data": {
+    "ip": "2604:6600:2002:2:f8ab:3836:4e98:ebc1",
+    "city": "Coventry",
+    "region": "England",
+    "region_code": "ENG",
+    "country": "GB",
+    "country_name": "United Kingdom",
+    "continent_code": "EU",
+    "in_eu": true,
+    "postal": "CV5",
+    "latitude": 52.4214,
+    "longitude": -1.5674,
+    "timezone": "Europe/London",
+    "utc_offset": "+0100",
+    "country_calling_code": "+44",
+    "currency": "GBP",
+    "languages": "en-GB,cy-GB,gd",
+    "asn": "AS40676",
+    "org": "Psychz Networks"
+   }
+  },
+  "goal_condition": "activation",
+  "social_condition": "no_social",
+  "subject_information": {
+   "language": "English",
+   "enjoyment": "Better than average",
+   "asses": "Yes",
+   "age": "25",
+   "gender": "Male",
+   "education": "Graduated College",
+   "comments": "Interesting survey"
+  },
+  "time_in_minutes": 7.2355
+ }
+}

@@ -1,0 +1,114 @@
+{
+ "AssignmentId": "3NL0RFNU0FNZIYZSGV4WVEDDV07K45",
+ "WorkerId": "1ea65a1e730a1e3c5ace0ffc599f5860",
+ "HITId": "3TUOHPJXYHXEOGJPZIK2RG9HFC9XWL",
+ "AssignmentStatus": "Approved",
+ "AutoApprovalTime": "2019-09-04T18:53:17.000Z",
+ "AcceptTime": "2019-09-04T18:48:39.000Z",
+ "SubmitTime": "2019-09-04T18:52:17.000Z",
+ "ApprovalTime": "2019-09-04T18:53:56.000Z",
+ "answers": {
+  "trials": [
+   {
+    "trial_type": "activation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 1,
+    "action": "left-button",
+    "success": false,
+    "rt": 6049
+   },
+   {
+    "trial_type": "activation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 2,
+    "action": "left-button",
+    "success": false,
+    "rt": 4620
+   },
+   {
+    "trial_type": "activation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 3,
+    "action": "right-button",
+    "success": true,
+    "rt": 1423
+   },
+   {
+    "trial_type": "activation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 4,
+    "action": "left-button",
+    "success": false,
+    "rt": 7681
+   },
+   {
+    "trial_type": "activation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 5,
+    "action": "right-button",
+    "success": true,
+    "rt": 945
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "left-spinner",
+    "action_number": 1,
+    "action": "right-spinner",
+    "success": false,
+    "rt": 2263
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "left-spinner",
+    "action_number": 2,
+    "action": "left-spinner",
+    "success": true,
+    "rt": 15842
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "left-spinner",
+    "action_number": 3,
+    "action": "left-spinner",
+    "success": true,
+    "rt": 6364
+   },
+   {
+    "trial_type": "final_toy_choice",
+    "toy": "tri-button.png",
+    "toy_type": "NA",
+    "action_number": "NA",
+    "action": "NA",
+    "success": "NA",
+    "rt": 36539,
+    "why_toy": "I like the look of it and the 2 sides can be speakers"
+   }
+  ],
+  "system": {
+   "Browser": "Chrome",
+   "OS": "Windows",
+   "screenH": 1440,
+   "screenW": 3440
+  },
+  "goal_condition": "activation",
+  "social_condition": "social",
+  "subject_information": {
+   "language": "English",
+   "enjoyment": "Better than average",
+   "asses": "No",
+   "age": "32",
+   "gender": "Male",
+   "education": "Graduated College",
+   "comments": ""
+  },
+  "time_in_minutes": 3.5661666666666667
+ }
+}

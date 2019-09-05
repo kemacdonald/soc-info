@@ -1,0 +1,116 @@
+{
+ "AssignmentId": "3Y5140Z9DXGU1WVNECB8LW9VUU5IPE",
+ "WorkerId": "c521576efe8d293318d5fa41cc2940fd",
+ "HITId": "3TUOHPJXYHXEOGJPZIK2RG9HFC9XWL",
+ "AssignmentStatus": "Approved",
+ "AutoApprovalTime": "2019-09-05T06:25:30.000Z",
+ "AcceptTime": "2019-09-05T06:05:21.000Z",
+ "SubmitTime": "2019-09-05T06:24:30.000Z",
+ "ApprovalTime": "2019-09-05T06:25:58.000Z",
+ "answers": {
+  "trials": [
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "right-lever",
+    "action_number": 1,
+    "action": "left-lever",
+    "success": false,
+    "rt": 4030
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "right-lever",
+    "action_number": 2,
+    "action": "right-lever",
+    "success": true,
+    "rt": 3506
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "right-lever",
+    "action_number": 3,
+    "action": "right-lever",
+    "success": true,
+    "rt": 4425
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 1,
+    "action": "left-button",
+    "success": false,
+    "rt": 2366
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 2,
+    "action": "right-button",
+    "success": true,
+    "rt": 1973
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 3,
+    "action": "right-button",
+    "success": true,
+    "rt": 1638
+   },
+   {
+    "trial_type": "final_toy_choice",
+    "toy": "cube-spinner.png",
+    "toy_type": "NA",
+    "action_number": "NA",
+    "action": "NA",
+    "success": "NA",
+    "rt": 94503,
+    "why_toy": "It was the only toy that I had not tried and I wanted to test my theory about all of the toys - i.e. that music only played when the right side was manipulated."
+   }
+  ],
+  "system": {
+   "Browser": "Chrome",
+   "OS": "Windows",
+   "screenH": 768,
+   "screenW": 1366,
+   "ip_data": {
+    "ip": "108.2.212.101",
+    "city": "Doylestown",
+    "region": "Pennsylvania",
+    "region_code": "PA",
+    "country": "US",
+    "country_name": "United States",
+    "continent_code": "NA",
+    "in_eu": false,
+    "postal": "18901",
+    "latitude": 40.3061,
+    "longitude": -75.1483,
+    "timezone": "America/New_York",
+    "utc_offset": "-0400",
+    "country_calling_code": "+1",
+    "currency": "USD",
+    "languages": "en-US,es-US,haw,fr",
+    "asn": "AS701",
+    "org": "MCI Communications Services, Inc. d/b/a Verizon Business"
+   }
+  },
+  "goal_condition": "learning",
+  "social_condition": "no_social",
+  "subject_information": {
+   "language": "English",
+   "enjoyment": "Better than average",
+   "asses": "Yes",
+   "age": "43",
+   "gender": "Female",
+   "education": "Graduated College",
+   "comments": ""
+  },
+  "time_in_minutes": 3.5372333333333335
+ }
+}

@@ -1,0 +1,116 @@
+{
+ "AssignmentId": "3S0TNUHWKTISNTGK0H8M8DYSDD6D8S",
+ "WorkerId": "0d0e984e632e4d0d77dac7ce800607f3",
+ "HITId": "3TUOHPJXYHXEOGJPZIK2RG9HFC9XWL",
+ "AssignmentStatus": "Approved",
+ "AutoApprovalTime": "2019-09-04T18:58:48.000Z",
+ "AcceptTime": "2019-09-04T18:48:39.000Z",
+ "SubmitTime": "2019-09-04T18:57:48.000Z",
+ "ApprovalTime": "2019-09-04T18:58:56.000Z",
+ "answers": {
+  "trials": [
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "right-lever",
+    "action_number": 1,
+    "action": "left-lever",
+    "success": false,
+    "rt": 3873
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "right-lever",
+    "action_number": 2,
+    "action": "right-lever",
+    "success": true,
+    "rt": 2874
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "right-lever",
+    "action_number": 3,
+    "action": "right-lever",
+    "success": true,
+    "rt": 1288
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "left-spinner",
+    "action_number": 1,
+    "action": "right-spinner",
+    "success": false,
+    "rt": 2874
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "left-spinner",
+    "action_number": 2,
+    "action": "left-spinner",
+    "success": true,
+    "rt": 1086
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "left-spinner",
+    "action_number": 3,
+    "action": "left-spinner",
+    "success": true,
+    "rt": 977
+   },
+   {
+    "trial_type": "final_toy_choice",
+    "toy": "cyl-lever.png",
+    "toy_type": "NA",
+    "action_number": "NA",
+    "action": "NA",
+    "success": "NA",
+    "rt": 24052,
+    "why_toy": "I already know which lever will play the music from testing."
+   }
+  ],
+  "system": {
+   "Browser": "Chrome",
+   "OS": "Windows",
+   "screenH": 900,
+   "screenW": 1600,
+   "ip_data": {
+    "ip": "108.87.124.111",
+    "city": "Sacramento",
+    "region": "California",
+    "region_code": "CA",
+    "country": "US",
+    "country_name": "United States",
+    "continent_code": "NA",
+    "in_eu": false,
+    "postal": "95864",
+    "latitude": 38.5824,
+    "longitude": -121.3736,
+    "timezone": "America/Los_Angeles",
+    "utc_offset": "-0700",
+    "country_calling_code": "+1",
+    "currency": "USD",
+    "languages": "en-US,es-US,haw,fr",
+    "asn": "AS7018",
+    "org": "AT&T Services, Inc."
+   }
+  },
+  "goal_condition": "activation",
+  "social_condition": "no_social",
+  "subject_information": {
+   "language": "English",
+   "enjoyment": "Better than average",
+   "asses": "Yes",
+   "age": "25",
+   "gender": "Male",
+   "education": "Graduated College",
+   "comments": ""
+  },
+  "time_in_minutes": 8.841133333333334
+ }
+}

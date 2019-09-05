@@ -1,0 +1,96 @@
+{
+ "AssignmentId": "3BDCF01OGXUQ0BVUQ244Q3UZF1HYLD",
+ "WorkerId": "edfdc4bbb7a601c81ec42e7816c280e5",
+ "HITId": "3TUOHPJXYHXEOGJPZIK2RG9HFC9XWL",
+ "AssignmentStatus": "Approved",
+ "AutoApprovalTime": "2019-09-04T19:21:52.000Z",
+ "AcceptTime": "2019-09-04T19:18:13.000Z",
+ "SubmitTime": "2019-09-04T19:20:52.000Z",
+ "ApprovalTime": "2019-09-04T19:21:56.000Z",
+ "answers": {
+  "trials": [
+   {
+    "trial_type": "activation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 1,
+    "action": "left-button",
+    "success": false,
+    "rt": 4093
+   },
+   {
+    "trial_type": "activation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 2,
+    "action": "right-button",
+    "success": true,
+    "rt": 3381
+   },
+   {
+    "trial_type": "activation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 3,
+    "action": "right-button",
+    "success": true,
+    "rt": 2374
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 1,
+    "action": "left-spinner",
+    "success": false,
+    "rt": 3707
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 2,
+    "action": "right-spinner",
+    "success": true,
+    "rt": 2916
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 3,
+    "action": "right-spinner",
+    "success": true,
+    "rt": 2430
+   },
+   {
+    "trial_type": "final_toy_choice",
+    "toy": "tri-button.png",
+    "toy_type": "NA",
+    "action_number": "NA",
+    "action": "NA",
+    "success": "NA",
+    "rt": 24572,
+    "why_toy": "because in theory i know which button will make music"
+   }
+  ],
+  "system": {
+   "Browser": "Chrome",
+   "OS": "Windows",
+   "screenH": 864,
+   "screenW": 1536
+  },
+  "goal_condition": "activation",
+  "social_condition": "social",
+  "subject_information": {
+   "language": "english",
+   "enjoyment": "Average",
+   "asses": "Yes",
+   "age": "35",
+   "gender": "Male",
+   "education": "Some College",
+   "comments": ""
+  },
+  "time_in_minutes": 2.0235333333333334
+ }
+}

@@ -1,0 +1,116 @@
+{
+ "AssignmentId": "37TRT2X24QROSDEJDPE72DJ6Q36JBT",
+ "WorkerId": "a6d9698ebbcc9a7f54b5a0983a6aaf95",
+ "HITId": "3TUOHPJXYHXEOGJPZIK2RG9HFC9XWL",
+ "AssignmentStatus": "Approved",
+ "AutoApprovalTime": "2019-09-04T20:43:36.000Z",
+ "AcceptTime": "2019-09-04T20:39:45.000Z",
+ "SubmitTime": "2019-09-04T20:42:36.000Z",
+ "ApprovalTime": "2019-09-04T20:43:56.000Z",
+ "answers": {
+  "trials": [
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "right-lever",
+    "action_number": 1,
+    "action": "left-lever",
+    "success": false,
+    "rt": 4386
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "right-lever",
+    "action_number": 2,
+    "action": "right-lever",
+    "success": true,
+    "rt": 3920
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "right-lever",
+    "action_number": 3,
+    "action": "right-lever",
+    "success": true,
+    "rt": 2274
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "left-button",
+    "action_number": 1,
+    "action": "right-button",
+    "success": false,
+    "rt": 2729
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "left-button",
+    "action_number": 2,
+    "action": "left-button",
+    "success": true,
+    "rt": 2432
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "left-button",
+    "action_number": 3,
+    "action": "left-button",
+    "success": true,
+    "rt": 2069
+   },
+   {
+    "trial_type": "final_toy_choice",
+    "toy": "cube-spinner.png",
+    "toy_type": "NA",
+    "action_number": "NA",
+    "action": "NA",
+    "success": "NA",
+    "rt": 39812,
+    "why_toy": "This toy is the last one left to learn about, and I want to learn it so that I may earn the 10 cent bonus."
+   }
+  ],
+  "system": {
+   "Browser": "Firefox",
+   "OS": "Windows",
+   "screenH": 768,
+   "screenW": 1366,
+   "ip_data": {
+    "ip": "98.4.26.222",
+    "city": "Lockport",
+    "region": "New York",
+    "region_code": "NY",
+    "country": "US",
+    "country_name": "United States",
+    "continent_code": "NA",
+    "in_eu": false,
+    "postal": "14094",
+    "latitude": 43.1612,
+    "longitude": -78.6946,
+    "timezone": "America/New_York",
+    "utc_offset": "-0400",
+    "country_calling_code": "+1",
+    "currency": "USD",
+    "languages": "en-US,es-US,haw,fr",
+    "asn": "AS11351",
+    "org": "Charter Communications Inc"
+   }
+  },
+  "goal_condition": "learning",
+  "social_condition": "no_social",
+  "subject_information": {
+   "language": "English",
+   "enjoyment": "Better than average",
+   "asses": "Yes",
+   "age": "34",
+   "gender": "Male",
+   "education": "Graduated College",
+   "comments": "no issues"
+  },
+  "time_in_minutes": 2.480383333333333
+ }
+}

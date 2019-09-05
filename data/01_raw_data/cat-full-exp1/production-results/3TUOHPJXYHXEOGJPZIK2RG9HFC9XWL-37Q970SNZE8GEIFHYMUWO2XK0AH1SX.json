@@ -1,0 +1,116 @@
+{
+ "AssignmentId": "37Q970SNZE8GEIFHYMUWO2XK0AH1SX",
+ "WorkerId": "aef4544f38c3a4e93562eb078f76d25b",
+ "HITId": "3TUOHPJXYHXEOGJPZIK2RG9HFC9XWL",
+ "AssignmentStatus": "Approved",
+ "AutoApprovalTime": "2019-09-04T19:41:37.000Z",
+ "AcceptTime": "2019-09-04T19:18:36.000Z",
+ "SubmitTime": "2019-09-04T19:40:37.000Z",
+ "ApprovalTime": "2019-09-04T19:41:56.000Z",
+ "answers": {
+  "trials": [
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "left-lever",
+    "action_number": 1,
+    "action": "right-lever",
+    "success": false,
+    "rt": 7242
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "left-lever",
+    "action_number": 2,
+    "action": "left-lever",
+    "success": true,
+    "rt": 3771
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "left-lever",
+    "action_number": 3,
+    "action": "left-lever",
+    "success": true,
+    "rt": 4053
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "left-button",
+    "action_number": 1,
+    "action": "right-button",
+    "success": false,
+    "rt": 3364
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "left-button",
+    "action_number": 2,
+    "action": "left-button",
+    "success": true,
+    "rt": 2221
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "left-button",
+    "action_number": 3,
+    "action": "left-button",
+    "success": true,
+    "rt": 3536
+   },
+   {
+    "trial_type": "final_toy_choice",
+    "toy": "cube-spinner.png",
+    "toy_type": "NA",
+    "action_number": "NA",
+    "action": "NA",
+    "success": "NA",
+    "rt": 26822,
+    "why_toy": "I did not tried this toy"
+   }
+  ],
+  "system": {
+   "Browser": "Chrome",
+   "OS": "Windows",
+   "screenH": 900,
+   "screenW": 1440,
+   "ip_data": {
+    "ip": "42.109.151.213",
+    "city": "Mumbai",
+    "region": "Maharashtra",
+    "region_code": "MH",
+    "country": "IN",
+    "country_name": "India",
+    "continent_code": "AS",
+    "in_eu": false,
+    "postal": "400026",
+    "latitude": 18.9878,
+    "longitude": 72.8364,
+    "timezone": "Asia/Kolkata",
+    "utc_offset": "+0530",
+    "country_calling_code": "+91",
+    "currency": "INR",
+    "languages": "en-IN,hi,bn,te,mr,ta,ur,gu,kn,ml,or,pa,as,bh,sat,ks,ne,sd,kok,doi,mni,sit,sa,fr,lus,inc",
+    "asn": "AS38266",
+    "org": "Vodafone India Ltd."
+   }
+  },
+  "goal_condition": "presentation",
+  "social_condition": "social",
+  "subject_information": {
+   "language": "English",
+   "enjoyment": "Better than average",
+   "asses": "Yes",
+   "age": "31",
+   "gender": "Male",
+   "education": "Graduated College",
+   "comments": "None"
+  },
+  "time_in_minutes": 4.81565
+ }
+}

@@ -1,0 +1,116 @@
+{
+ "AssignmentId": "3B4YI393V9WG82EBB59GK3KTQA1SSF",
+ "WorkerId": "cb8724f5dd1f4a9cd9cabb26cccc61fb",
+ "HITId": "3TUOHPJXYHXEOGJPZIK2RG9HFC9XWL",
+ "AssignmentStatus": "Approved",
+ "AutoApprovalTime": "2019-09-04T20:10:58.000Z",
+ "AcceptTime": "2019-09-04T20:08:11.000Z",
+ "SubmitTime": "2019-09-04T20:09:58.000Z",
+ "ApprovalTime": "2019-09-04T20:11:56.000Z",
+ "answers": {
+  "trials": [
+   {
+    "trial_type": "activation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 1,
+    "action": "left-button",
+    "success": false,
+    "rt": 3008
+   },
+   {
+    "trial_type": "activation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 2,
+    "action": "right-button",
+    "success": true,
+    "rt": 2098
+   },
+   {
+    "trial_type": "activation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 3,
+    "action": "right-button",
+    "success": true,
+    "rt": 1372
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 1,
+    "action": "left-spinner",
+    "success": false,
+    "rt": 1292
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 2,
+    "action": "right-spinner",
+    "success": true,
+    "rt": 1245
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 3,
+    "action": "right-spinner",
+    "success": true,
+    "rt": 2477
+   },
+   {
+    "trial_type": "final_toy_choice",
+    "toy": "cube-spinner.png",
+    "toy_type": "NA",
+    "action_number": "NA",
+    "action": "NA",
+    "success": "NA",
+    "rt": 18255,
+    "why_toy": "just picked random"
+   }
+  ],
+  "system": {
+   "Browser": "Chrome",
+   "OS": "Mac",
+   "screenH": 1080,
+   "screenW": 1920,
+   "ip_data": {
+    "ip": "173.171.111.154",
+    "city": "Davenport",
+    "region": "Florida",
+    "region_code": "FL",
+    "country": "US",
+    "country_name": "United States",
+    "continent_code": "NA",
+    "in_eu": false,
+    "postal": "33837",
+    "latitude": 28.1951,
+    "longitude": -81.6062,
+    "timezone": "America/New_York",
+    "utc_offset": "-0400",
+    "country_calling_code": "+1",
+    "currency": "USD",
+    "languages": "en-US,es-US,haw,fr",
+    "asn": "AS33363",
+    "org": "Charter Communications, Inc"
+   }
+  },
+  "goal_condition": "no_goal",
+  "social_condition": "social",
+  "subject_information": {
+   "language": "english",
+   "enjoyment": "Better than average",
+   "asses": "Yes",
+   "age": "23",
+   "gender": "Female",
+   "education": "Some College",
+   "comments": ""
+  },
+  "time_in_minutes": 1.2900166666666666
+ }
+}

@@ -1,0 +1,116 @@
+{
+ "AssignmentId": "3DEL4X4EL6LL05CJ4L7S1XPMMARYXZ",
+ "WorkerId": "6f5bd41d07e13d49b1039019772b559e",
+ "HITId": "3TUOHPJXYHXEOGJPZIK2RG9HFC9XWL",
+ "AssignmentStatus": "Approved",
+ "AutoApprovalTime": "2019-09-04T19:45:07.000Z",
+ "AcceptTime": "2019-09-04T19:18:23.000Z",
+ "SubmitTime": "2019-09-04T19:44:07.000Z",
+ "ApprovalTime": "2019-09-04T19:45:56.000Z",
+ "answers": {
+  "trials": [
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "right-lever",
+    "action_number": 1,
+    "action": "left-lever",
+    "success": false,
+    "rt": 4171
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "right-lever",
+    "action_number": 2,
+    "action": "right-lever",
+    "success": true,
+    "rt": 2141
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "right-lever",
+    "action_number": 3,
+    "action": "right-lever",
+    "success": true,
+    "rt": 3561
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 1,
+    "action": "left-button",
+    "success": false,
+    "rt": 2394
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 2,
+    "action": "right-button",
+    "success": true,
+    "rt": 1567
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 3,
+    "action": "right-button",
+    "success": true,
+    "rt": 2327
+   },
+   {
+    "trial_type": "final_toy_choice",
+    "toy": "cyl-lever.png",
+    "toy_type": "NA",
+    "action_number": "NA",
+    "action": "NA",
+    "success": "NA",
+    "rt": 12313,
+    "why_toy": "I enjoy the shape and color"
+   }
+  ],
+  "system": {
+   "Browser": "Chrome",
+   "OS": "Windows",
+   "screenH": 768,
+   "screenW": 1366,
+   "ip_data": {
+    "ip": "24.145.18.116",
+    "city": "Hollidaysburg",
+    "region": "Pennsylvania",
+    "region_code": "PA",
+    "country": "US",
+    "country_name": "United States",
+    "continent_code": "NA",
+    "in_eu": false,
+    "postal": "16648",
+    "latitude": 40.4387,
+    "longitude": -78.3686,
+    "timezone": "America/New_York",
+    "utc_offset": "-0400",
+    "country_calling_code": "+1",
+    "currency": "USD",
+    "languages": "en-US,es-US,haw,fr",
+    "asn": "AS11776",
+    "org": "Atlantic Broadband Finance, LLC"
+   }
+  },
+  "goal_condition": "learning",
+  "social_condition": "no_social",
+  "subject_information": {
+   "language": "english",
+   "enjoyment": "Better than average",
+   "asses": "Yes",
+   "age": "34",
+   "gender": "Male",
+   "education": "Graduated College",
+   "comments": ""
+  },
+  "time_in_minutes": 1.3852666666666666
+ }
+}

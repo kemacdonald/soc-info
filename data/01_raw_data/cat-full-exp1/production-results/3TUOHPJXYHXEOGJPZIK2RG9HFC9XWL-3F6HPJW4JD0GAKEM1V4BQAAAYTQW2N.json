@@ -1,0 +1,116 @@
+{
+ "AssignmentId": "3F6HPJW4JD0GAKEM1V4BQAAAYTQW2N",
+ "WorkerId": "dfe3a46d5edcf3e2721224663a5df132",
+ "HITId": "3TUOHPJXYHXEOGJPZIK2RG9HFC9XWL",
+ "AssignmentStatus": "Approved",
+ "AutoApprovalTime": "2019-09-04T19:25:25.000Z",
+ "AcceptTime": "2019-09-04T19:18:13.000Z",
+ "SubmitTime": "2019-09-04T19:24:25.000Z",
+ "ApprovalTime": "2019-09-04T19:25:56.000Z",
+ "answers": {
+  "trials": [
+   {
+    "trial_type": "activation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 1,
+    "action": "left-spinner",
+    "success": false,
+    "rt": 14564
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 2,
+    "action": "right-spinner",
+    "success": true,
+    "rt": 4838
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 3,
+    "action": "right-spinner",
+    "success": true,
+    "rt": 5987
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "left-button",
+    "action_number": 1,
+    "action": "right-button",
+    "success": false,
+    "rt": 6069
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "left-button",
+    "action_number": 2,
+    "action": "left-button",
+    "success": true,
+    "rt": 5092
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "left-button",
+    "action_number": 3,
+    "action": "left-button",
+    "success": true,
+    "rt": 3557
+   },
+   {
+    "trial_type": "final_toy_choice",
+    "toy": "cube-spinner.png",
+    "toy_type": "NA",
+    "action_number": "NA",
+    "action": "NA",
+    "success": "NA",
+    "rt": 56533,
+    "why_toy": "I know how to make it play music."
+   }
+  ],
+  "system": {
+   "Browser": "Chrome",
+   "OS": "Windows",
+   "screenH": 615,
+   "screenW": 1093,
+   "ip_data": {
+    "ip": "70.40.246.74",
+    "city": "Pulaski",
+    "region": "Wisconsin",
+    "region_code": "WI",
+    "country": "US",
+    "country_name": "United States",
+    "continent_code": "NA",
+    "in_eu": false,
+    "postal": "54162",
+    "latitude": 44.6611,
+    "longitude": -88.2634,
+    "timezone": "America/Chicago",
+    "utc_offset": "-0500",
+    "country_calling_code": "+1",
+    "currency": "USD",
+    "languages": "en-US,es-US,haw,fr",
+    "asn": "AS3663",
+    "org": "NetNet"
+   }
+  },
+  "goal_condition": "no_goal",
+  "social_condition": "social",
+  "subject_information": {
+   "language": "English",
+   "enjoyment": "Better than average",
+   "asses": "Yes",
+   "age": "60",
+   "gender": "Male",
+   "education": "Some College",
+   "comments": ""
+  },
+  "time_in_minutes": 5.86025
+ }
+}

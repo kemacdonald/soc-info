@@ -1,0 +1,124 @@
+{
+ "AssignmentId": "340UGXU9DY1CF7NJU59LARMOAC6VUV",
+ "WorkerId": "197e69e8d56a1656eb2a0f564666e96e",
+ "HITId": "3TUOHPJXYHXEOGJPZIK2RG9HFC9XWL",
+ "AssignmentStatus": "Submitted",
+ "AutoApprovalTime": "2019-09-05T00:04:01.000Z",
+ "AcceptTime": "2019-09-04T23:55:30.000Z",
+ "SubmitTime": "2019-09-05T00:03:01.000Z",
+ "answers": {
+  "trials": [
+   {
+    "trial_type": "activation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 1,
+    "action": "left-spinner",
+    "success": false,
+    "rt": 3732
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 2,
+    "action": "right-spinner",
+    "success": true,
+    "rt": 2054
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 3,
+    "action": "right-spinner",
+    "success": true,
+    "rt": 1383
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 1,
+    "action": "left-button",
+    "success": false,
+    "rt": 2373
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 2,
+    "action": "left-button",
+    "success": false,
+    "rt": 1110
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 3,
+    "action": "right-button",
+    "success": true,
+    "rt": 903
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 4,
+    "action": "right-button",
+    "success": true,
+    "rt": 1006
+   },
+   {
+    "trial_type": "final_toy_choice",
+    "toy": "cube-spinner.png",
+    "toy_type": "NA",
+    "action_number": "NA",
+    "action": "NA",
+    "success": "NA",
+    "rt": 22368,
+    "why_toy": "I know it will make noise if i click the right"
+   }
+  ],
+  "system": {
+   "Browser": "Chrome",
+   "OS": "Windows",
+   "screenH": 1080,
+   "screenW": 2560,
+   "ip_data": {
+    "ip": "2600:8804:1200:88d0:34d6:fe0d:489b:5840",
+    "city": "Omaha",
+    "region": "Nebraska",
+    "region_code": "NE",
+    "country": "US",
+    "country_name": "United States",
+    "continent_code": "NA",
+    "in_eu": false,
+    "postal": "68107",
+    "latitude": 41.2041,
+    "longitude": -95.9644,
+    "timezone": "America/Chicago",
+    "utc_offset": "-0500",
+    "country_calling_code": "+1",
+    "currency": "USD",
+    "languages": "en-US,es-US,haw,fr",
+    "asn": "AS22773",
+    "org": "Cox Communications Inc."
+   }
+  },
+  "goal_condition": "presentation",
+  "social_condition": "no_social",
+  "subject_information": {
+   "language": "English",
+   "enjoyment": "Better than average",
+   "asses": "Yes",
+   "age": "26",
+   "gender": "Male",
+   "education": "Some College",
+   "comments": "Thanks!"
+  },
+  "time_in_minutes": 1.7443833333333334
+ }
+}

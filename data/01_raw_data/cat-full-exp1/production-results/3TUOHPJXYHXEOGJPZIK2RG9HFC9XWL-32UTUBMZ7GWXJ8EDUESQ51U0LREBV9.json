@@ -1,0 +1,116 @@
+{
+ "AssignmentId": "32UTUBMZ7GWXJ8EDUESQ51U0LREBV9",
+ "WorkerId": "c9a2324d6015a9e55724944145ce0ecd",
+ "HITId": "3TUOHPJXYHXEOGJPZIK2RG9HFC9XWL",
+ "AssignmentStatus": "Approved",
+ "AutoApprovalTime": "2019-09-05T03:45:21.000Z",
+ "AcceptTime": "2019-09-05T03:42:18.000Z",
+ "SubmitTime": "2019-09-05T03:44:21.000Z",
+ "ApprovalTime": "2019-09-05T03:45:56.000Z",
+ "answers": {
+  "trials": [
+   {
+    "trial_type": "activation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 1,
+    "action": "left-spinner",
+    "success": false,
+    "rt": 4052
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 2,
+    "action": "right-spinner",
+    "success": true,
+    "rt": 5250
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 3,
+    "action": "right-spinner",
+    "success": true,
+    "rt": 2174
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 1,
+    "action": "left-button",
+    "success": false,
+    "rt": 2309
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 2,
+    "action": "right-button",
+    "success": true,
+    "rt": 2072
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 3,
+    "action": "right-button",
+    "success": true,
+    "rt": 1487
+   },
+   {
+    "trial_type": "final_toy_choice",
+    "toy": "cube-spinner.png",
+    "toy_type": "NA",
+    "action_number": "NA",
+    "action": "NA",
+    "success": "NA",
+    "rt": 25161,
+    "why_toy": "because I played with it before"
+   }
+  ],
+  "system": {
+   "Browser": "Chrome",
+   "OS": "Windows",
+   "screenH": 864,
+   "screenW": 1536,
+   "ip_data": {
+    "ip": "100.1.76.109",
+    "city": "Fairview",
+    "region": "New Jersey",
+    "region_code": "NJ",
+    "country": "US",
+    "country_name": "United States",
+    "continent_code": "NA",
+    "in_eu": false,
+    "postal": "07022",
+    "latitude": 40.817,
+    "longitude": -74,
+    "timezone": "America/New_York",
+    "utc_offset": "-0400",
+    "country_calling_code": "+1",
+    "currency": "USD",
+    "languages": "en-US,es-US,haw,fr",
+    "asn": "AS701",
+    "org": "MCI Communications Services, Inc. d/b/a Verizon Business"
+   }
+  },
+  "goal_condition": "activation",
+  "social_condition": "social",
+  "subject_information": {
+   "language": "english",
+   "enjoyment": "Average",
+   "asses": "Yes",
+   "age": "31",
+   "gender": "Male",
+   "education": "Graduated College",
+   "comments": "n.a"
+  },
+  "time_in_minutes": 2.0195333333333334
+ }
+}

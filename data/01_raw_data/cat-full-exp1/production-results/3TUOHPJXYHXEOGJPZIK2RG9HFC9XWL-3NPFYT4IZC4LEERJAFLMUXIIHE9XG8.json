@@ -1,0 +1,125 @@
+{
+ "AssignmentId": "3NPFYT4IZC4LEERJAFLMUXIIHE9XG8",
+ "WorkerId": "df8f6bb3949cc9d051ddd7fc8bfaaa61",
+ "HITId": "3TUOHPJXYHXEOGJPZIK2RG9HFC9XWL",
+ "AssignmentStatus": "Approved",
+ "AutoApprovalTime": "2019-09-04T20:30:51.000Z",
+ "AcceptTime": "2019-09-04T20:08:10.000Z",
+ "SubmitTime": "2019-09-04T20:29:51.000Z",
+ "ApprovalTime": "2019-09-04T20:30:56.000Z",
+ "answers": {
+  "trials": [
+   {
+    "trial_type": "activation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 1,
+    "action": "left-button",
+    "success": false,
+    "rt": 3031
+   },
+   {
+    "trial_type": "activation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 2,
+    "action": "right-button",
+    "success": true,
+    "rt": 4952
+   },
+   {
+    "trial_type": "activation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 3,
+    "action": "right-button",
+    "success": true,
+    "rt": 3600
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "left-spinner",
+    "action_number": 1,
+    "action": "right-spinner",
+    "success": false,
+    "rt": 2150
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "left-spinner",
+    "action_number": 2,
+    "action": "right-spinner",
+    "success": false,
+    "rt": 5557
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "left-spinner",
+    "action_number": 3,
+    "action": "left-spinner",
+    "success": true,
+    "rt": 2964
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "left-spinner",
+    "action_number": 4,
+    "action": "left-spinner",
+    "success": true,
+    "rt": 1836
+   },
+   {
+    "trial_type": "final_toy_choice",
+    "toy": "cyl-lever.png",
+    "toy_type": "NA",
+    "action_number": "NA",
+    "action": "NA",
+    "success": "NA",
+    "rt": 31074,
+    "why_toy": "To know how it works."
+   }
+  ],
+  "system": {
+   "Browser": "Chrome",
+   "OS": "Windows",
+   "screenH": 768,
+   "screenW": 1366,
+   "ip_data": {
+    "ip": "199.115.99.82",
+    "city": "Denver",
+    "region": "Colorado",
+    "region_code": "CO",
+    "country": "US",
+    "country_name": "United States",
+    "continent_code": "NA",
+    "in_eu": false,
+    "postal": "80202",
+    "latitude": 39.7501,
+    "longitude": -104.9957,
+    "timezone": "America/Denver",
+    "utc_offset": "-0600",
+    "country_calling_code": "+1",
+    "currency": "USD",
+    "languages": "en-US,es-US,haw,fr",
+    "asn": "AS46844",
+    "org": "Sharktech"
+   }
+  },
+  "goal_condition": "presentation",
+  "social_condition": "no_social",
+  "subject_information": {
+   "language": "English",
+   "enjoyment": "Better than average",
+   "asses": "Yes",
+   "age": "25",
+   "gender": "Male",
+   "education": "Graduated College",
+   "comments": ""
+  },
+  "time_in_minutes": 2.4795333333333334
+ }
+}

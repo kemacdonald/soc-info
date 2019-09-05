@@ -1,0 +1,116 @@
+{
+ "AssignmentId": "3DYGAII7PL87IUJ6RKGHUY0HL29PQ7",
+ "WorkerId": "3c4dc67e9dc6eded98faf4be91af4586",
+ "HITId": "3TUOHPJXYHXEOGJPZIK2RG9HFC9XWL",
+ "AssignmentStatus": "Approved",
+ "AutoApprovalTime": "2019-09-04T20:18:12.000Z",
+ "AcceptTime": "2019-09-04T20:08:05.000Z",
+ "SubmitTime": "2019-09-04T20:17:12.000Z",
+ "ApprovalTime": "2019-09-04T20:18:56.000Z",
+ "answers": {
+  "trials": [
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "right-lever",
+    "action_number": 1,
+    "action": "left-lever",
+    "success": false,
+    "rt": 3640
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "right-lever",
+    "action_number": 2,
+    "action": "right-lever",
+    "success": true,
+    "rt": 2471
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "right-lever",
+    "action_number": 3,
+    "action": "right-lever",
+    "success": true,
+    "rt": 1365
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "left-button",
+    "action_number": 1,
+    "action": "right-button",
+    "success": false,
+    "rt": 2684
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "left-button",
+    "action_number": 2,
+    "action": "left-button",
+    "success": true,
+    "rt": 1264
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "left-button",
+    "action_number": 3,
+    "action": "left-button",
+    "success": true,
+    "rt": 1389
+   },
+   {
+    "trial_type": "final_toy_choice",
+    "toy": "tri-button.png",
+    "toy_type": "NA",
+    "action_number": "NA",
+    "action": "NA",
+    "success": "NA",
+    "rt": 45414,
+    "why_toy": "Because I just used it last so Im more sure of being able to make it play."
+   }
+  ],
+  "system": {
+   "Browser": "Firefox",
+   "OS": "Windows",
+   "screenH": 1080,
+   "screenW": 1920,
+   "ip_data": {
+    "ip": "2603:9001:5915:f400:9926:ce1e:be4a:7c7d",
+    "city": "Port Orange",
+    "region": "Florida",
+    "region_code": "FL",
+    "country": "US",
+    "country_name": "United States",
+    "continent_code": "NA",
+    "in_eu": false,
+    "postal": "32129",
+    "latitude": 29.1372,
+    "longitude": -81.0241,
+    "timezone": "America/New_York",
+    "utc_offset": "-0400",
+    "country_calling_code": "+1",
+    "currency": "USD",
+    "languages": "en-US,es-US,haw,fr",
+    "asn": "AS33363",
+    "org": "Charter Communications, Inc"
+   }
+  },
+  "goal_condition": "activation",
+  "social_condition": "social",
+  "subject_information": {
+   "language": "english",
+   "enjoyment": "Better than average",
+   "asses": "Yes",
+   "age": "27",
+   "gender": "Female",
+   "education": "Graduated High School",
+   "comments": "none"
+  },
+  "time_in_minutes": 9.079716666666666
+ }
+}

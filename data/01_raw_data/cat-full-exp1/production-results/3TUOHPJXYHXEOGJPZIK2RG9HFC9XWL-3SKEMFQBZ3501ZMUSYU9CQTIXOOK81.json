@@ -1,0 +1,125 @@
+{
+ "AssignmentId": "3SKEMFQBZ3501ZMUSYU9CQTIXOOK81",
+ "WorkerId": "f961720d3e9180a9d0a79a91a974a333",
+ "HITId": "3TUOHPJXYHXEOGJPZIK2RG9HFC9XWL",
+ "AssignmentStatus": "Approved",
+ "AutoApprovalTime": "2019-09-05T04:53:40.000Z",
+ "AcceptTime": "2019-09-05T04:40:28.000Z",
+ "SubmitTime": "2019-09-05T04:52:40.000Z",
+ "ApprovalTime": "2019-09-05T04:54:01.000Z",
+ "answers": {
+  "trials": [
+   {
+    "trial_type": "activation",
+    "toy": "tri-button.png",
+    "toy_type": "left-button",
+    "action_number": 1,
+    "action": "right-button",
+    "success": false,
+    "rt": 8112
+   },
+   {
+    "trial_type": "activation",
+    "toy": "tri-button.png",
+    "toy_type": "left-button",
+    "action_number": 2,
+    "action": "right-button",
+    "success": false,
+    "rt": 15388
+   },
+   {
+    "trial_type": "activation",
+    "toy": "tri-button.png",
+    "toy_type": "left-button",
+    "action_number": 3,
+    "action": "left-button",
+    "success": true,
+    "rt": 2791
+   },
+   {
+    "trial_type": "activation",
+    "toy": "tri-button.png",
+    "toy_type": "left-button",
+    "action_number": 4,
+    "action": "left-button",
+    "success": true,
+    "rt": 5079
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "left-spinner",
+    "action_number": 1,
+    "action": "right-spinner",
+    "success": false,
+    "rt": 3711
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "left-spinner",
+    "action_number": 2,
+    "action": "left-spinner",
+    "success": true,
+    "rt": 2635
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "left-spinner",
+    "action_number": 3,
+    "action": "left-spinner",
+    "success": true,
+    "rt": 3111
+   },
+   {
+    "trial_type": "final_toy_choice",
+    "toy": "tri-button.png",
+    "toy_type": "NA",
+    "action_number": "NA",
+    "action": "NA",
+    "success": "NA",
+    "rt": 50013,
+    "why_toy": "so cute"
+   }
+  ],
+  "system": {
+   "Browser": "Chrome",
+   "OS": "Windows",
+   "screenH": 768,
+   "screenW": 1364,
+   "ip_data": {
+    "ip": "69.61.36.254",
+    "city": "Atlanta",
+    "region": "Georgia",
+    "region_code": "GA",
+    "country": "US",
+    "country_name": "United States",
+    "continent_code": "NA",
+    "in_eu": false,
+    "postal": "30303",
+    "latitude": 33.7553,
+    "longitude": -84.3886,
+    "timezone": "America/New_York",
+    "utc_offset": "-0400",
+    "country_calling_code": "+1",
+    "currency": "USD",
+    "languages": "en-US,es-US,haw,fr",
+    "asn": "AS22653",
+    "org": "Cyber Wurx LLC"
+   }
+  },
+  "goal_condition": "no_goal",
+  "social_condition": "no_social",
+  "subject_information": {
+   "language": "english",
+   "enjoyment": "Better than average",
+   "asses": "Yes",
+   "age": "25",
+   "gender": "Male",
+   "education": "Graduated College",
+   "comments": "good"
+  },
+  "time_in_minutes": 10.58395
+ }
+}

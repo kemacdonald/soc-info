@@ -1,0 +1,116 @@
+{
+ "AssignmentId": "3HFNH7HEMHE15HQ7O1QU0PMPKCRGQ1",
+ "WorkerId": "99c5eae61f7b1c7b18e9a9cf74bdbe61",
+ "HITId": "3TUOHPJXYHXEOGJPZIK2RG9HFC9XWL",
+ "AssignmentStatus": "Approved",
+ "AutoApprovalTime": "2019-09-05T03:47:06.000Z",
+ "AcceptTime": "2019-09-05T03:41:11.000Z",
+ "SubmitTime": "2019-09-05T03:46:06.000Z",
+ "ApprovalTime": "2019-09-05T03:47:56.000Z",
+ "answers": {
+  "trials": [
+   {
+    "trial_type": "activation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 1,
+    "action": "left-spinner",
+    "success": false,
+    "rt": 5438
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 2,
+    "action": "right-spinner",
+    "success": true,
+    "rt": 3940
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 3,
+    "action": "right-spinner",
+    "success": true,
+    "rt": 3390
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "left-button",
+    "action_number": 1,
+    "action": "right-button",
+    "success": false,
+    "rt": 4828
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "left-button",
+    "action_number": 2,
+    "action": "left-button",
+    "success": true,
+    "rt": 3380
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "left-button",
+    "action_number": 3,
+    "action": "left-button",
+    "success": true,
+    "rt": 3259
+   },
+   {
+    "trial_type": "final_toy_choice",
+    "toy": "cube-spinner.png",
+    "toy_type": "NA",
+    "action_number": "NA",
+    "action": "NA",
+    "success": "NA",
+    "rt": 120977,
+    "why_toy": "It was the first toy and he left for a bit after. I want him to think I know them all and have circled back around to doing them all again."
+   }
+  ],
+  "system": {
+   "Browser": "Chrome",
+   "OS": "Windows",
+   "screenH": 900,
+   "screenW": 1600,
+   "ip_data": {
+    "ip": "2600:1700:7970:e9f0:b907:4a7:e28f:403b",
+    "city": "Houston",
+    "region": "Texas",
+    "region_code": "TX",
+    "country": "US",
+    "country_name": "United States",
+    "continent_code": "NA",
+    "in_eu": false,
+    "postal": "77073",
+    "latitude": 30.0182,
+    "longitude": -95.4091,
+    "timezone": "America/Chicago",
+    "utc_offset": "-0500",
+    "country_calling_code": "+1",
+    "currency": "USD",
+    "languages": "en-US,es-US,haw,fr",
+    "asn": "AS7018",
+    "org": "AT&T Services, Inc."
+   }
+  },
+  "goal_condition": "presentation",
+  "social_condition": "social",
+  "subject_information": {
+   "language": "English",
+   "enjoyment": "Better than average",
+   "asses": "Yes",
+   "age": "52",
+   "gender": "Female",
+   "education": "Some College",
+   "comments": ""
+  },
+  "time_in_minutes": 4.420766666666666
+ }
+}

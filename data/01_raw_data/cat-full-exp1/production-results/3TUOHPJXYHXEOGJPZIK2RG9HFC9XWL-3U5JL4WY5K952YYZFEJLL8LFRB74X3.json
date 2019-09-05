@@ -1,0 +1,116 @@
+{
+ "AssignmentId": "3U5JL4WY5K952YYZFEJLL8LFRB74X3",
+ "WorkerId": "1d6c3be4cb75a920050a396c2b066316",
+ "HITId": "3TUOHPJXYHXEOGJPZIK2RG9HFC9XWL",
+ "AssignmentStatus": "Approved",
+ "AutoApprovalTime": "2019-09-05T04:44:36.000Z",
+ "AcceptTime": "2019-09-05T04:40:09.000Z",
+ "SubmitTime": "2019-09-05T04:43:36.000Z",
+ "ApprovalTime": "2019-09-05T04:44:56.000Z",
+ "answers": {
+  "trials": [
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "left-lever",
+    "action_number": 1,
+    "action": "right-lever",
+    "success": false,
+    "rt": 7500
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "left-lever",
+    "action_number": 2,
+    "action": "left-lever",
+    "success": true,
+    "rt": 4536
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "left-lever",
+    "action_number": 3,
+    "action": "left-lever",
+    "success": true,
+    "rt": 6526
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "left-button",
+    "action_number": 1,
+    "action": "right-button",
+    "success": false,
+    "rt": 3725
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "left-button",
+    "action_number": 2,
+    "action": "left-button",
+    "success": true,
+    "rt": 2550
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "left-button",
+    "action_number": 3,
+    "action": "left-button",
+    "success": true,
+    "rt": 2762
+   },
+   {
+    "trial_type": "final_toy_choice",
+    "toy": "cyl-lever.png",
+    "toy_type": "NA",
+    "action_number": "NA",
+    "action": "NA",
+    "success": "NA",
+    "rt": 46555,
+    "why_toy": "I know which side to use to play the toy."
+   }
+  ],
+  "system": {
+   "Browser": "Chrome",
+   "OS": "Windows",
+   "screenH": 1024,
+   "screenW": 1280,
+   "ip_data": {
+    "ip": "41.80.0.35",
+    "city": "Nairobi",
+    "region": "Nairobi Province",
+    "region_code": "30",
+    "country": "KE",
+    "country_name": "Kenya",
+    "continent_code": "AF",
+    "in_eu": false,
+    "postal": null,
+    "latitude": -1.2841,
+    "longitude": 36.8155,
+    "timezone": "Africa/Nairobi",
+    "utc_offset": "+0300",
+    "country_calling_code": "+254",
+    "currency": "KES",
+    "languages": "en-KE,sw-KE",
+    "asn": "AS33771",
+    "org": "SAFARICOM-LIMITED"
+   }
+  },
+  "goal_condition": "no_goal",
+  "social_condition": "no_social",
+  "subject_information": {
+   "language": "English",
+   "enjoyment": "Better than average",
+   "asses": "Yes",
+   "age": "34",
+   "gender": "Male",
+   "education": "Graduated College",
+   "comments": "none"
+  },
+  "time_in_minutes": 3.242166666666667
+ }
+}

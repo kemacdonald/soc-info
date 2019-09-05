@@ -1,0 +1,116 @@
+{
+ "AssignmentId": "3ITXP059PWJN9ZVLOB02S2T6UROJSQ",
+ "WorkerId": "5f391cb9520d5c8943cff9e8625156ca",
+ "HITId": "3TUOHPJXYHXEOGJPZIK2RG9HFC9XWL",
+ "AssignmentStatus": "Approved",
+ "AutoApprovalTime": "2019-09-04T20:54:30.000Z",
+ "AcceptTime": "2019-09-04T20:36:33.000Z",
+ "SubmitTime": "2019-09-04T20:53:30.000Z",
+ "ApprovalTime": "2019-09-04T20:54:56.000Z",
+ "answers": {
+  "trials": [
+   {
+    "trial_type": "activation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 1,
+    "action": "left-spinner",
+    "success": false,
+    "rt": 15104
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 2,
+    "action": "right-spinner",
+    "success": true,
+    "rt": 5709
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 3,
+    "action": "right-spinner",
+    "success": true,
+    "rt": 6573
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cyl-lever.png",
+    "toy_type": "left-lever",
+    "action_number": 1,
+    "action": "right-lever",
+    "success": false,
+    "rt": 6657
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cyl-lever.png",
+    "toy_type": "left-lever",
+    "action_number": 2,
+    "action": "left-lever",
+    "success": true,
+    "rt": 2415
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cyl-lever.png",
+    "toy_type": "left-lever",
+    "action_number": 3,
+    "action": "left-lever",
+    "success": true,
+    "rt": 1910
+   },
+   {
+    "trial_type": "final_toy_choice",
+    "toy": "cyl-lever.png",
+    "toy_type": "NA",
+    "action_number": "NA",
+    "action": "NA",
+    "success": "NA",
+    "rt": 62222,
+    "why_toy": "I know which switch will make the toy play music. "
+   }
+  ],
+  "system": {
+   "Browser": "Firefox",
+   "OS": "Windows",
+   "screenH": 1080,
+   "screenW": 1920,
+   "ip_data": {
+    "ip": "75.118.229.86",
+    "city": "Westland",
+    "region": "Michigan",
+    "region_code": "MI",
+    "country": "US",
+    "country_name": "United States",
+    "continent_code": "NA",
+    "in_eu": false,
+    "postal": "48186",
+    "latitude": 42.2876,
+    "longitude": -83.3734,
+    "timezone": "America/Detroit",
+    "utc_offset": "-0400",
+    "country_calling_code": "+1",
+    "currency": "USD",
+    "languages": "en-US,es-US,haw,fr",
+    "asn": "AS12083",
+    "org": "WideOpenWest Finance LLC"
+   }
+  },
+  "goal_condition": "presentation",
+  "social_condition": "no_social",
+  "subject_information": {
+   "language": "English",
+   "enjoyment": "Better than average",
+   "asses": "Yes",
+   "age": "39",
+   "gender": "Male",
+   "education": "Some College",
+   "comments": "I have no further comments."
+  },
+  "time_in_minutes": 4.053383333333334
+ }
+}

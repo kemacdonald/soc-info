@@ -1,0 +1,116 @@
+{
+ "AssignmentId": "3C8HJ7UOP7UABJNKM0724NIQL1PZMN",
+ "WorkerId": "0482c08937974527ede3098eb911e4c0",
+ "HITId": "3TUOHPJXYHXEOGJPZIK2RG9HFC9XWL",
+ "AssignmentStatus": "Approved",
+ "AutoApprovalTime": "2019-09-05T04:52:03.000Z",
+ "AcceptTime": "2019-09-05T04:40:03.000Z",
+ "SubmitTime": "2019-09-05T04:51:03.000Z",
+ "ApprovalTime": "2019-09-05T04:52:56.000Z",
+ "answers": {
+  "trials": [
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "right-lever",
+    "action_number": 1,
+    "action": "left-lever",
+    "success": false,
+    "rt": 3209
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "right-lever",
+    "action_number": 2,
+    "action": "right-lever",
+    "success": true,
+    "rt": 2556
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "right-lever",
+    "action_number": 3,
+    "action": "right-lever",
+    "success": true,
+    "rt": 1733
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "left-button",
+    "action_number": 1,
+    "action": "right-button",
+    "success": false,
+    "rt": 1530
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "left-button",
+    "action_number": 2,
+    "action": "left-button",
+    "success": true,
+    "rt": 1920
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "left-button",
+    "action_number": 3,
+    "action": "left-button",
+    "success": true,
+    "rt": 1093
+   },
+   {
+    "trial_type": "final_toy_choice",
+    "toy": "cyl-lever.png",
+    "toy_type": "NA",
+    "action_number": "NA",
+    "action": "NA",
+    "success": "NA",
+    "rt": 15367,
+    "why_toy": "I already know how to make music with this toy"
+   }
+  ],
+  "system": {
+   "Browser": "Chrome",
+   "OS": "Mac",
+   "screenH": 800,
+   "screenW": 1280,
+   "ip_data": {
+    "ip": "107.77.227.41",
+    "city": "Los Angeles",
+    "region": "California",
+    "region_code": "CA",
+    "country": "US",
+    "country_name": "United States",
+    "continent_code": "NA",
+    "in_eu": false,
+    "postal": "90006",
+    "latitude": 34.0447,
+    "longitude": -118.2946,
+    "timezone": "America/Los_Angeles",
+    "utc_offset": "-0700",
+    "country_calling_code": "+1",
+    "currency": "USD",
+    "languages": "en-US,es-US,haw,fr",
+    "asn": "AS20057",
+    "org": "AT&T Mobility LLC"
+   }
+  },
+  "goal_condition": "no_goal",
+  "social_condition": "no_social",
+  "subject_information": {
+   "language": "english",
+   "enjoyment": "Average",
+   "asses": "Yes",
+   "age": "25",
+   "gender": "Female",
+   "education": "Graduated College",
+   "comments": ""
+  },
+  "time_in_minutes": 1.6202
+ }
+}

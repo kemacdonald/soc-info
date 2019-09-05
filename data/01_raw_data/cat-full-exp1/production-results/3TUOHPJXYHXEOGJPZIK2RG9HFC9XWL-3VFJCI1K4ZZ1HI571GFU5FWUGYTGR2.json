@@ -1,0 +1,116 @@
+{
+ "AssignmentId": "3VFJCI1K4ZZ1HI571GFU5FWUGYTGR2",
+ "WorkerId": "93f5d866c76cb7746303e2fef0e1d7a4",
+ "HITId": "3TUOHPJXYHXEOGJPZIK2RG9HFC9XWL",
+ "AssignmentStatus": "Approved",
+ "AutoApprovalTime": "2019-09-05T03:46:22.000Z",
+ "AcceptTime": "2019-09-05T03:41:20.000Z",
+ "SubmitTime": "2019-09-05T03:45:22.000Z",
+ "ApprovalTime": "2019-09-05T03:46:56.000Z",
+ "answers": {
+  "trials": [
+   {
+    "trial_type": "activation",
+    "toy": "tri-button.png",
+    "toy_type": "left-button",
+    "action_number": 1,
+    "action": "right-button",
+    "success": false,
+    "rt": 8033
+   },
+   {
+    "trial_type": "activation",
+    "toy": "tri-button.png",
+    "toy_type": "left-button",
+    "action_number": 2,
+    "action": "left-button",
+    "success": true,
+    "rt": 4186
+   },
+   {
+    "trial_type": "activation",
+    "toy": "tri-button.png",
+    "toy_type": "left-button",
+    "action_number": 3,
+    "action": "left-button",
+    "success": true,
+    "rt": 4318
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cyl-lever.png",
+    "toy_type": "left-lever",
+    "action_number": 1,
+    "action": "right-lever",
+    "success": false,
+    "rt": 4441
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cyl-lever.png",
+    "toy_type": "left-lever",
+    "action_number": 2,
+    "action": "left-lever",
+    "success": true,
+    "rt": 2730
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cyl-lever.png",
+    "toy_type": "left-lever",
+    "action_number": 3,
+    "action": "left-lever",
+    "success": true,
+    "rt": 1931
+   },
+   {
+    "trial_type": "final_toy_choice",
+    "toy": "cube-spinner.png",
+    "toy_type": "NA",
+    "action_number": "NA",
+    "action": "NA",
+    "success": "NA",
+    "rt": 49679,
+    "why_toy": "I haven't tried this one yet."
+   }
+  ],
+  "system": {
+   "Browser": "Chrome",
+   "OS": "Windows",
+   "screenH": 1050,
+   "screenW": 1400,
+   "ip_data": {
+    "ip": "73.46.78.96",
+    "city": "Hollywood",
+    "region": "Florida",
+    "region_code": "FL",
+    "country": "US",
+    "country_name": "United States",
+    "continent_code": "NA",
+    "in_eu": false,
+    "postal": "33019",
+    "latitude": 26.007,
+    "longitude": -80.1219,
+    "timezone": "America/New_York",
+    "utc_offset": "-0400",
+    "country_calling_code": "+1",
+    "currency": "USD",
+    "languages": "en-US,es-US,haw,fr",
+    "asn": "AS7922",
+    "org": "Comcast Cable Communications, LLC"
+   }
+  },
+  "goal_condition": "activation",
+  "social_condition": "social",
+  "subject_information": {
+   "language": "Armenian, English",
+   "enjoyment": "Better than average",
+   "asses": "Yes",
+   "age": "28",
+   "gender": "Male",
+   "education": "Graduated High School",
+   "comments": "It was interesting. Thanks for the opportunity!"
+  },
+  "time_in_minutes": 3.9983666666666666
+ }
+}

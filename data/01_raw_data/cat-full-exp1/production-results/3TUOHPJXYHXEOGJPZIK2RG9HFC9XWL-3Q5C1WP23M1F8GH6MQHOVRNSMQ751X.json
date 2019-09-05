@@ -1,0 +1,115 @@
+{
+ "AssignmentId": "3Q5C1WP23M1F8GH6MQHOVRNSMQ751X",
+ "WorkerId": "7fe43d51cf2bd06a13d94df69dfea1c3",
+ "HITId": "3TUOHPJXYHXEOGJPZIK2RG9HFC9XWL",
+ "AssignmentStatus": "Submitted",
+ "AutoApprovalTime": "2019-09-04T19:17:14.000Z",
+ "AcceptTime": "2019-09-04T19:10:50.000Z",
+ "SubmitTime": "2019-09-04T19:16:14.000Z",
+ "answers": {
+  "trials": [
+   {
+    "trial_type": "activation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 1,
+    "action": "left-button",
+    "success": false,
+    "rt": 4879
+   },
+   {
+    "trial_type": "activation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 2,
+    "action": "right-button",
+    "success": true,
+    "rt": 5239
+   },
+   {
+    "trial_type": "activation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 3,
+    "action": "right-button",
+    "success": true,
+    "rt": 4547
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 1,
+    "action": "left-spinner",
+    "success": false,
+    "rt": 3394
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 2,
+    "action": "right-spinner",
+    "success": true,
+    "rt": 2307
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 3,
+    "action": "right-spinner",
+    "success": true,
+    "rt": 3319
+   },
+   {
+    "trial_type": "final_toy_choice",
+    "toy": "cyl-lever.png",
+    "toy_type": "NA",
+    "action_number": "NA",
+    "action": "NA",
+    "success": "NA",
+    "rt": 45441,
+    "why_toy": "I've already used the other 2 and want to learn how all of them work."
+   }
+  ],
+  "system": {
+   "Browser": "Firefox",
+   "OS": "Windows",
+   "screenH": 1200,
+   "screenW": 2133,
+   "ip_data": {
+    "ip": "174.87.54.141",
+    "city": "Thomaston",
+    "region": "Georgia",
+    "region_code": "GA",
+    "country": "US",
+    "country_name": "United States",
+    "continent_code": "NA",
+    "in_eu": false,
+    "postal": "30286",
+    "latitude": 32.9015,
+    "longitude": -84.3324,
+    "timezone": "America/New_York",
+    "utc_offset": "-0400",
+    "country_calling_code": "+1",
+    "currency": "USD",
+    "languages": "en-US,es-US,haw,fr",
+    "asn": "AS20115",
+    "org": "Charter Communications"
+   }
+  },
+  "goal_condition": "learning",
+  "social_condition": "no_social",
+  "subject_information": {
+   "language": "English",
+   "enjoyment": "Average",
+   "asses": "Yes",
+   "age": "39",
+   "gender": "Male",
+   "education": "Some College",
+   "comments": "The time Bob's first dialog was displayed was too quick for me to read all of what was said."
+  },
+  "time_in_minutes": 4.1235
+ }
+}

@@ -1,0 +1,116 @@
+{
+ "AssignmentId": "33M4IA01QG1C340XQQFYT1WPJN6XRQ",
+ "WorkerId": "b0a5cac03dcfb0883d4312cbf42c1dcb",
+ "HITId": "3TUOHPJXYHXEOGJPZIK2RG9HFC9XWL",
+ "AssignmentStatus": "Approved",
+ "AutoApprovalTime": "2019-09-04T19:11:10.000Z",
+ "AcceptTime": "2019-09-04T18:48:51.000Z",
+ "SubmitTime": "2019-09-04T19:10:10.000Z",
+ "ApprovalTime": "2019-09-04T19:11:56.000Z",
+ "answers": {
+  "trials": [
+   {
+    "trial_type": "activation",
+    "toy": "tri-button.png",
+    "toy_type": "left-button",
+    "action_number": 1,
+    "action": "right-button",
+    "success": false,
+    "rt": 3438
+   },
+   {
+    "trial_type": "activation",
+    "toy": "tri-button.png",
+    "toy_type": "left-button",
+    "action_number": 2,
+    "action": "left-button",
+    "success": true,
+    "rt": 3640
+   },
+   {
+    "trial_type": "activation",
+    "toy": "tri-button.png",
+    "toy_type": "left-button",
+    "action_number": 3,
+    "action": "left-button",
+    "success": true,
+    "rt": 2093
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cyl-lever.png",
+    "toy_type": "left-lever",
+    "action_number": 1,
+    "action": "right-lever",
+    "success": false,
+    "rt": 3302
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cyl-lever.png",
+    "toy_type": "left-lever",
+    "action_number": 2,
+    "action": "left-lever",
+    "success": true,
+    "rt": 2638
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cyl-lever.png",
+    "toy_type": "left-lever",
+    "action_number": 3,
+    "action": "left-lever",
+    "success": true,
+    "rt": 1615
+   },
+   {
+    "trial_type": "final_toy_choice",
+    "toy": "cube-spinner.png",
+    "toy_type": "NA",
+    "action_number": "NA",
+    "action": "NA",
+    "success": "NA",
+    "rt": 17050,
+    "why_toy": "Because it's the only one I haven't tried yet "
+   }
+  ],
+  "system": {
+   "Browser": "Chrome",
+   "OS": "Linux",
+   "screenH": 1080,
+   "screenW": 1920,
+   "ip_data": {
+    "ip": "97.95.25.11",
+    "city": "Saginaw",
+    "region": "Michigan",
+    "region_code": "MI",
+    "country": "US",
+    "country_name": "United States",
+    "continent_code": "NA",
+    "in_eu": false,
+    "postal": "48602",
+    "latitude": 43.4248,
+    "longitude": -83.9745,
+    "timezone": "America/Detroit",
+    "utc_offset": "-0400",
+    "country_calling_code": "+1",
+    "currency": "USD",
+    "languages": "en-US,es-US,haw,fr",
+    "asn": "AS20115",
+    "org": "Charter Communications"
+   }
+  },
+  "goal_condition": "activation",
+  "social_condition": "no_social",
+  "subject_information": {
+   "language": "English",
+   "enjoyment": "Average",
+   "asses": "Yes",
+   "age": "38",
+   "gender": "Male",
+   "education": "Graduated College",
+   "comments": "Good luck with your research "
+  },
+  "time_in_minutes": 2.0222333333333333
+ }
+}

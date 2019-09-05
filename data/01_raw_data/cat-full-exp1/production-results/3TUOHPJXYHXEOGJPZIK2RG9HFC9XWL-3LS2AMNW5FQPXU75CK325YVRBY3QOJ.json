@@ -1,0 +1,116 @@
+{
+ "AssignmentId": "3LS2AMNW5FQPXU75CK325YVRBY3QOJ",
+ "WorkerId": "fc5ee52c980f7724db19ece183480e77",
+ "HITId": "3TUOHPJXYHXEOGJPZIK2RG9HFC9XWL",
+ "AssignmentStatus": "Approved",
+ "AutoApprovalTime": "2019-09-05T00:32:41.000Z",
+ "AcceptTime": "2019-09-05T00:26:10.000Z",
+ "SubmitTime": "2019-09-05T00:31:41.000Z",
+ "ApprovalTime": "2019-09-05T00:32:56.000Z",
+ "answers": {
+  "trials": [
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "left-lever",
+    "action_number": 1,
+    "action": "right-lever",
+    "success": false,
+    "rt": 2953
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "left-lever",
+    "action_number": 2,
+    "action": "left-lever",
+    "success": true,
+    "rt": 2341
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "left-lever",
+    "action_number": 3,
+    "action": "left-lever",
+    "success": true,
+    "rt": 1384
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 1,
+    "action": "left-spinner",
+    "success": false,
+    "rt": 1487
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 2,
+    "action": "right-spinner",
+    "success": true,
+    "rt": 1392
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 3,
+    "action": "right-spinner",
+    "success": true,
+    "rt": 2624
+   },
+   {
+    "trial_type": "final_toy_choice",
+    "toy": "tri-button.png",
+    "toy_type": "NA",
+    "action_number": "NA",
+    "action": "NA",
+    "success": "NA",
+    "rt": 31619,
+    "why_toy": "Because I will be given a bonus if I'm able to learn about all of the toys, and I haven't tried this one yet."
+   }
+  ],
+  "system": {
+   "Browser": "Chrome",
+   "OS": "Windows",
+   "screenH": 900,
+   "screenW": 1440,
+   "ip_data": {
+    "ip": "2600:1700:eca0:3f00:1ca9:7e30:6fea:1658",
+    "city": "Maumelle",
+    "region": "Arkansas",
+    "region_code": "AR",
+    "country": "US",
+    "country_name": "United States",
+    "continent_code": "NA",
+    "in_eu": false,
+    "postal": "72113",
+    "latitude": 34.8504,
+    "longitude": -92.4089,
+    "timezone": "America/Chicago",
+    "utc_offset": "-0500",
+    "country_calling_code": "+1",
+    "currency": "USD",
+    "languages": "en-US,es-US,haw,fr",
+    "asn": "AS7018",
+    "org": "AT&T Services, Inc."
+   }
+  },
+  "goal_condition": "learning",
+  "social_condition": "social",
+  "subject_information": {
+   "language": "English",
+   "enjoyment": "Better than average",
+   "asses": "Yes",
+   "age": "36",
+   "gender": "Female",
+   "education": "Graduated High School",
+   "comments": ""
+  },
+  "time_in_minutes": 4.74015
+ }
+}

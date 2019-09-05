@@ -1,0 +1,116 @@
+{
+ "AssignmentId": "320DUZ38G7MKJUMUTB6L3OA36I1GJE",
+ "WorkerId": "1839acbe9bedcb2f3e200a249938497d",
+ "HITId": "3TUOHPJXYHXEOGJPZIK2RG9HFC9XWL",
+ "AssignmentStatus": "Approved",
+ "AutoApprovalTime": "2019-09-05T04:58:50.000Z",
+ "AcceptTime": "2019-09-05T04:50:46.000Z",
+ "SubmitTime": "2019-09-05T04:57:50.000Z",
+ "ApprovalTime": "2019-09-05T04:59:04.000Z",
+ "answers": {
+  "trials": [
+   {
+    "trial_type": "activation",
+    "toy": "cube-spinner.png",
+    "toy_type": "left-spinner",
+    "action_number": 1,
+    "action": "right-spinner",
+    "success": false,
+    "rt": 5604
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cube-spinner.png",
+    "toy_type": "left-spinner",
+    "action_number": 2,
+    "action": "left-spinner",
+    "success": true,
+    "rt": 3677
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cube-spinner.png",
+    "toy_type": "left-spinner",
+    "action_number": 3,
+    "action": "left-spinner",
+    "success": true,
+    "rt": 4619
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cyl-lever.png",
+    "toy_type": "left-lever",
+    "action_number": 1,
+    "action": "right-lever",
+    "success": false,
+    "rt": 2861
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cyl-lever.png",
+    "toy_type": "left-lever",
+    "action_number": 2,
+    "action": "left-lever",
+    "success": true,
+    "rt": 1769
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cyl-lever.png",
+    "toy_type": "left-lever",
+    "action_number": 3,
+    "action": "left-lever",
+    "success": true,
+    "rt": 1866
+   },
+   {
+    "trial_type": "final_toy_choice",
+    "toy": "tri-button.png",
+    "toy_type": "NA",
+    "action_number": "NA",
+    "action": "NA",
+    "success": "NA",
+    "rt": 15016,
+    "why_toy": "It looks very good."
+   }
+  ],
+  "system": {
+   "Browser": "Chrome",
+   "OS": "Windows",
+   "screenH": 768,
+   "screenW": 1366,
+   "ip_data": {
+    "ip": "103.228.155.161",
+    "city": "Mumbai",
+    "region": "Maharashtra",
+    "region_code": "MH",
+    "country": "IN",
+    "country_name": "India",
+    "continent_code": "AS",
+    "in_eu": false,
+    "postal": "400026",
+    "latitude": 18.9878,
+    "longitude": 72.8364,
+    "timezone": "Asia/Kolkata",
+    "utc_offset": "+0530",
+    "country_calling_code": "+91",
+    "currency": "INR",
+    "languages": "en-IN,hi,bn,te,mr,ta,ur,gu,kn,ml,or,pa,as,bh,sat,ks,ne,sd,kok,doi,mni,sit,sa,fr,lus,inc",
+    "asn": "AS133296",
+    "org": "Web Werks India Pvt. Ltd."
+   }
+  },
+  "goal_condition": "no_goal",
+  "social_condition": "no_social",
+  "subject_information": {
+   "language": "English",
+   "enjoyment": "Better than average",
+   "asses": "Yes",
+   "age": "35",
+   "gender": "Male",
+   "education": "Hold a higher degree",
+   "comments": "Very good."
+  },
+  "time_in_minutes": 6.8025166666666665
+ }
+}

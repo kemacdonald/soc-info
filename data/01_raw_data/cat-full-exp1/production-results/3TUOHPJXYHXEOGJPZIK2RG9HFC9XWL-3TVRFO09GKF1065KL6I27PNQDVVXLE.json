@@ -1,0 +1,116 @@
+{
+ "AssignmentId": "3TVRFO09GKF1065KL6I27PNQDVVXLE",
+ "WorkerId": "9bb1752a54e30d14a150e9184fe4c56a",
+ "HITId": "3TUOHPJXYHXEOGJPZIK2RG9HFC9XWL",
+ "AssignmentStatus": "Approved",
+ "AutoApprovalTime": "2019-09-04T20:14:00.000Z",
+ "AcceptTime": "2019-09-04T20:08:22.000Z",
+ "SubmitTime": "2019-09-04T20:13:00.000Z",
+ "ApprovalTime": "2019-09-04T20:14:56.000Z",
+ "answers": {
+  "trials": [
+   {
+    "trial_type": "activation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 1,
+    "action": "left-spinner",
+    "success": false,
+    "rt": 4255
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 2,
+    "action": "right-spinner",
+    "success": true,
+    "rt": 4334
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 3,
+    "action": "right-spinner",
+    "success": true,
+    "rt": 3687
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cyl-lever.png",
+    "toy_type": "left-lever",
+    "action_number": 1,
+    "action": "right-lever",
+    "success": false,
+    "rt": 3156
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cyl-lever.png",
+    "toy_type": "left-lever",
+    "action_number": 2,
+    "action": "left-lever",
+    "success": true,
+    "rt": 1380
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cyl-lever.png",
+    "toy_type": "left-lever",
+    "action_number": 3,
+    "action": "left-lever",
+    "success": true,
+    "rt": 21604
+   },
+   {
+    "trial_type": "final_toy_choice",
+    "toy": "cube-spinner.png",
+    "toy_type": "NA",
+    "action_number": "NA",
+    "action": "NA",
+    "success": "NA",
+    "rt": 13755,
+    "why_toy": "I like the color "
+   }
+  ],
+  "system": {
+   "Browser": "Chrome",
+   "OS": "Mac",
+   "screenH": 1050,
+   "screenW": 1680,
+   "ip_data": {
+    "ip": "97.99.78.117",
+    "city": "Dallas",
+    "region": "Texas",
+    "region_code": "TX",
+    "country": "US",
+    "country_name": "United States",
+    "continent_code": "NA",
+    "in_eu": false,
+    "postal": "75287",
+    "latitude": 32.9993,
+    "longitude": -96.8346,
+    "timezone": "America/Chicago",
+    "utc_offset": "-0500",
+    "country_calling_code": "+1",
+    "currency": "USD",
+    "languages": "en-US,es-US,haw,fr",
+    "asn": "AS11427",
+    "org": "Charter Communications Inc"
+   }
+  },
+  "goal_condition": "presentation",
+  "social_condition": "social",
+  "subject_information": {
+   "language": "English ",
+   "enjoyment": "Average",
+   "asses": "Yes",
+   "age": "22",
+   "gender": "Male",
+   "education": "Some College",
+   "comments": "no"
+  },
+  "time_in_minutes": 4.556566666666667
+ }
+}

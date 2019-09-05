@@ -1,0 +1,125 @@
+{
+ "AssignmentId": "3VD82FOHKQOL3TXM7227LT6A7KJCOJ",
+ "WorkerId": "57285cba558a44497f721fe5514cf9f2",
+ "HITId": "3TUOHPJXYHXEOGJPZIK2RG9HFC9XWL",
+ "AssignmentStatus": "Approved",
+ "AutoApprovalTime": "2019-09-05T04:43:33.000Z",
+ "AcceptTime": "2019-09-05T04:40:09.000Z",
+ "SubmitTime": "2019-09-05T04:42:33.000Z",
+ "ApprovalTime": "2019-09-05T04:43:56.000Z",
+ "answers": {
+  "trials": [
+   {
+    "trial_type": "activation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 1,
+    "action": "left-button",
+    "success": false,
+    "rt": 3632
+   },
+   {
+    "trial_type": "activation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 2,
+    "action": "right-button",
+    "success": true,
+    "rt": 2434
+   },
+   {
+    "trial_type": "activation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 3,
+    "action": "right-button",
+    "success": true,
+    "rt": 2293
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cyl-lever.png",
+    "toy_type": "left-lever",
+    "action_number": 1,
+    "action": "right-lever",
+    "success": false,
+    "rt": 2436
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cyl-lever.png",
+    "toy_type": "left-lever",
+    "action_number": 2,
+    "action": "right-lever",
+    "success": false,
+    "rt": 1602
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cyl-lever.png",
+    "toy_type": "left-lever",
+    "action_number": 3,
+    "action": "left-lever",
+    "success": true,
+    "rt": 1044
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cyl-lever.png",
+    "toy_type": "left-lever",
+    "action_number": 4,
+    "action": "left-lever",
+    "success": true,
+    "rt": 3699
+   },
+   {
+    "trial_type": "final_toy_choice",
+    "toy": "cyl-lever.png",
+    "toy_type": "NA",
+    "action_number": "NA",
+    "action": "NA",
+    "success": "NA",
+    "rt": 34506,
+    "why_toy": "it only plays music whem in away"
+   }
+  ],
+  "system": {
+   "Browser": "Chrome",
+   "OS": "Linux",
+   "screenH": 1016,
+   "screenW": 1807,
+   "ip_data": {
+    "ip": "123.231.125.206",
+    "city": "Colombo",
+    "region": "Western Province",
+    "region_code": "1",
+    "country": "LK",
+    "country_name": "Sri Lanka",
+    "continent_code": "AS",
+    "in_eu": false,
+    "postal": "00800",
+    "latitude": 6.9177,
+    "longitude": 79.8742,
+    "timezone": "Asia/Colombo",
+    "utc_offset": "+0530",
+    "country_calling_code": "+94",
+    "currency": "LKR",
+    "languages": "si,ta,en",
+    "asn": "AS18001",
+    "org": "Dialog Axiata PLC."
+   }
+  },
+  "goal_condition": "no_goal",
+  "social_condition": "no_social",
+  "subject_information": {
+   "language": "english",
+   "enjoyment": "Average",
+   "asses": "Yes",
+   "age": "32",
+   "gender": "Male",
+   "education": "Graduated College",
+   "comments": ""
+  },
+  "time_in_minutes": 2.268483333333333
+ }
+}

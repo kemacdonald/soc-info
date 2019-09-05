@@ -1,0 +1,152 @@
+{
+ "AssignmentId": "3QFUFYSY9YFO2C7EFKDZF1L8N4X4FU",
+ "WorkerId": "6ed8367907cabbd0f44a447aa603f7ec",
+ "HITId": "3TUOHPJXYHXEOGJPZIK2RG9HFC9XWL",
+ "AssignmentStatus": "Approved",
+ "AutoApprovalTime": "2019-09-04T19:22:08.000Z",
+ "AcceptTime": "2019-09-04T19:18:24.000Z",
+ "SubmitTime": "2019-09-04T19:21:08.000Z",
+ "ApprovalTime": "2019-09-04T19:22:56.000Z",
+ "answers": {
+  "trials": [
+   {
+    "trial_type": "activation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 1,
+    "action": "left-button",
+    "success": false,
+    "rt": 4484
+   },
+   {
+    "trial_type": "activation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 2,
+    "action": "right-button",
+    "success": true,
+    "rt": 2706
+   },
+   {
+    "trial_type": "activation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 3,
+    "action": "right-button",
+    "success": true,
+    "rt": 9810
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 1,
+    "action": "left-spinner",
+    "success": false,
+    "rt": 1645
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 2,
+    "action": "left-spinner",
+    "success": false,
+    "rt": 1671
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 3,
+    "action": "left-spinner",
+    "success": false,
+    "rt": 3809
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 4,
+    "action": "left-spinner",
+    "success": false,
+    "rt": 1950
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 5,
+    "action": "left-spinner",
+    "success": false,
+    "rt": 1512
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 6,
+    "action": "right-spinner",
+    "success": true,
+    "rt": 1000
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 7,
+    "action": "right-spinner",
+    "success": true,
+    "rt": 8119
+   },
+   {
+    "trial_type": "final_toy_choice",
+    "toy": "tri-button.png",
+    "toy_type": "NA",
+    "action_number": "NA",
+    "action": "NA",
+    "success": "NA",
+    "rt": 25068,
+    "why_toy": "Because I already know which button to click."
+   }
+  ],
+  "system": {
+   "Browser": "Chrome",
+   "OS": "Windows",
+   "screenH": 2160,
+   "screenW": 3840,
+   "ip_data": {
+    "ip": "68.251.38.141",
+    "city": "Vero Beach",
+    "region": "Florida",
+    "region_code": "FL",
+    "country": "US",
+    "country_name": "United States",
+    "continent_code": "NA",
+    "in_eu": false,
+    "postal": "32966",
+    "latitude": 27.6372,
+    "longitude": -80.4794,
+    "timezone": "America/New_York",
+    "utc_offset": "-0400",
+    "country_calling_code": "+1",
+    "currency": "USD",
+    "languages": "en-US,es-US,haw,fr",
+    "asn": "AS7018",
+    "org": "AT&T Services, Inc."
+   }
+  },
+  "goal_condition": "presentation",
+  "social_condition": "no_social",
+  "subject_information": {
+   "language": "English",
+   "enjoyment": "Average",
+   "asses": "Yes",
+   "age": "35",
+   "gender": "Male",
+   "education": "Graduated High School",
+   "comments": ""
+  },
+  "time_in_minutes": 2.380516666666667
+ }
+}

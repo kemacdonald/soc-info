@@ -1,0 +1,116 @@
+{
+ "AssignmentId": "3JZQSN0I3QA4ES0YALF0OQIBD9ZFGL",
+ "WorkerId": "aa3774458ba79f53f4103bd778fdf707",
+ "HITId": "3TUOHPJXYHXEOGJPZIK2RG9HFC9XWL",
+ "AssignmentStatus": "Approved",
+ "AutoApprovalTime": "2019-09-04T18:51:52.000Z",
+ "AcceptTime": "2019-09-04T18:48:40.000Z",
+ "SubmitTime": "2019-09-04T18:50:52.000Z",
+ "ApprovalTime": "2019-09-04T18:51:56.000Z",
+ "answers": {
+  "trials": [
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "left-lever",
+    "action_number": 1,
+    "action": "right-lever",
+    "success": false,
+    "rt": 3157
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "left-lever",
+    "action_number": 2,
+    "action": "left-lever",
+    "success": true,
+    "rt": 1873
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "left-lever",
+    "action_number": 3,
+    "action": "left-lever",
+    "success": true,
+    "rt": 1092
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 1,
+    "action": "left-button",
+    "success": false,
+    "rt": 1552
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 2,
+    "action": "right-button",
+    "success": true,
+    "rt": 972
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 3,
+    "action": "right-button",
+    "success": true,
+    "rt": 905
+   },
+   {
+    "trial_type": "final_toy_choice",
+    "toy": "cyl-lever.png",
+    "toy_type": "NA",
+    "action_number": "NA",
+    "action": "NA",
+    "success": "NA",
+    "rt": 40653,
+    "why_toy": "I wanted to choose a toy that I knew which lever would be the one to play music. Maybe I should have done the green one the more I think about it, since he saw me using this one, but I still think it shows some competence."
+   }
+  ],
+  "system": {
+   "Browser": "Chrome",
+   "OS": "Windows",
+   "screenH": 1080,
+   "screenW": 1920,
+   "ip_data": {
+    "ip": "132.178.101.118",
+    "city": "Boise",
+    "region": "Idaho",
+    "region_code": "ID",
+    "country": "US",
+    "country_name": "United States",
+    "continent_code": "NA",
+    "in_eu": false,
+    "postal": "83725",
+    "latitude": 43.4599,
+    "longitude": -116.244,
+    "timezone": "America/Boise",
+    "utc_offset": "-0600",
+    "country_calling_code": "+1",
+    "currency": "USD",
+    "languages": "en-US,es-US,haw,fr",
+    "asn": "AS46662",
+    "org": "Boise State University"
+   }
+  },
+  "goal_condition": "presentation",
+  "social_condition": "social",
+  "subject_information": {
+   "language": "English",
+   "enjoyment": "Better than average",
+   "asses": "Yes",
+   "age": "26",
+   "gender": "Male",
+   "education": "Graduated College",
+   "comments": "Fun and easy! Not much else I can ask for from a HIT. Thanks for setting it up."
+  },
+  "time_in_minutes": 2.0067333333333335
+ }
+}

@@ -1,0 +1,125 @@
+{
+ "AssignmentId": "32KTQ2V7RDFV5S57I2D3RZGX6XS9M7",
+ "WorkerId": "d886c4dc6a8bb420edac9034dc40759c",
+ "HITId": "3TUOHPJXYHXEOGJPZIK2RG9HFC9XWL",
+ "AssignmentStatus": "Approved",
+ "AutoApprovalTime": "2019-09-04T19:55:13.000Z",
+ "AcceptTime": "2019-09-04T19:49:14.000Z",
+ "SubmitTime": "2019-09-04T19:54:13.000Z",
+ "ApprovalTime": "2019-09-04T19:55:56.000Z",
+ "answers": {
+  "trials": [
+   {
+    "trial_type": "activation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 1,
+    "action": "left-button",
+    "success": false,
+    "rt": 5957
+   },
+   {
+    "trial_type": "activation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 2,
+    "action": "left-button",
+    "success": false,
+    "rt": 4437
+   },
+   {
+    "trial_type": "activation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 3,
+    "action": "right-button",
+    "success": true,
+    "rt": 2567
+   },
+   {
+    "trial_type": "activation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 4,
+    "action": "right-button",
+    "success": true,
+    "rt": 2379
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 1,
+    "action": "left-spinner",
+    "success": false,
+    "rt": 2461
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 2,
+    "action": "right-spinner",
+    "success": true,
+    "rt": 1368
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 3,
+    "action": "right-spinner",
+    "success": true,
+    "rt": 1465
+   },
+   {
+    "trial_type": "final_toy_choice",
+    "toy": "cube-spinner.png",
+    "toy_type": "NA",
+    "action_number": "NA",
+    "action": "NA",
+    "success": "NA",
+    "rt": 59341,
+    "why_toy": "Because I remember that the right switch is the one to make the toy play music.  With the last toy that I did not choose, it would be a 50-50 chance that I would pick the button to play the music.  Hence, I chose the toy that I knew which button would play music. "
+   }
+  ],
+  "system": {
+   "Browser": "Chrome",
+   "OS": "Mac",
+   "screenH": 900,
+   "screenW": 1440,
+   "ip_data": {
+    "ip": "76.81.252.186",
+    "city": "Costa Mesa",
+    "region": "California",
+    "region_code": "CA",
+    "country": "US",
+    "country_name": "United States",
+    "continent_code": "NA",
+    "in_eu": false,
+    "postal": "92626",
+    "latitude": 33.6748,
+    "longitude": -117.9089,
+    "timezone": "America/Los_Angeles",
+    "utc_offset": "-0700",
+    "country_calling_code": "+1",
+    "currency": "USD",
+    "languages": "en-US,es-US,haw,fr",
+    "asn": "AS20001",
+    "org": "Charter Communications Inc"
+   }
+  },
+  "goal_condition": "presentation",
+  "social_condition": "no_social",
+  "subject_information": {
+   "language": "Chinese",
+   "enjoyment": "Better than average",
+   "asses": "Yes",
+   "age": "30",
+   "gender": "Male",
+   "education": "Hold a higher degree",
+   "comments": ""
+  },
+  "time_in_minutes": 3.0232
+ }
+}

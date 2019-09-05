@@ -1,0 +1,116 @@
+{
+ "AssignmentId": "3XUHV3NRVKYQCR2KOFK9NE3Z3FD5H6",
+ "WorkerId": "fe12a3dc45f635c9f0a90d6878ba3dfb",
+ "HITId": "3TUOHPJXYHXEOGJPZIK2RG9HFC9XWL",
+ "AssignmentStatus": "Approved",
+ "AutoApprovalTime": "2019-09-04T20:18:47.000Z",
+ "AcceptTime": "2019-09-04T20:08:41.000Z",
+ "SubmitTime": "2019-09-04T20:17:47.000Z",
+ "ApprovalTime": "2019-09-04T20:18:56.000Z",
+ "answers": {
+  "trials": [
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "left-lever",
+    "action_number": 1,
+    "action": "right-lever",
+    "success": false,
+    "rt": 5947
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "left-lever",
+    "action_number": 2,
+    "action": "left-lever",
+    "success": true,
+    "rt": 5146
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "left-lever",
+    "action_number": 3,
+    "action": "left-lever",
+    "success": true,
+    "rt": 5478
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "left-spinner",
+    "action_number": 1,
+    "action": "right-spinner",
+    "success": false,
+    "rt": 14184
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "left-spinner",
+    "action_number": 2,
+    "action": "left-spinner",
+    "success": true,
+    "rt": 1928
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "left-spinner",
+    "action_number": 3,
+    "action": "left-spinner",
+    "success": true,
+    "rt": 1646
+   },
+   {
+    "trial_type": "final_toy_choice",
+    "toy": "cyl-lever.png",
+    "toy_type": "NA",
+    "action_number": "NA",
+    "action": "NA",
+    "success": "NA",
+    "rt": 50065,
+    "why_toy": "Because im sure of the right lever to press to make it sing"
+   }
+  ],
+  "system": {
+   "Browser": "Chrome",
+   "OS": "Linux",
+   "screenH": 601,
+   "screenW": 962,
+   "ip_data": {
+    "ip": "197.210.57.132",
+    "city": "Lagos",
+    "region": "Lagos",
+    "region_code": "LA",
+    "country": "NG",
+    "country_name": "Nigeria",
+    "continent_code": "AF",
+    "in_eu": false,
+    "postal": null,
+    "latitude": 6.4474,
+    "longitude": 3.3903,
+    "timezone": "Africa/Lagos",
+    "utc_offset": "+0100",
+    "country_calling_code": "+234",
+    "currency": "NGN",
+    "languages": "en-NG,ha,yo,ig,ff",
+    "asn": "AS29465",
+    "org": "MTN NIGERIA Communication limited"
+   }
+  },
+  "goal_condition": "presentation",
+  "social_condition": "no_social",
+  "subject_information": {
+   "language": "English ",
+   "enjoyment": "Better than average",
+   "asses": "Yes",
+   "age": "28",
+   "gender": "Female",
+   "education": "Graduated College",
+   "comments": "No"
+  },
+  "time_in_minutes": 5.369783333333333
+ }
+}

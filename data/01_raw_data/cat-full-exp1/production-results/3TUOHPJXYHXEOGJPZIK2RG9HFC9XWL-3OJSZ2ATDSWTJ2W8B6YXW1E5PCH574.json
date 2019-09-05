@@ -1,0 +1,116 @@
+{
+ "AssignmentId": "3OJSZ2ATDSWTJ2W8B6YXW1E5PCH574",
+ "WorkerId": "7c34c99b8d473b2c0d4def510169ca1b",
+ "HITId": "3TUOHPJXYHXEOGJPZIK2RG9HFC9XWL",
+ "AssignmentStatus": "Approved",
+ "AutoApprovalTime": "2019-09-04T20:12:30.000Z",
+ "AcceptTime": "2019-09-04T20:08:29.000Z",
+ "SubmitTime": "2019-09-04T20:11:30.000Z",
+ "ApprovalTime": "2019-09-04T20:12:56.000Z",
+ "answers": {
+  "trials": [
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "left-lever",
+    "action_number": 1,
+    "action": "right-lever",
+    "success": false,
+    "rt": 4988
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "left-lever",
+    "action_number": 2,
+    "action": "left-lever",
+    "success": true,
+    "rt": 3324
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "left-lever",
+    "action_number": 3,
+    "action": "left-lever",
+    "success": true,
+    "rt": 4674
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 1,
+    "action": "left-button",
+    "success": false,
+    "rt": 3714
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 2,
+    "action": "right-button",
+    "success": true,
+    "rt": 2075
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 3,
+    "action": "right-button",
+    "success": true,
+    "rt": 2017
+   },
+   {
+    "trial_type": "final_toy_choice",
+    "toy": "cube-spinner.png",
+    "toy_type": "NA",
+    "action_number": "NA",
+    "action": "NA",
+    "success": "NA",
+    "rt": 46136,
+    "why_toy": "I already tried the other two and I wanted to see if I could guess the right side on this one.  Also, I thought it might have a different tune!"
+   }
+  ],
+  "system": {
+   "Browser": "Chrome",
+   "OS": "Linux",
+   "screenH": 1080,
+   "screenW": 1920,
+   "ip_data": {
+    "ip": "72.175.100.70",
+    "city": "Salida",
+    "region": "Colorado",
+    "region_code": "CO",
+    "country": "US",
+    "country_name": "United States",
+    "continent_code": "NA",
+    "in_eu": false,
+    "postal": "81201",
+    "latitude": 38.5259,
+    "longitude": -105.9978,
+    "timezone": "America/Denver",
+    "utc_offset": "-0600",
+    "country_calling_code": "+1",
+    "currency": "USD",
+    "languages": "en-US,es-US,haw,fr",
+    "asn": "AS33588",
+    "org": "Charter Communications"
+   }
+  },
+  "goal_condition": "no_goal",
+  "social_condition": "no_social",
+  "subject_information": {
+   "language": "English",
+   "enjoyment": "Better than average",
+   "asses": "Yes",
+   "age": "59",
+   "gender": "Male",
+   "education": "Graduated College",
+   "comments": "Clever, appealing, fun."
+  },
+  "time_in_minutes": 2.9755333333333334
+ }
+}

@@ -1,0 +1,125 @@
+{
+ "AssignmentId": "39GHHAVOMFR47ETAYA4KUZD0GBE4JX",
+ "WorkerId": "686bb55be3345021770e9f3ec7fba4a6",
+ "HITId": "3TUOHPJXYHXEOGJPZIK2RG9HFC9XWL",
+ "AssignmentStatus": "Approved",
+ "AutoApprovalTime": "2019-09-04T19:39:32.000Z",
+ "AcceptTime": "2019-09-04T19:18:29.000Z",
+ "SubmitTime": "2019-09-04T19:38:32.000Z",
+ "ApprovalTime": "2019-09-04T19:39:56.000Z",
+ "answers": {
+  "trials": [
+   {
+    "trial_type": "activation",
+    "toy": "cube-spinner.png",
+    "toy_type": "left-spinner",
+    "action_number": 1,
+    "action": "right-spinner",
+    "success": false,
+    "rt": 13920
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cube-spinner.png",
+    "toy_type": "left-spinner",
+    "action_number": 2,
+    "action": "left-spinner",
+    "success": true,
+    "rt": 3520
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cube-spinner.png",
+    "toy_type": "left-spinner",
+    "action_number": 3,
+    "action": "left-spinner",
+    "success": true,
+    "rt": 7555
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 1,
+    "action": "left-button",
+    "success": false,
+    "rt": 5276
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 2,
+    "action": "right-button",
+    "success": true,
+    "rt": 2519
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 3,
+    "action": "left-button",
+    "success": false,
+    "rt": 19247
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 4,
+    "action": "right-button",
+    "success": true,
+    "rt": 1916
+   },
+   {
+    "trial_type": "final_toy_choice",
+    "toy": "tri-button.png",
+    "toy_type": "NA",
+    "action_number": "NA",
+    "action": "NA",
+    "success": "NA",
+    "rt": 72756,
+    "why_toy": "LIKE"
+   }
+  ],
+  "system": {
+   "Browser": "Chrome",
+   "OS": "Windows",
+   "screenH": 768,
+   "screenW": 1364,
+   "ip_data": {
+    "ip": "205.237.94.156",
+    "city": "Casper",
+    "region": "Wyoming",
+    "region_code": "WY",
+    "country": "US",
+    "country_name": "United States",
+    "continent_code": "NA",
+    "in_eu": false,
+    "postal": "82609",
+    "latitude": 42.8406,
+    "longitude": -106.2806,
+    "timezone": "America/Denver",
+    "utc_offset": "-0600",
+    "country_calling_code": "+1",
+    "currency": "USD",
+    "languages": "en-US,es-US,haw,fr",
+    "asn": "AS203999",
+    "org": "Geekyworks IT Solutions Pvt Ltd"
+   }
+  },
+  "goal_condition": "presentation",
+  "social_condition": "social",
+  "subject_information": {
+   "language": "ENGLISH",
+   "enjoyment": "Better than average",
+   "asses": "Yes",
+   "age": "24",
+   "gender": "Male",
+   "education": "Graduated College",
+   "comments": "YES, NICE HIT"
+  },
+  "time_in_minutes": 12.611
+ }
+}

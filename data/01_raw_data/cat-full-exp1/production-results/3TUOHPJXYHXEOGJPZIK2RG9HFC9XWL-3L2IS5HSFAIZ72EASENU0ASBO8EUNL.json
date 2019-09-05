@@ -1,0 +1,125 @@
+{
+ "AssignmentId": "3L2IS5HSFAIZ72EASENU0ASBO8EUNL",
+ "WorkerId": "fb330936cf29f7e055bded65e24c19d7",
+ "HITId": "3TUOHPJXYHXEOGJPZIK2RG9HFC9XWL",
+ "AssignmentStatus": "Approved",
+ "AutoApprovalTime": "2019-09-04T20:45:30.000Z",
+ "AcceptTime": "2019-09-04T20:38:27.000Z",
+ "SubmitTime": "2019-09-04T20:44:30.000Z",
+ "ApprovalTime": "2019-09-04T20:45:56.000Z",
+ "answers": {
+  "trials": [
+   {
+    "trial_type": "activation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 1,
+    "action": "left-spinner",
+    "success": false,
+    "rt": 5956
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 2,
+    "action": "right-spinner",
+    "success": true,
+    "rt": 3773
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 3,
+    "action": "right-spinner",
+    "success": true,
+    "rt": 3286
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cyl-lever.png",
+    "toy_type": "right-lever",
+    "action_number": 1,
+    "action": "left-lever",
+    "success": false,
+    "rt": 2948
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cyl-lever.png",
+    "toy_type": "right-lever",
+    "action_number": 2,
+    "action": "left-lever",
+    "success": false,
+    "rt": 4562
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cyl-lever.png",
+    "toy_type": "right-lever",
+    "action_number": 3,
+    "action": "right-lever",
+    "success": true,
+    "rt": 1992
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cyl-lever.png",
+    "toy_type": "right-lever",
+    "action_number": 4,
+    "action": "right-lever",
+    "success": true,
+    "rt": 17237
+   },
+   {
+    "trial_type": "final_toy_choice",
+    "toy": "tri-button.png",
+    "toy_type": "NA",
+    "action_number": "NA",
+    "action": "NA",
+    "success": "NA",
+    "rt": 41878,
+    "why_toy": "because it was the only one I had not played with. "
+   }
+  ],
+  "system": {
+   "Browser": "Chrome",
+   "OS": "Windows",
+   "screenH": 1050,
+   "screenW": 1680,
+   "ip_data": {
+    "ip": "177.236.53.227",
+    "city": "Ensenada",
+    "region": "Baja California",
+    "region_code": "BCN",
+    "country": "MX",
+    "country_name": "Mexico",
+    "continent_code": "NA",
+    "in_eu": false,
+    "postal": "22840",
+    "latitude": 31.8695,
+    "longitude": -116.5942,
+    "timezone": "America/Tijuana",
+    "utc_offset": "-0700",
+    "country_calling_code": "+52",
+    "currency": "MXN",
+    "languages": "es-MX",
+    "asn": "AS28554",
+    "org": "Cablemas Telecomunicaciones SA de CV"
+   }
+  },
+  "goal_condition": "presentation",
+  "social_condition": "no_social",
+  "subject_information": {
+   "language": "English",
+   "enjoyment": "Better than average",
+   "asses": "Yes",
+   "age": "38",
+   "gender": "Female",
+   "education": "Some College",
+   "comments": ""
+  },
+  "time_in_minutes": 5.3283
+ }
+}

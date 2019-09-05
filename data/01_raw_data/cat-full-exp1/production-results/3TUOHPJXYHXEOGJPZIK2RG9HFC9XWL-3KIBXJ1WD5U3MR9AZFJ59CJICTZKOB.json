@@ -1,0 +1,116 @@
+{
+ "AssignmentId": "3KIBXJ1WD5U3MR9AZFJ59CJICTZKOB",
+ "WorkerId": "309f49e9816dbc11990ce6fa435471f3",
+ "HITId": "3TUOHPJXYHXEOGJPZIK2RG9HFC9XWL",
+ "AssignmentStatus": "Approved",
+ "AutoApprovalTime": "2019-09-05T06:49:38.000Z",
+ "AcceptTime": "2019-09-05T06:36:23.000Z",
+ "SubmitTime": "2019-09-05T06:48:38.000Z",
+ "ApprovalTime": "2019-09-05T06:49:58.000Z",
+ "answers": {
+  "trials": [
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "right-lever",
+    "action_number": 1,
+    "action": "left-lever",
+    "success": false,
+    "rt": 18651
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "right-lever",
+    "action_number": 2,
+    "action": "right-lever",
+    "success": true,
+    "rt": 3054
+   },
+   {
+    "trial_type": "activation",
+    "toy": "cyl-lever.png",
+    "toy_type": "right-lever",
+    "action_number": 3,
+    "action": "right-lever",
+    "success": true,
+    "rt": 3387
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 1,
+    "action": "left-button",
+    "success": false,
+    "rt": 5528
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 2,
+    "action": "right-button",
+    "success": true,
+    "rt": 2733
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 3,
+    "action": "right-button",
+    "success": true,
+    "rt": 4011
+   },
+   {
+    "trial_type": "final_toy_choice",
+    "toy": "cyl-lever.png",
+    "toy_type": "NA",
+    "action_number": "NA",
+    "action": "NA",
+    "success": "NA",
+    "rt": 54677,
+    "why_toy": "ITS USING NICE TO PLAY"
+   }
+  ],
+  "system": {
+   "Browser": "Chrome",
+   "OS": "Windows",
+   "screenH": 800,
+   "screenW": 1280,
+   "ip_data": {
+    "ip": "2607:f7a0:5:3:c0c7:537e:551c:8570",
+    "city": "Phoenix",
+    "region": "Arizona",
+    "region_code": "AZ",
+    "country": "US",
+    "country_name": "United States",
+    "continent_code": "NA",
+    "in_eu": false,
+    "postal": "85023",
+    "latitude": 33.6362,
+    "longitude": -112.0908,
+    "timezone": "America/Phoenix",
+    "utc_offset": "-0700",
+    "country_calling_code": "+1",
+    "currency": "USD",
+    "languages": "en-US,es-US,haw,fr",
+    "asn": "AS46562",
+    "org": "Total Server Solutions L.L.C."
+   }
+  },
+  "goal_condition": "presentation",
+  "social_condition": "no_social",
+  "subject_information": {
+   "language": "ENGLISH",
+   "enjoyment": "Better than average",
+   "asses": "Yes",
+   "age": "56",
+   "gender": "Female",
+   "education": "Graduated College",
+   "comments": "GOOD"
+  },
+  "time_in_minutes": 12.104566666666667
+ }
+}

@@ -1,0 +1,114 @@
+{
+ "AssignmentId": "3IHR8NYAM710TPW8TN94RVZCPBW4PB",
+ "WorkerId": "679b41ea56abe0d22c8ce93300da0dd6",
+ "HITId": "3TUOHPJXYHXEOGJPZIK2RG9HFC9XWL",
+ "AssignmentStatus": "Submitted",
+ "AutoApprovalTime": "2019-09-05T03:48:17.000Z",
+ "AcceptTime": "2019-09-05T03:41:46.000Z",
+ "SubmitTime": "2019-09-05T03:47:17.000Z",
+ "answers": {
+  "trials": [
+   {
+    "trial_type": "activation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 1,
+    "action": "left-button",
+    "success": false,
+    "rt": 2882
+   },
+   {
+    "trial_type": "activation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 2,
+    "action": "right-button",
+    "success": true,
+    "rt": 2902
+   },
+   {
+    "trial_type": "activation",
+    "toy": "tri-button.png",
+    "toy_type": "right-button",
+    "action_number": 3,
+    "action": "right-button",
+    "success": true,
+    "rt": 1849
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 1,
+    "action": "left-spinner",
+    "success": false,
+    "rt": 2904
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 2,
+    "action": "right-spinner",
+    "success": true,
+    "rt": 1476
+   },
+   {
+    "trial_type": "presentation",
+    "toy": "cube-spinner.png",
+    "toy_type": "right-spinner",
+    "action_number": 3,
+    "action": "right-spinner",
+    "success": true,
+    "rt": 841
+   },
+   {
+    "trial_type": "final_toy_choice",
+    "toy": "cyl-lever.png",
+    "toy_type": "NA",
+    "action_number": "NA",
+    "action": "NA",
+    "success": "NA",
+    "rt": 51282,
+    "why_toy": "I already know that the \"right\" action of the other two toys plays music, so now I only need to try either of the actions on this remaining toy."
+   }
+  ],
+  "system": {
+   "Browser": "Firefox",
+   "OS": "Linux",
+   "screenH": 1708,
+   "screenW": 960,
+   "ip_data": {
+    "ip": "68.7.236.22",
+    "city": "San Diego",
+    "region": "California",
+    "region_code": "CA",
+    "country": "US",
+    "country_name": "United States",
+    "continent_code": "NA",
+    "in_eu": false,
+    "postal": "92139",
+    "latitude": 32.6773,
+    "longitude": -117.0477,
+    "timezone": "America/Los_Angeles",
+    "utc_offset": "-0700",
+    "country_calling_code": "+1",
+    "currency": "USD",
+    "languages": "en-US,es-US,haw,fr",
+    "asn": "AS22773",
+    "org": "Cox Communications Inc."
+   }
+  },
+  "goal_condition": "learning",
+  "social_condition": "no_social",
+  "subject_information": {
+   "language": "",
+   "enjoyment": "Average",
+   "age": "",
+   "gender": "",
+   "education": "-1",
+   "comments": ""
+  },
+  "time_in_minutes": 5.460583333333333
+ }
+}

@@ -1,4 +1,5 @@
 library(lubridate); library(magrittr); library(jsonlite); 
+library(rstanarm); library(brms); library(tidybayes)
 library(binom); library(knitr); library(grid); library(ggthemes)
 library(here); library(tidyverse) 
 

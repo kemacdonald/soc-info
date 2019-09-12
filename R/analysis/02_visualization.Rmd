@@ -3,7 +3,7 @@ title: "SOC-INFO Data Visualization"
 output: html_document
 ---
 
-## Setup
+## Read data
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
@@ -16,7 +16,7 @@ Read data from all experiments.
 data_path <- "data/03_merged_data"
 
 d_prior <- read_csv(here("data/02_tidy_data/goal_actions_prior_tidy.csv"))
-d_cat <- read_csv(here("data/02_tidy_data/soc-info-cat-pilot2-tidy.csv"))
+d_cat <- read_csv(here("data/02_tidy_data/soc-info-cat-full-exp1-tidy.csv"))
 d_data <- read_csv(here(data_path, "goal_actions_master.csv"))
 
 d_data %<>% mutate(hypothesis_type = factor(hypothesis_type) %>% fct_rev(),

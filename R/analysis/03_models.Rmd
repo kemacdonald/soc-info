@@ -10,8 +10,6 @@ knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
 # Setup
 
 ```{r libraries}
-library(magrittr); library(tidyverse); library(here); 
-library(rstanarm); library(brms); library(tidybayes)
 source("R/soc_info_helpers.R")
 options(mc.cores=parallel::detectCores())
 set.seed (3875)
@@ -22,7 +20,7 @@ Read data.
 ```{r read data}
 d_path <- "data/03_merged_data/"
 d <- read_csv(here(d_path, "goal_actions_master.csv")) 
-d_cat <- read_csv("data/02_tidy_data/soc-info-cat-pilot2-tidy.csv")
+d_cat <- read_csv(here("data/02_tidy_data/soc-info-cat-full-exp1-tidy.csv"))
 ```
 
 # Experiment 1 
@@ -198,7 +196,7 @@ m_act_logit_e2_int <- d_model_e2 %>%
     data = .,
     family = binomial(link = "logit"),
     prior = t_prior, prior_intercept = t_prior
-    )
+  )
 
 samples_logit_act_e2_int <- m_act_logit_e2_int %>% 
   as.data.frame() %>% 
@@ -209,7 +207,7 @@ samples_logit_act_e2_int <- m_act_logit_e2_int %>%
                 social_beta =  social_conditionsocial,
                 int_learn_social = `condition_factlearning:social_conditionsocial`,
                 int_perf_social = `condition_factperformance:social_conditionsocial`
-                ) %>% 
+  ) %>% 
   mutate(sample_id = 1:n()) %>% 
   gather(key = effect, value = param_est, -sample_id) %>% 
   mutate(eff_type = ifelse(str_detect(effect, "int"), "interaction", "main effect")) 
@@ -223,9 +221,9 @@ t_prior <- student_t(df = 7, location = 0, scale = 2.5)
 # remove the presentation condition because it does not have no-social context
 m_act_logit_e2 <- d_model_e2 %>% 
   stan_glm(action_num ~ condition_fact + social_condition, 
-                        data = .,
-                        family = binomial(link = "logit"),
-                        prior = t_prior, prior_intercept = t_prior)
+           data = .,
+           family = binomial(link = "logit"),
+           prior = t_prior, prior_intercept = t_prior)
 
 samples_logit_act_e2 <- m_act_logit_e2 %>% 
   as.data.frame() %>% 
@@ -234,7 +232,7 @@ samples_logit_act_e2 <- m_act_logit_e2 %>%
                 learning_beta = condition_factlearning,
                 performance_beta = condition_factperformance,
                 presentation_beta = condition_factpresentation
-                ) %>% 
+  ) %>% 
   mutate(sample_id = 1:n()) %>% 
   gather(key = effect, value = param_est, -sample_id) 
 ```
@@ -368,6 +366,8 @@ samples_ig_e2 <- m_ig_act_e2 %>%
 
 # Experiment 3
 
+Filter to just the final toy choice trial and clean up some condition names.
+
 ```{r}
 d_cat_analysis <- d_cat %>% 
   filter(trial_type == "final_toy_choice") %>% 
@@ -376,7 +376,7 @@ d_cat_analysis <- d_cat %>%
            into = c("social_condition", "goal_condition"), remove = F)
 ```
 
-Fit multinomial model. From McElreath's Statistical Rethinking book:
+Fit multinomial model. Some logic for the mulitnomial taken from McElreath's Statistical Rethinking book:
 
 > When more than two types of unordered events are possible, and the probability of each type of event is constant across trials, then the maximum entropy distribution is the multinomial distribution
 
@@ -385,16 +385,48 @@ We use the multinomail logit link function:
 $\text{Pr} (k |s_1, s_2, ..., s_K) = \frac{\text{exp} (s_k)}{\sum_{i = 1}^K \text{exp} (s_i)}$
 
 ```{r}
-e3_m <- brm(data = d_cat, 
-      family = categorical(link = logit),
-      final_toy_type ~ social_condition * goal_condition,
-      iter = 2000, warmup = 500, cores = 4, chains = 4,
-      seed = 10)
+# set learning as reference category
+d_cat_analysis <- d_cat_analysis %>%
+  mutate(goal_condition = fct_relevel(goal_condition, c("no_goal", "learning", "presentation", "activation")),
+         final_toy_type = fct_relevel(final_toy_type, c("learning", "activation", "presentation")),
+         social_condition = fct_relevel(social_condition, c("no_social", "social")))
+
+e3_m_interact <- brm(data = d_cat_analysis, 
+            family = categorical(link = logit),
+            final_toy_type ~ goal_condition * social_condition,
+            iter = 2000, warmup = 500, cores = 4, chains = 4)
+
+
+broom::tidy(e3_m_interact, par_type = "non-varying", prob = 0.95) %>% 
+  mutate_if(is.numeric, round, 2)
 ```
 
+Next, we set activation choices as reference category:
+
 ```{r}
-get_variables(e3_m)
-summary(e3_m)
+d_cat_analysis_act <- d_cat_analysis %>%
+  mutate(goal_condition = fct_relevel(goal_condition, c("no_goal", "learning", "presentation", "activation")),
+         final_toy_type = fct_relevel(final_toy_type, c("activation", "learning", "presentation")),
+         social_condition = fct_relevel(social_condition, c("no_social", "social")))
+
+e3_m_act_ref <- brm(data = d_cat_analysis_act, 
+            family = categorical(link = logit),
+            final_toy_type ~ goal_condition * social_condition,
+            iter = 2000, warmup = 500, cores = 4, chains = 4)
+
+summary(e3_m_act_ref)
+```
+
+Finally, we fit a model without the interaction terms
+
+```{r}
+e3_m_additive <- brm(data = d_cat_analysis, 
+            family = categorical(link = logit),
+            final_toy_type ~ goal_condition + social_condition,
+            iter = 2000, warmup = 500, cores = 4, chains = 4)
+
+broom::tidy(e3_m_additive, par_type = "non-varying", prob = 0.95) %>% 
+  mutate_if(is.numeric, round, 2)
 ```
 
 # Save posterior samples 
